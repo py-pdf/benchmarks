@@ -1,0 +1,4094 @@
+Draft version January 4, 2022
+Typ eset using L
+A
+T
+E
+X default style in AASTeX631
+Imaging the Sun's near-surface
+ows using mo de-coupling analysis
+Prasad Mani
+,
+1
+Chris S. Hanson
+,
+2
+and
+ Shravan Hanasoge
+1, 2
+1
+Department of Astronomy and Astrophysics, Tata Institute of Fundamental Research, Mumbai, India
+2
+Center for Space Science, NYUAD Institute, New York University Abu Dhabi, Abu Dhabi, UAE
+ABSTRACT
+The technique of norm al-mo de coupling is a p owerful to ol with which to seismically im age non-
+axisymmetric phenomena in the Sun. He re we apply mo de coupling in the Cartesian approximation to
+prob e s teady, near-surface
+ows in the Sun. Using Doppler cub es obtained from the Helioseismic and
+Magnetic Imager onb oard the Solar Dynamics Observatory, we p erform inversions on mo de-coupling
+measurements to show that the resulting divergence and radial vorticity maps at sup ergranular length
+scales (
+˘
+30 Mm) ne ar the surface compare extremely well with those obtained using the Lo cal Corre-
+lation Tracking metho d. We nd that the Pearson correlation co ecient is
+
+0.9 for divergence
+ows,
+while
+
+0.8 is obtained for the radial vorticity.
+Keywords:
+Helioseismology (709); Solar physics (1476); Sup ergranulation (1662)
+1.
+INTRODUCTION
+Helioseismology is the study of the Sun's internal structure and its prop erties, by means of interpreting its eect
+on solar oscillations (see
+ Chris tensen-Dalsgaard
+ 2002
+, for a review). These are resonant normal mo des of the Sun,
+b ehaving as standing waves in a cavity b ounded by the solar s urface and a depth that de p ends on the wavenumb er
+of the oscillation. As these waves p enetrate the interior, they register information of the prop erties and dynamics of
+the solar interior and return to the surface, where they are observed. The internal structure of the Sun can then b e
+retrieved through meticulous inve rsions of these seismic measurements.
+Several imp ortant
+ow systems on the Sun have b een inferred using various global and lo cal helioseismic metho ds.
+Of those , the most notable global helioseismic results include inferences on the solar dierential rotation, through
+global mo de frequency splitting (
+Thompson et al.
+ 1996
+;
+ Schou et al.
+ 1998
+), and the resolving the neutrino problem
+(
+Bahcall & Pinsonneault
+ 1992
+). Notable lo cal helioseismic results include imaging of the meridional
+ow (
+Giles et al.
+1997
+;
+ Gizon et al.
+ 2020
+) through time-distance helioseismology (
+Duvall et al.
+ 1993
+), and farside imaging of active
+regions (
+B raun & Lindsey
+ 2001
+) and their near side emergence (
+Birch et al.
+ 2016
+), through helioseismic holography
+(
+Lindsey & Braun
+ 2000
+). The recent discovery of various inertial waves (
+Gizon et al.
+ 2021
+), including the equatorial
+Rossby wave (
+optien et al.
+ 2018
+), has b een achieved through lo cal helios eismic ring-diagram analysis (
+Hill
+ 1988
+) and
+the non-helioseismic lo cal correlation tracking (LCT,
+ Nove mb er & Simon
+ 1988
+) of granulation.
+In recent years, the use of global mo de-coupling helioseismology (
+Wo o dard
+ 1989
+ ;
+ Lavely & Ritzwoller
+ 1992
+) has
+received attention, with many studies seeking to validate and demonstrate the imp ortance of such a technique for
+investigating numerous solar phenomena. While the derivation of the mo de-coupling technique is mathematically
+challenging, the data analys is is simple and utilizes all the information re gistered by the mo de. Thus far, global
+mo de-coupling has b een validated through observations of the meridional
+ow (
+Vorontsov
+ 2011
+;
+ Wo o dard et al.
+ 2013
+),
+dierential rotation (
+Schad & Roth
+ 2020
+;
+ Kashyap et al.
+ 2021
+), global-scale convection (
+Wo o dard
+ 2014
+,
+ 2016
+;
+ Hanasoge
+et al.
+ 2020
+;
+ Mani & Hanasoge
+ 2021
+) and Rossby mo de s (
+Hanasoge & Mandal
+ 2019
+;
+ Mandal & Hanasoge
+ 2020
+;
+ Mandal
+et al.
+ 2021
+). Lo cal mo de-coupling analysis in the Cartesian approximation, formulated by
+ Wo o dard
+ (
+2006
+), was
+validated by
+ Hanson et al.
+ (
+2021
+) (hereafter H21) by examining the p ower-sp e ctrum of sup ergranular waves and
+comparing with previous time-distance studies (
+Langfellner et al.
+ 2018
+).
+prasad.subramanian@tifr.res.in
+arXiv:2201.00178v1  [astro-ph.SR]  1 Jan 2022
+2
+Mani et al.
+Normal-mo de coupling refers to the concept of expressing solar-oscillation eigenfunctions as a linear weighted combi-
+nation of mo del-eigenfunctions (e .g ., Mo del S
+ Chris tensen-Dalsgaard
+ 2021
+). The mo del eigenfunctions form a complete
+and orthog onal basis. By design, the mo del Sun is spherically symm etric , adiabatic, free from rotation, m agne tis m and
+
+ows. In this state, the oscillations are considered to b e uncouple d. The weights needed to express the solar-oscillation
+eigenfunctions would then enco de all the p e rturbations that are absent in the mo del. The forward problem then
+reduces to relating obse rved seismic measurements to the p e rturbations that we want to infer. The surface waveeld
+cross-correlation is the primary measureme nt in the mo de-c oupling analysis and can b e directly related to the weights
+(
+Wo o dard
+ 2016
+). As mo de coupling is a Fourier domain technique, waveelds are cross-correlated at dierent spatial
+and temp oral frequencies, leaving us with measurements sensitive to di erent quantities of interest.
+In this study, we extend the sp ectral analysis of H21 and develop the metho d to pro duce near-surface
+ow maps
+at sup ergranulation length scales. A part of the formalism that was used to derive the forward mo del in H21 is
+reworked, primarily to imag e steady
+ows. Measurements are then constructed, and inversions to infer divergence
+ow
+and radial vorticity are describ ed. We also demonstrate signal asso ciated with sup ergranular
+ow in a radial- order
+coupling (p
+2
+-p
+2
+), which was not shown in H21. This helps in lo calizing the measurement sensitivity to the surface.
+We compare our results with
+ows obtained using the Lo cal Correlation Tracking metho d on solar granules.
+1.1.
+Forward problem
+In favor of algebraic bre vity, we only show crucial steps he re and refer the interested reader to App endix
+ A
+ for a
+complete derivation of the forward problem. Working in the plane- parallel atmosphere (se e also
+ Wo o dard
+ 2006
+), we
+denote the horizontal unit vectors
+e
+x
+and
+e
+y
+in our lo cal Cartesian domain as p ointing towards wes t and north on the
+solar surface, resp ectively, and
+e
+z
+p oints outwards. This approximation is valid when observing patches of the surface
+that are small when compared to the solar radius. When imaging steady, near-surface
+ows in the ne ighb ourho o d
+of the sup e rgranular scale (
+˘
+30 Mm), we exp ect the measured sp ectral cross -correlation signal to p eak around the
+horizontal wavenumb er
+q R
+
+ˇ
+120 (
+Rincon & Rieutord
+ 2018
+), where
+q
+=
+j
+q
+j
+=
+j
+(
+q
+x
+; q
+y
+)
+j
+is the vector horizontal
+wavenumb er of the
+ow. Ac cordingly, the goal is to relate measureme nts (linearly, to facilitate inversion) to the
+ow
+p erturbation describ ed in a horizontal Fourier domain. Sup ergranular velo cities are subsonic (300-400 m/s, see
+ Rincon
+& Rieutord
+ 2018
+), p ermitting us to mo del the
+ow vector
+u
+u
+u
+= (
+u
+x
+; u
+y
+; u
+z
+) in the Cartesian domain like so (
+Unno et al.
+1989
+;
+ Wo o dard
+ 2006
+)
+u
+˙
+=
+r
+[
+r
+(
+P
+e
+z
+)] +
+r
+(
+T
+e
+z
+)
+;
+(1)
+where
+P
+=
+P
+˙
+(
+x
+) and
+T
+=
+T
+˙
+(
+x
+) are p oloidal and toroidal scalar functions, varying with p osition
+x
+and temp oral
+frequency
+˙
+.
+r
+is the 3D gradient op erator. While m o de-coupling can easily b e extended to study time-varying
+p erturbations (see
+ Wo o dard
+ 2016
+;
+ Mani & Hanasoge
+ 2020
+;
+ Hanasoge et al.
+ 2020
+;
+ Mandal & Hanasoge
+ 2020
+, for
+example), here we only consider the frequency bin
+˙
+= 0, denoting the temp orally averaged
+ow ove r the p e rio d
+of analysis. We therefore s uppress
+˙
+from all terms this p oint forward, rememb ering that temp oral dynamics of
+p erturbations may also b e studied using the same mo del outlined in the following paragraphs. Sim plifying eq
+ 1
+ using
+vector calculus results in
+u
+=
+
+r
+2
+P
+e
+z
++
+r
+(
+@
+z
+P
+) +
+r
+h
+T
+
+e
+z
+;
+(2)
+where
+r
+h
+refers to derivatives only in the horizontal direction. Mo de-coupling helioseismology is p erformed in the
+Fourier domain, and since we wish to image horizontal
+ows on a small patch of the surface, we describ e the
+ow as a
+function of horizontal wavenumb er
+q
+and de pth
+z
+e
+z
+. Hence the p oloidal and toroidal
+ows are describ ed by
+P
+q
+(
+z
+) a nd
+T
+q
+(
+z
+), resp ectively. Furthermore, we parametrize the
+ow along
+e
+z
+using basis functions
+f
+(
+z
+) (Chebyshev,
+B
+-spline,
+etc). T his is expressed as
+P
+
+P
+q
+(
+z
+) =
+X
+j
+f
+j
+(
+z
+)
+P
+q
+j
+; T
+
+T
+q
+(
+z
+) =
+X
+j
+f
+j
+(
+z
+)
+T
+q
+j
+:
+(3)
+The
+ow co ecients
+P
+q
+j
+and
+T
+q
+j
+, represented by the discrete indices
+q
+and
+j
+, b ecome ideal candidates for inversions,
+where the
+ow for each wavenumb er
+q
+can b e inverted for indep endently; parallelization in computation can thus b e
+exploited to exp edite inversions. Note that
+P
+q
+j
+=
+P
+
+
+q
+j
+and
+T
+q
+j
+=
+T
+
+
+q
+j
+for the
+ow eld to b e real in the spatio-
+temp oral domain.
+To infer
+ows from waveelds
+˚
+scattered by a p erturbation of length scale
+q
+, cross-correlate them in the manner
+Imaging near-surface flows using mode-cou pl ing analysis
+3
+˚
+!
+
+k
+˚
+!
+k
++
+q
+, where
+k
+is the oscillation mo de wavenumb er (
+k
+x
+; k
+y
+) and
+!
+is the temp oral frequency. Re late
+˚
+!
+
+k
+˚
+!
+k
++
+q
+thus
+to the
+ow co ecients
+P
+q
+j
+and
+T
+q
+j
+(see eq
+ A7
+)
+h
+˚
+!
+
+k
+˚
+!
+k
++
+q
+i
+=
+H
+!
+k k
+0
+nn
+0
+X
+j
+C
+q
+j;
+k
+P
+q
+j
++
+D
+q
+j;
+k
+T
+q
+j
+:
+(4)
+The weight factor
+H
+!
+(see eq
+ A8
+) is a function of frequency, capturing information ab out the extent of coupling b etween
+the two m o des [
+n; k
+] and [
+n
+0
+; k
+0
+], where
+n
+and
+n
+0
+are the radial orders of the mo des, and
+k
+=
+j
+k
+j
+and
+k
+0
+=
+j
+k
+0
+j
+=
+j
+k
++
+q
+j
+.
+The sp ectral prole of the mo de (see eq
+ A9
+) is approximated using a Lorentzian (
+Anderson et al.
+ 1990
+). The more the
+Lorentzians of the two mo des overlap, the stronger the coupling. Finally, the real terms
+C
+q
+j;
+k
+and
+D
+q
+j;
+k
+are p oloidal
+and toroidal
+ow sensitivity kernels resp ectively, that allow us to relate the
+ows in question to the measureme nts
+and are derived from the solar mo del see App endix
+ A
+. They p ossess the symmetry relation:
+C
+q
+j;
+k
+=
+C
+
+q
+j;
+
+k
+and
+D
+q
+j;
+k
+=
+D
+
+q
+j;
+
+k
+(see e q
+ A6
+). The kernels, as
+ows, are expre ssed on the basis
+f
+j
+(
+z
+).
+1.2.
+Least-squares of cross-correlation
+Even though
+˚
+!
+
+k
+˚
+!
+k
++
+q
+isolates the eect of
+ow p erturbations at individual wavenumb ers
+q
+, a more compact mea-
+surement, known in mo de -coupling literature as '
+B
+-co ecients', is much b etter designed for inversion as it reduces the
+dimension of the problem. A least-squares t to the cross-correlation
+˚
+!
+
+k
+˚
+!
+k
++
+q
+(see
+ Wo o dard
+ 2006
+,
+ 2014
+,
+ 2016
+) results
+in the
+B
+-co ecients
+B
+k
+;
+q
+, according to
+B
+k
+;
+q
+=
+P
+!
+H
+!
+
+k k
+0
+nn
+0
+˚
+!
+
+k
+˚
+!
+k
++
+q
+P
+!
+jH
+!
+k k
+0
+nn
+0
+j
+2
+:
+(5)
+Multiplying eq
+ 4
+ on b oth sides by
+H
+!
+
+k k
+0
+nn
+0
+and substituting by eq
+ 5
+ on the left-hand-side results in a concis ely dened
+forward problem (compare with eq
+ 4
+)
+B
+k
+;
+q
+=
+X
+j
+C
+q
+j;
+k
+P
+q
+j
++
+D
+q
+j;
+k
+T
+q
+j
+:
+(6)
+In eq
+ 5
+,
+ Wo o dard
+ (
+2007
+) and H21 thus far only considered p ositive-frequency comp onents in the summation over
+!
+.
+Here, we sum over b oth
+
+!
+within a few mo de linewidths Denoting the resonant frequency of a mo de using
+!
+nk
+,
+j
+!
+j 2
+
+!
+nk
+
+
+
+nk
+=
+2
+; !
+nk
++
+
+
+nk
+=
+2
+
+or
+j
+!
+j 2
+
+!
+n
+0
+k
+0
+
+
+
+n
+0
+k
+0
+=
+2
+; !
+n
+0
+k
+0
++
+
+
+n
+0
+k
+0
+=
+2
+
+:
+(7)
+Summing over
+
+!
+guarantees that the parity
+B
+k
+;
+q
+=
+B
+
+
+k
+;
+
+q
+(see App endix
+ A
+ for derivation) is ob eyed, thereby
+ensuring that the
+ow eld on the right-hand-side of eq
+ 6
+ is a real physical quantity in the spatio-temp oral domain.
+Taking the complex conjugate on b oth sides of eq
+ 6
+ and considering the negative wavenumb er comp onents
+
+q
+and
+
+k
+,
+B
+
+
+k
+;
+
+q
+=
+X
+j
+C
+
+q
+j;
+
+k
+P
+
+
+q
+j
++
+D
+
+q
+j;
+
+k
+T
+
+
+q
+j
+:
+(8)
+Substituting parity and symmetry relations for all terms in the ab ove results in eq
+ 6
+. As
+B
+k
+;
+q
+is constructed by a
+least-squares tting, it is noteworthy that summing over
+
+!
+will also lead to improvement in its signal-to-noise as a
+by-pro duct.
+1.3.
+Noise model
+In the addition to the sensitivity kernels, a systematic background noise mo del is required to infer the
+ows from
+the observed
+B
+-co ecients. For estimating the contribution from realization noise to the measurements, we make the
+following assumptions (
+Gizon & Birch
+ 2004
+): that the excitation of the wave e ld is mo delled as a multivariate Gaussian
+random pro cess and the waveelds are uncorrelated across wavenumb er and frequency in the absence of p erturbations.
+Every indep endent realization of a mo de can b e understo o d as the output of a damp e d harmonic oscillator driven by a
+random forcing function (see
+ Duvall & Harvey
+ 1986
+). Mo des are thus generated with random phases and amplitude s
+and with nite lifetime s. This sto chasticity leads to realiza tion noise in rep eated measurements of mo de para meters
+4
+Mani et al.
+Figure 1.
+Disp ersion relation for the radial orders used in this analysis; f (blue), p
+1
+(orange) and p
+2
+(green). The shaded
+regions of the same colours indicate 1-linewidth ab out the mo de frequency. The yellow shaded region indicates the range of
+k R
+
+and
+! =
+2
+ˇ
+to which we have restricted ourselves in this analysis. B eyond
+k R
+
+of 2000, it is seen that the theoretical tting
+of mo de frequencies start deviating from the observed disp ersion relation for the
+f
+-mo de.
+such as its amplitude, frequency and linewidth, and consequently in
+B
+k
+;
+q
+in our case. We use the same noise mo del
+as in H21, which was motivated by the ab ove discussion,
+G
+k
+;
+q
+ hj
+B
+k
+;
+q
+j
+2
+i
+;
+(9)
+where, unlike H21, we again sum over
+
+!
+.
+G
+k
+;
+q
+is real, with the symmetry relation
+G
+k
+;
+q
+=
+G
+
+k
+;
+
+q
+(see App endix
+ A
+for explanation).
+2.
+DATA ANALYSIS
+In order to examine near surface
+ows we build a time-series cub e of Doppler images that are obtained from the
+Helioseismic Magnetic Imager ab oard the Solar Dynamics Observatory (HMI/SDO,
+ Scherrer et al.
+ 2012
+). Each image
+is Postel pro jected, with a spatial resolution of approximately 0
+:
+48Mm, sp erated in tim e by 45 seconds, and is tracked
+at the (
+Sno dgrass
+ 1984
+) rotation rate. Here, we select a patch that is 194
+:
+4
+
+194
+:
+4 Mm
+2
+in size, tracked for 24 hours
+and crosses the disk-center in the middle of observation time on the 14 Novemeb er 2017 (Carrington rotation numb er
+2197, Carrington longitude 90
+
+). This Dopplercub e is c ons idere d as the physical waveeld
+˚
+(
+x; y
+;
+t
+). The Fourier-space
+waveeld
+˚
+!
+k
+(and subsequently, the cross-correlation
+˚
+!
+
+k
+˚
+!
+k
++
+q
+) is obtained by c omputing the 3D spatial and temp oral
+Fourier transform of the Dopplercub e .
+The duration of the observed region is long enough to provide sucient frequency bins with which to sum over in
+Eq
+ 6
+, while short enough that sup ergranules do not substantially evolve (lifetime is purp orted to b e 1.6 days;
+ Rincon
+& Rieutord
+ 2018
+) over this p erio d. Our observation region is close to the disk center to also avoid any contamination
+from center-to-limb systematics (
+Zhao et al.
+ 2012
+;
+ Langfellner et al.
+ 2015
+).
+Maximum signal can b e extracted from the weighted summation of the cross correlations (eq
+ 5
+) when the sp ectral
+proles of the two mo des [
+n; k
+] and [
+n
+0
+; k
+0
+] closely align in
+!
+space. This implie s that their mo de fre que nc ie s should b e
+suciently close (
+j
+!
+nk
+
+!
+n
+0
+k
+0
+j 
+
+, the separation parameter). Since Lorentzians decay rapidly, the summation over
+
+!
+is signicant only over a few linewidths (
+
+, the summation parameter; see eq
+ 7
+). We have empirically found and
+tabulated
+
+in Table
+ 1
+ for the radial order couplings
+n
+-
+n
+0
+2
+f-f, p
+1
+-p
+1
+, and p
+2
+-p
+2
+(the signal strength dep ends only
+weakly on
+
+; we set it to 3 line widths).
+Figure
+ 1
+ shows that for any two adjacent ridges (adjacent
+n
+and
+n
+0
+), mo de frequencies
+!
+nk
+and
+!
+n
+0
+k
+b ecome spaced
+farther apart with incre asing wavenumb er
+k R
+
+. It is also known that mo de linewidth grows with radial orders for
+a given
+k R
+
+. Moreover, holding the spatial and temp oral sampling rates constant, the spatial size and duration of
+observation set the total numb er of mo des within a range of
+k R
+
+(and
+! =
+2
+ˇ
+) that can b e c learly observed, thereby
+aecting the quality of the seismic measurements. Ow ing to these factors, to maximize signal-to-noise (by visually
+insp ecting the p ower-s p ectrum), the parameters describing the extent of coupling over dierent ranges of
+k R
+
+at xed
+radial order are dierent. In wave numb er, we restrict our analysis to within 200
+
+k R
+
+
+2000 and
+q R
+
+
+300. Our
+frequency range is conned to span the range over which acoustic mo des are observed (2
+
+! =
+2
+ˇ
+
+5 in mHz).
+Imaging near-surface flows using mode-cou pl ing analysis
+5
+Coupling
+k
+R
+
+range # of
+
+mo des
+f-f
+[400,1000] 5240 4
+[1000,1500] 7784 1.1
+[1500,2000] 10940 0.4
+p
+1
+-p
+1
+[400,1000] 5240 4.5
+[1000,1750] 12852 2
+p
+2
+-p
+2
+[200,1000] 5886 3
+[1000,1300] 4280 3
+Table 1.
+Total numb er of mo des, and separation parameter (in numb er of linewidths) for dierent couplings, for dierent
+ranges of
+k R
+
+.
+3.
+INVERSION
+The nal step to pro ducing near-surface
+ow maps in Cartesian mo de-coupling is to invert the measurements
+B
+k
+;
+q
+from the linear relation in eq
+ 6
+. We describ e inversion using regularized-least-s quares (RLS) metho d here and
+leave Subtractive Optimally Lo calized Averages (SOLA,
+ Pijp ers & Thompson
+ 1994
+) for App endix
+ B
+. The metho ds
+complement each other (see
+ Sekii
+ 1997
+), where RLS tries to minimize the mist b etween data and mo del, whereas
+SOLA gives b etter lo c aliz ation. For total numb er of mo des
+M
+, RLS scales as
+M
+x
+J
+where
+J
+is the numb er of basis
+functions
+f
+j
+(
+z
+) (
+J
+˝
+M
+; see eq
+ 3
+ and sec tion
+ 3.1
+), whereas SOLA s cales as
+M
+2
+(see App endix
+ B
+). For
+M >
+5000,
+computation starts to quickly b ecome exp e ns ive for SOLA.
+Mo de eigenfunctions p eak near the surface, with higher radial orders p os sessing smaller p eaks in the interior. While
+f-f coupling alone has enough sensitivity to prob e p erturbations at sup ergranular scales close to surface, signal is
+present even in p
+1
+-p
+1
+, and p
+2
+-p
+2
+(see Figure
+ 3
+), and p ossibly other higher order self- and cross-couplings. Since we are
+interested in only surface
+ows, we leave higher order coupling to future work.
+It b ears mentioning that the slop es of the ridge s in the
+k R
+
+-
+
+sp ectrum (Figure
+ 1
+) increase with radial order. This
+limits us to low-to-intermediate
+k R
+
+(
+<
+1000) for these higher radial orders if we are to remain under the acoustic cut-
+o frequency of 5.3mHz. It also b ecomes imp erative to use a spatially larger obse rvation patch to gain access to signals
+from low
+k R
+
+- to o large an observation region could p ossibly render invalid the Cartesian geometry approximation.
+Regardless, in addition to p erforming inversions using all the couplings stacked together, we also demonstrate inversions
+separately for the three couplings (see Table
+ 2
+) in order to account for the full gamut of mo de-coupling as a signal-rich
+helioseismic te chnique.
+3.1.
+RLS
+For given
+q
+, the forward problem may b e stated as
+KU
+=
+B
+;
+(10)
+with the aim to minimize the mist
+P
+k
+jj
+KU
+
+B
+jj
+2
+, with
+jj jj
+2
+denoting the
+L
+2
+norm. Here,
+K
+is the matrix formed
+by the sensitivity kernels:
+f
+C
+q
+j;
+k
+;
+D
+q
+j;
+k
+g
+.
+U
+is a vector comp osed of the
+ow co ecients:
+f
+P
+q
+j
+; T
+q
+j
+g
+and
+B
+is a vector
+comp osed of computed
+B
+-co ecients:
+f
+B
+k
+;
+q
+g
+. The least-squares problem is solved simultaneously for p oloidal and
+toroidal
+ow. We use
+B
+-spline basis functions as our
+f
+j
+(
+z
+), comprising 11 knots spaced uniformly in acoustic radius,
+for b oth p oloidal and toroidal co ecients. Hence, for
+M
+mo des (total numb er of
+k
+for a given
+q
+is
+M
+) and 11 basis
+functions for each p oloidal and toroidal, the dimensions of
+K
+,
+U
+and
+B
+are thus
+M
+
+22, 22
+
+1, and
+M
+
+1 resp ectively.
+Normalizing b oth sides of eq
+ 10
+ by the noise covariance
+
+(a diagonal matrix with the entries
+G
+k
+;
+q
+; see eq
+ 9
+; dimension
+M
+
+M
+) and pre-multiplying by
+K
+|
+,
+(
+K
+|
+
+
+1
+K
+)
+U
+=(
+K
+|
+
+
+1
+)
+B
+;
+(11)
+U
+=(
+K
+|
+
+
+1
+K
+)
+
+1
+K
+|
+
+
+1
+B
+:
+(12)
+6
+Mani et al.
+Figure 2.
+Left
+: Averaging kernel for p oloidal
+ow (see section
+ B.2
+, eq
+ B17
+, and lef t panel of F igure
+ 8
+) for
+q
+R
+
+= [
+
+112
+;
+
+45],
+at the depth
+z
+o
+=
+
+0
+:
+41 Mm.
+Right
+: L-curve for the mo de
+q
+R
+
+= [
+
+112
+;
+
+45]; the knee (
+
+= 2
+:
+48) is marked by a blue
+diamond.
+Since the least-squares problem is typically ill-p osed, we restate the minimization as
+P
+k
+jj
+KU
+
+B
+jj
+2
++
+
+jj
+U
+jj
+2
+with
+the regularization parameter
+
+which this results in a trade-o b etween mist reduction (rst term) and solution
+norm m inimization (second term). Under-regularizing can lead to a solution
+U
+that is dominated by errors in the
+data and on the other hand, over-regularizing may smo oth or damp the solution more than nece ssary. Including this
+regularization make s the problem b etter conditioned and is now dened as
+U
+= (
+K
+|
+
+
+1
+K
++
+
+I
+)
+
+1
+K
+|
+
+
+1
+B
+;
+(13)
+where
+I
+is the identity matrix for
+L
+1
+regularization. The knee-p oint of the
+L
+-curve (
+Hansen
+ 1992
+), a curve formed
+by plotting
+jj
+U
+jj
+2
+vs
+jj
+KU
+
+B
+jj
+2
+for dierent values of
+
+(see right panel of Figure
+ 2
+), is usually chosen as the
+regularization paramete r. After successfully inverting for
+U
+, we reconstruct the
+ow using eq
+ 3
+. Results for p oloidal
+
+ow
+P
+q
+are shown in Figure
+ 3
+.
+4.
+LCT
+To improve condence in the imaged near-surface
+ows through mo de-coupling, we compare them with
+ows obtained
+from Lo cal Correlation Tracking metho d (LCT;
+ Novemb er & Simon
+ 1988
+). LCT provides surface-
+ow maps by
+examining the advection of convective granules (1.2 Mm,
+q R
+
+ˇ
+3500;
+ Hathaway et al.
+ 2015
+) by underlying larger-
+scale
+ow systems . Since granules are used as tracers, which are much smaller in size than sup ergranules (
+ˇ
+35 Mm),
+LCT is an eective metho d (see
+ Rieutord et al.
+ 2001
+) to pro duce surface horizontal
+ow maps of sup ergranulation.
+Time series of intensity im ages from HMI, with the same prop erties of the Dopplercub es describ ed in section
+ 2
+(tracking rate, date, lo cation, siz e and duration of obs erved patch, spatial and temp oral sampling rate ), are ob-
+tained and Postel pro jecte d. The horizontal
+ows are deduced by tracking the prop er motions of granules b etween
+consecutive intensity images, which we denote as
+I
+1
+;
+I
+2
+. The LCT metho d selects a patch in two images e ach
+(
+I
+1
+=
+I
+1
+e
+(
+x
+
+x
+ij
+)
+2
+=
+2
+sigma
+2
+; I
+2
+=
+I
+2
+e
+(
+x
+
+x
+ij
+)
+2
+=
+2
+sigma
+2
+) that observe the same granule at the grid p oint
+x
+ij
+= (
+x
+i
+; y
+j
+).
+A Gaussian of width
+sigma
+allows to isolate a small region surrounding the grid p oint of inte rest as the distance
+move d by granules are usually in sub- pixel regime. T he convention for the dire ction of
+x
+is the same as describ ed in
+section
+ 1.1
+. The two patches
+I
+1
+; I
+2
+are then cross correlated for dierent values of p osition shifts 
+x
+,
+C
+ij
+(
+x;
+
+y
+) =
+Z
+d
+x
+I
+
+1
+(
+
+x
+)
+I
+2
+(
+x
+
+x
+)
+:
+(14)
+The shift 
+x
+= (
+x;
+
+y
+) that maximizes the cross-c orre lation
+C
+ij
+is taken to b e the prop er motion of the granule.
+Provided that the time dierence 
+t
+, here 45 seconds, b e tween the images is less than the lifetime of granules (
+<
+10
+min), the velo cities are given by
+v
+x
+= 
+x=
+
+t
+and
+v
+y
+= 
+y =
+
+t
+. This exe rc is e is rep eated for all grid p oints in the
+images
+I
+1
+;
+I
+2
+and for e ach consecutive pair of images in the cub e.
+In practice, we use the Fourier LCT algorithm (FLCT,
+ Fisher & Welsch
+ 2008
+) for computing
+v
+x
+and
+v
+y
+. FLCT
+requires the input
+sigma
+, which we set to 4 pix, that captures the extent of lo calization desired, and dep ends on the
+Imaging near-surface flows using mode-cou pl ing analysis
+7
+Figure 3.
+Top
+: Inverted p oloidal
+ow p ower-sp ectrum for the three couplings f-f, p
+1
+-p
+1
+, and p
+2
+-p
+2
+as a function of
+q
+x
+R
+
+and
+q
+y
+R
+
+.
+Bottom
+: Corresp onding p ower-sp ectrum averaged over the azimuthal angle. Shaded region shows
+
+1
+˙
+error around the
+mean. Total p ower app ears to increase through the radial orders. Power is in units of m
+2
+/s
+4
+.
+dominant length scale of the velo city eld in the images. The Postel-pro jected intensity images are fed as input to the
+FLCT co de.
+v
+x
+and
+v
+y
+are then computed for consecutive pairs of image s and are averaged over the entire day.
+5.
+MAPS OF HORIZONTAL DIVERGENCE AND RADIAL VORTICITY
+For mo de-coupling, horiz ontal divergence (hereafter
+div
+) and radial vorticity (hereafter
+cur l
+) are computed by
+substituting
+P
+and
+T
+from eq
+ 3
+ into e q
+ 2
+ as b elow -
+u
+u
+u
+(
+q
+; z
+) =
+
+r
+2
+P
+e
+z
++
+r
+(
+@
+z
+P
+) +
+r
+h
+T
+
+e
+z
+;
+=
+
+(0
+;
+0
+; @
+2
+x
+P
++
+@
+2
+y
+P
++
+@
+2
+z
+P
+) + (
+@
+x
+@
+z
+P ; @
+y
+@
+z
+P ; @
+2
+z
+P
+) + (
+@
+y
+T ;
+
+@
+x
+T ;
+0)
+:
+(15)
+Setting
+@
+2
+x
++
+@
+2
+y
+=
+q
+2
+,
+div
+is given by,
+r
+h
+
+u
+u
+u
+(
+q
+; z
+) =
+q
+2
+@
+z
+P ;
+(16)
+and
+cur l
+is given by,
+h
+r
+
+u
+u
+u
+(
+q
+; z
+)
+i
+z
+=
+q
+2
+T :
+(17)
+We follow similar steps to those taken in
+ Langfellner et al.
+ (
+2015
+) for comparison of
+ow maps with LCT. The
+essential step for comparison at dierent length scales is to bandpass lter the Fourier-space
+ow around the
+q R
+
+of
+interest (see Figure
+ 4
+), and subsequently convert it to real space.
+We seek to show comparisons (see Figures
+ 5
+,
+ 6
+, and
+ 7
+) for
+q R
+
+= 100, 150, 200 and 250. To suciently delineate
+
+ows at these length scales , we apply a Ga us sian lter (see Figure
+ 4
+) to
+ows obtained from eqns
+ 16
+ and
+ 17
+. The
+Gaussian is centered at the des ire d wavenumb er with a half-width of 25. We then p erform a 2D Fourier transform to
+obtain a real-space steady-
+ow map.
+8
+Mani et al.
+Figure 4.
+Left: Divergence-
+ow p ower sp ectrum
+j
+div
+j
+2
+, from eqn
+ 16
+, obtained from inversion using all the couplings. The
+p ower-sp ectrum is then ltered with a bandpass centered around
+q R
+
+= 150 (middle panel). The resulting sp ectra is shown in
+the right panel. The units of
+j
+div
+j
+2
+are in s
+
+2
+. For illustration, we show the action of the lter on the p ower-sp ectrum
+j
+div
+j
+2
+since it is a real quantity, but recall that it is the Fourier-space
+ow
+div
+(a complex quantity) on which we apply the lter.
+For LCT, we rst apply a Gaussian smo othing to
+v
+x
+and
+v
+y
+to average over small-scale features; the extent of
+smo othing dep ends on the length scale
+q R
+
+to b e compared w ith mo de-coupling.
+div
+and
+cur l
+are then simply
+computed by
+div
+=
+@
+x
+v
+x
++
+@
+y
+v
+y
+;
+(18)
+cur l
+=
+@
+x
+v
+y
+
+@
+y
+v
+x
+:
+(19)
+We the n p erform a 2D Fourier transform on eqns
+ 18
+ and
+ 19
+, apply the same Gaussian lters as for mo de-coupling,
+and transform back to real space.
+Condensing all of the ab ove, the following sequence of op erations to com pare
+ows at desired length scales are
+p erformed for mo de-coupling (M-C) and for LCT -
+M-C :
+˚
+(
+x; y
+;
+t
+)
+3D FFT
+=====
+)
+˚
+!
+k
+; B
+k
+;
+q
+inve rsion
+======
+)
+P ; T
+r
+h
+
+===
+)
+r
+
+eqns
+ 16
+;
+17
+Filter,
+=====
+)
+2D FFT
+div ; cur l
+LCT :
+I
+1
+;
+I
+2
+FLCT
+====
+)
+v
+x
+; v
+y
+smo oth,
+======
+)
+r
+h
+
+r
+
+eqns
+ 18
+;
+19
+2D FFT,
+======
+)
+Filter
+Filtered,
+Fourier-space
+
+ows
+2D FFT
+=====
+)
+div ; cur l
+6.
+RESULTS
+Table
+ 2
+ summarizes the results of the comparison b etween
+ows obtained from mo de-coupling and LCT. Figure
+ 5
+,
+where we have used all the couplings to p erform inversions, shows a 97% correlation b etween divergence
+ows from
+the two metho ds near sup e rgranular scale (
+q R
+
+ˇ
+100). Near-surface
+ows are imaged most faithfully when all the
+couplings are used. Since vortical
+ow s are imaged at a region near the equator, it is p ossible that the source of
+vorticity is something other than Coriolis force. Nevertheless, there is also a very go o d agreement (87%) b etween
+the vortical
+ows as inferred from the two metho ds, despite b eing an order of m agnitude weaker than the divergence
+
+ows (this is consistent with the results of
+ Hathaway et al.
+ 2015
+;
+ Langfellner et al.
+ 2015
+;
+ Rincon et al.
+ 2017
+). Due to
+insucient mo des for the p
+2
+-p
+2
+case (se e Table
+ 1
+), we are unable to infer vortical
+ows with conviction other than near
+the sup ergranular scale, as can b e see n from Table
+ 2
+. Figure
+ 6
+ also aligns with what we b elieve can b e accomplished
+through mo de-coupling helioseismology - using f- f or p
+1
+-p
+1
+alone to seismically infer ne ar- surface divergence and vortical
+
+ows at dierent scales (
+q R
+
+= 100
+;
+150) can yield extremely go o d agreement with LCT. As the length scale of the
+inferred
+ow moves further away from that of sup ergranules (Figure
+ 7
+), the demand on signal-to-noise also increases.
+An adequate numb er of mo des (and coupling strength b etween higher radial-orders) thus b ecomes a necessity to
+comment substantively on the
+ows at these scales .
+6.1.
+Amplitudes of mode-coupling
+ows
+Imaging near-surface flows using mode-cou pl ing analysis
+9
+(a)
+q R
+
+= 100
+;
+f-f + p
+1
+-p
+1
++ p
+2
+-p
+2
+Figure 5.
+Real-space divergence
+ows (left column, in units of 10
+
+5
+s
+
+1
+) and radial vorticity (right column, in units of 10
+
+6
+s
+
+1
+)
+for LCT (top row), and mo de-coupling inversions through RLS using all the couplings (middle row), bandpass ltered around
+q R
+
+= 100 (see Figure
+ 4
+). Corresp onding scatter plots and correlation co ecients are shown in the b ottom row. We cut edges
+out from the
+ow maps and compare a circular region of diameter
+ˇ
+175 Mm. The slop es of the b est-t line through the scatter
+plots are 0.51 for divergence and 0.01 f or vorticity. The vorticity
+ow maps are saturated to show only 40% of the maximum
+values.
+For b oth LCT and mo de-coupling divergence and vorticity maps, numerous factors, arising from the as so ciated
+numerous data pro ces sing steps, can in
+uence the nal inference of
+ow amplitudes, making it dicult to put forward
+a precise statement on them. H21 rep orted a 60% greater amplitude for p
+1
+-p
+1
+over f-f coupling (Figure
+ 3
+ re
+ects a
+similar conclusion), another element to consider when combining dierent radial orders. The choice of regularization
+(see right panel of Figure
+ 2
+) has the p otential to aect the amplitudes of the inverted
+ows to some degree. Flow
+amplitudes also vary with depth, implying that dierent radial orders and LC T will measure dierent
+ow averages.
+This variability eme rge s as a natural consequence of any helioseismic inversion pro cedure neces sitating the use of a
+radial grid along which kerne ls and
+ows tend to b e des crib ed.
+Thus, the amplitudes of the mo de-coupling
+ows (and the correlation c o ecient) de p end up on the following factors:
+‹
+Coupling(s) used,
+‹
+Regularization parameter in the inversion,
+‹
+Smo othing applied to LCT
+ows (indirectly; see b elow paragraph),
+‹
+The depth at which
+ows are inferred.
+Here, we rep ort in Table
+ 2
+ only the maximum correlation found from among the p oints in the radial grid close
+to the surface (within
+
+0.5 Mm from
+z
+=0). For a desired comparison length sc ale
+q R
+
+, we rst x the coupling(s)
+and the regularization parameter to b e used in the inversion. We then separately compute ltered divergence and
+10
+Mani et al.
+(a)
+q R
+
+= 100
+;
+f-f
+(b)
+q R
+
+= 150
+;
+p
+1
+-p
+1
+Figure 6.
+Real-space divergence
+ows (left column, in units of 10
+
+5
+s
+
+1
+) and radial vorticity (right column, in units of 10
+
+6
+s
+
+1
+)
+for LCT (top row), and mo de-coupling inversion through RLS using (a) f-f coupling (b ottom row), bandpass ltered around
+q R
+
+= 100, and using (b) p
+1
+-p
+1
+coupling (b ottom row), bandpass ltered around
+q R
+
+= 150. We cut edges out from the
+ow
+maps and compare a circular region of diameter
+ˇ
+175 Mm.
+(a)
+q R
+
+= 200
+;
+f-f + p
+1
+-p
+1
++ p
+2
+-p
+2
+(b)
+q R
+
+= 250
+;
+f-f + p
+1
+-p
+1
++ p
+2
+-p
+2
+Figure 7.
+Real-space divergence
+ows (left column, in units of 10
+
+5
+s
+
+1
+) and radial vorticity (right column, in units of 10
+
+6
+s
+
+1
+)
+for LCT (top row), and mo de-coupling inversion through RLS using all the couplings (b ottom row), bandpass ltered around
+(a)
+q R
+
+= 200, and (b)
+q R
+
+= 250. We cut edges out f rom the
+ow maps and compare a circular region of diameter
+ˇ
+175 Mm.
+vorticity maps for LCT for dierent values of smo othing. These
+ow maps are then compared with those obtained
+from inversions at all depths in the radial grid that are within 0.5 Mm from the surface. The highest correlation
+(corresp onding to the ab ove depths and smo othing) is noted and comparison
+ow maps are plotted for the desired
+q R
+
+.
+It has b een shown (see
+ De Rosa & To omre
+ 2004
+;
+ Langfellner et al.
+ 2015
+) that line-of-sight velo city from Dopplergrams
+and LC T agree closely in amplitudes. But, to recapitulate, a host of factors describ ed ab ove can skew the amplitudes
+for divergence
+ows owing to the multi-step pro cess involved in obtaining them. For example, there has b een a history
+(see, e.g.,
+ De Rosa et al.
+ 2000
+;
+ Sekii et al.
+ 2007
+;
+ Zhao et al.
+ 2007
+;
+ Langfe llne r et al.
+ 2018
+;
+oning et al.
+ 2020
+;
+ Korda
+&
+
+Svanda
+ 2021
+) of using travel-time dierence as only a proxy for horizontal divergence. However,
+ Langfellner e t al.
+Imaging near-surface flows using mode-couplin g analysis
+11
+Coupling
+q
+R
+
+div cur l
+f-f
+100 0.97 0.87
++ p
+1
+-p
+1
+150 0.95 0.76
++ p
+2
+-p
+2
+200 0.92 0.76
+250 0.85 0.65
+f-f
+100 0.96 0.85
+150 0.93 0.76
+200 0.89 0.69
+250 0.77 0.58
+p
+1
+-p
+1
+100 0.95 0.83
+150 0.95 0.75
+200 0.92 0.75
+250 0.85 0.61
+p
+2
+-p
+2
+100 0.94 0.7
+150 0.91 0.39
+200 0.79 0.3
+250 0.55 0.3
+Table 2.
+Correlation b etween mo de-coupling
+ow maps and LCT maps derived from HMI Dopplergrams and intensity images,
+resp ectively.
+(
+2015
+),
+ Birch e t al.
+ (
+2016
+) and
+ Birch et al.
+ (
+2019
+) use empirically determined conversion factors to align
+ow amplitudes
+from travel-time measurements with those of LCT, while acknowledging that LCT underestimates magnitudes (see
+Verma et al.
+ 2013
+;
+optien et al.
+ 2016
+). Even for the case of sup ergranulation divergence maps obtained through
+ring-diagram helioseismology,
+ Greer et al.
+ (
+2016
+) only rep ort normalized amplitudes.
+In this work, we have develop ed inversions to show that the Cartesian approximation of mo de-coupling can b e used
+with great condence to inves tigate
+ows near the surface. Careful inversions of mo de-coupling measurements, built
+using a suciently large mo deset tha t p enetrates into the deep er layers of the convection zone, can also enable probing
+of the depth structure and time-evolution of sup ergranules, part of future work. With enough mo des to improve
+signal-to-noise through larger observation sizes , we suggest that Cartesian mo de-coupling can nd lo cal helioseismic
+applications to investigate other depth- and time-varying fea tures such as giant cell
+ows (see
+ Hathaway et al.
+ 2013
+;
+Hanson et al.
+ 2020
+), emerging active regions, meridional
+ows and Rossby waves.
+APPENDIX
+A.
+DERIVATION OF THE FORWAR D MODEL
+As describ ed in section
+ 1.1
+, we seek to describ e the
+ow
+u
+as a function of
+q
+along
+e
+z
+. To that end, substituting
+eq
+ 3
+ into eq
+ 2
+,
+u
+˙
+q
+(
+z
+) =
+X
+j
+
+q
+2
+f
+j
+e
+z
++
+i
+q
+f
+0
+j
+
+P
+˙
+j
+q
++
+i
+q
+
+e
+z
+f
+j
+T
+˙
+j
+q
+:
+(A1)
+For
+ows in the anelastic limit (
+u
+˝
+sp eed of sound), we can denote the
+ow p erturbation op erator as
+
+L
+˙
+=
+
+2
+i! ˆ
+u
+˙
+
+r
+(see
+ Hanasog e et al.
+ 2017
+). Substituting Eq.
+ A1
+ into the op erator, we get,
+
+L
+˙
+q
+=
+
+2
+i ! ˆ
+(
+i
+u
+˙
+q
+
+k
++
+u
+˙
+q
+
+e
+z
+@
+z
+)
+;
+(A2)
+=
+
+2
+i ! ˆ
+P
+j
+
+
+k
+
+q
+f
+0
+j
+P
+˙
+j
+q
+
+k
+
+(
+q
+
+e
+z
+)
+f
+j
+T
+˙
+j
+q
++
+q
+2
+f
+j
+P
+˙
+j
+q
+@
+z
+
+:
+(A3)
+12
+Mani et al.
+Express the mo de eigenfunction describing oscillations in the Cartesian domain by (se e
+ Wo o dard
+ 2006
+)
+˘
+k
+
+˘
+nk
+(
+z
+) =
+i
+^
+k
+H
+nk
+(
+z
+)
+e
+z
++ ^
+z V
+nk
+(
+z
+)
+;
+(A4)
+where
+H
+and
+V
+are real-valued functions;
+n
+and
+n
+0
+are dropp ed for compactness of notation. Then the coupling of
+two mo de s
+˘
+k
+and
+˘
+k
+0
+(
+k
+0
+=
+k
++
+q
+), by the
+ow p erturbation op erator
+
+L
+˙
+q
+, denoted by coupling integral 
+k
+k
+0
+(
+˙
+), is
+given by
+
+k
+k
+0
+(
+˙
+)
+
+Z
+d
+x
+(
+
+L
+˙
+q
+˘
+k
+)
+
+˘
+
+k
+0
+=
+Z
+d
+x
+"
+
+2
+i ! ˆ
+X
+j
+n
+q
+2
+f
+j
+P
+˙
+j
+q
+(
+^
+k
+
+^
+k
+0
+H
+0
+k
+H
+
+k
+0
++
+V
+0
+k
+V
+
+k
+0
+)
+
+
+k
+
+q
+f
+0
+j
+P
+˙
+j
+q
++
+k
+
+(
+q
+
+e
+z
+)
+f
+j
+T
+˙
+j
+q
+
+(
+^
+k
+
+^
+k
+0
+H
+k
+H
+
+k
+0
++
+V
+k
+V
+
+k
+0
+)
+o
+#
+(A5)
+We desire to linearly relate the coupling integral in the ab ove equation to the
+ows
+P
+and
+T
+, through p oloidal and
+toroidal sensitivity kernels,
+C
+q
+j;
+k
+and
+D
+q
+j;
+k
+resp ectively. Hence, they are give n by
+C
+q
+j;
+k
+=
+Z
+d
+z ˆ
+h
+q
+2
+f
+j
+(
+^
+k
+
+^
+k
+0
+H
+0
+k
+H
+
+k
+0
++
+V
+0
+k
+V
+
+k
+0
+)
+
+k
+
+q
+f
+0
+j
+(
+^
+k
+
+^
+k
+0
+H
+k
+H
+
+k
+0
++
+V
+k
+V
+
+k
+0
+)
+i
+;
+D
+q
+j;
+k
+=
+k
+
+(
+q
+
+e
+z
+)
+Z
+d
+z ˆ f
+j
+(
+^
+k
+
+^
+k
+0
+H
+k
+H
+
+k
+0
++
+V
+k
+V
+
+k
+0
+)
+:
+(A6)
+Note the symmetry
+C
+q
+j;
+k
+=
+C
+
+q
+j;
+
+k
+and
+D
+q
+j;
+k
+=
+D
+
+q
+j;
+
+k
+. This coupling integral contributes to the cross-sp ectral
+measurement b etween mo des
+k
+and
+k
++
+q
+From eq 8 of
+ Wo o dard
+ (
+2014
+), we write the rst-order eect of
+ow on
+waveeld cross-correlation as
+h
+˚
+!
+
+k
+˚
+!
++
+˙
+k
++
+q
+i
+=
+H
+!
+k k
+0
+˙
+
+k
+k
+0
+(
+˙
+)
+;
+(A7)
+where the function
+H
+is given by
+H
+!
+k k
+0
+˙
+=
+
+2
+i !
+(
+N
+k
+j
+R
+!
+k
+j
+2
+R
+!
++
+˙
+k
+0
++
+N
+k
+0
+j
+R
+!
++
+˙
+k
+0
+j
+2
+R
+!
+
+k
+)
+:
+(A8)
+We absorb the factor
+
+2
+i !
+into the denition of
+H
+. Substitute eq
+ A6
+ in right-hand-side of eq
+ A7
+ to obtain eq
+ 4
+.
+The mo de sp ectral prole
+R
+is a Lorentzian, given by
+R
+!
+k
+=
+1
+!
+2
+nk
+
+!
+2
+
+i!
+nk
+=
+2
+;
+(A9)
+where
+!
+nk
+is the resonant frequency of the mo de, and
+
+nk
+is the mo de linewidth. Eq
+ A9
+ can b e derived by intro ducing
+mo de damping
+
+i !
+ ˆ
+as an op erator in the dierential equation that governs undamp ed, driven oscillations (see eq
+5 of
+ Hanasoge et al.
+ 2017
+), and then deriving the eects of rst-order p erturbations to the waveeld cross-correlation.
+Also, the parity
+H
+!
+k k
+0
+˙
+=
+H
+
+!
+
+k k
+0
+
+˙
+and
+R
+!
+k
+=
+R
+
+!
+
+k
+are established. Mo de normalization
+N
+is given by
+N
+k
+=
+1
+Q
+Q
+X
+k
+P
+!
+j
+˚
+!
+k
+j
+2
+P
+!
+R
+!
+k
+;
+(A10)
+where the
+1
+Q
+Q
+P
+k
+on the right-hand-side implies average over all [
+k
+x
+; k
+y
+] (Q terms in all) such that
+k
+=
+j
+k
+j
+is constant.
+This forces
+N
+to b e isotropic, i.e ., to only dep end on
+k
+, and not
+k
+. The sum over
+!
+is within ve linewidths of
+!
+nk
+.
+Note that Eq.
+ A8
+ through
+ A10
+ are mo died from H 21 to ensure parity and that
+ow maps are real.
+The three equations
+ A8
+ through
+ A10
+, along with the symmetry relation for kernels, and summation over
+
+!
+, serve
+to establish the parity
+B
+˙
+k
+;
+q
+=
+B
+
+˙
+
+k
+;
+
+q
+. This allows for obtaining
+P
+˙
+q
+=
+P
+
+˙
+
+q
+, and subsequently, purely real
+ow in
+the real domain. Setting
+˙
+= 0 gives us the linear, invertible equation eq
+ 6
+. Substituting eqns
+ A8
+ through
+ A10
+ into
+the noise mo de l obtained in H21 and summing over
+
+!
+establishes the symmetry
+G
+˙
+k
+;
+q
+=
+G
+
+˙
+
+k
+;
+
+q
+.
+Imaging near-surface flows using mode-couplin g analysis
+13
+B.
+SOLA INVERSIONS
+Subtractive Optimally Lo calized Averages (SOLA,
+ Pijp ers & Thompson
+ 1994
+) aims to obtain a set of weight factors
+for the mo de
+q
+and depth
+z
+o
+, which we will call
+
+k
+;z o
+. A line ar weighted sum of the measurements
+B
+k
+;
+q
+in the fashion
+P
+k
+
+k
+;z o
+B
+k
+;
+q
+allows for an average value of the
+ow
+P
+q
+(
+z
+) to b e estimated at the depth
+z
+o
+. To obtain the co ecients
+
+k
+;z o
+, it is as sumed that a set of sensitivity kernels
+K
+k
+;
+q
+(
+z
+) for the mo de
+q
+can b e summed up coherently to give an
+'averaging kernel' that is lo calized at the depth
+z
+o
+. Conventionally, a Gaussian centered at
+z
+o
+and a width  is chosen
+which the averaging kernel should resemble after p erforming inversion.
+B.1.
+Kernels in th e integral form
+Since the ke rnels in eq
+ A6
+ are manifest as co ecients on a basis
+f
+j
+(
+z
+), we rst derive kerne ls that can b e expressed
+as a function of depth
+z
+(see Figure
+ 8
+). It is convenient to derive in matrix form. Thus, with the following denitions :
+P
+
+P
+q
+(
+z
+),
+p
+
+P
+q
+j
+,
+F
+
+f
+j
+(
+z
+),
+B
+
+B
+k
+;
+q
+C
+
+C
+q
+j;
+k
+and
+K
+
+K
+k
+;
+q
+(
+z
+), we write (assume only p oloidal
+ow for
+simplicity, the same derivations hold true for toroidal
+ow as well)
+P
+=
+F p
+(B11)
+The size of
+P
+is thus the same as the length of the radial grid
+z
+.
+Now, pre-multiply by
+F
+T
+and integrate over
+z
+on b oth sides (drop the integral notation for compactness),
+F
+T
+P
+= (
+F
+T
+F
+)
+p
+p
+= (
+F
+T
+F
+)
+
+1
+F
+T
+P
+(B12)
+Now, substituting eq
+ B12
+ into the forward problem eq
+ 6
+,
+B
+=
+C p
+= (
+F
+T
+F
+)
+
+1
+F
+T
+C P
+=
+K P
+(B13)
+where
+K
+= (
+F
+T
+F
+)
+
+1
+F
+T
+C ;
+i.e.,
+K
+k
+;
+q
+(
+z
+) =
+X
+j;j
+0
+h
+Z
+d
+z f
+j
+(
+z
+)
+f
+j
+0
+(
+z
+)
+i
+
+1
+f
+j
+0
+(
+z
+)
+C
+q
+j
+0
+;
+k
+(B14)
+B.2.
+Obtaining the coecients
+
+Now, demand that the averaging kernel should resemble a unimo dulus target Gaussian centered at
+z
+o
+T
+(
+z ; z
+o
+) =
+1
+p
+2
+ˇ
+
+2
+exp
+
+z
+
+z
+o
+2
+2
+
+:
+(B15)
+This can b e achieved by solving the optimization problem
+minimize
+X
+=
+Z
+d
+z
+h
+T
+(
+z ; z
+o
+)
+
+
+q
+(
+z ; z
+o
+)
+i
+2
+;
+(B16)
+where we intro duce the averaging kernel for mo de
+q
+thus
+
+q
+(
+z ; z
+o
+) =
+X
+k
+
+k
+;z o
+K
+k
+;
+q
+(
+z
+)
+:
+(B17)
+As an aside, we note that averaging kernels can similarly b e construc ted for RLS (see se ction
+ 3.1
+) using eqns
+ 13
+and
+ B14
+.
+14
+Mani et al.
+Figure 8.
+Left
+: Kernel
+K
+k
+;
+q
+(
+z
+) (eq
+ B14
+) shown vs depth
+z
+for the three radial order couplings f-f, p
+1
+-p
+1
+, and p
+2
+-p
+2
+.
+q
+R
+
+=
+[
+
+112
+;
+
+45] and
+k
+R
+
+= [
+
+853
+;
+
+157] is chosen for all the radial order couplings for comparison.
+Right
+: Averaging kernel
+(eq
+ B17
+) using SOLA, for
+q
+R
+
+= [
+
+112
+;
+
+45] at depth
+z
+0
+=
+
+0
+:
+48 Mm, and the corresp onding target Gaussian (eq
+ B15
+).
+Integral of the averaging kernel over
+z
+is 0.89.
+Setting
+@
+X
+@
+!
+0 give s us the matrix problem to b e solved
+A
+f
+
+g
+=
+v ;
+f
+
+g
+=
+h
+A
++
+
+i
+
+1
+v ;
+(B18)
+where the square matrix
+A
+=
+R
+d
+z K
+k
+;
+q
+(
+z
+)
+K
+k
+0
+;
+q
+(
+z
+) and
+v
+=
+R
+d
+z K
+k
+;
+q
+(
+z
+)
+T
+(
+z ; z
+o
+). Here,
+k
+0
+is just a dummy index for
+denoting elements in the matrix
+A
+, (
+k
+0
+6
+=
+k
++
+q
+). In the last line of e q
+ B18
+, we intro duce regularization using an Identity
+matrix
+I
+, with the regularization parameter
+
+- purp ose b eing the same as that describ ed in section
+ 3.1
+. Obtaining
+
+thus b ecomes a highly exp ensive c omputationally for very large numb er of mo des (see section
+ 3
+). Substitute
+
+obtained from eq
+ B18
+ into last line of eq
+ B13
+, and
+P
+k
+on b oth sides
+X
+k
+
+k
+;z
+o
+B
+˙
+k
+;
+q
+=
+X
+k
+
+k
+;z
+o
+Z
+d
+z K
+k
+;
+q
+(
+z
+)
+P
+˙
+q
+(
+z
+)
+;
+=
+Z
+d
+z
+
+q
+(
+z ; z
+o
+)
+P
+˙
+q
+(
+z
+)
+;
+ˇ h
+P
+˙
+q
+(
+z
+o
+)
+i
+(B19)
+Inversions can similarly b e p erformed for multiple depths by cho osing suitable widths for the target Gaussians. Di-
+vergence
+ow can then b e obtained from eq
+ 16
+. Results are shown in Figures
+ 9
+ and
+ 10
+.
+REFERENCES
+Anderson, E. R., Duvall, Thomas L., J., & Jeeries, S. M.
+1990, ApJ, 364, 699, doi:
+ 10.1086/169452
+Bahcall, J. N., & Pinsonneault, M. H. 1992, Reviews of
+Mo dern Physics, 64, 885,
+doi:
+ 10.1103/RevMo dPhys.64.885
+Birch, A. C., Schunker, H., Braun, D. C., et al. 2016,
+Science Advances, 2, e1600557,
+doi:
+ 10.1126/sciadv.1600557
+Birch, A. C., Schunker, H., Braun, D. C., & Gizon, L. 2019,
+A&A, 628, A37, doi:
+ 10.1051/0004- 6361/201935591
+oning, V. G. A., Birch, A. C., Gizon, L., D uvall, T. L., &
+Schou, J. 2020, A&A, 635, A181,
+doi:
+ 10.1051/0004- 6361/201937331
+Braun, D. C., & Lindsey, C. 2001, ApJL, 560, L189,
+doi:
+ 10.1086/324323
+Christensen-Dalsgaard, J. 2002, Reviews of Mo dern
+Physics, 74, 1073, doi:
+ 10.1103/RevMo dPhys.74.1073
+|. 2021, Living Reviews in Solar Physics, 18, 2,
+doi:
+ 10.1007/s41116- 020- 00028- 3
+Imaging near-surface flows using mode-couplin g analysis
+15
+Figure 9.
+Left
+: Poloidal
+ow p ower-sp ectrum for f-f as a function of
+q
+x
+R
+
+and
+q
+y
+R
+
+.
+Right
+: Corresp onding p ower-sp ectrum
+averaged over the azimuthal angle. Shaded region shows
+
+1
+
+˙
+error around the mean. Power is in units of m
+2
+/s
+4
+.
+Figure 10.
+Real-space divergence
+ows (in units of 10
+
+5
+s
+
+1
+) for mo de-coupling inversion through SOLA using f-f coupling,
+and LCT, bandpass ltered around
+q R
+
+= 100. We cut edges out from the
+ow maps and compare a circular region of diameter
+ˇ
+175 Mm. The scatter plot shows the agreement b etween the maps. The slop es of the b est-t line through the scatter plot is
+1.05. For demonstration, we show inversions only for p oloidal
+ow using SOLA.
+De Rosa, M., Duvall, T. L., J., & To omre, J. 2000, SoPh,
+192, 351, doi:
+ 10.1023/A:1005269001739
+De Rosa, M. L., & To omre, J. 2004, ApJ, 616, 1242,
+doi:
+ 10.1086/424920
+Duvall, T. L., J., & Harvey, J. W. 1986, in NATO Advanced
+Study Institute (ASI) Series C, Vol. 169, Seismology of
+the Sun and the Distant Stars, ed. D. O. Gough, 105{116
+Duvall, T. L., J., Jeeries, S. M., Harvey, J. W., &
+Pomerantz, M. A. 1993, Nature, 362, 430,
+doi:
+ 10.1038/362430a0
+Fisher, G. H., & Welsch, B. T. 2008, in Astronomical
+So ciety of the Pacic Conference Series, Vol. 383,
+Subsurface and Atmospheric In
+uences on Solar Activity,
+ed. R. Howe, R. W. Komm, K. S. Balasubramaniam, &
+G. J. D. Petrie, 373.
+ https://arxiv.org/abs/0712.4289
+Giles, P. M., Duvall, T. L., Scherrer, P. H., & Bogart, R. S.
+1997, Nature, 390, 52, doi:
+ 10.1038/36294
+Gizon, L., & Birch, A. C. 2004, ApJ, 614, 472,
+doi:
+ 10.1086/423367
+Gizon, L., Cameron, R. H., Pourab dian, M., et al. 2020,
+Science, 368, 1469, doi:
+ 10.1126/science.aaz7119
+Gizon, L., Cameron, R. H., Bekki, Y., et al. 2021, A&A,
+652, L6, doi:
+ 10.1051/0004- 6361/202141462
+Greer, B. J., Hindman, B. W., & To omre, J. 2016, ApJ,
+824, 128, doi:
+ 10.3847/0004- 637X/824/2/128
+Hanasoge, S., & Mandal, K. 2019, ApJL, 871, L32,
+doi:
+ 10.3847/2041- 8213/aa60
+Hanasoge, S. M., Hotta, H., & Sreenivasan, K. R. 2020,
+Science Advances, 6, eaba9639,
+doi:
+ 10.1126/sciadv.aba9639
+Hanasoge, S. M., Wo o dard, M., Antia, H. M., Gizon, L., &
+Sreenivasan, K. R. 2017, MNRAS, 470, 1404,
+doi:
+ 10.1093/mnras/stx1298
+Hansen, P. C. 1992, SIAM review, 34, 561
+Hanson, C. S., Duvall, T. L., Birch, A. C., Gizon, L., &
+Sreenivasan, K. R. 2020, A&A, 644, A103,
+doi:
+ 10.1051/0004- 6361/202039108
+Hanson, C. S., Hanasoge, S., & Sreenivasan, K. R. 2021,
+ApJ, 910, 156, doi:
+ 10.3847/1538- 4357/ab e770
+Hathaway, D. H., Teil, T., Norton, A. A., & Kitiashvili, I.
+2015, ApJ, 811, 105, doi:
+ 10.1088/0004- 637X/811/2/105
+16
+Mani et al.
+Hathaway, D. H., Upton, L., & Colegrove, O. 2013, Science,
+342, 1217, doi:
+ 10.1126/science.1244682
+Hill, F. 1988, ApJ, 333, 996, doi:
+ 10.1086/166807
+Kashyap, S. G., Das, S. B., Hanasoge, S. M., Wo o dard,
+M. F ., & Tromp, J. 2021, ApJS, 253, 47,
+doi:
+ 10.3847/1538- 4365/ab df5e
+Korda, D., &
+
+Svanda, M. 2021, A&A, 646, A184,
+doi:
+ 10.1051/0004- 6361/202039928
+Langfellner, J., Birch, A. C., & Gizon, L. 2018, A&A, 617,
+A97, doi:
+ 10.1051/0004- 6361/201732471
+Langfellner, J., Gizon, L., & Birch, A. C. 2015, A&A, 581,
+A67, doi:
+ 10.1051/0004- 6361/201526024
+Lavely, E. M., & Ritzwoller, M. H. 1992, Philosophical
+Transactions of the Royal So ciety of London Series A,
+339, 431, doi:
+ 10.1098/rsta.1992.0048
+Lindsey, C., & Braun, D. C. 2000, SoPh, 192, 261,
+doi:
+ 10.1023/A:1005227200911
+optien, B., Birch, A. C., Duvall, T. L., Gizon, L., &
+Schou, J. 2016, A&A, 587, A9,
+doi:
+ 10.1051/0004- 6361/201526805
+optien, B., Gizon, L., Birch, A. C., et al. 2018, Nature
+Astronomy, 2, 568, doi:
+ 10.1038/s41550- 018- 0460- x
+Mandal, K ., & Hanasoge, S. 2020, ApJ, 891, 125,
+doi:
+ 10.3847/1538- 4357/ab7227
+Mandal, K ., Hanasoge, S. M., & Gizon, L. 2021, A&A, 652,
+A96, doi:
+ 10.1051/0004- 6361/202141044
+Mani, P., & Hanasoge, S. 2020, ApJ, 901, 139,
+doi:
+ 10.3847/1538- 4357/abb133
+|. 2021, ApJ, 920, 36, doi:
+ 10.3847/1538- 4357/ac1ad6
+Novemb er, L. J., & Simon, G. W. 1988, ApJ, 333, 427,
+doi:
+ 10.1086/166758
+Pijp ers, F. P., & Thompson, M. J. 1994, A&A, 281, 231
+Rieutord, M., Roudier, T., Ludwig, H. G., Nordlund,
+
+A., &
+Stein, R. 2001, A&A, 377, L14,
+doi:
+ 10.1051/0004- 6361:20011160
+Rincon, F ., & Rieutord, M. 2018, Living Reviews in Solar
+Physics, 15, 6, doi:
+ 10.1007/s41116- 018- 0013- 5
+Rincon, F ., Roudier, T., Scheko chihin, A. A., & Rieutord,
+M. 2017, A&A, 599, A69,
+doi:
+ 10.1051/0004- 6361/201629747
+Schad, A., & Roth, M. 2020, ApJ, 890, 32,
+doi:
+ 10.3847/1538- 4357/ab65ec
+Scherrer, P. H., Schou, J., Bush, R. I., et al. 2012, SoPh,
+275, 207, doi:
+ 10.1007/s11207- 011- 9834- 2
+Schou, J., Antia, H. M., Basu, S., et al. 1998, ApJ, 505,
+390, doi:
+ 10.1086/306146
+Sekii, T. 1997, in Sounding Solar and Stellar Interiors, ed.
+J. Provost & F.-X. Schmider, Vol. 181, ISBN0792348389
+Sekii, T., Kosovichev, A. G., Zhao, J., et al. 2007, PASJ,
+59, S637, doi:
+ 10.1093/pasj/59.sp3.S637
+Sno dgrass, H. B. 1984, SoPh, 94, 13,
+doi:
+ 10.1007/BF00154804
+Thompson, M. J., To omre, J., Anderson, E. R., et al. 1996,
+Science, 272, 1300, doi:
+ 10.1126/science.272.5266.1300
+Unno, W., Osaki, Y., Ando, H., Saio, H., & Shibahashi, H.
+1989, Nonradial oscillations of stars
+Verma, M., Steen, M., & Denker, C. 2013, A&A, 555,
+A136, doi:
+ 10.1051/0004- 6361/201321628
+Vorontsov, S. V. 2011, MNRAS, 418, 1146,
+doi:
+ 10.1111/j.1365- 2966.2011.19564.x
+Wo o dard, M. 2014, SoPh, 289, 1085,
+doi:
+ 10.1007/s11207- 013- 0386- 5
+Wo o dard, M., Schou, J., Birch, A. C., & Larson, T. P.
+2013, SoPh, 287, 129, doi:
+ 10.1007/s11207- 012- 0075- 9
+Wo o dard, M. F . 1989, ApJ, 347, 1176, doi:
+ 10.1086/168206
+|. 2006, ApJ, 649, 1140, doi:
+ 10.1086/506927
+|. 2007, ApJ, 668, 1189, doi:
+ 10.1086/521391
+|. 2016, MNRAS, 460, 3292, doi:
+ 10.1093/mnras/stw1223
+Zhao, J., Georgobiani, D., Kosovichev, A. G., et al. 2007,
+ApJ, 659, 848, doi:
+ 10.1086/512009
+Zhao, J., Nagashima, K., Bogart, R. S., Kosovichev, A. G.,
+& Duvall, T. L., J. 2012, ApJL, 749, L5,
+doi:
+ 10.1088/2041- 8205/749/1/L5

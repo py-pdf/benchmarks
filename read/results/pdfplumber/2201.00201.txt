@@ -1,0 +1,660 @@
+Astronomy&Astrophysicsmanuscriptno.trabucchi_etal_2022_period_age_relation_of_lpvs ©ESO2022
+January19,2022
+LettertotheEditor
+The period-age relation of long-period variables
+M.Trabucchi1,(cid:63),N.Mowlavi1
+DepartmentofAstronomy,UniversityofGeneva,Ch.Pegasi51,1290Versoix,Switzerland
+December2021
+ABSTRACT
+Context. Pieces of empirical evidence suggest the existence of a period-age relation for long-period variables (LPVs). Yet, this
+propertyhashardlybeenstudiedontheoreticalgroundsthusfar.
+2
+2 Aims.Weaimtoexaminetheperiod-agerelationusingtheresultsfromrecentnonlinearpulsationcalculations.
+Methods.WecombinedisochronemodelswiththeoreticalperiodstosimulatethedistributionoffundamentalmodeLPVpulsators,
+0
+whichincludeMiras,intheperiod-ageplane,andwecompareditwithobservationsofLPVsinGalacticandMagellanicClouds’
+2
+clusters.
+
+n Results.Inagreementwithobservations,modelspredictthatthefundamentalmodeperioddecreaseswithincreasingagebecauseof
+a thedominantroleofmassinshapingstellarstructureandevolution.Atagivenage,theperioddistributionshowsanon-negligible
+J width and is skewed toward short periods, except for young C-rich stars. As a result, the period-age relations of O-rich and C-
+7  richmodelsarepredictedtohavediﬀerentslopes.Wederivedbest-ﬁtrelationsdescribingageandinitialmassasafunctionofthe
+1 fundamentalmodeperiodforbothO-andC-richmodels.
+  Conclusions.Thestudyconﬁrmsthepoweroftheperiod-agerelationstostudypopulationsofLPVsofspeciﬁctypes,eitherO-rich
+
+] orC-rich,onstatisticalgrounds.Indoingso,itisrecommendednottolimitastudytoMiras,whichwouldmakeitpronetoselection
+R biases,butrathertoincludesemi-regularvariablesthatpulsatepredominantlyinthefundamentalmode.Theuseoftherelationsto
+S studyindividualLPVs,ontheotherhand,requiresmorecaregiventhescatterintheperioddistributionpredictedatanygivenage.
+.
+h Key words. stars: AGB and post-AGB – stars: evolution – stars: variables: general – Galaxy: stellar content – Galaxy: globular
+p clusters:general–MagellanicClouds
+-
+o
+r
+t1. Introduction the ﬁrst time the radial velocity of LPVs in the southern hemi-
+s
+a sphere, by Feast (1963). In this seminal paper, Feast realized
+[Low-tointermediate-massstarsapproachtheendoftheirlives thatLPVswithshorterperiodsmustbemembersofolderstellar
+ throughtheasymptoticgiantbranch(AGB)evolutionaryphase,
+  populationsandemphasizedtheirhighlypromisingapplications
+2duringwhichtheyexhibitpulsationswithtimescalesuptosev-
+for both Galactic and extra-galactic studies over a wide range
+v
+eralhundredsofdays,andtheyarehenceknownaslong-period
+1 of stellar ages. It should be noted that the PA relation is con-
+variables (LPVs). If their V-band amplitude exceeds 2.5 mag,
+0 nectedwiththeexistenceofaperiod-metallicityrelation(Lloyd
+theyareclassiﬁedasMiras,whichhavearatherregularperiodic-
+2 Evans&Menzies1973;LloydEvans1983b;Feast1981;Feast
+ityandtheyarebelievedtopulsateonlyintheradialfundamen-
+0 &Whitelock2000a,andreferencestherein).
+0tal mode (FM). If their photometric amplitude is smaller, they
+A number of subsequent works have corroborated the PA
+.areknownassemi-regularvariables(SRVs),whicharethought
+1 relation on empirical grounds, or have exploited it to interpret
+tobetheprogenitorsofMiras.Thenamestemsfromthelesser
+0 observationalresults.RelevantexamplesarestudiesofLPVsin
+degree of regularity of their light curves, likely due to the fact
+2 globular clusters (e.g., Feast 1966; Lloyd Evans 1983b; White-
+thattheycanpulsateinmultiplemodessimultaneously.
+2
+lock 1986), toward the galactic center and bulge (Lloyd Evans
+: ThenotionthatyoungerLPVstendtodisplaylongerperiods
+v 1976;Feastetal.1980;Whitelocketal.1991)orathighgalactic
+comparedtoolderones,oftenreferredtoastheperiod-age(PA)
+i latitude(Jura&Kleinmann1992;Whitelocketal.1994).Ofpar-
+Xrelation,isrootedintheempiricalevidencefromstellarkinemat-
+ticularinterestistherecenteﬀorttoextendtheanalysisofLPVs
+ics in the solar neighborhood. The ﬁrst such piece of evidence
+r todwarfgalaxiesintheLocalGroup(Menziesetal.2002,2008;
+aisprobablyduetoMerrill(1923),whopointedoutthatM-type
+Whitelocketal.2009;Menziesetal.2010,2011;Sakamotoetal.
+LPVsincreasinglylagbehindthelocalstandardofrest(i.e.,pos-
+2012; Battinelli & Demers 2012, 2013; Whitelock et al. 2013;
+sess a higher asymmetric drift) as their period decreases. Later
+Menziesetal.2015).
+studies(assummarizedbyWyatt&Cahn1983)conﬁrmedthis
+behavior (also using proper motion data, e.g., Wilson & Mer- TheHipparcosmissionprovidedthemeanstoreﬁnethere-
+rill 1942), and showed that the shorter periods are also accom- sults on the period-kinematics connection. This was done by
+panied by a higher velocity dispersion. Furthermore, groups of Feast&Whitelock(2000b),whofoundevidencesupportingthe
+LPVswithrelativelyshortperiodsarecharacterizedbyagreater existence of a bar-like structure in the Bulge from the orbits of
+scaleheightabovetheGalacticplane.Thiswasshown,usingfor localLPVs.AsimilarstudydedicatedtoC-richLPVswasper-
+formed by Feast et al. (2006), who provided quantitative age
+(cid:63) Corresponding author: M. Trabucchi estimates for these stars. A summary of the main results and
+(michele.trabucchi@unige.ch) prospectsemergingfromtheseHipparcos-erastudiesisgivenby
+Articlenumber,page1of9
+A&Aproofs:manuscriptno.trabucchi_etal_2022_period_age_relation_of_lpvs
+Feast(2007).Morerecently,thestudyoftheGalaxywithLPVs 2.2. Data
+hasbeenstimulatedbythewealthofdataacquiredbylarge-scale
+surveys (e.g., Catchpole et al. 2016; Urago et al. 2020), espe- Asaﬁrstsetofdata,weconsideredthecluster-LPVpairsused
+ciallytheGaiamission(Gradyetal.2019,2020). byGradyetal.(2019,seetheirtables1and 2).Theseconsistof
+ItseemsrelevantthatjustafewyearsafterthestudyofFeast 19clustersintheLargeMagellanicCloud,hostingatotalof20
+(1963), Kippenhahn & Smith (1969) predicted the PA relation potentialLPVmembers,andeightGalacticclusterseachhosting
+ofclassicalCepheidsfromstellarevolutionandpulsationmod- apotentialLPVmember.
+els. The theoretical modeling of Cepheids and of their period- WeexpandedthislistwithdataforLPVsinafewpopulous
+luminosity (PL) and PA relations is now an active ﬁeld of re- clusters,namelytheGalacticclustersNGC362,NGC2808,47
+search(e.g.,Bonoetal.2005;Andersonetal.2016;DeSomma Tuc(NGC104),andωCen(NGC5139);theLMCclustersNGC
+etal.2020).Incontrast,whenitcomestotheoreticalassessments 1978andNGC1846;andtheclusterNGC419intheSmallMag-
+oftheLPVPArelation,theliteratureissurprisinglyscarce(espe- ellanicCloud(SMC).ThesourcelistsweretakenfromLebzel-
+ciallyincomparisonwiththesigniﬁcanteﬀortputintoempirical ter&Wood(2005,2007,2011,2016)andKamathetal.(2010),
+studies).Infact,wewereabletoidentifyonlytworelevantstud- whosenotationforthesourcesnamesisadoptedhere.Afterex-
+ies addressing this subject (Wyatt & Cahn 1983; Eggen 1998). cludingthestarLW3inNGC1846andthestarV129inωCen,
+Thediscrepancyinperiodpredictionsbetweenlinearandnonlin- whichareunlikelyclustermembers(cf.Lebzelter&Wood2007,
+ear pulsation models (e.g., Ya’Ari & Tuchman 1996; Lebzelter 2016),wereachedatotalof203sources.
+&Wood2005;Trabucchietal.2021b),andmoregenerallythe
+The aforementioned studies also provide a lot of informa-
+diﬃcultyinmodelingthestructureofevolvedredgiants,likely
+tion,possiblyincluding JHK photometry,oneormoreperiods,
+playedaroleinhamperingthetheoreticalinvestigationofthePA
+and a spectral type. In order to expand on the available data,
+relationofLPVs.
+wecrossmatchedtheselectedsamplewiththeTwoMicronAll-
+MotivatedbythereleaseofupdatedAGBevolutionarymod-
+Sky Survey (2MASS, Skrutskie et al. 2006), the all-sky data
+els(Pastorellietal.2019,2020)andtheavailabilityofnew,ac-
+release of the Wide-ﬁeld Infrared Survey Explorer (AllWISE,
+curate model predictions for the FM period of AGB stars (Tra-
+Cutri et al. 2013), the catalog of variable stars from the All-
+bucchietal.2019,2021b),wedecidedtoinvestigatethenature
+Sky Automated Survey for SuperNovae (ASAS-SN Jayasinghe
+ofthePArelationofLPVsontheoreticalgrounds.Theadopted
+etal.2020),thecatalogsofLPVsintheMagellanicCloudsfrom
+models and observed data are described in Sect. 2, while in
+thethirdphaseoftheOpticalGravitationalLensingExperiment
+Sect. 3 we present the results, which are discussed in Sect. 4.
+(OGLE-III,Soszyn´skietal.2009,2011),theearlythirddatare-
+WesummarizeourconclusionsinSect.5.
+lease from the Gaia mission (Gaia EDR3, Gaia Collaboration
+etal.2021),andthecatalogofLPVcandidatesfromGaiaDR2
+(Mowlavietal.2018).
+2. Methods
+Following Grady et al. (2019), we took ages from
+2.1. Models Kharchenkoetal.(2016)andBaumgardtetal.(2013)forclusters
+intheGalaxyandLMC,respectively,therebyensuringthatages
+We employed PARSEC-COLIBRI isochrones (Marigo et al.
+would be homogeneously derived for clusters in both galaxies.
+2017) with stellar evolutionary models from Pastorelli et al.
+Age uncertainties from Baumgardt et al. (2013), provided for
+(2019, 2020) for the thermally pulsing asymptotic giant branch each cluster, are generally around σ (cid:39) 0.05. Kharchenko
+log(τ)
+(TP-AGB) phase, and from PARSEC (Bressan et al. 2012, ver-
+et al. (2016) do not provide age uncertainties, but a reasonable
+sion 1.2S) for the preceding evolution. The adopted set of upper limit for their method should be σ = 0.2 based on
+log(τ)
+isochrones covers the range 0.001 to 0.016 in initial metal-
+the analysis of Kharchenko et al. (2005) (the same value was
+licity (Z), with a 0.001 step, while it spans the age interval
+i adoptedbyGradyetal.2019,intheirFig.7).
+8.00 ≤ log(τ/yr) ≤ 10.45 with a step of 0.05. Since the AGB
+As discussed by Kamath et al. (2010), the age of the SMC
+phaseisshort-lived,itonlyspansasmallrangeofinitialmasses
+foreachgivenisochrone,oforderof10−2M atmost. cluster NGC 419 is believed to be around 1.4-1.6 Gyr. This is
+(cid:12) consistentwiththevalueτ = 1.45±0.05GyrfromGoudfrooij
+Theadoptedisochronesincludelinearpulsationperiodsfrom
+et al. (2014), while it is as young as τ (cid:39) 0.89±0.015 Gyr ac-
+Trabucchietal.(2019)forovertonemodesandnonlinearperiods
+cordingtoPerrenetal.(2017).Sinceanaccurateestimateisnot
+computed with the period-mass-radius relation from Trabucchi
+necessaryforourexploratoryanalysis,wetookaroughaverage
+etal.(2021b)fortheFM1.Pulsationpropertieswerecomputed
+and assumed log(τ/yr) = 9.1±0.1. NGC 419 and NGC 1846
+alongboththeearly-AGBandtheTP-AGB.Wedidnotextend
+likely exhibit TP-AGB boosting (Girardi et al. 2013). We note
+ouranalysistoredsupergiantstarsasthepulsationprescription
+thatsomeclustersshowmultiplestellarpopulations,whoseage
+weemployedarestrictlyvalidonlybelow7M .
+(cid:12) spreadhasbeenestimatedinsomecases(e.g.,Mackey&Broby
+Werecallthat,withtheadoptednonlinearrelation,theperiod
+Nielsen2007;Joo&Lee2013;Villanovaetal.2014)andiscon-
+increaseswithradius(R)asabrokenpowerlaw,whoseexponent
+sistentwiththeageuncertaintiesweadopted.
+decreasesassoonasthe“bendingradius”R isexceeded,itand
+b
+becomes zero when the “saturation radius” R > R is reached Distances of Galactic clusters were also taken from
+s b
+(i.e.,theperiodbecomesindependentofradius).Theexactval- Kharchenko et al. (2016), while for the Magellanic Clouds and
+cuuersreonftRmbaasnsd(MRs),.aWsewaeslsluamseofthtahtethexepFoMnenitss,dodmepiennadntoinf tthhee 0th.0ei9rmcluagstearnsdwµeSMadCop=ted18t.h9e6d±ist0a.n0c2emmaogdufrloimµLMdeCG=ri1js8.e4t9a±l.
+stellar radius is larger than the critical value R , which we (2017).Wesearchedfordataoninterstellarextinctionfromsev-
+dom,0
+computedfromthecurrentstellarmassusingEq.4ofTrabucchi eralliteratureworks(e.g.,Nayaketal.2016;Kharchenkoetal.
+etal.(2021b). 2016; Perren et al. 2017), all of which suggest that extinction
+in the K ﬁlter is smaller than ∼ 0.1 mag for most of the clus-
+s
+1 Hereinafter, whenever we discuss periods, it should be understood tersweconsidered,andatmostaslargeas∼ 0.3mag,whichis
+thatwerefertoFMperiodsonwhichthisworkisfocused. negligibleforourpurposes.
+Articlenumber,page2of9
+Trabucchietal.:Theperiod-agerelationofLPVs
+A detailed membership veriﬁcation is beyond the scope of On the basis of the average age of these two groups of clus-
+this work, and we relied on the checks performed by authors ters and the associated uncertainty, and taking the discrete age
+whose source lists we adopted. It should be kept in mind that samplingoftheisochronesintoaccount,weconsideredtheage
+somesourcesmaynotberealclustermembers. rangeslog(τ/yr)=9.15±0.10andlog(τ/yr)=10.10±0.20.Pe-
+For sources without a spectral type, we used the Gaia- rioddistributionsatthoseagesaredisplayedinpanels(b)and(c)
+2MASS diagram (Lebzelter et al. 2018, 2019) to determine ofFig.1,respectively,showinggoodagreementbetweenmodel
+whethertheyareO-orC-rich.Weusedthenear-infraredperiod- predictionsandobservations.Wenotethatinbothcases,thedis-
+luminosity diagram to identify the most likely pulsation mode tributionisskewedtowardshortperiods,whichseemstobetrue
+associated with each period of each observed source. We se- atallagesforO-richstars.Thiscanbeseeninpanel(a)ofFig.2,
+lectedonlyFMperiodsandrejectedlongsecondaryperiodsand whichisaversionofthePAplanelimitedtoanO-richcompo-
+periods attributed to overtone mode pulsation. The details of sition2. Indeed, although at τ (cid:46) 5 Gyr the observed sample is
+these classiﬁcation steps are provided in Appendix A. Out of veryscarce,itappearstobeconsistentwithmodelspredictinga
+203 sources from the initial list, we identiﬁed 95 LPVs pulsat- more densely populated region in the shorter-period half of the
+ing in the FM, consisting of 40 C-rich and 55 O-rich sources. PAdistribution.
+Theyconsistof29Miras,33semi-regularvariables,and33other The case of C-stars, shown in panel (b) of Fig. 2, is diﬀer-
+sources(mostlikelyLPVs)whosevariabilitytypehasnotbeen ent. They only form over a restricted range of initial masses
+determined.We notethat,withtheexceptionof GaiaDR2,the andages,sotheiroccurrenceinagivenstellarpopulationisan
+sourcesofvariabilitydataconsideredheredonotreporttheun- age indicator on its own. Toward the low-mass (old age) side
+certaintyassociatedwithobservedperiods.However,sinceperi- of the C-star regime, the behavior is similar to the O-rich case
+odswerederivedinmostcasesfromwell-sampled,high-quality withaconcentrationaroundrelativelyshortperiods.C-richmod-
+variability observations, relative period uncertainties are most els tend to have a lower surface temperature and larger radii,
+likelynegligiblecomparedwiththoseassociatedwithage. at a given mass, compared to O-rich models, and thus they at-
+tainlongerperiodsmoreeasily.Thisoccursinparticulartoward
+highermasses,sothatyoungerC-richmodelsaremoreconcen-
+3. Results trated at longer periods, leading to a steeper PA relation com-
+pared with the O-rich case. These predictions agree with ob-
+Panel (a) of Fig. 1 shows a comparison between model predic- servations on the old side of the period distribution, while the
+tions and observations in the PFM–log(τ/yr) plane. The former scarcityofCstarsatτ(cid:39)0.6Gyrpreventsusfromperforminga
+are displayed by a density map showing the expected number comparisonatyoungerages.
+NFM of LPVs pulsating in the FM in each period-age bin, nor- InappendixB,weprovideanalyticPArelationsbyﬁttingthe
+malizedtomaximum.Modelpredictionsareingoodagreement high-densitypartsoftheO-andC-richmodels’distribution.We
+with data derived from observations (i.e., individual LPVs in emphasizethat,becauseofthelargescatteroftherelation,ages
+clusters, represented by symbols), and they show that the pe- estimatedinthiswayforindividualLPVsareboundtobehighly
+riodofLPVspulsatingintheFMdecreaseswithincreasingage. uncertain.Asawaytoassesstheerrorinagedetermination,we
+Crosses mark the average properties of the three groups of C- also provide analytic best-ﬁt relations to the boundaries of the
+rich LPVs from Feast et al. (2006, their table 4), which ﬁt the PA distribution of the models in the appendix. These relations
+generalpatternwiththeexceptionoftheirgroup3,estimatedto aredisplayedinFig.2.
+beolderthanwhatourmodelspredictatP(cid:39)650.
+We also show a linear best-ﬁt to the models distribution
+(weighted by N ), which shows a fairly good agreement with 4. Discussion
+FM
+the best-ﬁt to observations by Grady et al. (2019, also shown).
+In general agreement with observations, models conﬁrm that
+However, the best-ﬁt line does not fully capture the properties
+LPVs pulsating predominantly in the FM follow a PA relation,
+ofthepredictions,noroftheobservedtrend.Indeed,modelsare
+whichexhibitsanon-negligibledispersion.Thankstothenewly
+indicativeofasubstantialdispersionaroundtherelation.Forin-
+availablenonlinearperiodpredictions,wewereabletobetterex-
+stance,at1Gyr,theFMperiodrangesfrom∼200daysto∼550
+aminethenatureofthisrelationandtheoriginofitsscatter.
+days.Conversely,LPVspulsatingintheFMwithaperiodof350
+ThePArelationisintimatelyconnectedwiththePLrelation,
+daysarepredictedtobeatleast∼200Myrold,buttheycanbeas
+bothpatternsemergingbecauseoftheprominentroleofmassin
+old as ∼3 Gyr. Observed data are consistent with the predicted
+shaping stellar structure and evolution. Indeed, stellar mass de-
+spread,althoughtheagreementcannotbeconsideredastheob-
+terminesthelifetimesofthemainevolutionarystages,andthus
+servedsampleadoptedisnotcomplete.
+the age of stars in the AGB phase. Pulsation models (Trabuc-
+Nonetheless, it is relevant that some clusters host multiple
+chi et al. 2021b) show that the radius R (and correspond-
+LPVs, which are thus almost coeval, and they do span a wide dom,0
+ingluminosity)attheonsetofdominantFMpulsation(DFMP)
+periodrange.Someoftheseclustershostmultiplestellarpopu-
+increases with mass, so that the most massive FM-dominated
+lationsthatarebelievedtohaveformedoveratimecomparable
+LPVs are brighter. They also have longer periods, as this in-
+with the age uncertainties we adopted. This means that longer-
+creases with radius. In other words, the period, luminosity, and
+period(moremassive)LPVsintheseclustersprobablyleanto-
+age near the tip of the AGB are all functions of initial stellar
+wardtheloweragelimitassumedfortheirhostcluster,andthe
+mass(atleasttoagoodapproximation).
+opposite is true at shorter periods. This tends to strengthen the
+WenotethatthiswouldnotbethecaseiftheFMweredom-
+agreementbetweenmodelsandobservations.
+inantalongtheentireAGB,asthelargechangeinradiusduring
+Our data set samples the intermediate-age range (NGC 419
+thisphasewouldresultinawiderangeofperiodsatagivenage.
+and NGC 1846) relatively well as well as old ages (ω Cen, 47
+ItistheveryfactthatDFMPoccursonlyduringtheﬁnalportion
+Tuc, NGC 362, and NGC 2808). This provides us with the op-
+portunity to study the period distribution at these ages, and for 2 AfurtherversionofthePAplanehighlightingbothchemicaltypes
+a more detailed comparison between models and observations. canbefoundinFig.A.2ofappendixA.1.
+Articlenumber,page3of9
+A&Aproofs:manuscriptno.trabucchi_etal_2022_period_age_relation_of_lpvs
+Fig.1.Period-agediagram.Panel(a)showsthepredictedperiod-agedistribution(darkertonesindicateahigherexpectednumberofLPVson
+a linear scale, normalized to maximum). Symbols represent observed LPVs (green: SRVs; purple: Miras; white: unclassiﬁed) with the shape
+indicating their host cluster or literature source as indicated in the legend. The age uncertainties are marked by the error bars. The groups of
+galacticC-starsofFeastetal.(2006)aremarkedbycrossesannotatedwiththegroupnumber.Thesolidanddottedlinerepresentalinearbest-ﬁt
+tomodelsandthebest-ﬁtbyGradyetal.(2019),respectively.Perioddistributionsatselectedagesarecomparedinpanels(b)and(c)andmarked
+inpanel(a)bytheblueandredshadedareas(atlog(τ/yr) ∼ 9.15and∼ 10.10,respectively).Forclarity,theeﬀectoftheTP-AGBboostingis
+suppressedinpanel(a).
+Fig.2.SimilartoFig.1,butlimitedtoO-rich(leftpanel)andC-rich(rightpanel)LPVs.Thesolidlinemarksthebestﬁttothemodels,while
+dashedlinesarebestﬁtstotheedgesofthemodeldistribution(seethetextformoredetails).
+oftheAGBthatlimitstherangeofperiodsaFM-pulsatingLPV Thisfeatureisstrengthenedwhenasetofisochronesiscon-
+canhaveatagivenage.Yet,theDFMPpartoftheAGBislong sidered which spans a range of initial metallicities because the
+enoughforsigniﬁcantvariationsinradiustooccur,whichresult adopted criterion for the onset of DFMP does not depend on
+inthedispersionofthePArelationseeninFig.1. metallicity, but the FM period does as metal-poor LPVs are
+warmer and have smaller radii compared with metal-rich ones.
+AtagiveninitialmetallicityZi,theshapeoftheperioddis- As a consequence, the bulk of the period distribution of metal-
+tributionprimarilyresultsfromthefactthat,throughouttheTP- poorLPVsisatperiodsshorterthanP ,sotheyonlycontribute
+b
+AGB (the stage during which the FM is normally excited), the to the global distribution (i.e., at all Z at a given age) over a
+i
+envelope expansion accelerates, while the period becomes pro- smallperiodrangeatP(cid:38) P .Incontrast,metal-richLPVshave
+b
+gressivelylesssensitivetochangesinradius(seeAppendixC). periodswellbeyondP ,sotheycontributebothatthatvalueand
+b
+In particular, the slope of the period-radius relation decreases atlongerperiods.TheresultisanexcessofFM-dominatedLPVs
+sharply at Pb = P(Rb). The FM period distribution is roughly nearPb,thatistosayontheshortsideoftheoverallperioddis-
+symmetricaroundthatvalue,butatitsshort-periodside,theFM tribution.
+isnotdominant.Therefore,whenonlyFM-dominatedLPVsare
+considered,asisdonehere,theobservedperioddistributionap- We note that, in contrast with the prescription we adopted,
+pearsskewedtowardshortperiods. the onset of DFMP in reality is probably sensitive to metallic-
+Articlenumber,page4of9
+Trabucchietal.:Theperiod-agerelationofLPVs
+ity.Whilethegooddegreeofagreementwithobservationssug- the DFMP regime, and they display a smaller range of periods
+gests that the dependence is weak at most, it is possible for at a given age (cf. Feast & Whitelock 2000b). In other words,
+any discrepancy to be smeared out by the fact that our set of theyshouldexhibitarelativelynarrowPArelation(eventhough,
+isochrone implicitly assumes a ﬂat star-formation rate with no basedontheobservationaldatasetweadopted,thereisnocon-
+age-metallicityrelation,soitisnotanaccuraterepresentationof clusiveevidencethatconsideringonlyMirasreducesthescatter
+anyrealisticstellarenvironment.Inthissense,thePArelationis ofthePArelation).
+environment-dependent,anditisnotnecessarilyuniversal. Nonetheless,wecautionagainstthisapproachasitisprone
+A further point of uncertainty stems from the fact that the tointroducinguncontrolledbiases,asthetraditionaldistinction
+prescription we adopted assumes that the FM period only de- betweenSRVsandMirasisarbitrary(seeTrabucchietal.2021a,
+pends upon the mass and radius, and that it is aﬀected by a andreferencestherein).Assuch,itdisregardsthephysicalpro-
+changeincompositiononlythroughtheeﬀectthatsuchavaria- cesses at the origin of the range of amplitudes characterizing
+tionhasontheradius.Whilethisistruetoagoodapproximation, LPVs. In particular, photometric amplitudes are largely deter-
+linearmodelsshowasmalldependenceofperiodsonmetallic- minedbytheformationanddissociationofmoleculesinthestel-
+ityataﬁxedmassandradius,butthequantitativeimpactinthe laratmosphere,andtheyarelikelytobemetallicity-dependent.
+nonlinearcaseisunknown.Wecanonlyestimate,basedonthe It is therefore reasonable to assume that metal-poor (old) Mira
+resultsofTrabucchietal.(2019),anuncertaintyof±10%atmost analogs might be classiﬁed as SRVs, thereby undermining the
+withrespecttotheprescriptionsadoptedhere. potential application of the PA relation if restricted to Miras.
+Qualitatively, a realistic age-metallicity relation and the ThisseemstobesupportedbythefactthatthebulkofoldLPVs
+metallicitydependenceoftheperiodandoftheonsetofDFMP inoursampleareclassiﬁedasSRVs.Therefore,studiesinvolv-
+are all expected to result in a steeper PA relation than the one ing PA relations of LPVs would advantageously include both
+wepredict,butitisdiﬃculttoassesstherelativeimportanceof MirasandFM-pulsatingSRVs.
+theseeﬀects.Inthissense,thecompositionprobablyaﬀectsthe ThechallengeassociatedwithSRVsstemsfromthefactthat
+shape of the PA relation more than its dispersion. The latter is they are often multiperiodic (even when predominantly pulsat-
+likelyaﬀectedbythecompositionindirectlythroughmassloss, ingintheFM),apropertythatcomplicatesthelightcurveanal-
+the analysis of which is beyond the scope of this study. How- ysis and period extraction. At the same time, this feature could
+ever,wepointoutthatmasslossrepresentsasourceofscatterin potentially improve age determinations as overtone modes are
+combinationwiththeoccurrenceofthermalpulses,becauseitre- expectedtodisplayaPArelationaswell.
+ducestheminimumradiusfortheonsetofDFMP.Thus,during
+the luminosity dips associated with thermal pulses, a LPV can
+haveaperiodshorterthantheoneithadwhenitﬁrstenteredthe 5. Conclusions
+DFMPregime(seeAppendixC).Anadditionalsourceofuncer-
+tainty,whichwedisregarded,isrotation(orotherprocessesthat Weusedtheresultsfromrecentnonlinearpulsationcalculations
+induce extra mixing in the core) which causes a spread in ages andcombinedthemwithstate-of-the-artisochronemodelstoin-
+atagiveninitialmass(cf.Andersonetal.2016,forthecaseof vestigate the PArelation of FM-dominated LPVs, ﬁnding good
+classicalCepheids). agreement with the distribution of observed LPVs in star clus-
+Thefairlygoodagreementbetweenmodelsandobservations ters. The theoretical PA relation displays a non-negligible scat-
+encouragestheuseofLPVsasageindicators,butthescatterof ter,whoseoriginweidentiﬁedduetothefactthat,despitebeing
+thePArelationhampersthisapplication.Weattemptedtoreduce very brief, the portion of AGB evolution during which the FM
+thescatterthroughcorrectionsinvolvingphotometricproperties, becomes dominant shows a relatively large range in mass and
+as is customarily done for classical Cepheids with a color term radiusatagivenage.
+(e.g.,Bonoetal.2005),butwithunsatisfactoryresults.Acorrec- The theoretical distribution of FM periods is roughly sym-
+tiondependentonthephotometricamplitudeofvariabilityrep- metric,buttheFMisnotdominantattheshortestperiods.Asa
+resents a promising alternative, but it cannot be pursued at the result,modelspredictthatthedistributionofdominantFMperi-
+moment.Indeed,forcomputationaleﬃciency,currentpulsation odsatagivenageisskewedtowardshortperiods,inagreement
+modelsincludeonlyacrudetreatmentoftheatmosphericlayers withobservations.Dependingonstellarpopulations,metallicity
+as they do not aﬀect pulsation periods. On the other hand, the mayenhancethisfeatureasmetal-poorLPVs,whichtendtobe
+atmosphere is crucial in determining the spectral energy distri- warmerandmorecompact,onlycontributenearshortperiods.
+butionanditsvariationthroughoutthepulsationcycle,andhence Weprovidethebest-ﬁtPArelationseparatelyforO-richand
+theamplitudeofvariability.Atthesametime,theobservational C-richFM-pulsatingLPVs.ThelatterLPVsshowasteeperPA
+sample adopted here is too heterogeneous for a self-consistent relationbecauseoftheirlowersurfacetemperatures,whichallow
+investigationofamplitude,butthiskindofstudycouldbemade themtoreachlongerperiodsmoreeasily.
+possible by the upcoming data release 3 of the Gaia mission Our analysis concerns all LPVs predominantly pulsating in
+(Gaia Collaboration et al. 2021) and the future Legacy Survey the FM, regardless of whether they are classiﬁed as Miras or
+ofSpaceandTime(LSST,Ivezic´ etal.2019)oftheVeraRubin SRVs.Wediscouragesuchadistinctioninthatitisarbitraryand
+Observatory. pronetoselectionbiasesthatriskcompromisingtheuseofLPVs
+It is worth noting that our analysis applies to Miras as well asageindicators.
+as SRVs, provided that they predominantly pulsate in the FM. ThemainlimitationintheuseofthePArelationforagede-
+The limitation of PA relation studies to Miras, as has mainly terminations of individual LPVs stems from its relatively large
+been done in literature so far, undoubtedly has some advan- scatter. We suggest that corrective terms, involving the ampli-
+tages: to begin with, the fact that Miras are typically easier to tude of variability, might help to reduce this scatter and antici-
+detect than SRVs, and their light curves are easier to process patethatupcomingdatafromongoingandfuturesurveysdedi-
+as they tend to be more regular. Moreover, Miras represent the catedtotime-domainastronomywillbehighlyvaluabletoprobe
+end-pointofAGBevolution,soinprincipletheycorrespondtoa thispossibility.Astudyoftheimpactofmetallicityonnonlinear
+smallerrangeofstellarparameterscomparedtothefullextentof pulsationishighlydesirabletopursuethislineofinvestigation,
+Articlenumber,page5of9
+A&Aproofs:manuscriptno.trabucchi_etal_2022_period_age_relation_of_lpvs
+aswouldbeatheoreticalinvestigationofthedependenceofpho- Joo,S.-J.&Lee,Y.-W.2013,ApJ,762,36
+tometricamplitudesuponglobalstellarparameters. Jura,M.&Kleinmann,S.G.1992,ApJS,79,105
+Kamath,D.,Wood,P.R.,Soszyn´ski,I.,&Lebzelter,T.2010,MNRAS,408,522
+Acknowledgements. M.T.andN.M.acknowledgethesupportprovidedbythe Kharchenko,N.V.,Piskunov,A.E.,Röser,S.,Schilbach,E.,&Scholz,R.D.
+SwissNationalScienceFoundationthroughgrantNr.188697.Wearegrateful 2005,A&A,438,1163
+totheanonymousrefereefortheconstructivecommentsthathelpedimproving Kharchenko,N.V.,Piskunov,A.E.,Schilbach,E.,Röser,S.,&Scholz,R.D.
+thispaper,andtoLéoGirardiforhelpingwiththecomputationandinterpre- 2016,A&A,585,A101
+tationofisochrones.Thisresearchhasmadeuseof:datafromtheOGLE-III Kippenhahn,R.&Smith,L.1969,A&A,1,142
+Catalog of Variable Stars; data products from the Two Micron All Sky Sur- Kluyver,T.,Ragan-Kelley,B.,Pérez,F.,etal.2016,inPositioningandPower
+vey, which is a joint project of the University of Massachusetts and the In- in Academic Publishing: Players, Agents and Agendas, ed. F. Loizides &
+fraredProcessingandAnalysisCenter/CaliforniaInstituteofTechnology,funded B.Scmidt(Netherlands:IOSPress),87–90
+by the National Aeronautics and Space Administration and the National Sci- Lebzelter,T.,Mowlavi,N.,Marigo,P.,etal.2018,A&A,616,L13
+enceFoundation;datafromtheEuropeanSpaceAgency(ESA)missionGaia Lebzelter,T.,Trabucchi,M.,Mowlavi,N.,etal.2019,A&A,631,A24
+(https://www.cosmos.esa.int/gaia),processedbytheGaiaDataProcess- Lebzelter,T.&Wood,P.R.2005,A&A,441,1117
+ingandAnalysisConsortium(DPAC,https://www.cosmos.esa.int/web/ Lebzelter,T.&Wood,P.R.2007,A&A,475,643
+gaia/dpac/consortium). Funding for the DPAC has been provided by na- Lebzelter,T.&Wood,P.R.2011,A&A,529,A137
+tionalinstitutions,inparticulartheinstitutionsparticipatingintheGaiaMulti- Lebzelter,T.&Wood,P.R.2016,A&A,585,A111
+lateralAgreement.Thisresearchhasmadeuseofthefollowingfree/opensource LloydEvans,T.1976,MNRAS,174,169
+softwareand/orlibraries:theStarlinkTablesInfrastructureLibrary(STILTSand LloydEvans,T.1983a,MNRAS,204,985
+Topcat, Taylor 2006); IPython (Pérez & Granger 2007) and Jupyter (Kluyver LloydEvans,T.1983b,MNRAS,204,961
+etal.2016)notebooks;thePythonlibrariesNumPy(Harrisetal.2020),SciPy LloydEvans,T.&Menzies,J.W.1973,inAstrophysicsandSpaceScienceLi-
+(Virtanenetal.2020),matplotlib(aPythonlibraryforpublicationqualitygraph- brary,Vol.36,IAUColloq.21:VariableStarsinGlobularClustersandin
+ics,Hunter2007),andAstropy(acommunity-developedcorePythonpackage RelatedSystems,ed.J.D.Fernie,151
+forAstronomy,AstropyCollaborationetal.2018).Thisresearchhasmadeuseof Mackey,A.D.&BrobyNielsen,P.2007,MNRAS,379,151
+NASA’sAstrophysicsDataSystemBibliographicServices,andofthefollowing Marigo,P.,Girardi,L.,Bressan,A.,etal.2017,ApJ,835,77
+servicesprovidedbyCDS,Strasbourg:theSIMBADdatabase,VizieRcatalogue
+Menzies,J.,Feast,M.,Tanabé,T.,Whitelock,P.,&Nakada,Y.2002,MNRAS,
+accesstool(DOI:10.26093/cds/vizier,Ochsenbeinetal.2000),the“Aladinsky
+335,923
+atlas” (Bonnarel et al. 2000), and the cross-match service (Boch et al. 2012;
+Menzies,J.,Feast,M.,Whitelock,P.,etal.2008,MNRAS,385,1045
+Pineauetal.2020).
+Menzies,J.W.,Feast,M.W.,Whitelock,P.A.,&Matsunaga,N.2011,MNRAS,
+414,3492
+Menzies,J.W.,Whitelock,P.A.,&Feast,M.W.2015,MNRAS,452,910
+Menzies,J.W.,Whitelock,P.A.,Feast,M.W.,&Matsunaga,N.2010,MNRAS,
+References 406,86
+Merrill,P.W.1923,ApJ,58,215
+Anderson,R.I.,Saio,H.,Ekström,S.,Georgy,C.,&Meynet,G.2016,A&A,
+Mowlavi,N.,Lecoeur-Taïbi,I.,Lebzelter,T.,etal.2018,A&A,618,A58
+591,A8
+Nayak, P. K., Subramaniam, A., Choudhury, S., Indu, G., & Sagar, R. 2016,
+AstropyCollaboration,Price-Whelan,A.M.,Sipo˝cz,B.M.,etal.2018,AJ,156,
+MNRAS,463,1446
+123
+Ochsenbein,F.,Bauer,P.,&Marcout,J.2000,A&AS,143,23
+Battinelli,P.&Demers,S.2012,A&A,544,A10
+Pastorelli,G.,Marigo,P.,Girardi,L.,etal.2020,MNRAS,498,3283
+Battinelli,P.&Demers,S.2013,A&A,553,A93
+Pastorelli,G.,Marigo,P.,Girardi,L.,etal.2019,MNRAS,485,5666
+Baumgardt,H.,Parmentier,G.,Anders,P.,&Grebel,E.K.2013,MNRAS,430,
+Pérez,F.&Granger,B.E.2007,ComputinginScienceandEngineering,9,21
+676
+Perren,G.I.,Piatti,A.E.,&Vázquez,R.A.2017,A&A,602,A89
+Boch,T.,Pineau,F.,&Derriere,S.2012,inAstronomicalSocietyofthePa- Pineau,F.-X.,Boch,T.,Derrière,S.,&Schaaﬀ,A.2020,inAstronomicalSo-
+ciﬁcConferenceSeries,Vol.461,AstronomicalDataAnalysisSoftwareand
+cietyofthePaciﬁcConferenceSeries,Vol.522,AstronomicalDataAnalysis
+SystemsXXI,ed.P.Ballester,D.Egret,&N.P.F.Lorente,291
+SoftwareandSystemsXXVII,ed.P.Ballester,J.Ibsen,M.Solar,&K.Short-
+Bonnarel,F.,Fernique,P.,Bienaymé,O.,etal.2000,A&AS,143,33
+ridge,125
+Bono,G.,Marconi,M.,Cassisi,S.,etal.2005,ApJ,621,966
+Sakamoto,T.,Matsunaga,N.,Hasegawa,T.,&Nakada,Y.2012,ApJ,761,L10
+Bressan,A.,Marigo,P.,Girardi,L.,etal.2012,MNRAS,427,127
+Skrutskie,M.F.,Cutri,R.M.,Stiening,R.,etal.2006,AJ,131,1163
+Catchpole,R.M.,Whitelock,P.A.,Feast,M.W.,etal.2016,MNRAS,455,
+Soszyn´ski,I.,Olechowska,A.,Ratajczak,M.,etal.2021,ApJ,911,L22
+2216
+Soszyn´ski,I.,Udalski,A.,Szyman´ski,M.K.,etal.2009,ActaAstron.,59,239
+Cutri,R.M.,Wright,E.L.,Conrow,T.,etal.2013,ExplanatorySupplement
+Soszyn´ski,I.,Udalski,A.,Szyman´ski,M.K.,etal.2011,ActaAstron.,61,217
+totheAllWISEDataReleaseProducts,ExplanatorySupplementtotheAll-
+Taylor, M. B. 2006, in Astronomical Society of the Paciﬁc Conference Se-
+WISEDataReleaseProducts
+ries,Vol.351,AstronomicalDataAnalysisSoftwareandSystemsXV,ed.
+deGrijs,R.,Courbin,F.,Martínez-Vázquez,C.E.,etal.2017,SpaceSci.Rev.,
+C.Gabriel,C.Arviset,D.Ponz,&S.Enrique,666
+212,1743
+Trabucchi,M.,Mowlavi,N.,&Lebzelter,T.2021a,A&A,656,A66
+DeSomma,G.,Marconi,M.,Cassisi,S.,etal.2020,MNRAS,496,5039
+Trabucchi,M.,Wood,P.R.,Montalbán,J.,etal.2017,ApJ,847,139
+Eggen,O.J.1998,AJ,115,2435
+Trabucchi,M.,Wood,P.R.,Montalbán,J.,etal.2019,MNRAS,482,929
+Feast,M.2007,inAstronomicalSocietyofthePaciﬁcConferenceSeries,Vol.
+Trabucchi,M.,Wood,P.R.,Mowlavi,N.,etal.2021b,MNRAS,500,1575
+378,WhyGalaxiesCareAboutAGBStars:TheirImportanceasActorsand
+Urago,R.,Omodaka,T.,Nagayama,T.,etal.2020,ApJ,891,50
+Probes,ed.F.Kerschbaum,C.Charbonnel,&R.F.Wing,479
+Villanova,S.,Geisler,D.,Gratton,R.G.,&Cassisi,S.2014,ApJ,791,107
+Feast,M.&Whitelock,P.2000a,inAstrophysicsandSpaceScienceLibrary,
+Virtanen,P.,Gommers,R.,Oliphant,T.E.,etal.2020,NatureMethods,17,261
+Vol.255,AstrophysicsandSpaceScienceLibrary,ed.F.Matteucci&F.Gio-
+Wenger,M.,Ochsenbein,F.,Egret,D.,etal.2000,A&AS,143,9
+vannelli,229
+Whitelock,P.,Feast,M.,&Catchpole,R.1991,MNRAS,248,276
+Feast,M.W.1963,MNRAS,125,367
+Whitelock,P.,Menzies,J.,Feast,M.,etal.1994,MNRAS,267,711
+Feast,M.W.1966,TheObservatory,86,120
+Whitelock,P.A.1986,MNRAS,219,525
+Feast,M.W.1981,inAstrophysicsandSpaceScienceLibrary,Vol.88,Physical
+Whitelock,P.A.,Menzies,J.W.,Feast,M.W.,etal.2009,MNRAS,394,795
+ProcessesinRedGiants,ed.J.Iben,I.&A.Renzini,193–204
+Whitelock,P.A.,Menzies,J.W.,Feast,M.W.,Nsengiyumva,F.,&Matsunaga,
+Feast,M.W.,Robertson,B.S.C.,&Black,C.1980,MNRAS,190,227
+N.2013,MNRAS,428,2216
+Feast,M.W.&Whitelock,P.A.2000b,MNRAS,317,460
+Wilson,R.E.&Merrill,P.W.1942,ApJ,95,248
+Feast,M.W.,Whitelock,P.A.,&Menzies,J.W.2006,MNRAS,369,791
+Wyatt,S.P.&Cahn,J.H.1983,ApJ,275,225
+GaiaCollaboration,Brown,A.G.A.,Vallenari,A.,etal.2021,A&A,649,A1
+Girardi,L.,Marigo,P.,Bressan,A.,&Rosenﬁeld,P.2013,ApJ,777,142 Ya’Ari,A.&Tuchman,Y.1996,ApJ,456,350
+Goudfrooij,P.,Girardi,L.,Kozhurina-Platais,V.,etal.2014,ApJ,797,35
+Grady,J.,Belokurov,V.,&Evans,N.W.2019,MNRAS,483,3022
+Grady,J.,Belokurov,V.,&Evans,N.W.2020,MNRAS,492,3128
+Harris,C.R.,Millman,K.J.,vanderWalt,S.J.,etal.2020,Nature,585,357
+Hunter,J.D.2007,ComputinginScience&Engineering,9,90
+Ivezic´,Ž.,Kahn,S.M.,Tyson,J.A.,etal.2019,ApJ,873,111
+Jayasinghe,T.,Stanek,K.Z.,Kochanek,C.S.,etal.2020,MNRAS,491,13
+Articlenumber,page6of9
+Trabucchietal.:Theperiod-agerelationofLPVs
+distributionofO-andC-richsourcesintheperiod-agediagram
+isshowninFig.A.2.
+AppendixA.2: Variability
+For variability information, we complemented the data from
+Lebzelter & Wood and Kamath et al. (2010) with the catalogs
+from OGLE-III, ASAS-SN, and Gaia DR2. Combining these
+datasets,wefoundatleastoneperiodforeachofthe176sources
+inoursample.
+In order to identify the pulsation mode most likely respon-
+sibleforperiodsinagivensource,weassumedthatthesecond
+overtonemodeisassociatedwithsequenceA,theﬁrstovertone
+modewithsequencesBandC(cid:48),andthefundamentalmodewith
+sequenceC(e.g.,Trabucchietal.2017).Weexcludedlongsec-
+ondaryperiodsonsequenceDastheyarenotduetostellarpul-
+sation (Soszyn´ski et al. 2021, and references therein), and we
+used the pattern of PL sequences in the LMC as a reference to
+guidethemodeidentiﬁcation(cf.Trabucchietal.2021a).
+Weperformedthisclassiﬁcationseparatelyforperiodscom-
+ingfromeachdistinctdataset.Iftwoormoreperiodsfromdif-
+ferent data sets were assigned to the same pulsation mode, we
+retained only one of those periods, with priority to the values
+from Lebzelter & Wood and Kamath et al. (2010). If the latter
+Fig.A.1.Absolute-K Gaia-2MASSdiagramforthestarswithorwith- authors do not provide this information, we adopted the period
+s
+out a spectral type (left and right panels, respectively) in the selected from OGLE-III if available, and otherwise from ASAS-SN or
+sample. Symbol colors and shapes indicate the spectral type and host fromGaiaDR2.
+clusterdescribedinthelegend,respectively,whichalsoreportsthenum- For some sources, the periods reported in diﬀerent catalogs
+berofsourcesdisplayed(i.e.,havingbothopticalandNIRphotometry).
+wereassignedtothesamemodethroughthisprocedure.Inmost
+The dashed line marks the separation between O- and C-rich sources
+cases, these periods are reasonably similar to each other. Only
+accordingtoLebzelteretal.(2018).AnarrowmarksthesourceMSX
+LMC124inNGC1830that,havingW −W =9.73mag,liesout- in a few caseswere they signiﬁcantly diﬀerent, but this didnot
+sidetheplotarea.BackgrounddotsareBPL,RPPVsinJ,KtsheLMCfromOGLE- alterourconclusions.
+III(lightgray)andMowlavietal.(2018)(darkergray). Whenavailable,thevariabilitytypewastakenfromOGLE-
+IIIorASAS-SN.Wenotethatweareonlyinterestedinwhether
+a star is classiﬁed as a Mira or semi-regular variable. In many
+AppendixA: ClassiﬁcationofobservedLPVs cases,thistypeisnotgivenorthestarissimplyconsidered,for
+instance,asanLPVorAGBinSIMBAD,inwhichcasewecon-
+AppendixA.1: Spectraltype sideredthevariabilitytypeasundetermined.
+We adopted the spectral types provided by Lebzelter & Wood
+(2007)andKamathetal.(2010)for52oftheLPVstheystudied
+AppendixB: Fittingrelations
+in NGC 1846, NGC 1978, and NGC 419. The only exception
+isthestar5-3inNGC419,forwhichweadoptedtheS-typeas WeobtainedanalyticexpressionsforthePArelationsseparately
+reportedbyLloydEvans(1983a). for O- and C-rich stars, proceeding as follows. For each bin of
+We also searched the SIMBAD astronomical database log(τ/yr), we modeled the period distribution with a Gaussian
+(Wenger et al. 2000) for spectral type information, which we kernel density estimator (KDE) and identiﬁed the peak of the
+foundfor26morestars.WeusedtheGaia-2MASSdiagramof distribution. To describe the boundaries of the PA relation, we
+Lebzelteretal.(2018)toconﬁrmthechemicaltypeclassiﬁcation adopted, at each age, the values of the period at which the dis-
+takenfromliteratureandtocharacterizethesurfacechemistryof tributionequals25%ofitsmaximum.Weselectedthisarbitrary
+sourcesofanunknownspectraltype(seeFig.A.1).Amongthe value upon visual inspection of the PA plane. We modeled the
+latter,weidentiﬁed13C-richstarsand106O-richsources. central trend of the PA relation, as well as its short- and long-
+ThreeofthesourceswithoutaspectraltypelackGaiapho- periodedges,withlinearorquadraticfunctionsintheform
+tometry,sotheycannotbeclassiﬁedwiththeGaia-2MASS.Two
+log(τ/yr)=a +a (P/P˜)+a (P/P˜)2, (B.1)
+of them (LW5 and LW22 in 47 Tuc) have no match in Gaia 0 1 2
+EDR3,buttheyhaveNIRdataandareprobablyO-richbasedon
+(where P˜ = 350 days) and employed a Lenvenberg-Marquardt
+theirpositioninthe J−K versusK color-magnitudediagram.
+s s nonlinearregressionalgorithm3toderivethebest-ﬁtcoeﬃcients,
+The third source is one of the two stars in NGC 1903 from the
+which are listed in Table B.1. We remark that these best-ﬁt ex-
+listofGradyetal.(2019),whichweidentiﬁedwiththe2MASS
+pressionsareonlyvalidintheintervals8.0 ≤ log(τ/yr) ≤ 10.3
+source J05171633-6920298. It is likely C-rich according to the
+and 20 < P/days < 700 for O-rich composition, and within
+NIRcolor-magnitudediagram.
+Finally, the sources V138 in ω Cen, LW15 in NGC 2808, 3 WemadeuseofthePythonlibrarySciPytoperformGaussianKDE
+andLW4inNGC362lackNIRdata.Theycannotbeplacedin modeling and best-ﬁt, respectively, by means of the gaussian_kde
+the NIR PL diagram, upon which we relied to assign pulsation tool from the stats module and the curve_fit function from the
+modes to periods, so we excluded them from the sample. The optimizemodule.
+Articlenumber,page7of9
+A&Aproofs:manuscriptno.trabucchi_etal_2022_period_age_relation_of_lpvs
+Fig.A.2.SimilartoFig.1,excepteachsourceiscolor-codedaccordingtowhetherithasbeenclassiﬁedasO-rich(blue)orC-rich(red).
+TableB.1.Best-ﬁtcoeﬃcientsforthePArelationanditsboundariesin TableB.2.Best-ﬁtcoeﬃcientsfortheperiod-initialmassrelationand
+theformgiveninEq.B.1. itsboundariesintheformgiveninEq.B.2.
+Sp.type relation a a a Sp.type relation b b b
+0 1 2 0 1 2
+center 10.78 -2.660 0.5953 center -0.2790 0.8958 -0.1828
+O-rich loweredge 10.46 -2.818 0.6578 O-rich loweredge -0.1772 0.9975 -0.2203
+upperedge 10.54 -0.8187 -0.2335 upperedge -0.1740 0.2783 0.8247
+center 9.755 -0.7532 center -0.0304 0.2885
+C-rich loweredge 9.982 -1.698 C-rich loweredge -0.0131 0.5752
+upperedge 8.498 -1.827 -0.9959 upperedge -0.2245 -0.2720 0.2343
+8.6 ≤ log(τ/yr) ≤ 9.3 and 140 < P/days < 620 in the C-rich DFMP are indicated by solid lines. Panel (b) shows the period
+case. distributionsforafewdiﬀerentcases.
+Becauseoftheconnectionbetweenageandinitialmass,the Itisinstructive,tobeginwith,toignoretheeﬀectofthermal
+PArelationcanbetranslatedintoaperiod-initialmassrelation, pulsesandconsideronlythequiescentevolution(greenlinesin
+whichwederivedusingthesameapproachdescribedabove,and Fig.C.1).Thesmallestinitialmasscorrespondstoastarthatjust
+assumingtheform enteredtheTP-AGB,whentheFMhasaperiodof∼ 240days
+butisnotdominant.Itonlybecomesdominantaboveathreshold
+log(Mi/M(cid:12))=b0+b1(P/P˜)+b2(P/P˜)2. (B.2) radiusRdom,0,thatisforperiodslongerthana(mass-dependent)
+criticalperiod P (thesolidgraylineinFig.C.1).Theleast
+dom,0
+Theresultingbest-ﬁtlinesaredisplayedinFig.B.1,andtheco-
+evolved (quiescent) model with dominant FM has P (cid:39) 360
+eﬃcientsaregiveninTableB.2. FM
+days(greencircleandhorizontalline),correspondingtoasharp
+WeremarkthatboththePAandtheperiod-initialmassrela-
+cutintheperioddistributionshowninpanel(b)ofFig.C.1.
+tionsdependonmodelassumptions,inparticularmasslossand
+AsastarevolvesalongtheAGBitexpands,anditsperiodbe-
+mixing,aswellasonthepropertiesofthepopulationofLPVs,
+comeslongerinresponsetotheincreaseinradius.Modelswith
+namelythestar-formationhistoryandage-metallicityrelation.
+ahigherinitialmassaremoreevolved,hencetheyhavealarger
+radiusandalongerperiod.Therateatwhichaperiodincreases
+withradiusisnotﬁxed,butratherdecreaseswithevolution.Ac-
+AppendixC: Theshapeoftheperioddistribution
+cordingtotheprescriptionofTrabucchietal.(2021b),aperiod
+Asanexamplecase,weconsideranisochroneofagelog(τ/yr)= growswithradiusasabrokenpower-lawwithexponentα(cid:39)1.8
+8.3andinitialmetallicityZ =0.006.StarsontheTP-AGBhave ifR<R ,andwithα(cid:39)1.25atlargerradii.
+i b
+initial masses M (cid:39) 3.85M over a small range of ∼ 10−3M . This is equivalent to saying that the period grows more
+i (cid:12) (cid:12)
+The relation between period and initial mass is displayed in slowly after it exceeds a critical value P = P(R ), marked by
+b b
+panel (a) of Fig. C.1, where isochrone portions undergoing the gray dotted line in Fig. C.1. The isochrone reaches it at
+Articlenumber,page8of9
+Trabucchietal.:Theperiod-agerelationofLPVs
+Fig.B.1.SimilartoFig.2,butshowinginitialmassM inplaceofage.Thebest-ﬁtlinestothemostpopulatedbandandedgesofthetheoretical
+i
+P –M relationareshown.
+FM i
+tion causes the period to decrease, and the cut at ∼ 360 days
+becomes less sharp. Because of mass loss, the threshold period
+P is lowered, so that the shortest period associated with
+dom,0
+DFMP does not correspond to the least evolved model (green
+circle),butrathertotheluminositydipofathermalpulse(blue
+circle).
+Tobeprecise,theearliestoccurrenceofDFMPisontheleft-
+mostluminosityspike(redcircle),whosedurationissoshortthat
+itisunlikelytobeobserved.Indeed,theinclusionofluminosity
+spikes alters the period distribution at long periods very little.
+Luminosity spikes are relevant only for relatively massive and
+youngTP-AGBstars,andtheygiverisetothepoorlypopulated
+portionofthePArelationatthelongestperiods,asseeninpanel
+(a)ofFig.2.
+Fig.C.1.Perioddistributionatﬁxedageandmetallicity.Panel(a)shows
+periodasafunctionofinitialmass(currentmassonthetopaxis)onthe
+TP-AGB for a ∼ 200 Myr old isochrone with Z = 0.006. Red lines
+i
+showfullthermalpulses,whilebluelinesignoreluminosityspikesand
+green lines show only the quiescent evolution. The same color code
+isusedfortheperioddistributions(normalizedtotheirmaximum)on
+panel (b). Solid lines indicate that the FM is dominant. Circles indi-
+catetheearliestonsetofDFMPaccountingfor(red)orignoring(green)
+luminosityspikes,andtheshortestperiodofthedominantFM(blue).
+GraylinesmarkthecriticalvaluesofperiodsatwhichtheFMbecomes
+dominant(solidline),lesssensitivetoradius(dottedline,whichoccurs
+attheverticallineforthisspeciﬁcisochrone),andindependentofradius
+(dashedline).
+M (cid:39) 3.8524M (verticalgrayline),when P (cid:39) 420days.In
+i (cid:12) FM
+modelswithasmallerinitialmass,theperiodisstillincreasing
+atarelativelylargerateastheenvelopeexpands,whileinmore
+massivemodelstheperiodhasalreadybecomelesssensitiveto
+changes in radius. This is reﬂected by a slight inﬂection of the
+green curve, which corresponds to the maximum in the period
+distribution shown in panel (b) of Fig. C.1. The period distri-
+bution of the full TP-AGB range is roughly symmetric around
+this maximum, while limiting the selection to DFMP, produces
+adistributionskewedtowardshortperiods,asfoundinSect.3.
+If the luminosity dips following thermal pulses are taken
+into account (blue lines), the corresponding envelope contrac-
+Articlenumber,page9of9

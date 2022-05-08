@@ -1,0 +1,650 @@
+Astronomy&Astrophysicsmanuscriptno.mainArxiv ©ESO2022
+April12,2022
+Discovery of ammonia (9,6) masers in two high-mass star-forming
+regions
+Y.T.Yan(闫耀庭)1,(cid:63),C.Henkel1,2,3,K.M.Menten1,Y.Gong(龚龑)1,J.Ott4,T.L.Wilson1,A.Wootten4,A.
+Brunthaler1,J.S.Zhang(张江水)5,J.L.Chen(陈家梁)5,andK.Yang(杨楷)6,7
+1 Max-Planck-InstitutfürRadioastronomie,AufdemHügel69,53121Bonn,Germany
+e-mail:yyan@mpifr-bonn.mpg.de
+2 AstronomyDepartment,FacultyofScience,KingAbdulazizUniversity,P.O.Box80203,Jeddah21589,SaudiArabia
+3 XinjiangAstronomicalObservatory,ChineseAcademyofSciences,830011Urumqi,PRChina
+4 NationalRadioAstronomyObservatory,520EdgemontRoad,Charlottesville,VA22903-2475,USA
+2
+5 CenterforAstrophysics,GuangzhouUniversity,510006Guangzhou,People’sRepublicofChina
+2
+6 SchoolofAstronomyandSpaceScience,NanjingUniversity,163XianlinAvenue,Nanjing210023,People’sRepublicofChina
+0
+7 KeyLaboratoryofModernAstronomyandAstrophysics(NanjingUniversity),MinistryofEducation,Nanjing210023,People’s
+2
+RepublicofChina
+
+r
+p Received13December2021/Accepted30December2021
+A
+
+9 ABSTRACT
+
+  Context. Molecularmaserlinesaresignpostsofhigh-massstarformation,probingtheexcitationandkinematicsofverycompact
+]
+A regionsinthecloseenvironmentofyoungstellarobjectsandprovidingusefultargetsfortrigonometricparallaxmeasurements.
+Aims.OnlyafewNH (9,6)masersareknownsofar,andtheiroriginisstillpoorlyunderstood.HereweaimtoﬁndnewNH (9,6)
+G 3 3
+maserstoprovideabetterobservationalbasisforstudyingtheirroleinhigh-massstar-formingregions.
+. Methods.WecarriedoutNH (9,6)observationstowardCepheusAandG34.26+0.15withtheEﬀelsberg100-metertelescope(beam
+h 3
+size49(cid:48)(cid:48))andtheKarlG.JanskyVeryLargeArray(JVLA;beamsizeabout1(cid:48).(cid:48)2).
+p
+Results.WediscoverednewNH (9,6)masersinCepAandG34.26+0.15,whichincreasesthenumberofknownhigh-massstar-
+- 3
+o formingregionshostingNH3(9,6)masersfromﬁvetoseven.Long-termmonitoring(20months)atEﬀelsbergshowsthattheintensity
+r ofthe(9,6)maserinG34.26+0.15isdecreasing,whiletheCepAmaserremainsstable.ComparedtotheEﬀelsbergdataandassuming
+t linearvariationsbetweentheepochsofobservation,theJVLAdataindicatenomissingﬂux.ThissuggeststhattheNH (9,6)emission
+s 3
+a arisesfromsinglecompactemissionregionsthatarenotresolvedbytheinterferometricmeasurements.AsJVLAimagingshows,the
+[ NH (9,6)emissioninCepAoriginatesfromasub-arcsecond-sizedregion,slightlytothewest(0(cid:48).(cid:48)28±0(cid:48).(cid:48)10)ofthepeakposition
+3   ocofmth3eeta1r.y36ulctrmaccoomnptiancutuHmiiorbejgeicotn,HCW,a2n.dItnheGo3t4h.e2r6t+w0o.1a5re,tehmreietteNdHfr3o(m9,a6)commaspearctspreogtsioanretootbhseewrveesdt:oofnteheishyclpoesrecotomtphaecthHeaidiroefgitohne
+v
+A.
+1
+Conclusions.Thenewlyfound(9,6)masersappeartoberelatedtooutﬂows.ThehigherangularresolutionofJVLAandverylong
+2
+baselineinterferometryobservationsareneededtoprovidemoreaccuratepositionsandconstraintsforpumpingscenarios.
+0
+0 Keywords. Masers–ISM:clouds–ISM:individualobjects:CepA,G34.26+0.15–ISM:Hiiregions–Radiolines:ISM
+0
+.
+1
+01. Introduction et al. 2007), NH (7,7), NH (9,9), and NH (12,12) (Henkel
+3 3 3
+2 etal.2013).Thesehaveledtothediscoveryofmetastablemaser
+2Since its discovery more than ﬁve decades ago (Cheung et al. lines in 22 diﬀerent regions (Mauersberger et al. 1986, 1987;
+:1968), ammonia (NH3) has been a most valuable molecule for Wilson & Henkel 1988; Wilson et al. 1990; Pratap et al. 1991;
+v
+investigating the physical properties of molecular clouds (e.g.,
+i Cesaronietal.1992;Wilson&Schilke1993;Mangum&Woot-
+XHo & Townes 1983). While thermally excited transitions in ten1994;Kraemer&Jackson1995;Zhang&Ho1995;Zhang
+thecentimeter-wavelengthinversiontransitionsofammoniaare
+r etal.1999;Walshetal.2007;Hunteretal.2008;Galván-Madrid
+aregarded as a reliable thermometer of molecular clouds (e.g.,
+et al. 2009; Brogan et al. 2011; Urquhart et al. 2011; Walsh
+Walmsley & Ungerechts 1983; Danby et al. 1988), ammonia et al. 2011; Wang et al. 2012; Henkel et al. 2013; Hoﬀman &
+masershaveattractedattentionsincetheﬁrstdetectionofmaser
+Joyce2014;McEwenetal.2016;Millsetal.2018;Hoggeetal.
+action in the (J,K) = (3,3) metastable (J = K) line toward the
+2019;Meietal.2020;Towneretal.2021).Comparedwiththe
+massive star-forming region W33 (Wilson et al. 1982). Subse-
+metastable ammonia masers, detected non-metastable (J > K)
+quent observations have led to the detection of new metastable
+ammoniamasertransitionsaremorenumerous.Theﬁrsthighly
+ammonia masers, including 15NH (3,3) (Mauersberger et al.
+3 excited non-metastable ammonia maser was detected by Mad-
+1986), NH3 (1,1) (Gaume et al. 1996), NH3 (2,2) (Mills et al. denetal.(1986)inthe(J,K)=(9,6)and(6,3)lines.Thereafter,
+2018), NH (5,5) (Cesaroni et al. 1992), NH (6,6) (Beuther
+3 3 many other NH non-metastable inversion transition lines have
+3
+(cid:63) Member of the International Max Planck Research School (IM- beenidentiﬁedasmasers,includingthe(5,3),(5,4),(6,1),(6,2),
+PRS)forAstronomyandAstrophysicsattheuniversitiesofBonnand (6,4),(6,5),(7,3),(7,4),(7,5)(7,6),(8,3),(8,4),(8,5),(8,6),(9,3),
+Cologne. (9,4),(9,5),(9,7),(9,8),(10,7),(10,8),(10,9),and(11,9)transi-
+Articlenumber,page1of10
+A&Aproofs:manuscriptno.mainArxiv
+tions (e.g., Mauersberger et al. 1987, 1988; Walsh et al. 2007; away from the source. For observations made before 2021 Au-
+Henkel et al. 2013; Mei et al. 2020). Except for the NH (3,3) gust,weusedaspectrometerthatcovered2GHzwidebackends
+3
+masersproposedtobeassociatedwithfoursupernovaremnants withachannelwidthof38.1kHz,correspondingto∼0.62kms−1
+(McEwenetal.2016),almostalltheotherammoniamasersare at the line’s rest frequency, 18.49939 GHz (Poynter & Kakar
+detected in high-mass star-forming regions (HMSFRs). How- 1975).Ahighspectralresolutionbackendwith65536channels
+ever, while many HMSFRs host water (H O), hydroxyl (OH), and a bandwidth of 300 MHz was employed in 2021 August,
+2
+or methanol (CH OH) masers, ammonia masers are quite rare providing a channel width of 0.07 km s−1 at 18.5 GHz. Point-
+3
+in these sources, and the role that the environment of a young ing was checked every 2 hours using 3C 286 or NGC 7027.
+high-mass star plays in their excitation remains unclear. There- Focus calibrations were done at the beginning of the observa-
+fore, dedicated searches for ammonia masers in HMSFRs are tionsandduringsunsetandsunrisetowardtheabovementioned
+indispensable in regard to their overall incidence and associa- pointingsources.Thesystemtemperatureswere100–130Kon
+tion with diﬀerent environments, which can provide additional amain-beambrightnesstemperature,T ,scale.Thisﬂuxden-
+MB
+constraintsonthepumpingmechanismofammoniamasers. sitywascalibratedassumingaT /S ratioof1.95K/Jy,derived
+MB
+So far, a total of 32 NH inversion transitions (∆K = 0 fromcontinuumcrossscansofNGC7027(theﬂuxdensitywas
+3
+and ∆J = 0) have been identiﬁed as masers. Among these, and adoptedfromOttetal.1994).Calibrationuncertaintiesareesti-
+despite arising from energy levels as high as 1090 K above matedtobe∼10%.
+the ground state, the NH (9,6) maser stands out as being the We used the GILDAS/CLASS2 package (Pety 2005) to re-
+3
+strongestandmostvariableoneinW51-IRS2(e.g.,Henkeletal. duce the spectral line data. A ﬁrst-order polynomial was sub-
+2013).Maseremissioninthislinehasonlybeendetectedinﬁve tractedfromeachspectrumforbaselineremoval.
+HMSFRs, W51, NGC7538, W49, DR21 (OH) (Madden et al.
+1986), and Sgr B2(N) (Mei et al. 2020). The NH (3,3) masers
+3
+2.2. JVLAobservationsanddatareduction
+arethoughttobecollisionallyexcited(e.g.,Floweretal.1990;
+Mangum & Wootten 1994); in contrast, the pumping mecha-
+Observations of the NH (9,6) line toward Cep A and
+3
+nismofNH3(9,6)masersislesswellconstrained(Maddenetal. G34.26+0.15 were obtained on 2021 July 13 with the JVLA
+1986).Brown&Cragg(1991)havestudiedortho-ammoniaand of the National Radio Astronomy Observatory3 (NRAO) in the
+found that it could possibly pump the (6,3) inversion line, but
+C conﬁguration (project ID: 21A-157, PI: Yaoting Yan). We
+theydidnotextendtheirmodeltothe(9,6)transitionduetothe
+employed 27 antennas for the observations. The primary beam
+factthatcollisionratesareonlyknownforinversionlevelsupto of the JVLA antennas is 150(cid:48)(cid:48) (FWHM) at 18.5 GHz. A mix-
+J = 6(e.g.,Danbyetal.1988).
+tureofmixedthree-bitandeight-bitsamplerswereusedtoper-
+NH (9,6)masersarefoundtobestronglyvariable,similarto
+3 form the observations. For the NH (9,6) line observations, we
+3
+H Omasers(Maddenetal.1986;Pratapetal.1991;Henkeletal.
+2 used one subband with the eight-bit sampler covering a band-
+2013). In W51-IRS2, Henkel et al. (2013) found that the (9,6)
+widthof16MHzwithfullpolarization,eightrecirculations,and
+lineshowedsigniﬁcantvariationinlineshapewithinatimein-
+four baseline board pairs (BIBPs) to provide a velocity range
+tervalofonlytwodays.Mappingofthe(9,6)masertowardW51 of 260 km s−1 with a channel spacing of 0.13 km s−1. Two
+withverylongbaselineinterferometry(VLBI)suggeststhatthe
+additional subbands of bandwidth 16 MHz were used to cover
+masers are closer to the H O masers than to the OH masers or
+2 the NH (8,5) and (10,7) lines. The three-bit sampler with 32
+to ultracompact (UC) Hii regions (Pratap et al. 1991). While 3
+subbands, each with a bandwidth of 128 MHz to cover a to-
+Henkeletal.(2013)andGoddietal.(2015)showedthattheSiO
+tal range of 4 GHz between 20–24 GHz, was used to mea-
+andNH masersinW51-IRS2areveryclosetoeachother,their
+3 sure the continuum emission. 3C 286 with a ﬂux density of
+positions,diﬀeringby0(cid:48).(cid:48)065(∼0.015pc),donotfullycoincide.
+2.89 Jy at 18.5 GHz (Perley & Butler 2013) was used as a
+In this paper we report the discovery of NH3 (9,6) masers calibratorforpointing,ﬂuxdensity,bandpass,andpolarization.
+in two HMSFRs, Cepheus A and G34.26+0.15. This increases J2230+6946andJ1851+0035servedasgaincalibratorsforCep
+the number of (9,6) maser detections in our Galaxy from ﬁve A and G34.26+0.15, respectively. The on-source times were
+to seven. In Sect. 2 observations with the Eﬀelsberg 100-meter 4m30sand4m50stowardCepAandG34.26+0.15,respectively.
+telescopeandtheKarlG.JanskyVeryLargeArray(JVLA)are
+Data from two antennas were lost due to technical is-
+described. Results are presented in Sect. 3. The morphology of
+sues. The data from the remaining 25 antennas were reduced
+CepAandG34.26+0.15aswellasacomparisonoftheemission
+through the Common Astronomy Software Applications pack-
+distributions of diﬀerent tracers with the NH3 (9,6) masers are age(CASA4;McMullinetal.2007).Wecalibratedthedatawith
+presentedinSect.4.OurmainresultsaresummarizedinSect.5.
+the JVLA CASA calibration pipeline using CASA 6.1.2. The
+results were obtained after ﬂagging data that contain artifacts.
+We inspected the phase, amplitude, and bandpass variations of
+2. Observationsanddatareduction
+thecalibratedvisibilitydatatosearchforadditionalartifactsbe-
+fore imaging. Then, the uvcontsub task in CASA was used to
+2.1. Effelsbergobservationsanddatareduction
+separatethecalibratedvisibilitiesintotwoparts,onewithline-
+The NH3 (9,6) line was observed toward Cep A and onlydataandtheotherwiththecontinuumdata.Thetcleantask
+G34.26+0.15 with the 100-meter Eﬀelsberg telescope1 in 2020 withacellsizeof0(cid:48).(cid:48)2andBriggsweightingwithrobust=0was
+Januaryand2021February,July,andAugust.TheS14mmdou- usedtoproducetheimagesofspectrallineandcontinuumemis-
+blebeamsecondaryfocusreceiverwasemployed.Thefullwidth sion. The synthesized beams for NH (9,6) are 1(cid:48).(cid:48)47×0(cid:48).(cid:48)99 at
+3
+at half maximum (FWHM) beam size is 49(cid:48)(cid:48) at 18.5 GHz, the
+frequencyofthetargetline.Theobservationswereperformedin 2 https://www.iram.fr/IRAMFR/GILDAS/
+positionswitchingmode,andtheoﬀpositionwas10(cid:48)inazimuth 3 TheNationalRadioAstronomyObservatoryisafacilityoftheNa-
+tionalScienceFoundationoperatedundercooperativeagreementbyAs-
+1 Based on observations with the 100-meter telescope of the MPIfR sociatedUniversities,Inc.
+(Max-Planck-InstitutfürRadioastronomie)atEﬀelsberg. 4 https://casa.nrao.edu/
+Articlenumber,page2of10
+Y.T.Yan(闫耀庭) etal.:Discoveryofammonia(9,6)masersintwohigh-massstar-formingregions
+P.A. = 58◦.79 and 1(cid:48).(cid:48)33 × 1(cid:48).(cid:48)06 at P.A. = 5◦.36 toward Cep A
+and G34.26+0.15, respectively. For the 1.36cm (20–24 GHz)
+continuumemission,thesynthesizedbeamsare1(cid:48).(cid:48)08×0(cid:48).(cid:48)67at
+P.A.=60◦.64and0(cid:48).(cid:48)95×0(cid:48).(cid:48)71atP.A.=5◦.91towardCepAand
+G34.26+0.15. The typical absolute astrometric accuracy of the
+JVLAis∼10%ofthesynthesizedbeam5.Theﬂuxdensityscale
+calibrationaccuracyisestimatedtobewithin15%.
+Fig. 2. NH (9,6) line proﬁles emphasizing, in contrast to the spectra
+3
+in Fig. 1, weaker features. Cep A spectra are presented on the left,
+G34.26+0.15spectraontheright.Thetwodashedredlinesintheleft
+panelsindicateV =1.48kms−1and2.89kms−1.Intherightpanels,
+LSR
+thetwodashedredlinesreferto54.1kms−1and55.8kms−1.
+and 27.2 mJy beam−1, respectively. In G34.26+0.15, the corre-
+sponding3σupperlimitsfortheNH (8,5)and(10,7)linesare
+3
+22.1mJybeam−1 and30.4mJybeam−1.Forbothsources,sen-
+sitivity levels refer to emission from a single channel of width
+0.13kms−1.Takingthelargermeasuredlinewidthsofthe(9,6)
+maserfeatures(seeTableA.1),theselimitscouldbefurtherlow-
+eredbyfactorsoftwotofour.
+3.1. Centimeter-continuumemission
+The 1.36cm continuum, derived from our JVLA observations,
+toward Cep A is presented in Fig. 3. Six published compact
+sources,HW2,HW3a,HW3b,HW3c,HW3d,andHW9,arede-
+tected in our observations. Figure 4 shows the 1.36cm contin-
+uuminG34.26+0.15.Threemaincontinuumobjects,A,B,and
+Fig. 1. Spectra from NH (9,6) transition lines. Left: Top to bottom:
+3 C,aredetected.Byusingtheimﬁt taskinCASA,wemeasured
+TimesequenceofNH (9,6)proﬁlesobservedtowardCepAwiththe
+3
+Eﬀelsberg 100-meter telescope (after subtracting a ﬁrst-order polyno- thecontinuumﬂuxat1.36cmtowardindividualcompactsource
+mialbaseline).AJVLAspectrumisinterspersed.Thesystemicveloc- componentsinCepAandG34.26+0.15.DetailsaregiveninTa-
+ity from CO and HCO+ lines is indicated by a dashed blue line. The bleA.2.
+two dashed red lines at LSR velocities, V , of −0.90 km s−1 and
+LSR
+−0.28 km s−1 indicate the central velocities of the two major compo-
+nents.Right:NH3 (9,6)spectrafromG34.26+0.15.Thesystemicve- 3.2. NH3 (9,6)emissioninCepA
+locityfromC17Oisindicatedbyadashedblueline.Thethreedashed
+redlinesatV =54.1kms−1,55.8kms−1,and62.5kms−1showthe In2020January,NH3 (9,6)emissionwithapeakﬂuxdensityof
+centralvelociLtSieRsofthemainammoniaemissioncomponents. 0.67±0.07JywasﬁrstdetectedwiththeEﬀelsberg100-meter
+telescopeinCepA.Emissionwithsimilarstrengthwasalsode-
+tected in 2021 February and August with the same telescope.
+Higher velocity resolution data, which were obtained in 2021
+August, again with the Eﬀelsberg 100-meter telescope, show
+3. Results
+thatthe(9,6)emissioncontainstwomainvelocitycomponents.
+The spectra from diﬀerent epochs are shown in Figs. 1 and 2. Overall, the ﬂux densities of the NH3 (9,6) emission line mea-
+TowardCepA,theNH (9,6)lineproﬁlefromtheJVLAisex- suredwiththeEﬀelsberg100-metertelescopeare,withinthecal-
+3
+tractedfromanEﬀelsberg-beam-sizedregion(FWHM,49(cid:48)(cid:48)).In ibrationuncertainties,unchanged.Thisisvalidforthetimeinter-
+the case of G34.26+0.15, the NH spectrum is below the noise valbetween2020JanuaryandAugust2021,whenwesmoothed
+3
+level if a similarly large beam size is used. Therefore, we de- the obtained spectra to the same velocity resolution. We also
+rivedtheJVLANH (9,6)spectrumfromasmallerregion,with seeanothertwoweakercomponents.Figure2emphasizesthese
+3
+radius3(cid:48).(cid:48)5,thatcontainsallthedetectedNH (9,6)emission.In weakcomponentswithanexpandedﬂuxdensityscale.
+3
+Table A.1, the observed NH (9,6) line parameters obtained by Higher angular resolution data from the JVLA pinpoint the
+3
+Gaussianﬁtsarelisted.NH (8,5)and(10,7)emissionisnotde- position of the NH (9,6) emission with an oﬀset of (−0(cid:48).(cid:48)28,
+3 3
+tected by our JVLA observations. The 3σ upper limits for the 0(cid:48).(cid:48)02) relative to the 1.36cm continuum peak of Cep A HW2
+NH (8,5) and (10,7) lines toward Cep A are 23.2 mJy beam−1 (Fig.3).ThedeconvolvedNH (9,6)componentsizeis(0(cid:48).(cid:48)29±
+3 3
+0(cid:48).(cid:48)15)×(0(cid:48).(cid:48)19±0(cid:48).(cid:48)14)atP.A.=174◦,derivedwiththeimﬁttask
+5 https://science.nrao.edu/facilities/vla/docs/manuals/oss/performance- inCASA,andcanthusbeconsidered,accountingfortheuncer-
+/positional-accuracy tainties,asunresolved.
+Articlenumber,page3of10
+A&Aproofs:manuscriptno.mainArxiv
+Fig. 3. Cepheus A. White contours mark the 1.36cm JVLA continuum map of Cep A; levels are −5, 5, 10, 20, 30, 40, 50, 70, 90,
+and 110 × 0.125 mJy beam−1. The background image is the Spitzer 4.5µm emission, taken from the Galactic Legacy Infrared Mid-Plane
+Survey Extraordinaire (GLIMPSE; Benjamin et al. 2003; Churchwell et al. 2009). The reference position is α = 22h56m17s.972, and
+J2000
+δ = 62◦01(cid:48)49(cid:48).(cid:48)587, the peak position of the continuum map, is marked with a black cross. Slightly to the west of the cross is the black
+J2000
+ellipsedenotingthepositionoftheNH (9,6)emissionwithapurplestaratitscenter.OH(Bartkiewiczetal.2005),H O(Sobolevetal.2018),
+3 2
+andCH OH(Sannaetal.2017)masersarepresentedasdiamonds,circles,andsquares,respectively.Thecolorbarontheright-handsideindicates
+3
+theLSRvelocityrangeofthemaserspots.
+Fig. 4. 1.36cm JVLA continuum map of G34.26+0.15 presented as white contours with levels of −5, 5, 10, 20, 30, 40, 50, 70, 90, 110, 130,
+150,180,and200×5.0mJybeam−1.ThebackgroundimageistheSpitzer 4.5µmemission,takenfromGLIMPSE.Thereferencepositionis
+α =18h53m18s.560,andδ =01◦14(cid:48)58(cid:48).(cid:48)201,thepeakposition,ismarkedbyablackcross.TheblackellipsesshowthepositionsofNH
+J2000 J2000 3
+(9,6)emissionswithstarsattheircenter(i.e.,M1,M2,andM3).OH(Zhengetal.2000),H O(Imaietal.2011),andCH OH(Bartkiewiczetal.
+2 3
+2016)masersarepresentedasdiamonds,circles,andsquares,respectively.Thecolorbarindicatesthevelocityrange(V )ofmaserspots.
+LSR
+InviewoftheconstancyoftheﬂuxdensitiesobtainedatEf- velocity resolution data from 2021 August show the NH (9,6)
+3
+felsberg and the similar JVLA ﬂux density, measured in 2021 emissiontobecomposedoftwodiﬀerentcomponents.Thespec-
+July,thereisnomissinginterferometricﬂuxdensityintheJVLA traofweakcomponentsonasmallerﬂuxdensityscalearepre-
+data. sentedinFig.2.
+3.3. NH3 (9,6)emissioninG34.26+0.15 Three diﬀerent locations showing NH3 (9,6) emission are
+foundtowardG34.26+0.15(Fig.4).ThedeconvolvedNH (9,6)
+3
+TheNH (9,6)emissionwasﬁrstdetectedtowardG34.26+0.15 componentsizesare(1(cid:48).(cid:48)42±0(cid:48).(cid:48)43)×(0(cid:48).(cid:48)54±0(cid:48).(cid:48)62)atP.A.=97◦
+3
+in2020JanuarywiththeEﬀelsberg100-metertelescope.Higher (M1),(0(cid:48).(cid:48)42±0(cid:48).(cid:48)27)×(0(cid:48).(cid:48)15±0(cid:48).(cid:48)27)atP.A.=150◦ (M2),and
+Articlenumber,page4of10
+Y.T.Yan(闫耀庭) etal.:Discoveryofammonia(9,6)masersintwohigh-massstar-formingregions
+(1(cid:48).(cid:48)17±0(cid:48).(cid:48)34)×(0(cid:48).(cid:48)27±0(cid:48).(cid:48)46)atP.A.=53◦ (M3)andarethus the NH (9,6) emission in Cep A is due to maser action. Be-
+3
+comparabletoorsmallerthanthebeamsize. causeG34.26+0.15islocatedataboutﬁvetimesthedistanceto
+Overall, the NH (9,6) line from G34.26+0.15 weakened CepA,beamdilutioneﬀectsreducethelowermainbeambright-
+3
+during the time interval from 2020 January to 2021 August by ness temperature limit to 400 K in G34.26+0.15 (M2) (see Ta-
+about70%.AcomparisonbetweentheJVLAspectrumandthe bleA.3).WealsonotethattheluminosityoftheNH (9,6)emis-
+3
+Eﬀelsbergdata,assumingalineardecreaseintheintegratedin- sioninG34.26+0.15ishigherthanorcomparabletothatinCep
+tensity as a function of time between diﬀerent epochs of the A,dependingontheepochofourobservations.
+100-meterobservations,suggeststhereisnomissingﬂuxinthe Finally,thenon-detectionsofthe(8,5)and(10,7)linesalso
+JVLAdata.ThisissimilartothesituationinCepA. indicate that the (9,6) line is special. This allows us to derive
+lower 3σ limits of the (9,6)/(8,5) and (9,6)/(10,7) line intensity
+ratios.The(9,6)linearisesfromortho-NH (K = 3n),whereas
+3
+4. Discussion the NH (8,5) and (10,7) lines are para-NH (K (cid:44) 3n) lines.
+3 3
+4.1. MorphologyofCepAandG34.26+0.15 Theminimumortho-to-pararatiosareintherange12–42and1–
+8 toward Cep A and G34.26+0.15, respectively. The statistical
+Cep A, at a trigonometric parallax distance of 0.70±0.04 kpc weights for the ortho states are twice as large as those for the
+(Moscadellietal.2009;Dzibetal.2011),isthesecondclosest parastates(e.g.,Umemotoetal.1999;Goddietal.2011;Henkel
+HMSFR (after Orion) and by far the closest NH (9,6) maser etal.2013).InCepA,thelineintensityratiosarefarhigherthan
+3
+known.About16compact(∼1(cid:48)(cid:48))radiosources(e.g.,Hughes& thisfactoroftwo.Thus,atleastinCepAthehighermainbeam
+Wouterloot 1984; Hughes 1991; Garay et al. 1996) have been brightness peak temperature of the (9,6) emission is caused by
+identiﬁed in Cep A. Hughes & Wouterloot (1984) discovered maser action, perhaps involving exponential ampliﬁcation, and
+thesetargetsatradiowavelengths,whichareUCandhypercom- thecaseofG34.26+0.15islikelysimilar.
+pact(HC)Hiiregionsand/orstellarwindsources,subsequently
+namedasHWsources.TheHW2objectisoneofthebestknown
+4.3. ComparisonofNH (9,6)maserswithpreviously
+examplesofaprotostellarjetordisksystemdrivingapowerful 3
+published(quasi-)thermalNH emission
+outﬂow(e.g.,Rodriguezetal.1980;Güstenetal.1984;Torrelles 3
+et al. 1986; Curiel et al. 2006; Carrasco-González et al. 2021). The metastable (1,1), (2,2), (3,3), and (4,4) ammonia lines
+TheobservedNH3(9,6)emissionisslightlyoﬀset(−0(cid:48).(cid:48)28,0(cid:48).(cid:48)02) show thermal emission toward Cep A over a velocity range of
+fromthecenterofHW2(seeFig.3). −13 km s−1 ≤ V ≤ −4 km s−1 (Brown et al. 1981; Güsten
+LSR
+G34.26+0.15isanHMSFRlocatedatadistanceof3.3kpc etal.1984;Torrellesetal.1985,1986,1993,1999).Anaverage
+(Kuchar & Bania 1994). It hosts four radio continuum compo- NH columndensityof∼5×1015cm−2wasestimatedforaregion
+3
+nents named A, B, C, and D. Component C is a prototypical of3(cid:48)(cid:48)aroundHW2(Torrellesetal.1999).ThishighNH abun-
+3
+cometaryUCHiiregioncontainingacompactheadandadiﬀuse dance could provide a suitable environment for maser species.
+tailthatextendsfromeasttowest(e.g.,Reid&Ho1985;Garay Largelinewidths(∆V (cid:39)7.0kms−1)withV ∼ −10kms−1
+1/2 LSR
+etal.1986;Sewiloetal.2004;Sewiłoetal.2011).Components inboth(1,1)and(2,2)lineswerefoundtowardHW2(Torrelles
+A and B are HC Hii regions, located to the east of component et al. 1993). The velocity is similar to the cloud’s systemic lo-
+C.Anextendedring-likeHiiregion,calledcomponentD,islo- cal standard of rest (LSR) velocity of −11.2 km s−1, which
+cated southeast of components A-C. One of the three observed is based on CO (Narayanan & Walker 1996) and HCO+ ob-
+NH3(9,6)emissionlinesources,M1,isclosetotheheadofcom- servations (Gómez et al. 1999). Our (9,6) maser is redshifted
+ponentC,whereasM2andM3originatefromanothercompact (−0.9 km s−1 ≤ V ≤2.9 km s−1) and shares positions with
+LSR
+regioninthewestoftheHCHiicomponentA(seeFig.4). the outﬂowing gas seen in CO and HCO+ with similarly red-
+shiftedvelocities.Therefore,wearguethatthe(9,6)masersare
+relatedtooutﬂowinggas.
+4.2. NH (9,6)emissionpossiblycausedbymaseraction
+3 In G34.26+0.15, a large NH column density,
+3
+As shown in Fig. 1, the NH (9,6) proﬁles in Cep A and 1018.5±0.2 cm−2, and a kinetic temperature of 225±75 K
+3
+G34.26+0.15 are narrow (∆V ≤2.0 km s−1), much narrower were derived by Henkel et al. (1987) based on measurements
+1/2
+than the expected line widths ((cid:38)4 km s−1) of thermal lines ob- of 15 NH inversion transitions in the frequency range of
+3
+servedatasimilarangularresolution(e.g.,Torrellesetal.1985, 22.0–26.0 GHz. These did not include the (9,6) transition.
+1986,1993,1999;Henkeletal.1987;Comitoetal.2007;Mook- While these lines were measured with a beam size of about
+erjeaetal.2007;Wyrowskietal.2012;Beutheretal.2018).Ve- 40(cid:48)(cid:48), a comparison of the peak intensities of the optically thick
+locity shifts with respect to the systemic velocities of the two lines with the kinetic temperature reveals the size of the hot,
+sourcesarebothobserved,thatis,V ∼10kms−1 inCepAand ammonia-emitting core to be only ∼2.5(cid:48)(cid:48). All those measured
+V ∼4kms−1 inG34.26+0.15(seedetailsinSect.4.3).Further- NH lines were quasi-thermal and had LSR velocities of
+3
+more, time variability is observed in the case of G34.26+0.15, ∼ 58.5 km s−1, close to the systemic velocity of ∼ 58.1 km s−1
+whichisalsoacharacteristicfeatureofmaseremission. obtained from C17O observations (Wyrowski et al. 2012).
+Additionalevidenceoftheirmasernatureisthehighbright- Their line widths (∆V ≥3.6 km s−1) are larger than what
+1/2
+nesstemperaturesofthe(9,6)emissionspotstowardCepAand we ﬁnd (0.35 km s−1 ≤ ∆V ≤ 0.94 km s−1) for each (9,6)
+1/2
+G34.26+0.15. The spectral parameters are listed in Table A.3. maser component (see details in Table A.3). In all, we may
+Because at least a signiﬁcant part of the NH (9,6) emission have observed four diﬀerent (9,6) velocity features. Three
+3
+is not resolved by our JVLA observations, the derived bright- are blueshifted at V ∼ 53.8 km s−1, 55.8 km s−1, and
+LSR
+nesstemperaturesareonlylowerlimits.Nevertheless,thelower 56.8kms−1,andafourth,tentativelydetected,at62.5 kms−1.
+limits on the brightness temperature are >800 K in Cep A (see This tentative redshifted feature was only potentially detected
+Table A.3), which is much higher than the expected thermal with Eﬀelsberg in 2020 January. The velocity is similar to that
+gas temperature of ∼250 K (e.g., Patel et al. 2005; Comito of the JVLA measurements on the NH (1,1) absorption line
+3
+et al. 2007; Beuther et al. 2018). This strongly suggests that againstcontinuumsourceC(∼ 7(cid:48)(cid:48) resolution;Ketoetal.1987)
+Articlenumber,page5of10
+A&Aproofs:manuscriptno.mainArxiv
+andtheNH (3,3)emissionsurroundingcontinuumsourceBas etal.2013).BothCepAandG34.26+0.15havesimilarkinetic
+3
+wellastheheadofC(1(cid:48).(cid:48)4×1(cid:48).(cid:48)2resolution;Heatonetal.1989). temperatures of (cid:38)200 K (Henkel et al. 1987; Patel et al. 2005;
+However, we did not ﬁnd this redshifted component in our Comito et al. 2007; Beuther et al. 2018). This suggests that
+JVLAobservations.Therefore,itspositionwithinG34.26+0.15 highkinetictemperaturesareneededtoexciteNH (9,6)masers.
+3
+cannot be determined. The blueshifted (9,6) masers with a However,itshouldbenotedthatthesilicatedustabsorptionfea-
+velocity range of 53.8–56.8 km s−1 (M1, M2, and M3) show turemightdominateat10µm(seethespectralenergydistribu-
+velocities compatible with those of the NH (3,3) emission at tion of Cep A in De Buizer et al. 2017). Additionally, there is
+3
+the proper positions (Heaton et al. 1989), which might be a nobrightinfraredemissionaroundthetwo(9,6)masers,M2and
+suitableenvironmentformaserspecies. M3, in G34.26+0.15 (see Fig. 4; see also Fig. 11 in De Buizer
+etal.2003fora10.5µmmap).Thisindicatesthatthepumping
+mechanism via infrared photons near 10 µm may not be viable
+4.4. ComparisonofNH3 (9,6)maserswithothermaserlines toexplainthe(9,6)masersinCepAandG34.26+0.15.Further-
+more,Wilson&Schilke(1993)arguedthatradiativepumpingby
+To characterize the environment of NH (9,6) masers, we can
+3 dustemissiontendstoexcitemultipleadjacentammoniamaser
+compare their positions with respect to those of other maser
+transitions,whichappearstocontradictourfailuretodetectthe
+species (i.e., OH, H O, and CH OH). Toward Cep A HW2,
+2 3 adjacent(8,5)and(10,7)lines(withrespecttoquantumnumbers
+manyCH OH(e.g.,Menten1991;Sugiyamaetal.2008;Sanna
+3 andfrequency)andtoonlymeasurethe(9,6)transitionsinCep
+et al. 2017) and H O maser spots (e.g., Torrelles et al. 1998,
+2 A and G34.26+0.15. Therefore, we suggest that infrared radia-
+2011;Sobolevetal.2018)aredetectedandareassociatedwith
+tionfromdustisnotthemainpumpingsource.
+its disk. Sobolev et al. (2018) also found that most of the H O
+maserﬂuxisassociatedwiththecompactHiiregionHW3d.O2H Madden et al. (1986) suggested that there might be some
+maser features close to the Hii regions are also seen in HW2 line overlaps between the rotational NH3 transitions in the far-
+infraredband.However,thiswouldbeunlikelytoaﬀectonlythe
+(e.g., Cohen & Brebner 1985; Bartkiewicz et al. 2005). These
+(9,6) line. Nevertheless, far-infrared spectral observations will
+three kinds of masers in Cep A have a large velocity range of
+beneededtoclarifythisscenario.
+−25 km s−1 ≤ V ≤ −2 km s−1 and are widespread around
+LSR Based on our observations, the (9,6) maser spots are close
+HW2 and HW3, while NH (9,6) emission is only detected at
+3 to, but not coincident with, the peaks of the radio continuum
+−0.9 km s−1 ≤ V ≤2.9 km s−1 toward a sub-arcsecond-
+LSR emission in Cep A and G34.26+0.15. Furthermore, the (9,6)
+sizedregiontothewestofthepeakcontinuumpositionofHW2
+masers show velocity oﬀsets with respect to their systemic ve-
+(see Fig. 3). This suggests that the NH (9,6) maser in Cep A
+3 locities. This indicates that the (9,6) masers are located at the
+isuniqueandnotrelatedtomaserspotsseeninothermolecular
+base of outﬂows, similar to the H O masers. This is supported
+species. 2
+by VLBI observations that show that (9,6) masers tend to be
+In G34.26+0.15, OH (Zheng et al. 2000), H O (Imai et al.
+2 closelyassociatedwithH Omasers(Pratapetal.1991).Theob-
+2011),andCH3OH(Bartkiewiczetal.2016)masershavebeen servedtimevariabilityin2G34.26+0.15andW51-IRS2canalso
+detected east of source C (Fig. 4), and none of them coincides
+beattributedtoepisodicmolecularoutﬂows.Thisindicatesthat
+with the head of C. The NH (9,6) maser M1 is also found
+3 collisional pumping could be the driver of the (9,6) maser. On
+slightly oﬀ the head of source C. This could suggest that M1
+the other hand, collisional pumping has been successfully used
+ispoweredbycontinuumsourceCorbyanoutﬂow.Nearcom-
+toexplaintheNH (3,3)maser(Walmsley&Ungerechts1983;
+ponent B, there are some OH and CH OH masers but no H O 3
+3 2 Floweretal.1990;Mangum&Wootten1994).Collisionstendto
+or NH3 masers. A group of H2O masers, well-known tracers pumpfromtheK=0leveltotheK=3levelwithparitychanges,
+of outﬂows, with a large velocity distribution of 43 km s−1 ≤
+thatis,theupperlevelofthe(3,3)metastabletransitionwillbe
+V ≤54 km s−1, was found to the west of the centimeter-
+LSR overpopulated.NH (9,6)arisesfromtheorthospecies,soasim-
+continuum source A and close to the peak of the millimeter- 3
+ilarmechanismmightalsooccurinthecaseofthe(9,6)transi-
+continuumemission(seedetailsinourFig.A.2andalsoinFig.5
+tion.Furthermeasurementsofcollisionalratesofammoniawill
+ofImaietal.2011).TheclosenessofNH (9,6)maserspotsM2
+3 allowustotestthisscenario.
+andM3tothisgroupofwatermasersandtheirsimilarvelocities
+again suggest an association of NH (9,6) masers with outﬂow
+3
+activity. 5. Summary
+We report the discovery of NH (9,6) masers in two HMSFRs,
+3
+4.5. Constraintsonpumpingscenarios Cep A and G34.26+0.15. The narrow line width of the emis-
+sionfeatures(∆V ≤2.0kms−1)andtheirhighbrightnesstem-
+1/2
+Our observations have resulted in the detection of NH3 (9,6) peratures (> 400 K) indicate the maser nature of the lines.
+masers in Cep A and G34.26+0.15. The new detections could The intensity of the (9,6) maser in G34.26+0.15 is decreasing
+provide additional constraints on the maser line’s pumping withtime, whiletoward CepA themaser isstable basedon 20
+mechanism. As mentioned in Sect. 1, the pumping mechanism months of monitoring at Eﬀelsberg. Linearly interpolating the
+of the (9,6) maser is unclear (Madden et al. 1986; Brown & integratedintensitiesobtainedatEﬀelsbergasafunctionoftime,
+Cragg1991).Previousstudieshavesuggestedthattherearethree theJVLAmeasurementsshowthatthereisnomissingﬂuxden-
+main pumping scenarios to explain the observed NH3 maser sityonscalesontheorderof1.2arcsec(4×10−3and2×10−2pc)
+lines (Madden et al. 1986; Henkel et al. 2013): (1) infrared ra- to the total single-dish ﬂux. The JVLA-detected emission in-
+diationfromthedustcontinuumemission,(2)lineoverlap,and dicates that the NH (9,6) maser in Cep A originates from a
+3
+(3)collisionalpumping. sub-arcsecond-sized region slightly (0(cid:48).(cid:48)28 ± 0(cid:48).(cid:48)10) to the west
+For the ﬁrst mechanism, infrared photons near 10 µm are of the peak position of the 1.36cm continuum object, HW2. In
+needed for vibrational excitation. The high dust temperature G34.26+0.15,threeNH (9,6)maserspotsareobserved:oneis
+3
+(∼300 K) of W51-IRS2 can provide substantial infrared pho- closetotheheadofthecometaryUCHiiregionC,andtheother
+tons near 10 µm, which is used for radiative pumping (Henkel twoareemittedfromacompactregiontothewestoftheHCHii
+Articlenumber,page6of10
+Y.T.Yan(闫耀庭) etal.:Discoveryofammonia(9,6)masersintwohigh-massstar-formingregions
+regionA.Wesuggestthatthe(9,6)masersmaybeconnectedto Mauersberger,R.,Wilson,T.L.,&Henkel,C.1988,A&A,201,123
+outﬂowinggas.HigherangularresolutionJVLAandVLBIob- McEwen,B.C.,Pihlström,Y.M.,&Sjouwerman,L.O.2016,ApJ,826,189
+servations are planned to provide more accurate positions and McMullin,J.P.,Waters,B.,Schiebel,D.,Young,W.,&Golap,K.2007,inAs-
+tronomicalSocietyofthePaciﬁcConferenceSeries,Vol.376,Astronomical
+constraintsonpumpingscenarios.
+DataAnalysisSoftwareandSystemsXVI,ed.R.A.Shaw,F.Hill,&D.J.
+Acknowledgements. Wewouldliketothanktheanonymousrefereefortheuse- Bell,127
+fulcommentsthatimprovethemanuscript.Y.T.Y.isamemberoftheInterna- Mei,Y.,Chen,X.,Shen,Z.-Q.,&Li,B.2020,ApJ,898,157
+tionalMaxPlanckResearchSchool(IMPRS)forAstronomyandAstrophysics Menten,K.M.1991,ApJ,380,L75
+attheUniversitiesofBonnandCologne.Y.T.Y.wouldliketothanktheChina Mills,E.A.C.,Ginsburg,A.,Clements,A.R.,etal.2018,ApJ,869,L14
+ScholarshipCouncil(CSC)foritssupport.Wewouldliketothankthestaﬀat Mookerjea,B.,Casper,E.,Mundy,L.G.,&Looney,L.W.2007,ApJ,659,447
+theEﬀelsbergfortheirhelpprovidedduringtheobservations.Wethankthestaﬀ Moscadelli,L.,Reid,M.J.,Menten,K.M.,etal.2009,ApJ,693,406
+oftheJVLA,especiallyTonyPerreaultandEdwardStarr,fortheirassistance Narayanan,G.&Walker,C.K.1996,ApJ,466,844
+with the observations and data reduction. This research has made use of the Ott,M.,Witzel,A.,Quirrenbach,A.,etal.1994,A&A,284,331
+NASA/IPACInfraredScienceArchive,whichisfundedbytheNationalAero- Patel,N.A.,Curiel,S.,Sridharan,T.K.,etal.2005,Nature,437,109
+nautics and Space Administration and operated by the California Institute of Perley,R.A.&Butler,B.J.2013,ApJS,204,19
+Technology. Pety,J.2005,inSF2A-2005:Semainedel’AstrophysiqueFrancaise,ed.F.Ca-
+soli,T.Contini,J.M.Hameury,&L.Pagani,721
+Poynter,R.L.&Kakar,R.K.1975,ApJS,29,87
+Pratap,P.,Menten,K.M.,Reid,M.J.,Moran,J.M.,&Walmsley,C.M.1991,
+References ApJ,373,L13
+Reid,M.J.&Ho,P.T.P.1985,ApJ,288,L17
+Bartkiewicz,A.,Szymczak,M.,Cohen,R.J.,&Richards,A.M.S.2005,MN- Rodriguez,L.F.,Ho,P.T.P.,&Moran,J.M.1980,ApJ,240,L149
+RAS,361,623 Sanna,A.,Moscadelli,L.,Surcis,G.,etal.2017,A&A,603,A94
+Bartkiewicz,A.,Szymczak,M.,&vanLangevelde,H.J.2016,A&A,587,A104 Sewilo,M.,Churchwell,E.,Kurtz,S.,Goss,W.M.,&Hofner,P.2004,ApJ,
+Benjamin,R.A.,Churchwell,E.,Babler,B.L.,etal.2003,PASP,115,953 605,285
+Beuther,H.,Mottram,J.C.,Ahmadi,A.,etal.2018,A&A,617,A100 Sewiło,M.,Churchwell,E.,Kurtz,S.,Goss,W.M.,&Hofner,P.2011,ApJS,
+Beuther,H.,Walsh,A.J.,Thorwirth,S.,etal.2007,A&A,466,989 194,44
+Brogan,C.L.,Hunter,T.R.,Cyganowski,C.J.,etal.2011,ApJ,739,L16 Sobolev,A.M.,Moran,J.M.,Gray,M.D.,etal.2018,ApJ,856,60
+Brown,A.T.,Little,L.T.,MacDonald,G.H.,Riley,P.W.,&Matheson,D.N. Sugiyama,K.,Fujisawa,K.,Doi,A.,etal.2008,PASJ,60,1001
+1981,MNRAS,195,607 Torrelles,J.M.,Gómez,J.F.,Garay,G.,etal.1998,ApJ,509,262
+Brown,R.D.&Cragg,D.M.1991,ApJ,378,445 Torrelles,J.M.,Gómez,J.F.,Garay,G.,etal.1999,MNRAS,307,58
+Carrasco-González,C.,Sanna,A.,Rodríguez-Kamenetzky,A.,etal.2021,ApJ, Torrelles,J.M.,Ho,P.T.P.,Rodriguez,L.F.,&Canto,J.1985,ApJ,288,595
+914,L1 Torrelles,J.M.,Ho,P.T.P.,Rodriguez,L.F.,&Canto,J.1986,ApJ,305,721
+Cesaroni,R.,Walmsley,C.M.,&Churchwell,E.1992,A&A,256,618 Torrelles,J.M.,Patel,N.A.,Curiel,S.,etal.2011,MNRAS,410,627
+Cheung,A.C.,Rank,D.M.,Townes,C.H.,Thornton,D.D.,&Welch,W.J. Torrelles,J.M.,Verdes-Montenegro,L.,Ho,P.T.P.,Rodriguez,L.F.,&Canto,
+1968,Phys.Rev.Lett.,21,1701 J.1993,ApJ,410,202
+Churchwell,E.,Babler,B.L.,Meade,M.R.,etal.2009,PASP,121,213 Towner,A.P.M.,Brogan,C.L.,Hunter,T.R.,&Cyganowski,C.J.2021,ApJ,
+Cohen,R.J.&Brebner,G.C.1985,MNRAS,216,51P 923,263
+Comito,C.,Schilke,P.,Endesfelder,U.,Jiménez-Serra,I.,&Martín-Pintado,J. Umemoto,T.,Mikami,H.,Yamamoto,S.,&Hirano,N.1999,ApJ,525,L105
+2007,A&A,469,207 Urquhart,J.S.,Morgan,L.K.,Figura,C.C.,etal.2011,MNRAS,418,1689
+Curiel,S.,Ho,P.T.P.,Patel,N.A.,etal.2006,ApJ,638,878 Walmsley,C.M.&Ungerechts,H.1983,A&A,122,164
+Danby, G., Flower, D. R., Valiron, P., Schilke, P., & Walmsley, C. M. 1988, Walsh,A.J.,Breen,S.L.,Britton,T.,etal.2011,MNRAS,416,1764
+MNRAS,235,229 Walsh,A.J.,Longmore,S.N.,Thorwirth,S.,Urquhart,J.S.,&Purcell,C.R.
+DeBuizer,J.M.,Liu,M.,Tan,J.C.,etal.2017,ApJ,843,33 2007,MNRAS,382,L35
+DeBuizer,J.M.,Radomski,J.T.,Telesco,C.M.,&Piña,R.K.2003,ApJ,598, Wang,K.,Zhang,Q.,Wu,Y.,Li,H.-b.,&Zhang,H.2012,ApJ,745,L30
+1127 Wilson,T.L.,Batrla,W.,&Pauls,T.A.1982,A&A,110,L20
+Dzib,S.,Loinard,L.,Rodríguez,L.F.,Mioduszewski,A.J.,&Torres,R.M. Wilson,T.L.&Henkel,C.1988,A&A,206,L26
+2011,ApJ,733,71 Wilson,T.L.,Johnston,K.J.,&Henkel,C.1990,A&A,229,L1
+Flower,D.R.,Oﬀer,A.,&Schilke,P.1990,MNRAS,244,4P Wilson,T.L.&Schilke,P.1993,inLectureNotesinPhysics,Astrophysical
+Galván-Madrid,R.,Keto,E.,Zhang,Q.,etal.2009,ApJ,706,1036 Masers,ed.A.W.Clegg&G.E.Nedoluha,Vol.412,123–126
+Garay,G.,Ramirez,S.,Rodriguez,L.F.,Curiel,S.,&Torrelles,J.M.1996,ApJ, Wyrowski,F.,Güsten,R.,Menten,K.M.,Wiesemeyer,H.,&Klein,B.2012,
+459,193 A&A,542,L15
+Garay,G.,Rodriguez,L.F.,&vanGorkom,J.H.1986,ApJ,309,553 Zhang,Q.&Ho,P.T.P.1995,ApJ,450,L63
+Gaume,R.A.,Wilson,T.L.,&Johnston,K.J.1996,ApJ,457,L47 Zhang,Q.,Hunter,T.R.,Sridharan,T.K.,&Cesaroni,R.1999,ApJ,527,L117
+Goddi,C.,Greenhill,L.J.,Humphreys,E.M.L.,Chandler,C.J.,&Matthews, Zheng,X.W.,Moran,J.M.,&Reid,M.J.2000,MNRAS,317,192
+L.D.2011,ApJ,739,L13
+Goddi,C.,Henkel,C.,Zhang,Q.,Zapata,L.,&Wilson,T.L.2015,A&A,573,
+A109
+Gómez,J.F.,Sargent,A.I.,Torrelles,J.M.,etal.1999,ApJ,514,287
+Güsten,R.,Chini,R.,&Neckel,T.1984,A&A,138,205
+Heaton,B.D.,Little,L.T.,&Bishop,I.S.1989,A&A,213,148
+Henkel,C.,Wilson,T.L.,Asiri,H.,&Mauersberger,R.2013,A&A,549,A90
+Henkel,C.,Wilson,T.L.,&Mauersberger,R.1987,A&A,182,137
+Ho,P.T.P.&Townes,C.H.1983,ARA&A,21,239
+Hoﬀman,I.M.&Joyce,S.A.2014,ApJ,782,83
+Hogge,T.G.,Jackson,J.M.,Allingham,D.,etal.2019,ApJ,887,79
+Hughes,V.A.1991,ApJ,383,280
+Hughes,V.A.&Wouterloot,J.G.A.1984,ApJ,276,204
+Hunter,T.R.,Brogan,C.L.,Indebetouw,R.,&Cyganowski,C.J.2008,ApJ,
+680,1271
+Imai,H.,Omi,R.,Kurayama,T.,etal.2011,PASJ,63,1293
+Keto,E.R.,Ho,P.T.P.,&Reid,M.J.1987,ApJ,323,L117
+Kraemer,K.E.&Jackson,J.M.1995,ApJ,439,L9
+Kuchar,T.A.&Bania,T.M.1994,ApJ,436,117
+Madden,S.C.,Irvine,W.M.,Matthews,H.E.,Brown,R.D.,&Godfrey,P.D.
+1986,ApJ,300,L79
+Mangum,J.G.&Wootten,A.1994,ApJ,428,L33
+Mauersberger,R.,Henkel,C.,&Wilson,T.L.1987,A&A,173,352
+Mauersberger,R.,Wilson,T.L.,&Henkel,C.1986,A&A,160,L13
+Articlenumber,page7of10
+A&Aproofs:manuscriptno.mainArxiv
+AppendixA:
+TableA.1.SummaryofNH (9,6)maserobservations.
+3
+(cid:82)
+Source Telescope Beam Epoch Channel S rms S dv V ∆V
+ν ν LSR 1/2
+size spacing
+(kms−1) (Jy) (mJy) (Jykms−1) (kms−1)
+CepA Eﬀelsberg 49(cid:48)(cid:48) 2020,Jan.04 0.62 0.67 3.41 1.19±0.02 -1.11±0.02 1.67±0.04
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Feb.11 0.62 0.59 5.97 1.08±0.02 -0.74±0.02 1.70±0.04
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Feb.15 0.62 0.65 10.98 1.11±0.03 -0.75±0.02 1.60±0.05
+JVLAa 1(cid:48).(cid:48)47 × 0(cid:48).(cid:48)99 2021,Jul.13 0.13 1.13 144 0.89±0.09 -0.86±0.03 0.74±0.12
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Aug.11 0.07 0.98 13.36 0.49±0.02 -0.90±0.01 0.47±0.01
+0.35 0.26±0.02 -0.28±0.02 0.69±0.05
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Aug.12 0.07 0.98 13.35 0.50±0.01 -0.89±0.07 0.48±0.07
+0.35 0.20±0.01 -0.29±0.07 0.54±0.07
+0.06 0.07±0.01 0.51±0.07 1.09±0.07
+0.02 0.02±0.01 2.15±0.07 0.80±0.07
+0.07 0.06±0.01 2.89±0.07 0.92±0.07
+G34.26+0.15 Eﬀelsberg 49(cid:48)(cid:48) 2020,Jan.03 0.62 0.30 1.26 0.65±0.03 62.50±0.05 2.05±0.13
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Feb.11 0.62 0.24 2.42 0.40±0.02 55.76±0.04 1.60±0.12
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Feb.15 0.62 0.20 4.86 0.38±0.02 55.71±0.05 1.80±0.14
+JVLAb 1(cid:48).(cid:48)33 × 1(cid:48).(cid:48)06 2021,Jul.13 0.13 0.23 37.1 0.09±0.02 54.41±0.03 0.38±0.09
+0.22 0.22±0.02 55.82±0.05 0.95±0.12
+0.15 0.06±0.01 57.21±0.04 0.35±0.08
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Aug.11 0.07 0.08 13.92 0.06±0.007 54.10±0.05 0.68±0.12
+0.07 0.02±0.006 54.82±0.03 0.31±0.09
+0.12 0.10±0.006 55.85±0.02 0.75±0.06
+Eﬀelsberg 49(cid:48)(cid:48) 2021,Aug.12 0.07 0.16 27.40 0.09±0.008 55.83±0.02 0.56±0.05
+Notes.ThespectralparametersareobtainedfromGaussianﬁtting.(a)TheJVLAspectrumtowardCepAisextractedfromtheEﬀelsberg-beam-
+sizedregion(FWHM49(cid:48)(cid:48)).(b)ForG34.26+0.15,theJVLAbeamsamplestheNH (9,6)spectrumoveraregionofradius3(cid:48).(cid:48)5,whichcontainsall
+3
+detectedNH (9,6)emissions.
+3
+TableA.2.1.36cmJVLAﬂuxdensitiesofindividualcontinuumsources.
+Source R.A. Dec. Size P.A. S
+ν
+(h m s) (◦ (cid:48) (cid:48)(cid:48)) (arcsec) (deg) (mJy)
+CepA HW2 225617.972±0.003 +620149.587±0.015 (0.45±0.19)×(0.22±0.10) 50.0 20.2±1.4
+HW3a 225617.420±0.022 +620144.576±0.076 (2.35±0.45)×(0.55±0.14) 66.6 4.75±0.74
+HW3b 225617.578±0.009 +620145.041±0.043 (1.43±0.24)×(0.45±0.10) 59.9 3.19±0.36
+HW3c 225617.956±0.016 +620146.224±0.038 (1.44±0.37)×(0.36±0.19) 86.0 9.90±1.7
+HW3d 225618.195±0.005 +620146.325±0.014 (1.26±0.12)×(0.30±0.19) 102.5 13.75±0.92
+HW9 225618.626±0.014 +620147.851±0.137 (1.53±0.51)×(0.29±0.30) 28.0 3.26±0.78
+G34.26+0.15 A 185318.774±0.005 +011456.208±0.125 (0.66±0.49)×(0.50±0.33) 10.0 94±33
+B 185318.649±0.005 +011500.071±0.180 (2.31±0.49)×(0.85±0.21) 17.4 597±110
+C 185318.560±0.004 +011458.201±0.112 (2.03±0.30)×(1.34±0.20) 178.0 5070±660
+Articlenumber,page8of10
+Y.T.Yan(闫耀庭) etal.:Discoveryofammonia(9,6)masersintwohigh-massstar-formingregions
+TableA.3.NH (9,6)maserpositionsderivedfromtheJVLAobservations.
+3
+Source R.A. Dec. S T V ∆V
+ν MB LSR 1/2
+(h m s) (◦ (cid:48) (cid:48)(cid:48)) (mJybeam−1) (K) (kms−1)
+CepA M 225617.933±0.002 +620149.608±0.011 985.2 2464.8 -0.88±0.01 0.51±0.02
+343.2 829.5 -0.24±0.03 0.63±0.05
+G34.26+0.15 M1 185318.569±0.007 +011457.997±0.056 37.1 94.5 56.82±0.06 0.68±0.14
+M2 185318.696±0.002 +011455.807±0.034 48.4 122.4 53.77±0.05 0.35±0.08
+57.8 146.2 54.35±0.07 0.83±0.14
+180.8 457.6 55.83±0.01 0.59±0.03
+M3 185318.667±0.005 +011455.348±0.066 78.1 197.2 54.22±0.04 0.94±0.08
+73.7 186.3 55.78±0.04 0.79±0.08
+Fig.A.1.CepheusA.Thegreyshadedareasmarkthe1.36cmJVLAcontinuummapofCepA.Thereferencepositionisα =22h56m17s.972,
+J2000
+andδ =62◦01(cid:48)49(cid:48).(cid:48)587,thepeakpositionofthecontinuummap,ismarkedbyaredcross.Slightlytothewestofthecrossisthewhiteellipse
+J2000
+denotingthepositionoftheNH (9,6)emissionwithapurplestaratitscenter.TheredcontoursshowtheNOrthernExtendedMillimeterArray
+3
+(NOEMA)1.37mmcontinuum,takenfromBeutheretal.(2018).Contourlevelsare-5,5,10,20,40,80,100,150,and200×2.43mJybeam−1.
+OH(Bartkiewiczetal.2005),H O(Sobolevetal.2018),andCH OH(Sannaetal.2017)masersarepresentedasdiamonds,circles,andsquares,
+2 3
+respectively.Thecolorbarontheright-handsideindicatesthevelocityrange(V )ofmaserspots.
+LSR
+Articlenumber,page9of10
+A&Aproofs:manuscriptno.mainArxiv
+Fig.A.2.1.36cmJVLAcontinuummapofG34.26+0.15presentedasgrayshadedareas.Thereferencepositionisα =18h53m18s.560,and
+J2000
+δ =01◦14(cid:48)58(cid:48).(cid:48)201,thepeakposition,ismarkedbyaredcross.TheredellipsesshowthepositionsofNH (9,6)emissionwithstarsattheir
+J2000 3
+center(i.e.,M1,M2,andM3).ThebluecontoursshowtheBerkeley-Illinois-MarylandAssociation(BIMA)array2.8mmcontinuum,takenfrom
+Mookerjeaetal.(2007).Contourlevelsare-3,3,10,20,30,40,50,70,90,100,120,and140×20mJybeam−1.OH(Zhengetal.2000),H O(Imai
+2
+etal.2011),andCH OH(Bartkiewiczetal.2016)masersarepresentedasdiamonds,circles,andsquares,respectively.Thecolorbarindicates
+3
+thevelocityrange(V )ofmaserspots.
+LSR
+Articlenumber,page10of10

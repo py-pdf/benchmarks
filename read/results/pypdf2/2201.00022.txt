@@ -1,0 +1,2318 @@
+Draft version January 4, 2022
+Typ eset using L
+A
+T
+E
+X
+two column
+styl e in AASTeX 631
+The Forma tion of Intermediate Mass Black Hol es in Galactic Nuclei
+Sanaea C. Rose,
+1, 2
+Smadar Naoz,
+1, 2
+Re'em Sari,
+3
+and Itai Linial
+3
+1
+Department of Physics and Astronomy, University of California, Los Angeles, CA 90 095, USA
+2
+Mani L. Bhaumik Institute for Theoretical Physics, University of California, Los Angeles, CA 900 95, USA
+3
+Racah Institute for Physics, The Hebrew University, Jerusalem 91904, Israel
+ABSTRACT
+Most stellar evolution mo dels predict that black holes (BHs) should not exist ab ove approximately
+50
+
+70 M
+
+. However, recent LIGO/Virgo detections indicate the e xis tence of BHs with masses at and
+ab ove this threshold. We suggest that massive BHs, including intermediate mass black holes (IMBHs),
+can form in galactic nuclei through collisions b etween stellar-mass black holes and the surrounding
+main-sequence stars. Considering dynamical pro c esses such as collisions, mass segregation, and relax-
+ation, we nd that this channel can b e quite ecient, forming IMBHs as massive as 10
+4
+M
+
+. Our
+results suggest that mass ive black holes and IMBHs may b e ubiquitous in galactic centres. This for-
+mation channel als o has implications for observations . Collisions b etween stars and BHs can pro duce
+electromagnetic signatures, for example, from x-ray binaries and tidal disruption events. Additionally,
+formed through this channel, b oth black holes in the mass gap and IMBHs can merge with the sup er-
+massive black hole at the center of a galactic nucleus through gravitational waves. These gravitational
+wave events are extreme and intermediate mass ratio inspirals (EMRIs and IMRIs, res p ectively).
+1.
+INTRODUCTION
+The rec ently detected gravitational wave source
+GW190521 (
+The LIGO Scientic Collab oration et al.
+2020a
+,
+b
+) pro duce d an intermediate mass black hole of
+approximately 142 M
+
+. This event may have also had a
+85 M
+
+progenitor, which falls within the pair-instability
+mass gap that limits stellar black holes (BHs) to no
+more than
+˘
+<
+50 M
+
+(e.g.,
+ He ger et al.
+ 2003
+;
+ Wo osley
+2017
+)
+1
+. Similarly, the merger pro ducts of GW150914,
+GW170104, and GW170814 fall within the mass gap
+(e.g.,
+ Abb ott et al.
+ 2016
+,
+ 2017a
+,
+b
+). BH mergers that
+form second generation BHs and, in some cases , inter-
+mediate mass B Hs (IMBHs), these gravitational wave
+(GW) events can o ccur in globular clusters, young stel-
+lar clusters, or the eld (e.g.,
+ Ro driguez et al.
+ 2018
+;
+ Ro-
+driguez et al.
+ 2019
+;
+ Fishbach et al.
+ 2020
+;
+ Map elli et al.
+2021b
+,
+a
+;
+ Di Carlo et al.
+ 2019
+,
+ 2021
+;
+ Dall'Amico e t al.
+2021
+;
+ Arca Sedda et al.
+ 2021
+). However, IMBHs are
+not limited to these lo cations and m ay reside in galac-
+Corresp onding author: Sanae a C. Rose
+srose@astro.ucla.edu
+1
+Note that the exact lower and upp er l imits may b e sensitive to
+metallicity of the progenitor (e.g.,
+ Wo osley
+ 2017
+;
+ Sp era & Map elli
+2017a
+;
+ Limongi & Chie
+ 2018a
+;
+ Sakstein et al.
+ 2020
+;
+ Belczynski
+et al.
+ 2020a
+;
+ Renzo et al.
+ 2020
+;
+ Vink et al.
+ 2021
+).
+tic nuclei as well. Several studies prop ose that our
+own g alac tic center may host an IMBH in the inner p c
+(e.g.,
+ Hansen & Milosavljevic
+ 2003
+;
+ Maillard et al.
+ 2004
+;
+Gurkan & R asio
+ 2005
+;
+ Gualandris & Merritt
+ 2009
+;
+ Chen
+& Liu
+ 2013
+;
+ Generozov & Madigan
+ 2020
+;
+ Fragione et al.
+2020a
+;
+ Zheng et al.
+ 2020
+;
+ Naoz et al.
+ 2020
+;
+ GRAVITY
+Collab oration et al.
+ 2020
+).
+Several IMBH formation channels have b ee n suggested
+in the literature. For example, IMBHs may have a cos-
+mological origin, forming in the early universe e ither
+as a result of the very rst stars (e.g.,
+ Madau & Rees
+2001
+;
+ Schneider et al.
+ 2002
+;
+ Johnson & Bromm
+ 2007
+;
+Valiante e t al.
+ 2016
+) or from dire ct collapse of acc umu-
+lated gas (e.g.,
+ Begelman et al.
+ 2006
+;
+ Yue et al.
+ 2014
+;
+Ferrara et al.
+ 2014
+;
+ Choi et al.
+ 2015
+;
+ Shlosman e t al.
+2016
+). These high redshift IMBHs would need to sur-
+vive galaxy evolution and mergers to present day (e.g.,
+Rashkov & Madau
+ 2014
+), with signicant eects on their
+stellar and even dark matter surroundings (e.g.,
+ Bertone
+et al.
+ 2009
+;
+ Che n & Liu
+ 2013
+;
+ Bringmann et al.
+ 2012
+;
+ Eda
+et al.
+ 2013
+;
+ Naoz & Silk
+ 2014
+;
+ Naoz et al.
+ 2019
+). Another
+p opular formation channel relies on the coalescence of
+many stellar-mass black holes. For example, IMBHs
+may form in the centers of globular clusters, where few-
+b o dy interactions lead to the merger of stellar-mass BHs
+(e.g.,
+ O'Leary et al.
+ 2006
+;
+ Gurkan et al.
+ 2006
+;
+ Blecha
+et al.
+ 2006
+;
+ Freitag et al.
+ 2006
+;
+ Umbreit et al.
+ 2012
+;
+ Ro-
+arXiv:2201.00022v1  [astro-ph.GA]  31 Dec 2021
+2
+Rose et al.
+driguez et al.
+ 2018
+;
+ Ro driguez et al.
+ 2019
+;
+ Fragio ne et al.
+2020b
+). Other formation mechanisms invoke successive
+collisions and mergers of massive stars (e.g.,
+ Portegies
+Zwart & McMillan
+ 2002
+;
+ Portegies Zwart et al.
+ 2004
+;
+Freitag et al.
+ 2006
+;
+ Kremer et al.
+ 2020
+;
+ Gonzalez et al.
+2021
+;
+ Di Carlo et al.
+ 2021
+).
+The main obstacle to sequential BH mergers in clus-
+ters is that the merger recoil velo city kick often e xceeds
+the escap e velo city from the cluster (e.g.,
+ Schnittman
+& Buonanno
+ 2007
+;
+ Centrella et al.
+ 2010
+;
+ O'Leary et al.
+2006
+;
+ Baibhav et al.
+ 2020
+, Ro m & Sari, in prep.). How-
+ever, nuclear star clusters at the centers of galaxies do
+not encounter this problem. For example,
+ Fragione et al.
+(
+2021
+) explore rep eated BH-BH mergers in nuclea r star
+clusters without a SMBH. They considered BH binary-
+single interactions, binary BH GW merger, and GW
+merger recoil kicks. The p ost-kick merger pro duct sinks
+back towards the cluster center over a dynamical fric-
+tion timescale. Using this approach, they showed that
+10
+3
+
+10
+4
+M
+
+IMBHs can form e ciently over the life-
+time of a cluster.
+Howe ver, as discussed in Section
+ 2.2
+, direct star-BH
+collisions are much more frequent than BH-BH collision
+in galactic nuclei, making the former a promising chan-
+nel for BH growth. We prop os e that IMBHs can form
+naturally within the central p c of a SMBH in a galactic
+center. Sp e cically, these IMBHs form through rep eated
+collisions with
+main sequence stars
+, accreting some or
+all of the star's mass dep ending on the details of the
+collision. We demonstrate that this channel can create
+IMBHs with masses as large as 10
+4
+M
+
+, dep ending on
+the density prole of the surrounding stars.
+The pap er is s tructured as follows: we describ e rele-
+vant physical pro cesses and our approach in Section
+ 2
+.
+In particular, we provide an overview of collisions in
+Section
+ 2.2
+ and present our statistical approach in Sec-
+tion
+ 2.3
+. Section
+ 2.4
+ discusses our treatment of the
+mass growth with each collision and presents analytic
+solutions to our equations in two dierent regimes, ef-
+cient collisions and inecient collisions We compare
+these solutions to our statistical results. Sections
+ 2.5
+and
+ 2.7
+ discuss im plic ations for GW merger events b e-
+twe en IMBHs and the SMBH. We the n incorp orate re-
+laxation pro cesses and discuss the subsequent results in
+Section
+ 2.8
+. Finally, we discuss and summarize our nd-
+ings in Section
+ 3
+.
+2.
+METHODOLOGY
+We consider a p opulation of stellar mass BHs emb ed-
+ded in a cluster of 1 M
+
+stars. When stars and BHs
+collide, the BHs can accrete mass. The growth rate de -
+p ends on the physical pro cesses outlined b elow. We use
+a statistical approach to estimate the stellar encounters
+and nal IMB H masses.
+2.1.
+Physical Picture
+We consider a p opulation of BHs within the inner few
+parsecs of the SMBH in a galactic nucleus (GN). We as-
+sume that the BH mass distribution follows that of the
+stars from which they originate, a Kroupa initial mass
+function
+dN =dm
+/
+m
+
+2
+:
+35
+. While this choice represents
+a gross oversimplication, it has very little b earing on
+our nal results. Future work may address the particu-
+lars of the BH mass distribution, but we do not exp ect
+that it will signicantly alter the outcome. The upp er
+and lower limits of the BH mass distribution are 5 and
+50
+M
+
+, resp ectively. We select the upp er limit to en-
+compass the range of upp er b ounds predicted by stellar
+evolution mo de ls , which vary b etween 40 and 125
+M
+
+dep ending on the metallicity (
+Heger et al.
+ 2003
+;
+ Wo osley
+2017
+;
+ Sp era & Map elli
+ 2017b
+;
+ Limongi & Chie
+ 2018b
+;
+Belczynski et al.
+ 2020b
+;
+ Renzo e t al.
+ 2020
+). We assume
+that the orbits of the BHs follow a thermal eccentricity
+distribution. We draw their semima jor axes,
+a
+
+, from a
+uniform distribution in log distance,
+dN =d
+(log
+r
+) b eing
+constant. While this distribution is not necessarily rep-
+resentative of actual conditions in the GN, we use it to
+build a comprehensive physical picture of BH growth at
+all distances from the SMBH, including within 0
+:
+01 p c.
+Otherwise, the innermost region of the GN would b e
+p o orly represented in our sample. We consider other
+observationally motivated distributions in Section
+ 2.8
+,
+but reserve a more detailed exam ination of the distribu-
+tion's impact for future work.
+2.2.
+Direct Col lisions
+BHs in the GN can undergo dire ct collisions w ith other
+ob je cts. The timescale for this pro cess,
+t
+coll
+, can b e es-
+timated using a simple rate calculation:
+t
+
+1
+coll
+=
+n˙ A
+,
+where
+n
+is the numb e r density of ob jects,
+˙
+is the ve-
+lo city disp ersion, and
+A
+is the cross-s ection. We use the
+collision timescale from
+ Rose et al.
+ (
+2020
+):
+t
+
+1
+coll
+=
+ˇ n
+(
+a
+
+)
+˙
+(
+a
+
+)
+
+
+f
+1
+(
+e
+
+)
+r
+2
+c
++
+f
+2
+(
+e
+
+)
+r
+c
+2
+G
+(
+m
+B H
++
+m
+?
+)
+˙
+(
+a
+
+)
+2
+
+:
+(1)
+where
+G
+is the gravitational constant and
+r
+c
+is the sum
+of the radii of the interacting ob jects, a black hole with
+mass
+m
+B H
+and a star with mass
+m
+?
+. Detailed in
+ Rose
+et al.
+ (
+2020
+),
+f
+1
+(
+e
+
+) and
+f
+2
+(
+e
+
+) account for the eect of
+the eccentricity of the BH's orbit ab out the SMBH on
+the collision rate, while
+n
+and
+˙
+are simply evaluated
+at the semima jor axis of the orbit (see b elow). Note
+IMBH Formation in Galactic Nuclei
+3
+Figure 1.
+We plot the relevant timescales, including col-
+lision (green), relaxation (gold), and BH-BH GW capture
+(purple), for a single BH in the GN as a function of distance
+from the SMBH. For the collision timescale, we assume the
+BH is on a circular orbit. The timescales dep end on the
+density, so we adopt a range of density proles, b ounded by
+
+= 1 (dashed curve) to
+
+= 2 (dark, solid curve). The dark
+blue line represents the time for a 10
+5
+M
+
+BH to merge with
+the SMB H through GW emission.
+that this timescale equation includes the eects of grav-
+itational fo c us ing, which enhances the cross-section of
+interaction.
+Assuming a circular orbit for simplicity, we plot the
+timescale for a BH orbiting in the GN to collide with
+a 1
+M
+
+star as a function of dis tanc e from the SMBH
+in Figure
+ 1
+.
+2
+As this time scale dep ends on the density
+of surrounding stars, we adopt a density prole of the
+form:
+ˆ
+(
+r
+
+) =
+ˆ
+0
+
+r
+
+r
+0
+
+
+
+;
+(2)
+where
+r
+
+denotes the distance from the SMBH. We adopt
+a SMBH mass of 4
+
+10
+6
+M
+
+such that our ducial GN
+matches our own galactic c enter (e .g.,
+ Ghez et al.
+ 2005
+;
+Genzel et al.
+ 2003
+). In this case, the normalization in
+Eq. (
+2
+) is
+ˆ
+0
+= 1
+:
+35
+
+10
+6
+M
+
+=
+p c
+3
+at
+r
+0
+= 0
+:
+25 p c (
+Gen-
+zel et al.
+ 2010
+). Additionally, in Eq. (
+2
+),
+
+gives the
+slop e of the p ower law. We assume that a uniform p op-
+ulation of solar mass stars account for most of the mass
+in the GN, making the stellar numb er density:
+n
+(
+r
+
+) =
+ˆ
+(
+r
+
+)
+1
+M
+
+:
+(3)
+2
+We note that the eccentricity has a very minor eect on the
+collision timescale (
+Rose et al.
+ 2020
+).
+The collision timescale also dep e nds on the velo city dis-
+p ersion, which we express as:
+˙
+(
+r
+
+) =
+s
+GM
+
+r
+
+(1 +
+
+)
+;
+(4)
+where
+
+is the slop e of the density prole and
+M
+
+de-
+notes the mass of the SMBH (
+Alexander
+ 1999
+;
+ Alexan-
+der & Pfuhl
+ 2014
+). As mentioned ab ove, Eq. (
+1
+) dep ends
+on the sum of the radii of the colliding ob jects,
+r
+c
+. We
+take
+r
+c
+= 1
+R
+
+b ecause these interactions involve a BH
+and a star, and the former has a much smaller physi-
+cal cross-section. For example, the Schwarzschild radius
+of a 10
+M
+
+BH is only 30 km, or 4
+:
+31
+
+10
+
+5
+R
+
+. For
+this reason, direct collisions b etween compact ob jects
+are very rare and not included in our mo del.
+We note that direct collisions b etween BHs, via GW
+emission, were shown to b e ecient in nuclear star clus-
+ters without SMBHs (e.g.,
+ Portegies Zwart & McMil-
+lan
+ 2000
+;
+ O'Leary et al.
+ 2006
+;
+ Ro driguez et al.
+ 2016
+).
+Howe ver, in the GN, star-BH collisions are much more
+frequent than direct BH-BH c ollis ions . As depicted in
+Figure
+ 1
+, the star-BH collision timescale for a range
+of density proles is many orders of magnitude shorter
+than the BH-BH GW collision timesc ale (for the rele-
+vant equations, see
+ O'Leary et al.
+ 2009
+;
+ Gondan et al.
+2018
+, for example). Thus, we exp ect that star-BH col-
+lisions will b e the main driver of IMBH growth in the
+GN.
+2.3.
+Statistical Approach to Col lisions
+We simulate the mass growth of a p opulation of BHs
+with initial conditions detailed in Section
+ 2.1
+. Over an
+increment 
+t
+of 10
+6
+yr, we calculate the probability of
+a collision o cc urring, given by 
+t=t
+coll
+. This choice of
+
+t
+is motivated by our galactic center's star formation
+timescale (e.g.,
+ Lu et al.
+ 2009
+), allowing for regular re-
+plenishment of the stellar p opulation in the GN. We have
+checked that the results are not sensitive to this choice
+of 
+t
+, omitted here to avoid c lutter. We draw a numb er
+b etween 0 and 1 using a random numb er generator. If
+that numb er is less than or equal to the probability, we
+increase the BH's mass by 
+m
+, the mass that the BH is
+exp ected to accrete in a single collision (see Section
+ 2.4
+for details). We recalculate the collision timescale using
+the up dated BH mass and rep eat this pro cess until the
+time elapsed equals the simulation time of 10 Gyr
+3
+.
+3
+Closer to the SMBH, 
+t
+may exceed the collision timescale by
+a factor of a few for steep densi ty proles. We include a safe-
+guard in our co de which takes the ratio
+t
+coll
+=
+
+t
+and rounds it
+to the nearest integer. We take this integer to b e the numb er of
+collisions and increase the BH mass accordingly.
+4
+Rose et al.
+2.4.
+Mass Growth
+When a BH collides w ith a star, it may accrete m a-
+terial and grow in mass. The details of the accretion
+dep end on the relative velo city b etween the BH and
+star. For simplicity, this calculation assumes that the
+two ob jects exp erience a he ad on collision, with the BH
+passing through the star's center. We b egin by con-
+sidering the escap e velo city from the B H at the star's
+outermost p oint, its surface, which corresp onds to the
+maximum impact parameter 1 R
+
+. Qualitatively, one
+might exp ect that the BH could accrete the entire star
+(i.e., 
+m
+˘
+1 M
+
+) if the relative velo city is smaller than
+the escap e velo city from the BH at this p oint. However,
+in the vicinity of the SMBH, the disp ersion velo city of
+the stars may b e much larger than the escap e velo city
+from the BH at the star's surface. In this case, the BH
+accretes a \tunnel" of material through the star. This
+tunnel has radius equal to the Bondi radius and length
+approximately 1
+R
+
+.
+To estimate 
+m
+, we b egin with the Bondi- Hoyle ac-
+cretion rate, _
+m
+, give n by:
+_
+m
+=
+4
+ˇ G
+2
+m
+2
+BH
+ˆ
+star
+(
+c
+2
+s
++
+˙
+2
+)
+3
+=
+2
+;
+(5)
+where
+c
+s
+is the sp eed of sound in the star and
+ˆ
+star
+is its
+density (e.g.,
+ Bondi
+ 1952
+;
+ Bondi & Hoyle
+ 1944
+;
+ Shima
+et al.
+ 1985
+;
+ Edgar
+ 200 4
+, see latter for a review). We
+approximate the density as 1
+M
+
+=
+(4
+ˇ R
+3
+
+=
+3) and take
+the c ons ervative value of
+c
+s
+= 500
+k m s
+
+1
+, which is
+consistent with the sound sp eed inside a 1
+M
+
+star
+(
+Christensen-Dalsgaard et al.
+ 1996
+) and allows us to set
+a lower limit on 
+m
+. To nd 
+m
+, at each collision, we
+have:
+
+m
+= min( _
+m
+
+t
+?;
+cross
+;
+1 M
+
+)
+;
+(6)
+where
+t
+?;
+cross
+˘
+R
+
+=˙
+is the c ros sing time of the BH in
+the star. We take the minimum b etween _
+m
+
+t
+?;
+cross
+and
+1 M
+
+b ecause the BH cannot accrete more mass than
+one star at each collision.
+Figure
+ 2
+ juxtap oses the exp ected growth us ing Bondi-
+Hoyle-Lyttleton accretion (blue small p oints) with a
+much s im ple r mo del in which the BH accretes the star's
+entire mass, 1
+M
+
+(red large p oints). Both examples
+start with identical p opulations of 10
+M
+
+BHs (grey)
+and simulate growth through collisions using a statisti-
+cal approach. As the BHs g row, the c ollis ion timescale,
+which dep ends on
+m
+B H
+, decrea ses. Simultaneously,
+
+m
+, which also dep ends on
+m
+B H
+, increas es. The re-
+sult is e xp onential growth (see discussion and details
+surrounding Eq. (
+8
+)). In Figure
+ 2
+, however, the simula-
+tions assume
+
+= 1 for the ste llar density prole, ensur-
+ing the collision timescale is long com pared to the sim-
+ulation time, 10 Gyr. Therefore, the BHs grow slowly,
+Figure 2.
+We consider an example that highlights the mass
+growth as a function of distance from the SMBH. Grey dots
+represent the initial masses and distances from the SMBH
+of the BHs involved in the simulation. For simplicity, we set
+the inital mass equal to 10
+M
+
+for all of the BHs. Assuming
+the density prole of stars has
+
+= 1, we consider two cases:
+BHs accrete all of the star's mass during a collision (red) and
+only a p ortion of the star's mass is accreted during a collision
+given by Eq.
+ 6
+ (blue). The latter case results in less growth
+closer to the SMB H where the velo city disp ersion b ecomes
+high. The shaded regions and dashed lines represent the
+analytical predictions detailed in Section
+ 2.4
+.
+and their nal masses can b e approximated using the
+following e quation:
+m
+nal
+(
+t
+coll
+!
+const
+:
+) =
+m
+initial
++ 
+m
+T
+t
+coll
+;
+(7)
+in which
+T
+represents the simulation time and 
+m
+and
+t
+coll
+remain constant, approximated as their initial val-
+ues.
+This equation is plotted in Figure
+ 2
+ for b oth cases,
+
+m
+= 1
+M
+
+(red) and 
+m
+from Bondi-Hoyle-Lyttleton
+accretion (blue), and the curves coincide with the cor-
+resp onding simulated res ults. The shaded regions rep-
+resent one standard deviation from Eq. (
+7
+), calculated
+using the square ro ot of the numb er of collisions,
+T =t
+coll
+.
+As indicated by the results in red, in the absence of
+Bondi-Hoyle-Lyttleton accretion, the BHs c losest to the
+SMBH exp erience the most growth b ecause they have
+shorter collision timesc ales. However, Bondi-Hoyle-
+Lyttleton accretion b ecomes imp ortant closer to the
+SMBH, where the velo city disp ersion is large compared
+with the stars' escap e velo city, and c urtails the mass
+growth for BHs in this region. Outside of 10
+
+2
+p c, a BH
+consumes the star's entire mass: the accretion-limited
+
+m
+governed by Eq. (
+7
+) is greater than or equal to the
+star's mass .
+Eq.
+ 7
+ do es not apply for other values of
+
+. When the
+collision timescale is shorter, corresp onding to a larger
+index
+
+in the density prole (see Figure
+ 1
+), the growth
+IMBH Formation in Galactic Nuclei
+5
+is very ecient and 
+m
+quickly approaches 1 M
+
+. Con-
+sequently, while we can now assume 
+m
+= 1 M
+
+, we
+can no longer as sume the collision timescale is constant.
+The nal mass grows exp onentially as a res ult. For
+
+m
+= 1M
+
+, the general solution is reache d by solving
+the dierential equation
+dm=dt
+= 1
+M
+
+=t
+coll
+(
+m
+), which
+gives:
+m
+nal
+(
+m
+!
+1 M
+
+) =
+
+A
++ (
+m
+initial
++
+A
+)
+e
+C T
+(8)
+where
+A
+=
+˙
+2
+R
+star
+=G
+and
+C
+= 2
+ˇ Gn
+star
+R
+star
+=˙
+. As an
+example, we plot this curve in purple for the
+
+= 2 case,
+in Figure
+ 3
+, which agrees with the s imulated masses.
+2.5.
+GW Inspiral
+When a BH is close to the SMBH, GW emission can
+circularize and shrink its orbit. We implement the ef-
+fects of GW emission on the BH's semima jor axis and
+eccentricity following
+ Peters & Mathews
+ (
+1963a
+). The
+characteristic timescale to merge a BH with an SMBH
+is given by:
+t
+GW
+ˇ
+2
+:
+9
+
+10
+12
+yr
+
+M
+
+10
+6
+M
+
+
+
+1
+
+m
+B H
+10
+6
+M
+
+
+
+1
+
+
+M
+
++
+m
+B H
+2
+
+10
+6
+M
+
+
+
+1
+
+a
+
+10
+
+4
+p c
+
+4
+
+f
+(
+e
+
+)(1
+
+e
+2
+
+)
+7
+=
+2
+;
+(9)
+where
+f
+(
+e
+
+) is a function of
+e
+
+. For all values of
+e
+
+,
+f
+(
+e
+
+) is b etween 0
+:
+979 and 1
+:
+81 (
+Blaes et al.
+ 2002
+). We
+plot this timescale for a 1
+
+10
+5
+M
+
+BH in Figure
+ 1
+ in
+blue.
+In our simulations, we assume a BH has merged with
+the SMBH when the condition
+t
+GW
+< t
+elapsed
+is met.
+When this condition is satised, we te rm inate mass
+growth through collisions for that BH.
+4
+2.6.
+IMBH growth
+As detailed ab ove, BH-stellar collisions can increas e
+the BH masses as a function of time. Here, we examine
+the sensitivity of the BH growth to the density p ower
+law. From Eq. (
+1
+), it is clear that the growth rate de-
+p ends on the stellar density prole, governed by the in-
+dex
+
+. We exp ec t that higher values of
+
+, or steep er
+proles, will result in more ecient mass growth. In
+Figure
+ 1
+, larger values of
+
+lead to collision timescales
+in the G N's inner region, inwards of 0
+:
+25 p c, that are
+4
+For comparison, we also incrementally changed the semima jor
+axis and eccentricity from GW emission following the equations
+in
+ Peters & Mathews
+ (
+1963b
+). This metho d leads to a slight
+increase in the nal IMBH masses b ecause it accounts for the
+collisions that take place while the orbit is gradually shrinking.
+much smaller that the 10 Gyr simulation time. Figure
+ 3
+conrms this exp ectation. It depicts the mass growth of
+a uniform distribution of BHs w ith initial conditions de -
+tailed in Section
+ 2.1
+ for ve
+
+values, spanning 1 (green)
+to 2 (purple). The most massive IMBHs form inwards
+of 0
+:
+25 p c for the
+
+= 2 case.
+2.7.
+Gravitational Wave Mergers and Intermediate
+and Extreme Mass Ratio Inspiral Candidates
+Towards the SMBH, ec ie nt collisions can create BHs
+massive enough to m erge with the SMBH through GWs.
+Following the metho d detailed in Section
+ 2.5
+, when a
+given BH meets the criterion
+t
+GW
+< t
+elapsed
+, we mark
+it as merged with the SMBH. We assume that at this
+p oint the dynamics o f the BH will b e determined by GW
+emission, shrinking and circularizing the BHs orbit un-
+til it undergo es an extreme or intermediate mass ratio
+inspiral (EMRI and IMRI, re sp ectively). The righthand
+plot in Figure
+ 3
+ shows the BH masses versus time of
+merger. It is interesting to note that even in the ab-
+sence of relaxation pro cesses, w hich are often invoked
+to e xplain the formation of EMRIs, EMRIs and notably
+IMRIs can form in this region.
+2.8.
+Two Body Relaxation Processes
+A BH orbiting the SMBH exp eriences weak gravita-
+tional interactions with other ob jects in the GN. Over a
+relaxation time, these interactions alter its orbit ab out
+the SMBH. The two-b o dy relaxation timescale for a
+single-mass system is:
+t
+relax
+= 0
+:
+34
+˙
+3
+G
+2
+ˆ
+h
+M
+
+i
+ln 
+rlx
+;
+(10)
+where ln 
+rlx
+is the Coulomb logarithm and
+h
+M
+
+i
+is the
+average mass of the surrounding ob jects, here assumed
+to b e 1
+M
+
+(
+Spitzer
+ 1987
+;
+ Binney & Tremaine
+ 2008
+,
+Eq. (7.106)). This equation represents the approximate
+timescale for a BH on a semi-circular orbit to change
+its orbital energy and angular mom entum by order of
+themselves. The BH exp eriences diusion in its angular
+momentum and energy as a function of time (dep ending
+on the e ccentricity of the orbit, this pro cess can b e more
+ecient
+ Fragione & Sari
+ 2018
+;
+ Sari & Fragione
+ 2019
+). In
+Figure
+ 1
+, we plot the relaxation timescale in gold for a
+range of
+
+. We note that the
+ Bahcall & Wolf
+ (
+1976
+) pro-
+le,
+
+= 7
+=
+4, corresp onds to zero net
+ux and therefore
+do es not preferentially migrate ob jects inward.
+Additionally, b ecause they are more massive on
+average than the surrounding ob jects, BHs are ex-
+p ected to segregate inwards in the GN (e.g.,
+ Shapiro
+& Marchant
+ 1978
+;
+ Cohn & Kulsrud
+ 1978
+;
+ Morris
+ 1993
+;
+Miralda-Escude & Gould
+ 2000
+;
+ Baumgardt e t al.
+ 2004
+).
+6
+Rose et al.
+Figure 3.
+On the right, we plot nal masses of 500 BHs using dierent values of
+
+in the density prole, shallow (
+
+= 1) to
+cuspy (
+
+= 2). For the latter case, the purple line shows the analytical result from Eq.
+ 8
+, taking
+m
+initial
+to b e the average mass
+of the p opulation. Faded stars indicate BHs that merged with the SMBH through GWs. On the left, we plot the masses and
+merger times of these BHs.
+They sink toward the SMBH on the mass seg re gation
+timescale,
+t
+seg
+ˇ h
+M
+
+i
+=m
+BH
+
+t
+relax
+(e.g.,
+ Spitzer
+ 1987
+;
+Fregeau et al.
+ 2002
+;
+ Merritt
+ 2006
+), which is typically an
+order of magnitude smaller than the relaxation timescale
+plotted in Figure
+ 1
+.
+We incorp orate relaxation pro ces ses by intro ducing a
+small change in the BH's energy and angular momen-
+tum each time it orbits the SMBH. We apply a small
+instantaneous velo city kick to the BH, denoted as 
+v
+.
+We draw 
+v
+from a Guassian distribution with average
+of zero and a standard deviation of 
+v
+r l x
+=
+p
+3, where
+
+v
+r l x
+=
+v
+
+p
+P
+
+=t
+r l x
+(see
+ Bradnick et al.
+ 2017
+, for an
+approach to changes in the angular momentum). The
+new orbital parameters can b e calculated following
+ Lu
+& Naoz
+ (
+2019
+), and see Naoz et al. in prep for full set
+of equations.
+We ac count for the eects of relaxation pro cesses,
+including mass-s egregation, using a multi-faceted ap-
+proach. We b egin by migrating e ach BH towards the
+center over its mass-segregation timescale, shifting it in-
+crementally inward such that its orbital energy changes
+by order of itself within the segregation timesc ale .
+As the BHs segregate down the p otential well, the ir
+abundance with resp ect to stars incre ases, until at some
+turnover radius, BHs b ec ome the dom inant source of
+scattering for b oth black holes and stars. Within this ra-
+dius, BH self-interaction dominate s over two-b o dy scat-
+terings with the now rarer main-sequence stars. The
+BHs will then settle onto a Bahcall-Wolf prole , while
+the stars may follow a shallower prole, with approx-
+imately
+n
+?
+/
+r
+
+1
+:
+5
+, inwards of the trans ition radius
+(Linial & Sari in prep.).
+Therefore, after the initial mass segregation, we allow
+the BHs to b egin diusing over a relaxation tim escale,
+their orbital parameters changing slowly through a ran-
+dom pro cess. In this random pro ces s, some of the BHs
+may migrate closer to the SMBH. We terminate mass
+growth when the BH enters the inner 200 au of the GN,
+within which the density of stars is uncertain. This cut-
+o is based on the 120 au p ericenter of S0-2, the closest
+known s tar to the SMBH (e.g.,
+ Ghez et al.
+ 2005
+).
+Another physical pro ce ss that causes inward migra-
+tion is dynamical friction. A cursory derivation based
+on the dynamical friction e quations describ ed in
+ Binney
+& Tremaine
+ (
+2008
+) reveals the pro cess to have a simi-
+lar timesc ale to mas s segregation. If a BH diuses to
+a distance greater than 2 p c from the SMBH, exiting
+the sphere of in
+uence, we have it sink inwards, back
+towards the center, over a dynamical friction tim escale.
+After one dynamical friction timescale has passed, we
+restart diusion.
+We note that our prescription ignores self-interactions
+b etween the BHs. As mentioned ab ove, as the BHs sink
+towards the SMBH, the ir concentration in the inner re-
+gion of the GN increases, allowing them to dominate the
+scattering. We reserve the inclusion of these interactions
+for future s tudy.
+2.9.
+Eect of Relaxation Processes
+As depicted in Figure
+ 4
+, two-b o dy relaxation pro ces ses
+result in m ore EMRIs and IMRIs events. These pro-
+cesses allow BHs that b egin furthe r from the SMBH
+to migrate inwards and grow more eciently in mass.
+Howe ver, it also im p edes the growth of BHs that are
+initially closer to the SMBH by allowing them to dif-
+IMBH Formation in Galactic Nuclei
+7
+Figure 4.
+Similar to Figure
+ 3
+, we plot the initial masses versus initial distance (grey) and nal mass versus nal distance (red)
+for 500 BHs. This simulation includes relaxation pro cesses, including mass segregation, diusion, and dynamical friction. We
+assume
+
+= 1
+:
+75 for the GN density prole. Faded stars represent BHs that merged with the SMBH. As a result of inward
+migration, BHs merge more quickly with the SMBH, b efore they can b ecome as massive as those in Figure
+ 3
+. Additionally, more
+BHs b ecome EMRIs and IMRIs. Additionally, in the third panel, we show a histogram of the simulated IMBH masses for two
+dierent values of
+
+, 1
+:
+5 (orange, solid),
+
+, 1
+:
+75 (red, dashed), and 2 (purple, dash-dotted), accounting for relaxation pro cesses.
+The dashed, faded lines represent the corresp onding initial histograms. We assume
+
+= 1
+:
+75 for the GN density prole. Faded
+stars represent B Hs that merged with the SMBH.
+fuse out of the inner region where collisions are ecient.
+As can b e seen in Figure
+ 4
+, the net result is that more
+BHs grow, but the maximum mass is lower compared
+to the s cenario that ignores two-b o dy relaxation. The
+histogram in Figure
+ 4
+ presents the nal BH mass distri-
+butions for die re nt p ower law indic es
+
+. As exp ected,
+the two-b o dy relaxation suppresses the
+
+dep endence
+highlighted in Figure
+ 3
+. In fact, using a KS test, we
+nd that we cannot reject the hyp othe sis that the two
+distributions were drawn from the same sample for the
+
+= 1
+:
+75 and
+
+= 2 results. Interestingly, a BH mass
+IMF with an average of 10 M
+
+leads to a nal distri-
+bution with an ave ra ge of
+˘
+200 M
+
+and a median of
+˘
+45 M
+
+, which lies within the mass gap.
+3.
+DISCUSSION AND PREDICTIONS
+We explore the feasibility of forming IMBHs in a
+GN through s uccessive collisions b etween a stellar-mass
+BH and main-sequence stars. Taking b oth a statisti-
+cal and analytic approach, we show that this channel
+can pro duce I MB Hs eciently with masses as high as
+10
+3
+
+4
+M
+
+and may result in many IMBH-SMBH merg-
+ers (intermediate-mass ratio inspiral, IMRIs) and EM-
+RIs.
+As the stellar mass BH c ollides with a star, the BH
+will grow in mass. The increase may equal star's en-
+tire mass if the relative velo city is smaller than the es-
+cap e velo city from the BH at 1 R
+
+. However, near the
+SMBH, the velo city disp ersion may b e larger than the
+escap e velo city from the BH at the star's radius. In this
+limit, the BH accretes a \tunnel" of material through
+the star, estimated using Bondi-Hoyle-Lyttleton accre -
+tion. In our statistical analysis, we acc ount fo r Bondi-
+Hoyle-Lyttleton accretion and nd that BHs outside of
+10
+
+2
+p c from the SMBH can accrete the entire star (see
+Figure
+ 2
+).
+The eciency of collisions, and therefore IMBH,
+EMRI, and IMRI formation as well, are sensitive to
+the underlying stellar density. As shown in Figure
+ 3
+, a
+steep er density prole results in larger IMBHs. This b e-
+havior can b e understo o d from the collision timescale's
+dep endence on the stellar density prole. A steep er pro-
+le yields shorter collision timescales near the SMBH.
+Howe ver, the inclusion of relaxation pro c esses in the
+simulations damp ens the in
+uence of the stellar density
+prole by allowing BHs to diuse into regions of more
+or less ecient growth. As a result, more BHs grow in
+mass, but their maximum mass is smaller (
+˘
+10
+4
+M
+
+).
+Additionally, the nal masses have no apparent dep en-
+dence on distance from the SMBH (see Figure
+ 4
+).
+Mass growth through BH-main-sequence star colli-
+sions may act in concert with other IMBH formation
+channels, such as compact ob ject binary mergers (e.g.,
+Hoang et al.
+ 2018
+;
+ Stephan et al.
+ 2019
+;
+ Fragione et al.
+2021
+;
+ Wang et al.
+ 2021
+). While in some cases colli-
+sions can unbind a binary (e.g.,
+ Sigurdsson & Phinney
+1993
+;
+ Fregeau et al.
+ 2004
+), BH binaries can b e tightly
+b ound e no ugh to withstand the collisions. Wide bina-
+ries may als o b ecome unb ound due to interactions with
+the neighb oring stars and compact ob jects (e.g.,
+ Binney
+& Tremaine
+ 1987
+;
+ Rose et al.
+ 2020
+, see latter study for
+the timescale for an arbitrary eccentricity). However,
+as highlighted in previous studies, a substantial frac-
+tion of these bina ries may merge due to the Eccentric
+Kozai Lidov mechanism, leaving b ehind a single star or
+a single compact ob ject (e.g.,
+ Stephan et al.
+ 2016
+,
+ 2019
+;
+Hoang et al.
+ 2018
+). Additionally, to b e susceptible to
+evap oration, BH binaries mus t have a wider congura-
+tion. Otherwise, they will b e more tightly b ound that
+8
+Rose et al.
+the average kinetic e ne rgy of the surrounding ob jects,
+and will only harden through weak gravitational inter-
+actions with neighb oring stars (see for example Figure
+6 in
+ Rose et al.
+ 2020
+).
+Not included in this study, collisions b etween the BH
+and other compact ob jec ts will increase the BH growth
+rate. BH-BH mergers (e.g.,
+ O'Leary et al.
+ 2009
+;
+ Fra-
+gione et al.
+ 2021
+) and even neutron s tar BH mergers
+(e.g.,
+ Hoang et al.
+ 2020
+) b e come more likely as the BHs
+increase in mass through stellar c ollisions. As a result,
+the BH-BH collision timescale, discussed in Section
+ 2.2
+,
+will b ec ome relevant to our simulations, allowing the
+BHs to grow through this channel in addition to stel-
+lar collisions. Additionally, this compact ob ject mergers
+result in GW recoil, which may have a large impact on
+the dynamics (e.g.,
+ Baibhav et al.
+ 2020
+;
+ Fragione et al.
+2021
+)
+The BH's mass growth increases GW emission, which
+dissipates energy from the orbit. Along with relaxation
+pro cesses, GW emission causes BHs to sink towards the
+SMBH and eventually undergo a merger. As a result,
+the GN environme nt is conducive to the formation of
+EMRIs and IMRIs. The GW emission from EMRIs and
+IMRIs is exp ected to b e at mHz frequencies, making
+them promising candidates for LISA to observe. While
+the exact rate calc ulation is b eyond the scop e of this
+study, the mechanism outline d here seems very promis-
+ing.
+Our res ults also suggest that IMBHs are likely to ex-
+ists in many galactic nuclei, as well as within our own
+galactic center. This im plic ation seems to b e consis -
+tent with recent obse rvational and theoretical studies
+(e.g.,
+ Hansen & Milosavljevic
+ 2003
+;
+ Maillard et al.
+ 2004
+;
+Gurkan & R asio
+ 2005
+;
+ Gualandris & Merritt
+ 2009
+;
+ Chen
+& Liu
+ 2013
+;
+ Generozov & Madigan
+ 2020
+;
+ Fragione et al.
+2020a
+;
+ Zheng et al.
+ 2020
+;
+ Naoz et al.
+ 2020
+;
+ GRAVITY
+Collab oration et al.
+ 2020
+).
+Lastly, the collisions b etween stellar mass B Hs and
+stars may contribute to the x-ray emission from our
+galactic centre (e.g.,
+ Muno et al.
+ 2005
+,
+ 2009
+;
+ Hailey et al.
+2018
+;
+ Zhu et al.
+ 2018
+;
+ Cheng et al.
+ 2018
+)
+5
+. These inter-
+actions, in particular grazing collisions, may also result
+in tidal disruption events (e.g.,
+ Perets et al.
+ 2016
+;
+ Sam-
+sing et al.
+ 2019
+;
+ Kremer et al.
+ 2021
+). Thus, the pro cess
+outlined here may pro duce electromagnetic signatures
+in addition to GW mergers.
+SR thanks the Charles E Young fellowship, the Nina
+Byers Fellowship, and the Michael A. Jura Mem orial
+Graduate Award for supp ort. SR and SN acknowledge
+the partial supp ort from NASA ATP 80NSSC20K0505.
+SN thanks Howard and Astrid Preston for their gener-
+ous supp ort. IL thanks supp ort from the Adams Fellow-
+ship. SN and RS thank the Bhaumik Institute visitor
+program.
+REFERENCES
+Abb ott, B. P., Abb ott, R., Abb ott, T. D., et al. 2016,
+PhRvL, 116, 241102,
+doi:
+ 10.1103/PhysRevLett.116.241102
+|. 2017a, PhRvL, 118, 221101,
+doi:
+ 10.1103/PhysRevLett.118.221101
+|. 2017b, PhRvL, 119, 141101,
+doi:
+ 10.1103/PhysRevLett.119.141101
+Alexander, T. 1999, ApJ, 527, 835, doi:
+ 10.1086/308129
+Alexander, T., & Pfuhl, O. 2014, ApJ, 780, 148,
+doi:
+ 10.1088/0004- 637X/780/2/148
+Arca Sedda, M., Map elli, M., Benacquista, M., & Sp era, M.
+2021, arXiv e-prints, arXiv:2109.12119.
+https://arxiv.org/abs/2109.12119
+Bahcall, J. N., & Wolf , R. A. 1976, ApJ, 209, 214,
+doi:
+ 10.1086/154711
+5
+The connection b etween the observed X-ray sources at the Galac-
+tic Center and tidal capture has b een suggested by
+ Generozov
+et al.
+ (
+2018
+), but see
+ Zhu et al.
+ (
+2018
+);
+ Stephan et al.
+ (
+2019
+) for
+alternative channels.
+Baibhav, V., Gerosa, D., Berti, E., et al. 2020, PhRvD, 102,
+043002, doi:
+ 10.1103/PhysRevD.102.043002
+Baumgardt, H., Makino, J., & Ebisuzaki, T. 2004, ApJ,
+613, 1143, doi:
+ 10.1086/423299
+Begelman, M. C., Volonteri, M., & Rees, M. J. 2006,
+MNRAS, 370, 289, doi:
+ 10.1111/j.1365- 2966.2006.10467.x
+Belczynski, K., Hirschi, R., Kaiser, E. A., et al. 2020a, ApJ,
+890, 113, doi:
+ 10.3847/1538- 4357/ab6d77
+|. 2020b, ApJ, 890, 113, doi:
+ 10.3847/1538- 4357/ab6d77
+Bertone, G., Fornasa, M., Taoso, M., & Zentner, A. R.
+2009, New Journal of Physics, 11, 105016,
+doi:
+ 10.1088/1367- 2630/11/10/105016
+Binney, J., & Tremaine, S. 1987, Galactic dynamics
+|. 2008, Galactic Dynamics: Second Edition
+Blaes, O., Lee, M. H., & So crates, A. 2002, ApJ, 578, 775,
+doi:
+ 10.1086/342655
+Blecha, L., Ivanova, N., Kalogera, V., et al. 2006, ApJ, 642,
+427, doi:
+ 10.1086/500727
+Bondi, H. 1952, MNRAS, 112, 195,
+doi:
+ 10.1093/mnras/112.2.195
+IMBH Formation in Galactic Nuclei
+9
+Bondi, H., & Hoyle, F. 1944, MNRAS, 104, 273,
+doi:
+ 10.1093/mnras/104.5.273
+Bradnick, B., Mandel, I., & Levin, Y. 2017, MNRAS, 469,
+2042, doi:
+ 10.1093/mnras/stx1007
+Bringmann, T., Huang, X., Ibarra, A., Vogl, S., & Weniger,
+C. 2012, JCAP, 2012, 054,
+doi:
+ 10.1088/1475- 7516/2012/07/054
+Centrella, J., Baker, J. G., Kelly, B. J., & van Meter, J. R.
+2010, Reviews of Mo dern Physics, 82, 3069,
+doi:
+ 10.1103/RevMo dPhys.82.3069
+Chen, X., & Liu, F. K. 2013, ApJ, 762, 95,
+doi:
+ 10.1088/0004- 637X/762/2/95
+Cheng, Z., Li, Z., Xu, X., & Li, X. 2018, ApJ, 858, 33,
+doi:
+ 10.3847/1538- 4357/aaba16
+Choi, J.-H., Shlosman, I., & Begelman, M. C. 2015,
+MNRAS, 450, 4411, doi:
+ 10.1093/mnras/stv694
+Christensen-Dalsgaard, J., Dapp en, W., Aj ukov, S. V.,
+et al. 1996, Science, 272, 1286,
+doi:
+ 10.1126/science.272.5266.1286
+Cohn, H., & Kulsrud, R. M. 1978, ApJ, 226, 1087,
+doi:
+ 10.1086/156685
+Dall'Amico, M., Map elli, M., Di Carlo, U. N., et al. 2021,
+MNRAS, 508, 3045, doi:
+ 10.1093/mnras/stab2783
+Di Carlo, U. N., Giacobb o, N., Map elli, M., et al. 2019,
+MNRAS, 487, 2947, doi:
+ 10.1093/mnras/stz1453
+Di Carlo, U. N., Map elli, M., Pasquato, M., et al. 2021,
+MNRAS, 507, 5132, doi:
+ 10.1093/mnras/stab2390
+Eda, K., Itoh, Y., Kuroyanagi, S., & Silk, J. 2013, PhRvL,
+110, 221101, doi:
+ 10.1103/PhysRevLett.110.221101
+Edgar, R. 2004, NewAR, 48, 843,
+doi:
+ 10.1016/j.newar.2004.06.001
+Ferrara, A., Salvadori, S., Yue, B., & Schleicher, D. 2014,
+Monthly Notices of the Royal Astronomical So ciety, 443,
+2410, doi:
+ 10.1093/mnras/stu1280
+Fishbach, M., Farr, W. M., & Holz, D. E. 2020, ApJL, 891,
+L31, doi:
+ 10.3847/2041- 8213/ab77c9
+Fragione, G., Ko csis, B., Rasio, F. A., & Silk, J. 2021,
+arXiv e-prints, arXiv:2107.04639.
+https://arxiv.org/abs/2107.04639
+Fragione, G., Lo eb, A., Kremer, K., & Rasio, F. A. 2020a,
+ApJ, 897, 46, doi:
+ 10.3847/1538- 4357/ab94b2
+Fragione, G., Lo eb, A., & Rasio, F. A. 2020b, ApJL, 902,
+L26, doi:
+ 10.3847/2041- 8213/abb c0a
+Fragione, G., & Sari, R. 2018, ApJ, 852, 51,
+doi:
+ 10.3847/1538- 4357/aaa0d7
+Fregeau, J. M., Cheung, P., Portegies Zwart, S. F., &
+Rasio, F. A. 2004, MNRAS, 352, 1,
+doi:
+ 10.1111/j.1365- 2966.2004.07914.x
+Fregeau, J. M., Joshi, K . J., Portegies Zwart, S. F., &
+Rasio, F. A. 2002, ApJ, 570, 171, doi:
+ 10.1086/339576
+Freitag, M., Amaro-Seoane, P., & Kalogera, V. 2006, ApJ,
+649, 91, doi:
+ 10.1086/506193
+Generozov, A., & Madigan, A.-M. 2020, ApJ, 896, 137,
+doi:
+ 10.3847/1538- 4357/ab94b c
+Generozov, A., Stone, N. C., Metzger, B. D., & Ostriker,
+J. P. 2018, MNRAS, 478, 4030,
+doi:
+ 10.1093/mnras/sty1262
+Genzel, R., Eisenhauer, F., & Gillessen, S. 2010, Reviews of
+Mo dern Physics, 82, 3121,
+doi:
+ 10.1103/RevMo dPhys.82.3121
+Genzel, R., Scodel, R., Ott, T., et al. 2003, ApJ, 594, 812,
+doi:
+ 10.1086/377127
+Ghez, A. M., Salim, S., Hornstein, S. D., et al. 2005, ApJ,
+620, 744, doi:
+ 10.1086/427175
+Gondan, L., Ko csis, B., Raai, P., & Frei, Z. 2018, ApJ,
+860, 5, doi:
+ 10.3847/1538- 4357/aabfee
+Gonzalez, E., Kremer, K., Chatterjee, S., et al. 2021, ApJL,
+908, L29, doi:
+ 10.3847/2041- 8213/ab df5b
+GRAVITY Collab oration, Abuter, R., Amorim, A., et al.
+2020, A&A, 636, L5, doi:
+ 10.1051/0004- 6361/202037813
+Gualandris, A., & Merritt, D. 2009, ApJ, 705, 361,
+doi:
+ 10.1088/0004- 637X/705/1/361
+Gurkan, M. A., Fregeau, J. M., & Rasio, F. A. 2006, ApJL,
+640, L39, doi:
+ 10.1086/503295
+Gurkan, M. A., & Rasio, F. A. 2005, ApJ, 628, 236,
+doi:
+ 10.1086/430694
+Hailey, C. J., Mori, K., Bauer, F. E., et al. 2018, Nature,
+556, 70, doi:
+ 10.1038/nature25029
+Hansen, B . M. S., & Milosavljevic, M. 2003, ApJL, 593,
+L77, doi:
+ 10.1086/378182
+Heger, A., Fryer, C. L., Wo osley, S. E., Langer, N., &
+Hartmann, D. H. 2003, ApJ, 591, 288,
+doi:
+ 10.1086/375341
+Hoang, B.-M., Naoz, S., Ko csis, B., Rasio, F. A., &
+Dosop oulou, F. 2018, ApJ, 856, 140,
+doi:
+ 10.3847/1538- 4357/aaafce
+Hoang, B.-M., Naoz, S., & Kremer, K. 2020, ApJ, 903, 8,
+doi:
+ 10.3847/1538- 4357/abb66a
+Johnson, J. L., & Bromm, V. 2007, Monthly Notices of the
+Royal Astronomical So ciety, 374, 1557,
+doi:
+ 10.1111/j.1365- 2966.2006.11275.x
+Kremer, K., Lu, W., Piro, A. L., et al. 2021, ApJ, 911, 104,
+doi:
+ 10.3847/1538- 4357/ab eb14
+Kremer, K., Sp era, M., Becker, D., et al. 2020, ApJ, 903,
+45, doi:
+ 10.3847/1538- 4357/abb945
+Limongi, M., & Chie, A. 2018a, ApJS, 237, 13,
+doi:
+ 10.3847/1538- 4365/aacb24
+|. 2018b, ApJS, 237, 13, doi:
+ 10.3847/1538- 4365/aacb24
+Lu, C. X., & Naoz, S. 2019, MNRAS, 484, 1506,
+doi:
+ 10.1093/mnras/stz036
+10
+Rose et al.
+Lu, J. R., Ghez, A. M., Hornstein, S. D., et al. 2009, ApJ,
+690, 1463, doi:
+ 10.1088/0004- 637X/690/2/1463
+Madau, P., & Rees, M. J. 2001, ApJL, 551, L27,
+doi:
+ 10.1086/319848
+Maillard, J. P., Paumard, T., Stolovy, S. R., & Rigaut, F.
+2004, A&A, 423, 155, doi:
+ 10.1051/0004- 6361:20034147
+Map elli, M., Bouanais, Y., Santoliquido, F., Arca Sedda,
+M., & Artale, M. C. 2021a, arXiv e-prints,
+arXiv:2109.06222.
+ https://arxiv.org/abs/2109.06222
+Map elli, M., Dall'Amico, M., Bouanais, Y., et al. 2021b,
+MNRAS, 505, 339, doi:
+ 10.1093/mnras/stab1334
+Merritt, D. 2006, Rep orts on Progress in Physics, 69, 2513,
+doi:
+ 10.1088/0034- 4885/69/9/R01
+Miralda-Escude, J., & Gould, A. 2000, ApJ, 545, 847,
+doi:
+ 10.1086/317837
+Morris, M. 1993, ApJ, 408, 496, doi:
+ 10.1086/172607
+Muno, M. P., Pfahl, E., Bagano, F. K., et al. 2005, ApJL,
+622, L113, doi:
+ 10.1086/429721
+Muno, M. P., Bauer, F. E., Bagano, F. K., et al. 2009,
+ApJS, 181, 110, doi:
+ 10.1088/0067- 0049/181/1/110
+Naoz, S., & Silk, J. 2014, ApJ, 795, 102,
+doi:
+ 10.1088/0004- 637X/795/2/102
+Naoz, S., Silk, J., & Schnittman, J. D. 2019, ApJL, 885,
+L35, doi:
+ 10.3847/2041- 8213/ab4fed
+Naoz, S., Will, C. M., Ramirez-Ruiz, E., et al. 2020, ApJL,
+888, L8, doi:
+ 10.3847/2041- 8213/ab5e3b
+O'Leary, R. M., Ko csis, B., & Lo eb, A. 2009, MNRAS, 395,
+2127, doi:
+ 10.1111/j.1365- 2966.2009.14653.x
+O'Leary, R. M., Rasio, F. A., Fregeau, J. M., Ivanova, N.,
+& O'Shaughnessy, R. 2006, ApJ, 637, 937,
+doi:
+ 10.1086/498446
+Perets, H. B., Li, Z., Lombardi, James C., J., & Milcarek,
+Stephen R., J. 2016, ApJ, 823, 113,
+doi:
+ 10.3847/0004- 637X/823/2/113
+Peters, P. C., & Mathews, J. 1963a, Physical Review, 131,
+435, doi:
+ 10.1103/PhysRev.131.435
+|. 1963b, Phy sical Review, 131, 435,
+doi:
+ 10.1103/PhysRev.131.435
+Portegies Zwart, S. F., Baumgardt, H., Hut, P., Makino, J.,
+& McMillan, S. L. W. 2004, Nature, 428, 724,
+doi:
+ 10.1038/nature02448
+Portegies Zwart, S. F., & McMillan, S. L. W. 2000, ApJL,
+528, L17, doi:
+ 10.1086/312422
+|. 2002, ApJ, 576, 899, doi:
+ 10.1086/341798
+Rashkov, V., & Madau, P. 2014, ApJ, 780, 187,
+doi:
+ 10.1088/0004- 637X/780/2/187
+Renzo, M., Farmer, R., Justham, S., et al. 2020, A&A, 640,
+A56, doi:
+ 10.1051/0004- 6361/202037710
+Ro driguez, C. L., Amaro-Seoane, P., Chatterjee, S., &
+Rasio, F. A. 2018, PhRvL, 120, 151101,
+doi:
+ 10.1103/PhysRevLett.120.151101
+Ro driguez, C. L., Chatterjee, S., & Rasio, F. A. 2016,
+PhRvD, 93, 084029, doi:
+ 10.1103/PhysRevD.93.084029
+Ro driguez, C. L., Zevin, M., Amaro-Seoane, P., et al. 2019,
+Phys. Rev. D, 100, 043027,
+doi:
+ 10.1103/PhysRevD.100.043027
+Rose, S. C., Naoz, S., Gautam, A. K., et al. 2020, ApJ, 904,
+113, doi:
+ 10.3847/1538- 4357/ab c557
+Sakstein, J., Cro on, D., McDermott, S. D., Straight, M. C.,
+& Baxter, E. J. 2020, arXiv e-prints, arXiv:2009.01213.
+https://arxiv.org/abs/2009.01213
+Samsing, J., Venumadhav, T., Dai, L., et al. 2019, PhRvD,
+100, 043009, doi:
+ 10.1103/PhysRevD.100.043009
+Sari, R., & Fragione, G. 2019, ApJ, 885, 24,
+doi:
+ 10.3847/1538- 4357/ab43df
+Schneider, R., Ferrara, A., Natara jan, P., & Omukai, K.
+2002, The Astrophysical Journal, 571, 30,
+doi:
+ 10.1086/339917
+Schnittman, J. D., & Buonanno, A. 2007, ApJL, 662, L63,
+doi:
+ 10.1086/519309
+Shapiro, S. L., & Marchant, A. B. 1978, ApJ, 225, 603,
+doi:
+ 10.1086/156521
+Shima, E., Matsuda, T., Takeda, H., & Sawada, K. 1985,
+MNRAS, 217, 367, doi:
+ 10.1093/mnras/217.2.367
+Shlosman, I., Choi, J.-H., Begelman, M. C., & Nagamine,
+K. 2016, MNRAS, 456, 500, doi:
+ 10.1093/mnras/stv2700
+Sigurdsson, S., & Phinney, E. S. 1993, ApJ, 415, 631,
+doi:
+ 10.1086/173190
+Sp era, M., & Map elli, M. 2017a, MNRAS, 470, 4739,
+doi:
+ 10.1093/mnras/stx1576
+|. 2017b, MNRAS, 470, 4739, doi:
+ 10.1093/mnras/stx1576
+Spitzer, L. 1987, Dynamical evolution of globular clusters
+Stephan, A. P., Naoz, S., Ghez, A. M., et al. 2016, ArXiv
+e-prints.
+ https://arxiv.org/abs/1603.02709
+|. 2019, ApJ, 878, 58, doi:
+ 10.3847/1538- 4357/ab1e4d
+The LIGO Scientic Collab oration, the Virgo
+Collab oration, Abb ott, R., et al. 2020a, arXiv e-prints,
+arXiv:2009.01075.
+ https://arxiv.org/abs/2009.01075
+|. 2020b, arXiv e-prints, arXiv:2009.01190.
+https://arxiv.org/abs/2009.01190
+Umbreit, S., Fregeau, J. M., Chatterjee, S., & Rasio, F. A.
+2012, ApJ, 750, 31, doi:
+ 10.1088/0004- 637X/750/1/31
+Valiante, R., Schneider, R., Volonteri, M., & Omukai, K .
+2016, Monthly Notices of the Royal Astronomical
+So ciety, 457, 3356, doi:
+ 10.1093/mnras/stw225
+Vink, J. S., Higgins, E. R., Sander, A. A. C., & Sabhahit,
+G. N. 2021, MNRAS, 504, 146,
+doi:
+ 10.1093/mnras/stab842
+IMBH For mation in Gal actic Nuclei
+11
+Wang, H., Stephan, A. P., Naoz, S., Hoang, B.-M., &
+Breivik, K. 2021, ApJ, 917, 76,
+doi:
+ 10.3847/1538- 4357/ac088d
+Wo osley, S. E. 2017, ApJ, 836, 244,
+doi:
+ 10.3847/1538- 4357/836/2/244
+Yue, B., Ferrara, A., Salvaterra, R., Xu, Y., & Chen, X.
+2014, Monthly Notices of the Royal Astronomical
+So ciety, 440, 1263, doi:
+ 10.1093/mnras/stu351
+Zheng, X., Lin, D. N. C., & Mao, S. 2020, arXiv e-prints,
+arXiv:2011.04653.
+ https://arxiv.org/abs/2011.04653
+Zhu, Z., Li, Z., & Morris, M. R. 2018, ApJS, 235, 26,
+doi:
+ 10.3847/1538- 4365/aab14f
