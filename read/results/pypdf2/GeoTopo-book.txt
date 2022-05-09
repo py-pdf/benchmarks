@@ -1,0 +1,31804 @@
+Einführung in die
+Geometrie und Top ologie
+0. Au˛age, 31. Dezemb er 2016 Martin Thoma
+Vorwort
+Dieses Skript wurde im Wintersemester 2013/2014 von Martin Thoma geschrieb en. Es b einhaltet
+die Mitschriften aus der Vorlesung von Prof. Dr. Herrlich sowie die Mitschriften einiger Übungen
+und Tutorien.
+Das Skript ist kostenlos üb er
+ martin-thoma.com/geotop o
+ verfügbar. Wer es gerne in A5 (Schwarz-
+Weiÿ, Ringbindung) für 10 Euro hätte, kann mir eine E-Mail schicken (info@martin-thoma.de).
+Danksagungen
+An dieser Stelle mö chte ich Herrn Prof. D r. Herrlich für einige Korrekturvorschläge und einen
+gut strukturierten Tafelanschrieb danken, der als Vorlage für dieses Skript diente. Tatsächlich
+basiert die Struktur dieses Skripts auf der Vorlesung von Herrn Prof. D r. Herrlich und ganze
+Abschnitte konnten direkt mit L
+A
+T
+E
+X umgesetzt werden. Vielen Dank für die Erlaubnis, Ihre
+Inhalte in diesem Skript einbauen zu dürfen!
+Vielen Dank auch an Frau Lenz und Frau Randecker, die es mir erlaubt hab en, ihre Übungsauf-
+gab en und Lösungen zu b enutzen.
+Jérôme Urhausen hat durch viele Verb esserungsvorschläge und Beweise zu einer erheblichen
+Qualitätssteigerung am Skript b eigetragen und meine Tutorin Sarah hat mir viele Fragen p er
+E-Mail und nach dem Tutorium b eantwortet. D anke!
+Was ist Top ologie?
+Die Kugelob er˛äche
+S
+2
+lässt sich durch strecken, stauchen und umformen zur Würfelob er˛äche
+o der der Ob er˛äche einer Pyramide verformen, ab er nicht zum
+R
+2
+o der zu einem Torus
+T
+2
+. F ür
+den
+R
+2
+müsste man die Ob er˛äche unendlich ausdehnen und für einen Torus müsste man ein
+Lo ch machen.
+Erforderliche Vorkenntnisse
+Es wird ein sicherer Umgang mit den Quantoren (
+8
+;
+9
+), Mengenschreibweisen (
+[
+;
+\
+;
+n
+;
+;
+;
+R
+;
+P
+(
+M
+)
+)
+und ganz allgemein formaler Schreibweise vorausgesetzt. Auch die Beweisführung mittels Wider-
+spruchsb eweisen sollte b ekannt sein und der Umgang mit komplexen Zahlen
+C
+, deren Betrag,
+Folgen und Häufungspunkten nicht weiter schwer fallen. Diese Vorkenntnisse werden vor allem
+in Analysis I vermittelt.
+Auÿerdem wird vorausgesetzt, dass (a˚ne) Vektorräume, Faktorräume, lineare Unabhängigkeit,
+der Sp ektralsatz und der pro jektive Raum
+P
+(
+R
+)
+aus Lineare Algebra I b ekannt sind. In Lineare
+Algebra I I wird der Begri˙ der Orthonormalbasis eingeführt.
+iii
+(a)
+S
+2
+(b)
+ Würfel
+(c)
+ Pyramid e
+y
+x
+(d)
+R
+2
+(e)
+T
+2
+Abbildung 0.1
+:
+ Beispiele für verschiedene Formen
+Obwohl es nicht vorausgesetzt wird, könnte es von Vorteil sein Einführung in die Algebra und
+Zahlentheorie gehört zu hab en.
+Inhaltsverzeichnis
+1 Top ologische Grundb egri˙e
+ 2
+1.1 Top ologische Räume
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 2
+1.2 Metrische Räume
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 6
+1.3 Stetigkeit
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 9
+1.4 Zusammenhang
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 11
+1.5 Kompaktheit
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 14
+1.6 Wege und Knoten
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 17
+Übungsaufgab en
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 22
+2 Mannigfaltigkeiten und Si mplizialkomplexe
+ 24
+2.1 Top ologische Mannigfaltigkeiten
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 24
+2.2 Di˙erenzierbare Mannigfaltigkeiten
+ . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 29
+2.3 Simplizialkomplex
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 34
+Übungsaufgab en
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 43
+3 Fundamentalgrupp e und Üb erlagerungen
+ 44
+3.1 Homotopie von Wegen
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 44
+3.2 Fundamentalgrupp e
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 47
+3.3 Üb erlagerungen
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 51
+3.4 Grupp enop erationen
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 61
+4 Euklidische und nichteuklidische Geometrie
+ 64
+4.1 Axiome für die euklidische Eb ene
+ . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 64
+4.2 Weitere Eigenschaften einer euklidischen Eb ene
+ . . . . . . . . . . . . . . . . . . .
+ 74
+4.2.1 Flächeninhalt
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 74
+4.3 Hyp erb olische Geometrie
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 77
+Übungsaufgab en
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 86
+5 Krümmung
+87
+5.1 Krümmung von Kurven
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 87
+5.2 Tangentialeb ene
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 89
+5.3 Gauÿ-Krümmung
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 91
+5.4 Erste und zweite Fundamentalform
+ . . . . . . . . . . . . . . . . . . . . . . . . . .
+ 94
+Lösungen der Übungsaufgab en
+ 99
+Bildquellen
+105
+Abkürzungsverzeichnis
+ 106
+Ergänzende De˝nitionen und Sätze
+ 107
+Symb olverzeichnis
+ 108
+2
+Inhaltsverz eichnis
+Stichwortverzeichnis
+ 111
+1 Top ologische Grundb egri˙e
+1.1 Top ol ogi sche Räume
+De˝nition 1
+Ein
+top ologischer Raum
+ist ein Paar
+(
+X ;
+T
+)
+b estehend aus einer Menge
+X
+und
+T
+ P
+(
+X
+)
+mit folgenden Eigenschaften
+(i)
+;
+; X
+2
+T
+(ii)
+ Sind
+U
+1
+; U
+2
+2
+T
+, so ist
+U
+1
+\
+U
+2
+2
+T
+(iii)
+ Ist
+I
+eine Menge und
+U
+i
+2
+T
+für jedes
+i
+2
+I
+, so ist
+[
+i
+2
+I
+U
+i
+2
+T
+Die Elemente von
+T
+heiÿen
+o˙ene Teilmengen
+von
+X
+.
+A
+
+X
+heiÿt
+abgeschlossen
+, wenn
+X
+n
+A
+o˙en ist.
+Es gibt auch Mengen, die weder abgeschlossen, no ch o˙en sind wie z. B.
+[0
+;
+1)
+. Auch gibt es
+Mengen, die sowohl abgeschlossen als auch o˙en sind.
+Bemerkung 1 (Mengen, die o˙en & abgeschlossen sind, ex.)
+Betrachte
+;
+und
+X
+mit der
+trivialen Top olog ie
+T
+triv
+=
+f ;
+; X
+g
+.
+Es gilt:
+X
+2
+T
+und
+; 2
+T
+, d. h.
+X
+und
+;
+sind o˙en. Auÿerdem
+X
+C
+=
+X
+n
+X
+=
+; 2
+T
+und
+X
+n ;
+=
+X
+2
+T
+, d. h.
+X
+und
+;
+sind als Komplement o˙ener Mengen abgeschlossen.
+
+Beispiel 1 (Top ologien)
+1)
+X
+=
+R
+n
+mit der von der euklidischen Metrik erzeugten Top ologie
+T
+Euklid
+:
+U
+
+R
+n
+o˙en
+,
+für jedes
+x
+2
+U
+gibt es
+r >
+0
+,
+so dass
+B
+r
+(
+x
+) =
+f
+y
+2
+R
+n
+j
+d
+(
+x; y
+)
+< r
+g 
+U
+Diese Top ologie wird auch Standardtop ologie des
+R
+n
+ genannt. Sie b einhaltet unter
+anderem alle o˙enen Kugeln, ab er z. B. auch Schnitte zweier Kugeln mit unterschiedli-
+chem Mittelpunkt (vgl.
+ De˝nition 1.ii
+).
+2)
+ Jeder metrische Raum
+(
+X ; d
+)
+ist auch ein top ologischer Raum.
+3)
+ Für eine Menge
+X
+heiÿt
+T
+Diskret
+=
+P
+(
+X
+)
+diskrete Top ologie
+.
+4)
+X
+:=
+R
+;
+T
+Z
+:=
+f
+U
+
+R
+j
+R
+n
+U
+endlich
+g [ f ; g
+heiÿt
+Zariski-Top o logie
+Beobachtungen:
+
+U
+2
+T
+Z
+, 9
+f
+2
+R
+[
+X
+]
+, so dass
+R
+n
+U
+=
+V
+(
+f
+) =
+f
+x
+2
+R
+j
+f
+(
+x
+) = 0
+g
+
+Es gibt keine disjunkten o˙enen Mengen in
+T
+Z
+.
+4
+1.1. TOPOLOGISCHE RÄUME
+5)
+X
+:=
+R
+n
+;
+T
+Z
+=
+f
+U
+
+R
+n
+j
+Es gibt Polynome
+f
+1
+; : : : ; f
+r
+2
+R
+[
+X
+1
+; : : : ; X
+n
+]
+so dass
+R
+n
+n
+U
+=
+V
+(
+f
+1
+; : : : ; f
+r
+)
+g
+6)
+X
+:=
+f
+0
+;
+1
+g
+;
+T
+=
+f ;
+;
+f
+0
+;
+1
+g
+;
+f
+0
+g g
+heiÿt
+Sierpi«skiraum
+.
+;
+;
+f
+0
+;
+1
+g
+;
+f
+1
+g
+sind dort alle abgeschlossenen Mengen.
+De˝nition 2
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+x
+2
+X
+.
+Eine Teilmenge
+U
+
+X
+heiÿt
+Umgebung
+von
+x
+, wenn es ein
+U
+0
+2
+T
+gibt mit
+x
+2
+U
+0
+und
+U
+0
+
+U
+.
+Gilt eine Eigenschaft in einer Umgebung, so sagt man, dass die Eigenschaft
+lokal
+gilt.
+De˝nition 3
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+M
+
+X
+eine Teilmenge.
+a)
+M
+
+:=
+f
+x
+2
+M
+j
+M
+ist Umgebung von
+x
+g
+=
+[
+U
+
+M
+U
+2
+T
+U
+heiÿt
+Inneres
+o der
+o˙ener
+Kern
+von
+M
+.
+b)
+M
+:=
+\
+M
+
+A
+A
+abgeschlossen
+A
+heiÿt
+abgeschlossene Hülle
+o der
+Abschluss
+von
+M
+.
+c)
+@ M
+:=
+M
+n
+M
+
+heiÿt
+Rand
+von
+M
+.
+d)
+M
+heiÿt
+dicht
+in
+X
+, wenn
+M
+=
+X
+ist.
+Beispiel 2
+1)
+ Sei
+X
+=
+R
+mit euklidischer Top ologie und
+M
+=
+Q
+. Dann gilt:
+M
+=
+R
+und
+M
+
+=
+;
+2)
+ Sei
+X
+=
+R
+und
+M
+= (
+a; b
+)
+. Dann gilt:
+M
+= [
+a; b
+]
+3)
+ Sei
+X
+=
+R
+;
+T
+=
+T
+Z
+und
+M
+= (
+a; b
+)
+. D ann gilt:
+M
+=
+R
+De˝nition 4
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum.
+a)
+B
+
+T
+heiÿt
+Basis
+der Top ologie
+T
+, wenn jedes
+U
+2
+T
+Vereinigung von Elementen
+aus
+B
+ist.
+b)
+S 
+T
+heiÿt
+Subbasis
+der Top ologie
+T
+, wenn jedes
+U
+2
+T
+Vereinigung von endlichen
+Durchschnitten von Elementen aus
+S
+ist.
+Beispiel 3 (Basis und Subbasis)
+1)
+ Jede Basis ist auch eine Subbasis, z.B.
+S
+=
+f
+(
+a; b
+)
+j
+a; b
+2
+R
+; a < b
+g
+ist für
+R
+mit der Standardtop ologie sowohl Basis als
+auch Subbasis.
+2)
+ Gegeb en sei
+X
+=
+R
+n
+mit euklidischer Top ologie
+T
+. D ann ist
+B
+=
+f
+B
+r
+(
+x
+)
+j
+r
+2
+Q
+>
+0
+; x
+2
+Q
+n
+g
+ist eine abzählbare Basis von
+T
+.
+3)
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum mit
+X
+=
+f
+0
+;
+1
+;
+2
+g
+und
+T
+=
+f ;
+;
+f
+0
+g
+;
+f
+0
+;
+1
+g
+;
+f
+0
+;
+2
+g
+; X
+g
+.
+Dann ist
+S
+=
+f ;
+;
+f
+0
+;
+1
+g
+;
+f
+0
+;
+2
+g g
+eine Subbasis von
+T
+, da gilt:
+5
+1.1. TOPOLOGISCHE RÄUME
+
+ S 
+T
+
+ ;
+;
+f
+0
+;
+1
+g
+und
+f
+0
+;
+2
+g 2 S
+
+ f
+0
+g
+=
+f
+0
+;
+1
+g \ f
+0
+;
+2
+g
+
+X
+=
+f
+0
+;
+1
+g [ f
+0
+;
+2
+g
+Allerings ist
+S
+keine Basis von
+(
+X ;
+T
+)
+, da
+f
+0
+g
+nicht als Vereinigung von Elementen
+aus
+S
+erzeugt werden kann.
+Bemerkung 2
+Sei
+X
+eine Menge und
+S  P
+(
+X
+)
+. D ann gibt es genau eine Top ologie
+T
+auf
+X
+, für die
+S
+Subbasis ist.
+De˝nition 5
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+Y
+
+X
+.
+T
+Y
+:=
+f
+U
+\
+Y
+j
+U
+2
+T
+g
+ist eine Top ologie auf
+Y
+.
+T
+Y
+heiÿt
+Teilraumtop ologie
+und
+(
+Y ;
+T
+Y
+)
+heiÿt ein
+Teilraum
+von
+(
+X ;
+T
+)
+.
+Die Teilraumtop ologie wird auch
+Spurtopologie
+o der
+Unterraumtopologie
+genannt.
+De˝nition 6
+Seien
+X
+1
+; X
+2
+top ologische Räume.
+U
+
+X
+1
+
+X
+2
+sei o˙en, wenn es zu jedem
+x
+= (
+x
+1
+; x
+2
+)
+2
+U
+Umgebungen
+U
+i
+um
+x
+i
+mit
+i
+= 1
+;
+2
+gibt, so dass
+U
+1
+
+U
+2
+
+U
+gilt.
+T
+=
+f
+U
+
+X
+1
+
+X
+2
+j
+U
+o˙en
+g
+ist eine Top ologie auf
+X
+1
+
+X
+2
+. Sie heiÿt
+Pro dukttop ologie
+.
+B
+=
+f
+U
+1
+
+U
+2
+j
+U
+i
+o˙en in
+X
+i
+; i
+= 1
+;
+2
+g
+ist eine Basis von
+T
+.
+U
+x
+x
+2
+x
+1
+U
+2
+U
+1
+X
+1
+X
+2
+Abbildung 1.1
+:
+ Zu
+x
+= (
+x
+1
+; x
+2
+)
+gibt es Umgebungen
+U
+1
+; U
+2
+mit
+U
+1
+
+U
+2
+
+U
+Beispiel 4 (Pro dukttop ologien)
+1)
+X
+1
+=
+X
+2
+=
+R
+mit euklidischer Top ologie.
+)
+Die Pro dukttop ologie auf
+R
+
+R
+=
+R
+2
+stimmt mit der euklidischen Top ologie auf
+R
+2
+üb erein.
+2)
+X
+1
+=
+X
+2
+=
+R
+mit Zariski-Top ologie.
+T
+Pro dukttop ologie auf
+R
+2
+:
+U
+1
+
+U
+2
+(Siehe
+ Abbildung 1.2
+)
+6
+1.1. TOPOLOGISCHE RÄUME
+U
+1
+=
+R
+n
+N
+U
+2
+=
+R
+n
+N
+Abbildung 1.2
+:
+ Zariski-Top ologie auf
+R
+2
+De˝nition 7
+Sei
+X
+ein top ologischer Raum,
+˘
+eine Äquivalenzrelation auf
+X
+,
+X
+=
+X=
+˘
+sei die Menge
+der Äquivalenzklassen,
+ˇ
+:
+X
+!
+X ; x
+7!
+[
+x
+]
+˘
+.
+T
+X
+:=
+
+U
+
+X
+
+
+ˇ
+
+1
+(
+U
+)
+2
+T
+X
+	
+(
+X ;
+T
+X
+)
+heiÿt
+Quotiententop ologie
+.
+Beispiel 5
+X
+=
+R
+; a
+˘
+b
+:
+,
+a
+
+b
+2
+Z
+R
+-1
+0
+1
+2
+3
+4
+5
+0
+a
+U
+a
+ˇ
+
+1
+(
+u
+)
+0
+˘
+1
+, d. h.
+[0] = [1]
+Beispiel 6
+Sei
+X
+=
+R
+2
+und
+(
+x
+1
+; y
+1
+)
+˘
+(
+x
+2
+; y
+2
+)
+,
+x
+1
+
+x
+2
+2
+Z
+und
+y
+1
+
+y
+2
+2
+Z
+. Dann ist
+X=
+˘
+ein Torus.
+Beispiel 7 (Pro jektiver Raum)
+X
+=
+R
+n
++1
+n f
+0
+g
+; x
+˘
+y
+, 9
+
+2
+R
+
+mit
+y
+=
+x
+,
+x
+und
+y
+liegen auf der gleichen
+Ursprungsgerade
+X
+=
+P
+n
+(
+R
+)
+7
+1.2. METRISCHE RÄUME
+Also für
+n
+= 1
+:
+
+4
+
+2
+2
+4
+6
+8
+
+4
+
+2
+2
+4
+1.2 Metrische Räume
+De˝nition 8
+Sei
+X
+eine Menge. Eine Abbildung
+d
+:
+X
+
+X
+!
+R
++
+0
+heiÿt
+Metrik
+, wenn gilt:
+(i)
+ De˝nitheit:
+d
+(
+x; y
+) = 0
+,
+x
+=
+y
+8
+x; y
+2
+X
+(ii)
+ Symmetrie:
+d
+(
+x; y
+) =
+d
+(
+y ; x
+)
+8
+x; y
+2
+X
+(iii)
+ Dreiecksungleichung:
+d
+(
+x; z
+)
+
+d
+(
+x; y
+) +
+d
+(
+y ; z
+)
+8
+x; y ; z
+2
+X
+Das Paar
+(
+X ; d
+)
+heiÿt ein
+metrischer Raum
+.
+Bemerkung 3
+Sei
+(
+X ; d
+)
+ein metrischer Raum und
+B
+r
+(
+x
+) :=
+f
+y
+2
+X
+j
+d
+(
+x; y
+)
+< r
+g
+für
+x
+2
+X ; r
+2
+R
++
+B
+=
+f
+B
+r
+(
+x
+)
+ P
+(
+X
+)
+j
+x
+2
+X ; r
+2
+R
++
+g
+ist Basis einer Top ologie auf
+X
+.
+De˝nition 9
+Seien
+(
+X ; d
+X
+)
+und
+(
+Y ; d
+Y
+)
+metrische Räume und
+'
+:
+X
+!
+Y
+eine Abbildung mit
+8
+x
+1
+; x
+2
+2
+X
+:
+d
+X
+(
+x
+1
+; x
+2
+) =
+d
+Y
+(
+'
+(
+x
+1
+)
+; '
+(
+x
+2
+))
+Dann heiÿt
+'
+eine
+Isometrie
+von
+X
+nach
+Y
+.
+Beispiel 8 (Skalarpro dukt erzeugt Metrik )
+Sei
+V
+ein euklidischer o der hermitescher Vektorraum mit Skalarpro dukt
+h
+;
+i
+. Dann wird
+V
+durch
+d
+(
+x; y
+) :=
+p
+h
+x
+
+y ; x
+
+y
+i
+zum metrischen Raum.
+Beispiel 9 (diskrete Metrik)
+Sei
+X
+eine Menge. Dann heiÿt
+d
+(
+x; y
+) =
+(
+0
+falls
+x
+=
+y
+1
+falls
+x
+6
+=
+y
+die
+diskrete Metrik
+. Die Metrik
+d
+induziert die
+diskrete Top ologie
+.
+8
+1.2. METRISCHE RÄUME
+Beispiel 10
+X
+=
+R
+2
+und
+d
+((
+x
+1
+; y
+1
+)
+;
+(
+x
+2
+; y
+2
+)) := m ax(
+k
+x
+1
+
+x
+2
+k
+;
+k
+y
+1
+
+y
+2
+k
+)
+ist Metrik.
+Beobachtung:
+d
+erzeugt die euklidische Top ologie.
+B
+r
+(0) =
+r
+r
+r
+r
+(a)
+B
+r
+(0)
+(b)
+ Euklidische Top ologie
+Abbildung 1.3
+:
+ Veranschaulichungen zur Metrik
+d
+aus
+ B eispiel 10
+9
+1.2. METRISCHE RÄUME
+Beispiel 11 (SNCF-Metr ik
+1
+)
+X
+=
+R
+2
+
+4
+
+2
+2
+4
+6
+8
+
+4
+
+2
+2
+4
+De˝nition 10
+Ein top ologischer Raum
+X
+heiÿt
+hausdor˙sch
+, wenn es für je zwei Punkte
+x
+6
+=
+y
+in
+X
+Umgebungen
+U
+x
+um
+x
+und
+U
+y
+um
+y
+gibt, so dass
+U
+x
+\
+U
+y
+=
+;
+.
+Bemerkung 4 (Trennungseigenschaft)
+Metrische Räume sind hausdor˙sch, wegen
+d
+(
+x; y
+)
+>
+0
+) 9
+" >
+0 :
+B
+"
+(
+x
+)
+\
+B
+"
+(
+y
+) =
+;
+Beispiel 12 (Top ologische Räume und Hausdor˙-Räume)
+1)
+(
+R
+;
+T
+Z
+)
+ist ein top ologischer Raum, der nicht hausdor˙sch ist.
+2)
+(
+R
+;
+T
+Euklid
+)
+ist ein top ologischer Hausdor˙-Raum.
+Bemerkung 5 (Eigenschaften von Hausdor˙-Räumen)
+Seien
+X ; X
+1
+; X
+2
+Hausdor˙-Räume.
+a)
+ Jeder Teilraum von
+X
+ist hausdor˙sch.
+b)
+X
+1
+
+X
+2
+ist hausdor˙sch (vgl.
+ Abbildung 1.4
+).
+De˝nition 11
+Sei
+X
+ein top ologischer Raum und
+(
+x
+)
+n
+2
+N
+eine Folge in
+X
+.
+x
+2
+X
+heiÿt
+Grenzwert
+o der
+Limes
+von
+(
+x
+n
+)
+, wenn es für jede Umgebung
+U
+von
+x
+ein
+n
+0
+gibt, so dass
+x
+n
+2
+U
+für alle
+n
+
+n
+0
+.
+Bemerkung 6
+Ist
+X
+hausdor˙sch, so hat jede Folge in
+X
+hö chstens einen Grenzwert.
+Beweis:
+Sei
+(
+x
+n
+)
+eine konvergierende Folge und
+x
+und
+y
+Grenzwerte der Folge.
+Da
+X
+hausdor˙sch ist, gibt es Umgebungen
+U
+x
+von
+x
+und
+U
+y
+von
+y
+mit
+U
+x
+\
+U
+y
+=
+;
+falls
+x
+6
+=
+y
+. Da
+(
+x
+n
+)
+gegen
+x
+und
+y
+konvergiert, existiert ein
+n
+0
+mit
+x
+n
+2
+U
+x
+\
+U
+y
+für alle
+n
+
+n
+0
+)
+x
+=
+y
+
+1
+Diese M etri k wird auch 
+ französische Eisenbahnmetrik
+ genannt.
+10
+1.3. STETIGKEIT
+(
+x
+1
+; y
+1
+)
+(
+x
+2
+; y
+2
+)
+x
+1
+x
+2
+U
+1
+
+X
+2
+U
+2
+
+X
+2
+X
+1
+X
+2
+Abbildung 1.4
+:
+ Wenn
+X
+1
+; X
+2
+hausdor˙sch sind, dann auch
+X
+1
+
+X
+2
+1.3 Stetigkeit
+De˝nition 12
+Seien
+(
+X ;
+T
+X
+)
+;
+(
+Y ;
+T
+Y
+)
+top ologische Räume und
+f
+:
+X
+!
+Y
+eine Abbildung.
+a)
+f
+heiÿt
+stetig
+:
+, 8
+U
+2
+T
+Y
+:
+f
+
+1
+(
+U
+)
+2
+T
+X
+.
+b)
+f
+heiÿt
+Homö omorphismus
+, wenn
+f
+stetig ist und es eine stetige Abbildung
+g
+:
+Y
+!
+X
+gibt, so dass
+g
+
+f
+=
+id
+X
+und
+f
+
+g
+=
+id
+Y
+.
+Bemerkung 7
+2
+Seien
+X ; Y
+metrische Räume und
+f
+:
+X
+!
+Y
+eine Abbildung.
+Dann gilt:
+f
+ist stetig
+,
+zu jedem
+x
+2
+X
+und jedem
+" >
+0
+gibt es
+
+(
+x; "
+)
+>
+0
+, so dass für
+alle
+y
+2
+X
+mit
+d
+(
+x; y
+)
+< 
+gilt
+d
+Y
+(
+f
+(
+x
+)
+; f
+(
+y
+))
+< "
+.
+Beweis:
+
+)
+: Sei
+x
+2
+X ; " >
+0
+gegeb en und
+U
+:=
+B
+"
+(
+f
+(
+x
+))
+.
+Dann ist
+U
+o˙en in
+Y
+.
+Def. 12.a
+=====
+)
+f
+
+1
+(
+U
+)
+ist o˙en in
+X
+. Dann ist
+x
+2
+f
+
+1
+(
+U
+)
+.
+) 9
+ >
+0
+, so dass
+B
+
+(
+x
+)
+
+f
+
+1
+(
+U
+)
+)
+f
+(
+B
+
+(
+x
+))
+
+U
+) f
+y
+2
+X
+j
+d
+X
+(
+x; y
+)
+< 
+g )
+Beh.
+
+(
+: Sei
+U
+
+Y
+o˙en,
+X
+2
+f
+
+1
+(
+U
+)
+.
+Dann gibt es
+" >
+0
+, so dass
+B
+"
+(
+f
+(
+x
+))
+
+U
+Vor.
+==
+)
+Es gibt
+ >
+0
+, so dass
+f
+(
+B
+
+(
+x
+))
+
+B
+"
+(
+f
+(
+x
+)))
+)
+B
+
+(
+x
+)
+
+f
+
+1
+(
+B
+"
+(
+f
+(
+x
+)))
+
+f
+
+1
+(
+U
+)
+
+Bemerkung 8
+Seien
+X ; Y
+top ologische Räume und
+f
+:
+X
+!
+Y
+eine Abbildung. Dann gilt:
+f
+ist stetig
+,
+für jede abgeschlossene Teilmenge
+A
+
+Y
+gilt
+:
+f
+
+1
+(
+A
+)
+
+X
+ist abgeschlossen.
+Beispiel 13 (Stetige Abbildungen und Homö omorphismen)
+1)
+ Für jeden top ologischen Raum
+X
+gilt: id
+X
+:
+X
+!
+X
+ist Homö omorphismus.
+2
+Es wird die Äquivalenz von Stetigkeit im Sinne der Analysis und Top ologie auf metrisch en Räumen gezeigt.
+11
+1.3. STETIGKEIT
+2)
+Ist
+(
+Y ;
+T
+Y
+)
+trivialer top ologischer Raum, d. h.
+T
+Y
+=
+T
+triv
+, so ist jede Abbildung
+f
+:
+X
+!
+Y
+stetig.
+3)
+Ist
+X
+diskreter top ologischer Raum, so ist
+f
+:
+X
+!
+Y
+stetig für jeden top ologischen
+Raum
+Y
+und jede Abbildung
+f
+.
+4)
+ Sei
+X
+= [0
+;
+1)
+; Y
+=
+S
+1
+=
+f
+z
+2
+C
+j k
+z
+k
+= 1
+g
+und
+f
+(
+t
+) =
+e
+2
+ˇ it
+.
+R
+0
+1
+0
+f
+g
+Abbildung 1.5
+:
+ Beispiel einer stetigen Funktion
+f
+, deren Umkehrabbildung
+g
+nicht stetig ist.
+Die Umkehrabbildung
+g
+ist nicht stetig, da
+g
+
+1
+(
+U
+)
+nicht o˙en ist (vgl.
+ Abbildung 1.5
+).
+Bemerkung 9 (Ver kettungen stetiger Abbildungen sind stetig)
+Seien
+X ; Y ; Z
+top ologische Räume,
+f
+:
+X
+!
+Y
+und
+g
+:
+Y
+!
+Z
+stetige Abbildungen.
+Dann ist
+g
+
+f
+:
+X
+!
+Z
+stetig.
+X
+f
+/
+/
+g
+
+f
+ 
+ 
+Y
+g
+
+
+Z
+Beweis:
+Sei
+U
+
+Z
+o˙en
+)
+(
+g
+
+f
+)
+
+1
+(
+U
+) =
+f
+
+1
+(
+g
+
+1
+(
+U
+))
+.
+g
+
+1
+(
+U
+)
+ist o˙en in
+Y
+weil
+g
+stetig
+ist,
+f
+
+1
+(
+g
+
+1
+(
+U
+))
+ist o˙en in
+X
+, weil
+f
+stetig ist.
+
+Bemerkung 10
+a)
+ Für jeden top ologischen Raum
+X
+ist
+Homö o
+(
+X
+) :=
+f
+f
+:
+X
+!
+X
+j
+f
+ist Homö omorphismus
+g
+eine Grupp e.
+b)
+ Jede Isometrie
+f
+:
+X
+!
+Y
+zwischen metrischen Räumen ist ein Homö omorphismus.
+c)
+Iso
+(
+X
+) :=
+f
+f
+:
+X
+!
+X
+j
+f
+ist Isometrie
+g
+ist eine Untergrupp e von
+Homö o
+(
+X
+)
+für
+jeden metrischen Raum
+X
+.
+Bemerkung 11 (Pro jektionen sind stetig)
+Seien
+X ; Y
+top ologische Räume.
+ˇ
+X
+:
+X
+
+Y
+!
+X
+und
+ˇ
+Y
+:
+X
+
+Y
+!
+Y
+die Pro jektionen
+ˇ
+X
+: (
+x; y
+)
+7!
+x
+und
+ˇ
+Y
+: (
+x; y
+)
+7!
+y
+Wird
+X
+
+Y
+mit der Pro dukttop ologie versehen, so sind
+ˇ
+X
+und
+ˇ
+Y
+stetig.
+Beweis:
+Sei
+U
+
+X
+o˙en
+)
+ˇ
+
+1
+X
+(
+U
+) =
+U
+
+Y
+ist o˙en in
+X
+
+Y
+.
+
+Bemerkung 12
+Sei
+X
+ein top ologischer Raum,
+˘
+eine Äquivalenzrelation auf
+X
+,
+X
+=
+X=
+˘
+der Bahnenraum
+versehen mit der Quotiententop ologie,
+ˇ
+:
+X
+!
+X
+,
+x
+7!
+[
+x
+]
+˘
+.
+Dann ist
+ˇ
+stetig.
+12
+1.4. ZUSAMMENHANG
+Beweis:
+Nach De˝nition ist
+U
+
+X
+o˙en
+,
+ˇ
+
+1
+(
+U
+)
+
+X
+o˙en.
+
+Beobachtung:
+Die Quotiententop ologie ist die feinste Top ologie, so dass
+ˇ
+stetig wird.
+Beispiel 14 (Stereographische Pro jektion)
+R
+n
+und
+S
+n
+n f
+N
+g
+sind homö omorph für b eliebiges
+N
+2
+S
+n
+. Es gilt:
+S
+n
+=
+
+x
+2
+R
+n
++1
+
+
+k
+x
+k
+= 1
+	
+=
+(
+x
+2
+R
+n
++1
+
+
+
+
+
+n
++1
+X
+i
+=1
+x
+2
+i
+= 1
+)
+O. B. d. A. sei
+N
+=
+0
+B
+B
+B
+@
+0
+.
+.
+.
+0
+1
+1
+C
+C
+C
+A
+. Die Gerade durch
+N
+und
+P
+schneidet die Eb ene
+H
+in genau
+einem Punkt
+^
+P
+.
+P
+wird auf
+^
+P
+abgebildet.
+f
+:
+S
+n
+n f
+N
+g !
+R
+n
+P
+7!
+genau ein Punkt
+z
+}|
+{
+L
+P
+\
+H
+wob ei
+R
+n
+=
+H
+=
+8
+>
+<
+>
+:
+0
+B
+@
+x
+1
+.
+.
+.
+x
+n
++1
+1
+C
+A
+2
+R
+n
++1
+
+
+
+
+
+
+
+x
+n
++1
+= 0
+9
+>
+=
+>
+;
+und
+L
+P
+die Gerade in
+R
+n
++1
+durch
+N
+und
+P
+ist.
+Sei
+P
+=
+0
+B
+@
+x
+1
+.
+.
+.
+x
+n
++1
+1
+C
+A
+, so ist
+x
+n
++1
+<
+1
+, also ist
+L
+P
+nicht parallel zu
+H
+. Also schneiden sich
+L
+P
+und
+H
+in genau einem Punkt
+^
+P
+.
+Es gilt:
+f
+ist bijektiv und die Umkehrabbildung ist eb enfalls stetig.
+1.4 Zusammenhan g
+De˝nition 13
+a)
+Ein Raum
+X
+heiÿt
+zusammenhängend
+, wenn es keine o˙enen, nichtleeren Teilmengen
+U
+1
+; U
+2
+von
+X
+gibt mit
+U
+1
+\
+U
+2
+=
+;
+und
+U
+1
+[
+U
+2
+=
+X
+.
+b)
+Eine Teilmenge
+Y
+
+X
+heiÿt zusammenhängend, wenn
+Y
+als top ologischer Raum mit
+der Teilraumtop ologie zusammenhängend ist.
+13
+1.4. ZUSAMMENHANG
+x
+y
+z
+N
+^
+P
+0
+P
+Abbildung 1.6
+:
+ Visualisierung der stereographischen Pro jektion
+Bemerkung 13
+X
+ist zusammenhängend
+,
+Es gibt keine abgeschlossenen, nichtleeren Teilmengen
+A
+1
+; A
+2
+mit
+A
+1
+\
+A
+2
+=
+;
+und
+A
+1
+[
+A
+2
+=
+X
+.
+Beispiel 15 (Zusammenhang von R äumen)
+1)
+(
+R
+n
+;
+T
+Euklid
+)
+ist zusammenhängend, denn:
+Annahme
+:
+R
+n
+=
+U
+1
+_
+[
+U
+2
+mit
+; 6
+=
+U
+1
+; U
+2
+2
+T
+Euklid
+existieren.
+Sei
+x
+2
+U
+1
+; y
+2
+U
+2
+und
+[
+x; y
+]
+die Strecke zwischen
+x
+und
+y
+. Sei
+V
+= [
+x; y
+]
+. Nun
+b etrachten wir
+V
+( R
+n
+als (metrischen) Teilraum mit der Teilraumtop ologie
+T
+V
+.
+Somit gilt
+U
+1
+\
+[
+x; y
+]
+2
+T
+V
+wegen der De˝nition der Teilraumtop ologie.
+Dann gibt es
+z
+2
+[
+x; y
+]
+mit
+z
+2
+@
+(
+U
+1
+\
+[
+x; y
+])
+, ab er
+z =
+2
+U
+1
+)
+z
+2
+U
+2
+. In jeder
+Umgebung von
+z
+liegt ein Punkt von
+U
+1
+)
+Widerspruch zu
+U
+2
+o˙en.
+2)
+R
+n f
+0
+g
+ist nicht zusammenhängend, denn
+R
+n f
+0
+g
+=
+R
+<
+0
+[
+R
+>
+0
+3)
+R
+2
+n f
+0
+g
+ist zusammenhängend.
+4)
+Q ( R
+ist nicht zusammenhängend, da
+(
+Q
+\
+R
+<
+p
+2
+)
+[
+(
+Q
+\
+R
+>
+p
+2
+) =
+Q
+5)
+f
+x
+g
+ist zusammenhängend für jedes
+x
+2
+X
+, wob ei
+X
+ein top ologischer R aum ist.
+6)
+R
+mit Zariski-Top ologie ist zusammenhängend.
+Bemerkung 14
+Sei
+X
+ein top ologischer Raum und
+A
+
+X
+zusammenhängend. Dann ist auch
+A
+zusammen-
+hängend.
+14
+1.4. ZUSAMMENHANG
+Beweis:
+durch Widerspruch
+Annahme
+:
+A
+=
+A
+1
+[
+A
+2
+; A
+i
+abgeschlossen,
+A
+i
+6
+=
+;
+,
+A
+1
+\
+A
+2
+=
+;
+)
+A
+= (
+A
+\
+A
+1
+)
+|
+{z
+}
+abgeschlossen
+_
+[
+(
+A
+\
+A
+2
+)
+|
+{z
+}
+abgeschlossen
+|
+{z
+}
+disjunkt
+Wäre
+A
+\
+A
+1
+=
+;
+)
+A
+
+A
+=
+A
+1
+_
+[
+A
+2
+)
+A
+
+A
+2
+)
+A
+
+A
+2
+)
+A
+1
+=
+;
+)
+Widerspruch zu
+A
+1
+6
+=
+;
+)
+A
+\
+A
+1
+6
+=
+;
+und analog
+A
+\
+A
+2
+6
+=
+;
+)
+Widerspruch zu
+A
+ist zusammenhängend.
+
+Bemerkung 15
+Sei
+X
+ein top ologischer Raum und
+A; B
+
+X
+zusammenhängend.
+Ist
+A
+\
+B
+6
+=
+;
+, dann ist
+A
+[
+B
+zusammenhängend.
+Beweis:
+Sei
+A
+[
+B
+=
+U
+1
+_
+[
+U
+2
+; U
+i
+6
+=
+;
+o˙en
+o. B. d. A.
+======
+)
+A
+= (
+A
+\
+U
+1
+)
+_
+[
+(
+A
+\
+U
+2
+)
+o˙en
+A
+zhgd.
+====
+)
+A
+\
+U
+1
+=
+;
+A
+\
+B
+6
+=
+;
+====
+)
+U
+1
+
+B
+B
+= (
+B
+\
+U
+1
+)
+|
+{z
+}
+=
+U
+1
+[
+(
+B
+\
+U
+2
+)
+|
+{z
+}
+=
+;
+ist unerlaubte Zerlegung.
+
+De˝nition 14
+Sei
+X
+ein top ologischer Raum.
+Für
+x
+2
+X
+sei
+Z
+(
+x
+)
+
+X
+de˝niert durch
+Z
+(
+x
+) :=
+[
+A
+
+X
+zhgd.
+x
+2
+A
+A
+Z
+(
+x
+)
+heiÿt
+Zusammenhangskomp onente
+.
+Bemerkung 16 (Eigenschaften von Zusammenhangskomp onenten)
+Sei
+X
+ein top ologischer Raum. Dann gilt:
+a)
+Z
+(
+x
+)
+ist die gröÿte zusammenhängende Teilmenge von
+X
+, die
+x
+enthält.
+b)
+Z
+(
+x
+)
+ist abgeschlossen.
+c)
+X
+ist disjunkte Vereinigung von Zusammenhangskomp onenten.
+Beweis:
+15
+1.5. KOMPAKTHEIT
+a)
+ Sei
+Z
+(
+x
+) =
+A
+1
+_
+[
+A
+2
+mit
+A
+i
+6
+=
+;
+abgeschlossen.
+O. B. d. A. sei
+x
+2
+A
+1
+und
+y
+2
+A
+2
+.
+y
+liegt in einer zusammehängenden Teilmenge
+A
+,
+die auch
+x
+enthält.
+)
+A
+= (
+A
+\
+A
+1
+)
+|
+{z
+}
+3
+x
+[
+(
+A
+\
+A
+2
+)
+|
+{z
+}
+3
+y
+ist unerlaubte Zerlegung.
+b)
+ Nach
+ Bemerkung 14
+ ist
+Z
+(
+x
+)
+zusammenhängend
+)
+Z
+(
+x
+)
+
+Z
+(
+x
+)
+)
+Z
+(
+x
+) =
+Z
+(
+x
+)
+c)
+ Ist
+Z
+(
+y
+)
+\
+Z
+(
+x
+)
+6
+=
+;
+Bem.
+15
+=====
+)
+Z
+(
+y
+)
+[
+Z
+(
+x
+)
+ist zusammenhängend.
+)
+Z
+(
+x
+)
+[
+Z
+(
+y
+)
+
+Z
+(
+x
+)
+)
+Z
+(
+y
+)
+
+Z
+(
+x
+)
+
+Z
+(
+y
+)
+)
+Z
+(
+x
+)
+
+Z
+(
+y
+)
+
+Bemerkung 17
+Sei
+f
+:
+X
+!
+Y
+stetig. Ist
+A
+
+X
+zusammenhängend, so ist
+f
+(
+A
+)
+
+Y
+zusammenhängend.
+Beweis:
+Sei
+f
+(
+A
+) =
+U
+1
+[
+U
+2
+; U
+i
+6
+=
+;
+;
+o˙en, disjunkt.
+)
+f
+
+1
+(
+f
+(
+A
+)) =
+f
+
+1
+(
+U
+1
+)
+[
+f
+
+1
+(
+U
+2
+)
+)
+A
+= (
+A
+\
+f
+
+1
+(
+U
+1
+))
+|
+{z
+}
+6
+=
+;
+[
+(
+A
+\
+f
+
+1
+(
+U
+2
+))
+|
+{z
+}
+6
+=
+;
+
+1.5 Kompakth ei t
+De˝nition 15
+Sei
+X
+eine Menge und
+U
+ P
+(
+X
+)
+.
+U
+heiÿt eine
+Üb erdeckung
+von
+X
+, wenn gilt:
+8
+x
+2
+X
+:
+9
+M
+2
+U
+:
+x
+2
+M
+De˝nition 16
+Ein top ologischer Raum
+X
+heiÿt
+kompakt
+, wenn jede o˙ene Üb erdeckung von
+X
+U
+=
+f
+U
+i
+g
+i
+2
+I
+mit
+U
+i
+o˙en in
+X
+eine endliche Teilüb erdeckung
+[
+i
+2
+J
+
+I
+U
+i
+=
+X
+mit
+j
+J
+j 2
+N
+b esitzt.
+Bemerkung 18
+Das Einheitsintervall
+I
+:= [0
+;
+1]
+ist kompakt b ezüglich der euklidischen Top ologie.
+Beweis:
+Sei
+(
+U
+i
+)
+i
+2
+J
+eine o˙ene Üb erdeckung von
+I
+.
+Es genügt zu zeigen, dass es ein
+ >
+0
+gibt, so dass jedes Teilintervall der Länge
+
+von
+I
+in
+einem der
+U
+i
+enthalten ist. Wenn es ein solches
+
+gibt, kann man
+I
+in endlich viele Intervalle
+16
+1.5. KOMPAKTHEIT
+der Länge
+
+unterteilen und alle
+U
+i
+in die endliche Üb erdeckung aufnehmen, die Teilintervalle
+enthalten.
+Angenommen, es gibt kein solches
+
+. Dann gibt es für jedes
+n
+2
+N
+ein Intervall
+I
+n
+
+[0
+;
+1]
+der Länge
+1
+=
+n
+so dass
+I
+n
+(
+U
+i
+für alle
+i
+2
+J
+.
+Sei
+x
+n
+der Mittelpunkt von
+I
+n
+. Die Folge
+(
+x
+n
+)
+hat einen Häufungspunkt
+x
+2
+[0
+;
+1]
+. Dann
+gibt es
+i
+2
+J
+mit
+x
+2
+U
+i
+. Da
+U
+i
+o˙en ist, gibt es ein
+" >
+0
+, so dass
+(
+x
+
+"; x
++
+"
+)
+
+U
+i
+.
+Dann gibt es
+n
+0
+, so dass gilt:
+1
+=
+n
+0
+<
+"
+=
+2
+und für unendlich viele
+3
+n
+
+n
+0
+:
+j
+x
+
+x
+n
+j
+<
+"
+=
+2
+, also
+I
+n
+
+(
+x
+
+"; x
++
+"
+)
+
+U
+i
+für mindestens ein
+n
+2
+N
+.
+4
+)
+Widerspruch
+Dann üb erdecke
+[0
+;
+1]
+mit endlich vielen Intervallen
+I
+1
+; : : : ; I
+d
+der Länge
+
+. Jedes
+I
+j
+ist in
+U
+ij
+enthalten.
+)
+U
+j
+1
+; : : : ; U
+j
+d
+ist endliche Teilüb erdeckung von
+U
+.
+
+Beispiel 16 (Kompakte Räume)
+1)
+R
+ist nicht kompakt.
+2)
+(0
+;
+1)
+ist nicht kompakt.
+U
+n
+= (
+1
+=
+n
+;
+1
+
+1
+=
+n
+)
+)
+S
+n
+2
+N
+U
+n
+= (0
+;
+1)
+3)
+R
+mit der Zariski-Top ologie ist kompakt und jede Teilmenge von
+R
+ist es auch.
+Bemerkung 19
+Sei
+X
+kompakter Raum,
+A
+
+X
+abgeschlossen. Dann ist
+A
+kompakt.
+Beweis:
+Sei
+(
+V
+i
+)
+i
+2
+I
+o˙ene Üb erdeckung von A.
+Dann gibt es für jedes
+i
+2
+I
+eine o˙ene Teilmenge
+U
+i
+
+X
+mit
+V
+i
+=
+U
+i
+\
+A
+.
+)
+A
+
+[
+i
+2
+I
+U
+i
+)
+U
+=
+f
+U
+i
+j
+i
+2
+I
+g [ f
+X
+n
+A
+g
+ist o˙ene Üb erdeckung von
+X
+X
+ko mpakt
+=======
+)
+es gibt
+i
+1
+; : : : ; i
+n
+2
+I
+, so dass
+n
+[
+j
+=1
+U
+i
+j
+[
+(
+X
+n
+A
+) =
+X
+)
+0
+@
+n
+[
+j
+=1
+U
+i
+j
+[
+(
+X
+n
+A
+)
+1
+A
+\
+A
+=
+A
+)
+n
+[
+j
+=1
+(
+U
+i
+j
+\
+A
+)
+|
+{z
+}
+=
+V
+i
+j
+[
+((
+X
+n
+A
+)
+\
+A
+)
+|
+{z
+}
+=
+;
+=
+A
+)
+V
+i
+1
+; : : : ; V
+i
+n
+üb erdecken
+A
+.
+
+Bemerkung 20
+Seien
+X ; Y
+kompakte top ologische Räume. Dann ist
+X
+
+Y
+mit der Pro dukttop ologie
+kompakt.
+Beweis:
+Sei
+(
+W
+i
+)
+i
+2
+I
+eine o˙ene Üb erdeckung von
+X
+
+Y
+. Für jedes
+(
+x; y
+)
+2
+X
+
+Y
+gibt es
+o˙ene Teilmengen
+U
+x;y
+von
+X
+und
+V
+x;y
+von
+Y
+sowie ein
+i
+2
+I
+, so dass
+U
+x;y
+
+V
+x;y
+
+W
+i
+.
+3
+Dies gi lt nicht fü r alle
+n
+
+n
+0
+, da ein Häufungspunkt nur eine konvergente Teilfolge impliziert.
+4
+Sogar für unendlich viele.
+17
+1.5. KOMPAKTHEIT
+W
+i
+x
+y
+x
+V
+x;y
+U
+x;y
+Y
+X
+Abbildung 1.7
+:
+ Die blaue Umgebung ist Schnitt vieler Umgebungen
+Die o˙enen Mengen
+U
+x
+0
+;y
+
+V
+x
+0
+;y
+für festes
+x
+0
+und alle
+y
+2
+Y
+üb erdecken
+f
+x
+0
+g 
+y
+. Da
+Y
+kompakt ist, ist auch
+f
+x
+0
+g 
+Y
+kompakt. Also gibt es
+y
+1
+; : : : ; y
+m
+(
+x
+0
+)
+mit
+S
+m
+(
+x
+0
+)
+i
+=1
+U
+x
+0
+;y
+i
+
+V
+x
+0
+;y
+i
+ f
+x
+0
+g 
+Y
+.
+Sei
+U
+x
+0
+:=
+T
+m
+(
+x
+)
+i
+=1
+U
+x
+0
+;y
+i
+. Da
+X
+kompakt ist, gibt es
+x
+1
+; : : : ; x
+n
+2
+X
+mit
+S
+n
+j
+=1
+U
+x
+j
+=
+X
+)
+S
+k
+j
+=1
+S
+m
+(
+x
+j
+)
+i
+=1
+
+U
+x
+j
+;y
+i
+
+V
+x
+j
+;y
+i
+
+|
+{z
+}
+Ein grün-oranges Kästchen
+
+X
+
+Y
+)
+S
+j
+S
+i
+W
+i
+(
+x
+j
+; y
+i
+) =
+X
+
+Y
+
+Bemerkung 21
+Sei
+X
+ein Hausdor˙raum und
+K
+
+X
+kompakt. Dann ist
+K
+abgeschlossen.
+Beweis:
+z. Z.:
+Komplement ist o˙en
+Ist
+X
+=
+K
+, so ist
+K
+abgeschlossen in
+X
+. Andernfalls sei
+y
+2
+X
+n
+K
+. Für jedes
+x
+2
+K
+seien
+U
+x
+bzw.
+V
+y
+Umgebungen von
+x
+bzw. von
+y
+, so dass
+U
+x
+\
+V
+y
+=
+;
+.
+X
+i
+K
+x
+y
+Da
+K
+kompakt ist, gibt es endlich viele
+x
+1
+; : : : ; x
+n
+2
+K
+, so dass
+S
+m
+i
+=1
+U
+x
+i
+
+K
+.
+Sei
+V
+:=
+n
+\
+i
+=1
+V
+x
+i
+18
+1.6. WEGE UND KNOTEN
+)
+V
+\
+ 
+n
+[
+i
+=1
+U
+x
+i
+!
+=
+;
+)
+V
+\
+K
+=
+;
+)
+V
+ist Üb erdeckung von
+y
+, die ganz in
+X
+n
+K
+enthalten ist
+:
+)
+X
+n
+K
+ist o˙en
+Damit ist
+K
+abgeschlossen.
+
+Bemerkung 22
+Seien
+X ; Y
+top ologische Räume,
+f
+:
+X
+!
+Y
+stetig.
+Ist
+K
+
+X
+kompakt, so ist
+f
+(
+K
+)
+
+Y
+kompakt.
+Beweis:
+Sei
+(
+V
+i
+)
+i
+2
+I
+o˙ene Üb erdeckung von
+f
+(
+K
+)
+f
+stetig
+====
+)
+(
+f
+
+1
+(
+V
+i
+))
+i
+2
+I
+ist o˙ene Üb erdeckung von
+K
+Kompakt
+=====
+)
+es gibt
+i
+1
+; : : : ; i
+n
+, so dass
+f
+
+1
+(
+V
+i
+1
+)
+; : : : ; f
+
+1
+(
+V
+i
+n
+)
+Üb erdeckung von
+K
+ist.
+)
+f
+(
+f
+
+1
+(
+V
+i
+1
+))
+; : : : ; f
+(
+f
+
+1
+(
+V
+i
+n
+))
+üb erdecken
+f
+(
+K
+)
+.
+Es gilt:
+f
+(
+f
+
+1
+(
+V
+)) =
+V
+\
+f
+(
+X
+)
+
+Satz 1.1 (Heine-Borel )
+Eine Teilmenge von
+R
+n
+o der
+C
+n
+ist genau dann kompakt, wenn sie b eschränkt und
+abgeschlossen ist.
+Beweis:
+
+)
+: Sei
+K
+
+R
+n
+(o der
+C
+n
+) kompakt.
+Da
+R
+n
+und
+C
+n
+hausdor˙sch sind, ist
+K
+nach
+ Bemerkung 21
+ abgeschlossen. Nach Vorausset-
+zung kann
+K
+mit endlich vielen o˙enen Kugeln von Radien 1 üb erdeckt werden
+)
+K
+ist
+b eschränkt.
+
+(
+ Sei
+A
+
+R
+n
+(o der
+C
+n
+) b eschränkt und abgeschlossen.
+Dann gibt es einen Würfel
+W
+= [
+
+N ; N
+]
+    
+[
+
+N ; N
+]
+|
+{z
+}
+n
+mal
+mit
+A
+
+W
+bzw. Polyzylinder
+Z
+=
+f
+(
+z
+1
+; : : : ; z
+n
+)
+2
+C
+n
+j
+z
+i
+
+N
+für
+i
+= 1
+; : : : ; n
+g
+Nach
+ Bemerkung 20
+ und
+ Bemerkung 18
+ ist
+W
+kompakt, also ist
+A
+nach
+ Bemerkung 19
+ auch
+kompakt. Genauso ist
+Z
+kompakt, weil
+f
+z
+2
+C
+k
+z
+j 
+1
+g
+homö omorph zu
+
+(
+x; y
+)
+2
+R
+2
+
+
+k
+(
+x; y
+)
+k 
+1
+	
+ist.
+
+1.6 Wege und Knoten
+De˝nition 17
+Sei
+X
+ein top ologischer Raum.
+19
+1.6. WEGE UND KNOTEN
+a)
+ Ein
+Weg
+in
+X
+ist eine stetige Abbildung
+
+: [0
+;
+1]
+!
+X
+.
+b)
+
+heiÿt
+geschlossen
+, wenn
+
+(1) =
+
+(0)
+gilt.
+c)
+
+heiÿt
+einfach
+, wenn
+
+j
+[0
+;
+1)
+injektiv ist.
+Beispiel 17
+Ist
+X
+diskret, so ist jeder Weg konstant, d. h. von der Form
+8
+x
+2
+[0
+;
+1] :
+
+(
+x
+) =
+c; c
+2
+X
+Denn
+
+([0
+;
+1])
+ist zusammenhängend für jeden Weg
+
+.
+De˝nition 18
+Ein top ologischer Raum
+X
+heiÿt
+wegzusammenhängend
+, wenn es zu je zwei Punkten
+x; y
+2
+X
+einen Weg
+
+: [0
+;
+1]
+!
+X
+gibt mit
+
+(0) =
+x
+und
+
+(1) =
+y
+.
+Bemerkung 23
+Sei
+X
+ein top ologischer Raum.
+a)
+X
+ist wegzusammenhängend
+)
+X
+ist zusammenhängend
+b)
+X
+ist wegzusammenhängend
+6(
+X
+ist zusammenhängend
+Beweis:
+a)
+Sei
+X
+ein wegzusammenhängender top ologischer Raum,
+A
+1
+; A
+2
+nichtleere, disjunkte,
+abgeschlossene Teilmengen von
+X
+mit
+A
+1
+[
+A
+2
+=
+X
+. Sei
+x
+2
+A
+1
+; y
+2
+A
+2
+; 
+: [0
+;
+1]
+!
+X
+ein Weg von
+x
+nach
+y
+.
+Dann ist
+C
+:=
+
+([0
+;
+1])
+
+X
+zusammenhängend, weil
+
+stetig ist.
+C
+= (
+C
+\
+A
+1
+)
+|
+{z
+}
+3
+x
+[
+(
+C
+\
+A
+2
+)
+|
+{z
+}
+3
+y
+ist Zerlegung in nichtleere, disjunkte, abgeschlossene Teilmengen
+)
+Widerspruch
+b)
+ Sei
+X
+=
+n
+(
+x; y
+)
+2
+R
+2
+
+
+
+x
+2
++
+y
+2
+= 1
+_
+y
+= 1 + 2
+
+e
+
+1
+10
+x
+o
+.
+Abbildung 1.8a
+ veranschaulicht diesen Raum.
+Sei
+U
+1
+[
+U
+2
+=
+X ; U
+1
+6
+=
+U
+2
+=
+;
+; U
+i
+o˙en.
+X
+=
+C
+[
+S
+. Dann ist
+C
+
+U
+1
+o der
+C
+
+U
+2
+,
+weil
+C
+und
+S
+zusammenhängend sind.
+Also ist
+C
+=
+U
+1
+und
+S
+=
+U
+2
+(o der umgekehrt).
+Sei
+y
+2
+C
+=
+U
+1
+; " >
+0
+und
+B
+"
+(
+y
+)
+
+U
+1
+eine Umgebung von
+y
+, die in
+U
+1
+enthalten ist.
+Ab er:
+B
+"
+(
+y
+)
+\
+S
+6
+=
+; )
+Widerspruch
+)
+X
+[
+S
+ist zusammenhängend, ab er nicht
+wegzusammenhängend.
+
+Beispiel 18 (Hilb ert-Kurve)
+Es gibt stetige, surjektive Abbildungen
+[0
+;
+1]
+!
+[0
+;
+1]
+
+[0
+;
+1]
+. Ein Beispiel ist die in
+ Abbil-
+dung 1.9
+ dargestellte Hilb ert-Kurve.
+De˝nition 19
+Sei
+X
+ein top ologischer Raum. Eine
+Jordankurve
+in
+X
+ist ein Homö omorphismus
+
+:
+[0
+;
+1]
+!
+C
+
+X
+bzw.
+
+:
+S
+1
+!
+C
+
+X
+, wob ei
+C
+:= Bild
+
+.
+20
+1.6. WEGE UND KNOTEN
+(a)
+ Spirale
+S
+mit Kreis
+C
+0
+:
+1
+1
+
+1
+0
+1
+X
+Y
+f
+(
+x;
+sin(
+1
+x
+))
+2
+X
+
+Y
+g
+(
+
+1
+;
+1)
+
+Y
+(b)
+ Sinus
+Abbildung 1.8
+:
+Beispiele für Räume, die zusammenhängend, ab er nicht wegzusammenhängend
+sind.
+(a)
+n
+= 1
+(b)
+n
+= 2
+(c)
+n
+= 3
+(d)
+n
+= 4
+(e)
+n
+= 5
+Abbildung 1.9
+:
+ Hilb ert-Kurve
+Jede Jordankurve ist also ein einfacher Weg.
+Satz 1.2 (Jordanscher Kurvensatz)
+Ist
+C
+=
+
+([0
+;
+1])
+eine geschlossene Jordankurve in
+R
+2
+, so hat
+R
+2
+n
+C
+genau zwei
+Zusammenhangskomp onenten, von denen eine b eschränkt ist und eine unb eschränkt.
+auÿen
+innen
+Jordankurve
+Abbildung 1.10
+:
+Die unb eschränkte Zusammenhangskomp onente wird häu˝g inneres, die b e-
+schränkte äuÿeres genannt.
+Beweis:
+ist technisch mühsam und wird hier nicht geführt. Er kann in Algebraische Top ologie:
+Eine Einführung von R. Stö cker und H. Zieschang auf S. 301f (ISBN 978-3519122265)
+nachgelesen werden.
+Idee: Ersetze Weg
+C
+durch Polygonzug.
+21
+1.6. WEGE UND KNOTEN
+De˝nition 20
+Eine geschlossene Jordankurve in
+R
+3
+heiÿt
+Knoten
+.
+Beispiel 19 (Knoten)
+(a)
+ Trivialer Knoten
+(b)
+ Kleeblattknoten
+(c)
+ Achterknoten
+(d)
+6
+2
+-Knoten
+Abbildung 1.11
+:
+ Beispiele für verschiedene Knoten
+De˝nition 21
+Zwei Knoten
+
+1
+; 
+2
+:
+S
+1
+!
+R
+3
+heiÿen
+äquivalent
+, wenn es eine stetige Abbildung
+H
+:
+S
+1
+
+[0
+;
+1]
+!
+R
+3
+gibt mit
+H
+(
+z ;
+0) =
+
+1
+(
+z
+)
+8
+z
+2
+S
+1
+H
+(
+z ;
+1) =
+
+2
+(
+z
+)
+8
+z
+2
+S
+1
+und für jedes feste
+t
+2
+[0
+;
+1]
+ist
+H
+z
+:
+S
+1
+!
+R
+3
+; z
+7!
+H
+(
+z ; t
+)
+ein Knoten. Die Abbildung
+H
+heiÿt
+Isotopie
+zwischen
+
+1
+und
+
+2
+.
+De˝nition 22
+Sei
+
+: [0
+;
+1]
+!
+R
+3
+ein Knoten,
+E
+eine Eb ene und
+ˇ
+:
+R
+3
+!
+E
+eine Pro jektion auf
+E
+.
+ˇ
+heiÿt
+Knotendiagramm
+von
+
+, wenn gilt:
+
+
+ˇ
+
+1
+(
+x
+)
+
+
+
+2
+8
+x
+2
+ˇ
+(
+
+)
+Ist
+(
+ˇ
+j
+
+([0
+;
+1])
+)
+
+1
+(
+x
+) =
+f
+y
+1
+; y
+2
+g
+, so
+liegt
+y
+1
+üb er
+y
+2
+, wenn gilt:
+9
+ >
+1 : (
+y
+1
+
+x
+) =
+
+(
+y
+2
+
+x
+)
+Satz 1.3 (Satz von Reidemeister)
+Zwei endliche Knotendiagramme gehören genau dann zu äquivalenten Knoten, wenn sie
+durch endlich viele Reidemeister-Züge ineinander üb erführt werden können.
+22
+1.6. WEGE UND KNOTEN
+(a)
+
+
+1
+(b)
+
+
+2
+(c)
+
+
+3
+Abbildung 1.12
+:
+ Reidemeister-Züge
+Beweis:
+Durch sorgfältige Fallunterscheidung.
+5
+De˝nition 23
+Ein Knotendiagramm heiÿt
+3-färbbar
+, wenn jeder Bogen von
+D
+so mit einer Farb e gefärbt
+werden kann, dass an jeder Kreuzung eine o der 3 Farb en auftreten und alle 3 Farb en
+auftreten.
+Abbildung 1.13
+:
+ Ein 3-gefärb er Kleeblattknoten
+5
+Siehe Knot Theory and Its Applications von Kunio Mu rasugi. ISBN 978-0817638177.
+23
+1.6. WEGE UND KNOTEN
+Übungsaufgab en
+Aufgab e 1 (Sierpi«skiraum)
+Es sei
+X
+:=
+f
+0
+;
+1
+g
+und
+T
+X
+:=
+f ;
+;
+f
+0
+g
+; X
+g
+. Dies ist der sogenannte Sierpi«skiraum.
+(a)
+ Beweisen Sie, dass
+(
+X ;
+T
+X
+)
+ein top ologischer Raum ist.
+(b)
+ Ist
+(
+X ;
+T
+X
+)
+hausdor˙sch?
+(c)
+ Ist
+T
+X
+von einer Metrik erzeugt?
+Aufgab e 2
+Es sei
+Z
+mit der von den Mengen
+U
+a;b
+:=
+a
++
+b
+Z
+(
+a
+2
+Z
+; b
+2
+Z
+n f
+0
+g
+)
+erzeugten Top ologie
+versehen.
+Zeigen Sie:
+(a)
+ Jedes
+U
+a;b
+und jede einelementige Teilmenge von
+Z
+ist abgeschlossen.
+(b)
+f 
+1
+;
+1
+g
+ist nicht o˙en.
+(c)
+ Es gibt unendlich viele Primzahlen.
+Aufgab e 3 (Cantorsches Dis kontinuum)
+Für jedes
+i
+2
+N
+sei
+P
+i
+:=
+f
+0
+;
+1
+g
+mit der diskreten Top ologie. Weiter Sei
+P
+:=
+Q
+i
+2
+N
+P
+i
+.
+(a)
+ Wie sehen die o˙enen Mengen von
+P
+aus?
+(b)
+ Was können Sie üb er den Zusammenhang von
+P
+sagen?
+Aufgab e 4 (Kompak thei t)
+(a)
+ Ist
+GL
+n
+(
+R
+) =
+f
+A
+2
+R
+n
+
+n
+j
+det(
+A
+)
+6
+= 0
+g
+kompakt?
+(b)
+ Ist
+SL
+n
+(
+R
+) =
+f
+A
+2
+R
+n
+
+n
+j
+det(
+A
+) = 1
+g
+kompakt?
+(c)
+ Ist
+P
+(
+R
+)
+kompakt?
+Aufgab e 5 (Begri˙e)
+De˝nieren Sie die Begri˙e Homomorphismus und Homö omorphismus.
+Geb en Sie, falls möglich, ein Beispiel für folgende Fälle an. Falls es nicht möglich ist,
+b egründen Sie warum.
+1)
+ Ein Homomorphismus, der zugleich ein Homö omorphismus ist,
+2)
+ ein Homomorphismus, der kein Homö omorphismus ist,
+24
+1.6. WEGE UND KNOTEN
+3)
+ ein Homö omorphismus, der kein Homomorphismus ist
+Aufgab e 6 (Begri˙e)
+De˝nieren Sie die Begri˙e Isomorphismus, Isotopie und Isometrie.
+2 Mannigfaltigkeiten und
+Simplizialkomplexe
+2.1 Top ol ogi sche Mannigfal tigkeiten
+De˝nition 24
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+n
+2
+N
+.
+a)
+Eine
+n
+-dimensionale
+Karte
+auf
+X
+ist ein Paar
+(
+U; '
+)
+, wob ei
+U
+2
+T
+und
+'
+:
+U
+!
+V
+Homö omorphismus von
+U
+auf eine o˙ene Teilmenge
+V
+
+R
+n
+.
+b)
+Ein
+n
+-dimensionaler
+Atlas
+A
+auf
+X
+ist eine Familie
+(
+U
+i
+; '
+i
+)
+i
+2
+I
+von Karten auf
+X
+,
+so dass
+S
+i
+2
+I
+U
+i
+=
+X
+.
+c)
+X
+heiÿt (top ologische)
+n
+-dimensionale
+Mannigfaltigkeit
+, wenn
+X
+hausdor˙sch ist,
+eine abzählbare Basis der Top ologie hat und einen
+n
+-dimensionalen Atlas b esitzt.
+Anschaulich ist also ein
+n
+-dimensionale Mannigfaltigkeit lokal dem
+R
+n
+ähnlich.
+Bemerkung 24 (Mächtigkeit von Mannigf alti gkeiten)
+Jede
+n
+-dimensionale Mannigfaltigkeit mit
+n
+
+1
+ist mindestens so mächtig wie
+R
+.
+Beweis:
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+(
+U; '
+)
+mit
+U
+2
+T
+und
+'
+:
+U
+!
+V
+
+R
+n
+, wob ei
+V
+o˙en und
+'
+ein Homö omorphismus ist, eine Karte auf
+X
+.
+Da jede o˙ene Teilmenge des
+R
+n
+genauso mächtig ist wie der
+R
+n
+,
+'
+als Homö omorphismus
+insb esondere bijektiv ist und Mengen, zwischen denen eine Bijektion existiert, gleich mächtig
+sind, ist
+U
+genauso mächtig wie der
+R
+n
+. Da jede Mannigfaltigkeit mindestens eine Karte
+hat, muss jede Mannigfaltigkeit
+X
+mindestens so mächtig sein wie der
+R
+n
+.
+
+Hinweis:
+Es gibt auch no ch
+0
+-dimensionale Mannigfaltigkeiten. Diese Mannigfaltigkeiten können
+b eliebig viele Elemente hab en.
+Bemerkung 25
+a)
+ Es gibt surjektive, stetige Abbildungen
+[0
+;
+1]
+!
+[0
+;
+1]
+
+[0
+;
+1]
+b)
+Für
+n
+6
+=
+m
+sind
+R
+n
+und
+R
+m
+nicht homö omorph. Zum Beweis b enutzt man den Satz
+von der Gebietstreue (Brouwer):
+Ist
+U
+
+R
+n
+o˙en und
+f
+:
+U
+!
+R
+n
+stetig und injektiv, so ist
+f
+(
+U
+)
+o˙en.
+Ist
+n < m
+und
+R
+m
+homö omorph zu
+R
+n
+, so wäre
+f
+:
+R
+n
+!
+R
+m
+!
+R
+n
+;
+(
+x
+1
+; : : : ; x
+n
+)
+7!
+(
+x
+1
+; x
+2
+; : : : ; x
+n
+;
+0
+; : : : ;
+0)
+eine stetige injektive Abbildung. Also müsste
+f
+(
+R
+n
+)
+o˙en sein
+)
+Widerspruch
+26 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
+Beispiel 20 (Mannigfaltigkeiten)
+1)
+Jede o˙ene Teilmenge
+U
+
+R
+n
+ist eine
+n
+-dimensionale Mannigfaltigkeit mit einem
+Atlas aus einer Karte.
+2)
+C
+n
+ist eine
+2
+n
+-dimensionale Mannigfaltigkeit mit einem Atlas aus einer Karte:
+(
+z
+1
+; : : : ; z
+n
+)
+7!
+(
+<
+(
+z
+1
+)
+;
+=
+(
+z
+1
+)
+; : : : ;
+<
+(
+z
+n
+)
+;
+=
+(
+z
+n
+))
+3)
+P
+n
+(
+R
+) = (
+R
+n
++1
+n f
+0
+g
+)
+=
+˘
+=
+S
+n
+=
+˘
+und
+P
+n
+(
+C
+)
+sind Mannigfaltigkeiten der Dimension
+n
+bzw.
+2
+n
+, da gilt:
+Sei
+U
+i
+:=
+f
+(
+x
+0
+:
+  
+:
+x
+n
+)
+2 P
+n
+(
+R
+)
+j
+x
+i
+6
+= 0
+g 8
+i
+2
+0
+; : : : ; n
+. Dann ist
+P
+n
+(
+R
+) =
+S
+n
+i
+=0
+U
+i
+und die Abbildung
+U
+i
+!
+R
+n
+(
+x
+0
+:
+  
+:
+x
+n
+)
+7!
+
+x
+0
+x
+i
+; : : : ;
+
+
+
+x
+i
+x
+i
+; : : : ;
+x
+n
+x
+i
+
+(
+y
+1
+:
+  
+:
+y
+i
+
+1
+: 1 :
+y
+i
+:
+  
+:
+y
+n
+)
+7!
+(
+y
+1
+; : : : ; y
+n
+)
+ist bijektiv.
+Die
+U
+i
+mit
+i
+= 0
+; : : : ; n
+bilden einen
+n
+-dimensionalen Atlas:
+x
+= (1 : 0 : 0)
+2
+U
+0
+!
+R
+2
+x
+7!
+(0
+;
+0)
+y
+= (0 : 1 : 1)
+2
+U
+2
+!
+R
+2
+y
+7!
+(0
+;
+1)
+Umgebung:
+B
+1
+(0
+;
+1)
+! f
+(1 :
+u
+:
+v
+)
+j k
+(
+u; v
+)
+k
+<
+1
+g
+=
+V
+1
+Umgebung:
+B
+1
+(0
+;
+1)
+!
+
+(
+w
+:
+z
+: 1)
+
+
+w
+2
++
+z
+2
+<
+1
+	
+=
+V
+2
+V
+1
+\
+V
+2
+=
+;
+?
+(
+a
+:
+b
+:
+c
+)
+2
+V
+1
+\
+V
+2
+)
+a
+6
+= 0
+und
+(
+b
+a
+)
+2
++ (
+c
+a
+)
+2
+<
+1
+)
+c
+a
+<
+1
+)
+c
+6
+= 0
+und
+(
+a
+c
+)
+2
++ (
+b
+c
+)
+2
+<
+1
+)
+a
+c
+<
+1
+)
+Widerspruch
+4)
+S
+n
+=
+
+x
+2
+R
+n
++1
+
+
+k
+x
+k
+= 1
+	
+ist
+n
+-dimensionale Mannigfaltigkeit.
+Karten:
+D
+i
+:=
+f
+(
+x
+1
+; : : : ; x
+n
++1
+)
+2
+S
+n
+j
+x
+i
+>
+0
+g !
+B
+1
+(0
+; : : : ;
+0
+|
+{z
+}
+2
+R
+n
+)
+C
+i
+:=
+f
+(
+x
+1
+; : : : ; x
+n
++1
+)
+2
+S
+n
+j
+x
+i
+<
+0
+g !
+B
+1
+(0
+; : : : ;
+0)
+(
+x
+1
+; : : : ; x
+n
++1
+)
+7!
+(
+x
+1
+; : : : ;
+ˆ
+ˆ
+x
+i
+; : : : ; x
+n
++1
+)
+1
+(
+x
+1
+; : : : ; x
+n
+)
+7!
+(
+x
+1
+; : : : ; x
+i
+
+1
+;
+q
+1
+
+P
+n
+k
+=1
+x
+2
+k
+; x
+i
+; : : : ; x
+n
+)
+, o der
+
+q
+1
+
+P
+n
+k
+=1
+x
+2
+k
+für
+C
+i
+S
+n
+=
+S
+n
++1
+i
+=1
+(
+C
+i
+[
+D
+i
+)
+Als kompakte Mannigfaltigkeit wird
+S
+n
+auch  geschlossene Mannigfaltigkeit genannt.
+5)
+[0
+;
+1]
+ist keine Mannigfaltigkeit, denn:
+Es gibt keine Umgebung von
+0
+in
+[0
+;
+1]
+, die homö omorph zu einem o˙enem Intervall
+ist.
+1
+x
+i
+wird rausgenommen
+27 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
+6)
+V
+1
+=
+
+(
+x; y
+)
+2
+R
+2
+
+
+x
+
+y
+= 0
+	
+ist keine Mannigfaltigkeit.
+Das Problem ist
+(0
+;
+0)
+. Wenn man diesen Punkt entfernt, zerfällt der Raum in 4
+Zusammenhangskomp onenten. Jeder
+R
+n
+zerfällt jedo ch in hö chstens zwei Zusammen-
+hangskomp onenten, wenn man einen Punkt entfernt.
+7)
+V
+2
+=
+
+(
+x; y
+)
+2
+R
+2
+
+
+x
+3
+=
+y
+2
+	
+ist eine Mannigfaltigkeit.
+8)
+X
+= (
+R
+n f
+0
+g
+)
+[
+(0
+1
+;
+0
+2
+)
+U
+
+X
+o˙en
+,
+(
+U
+o˙en in
+R
+n f
+0
+g
+;
+falls
+0
+1
+=
+2
+U;
+0
+2
+2
+U
+9
+" >
+0 : (
+
+"; "
+)
+
+U
+falls
+0
+1
+2
+U;
+0
+2
+2
+U
+Insb esondere sind
+(
+R
+n f
+0
+g
+)
+[ f
+0
+1
+g
+und
+(
+R
+n f
+0
+g
+)
+[ f
+0
+2
+g
+o˙en und homö omorph
+zu
+R
+.
+Ab er:
+X
+ist nicht hausdor˙sch! Denn es gibt keine disjunkten Umgebungen von
+0
+1
+und
+0
+2
+.
+9)
+GL
+n
+(
+R
+)
+ist eine Mannigfaltigkeit der Dimension
+n
+2
+, weil o˙ene Teilmengen von
+R
+n
+2
+eine Mannigfaltigkeit bilden.
+De˝nition 25
+Seien
+X ; Y n
+-dimensionale Mannigfaltigkeiten,
+U
+
+X
+und
+V
+
+Y
+o˙en,
+ :
+U
+!
+V
+ein Ho-
+mö omorphismus
+Z
+= (
+X
+_
+[
+Y
+)
+=
+˘
+mit der von
+u
+˘
+(
+u
+)
+8
+u
+2
+U
+erzeugten Äquivalenzrelation
+und der von
+˘
+induzierten Quotiententop ologie.
+Z
+heiÿt
+Verklebung
+von
+X
+und
+Y
+längs
+U
+und
+V
+.
+Z
+b esitzt einen Atlas aus
+n
+-dimensionalen
+Karten. Falls
+Z
+hausdor˙sch ist, ist
+Z
+eine
+n
+-dimensionale Mannigfaltigkeit.
+Bemerkung 26
+Sind
+X ; Y
+Mannigfaltigkeiten der Dimension
+n
+bzw.
+m
+, so ist
+X
+
+Y
+eine Mannigfaltigkeit
+der Dimension
+n
++
+m
+.
+Beweis:
+Pro dukte von Karten sind Karten.
+
+Beispiel 21
+Mannigfaltigkeiten mit Dimension 1:
+1)
+ O˙ene Intervalle,
+R
+,
+(0
+;
+1)
+sind alle homö omorph
+2)
+S
+1
+Mannigfaltigkeiten mit Dimension 2:
+1)
+R
+2
+2)
+S
+2
+(0 Henkel)
+3)
+T
+2
+(1 Henkel)
+4)
+ o der mehr Henkel, wie z.B. der Zweifachtorus in
+ Abbildung 2.1
+Bemerkung 27
+Sei
+n
+2
+N
+; F
+:
+R
+n
+!
+R
+stetig di˙erenzierbar und
+X
+=
+V
+(
+F
+) :=
+f
+x
+2
+R
+n
+j
+F
+(
+x
+) = 0
+g
+das
+vanishing set .
+Dann gilt:
+28 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
+Abbildung 2.1
+:
+ Durch Verklebung zweier Tori entsteht ein Zweifachtorus.
+a)
+X
+ist abgeschlossen in
+R
+n
+b)
+ Ist
+grad(
+F
+)(
+X
+)
+6
+= 0
+8
+x
+2
+X
+, so ist
+X
+eine Mannigfaltigkeit der Dimension
+n
+
+1
+.
+Beweis:
+a)
+Sei
+y
+2
+R
+n
+n
+V
+(
+F
+)
+. Weil
+F
+stetig ist, gibt es
+ >
+0
+, so dass
+F
+(
+B
+
+(
+y
+))
+
+B
+"
+(
+F
+(
+y
+))
+mit
+"
+=
+1
+2
+k
+F
+(
+y
+)
+k
+. Folgt
+B
+
+(
+y
+)
+\
+V
+(
+F
+) =
+; )
+R
+n
+n
+V
+(
+F
+)
+ist o˙en.
+b)
+Sei
+x
+2
+X
+mit
+grad
+(
+F
+)(
+x
+)
+6
+= 0
+, also o. B. d. A.
+@ F
+@ X
+1
+(
+x
+)
+6
+= 0
+,
+x
+= (
+x
+1
+; : : : ; x
+n
+)
+,
+x
+0
+:= (
+x
+2
+; : : : ; x
+n
+)
+2
+R
+n
+
+1
+. Der Satz von der impliziten Funktion liefert nun: Es
+gibt Umgebungen
+U
+von
+x
+0
+und di˙erenzierbare Funktionen
+g
+:
+U
+!
+R
+, so dass
+G
+:
+U
+!
+R
+n
+; u
+7!
+(
+g
+(
+u
+)
+; u
+)
+eine stetige Abbildung auf eine o˙ene Umgebung
+V
+von
+x
+in
+X
+ist.
+
+Beispiel 22
+1)
+F
+:
+R
+3
+!
+R
+;
+(
+x; y ; z
+)
+7!
+x
+2
++
+y
+2
++
+z
+2
+
+1
+,
+V
+(
+F
+) =
+S
+2
+,
+grad
+(
+F
+) = (2
+x;
+2
+y ;
+2
+z
+)
+Bem. 27.b
+======
+)
+S
+n
+ist
+n
+-dimensionale Mannigfaltigkeit in
+R
+n
++1
+2)
+F
+:
+R
+2
+!
+R
+;
+(
+x; y
+)
+7!
+y
+2
+
+x
+3
+Es gilt:
+grad
+(
+F
+) = (
+
+3
+x
+2
+;
+2
+y
+)
+. Also:
+grad
+(0
+;
+0) = (0
+;
+0)
+.
+
+5
+
+4
+
+3
+
+2
+
+1
+0
+1
+2
+3
+4
+5
+
+4
+
+2
+0
+2
+4
+
+100
+0
+100
+x
+y
+z
+
+100
+0
+100
+f
+(
+x; y
+)
+(a)
+F
+(
+x; y
+) =
+y
+2
+
+x
+3
+2
+4
+6
+8
+10
+12
+
+10
+
+5
+5
+10
+x
+y
+a
+=
+1
+3
+a
+= 1
+a
+= 2
+(b)
+y
+2
+
+ax
+3
+= 0
+Abbildung 2.2
+:
+ Rechts ist die Neilsche Parab el für verschiedene Parameter
+a
+.
+Daher ist
+ Bemerkung 27.b
+ nicht anwendbar, ab er
+V
+(
+F
+)
+ist trotzdem eine 1-dimensionale
+top ologische Mannigfaltigkeit.
+29 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
+De˝nition 26
+Sei
+X
+ein Hausdor˙raum mit abzählbarer Basis der Top ologie.
+X
+heiÿt
+n
+-dimensionale
+Mannigfaltigkeit mit Rand
+, wenn es einen Atlas
+(
+U
+i
+; '
+i
+)
+gibt, wob ei
+U
+i
+
+X
+i
+o˙en und
+'
+i
+ein Homö omorphismus auf eine o˙ene Teilmenge von
+R
+n
++
+;
+0
+:=
+f
+(
+x
+1
+; : : : ; x
+n
+)
+2
+R
+n
+j
+x
+n
+
+0
+g
+ist.
+R
+n
++
+;
+0
+ist ein Halbraum .
+Hinweis:
+Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
+˘
+=
+(a)
+ Halb rau m
+˘
+=
+(b)
+ Pair of pants
+˘
+=
+(c)
+ Sp häre mit ein em Lo ch
+Abbildung 2.3
+:
+ Beispiele für Mannigfaltigkeiten mit Rand
+De˝nition 27
+Sei
+X
+eine
+n
+-dimensionale Mannigfaltigkeit mit Rand und Atlas
+A
+. D ann heiÿt
+@ X
+:=
+[
+(
+U;'
+)
+2A
+f
+x
+2
+U
+j
+'
+(
+x
+) = 0
+g
+Rand
+von
+X
+.
+@ X
+ist eine Mannigfaltigkeit der Dimension
+n
+
+1
+.
+De˝nition 28
+Sei
+X
+eine
+n
+-dimensionale Mannigfaltigkeit mit Atlas
+(
+U
+i
+; '
+i
+)
+i
+2
+I
+Für
+i; j
+2
+I
+mit
+U
+i
+\
+U
+j
+6
+=
+;
+heiÿt
+'
+ij
+:=
+'
+j
+
+'
+
+1
+i
+'
+i
+(
+U
+i
+\
+U
+j
+)
+!
+'
+j
+(
+U
+i
+\
+U
+j
+)
+Kartenwechsel
+o der
+Üb ergangsfunktion
+.
+30 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
+R
+n
+R
+n
+U
+i
+U
+j
+V
+i
+V
+j
+X
+'
+i
+'
+j
+Abbildung 2.4
+:
+ Kartenwechsel
+2.2 Di˙erenzierbare Mannigfaltigkei ten
+De˝nition 29
+Sei
+X
+eine
+n
+-dimensionale Mannigfaltigkeit mit Atlas
+(
+U
+i
+; '
+i
+)
+i
+2
+I
+.
+a)
+X
+heiÿt
+di˙erenzierbare Mannigfaltigkeit der Klasse
+C
+k
+, wenn jede Karten-
+wechselabbildung
+'
+ij
+; i; j
+2
+I k
+-mal stetig di˙erenzierbar ist.
+b)
+X
+heiÿt
+di˙erenzierbare Mannigfaltigkeit
+, wenn
+X
+eine di˙erenzierbare Mannig-
+faltigkeit der Klasse
+C
+1
+ist.
+Di˙erenzierbare Mannigfaltigkeiten der Klasse
+C
+1
+werden auch
+glatt
+genannt.
+De˝nition 30
+Sei
+X
+eine di˙erenzierbare Mannigfaltigkeit der Klasse
+C
+k
+(
+k
+2
+N
+[ f 1 g
+) mit Atlas
+A
+= (
+U
+i
+; '
+i
+)
+i
+2
+I
+.
+a)
+Eine Karte
+(
+U; '
+)
+auf
+X
+heiÿt
+verträglich
+mit
+A
+, wenn alle Kartenwechsel
+'
+
+'
+
+1
+i
+und
+'
+i
+
+'
+
+1
+(
+i
+2
+I
+mit
+U
+i
+\
+U
+6
+=
+;
+) di˙erenzierbar von Klasse
+C
+k
+sind.
+b)
+Die Menge aller mit
+A
+verträglichen Karten auf
+X
+bildet einen maximalen Atlas der
+Klasse
+C
+k
+. Er heiÿt
+C
+k
+-Struktur
+auf
+X
+.
+Eine
+C
+1
+-Struktur heiÿt auch
+di˙erenzierbare Struktur
+auf
+X
+.
+Bemerkung 28
+Für
+n
+
+4
+gibt es auf
+S
+n
+mehrere verschiedene di˙erenzierbare Strukturen, die sogenannten
+exotische Sphären .
+De˝nition 31
+Seien
+X ; Y
+di˙erenzierbare Mannigfaltigkeiten der Dimension
+n
+bzw.
+m
+,
+x
+2
+X
+.
+a)
+Eine stetige Abbildung
+f
+:
+X
+!
+Y
+heiÿt
+di˙erenzierbar
+in
+x
+(von Klasse
+C
+k
+), wenn
+es Karten
+(
+U; '
+)
+von
+X
+mit
+x
+2
+U
+und
+(
+V ;  
+)
+von
+Y
+mit
+f
+(
+U
+)
+
+V
+gibt, so dass
+ 
+
+f
+
+'
+
+1
+stetig di˙erenzierbar von Klasse
+C
+k
+in
+'
+(
+x
+)
+ist.
+b)
+f
+heiÿt
+di˙erenzierbar
+(von Klasse
+C
+k
+), wenn
+f
+in jedem
+x
+2
+X
+di˙erenzierbar ist.
+c)
+f
+heiÿt
+Di˙eomorphismus
+, wenn
+f
+di˙erenzierbar von Klasse
+C
+1
+ist und es eine
+di˙erenzierbare Abbildung
+g
+:
+Y
+!
+X
+von Klasse
+C
+1
+gibt mit
+g
+
+f
+=
+id
+X
+und
+f
+
+g
+=
+id
+Y
+.
+31 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
+Bemerkung 29
+Die Bedingung in
+ De˝nition 31.a
+ hängt nicht von den gewählten Karten ab.
+Beweis:
+Seien
+(
+U
+0
+; '
+0
+)
+und
+(
+V
+0
+;  
+0
+)
+Karten von
+X
+bzw.
+Y
+um
+x
+bzw.
+f
+(
+x
+)
+mit
+f
+(
+U
+0
+)
+
+V
+0
+.
+)
+ 
+0
+
+f
+
+(
+'
+0
+)
+
+1
+=
+ 
+0
+
+(
+ 
+
+1
+
+ 
+)
+
+f
+
+(
+'
+
+1
+
+'
+)
+
+(
+'
+0
+)
+
+1
+ist genau dann di˙erenzierbar, wenn
+ 
+
+f
+
+'
+
+1
+di˙erenzierbar ist.
+Beispiel 23
+f
+:
+R
+!
+R
+; x
+7!
+x
+3
+ist kein Di˙eomorphismus, ab er Homö omorphismus, da mit
+g
+(
+x
+) :=
+3
+p
+x
+gilt:
+f
+
+g
+=
+id
+R
+; g
+
+f
+=
+id
+R
+Bemerkung 30
+Sei
+X
+eine glatte Mannigfaltigkeit. Dann ist
+Dieo(
+X
+) :=
+f
+f
+:
+X
+!
+X
+j
+f
+ist Di˙eomorphismus
+g
+eine Untergrupp e von Homö o
+(
+X
+)
+.
+De˝nition 32
+S
+
+R
+3
+heiÿt
+reguläre Fläche
+:
+, 8
+s
+2
+S
+9
+Umgebung
+V
+(
+s
+)
+
+R
+3
+9
+U
+
+R
+2
+o˙en:
+9
+di˙erenzierbare Abbildung
+F
+:
+U
+!
+V
+\
+S
+: Rg
+(
+J
+F
+(
+u
+)) = 2
+8
+u
+2
+U
+.
+F
+heiÿt (lokale)
+reguläre Parametrisierung
+von
+S
+.
+F
+(
+u; v
+) = (
+x
+(
+u; v
+)
+; y
+(
+u; v
+)
+; z
+(
+u; v
+))
+J
+F
+(
+u; v
+) =
+0
+@
+@ x
+@ u
+(
+p
+)
+@ x
+@ v
+(
+p
+)
+@ y
+@ u
+(
+p
+)
+@ y
+@ v
+(
+p
+)
+@ z
+@ u
+(
+p
+)
+@ z
+@ v
+(
+p
+)
+1
+A
+Beispiel 24
+1)
+ Rotations˛ächen: Sei
+r
+:
+R
+!
+R
+>
+0
+eine di˙erenzierbare Funktion.
+F
+:
+R
+2
+!
+R
+3
+(
+u; v
+)
+7!
+(
+r
+(
+u
+) cos(
+u
+)
+; r
+(
+v
+) sin(
+u
+)
+; v
+)
+J
+F
+(
+u; v
+) =
+0
+@
+
+r
+(
+v
+) sin
+u r
+0
+(
+v
+) cos
+u
+r
+(
+v
+) cos
+u r
+0
+(
+v
+) sin
+u
+0 1
+1
+A
+hat Rang 2 für alle
+(
+u; v
+)
+2
+R
+2
+.
+2)
+ Kugelko ordinaten:
+F
+:
+R
+2
+!
+R
+3
+,
+(
+u; v
+)
+7!
+(
+R
+cos
+v
+cos
+u; R
+cos
+v
+sin
+u; R
+sin
+v
+)
+Es gilt:
+F
+(
+u; v
+)
+2
+S
+2
+R
+, denn
+R
+2
+cos
+2
+(
+v
+) cos
+2
+(
+u
+) +
+R
+2
+cos
+2
+(
+v
+) sin
+2
+(
+u
+) +
+R
+2
+sin
+2
+(
+v
+)
+=
+R
+2
+(cos
+2
+(
+v
+) cos
+2
+(
+u
+) + cos
+2
+(
+v
+) sin
+2
+(
+u
+) + sin
+2
+(
+v
+))
+=
+R
+2
+
+cos
+2
+(
+v
+)(cos
+2
+(
+u
+) + sin
+2
+(
+u
+)) + sin
+2
+(
+v
+)
+
+=
+R
+2
+
+cos
+2
+(
+v
+) + sin
+2
+(
+v
+)
+
+=
+R
+2
+32 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
+(a)
+ K ugel ko ordi naten
+
+1
+0
+1
+2
+
+2
+
+1
+0
+1
+2
+0
+:
+6
+0
+:
+8
+1
+(b)
+ Rotati on skörp er
+(c)
+ S inus und Kosinus hab en keine gemeinsame Nullstelle
+33 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
+Die Jacobi-Matrix
+J
+F
+(
+u; v
+) =
+0
+@
+
+R
+cos
+v
+sin
+u
+
+R
+sin
+v
+cos
+u
+R
+cos
+v
+cos
+u
+
+R
+sin
+v
+sin
+u
+0
+R
+cos
+v
+1
+A
+hat Rang 2 für
+cos
+v
+6
+= 0
+. In
+N
+und
+S
+ist
+cos
+v
+= 0
+.
+Bemerkung 31
+Jede reguläre Fläche
+S
+
+R
+3
+ist eine 2-dimensionale, di˙erenzierbare Mannigfaltigkeit.
+Beweis:
+S
+
+R
+3
+ist als reguläre Fläche eine 2-dimensionale Mannigfaltigkeit. Aus der De˝nition von
+regulären Flächen folgt direkt, dass Karten
+(
+U
+i
+; F
+i
+)
+und
+(
+U
+j
+
+R
+2
+; F
+j
+:
+R
+2
+!
+R
+3
+)
+von
+S
+mit
+U
+i
+\
+U
+j
+6
+=
+;
+existieren, wob ei
+F
+i
+und
+F
+j
+nach De˝nition di˙erenzierbare Abbildungen sind.
+z.Z.:
+F
+
+1
+j
+
+F
+i
+ist ein Di˙eomorphismus.
+U
+i
+U
+j
+S
+s
+F
+i
+F
+j
+F
+
+1
+j
+
+F
+i
+Abbildung 2.5
+:
+ Reguläre Fläche
+S
+zum Beweis von
+ Bemerkung 31
+Idee:
+Finde di˙erenzierbare Funktion
+g
+F
+
+1
+j
+in Umgebung
+W
+von
+s
+, so dass
+g
+F
+
+1
+j
+j
+S
+\
+W
+=
+F
+
+1
+j
+.
+Ausführung:
+Sei
+u
+0
+2
+U
+i
+,
+v
+0
+2
+U
+j
+mit
+F
+i
+(
+u
+0
+) =
+s
+=
+F
+j
+(
+v
+0
+)
+.
+Da
+Rg (
+J
+F
+j
+(
+v
+0
+)) = 2
+ist, ist o. B. d. A.
+det
+
+@ x
+@ u
+@ x
+@ v
+@ y
+@ u
+@ y
+@ v
+
+(
+v
+0
+)
+6
+= 0
+und
+F
+j
+(
+u; v
+) = (
+x
+(
+u; v
+)
+; y
+(
+u; v
+)
+; z
+(
+u; v
+))
+.
+De˝niere
+f
+F
+j
+:
+U
+j
+
+R
+!
+R
+3
+durch
+f
+F
+j
+(
+u; v ; t
+) := (
+x
+(
+u; v
+)
+; y
+(
+u; v
+)
+; z
+(
+u; v
+) +
+t
+)
+O˙ensichtlich:
+f
+F
+j
+j
+U
+j
+f
+0
+g
+=
+F
+j
+J
+f
+F
+j
+=
+0
+@
+@ x
+@ u
+@ x
+@ v
+0
+@ y
+@ u
+@ y
+@ v
+0
+@ z
+@ u
+@ z
+@ v
+1
+1
+A
+)
+det
+J
+f
+F
+j
+(
+v
+0
+;
+0)
+6
+= 0
+Analysis I I
+======
+)
+Es gibt Umgebungen
+W
+von
+F
+j
+von
+f
+F
+j
+(
+v
+0
+;
+0) =
+F
+j
+(
+v
+0
+) =
+s
+, so dass
+f
+F
+j
+auf
+W
+eine
+di˙erenzierbar Inverse
+F
+
+1
+j
+hat.
+34 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
+Weiter gilt:
+f
+F
+j
+
+1
+j
+W
+\
+S
+=
+F
+
+1
+j
+j
+W
+\
+S
+)
+F
+
+1
+j
+
+F
+i
+j
+F
+
+1
+i
+(
+W
+\
+S
+)
+=
+F
+
+1
+j
+
+F
+i
+j
+F
+
+1
+i
+(
+W
+\
+S
+)
+ist di˙erenzierbar.
+De˝nition 33
+Sei
+G
+eine Mannigfaltigkeit und
+(
+G;
+
+)
+eine Grupp e.
+a)
+G
+heiÿt
+top ologische Grupp e
+, wenn die Abbildungen
+
+:
+G
+
+G
+!
+G
+und
+
+:
+G
+!
+G
+de˝niert durch
+g
+
+h
+:=
+g
+
+h
+und
+
+(
+g
+) :=
+g
+
+1
+stetig sind.
+b)
+Ist
+G
+eine di˙erenzierbare Mannigfaltigkeit, so heiÿt
+G
+Lie-Grupp e
+, wenn
+(
+G;
+
+)
+und
+(
+G; 
+)
+di˙erenzierbar sind.
+Beispiel 25 (Lie-G rupp en)
+1)
+ Alle endlichen Grupp en sind 0-dimensionale Lie-Grupp en.
+2)
+GL
+n
+(
+R
+)
+3)
+(
+R
+
+;
+
+)
+4)
+(
+R
+>
+0
+;
+
+)
+5)
+(
+R
+n
+;
++)
+, denn
+A
+
+B
+(
+i; j
+) =
+P
+n
+k
+=1
+a
+ik
+b
+k j
+ist nach allen Variablen di˙erenzierbar
+(
+A
+
+1
+)(
+i; j
+) =
+det(
+A
+ij
+)
+det
+A
+A
+ij
+=
+0
+B
+@
+a
+i
+1
+: : : a
+in
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+n
+1
+: : : a
+nn
+1
+C
+A
+2
+R
+(
+n
+
+1)
+
+(
+n
+
+1)
+ist di˙erenzierbar.
+det
+A
+ij
+kann
+0
+werden, da:
+
+1 1
+
+1 0
+
+6)
+SL
+n
+(
+R
+) =
+f
+A
+2
+GL
+n
+(
+R
+)
+j
+det(
+A
+) = 1
+g
+Bemerkung 32
+Ist
+G
+eine Lie-Grupp e und
+g
+2
+G
+, so ist die Abbildung
+l
+g
+:
+G
+!
+G
+h
+7!
+g
+
+h
+ein Di˙eomorphismus.
+35
+2.3. SIMPLIZIALKOMPLEX
+2.3 Simpli zialkomplex
+De˝nition 34
+Seien
+v
+0
+; : : : ; v
+k
+2
+R
+n
+Punkte.
+a)
+v
+0
+; : : : ; v
+k
+sind
+in allgemeiner Lage
+,
+es gibt keinen
+(
+k
+
+1)
+-dimensionalen a˚nen Untervektorraum, der
+v
+0
+; : : : ; v
+k
+enthält
+,
+v
+1
+
+v
+0
+; : : : ; v
+k
+
+v
+0
+sind linear unabhängig.
+b)
+conv
+(
+v
+0
+; : : : ; v
+k
+) :=
+n
+P
+k
+i
+=0
+
+i
+v
+i
+
+
+
+
+i
+
+0
+;
+P
+k
+i
+=0
+
+i
+= 1
+o
+heiÿt die
+konvexe Hülle
+von
+v
+0
+; : : : ; v
+k
+.
+De˝nition 35
+a)
+Sei
+
+n
+=
+conv
+(
+e
+0
+; : : : ; e
+n
+)
+
+R
+n
++1
+die konvexe Hülle der Standard-Basisvektoren
+e
+0
+; : : : ; e
+n
+.
+Dann heiÿt
+
+n
+Standard-Simplex
+und
+n
+die D imension des Simplex.
+b)
+Für Punkte
+v
+0
+; : : : ; v
+k
+im
+R
+n
+in allgemeiner Lage heiÿt
+(
+v
+0
+; : : : ; v
+k
+) =
+conv
+(
+v
+0
+; : : : ; v
+k
+)
+ein
+k
+-Simplex
+in
+R
+n
+.
+c)
+Ist
+(
+v
+0
+; : : : ; v
+k
+)
+ein
+k
+-Simplex und
+I
+=
+f
+i
+0
+; : : : ; i
+r
+g  f
+0
+; : : : ; k
+g
+, so ist
+s
+i
+0
+;:::;i
+r
+:=
+conv (
+v
+i
+0
+; : : : ; v
+i
+r
+)
+ein
+r
+-Simplex und heiÿt
+Teilsimplex
+o der
+Seite
+von
+
+.
+(a)
+ 0-Simplex
+
+0
+1
+2
+3
+1
+2
+3
+e
+0
+e
+1
+(b)
+ 1-S imp lex
+
+1
+1
+2
+3
+1
+2
+3
+e
+0
+e
+1
+e
+2
+(c)
+ 2-Si mp lex
+
+2
+e
+0
+e
+1
+e
+2
+e
+3
+(d)
+ 3-Simplex
+
+3
+Abbildung 2.6
+:
+ Beispiele für
+k
+-Simplexe
+De˝nition 36
+a)
+Eine endliche Menge
+K
+von Simplizes im
+R
+n
+heiÿt (endlicher)
+Simplizialkomplex
+,
+wenn gilt:
+(i)
+ Für
+
+2
+K
+und
+S
+
+
+Teilsimplex ist
+S
+2
+K
+.
+(ii)
+ Für
+
+1
+;
+
+2
+2
+K
+ist
+
+1
+\
+
+2
+leer o der ein Teilsimplex von
+
+1
+und von
+
+2
+.
+b)
+j
+K
+j
+:=
+S
+
+2
+K
+
+(mit Teilraumtop ologie) heiÿt
+geometrische Realisierung
+von
+K
+.
+c)
+ Ist
+d
+= max
+f
+k
+2
+N
+0
+j
+K
+enthält
+k
+-Simplex
+g
+, so heiÿt
+d
+die
+Dimension
+von
+K
+.
+36
+2.3. SIMPLIZIALKOMPLEX
+(a)
+ 1D Simplizialkomplex
+(b)
+2D Simplizialkomplex
+(ohne untere Fläche!)
+(c)
+ 2D Simplizialkomplex
+(d)
+ 1D Simplizialkomplex
+(e)
+ 2D Simplizialkomplex
+P
+(f )
+P
+ist kein Teilsimplex, da Eigen-
+schaft
+ Punkt b .ii
+ verletzt ist
+P
+(g)
+ Simpl izial komplex
+Abbildung 2.7
+:
+ Beispiele für Simplizialkomplexe
+De˝nition 37
+Seien
+K ; L
+Simplizialkomplexe. Eine stetige Abbildung
+f
+:
+j
+K
+j ! j
+L
+j
+heiÿt
+simplizial
+, wenn für jedes
+
+2
+K
+gilt:
+a)
+f
+()
+2
+L
+b)
+f
+j
+
+: 
+!
+f
+()
+ist eine a˚ne Abbildung.
+Beispiel 26 (Simpliziale Abbildungen)
+1)
+'
+(
+e
+1
+) :=
+b
+1
+,
+'
+(
+e
+2
+) :=
+b
+2
+'
+ist eine eindeutig b estimmte lineare Abbildung
+37
+2.3. SIMPLIZIALKOMPLEX
+0
+e
+2
+e
+1
+0
+b
+1
+b
+2
+'
+2)
+ Folgende Abbildung
+'
+: 
+n
+!
+
+n
+
+1
+ist simplizial:
+'
+3)
+ Tori können simplizial auf Sphären abgebildet werden (vgl.
+ Abbildung 2.8
+)
+Abbildung 2.8
+:
+ Abbildung eines Torus auf eine Sphäre
+De˝nition 38
+Sei
+K
+ein endlicher Simplizialkomplex. Für
+n
+
+0
+sei
+a
+n
+(
+K
+)
+die Anzahl der
+n
+-Simplizes in
+K
+.
+Dann heiÿt
+˜
+(
+K
+) :=
+dim
+K
+X
+n
+=0
+(
+
+1)
+n
+a
+n
+(
+K
+)
+Eulerzahl
+(o der Euler-Charakteristik) von
+K
+.
+Beispiel 27
+1)
+˜
+(
+1
+) = 2
+
+1 = 1
+˜
+(
+2
+) = 3
+
+3 + 1 = 1
+˜
+(
+3
+) = 4
+
+6 + 4
+
+1 = 1
+2)
+˜
+(
+Oktaeder-Ob er˛äche
+) = 6
+
+12 + 8 = 2
+˜
+(
+Rand des Tetraeders
+) = 2
+˜
+(
+Ikosaeder
+) = 12
+
+30 + 20 = 2
+3)
+˜
+(
+Würfel
+) = 8
+
+12 + 6 = 2
+˜
+(
+Würfel, unterteilt in Dreiecks˛ächen
+) = 8
+
+(12 + 6) + (6
+
+2) = 2
+Bemerkung 33
+˜
+(
+n
+) = 1
+für jedes
+n
+2
+N
+0
+38
+2.3. SIMPLIZIALKOMPLEX
+Beweis:
+
+n
+ist die konvexe Hülle von
+(
+e
+0
+; : : : ; e
+n
+)
+in
+R
+n
++1
+. Jede
+(
+k
++ 1)
+-elementige Teilmenge
+von
+f
+e
+0
+; : : : ; e
+n
+g
+de˝niert ein
+k
+-Simplex.
+)
+a
+k
+(
+n
+) =
+
+n
++1
+k
++1
+
+; k
+= 0
+; : : : ; n
+)
+˜
+(
+n
+) =
+P
+n
+k
+=0
+(
+
+1)
+k
+
+n
++1
+k
++1
+
+f
+(
+x
+) = (
+x
++ 1)
+n
++1
+Binomischer
+Lehrsatz
+=
+P
+n
++1
+k
+=0
+
+n
++1
+k
+
+x
+k
+)
+0 =
+P
+n
++1
+k
+=0
+
+n
++1
+k
+
+(
+
+1)
+k
+=
+˜
+(
+n
+)
+
+1
+)
+˜
+(
+n
+) = 1
+
+De˝nition 39
+a)
+ Ein 1D-Simplizialkomplex heiÿt
+Graph
+.
+b)
+ Ein Graph, der homö omorph zu
+S
+1
+ist, heiÿt
+Kreis
+.
+c)
+ Ein zusammenhängender Graph heiÿt
+Baum
+, wenn er keinen Kreis enthält.
+(a)
+Dies wird häu˝g auch als
+Multigraph b ezeichnet.
+(b)
+Planare Einb ettung des Te-
+traeders
+(c)
+K
+5
+(d)
+K
+3
+;
+3
+Abbildung 2.9
+:
+ Beispiele für Graphen
+Bemerkung 34
+Für jeden Baum
+T
+gilt
+˜
+(
+T
+) = 1
+.
+Beweis:
+Induktion üb er die Anzahl der E cken.
+Bemerkung 35
+a)
+Jeder zusammenhängende Graph
+
+enthält einen Teilbaum
+T
+, der alle Ecken von
+
+enthält.
+2
+b)
+ Ist
+n
+=
+a
+1
+
+
+a
+1
+(
+T
+)
+, so ist
+˜
+ = 1
+
+n
+.
+Beweis:
+a)
+ Siehe Algorithmus von Kruskal.
+2
+T
+wird Spannbaum genannt.
+39
+2.3. SIMPLIZIALKOMPLEX
+b)
+˜
+ =
+a
+0
+
+
+a
+1
+
+=
+a
+0
+
+
+(
+n
++
+a
+1
+(
+T
+))
+=
+a
+0
+(
+T
+)
+
+a
+1
+(
+T
+)
+
+n
+=
+˜
+(
+T
+)
+
+n
+= 1
+
+n
+Bemerkung 36
+Sei
+
+ein
+n
+-Simplex und
+x
+2
+
+
+
+R
+n
+. Sei
+K
+der Simplizialkomplex, der aus
+
+durch
+Unterteilung in
+x
+entsteht. Dann ist
+˜
+(
+K
+) =
+˜
+() = 1
+.
+(a)
+K
+(b)
+
+, das aus
+K
+durch Unter-
+teilung entsteht
+Abbildung 2.10
+:
+ Beispiel für
+ Bemerkung 36
+.
+Beweis:
+˜
+(
+K
+) =
+˜
+()
+
+(
+
+1)
+n
+|
+{z
+}
+n
+-Simplex
++
+n
+X
+k
+=0
+(
+
+1)
+k
+
+n
++ 1
+k
+
+|
+{z
+}
+(1+(
+
+1))
+n
++1
+=
+˜
+()
+
+De˝nition 40
+Sei
+X
+ein top ologischer Raum,
+K
+ein Simplizialkomplex und
+h
+:
+j
+K
+j !
+X
+ein Homö omorphismus von der geometrischen Realisierung
+j
+K
+j
+auf
+X
+. Dann heiÿt
+h
+eine
+Triangulierung
+von
+X
+.
+Beispiel 28 (Triangulierung des Torus)
+Für eine Triangulierung des Torus werden mindestens 14 Dreiecke b enötigt. Beispiele für
+fehlerhafte Triangulierungen sind in
+ Beispiel 28
+ zu sehen. Korrekte Triangulierungen sind
+in
+ B eispiel 28
+.
+Satz 2.1 (Eulersche Polyederformel)
+Sei
+P
+ein konvexes Polyeder in
+R
+3
+, d. h.
+@ P
+ist ein 2-dimensionaler Simplizialkomplex,
+so dass gilt:
+8
+x; y
+2
+@ P
+: [
+x; y
+]
+
+P
+Dann ist
+˜
+(
+@ P
+) = 2
+.
+Beweis:
+1)
+ Die Aussage ist richtig für den Tetraeder.
+2)
+O. B. d. A. sei
+0
+2
+P
+und
+P
+
+B
+1
+(0)
+. Pro jeziere
+@ P
+von
+0
+aus auf
+@
+B
+1
+(0) =
+S
+2
+.
+Erhalte Triangulierung von
+S
+2
+.
+40
+2.3. SIMPLIZIALKOMPLEX
+(a)
+Die b eiden markierten Dreiecke schneiden sich im
+Mittelpunkt und in einer Seite.
+(b)
+Die b eiden marki erten Dreiecke schneiden sich im
+Mittelpunkt und auÿen.
+Abbildung 2.11
+:
+ Fehlerhafte Triangulierungen
+(a)
+ Einfache Triangulierung
+(b)
+ Minimale Trian gu lierung
+Abbildung 2.12
+:
+ Triangulierungen des Torus
+41
+2.3. SIMPLIZIALKOMPLEX
+3)
+Sind
+P
+1
+und
+P
+2
+konvexe Polygone und
+T
+1
+; T
+2
+die zugehörigen Triangulierungen von
+S
+2
+, so gibt es eine Triangulierung
+T
+, die sowohl um
+T
+1
+als auch um
+T
+2
+Verfeinerung
+ist (vgl.
+ Abbildung 2.13
+).
+T
+1
+T
+2
+T
+Abbildung 2.13
+:
+T
+ist eine Triangulierung, die für
+T
+1
+und
+T
+2
+eine Verfeinerung ist.
+Nach
+ Bemerkung 36
+ ist
+˜
+(
+@ P
+1
+) =
+˜
+(
+T
+1
+) =
+˜
+(
+T
+) =
+˜
+(
+T
+2
+) =
+˜
+(
+@ P
+2
+) = 2
+, weil o. B. d. A.
+P
+2
+ein Tetraeder ist.
+Bemerkung 37 (Der Rand vom Rand ist 0)
+Sei
+K
+ein endlicher Simplizialkomplex mit Knotenmenge
+V
+und
+<
+eine Totalordnung auf
+V
+.
+Sei
+A
+n
+die Menge der
+n
+-Simplizes in
+K
+, d. h.
+A
+n
+(
+K
+) :=
+f
+˙
+2
+K
+j
+dim(
+˙
+) =
+n
+g
+für
+n
+= 0
+; : : : ; d
+= dim(
+K
+)
+und
+C
+n
+(
+K
+)
+der
+R
+-Vektorraum mit Basis
+A
+n
+(
+K
+)
+, d. h.
+C
+n
+(
+K
+) =
+8
+<
+:
+X
+˙
+2
+A
+n
+(
+K
+)
+c
+˙
+
+˙
+
+
+
+
+
+
+c
+˙
+2
+R
+9
+=
+;
+Sei
+˙
+= (
+x
+0
+; : : : ; x
+n
+)
+2
+A
+n
+(
+K
+)
+, so dass
+x
+0
+< x
+1
+<
+  
+< x
+n
+.
+Für
+i
+= 0
+; : : : ; n
+sei
+@
+i
+˙
+:= (
+x
+0
+; : : : ;
+^
+x
+i
+; : : : ; x
+n
+)
+die
+i
+-te Seite von
+˙
+und
+d
+˙
+=
+d
+n
+˙
+:=
+P
+i
+=0
+(
+
+1)
+i
+@
+i
+˙
+2
+C
+n
+
+1
+(
+K
+)
+und
+d
+n
+:
+C
+n
+(
+K
+)
+!
+C
+n
+
+1
+(
+K
+)
+die dadurch de˝nierte lineare
+Abbildung.
+Dann gilt:
+d
+n
+
+1
+
+d
+n
+= 0
+a
+b
+c
+˙
+e
+3
+e
+1
+e
+2
+Abbildung 2.14
+:
+ Simplizialkomplex mit Totalordnung
+Beispiel 29
+Sei
+a < b < c
+. Dann gilt:
+d
+2
+˙
+=
+e
+1
+
+e
+2
++
+e
+3
+d
+1
+(
+e
+1
+
+e
+2
++
+e
+3
+) = (
+c
+
+b
+)
+
+(
+c
+
+a
+) + (
+b
+
+a
+)
+42
+2.3. SIMPLIZIALKOMPLEX
+= 0
+Sei
+a < b < c < d
+. Dann gilt für Tetraeder:
+d
+3
+((
+a; b; c; d
+)) =  (
+b; c; d
+)
+
+(
+a; c; d
+) + (
+a; b; d
+)
+
+(
+a; b; c
+)
+;
+wob ei:
+d
+2
+( (
+b; c; d
+)) =
+ (
+c; d
+)
+
+(
+b; d
+)
+ +
+ (
+b; c
+)
+d
+2
+(
+
+(
+a; c; d
+)) =
+
+(
+c; d
+)
+ +
+ (
+a; d
+)
+
+(
+a; c
+)
+d
+2
+( (
+a; b; d
+)) =
+ (
+b; d
+)
+
+(
+a; d
+)
+ +
+ (
+a; b
+)
+d
+2
+(
+
+(
+a; b; c
+)) =
+
+(
+b; c
+)
+ +
+ (
+a; c
+)
+
+(
+a; b
+)
+)
+d
+2
+(
+d
+3
+((
+a; b; c; d
+))) = 0
+Beweis:
+Sei
+˙
+2
+A
+n
+. D ann gilt:
+d
+n
+
+1
+(
+d
+n
+˙
+) =
+d
+n
+
+1
+(
+n
+X
+i
+=0
+(
+
+1)
+i
+@
+i
+˙
+)
+=
+n
+X
+i
+=0
+(
+
+1)
+i
+d
+n
+
+1
+(
+@
+i
+˙
+)
+=
+n
+X
+i
+=0
+(
+
+1)
+i
+n
+
+1
+X
+j
+=0
+@
+i
+(
+@
+j
+˙
+)(
+
+1)
+j
+=
+X
+0
+
+i
+
+j
+
+n
+
+1
+(
+
+1)
+i
++
+j
+@
+j
+(
+@
+i
+(
+˙
+)) +
+X
+0
+
+j <i
+
+n
+(
+
+1)
+i
++
+j
+@
+i
+
+1
+(
+@
+j
+˙
+)
+= 0
+weil jeder Summand aus der ersten Summe auch in der zweiten Summe vorkommt, ab er mit
+umgekehrten Vorzeichen.
+
+De˝nition 41
+Sei
+K
+ein Simplizialkomplex,
+Z
+n
+:=
+Kern
+(
+d
+n
+)
+
+C
+n
+und
+B
+n
+:=
+Bild
+(
+d
+n
++1
+)
+
+C
+n
+.
+a)
+H
+n
+=
+H
+n
+(
+K ;
+R
+) :=
+Z
+n
+=B
+n
+heiÿt
+n
+-te
+Homologiegrupp e
+von
+K
+.
+b)
+b
+n
+(
+K
+) := dim
+R
+H
+n
+heiÿt
+n
+-te
+Betti-Zahl
+von
+K
+.
+Bemerkung 38
+Nach
+ Bemerkung 37
+ ist
+B
+n
+
+Z
+n
+, denn
+d
+n
++1
+(
+C
+)
+2
+Kern
+(
+d
+n
+)
+für
+C
+2
+C
+n
++1
+.
+Satz 2.2
+Für jeden endlichen Simplizialkomplex
+K
+der Dimension
+d
+gilt:
+d
+X
+k
+=0
+(
+
+1)
+k
+b
+k
+(
+K
+) =
+d
+X
+k
+=0
+(
+
+1)
+k
+a
+k
+(
+K
+) =
+˜
+(
+K
+)
+Bemerkung 39
+Es gilt nicht
+a
+k
+=
+b
+k
+8
+k
+2
+N
+0
+.
+43
+2.3. SIMPLIZIALKOMPLEX
+Beweis:
+
+Dimensionsformel für
+d
+n
+:
+a
+n
+= dim
+Z
+n
++ dim
+B
+n
+
+1
+für
+n
+
+1
+
+Dimensionsformel für
+Z
+n
+!
+H
+n
+=
+Z
+n
+=B
+n
+: dim
+Z
+n
+=
+b
+n
++ dim
+B
+n
+
+dim
+Z
+d
+=
+b
+d
+, da
+dim
+Z
+d
+=
+b
+d
++ dim
+B
+d
+, wob ei
+dim
+B
+d
+= 0
+, da
+a
+d
++1
+= 0
+
+a
+0
+
+dim
+B
+0
+=
+b
+0
+, da
+a
+0
+
+dim
+B
+0
+=
+a
+0
+
+dim
+Z
+0
++
+b
+0
+und
+a
+0
+=
+dim
+Z
+0
+, weil
+a
+
+1
+= 0
+)
+d
+X
+k
+=0
+(
+
+1)
+k
+a
+k
+=
+a
+0
++
+d
+X
+k
+=1
+(
+
+1)
+k
+(dim
+Z
+k
++ dim
+B
+k
+
+1
+)
+=
+a
+0
++
+d
+X
+k
+=1
+(
+
+1)
+k
+dim
+Z
+k
++
+d
+
+1
+X
+k
+=0
+(
+
+1)
+k
++1
+dim
+B
+k
+=
+a
+0
++
+d
+X
+k
+=1
+(
+
+1)
+k
+dim
+Z
+k
+
+d
+
+1
+X
+k
+=0
+(
+
+1)
+k
+dim
+B
+k
+=
+a
+0
++
+d
+
+1
+X
+k
+=1
+(
+
+1)
+k
+b
+k
++ (
+
+1)
+d
+dim
+Z
+d
+|
+{z
+}
+=
+b
+d
+
+dim
+B
+0
+=
+b
+0
++
+d
+
+1
+X
+k
+=1
+(
+
+1)
+k
+b
+k
++ (
+
+1)
+d
+b
+d
+=
+d
+X
+k
+=0
+(
+
+1)
+k
+b
+k
+44
+2.3. SIMPLIZIALKOMPLEX
+Übungsaufgab en
+Aufgab e 7 (Zusammenhang)
+(a)
+Beweisen Sie, dass eine top ologische Mannigfaltigkeit genau dann wegzusammenhän-
+gend ist, wenn sie zusammenhängend ist
+(b)
+Betrachten Sie nun wie in
+ Beispiel 20.8
+ den Raum
+X
+:= (
+R
+n f
+0
+g
+)
+[ f
+0
+1
+;
+0
+2
+g
+versehen
+mit der dort de˝nierten Top ologie. Ist
+X
+wegzusammenhängend?
+3 Fund amentalgrupp e und Üb erlagerungen
+3.1 Homotopie von Wegen
+a
+b
+
+1
+
+2
+(a)
+
+1
+und
+
+2
+sind homotop,
+da man sie zueinander ver-
+schi eb en kann.
+a
+b
+
+1
+
+2
+(b)
+
+1
+und
+
+2
+sind wegen dem
+Hindernis nicht homotop.
+Abbildung 3.1
+:
+ Beispiele für Wege
+
+1
+und
+
+2
+De˝nition 42
+Sei
+X
+ein top ologischer Raum,
+a; b
+2
+X
+,
+
+1
+; 
+2
+:
+I
+!
+X
+Wege von
+a
+nach
+b
+, d. h.
+
+1
+(0) =
+
+2
+(0) =
+a
+,
+
+1
+(1) =
+
+2
+(1) =
+b
+
+1
+und
+
+2
+heiÿen
+homotop
+, wenn es eine stetige Abbildung
+H
+:
+I
+
+I
+!
+X
+mit
+H
+(
+t;
+0) =
+
+1
+(
+t
+)
+8
+t
+2
+I
+H
+(
+t;
+1) =
+
+2
+(
+t
+)
+8
+t
+2
+I
+und
+H
+(0
+; s
+) =
+a
+und
+H
+(1
+; s
+) =
+b
+für alle
+s
+2
+I
+gibt. Dann schreibt man:
+
+1
+˘
+
+2
+H
+heiÿt
+Homotopie
+zwischen
+
+1
+und
+
+2
+.
+Bemerkung 40
+Sei
+X
+ein top ologischer Raum,
+a; b
+2
+X
+,
+
+1
+; 
+2
+:
+I
+!
+X
+Wege von
+a
+nach
+b
+und
+H
+eine
+Homotopie zwischen
+
+1
+und
+
+2
+.
+Dann gilt: Der Weg
+
+s
+:
+I
+!
+X ; 
+s
+(
+t
+) =
+H
+(
+t; s
+)
+ist Weg in
+X
+von
+a
+nach
+b
+für jedes
+s
+2
+I
+.
+Beweis:
+H
+ist stetig, also ist
+H
+(
+t; s
+)
+insb esondere für jedes feste
+s
+stetig. Da
+H
+(0
+; s
+) =
+a
+und
+H
+(1
+; s
+) =
+b
+für alle
+s
+2
+I
+und
+
+s
+eine Abbildung von
+I
+auf
+X
+ist, ist
+
+s
+ein Weg in
+X
+von
+a
+nach
+b
+für jedes
+s
+2
+I
+.
+
+Bemerkung 41
+Durch Homotopie wird eine Äquivalenzrelation auf der Menge aller Wege in
+X
+von
+a
+nach
+b
+de˝niert.
+Beweis:
+46
+3.1. HOMOTOPIE VON WEGEN
+
+re˛exiv:
+H
+(
+t; s
+) =
+
+(
+t
+)
+für alle
+(
+t; s
+)
+2
+I
+
+I
+
+symmetrisch:
+H
+0
+(
+t; s
+) =
+H
+(
+t;
+1
+
+s
+)
+für alle
+(
+t; s
+)
+2
+I
+
+I
+
+transitiv: Seien
+H
+0
+bzw.
+H
+00
+Homotopien von
+
+1
+nach
+
+2
+bzw. von
+
+2
+nach
+
+3
+.
+Dann sei
+H
+(
+t; s
+) :=
+(
+H
+0
+(
+t;
+2
+s
+)
+falls
+0
+
+s
+
+1
+2
+H
+00
+(
+t;
+2
+s
+
+1)
+falls
+1
+2
+
+s
+
+1
+)
+H
+ist stetig und Homotopie von
+
+1
+nach
+
+3
+.
+
+Beispiel 30
+1)
+ Sei
+X
+=
+S
+1
+.
+
+1
+und
+
+2
+aus
+ Abbildung 3.3a
+ nicht homotop.
+2)
+ Sei
+X
+=
+T
+2
+.
+
+1
+; 
+2
+und
+
+3
+aus
+ Abbildung 3.3b
+ sind paarweise nicht homotop.
+3)
+ Sei
+X
+=
+R
+2
+und
+a
+=
+b
+= (0
+;
+0)
+.
+Je zwei Wege im
+R
+2
+mit Anfangs- und Endpunkt
+(0
+;
+0)
+sind homotop.
+Abbildung 3.2
+:
+ Zwei Wege im
+R
+2
+mit Anfangs- und Endpunkt
+(0
+;
+0)
+Sei
+
+0
+:
+I
+!
+R
+2
+der konstante Weg
+
+0
+(
+t
+) = (0
+;
+0)
+8
+t
+2
+I
+. Sei
+
+(0) =
+
+(1) = (0
+;
+0)
+.
+H
+(
+t; s
+) := (1
+
+s
+)
+
+(
+t
+)
+ist stetig,
+H
+(
+t;
+0) =
+
+(
+t
+)
+8
+t
+2
+I
+und
+H
+(
+t;
+1) = (0
+;
+0)
+8
+t
+2
+I
+.
+Bemerkung 42
+Sei
+X
+ein top ologischer Raum,
+
+:
+I
+!
+X
+ein Weg und
+'
+:
+I
+!
+I
+stetig mit
+'
+(0) = 0
+,
+'
+(1) = 1
+. D ann sind
+
+und
+
+
+'
+homotop.
+Beweis:
+Sei
+H
+(
+t; s
+) =
+
+((1
+
+s
+)
+t
++
+s
+
+'
+(
+t
+))
+.
+Dann ist
+H
+stetig,
+H
+(
+t;
+0) =
+
+(
+t
+)
+; H
+(
+t;
+1) =
+
+(
+'
+(
+t
+))
+; H
+(0
+; s
+) =
+
+(0)
+und
+H
+(1
+; s
+) =
+
+(1
+
+s
++
+s
+) =
+
+(1)
+)
+H
+ist Homotopie.
+
+47
+3.1. HOMOTOPIE VON WEGEN
+a
+b
+
+1
+
+2
+(a)
+ Kreis mit zwei Wegen
+(b)
+ Torus mit drei Wegen
+Abbildung 3.3
+:
+ Beispiele für (nicht)-Homotopie von Wegen
+De˝nition 43
+Seien
+
+1
+; 
+2
+Wege in
+X
+mit
+
+1
+(1) =
+
+2
+(0)
+. Dann ist
+
+(
+t
+) =
+(
+
+1
+(2
+t
+)
+falls
+0
+
+t <
+1
+2
+
+2
+(2
+t
+
+1)
+falls
+1
+2
+
+t
+
+1
+ein Weg in
+X
+. E r heiÿt
+zusammengesetzter Weg
+und man schreibt
+
+=
+
+1
+
+
+2
+.
+Bemerkung 43
+Das Zusammensetzen von Wegen ist nur bis auf Homotopie assoziativ, d. h.:
+
+1
+
+(
+
+2
+
+
+3
+)
+6
+= (
+
+1
+
+
+2
+)
+
+
+3
+
+1
+
+(
+
+2
+
+
+3
+)
+˘
+(
+
+1
+
+
+2
+)
+
+
+3
+mit
+
+1
+(1) =
+
+2
+(0)
+und
+
+2
+(1) =
+
+3
+(0)
+.
+
+1
+
+2
+
+3
+0
+1
+=
+2
+3
+=
+4
+1
+(a)
+
+1
+
+(
+
+2
+
+
+3
+)
+
+1
+
+2
+
+3
+0
+1
+=
+4
+1
+=
+2
+1
+(b)
+(
+
+1
+
+
+2
+)
+
+
+3
+Abbildung 3.4
+:
+ Das Zusammensetzen von Wegen ist nicht assoziativ
+Beweis:
+Das Zusammensetzen von Wegen ist wegen
+ Bemerkung 42
+ bis auf Homotopie assoziativ.
+Verwende dazu
+'
+(
+t
+) =
+8
+>
+<
+>
+:
+1
+2
+t
+falls
+0
+
+t <
+1
+2
+t
+
+1
+4
+falls
+1
+2
+
+t <
+3
+4
+2
+t
+
+1
+falls
+3
+4
+
+t
+
+1
+Bemerkung 44
+Sei
+X
+ein top ologischer Raum,
+a; b; c
+2
+X
+,
+
+1
+; 
+0
+1
+Wege von
+a
+nach
+b
+und
+
+2
+; 
+0
+2
+Wege von
+b
+nach
+c
+.
+Sind
+
+1
+˘
+
+0
+1
+und
+
+2
+˘
+
+0
+2
+, so ist
+
+1
+
+
+2
+˘
+
+0
+1
+
+
+0
+2
+.
+48
+3.2. FUNDAMENTALGRUPPE
+
+1
+
+0
+1
+a
+b
+c
+
+0
+2
+
+2
+Abbildung 3.5
+:
+ Situation aus
+ Bemerkung 44
+.
+Beweis:
+Sei
+H
+i
+eine Homotopie zwischen
+
+i
+und
+
+0
+i
+,
+i
+= 1
+;
+2
+.
+Dann ist
+H
+(
+t; s
+) :=
+(
+H
+1
+(2
+t; s
+)
+falls
+0
+
+t
+
+1
+2
+8
+s
+2
+I
+H
+2
+(2
+t
+
+1
+; s
+)
+falls
+1
+2
+
+t
+
+1
+eine Homotopie zwischen
+
+1
+
+
+2
+und
+
+0
+1
+
+
+0
+2
+.
+Eine sp ezielle Homotopieäquivalenz sind sog. Deformationsretraktionen:
+De˝nition 44
+Sei
+X
+ein top ologischer Raum,
+A
+
+X
+,
+r
+:
+X
+!
+A
+eine stetige Abbildung und
+
+= (
+id
+X
+)
+j
+A
+.
+a)
+
+:
+A
+!
+X
+mit
+
+(
+x
+) =
+x
+heiÿt die
+Inklusionsabbildung
+und man schreibt:
+
+:
+A ,
+!
+X
+.
+b)
+r
+heiÿt
+Retraktion
+, wenn
+r
+j
+A
+=
+id
+A
+ist.
+c)
+A
+heiÿt
+Deformationsretrakt
+, wenn es eine Retraktion
+r
+auf
+A
+mit
+
+
+r
+˘
+id
+X
+gibt.
+Beispiel 31 (Zylinder auf Kreis)
+Sei
+X
+=
+S
+1
+
+R
+ein top ologischer Raum und
+r
+:
+S
+1
+
+R
+!
+S
+1
+ f
+0
+g
+˘
+=
+S
+1
+mit
+r
+(
+x; y
+) := (
+x;
+0)
+eine Abbildung.
+r
+ist eine Retraktion, da
+r
+j
+S
+1
+˘
+=
+id
+S
+1
+.
+
+
+r
+:
+S
+1
+
+R
+!
+S
+1
+
+R
+(
+x; y
+)
+7!
+(
+x;
+0)
+H
+: (
+S
+1
+
+R
+)
+
+I
+!
+S
+1
+
+R
+(
+x; y ; t
+)
+7!
+(
+x; ty
+)
+3.2 Fund amentalgrupp e
+Für einen Weg
+
+sei
+[
+
+]
+seine
+Homotopieklasse
+.
+De˝nition 45
+Sei
+X
+ein top ologischer Raum und
+x
+2
+X
+. Sei auÿerdem
+ˇ
+1
+(
+X ; x
+) :=
+f
+[
+
+]
+j
+
+ist Weg in
+X
+mit
+
+(0) =
+
+(1) =
+x
+g
+49
+3.2. FUNDAMENTALGRUPPE
+Durch
+[
+
+1
+]
+
+G
+[
+
+2
+] := [
+
+1
+
+
+2
+]
+wird
+ˇ
+1
+(
+X ; x
+)
+zu einer Grupp e. Diese Grupp e heiÿt
+Funda-
+mentalgrupp e
+von
+X
+im Basispunkt
+x
+.
+Bemerkung 45
+Im
+R
+2
+gibt es nur eine Homotopieklasse.
+Beweis: (Fundamentalgrupp e ist eine Grupp e)
+a)
+ Abgeschlossenheit folgt direkt aus der De˝nition von
+
+G
+b)
+ Assoziativität folgt aus
+ Bemerkung 43
+c)
+ Neutrales Element
+e
+= [
+
+0
+]
+; 
+0
+(
+t
+) =
+x
+8
+t
+2
+I
+.
+e
+
+[
+
+] = [
+
+] = [
+
+]
+
+e
+, da
+
+0
+
+
+˘
+
+d)
+ Inverses Element
+[
+
+]
+
+1
+= [
+
+] = [
+
+(1
+
+t
+)]
+, denn
+
+
+
+˘
+
+0
+˘
+
+
+
+Beispiel 32
+1)
+S
+1
+=
+f
+z
+2
+C
+j j
+z
+j
+= 1
+g
+=
+
+(cos
+';
+sin
+'
+)
+2
+R
+2
+
+
+0
+
+'
+
+2
+ˇ
+	
+ˇ
+1
+(
+S
+1
+;
+1) =
+
+[
+
+k
+]
+
+
+k
+2
+Z
+	
+˘
+=
+Z
+. Dab ei ist
+
+(
+t
+) =
+e
+2
+ˇ i t
+=
+cos
+(2
+ˇ t
+) +
+i
+sin
+(2
+ˇ t
+)
+und
+
+k
+:=
+
+    
+
+|
+{z
+}
+k
+mal
+[
+
+k
+]
+7!
+k
+ist ein Isomorphismus.
+2)
+ˇ
+1
+(
+R
+2
+;
+0) =
+ˇ
+1
+(
+R
+2
+; x
+) =
+f
+e
+g
+für jedes
+x
+2
+R
+2
+3)
+ˇ
+1
+(
+R
+n
+; x
+) =
+f
+e
+g
+für jedes
+x
+2
+R
+n
+4)
+G
+
+R
+n
+heiÿt
+sternförmig
+bzgl.
+x
+2
+G
+, wenn für jedes
+y
+2
+G
+auch die Strecke
+[
+x; y
+]
+
+G
+ist.
+Für jedes sternförmige
+G
+
+R
+n
+ist
+ˇ
+1
+(
+G; x
+) =
+f
+e
+g
+x
+Abbildung 3.6
+:
+ Sternförmiges Gebiet
+.
+5)
+ˇ
+1
+(
+S
+2
+; x
+0
+) =
+f
+e
+g
+, da im
+R
+2
+alle Wege homotop zu
+f
+e
+g
+sind. Mithilfe der stereogra-
+phischen Pro jektion kann von
+S
+2
+auf den
+R
+2
+abgebildet werden.
+Dieses Argument funktioniert nicht mehr b ei ˛ächenfüllenden Wegen, d. h. wenn
+
+:
+I
+!
+S
+2
+surjektiv ist.
+Bemerkung 46
+Sei
+X
+ein top ologischer Raum,
+a; b
+2
+X
+,
+
+:
+I
+!
+X
+ein Weg von
+a
+nach
+b
+.
+Dann ist die Abbildung
+
+:
+ˇ
+1
+(
+X ; a
+)
+!
+ˇ
+1
+(
+X ; b
+) [
+
+]
+7!
+[
+
+
+
+
+
+]
+ein Grupp enisomorphismus.
+50
+3.2. FUNDAMENTALGRUPPE
+a
+b
+
+
+Abbildung 3.7
+:
+ Situation aus
+ Bemerkung 46
+.
+Beweis:
+
+([
+
+1
+]
+
+[
+
+2
+]) = [
+
+
+(
+
+1
+
+
+2
+)
+
+
+]
+= [
+
+
+
+1
+
+
+
+
+
+
+2
+
+
+]
+= [
+
+
+
+1
+
+
+]
+
+[
+
+
+
+2
+
+
+]
+=
+
+([
+
+1
+])
+
+
+([
+
+2
+])
+De˝nition 46
+Ein wegzusammenhängender top ologischer Raum
+X
+heiÿt
+einfach zusammenhängend
+,
+wenn
+ˇ
+1
+(
+X ; x
+) =
+f
+e
+g
+für ein
+x
+2
+X
+.
+Wenn
+ˇ
+1
+(
+X ; x
+) =
+f
+e
+g
+für ein
+x
+2
+X
+gilt, dann wegen
+ Bemerkung 46
+ sogar für alle
+x
+2
+X
+.
+Bemerkung 47
+Es seien
+X ; Y
+top ologische Räume,
+f
+:
+X
+!
+Y
+eine stetige Abbildung,
+x
+2
+X ; y
+:=
+f
+(
+x
+)
+2
+Y
+.
+a)
+Dann ist die Abbildung
+f
+
+:
+ˇ
+1
+(
+X ; x
+)
+!
+ˇ
+1
+(
+Y ; y
+)
+;
+[
+
+]
+!
+[
+f
+
+
+]
+ein Grupp enhomomor-
+phismus.
+b)
+Ist
+Z
+ein weiterer top ologischer Raum und
+g
+:
+Y
+!
+Z
+eine stetige Abbildung
+z
+:=
+g
+(
+y
+)
+.
+Dann ist
+(
+g
+
+f
+)
+
+=
+g
+
+
+f
+
+:
+ˇ
+1
+(
+X ; x
+)
+!
+ˇ
+1
+(
+Z ; z
+)
+Beweis:
+a)
+f
+
+ist wohlde˝niert: Seien
+
+1
+; 
+2
+homotop e Wege von
+x
+. z.Z.:
+f
+
+
+1
+˘
+f
+
+
+2
+: Nach
+Voraussetzung gibt es stetige Abbildungen
+H
+:
+I
+
+I
+!
+X
+mit
+H
+(
+t;
+0) =
+
+1
+(
+t
+)
+;
+H
+(
+t;
+1) =
+
+2
+(
+t
+)
+;
+H
+(0
+; s
+) =
+H
+(1
+; s
+) =
+x
+.
+Dann ist
+f
+
+H
+:
+I
+
+I
+!
+Y
+stetig mit
+(
+f
+
+H
+)(
+t;
+0) =
+f
+(
+H
+(
+t;
+0)) =
+f
+(
+
+1
+(
+t
+)) = (
+f
+
+
+1
+)(
+t
+)
+etc.
+)
+f
+
+
+1
+˘
+f
+
+
+2
+.
+f
+
+([
+
+1
+]
+
+[
+
+2
+]) = [
+f
+
+(
+
+1
+
+
+2
+)] = [(
+f
+
+
+1
+)]
+
+[(
+f
+
+
+2
+)] =
+f
+
+([
+
+1
+])
+
+f
+
+([
+
+2
+])
+b)
+(
+g
+
+f
+)
+
+([
+
+]) = [(
+g
+
+f
+)
+
+
+] = [
+g
+
+(
+f
+
+
+)] =
+g
+
+([
+f
+
+
+]) =
+g
+
+(
+f
+
+([
+
+])) = (
+g
+
+
+f
+
+)([
+
+])
+Beispiel 33
+1)
+f
+:
+S
+1
+,
+!
+R
+2
+ist injektiv, ab er
+f
+
+:
+ˇ
+1
+(
+S
+1
+;
+1)
+˘
+=
+Z
+!
+ˇ
+1
+(
+R
+2
+;
+1) =
+f
+e
+g
+ist nicht injektiv.
+2)
+f
+:
+R
+!
+S
+1
+; t
+7!
+(
+cos
+2
+ˇ t;
+sin
+2
+ˇ t
+)
+ist surjektiv, ab er
+f
+
+:
+ˇ
+1
+(
+R
+;
+0) =
+f
+e
+g !
+ˇ
+1
+(
+S
+1
+;
+1)
+˘
+=
+Z
+ist nicht surjektiv.
+51
+3.2. FUNDAMENTALGRUPPE
+Bemerkung 48
+Sei
+f
+:
+X
+!
+Y
+ein Homö omorphismus zwischen top ologischen Räumen
+X ; Y
+. Dann gilt:
+f
+
+:
+ˇ
+1
+(
+X ; x
+)
+!
+ˇ
+1
+(
+Y ; f
+(
+x
+))
+ist ein Isomorphismus für jedes
+x
+2
+X
+.
+Beweis:
+Sei
+g
+:
+Y
+!
+X
+die Umkehrabbildung, d. h.
+g
+ist stetig und
+f
+
+g
+=
+id
+Y
+,
+g
+
+f
+=
+id
+X
+)
+f
+
+
+g
+
+= (
+f
+
+g
+)
+
+= (
+id
+Y
+)
+
+=
+id
+ˇ
+1
+(
+Y ;f
+(
+X
+)
+und
+g
+
+
+f
+
+=
+id
+ˇ
+1
+(
+X ;x
+)
+.
+De˝nition 47
+Seien
+X ; Y
+top ologische Räume,
+x
+0
+2
+X ; y
+0
+2
+Y ; f ; g
+:
+X
+!
+Y
+stetig mit
+f
+(
+x
+0
+) =
+y
+0
+=
+g
+(
+x
+0
+)
+.
+f
+und
+g
+heiÿen
+homotop
+(
+f
+˘
+g
+), wenn es eine stetige Abbildung
+H
+:
+X
+
+I
+!
+Y
+mit
+H
+(
+x;
+0) =
+f
+(
+x
+)
+8
+x
+2
+X
+H
+(
+x;
+1) =
+g
+(
+x
+)
+8
+x
+2
+X
+H
+(
+x
+0
+; s
+) =
+y
+0
+8
+s
+2
+I
+gibt.
+Bemerkung 49
+Sind
+f
+und
+g
+homotop, so ist
+f
+
+=
+g
+
+:
+ˇ
+1
+(
+X ; x
+0
+)
+!
+ˇ
+1
+(
+Y ; y
+0
+)
+.
+Beweis:
+Sei
+
+ein geschlossener Weg in
+X
+um
+x
+0
+, d. h.
+[
+
+]
+2
+ˇ
+1
+(
+X ; x
+0
+)
+.
+Z. z.:
+f
+
+
+˘
+g
+
+
+Sei dazu
+H
+
+:
+I
+
+I
+!
+Y ;
+(
+t; s
+)
+7!
+H
+(
+
+(
+t
+)
+; s
+)
+. Dann gilt:
+H
+
+(
+t;
+0) =
+H
+(
+
+(
+t
+)
+;
+0) = (
+f
+
+
+)(
+t
+)
+8
+t
+2
+I
+H
+
+(1
+; s
+) =
+H
+(
+
+(1)
+; s
+) =
+H
+(
+x
+0
+; s
+) =
+y
+0
+8
+s
+2
+I
+H
+
+(
+t;
+1) =
+H
+(
+
+(
+t
+)
+;
+1) =
+g
+(
+
+(
+t
+))
+8
+t
+2
+I
+Beispiel 34
+f
+:
+X
+!
+Y ; g
+:
+Y
+!
+X
+mit
+g
+
+f
+˘
+id
+X
+; f
+
+g
+˘
+id
+Y
+)
+f
+
+ist Isomorphismus. Konkret:
+f
+:
+R
+2
+! f
+0
+g
+; g
+:
+f
+0
+g !
+R
+2
+)
+f
+
+g
+=
+id
+f
+0
+g
+,
+g
+
+f
+:
+R
+2
+!
+R
+2
+,
+x
+7!
+0
+für alle
+x
+.
+g
+
+f
+˘
+id
+R
+2
+mit Homotopie:
+H
+:
+R
+2
+
+I
+!
+R
+2
+; H
+(
+x; s
+) = (1
+
+s
+)
+x
+(stetig!)
+)
+H
+(
+x;
+0) =
+x
+=
+id
+R
+2
+(
+x
+)
+,
+H
+(
+x;
+1) = 0
+,
+H
+(0
+; s
+) = 0
+8
+s
+2
+I
+.
+Satz 3.1 (Satz von Seifert und van Kamp en light)
+Sei
+X
+ein top ologischer Raum,
+U; V
+
+X
+o˙en mit
+U
+[
+V
+=
+X
+und
+U
+\
+V
+wegzusam-
+menhängend.
+Dann wird
+ˇ
+1
+(
+X ; x
+)
+für
+x
+2
+U
+\
+V
+erzeugt von geschlossenen Wegen um
+x
+, die ganz in
+U
+o der ganz in
+V
+verlaufen.
+52
+3.3. ÜBERLAGERUNGEN
+Beweis:
+Sei
+
+:
+I
+!
+X
+ein geschlossener Weg um
+x
+. Üb erdecke
+I
+mit endlich vielen o˙enen
+Intervallen
+I
+1
+; I
+2
+; : : : ; I
+n
+, die ganz in
+
+
+1
+(
+U
+)
+o der ganz in
+
+
+1
+(
+V
+)
+liegen.
+O. B . d. A. sei
+
+(
+I
+1
+)
+
+U; 
+(
+I
+2
+)
+
+V
+, etc.
+Wähle
+t
+i
+2
+I
+i
+\
+I
+i
++1
+, also
+
+(
+t
+i
+)
+2
+U
+\
+V
+. Sei
+˙
+i
+Weg in
+U
+\
+V
+von
+x
+0
+nach
+
+(
+t
+i
+)
+)
+
+ist
+homotop zu
+
+1
+
+˙
+1
+|
+{z
+}
+in
+U
+
+˙
+1
+
+
+2
+
+˙
+2
+|
+{z
+}
+in
+V
+    
+˙
+n
+
+1
+
+
+2
+mit
+
+i
+:=
+
+j
+I
+i
+a
+b
+x
+Abbildung 3.8
+:
+ Top ologischer Raum
+X
+Beispiel 35 (Satz von Seif ert und van Kamp en)
+1)
+Sei
+X
+wie in
+ Abbildung 3.8
+.
+ˇ
+1
+(
+X ; x
+)
+wird frei erzeugt von
+a
+und
+b
+, weil
+ˇ
+1
+(
+U; x
+) =
+h
+a
+i
+˘
+=
+Z
+; ˇ
+1
+(
+V ; x
+) =
+h
+b
+i
+˘
+=
+Z
+, insb esondere ist
+a
+
+b
+nicht homotop zu
+b
+
+a
+.
+2)
+ Torus:
+ˇ
+1
+(
+T
+2
+; X
+)
+wird erzeugt von
+a
+und
+b
+.
+V
+U
+a
+b
+V
+a
+b
+Abbildung 3.9
+:
+a
+
+b
+=
+b
+
+a
+,
+a
+
+b
+
+a
+
+b
+˘
+e
+3.3 Üb erlagerungen
+De˝nition 48
+Es seien
+X ; Y
+zusammenhängende top ologische Räume und
+p
+:
+Y
+!
+X
+eine stetige Abbil-
+dung.
+p
+heiÿt
+Üb erlagerung
+, wenn jedes
+x
+2
+X
+eine o˙ene Umgebung
+U
+=
+U
+(
+x
+)
+
+X
+b esitzt,
+so dass
+p
+
+1
+(
+U
+)
+disjunkte Vereinigung von o˙enen Teilmengen
+V
+j
+
+Y
+ist
+(
+j
+2
+I
+)
+und
+p
+j
+V
+j
+:
+V
+j
+!
+U
+ein Homö omorphismus ist.
+j
+I
+j
+heiÿt
+Grad der Üb erlagerung
+p
+und man schreibt:
+deg
+p
+:=
+j
+I
+j
+53
+3.3. ÜBERLAGERUNGEN
+Abbildung 3.10
+:
+R
+!
+S
+1
+,
+t
+7!
+(cos 2
+ˇ t;
+sin 2
+ˇ t
+)
+Beispiel 36
+1)
+ siehe
+ Abbildung 3.10
+2)
+ siehe
+ Abbildung 3.11
+3)
+R
+n
+!
+T
+n
+=
+R
+n
+=
+Z
+n
+4)
+S
+n
+! P
+n
+(
+R
+)
+5)
+S
+1
+!
+S
+1
+,
+z
+7!
+z
+2
+, siehe
+ Abbildung 3.12
+0
+1
+2
+3
+4
+5
+6
+0
+1
+2
+3
+4
+5
+6
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+!
+Abbildung 3.11
+:
+R
+2
+!
+T
+2
+=
+R
+2
+=
+Z
+2
+Bemerkung 50
+Üb erlagerungen sind surjektiv.
+Beweis:
+Sei
+p
+:
+Y
+!
+X
+eine Üb erlagerung und
+x
+2
+X
+b eliebig. D ann existiert eine o˙ene
+Umgebung
+U
+(
+x
+)
+
+X
+und o˙ene Teilmengen
+V
+j
+
+X
+mit
+p
+
+1
+(
+U
+) =
+_
+S
+V
+j
+und
+p
+j
+V
+j
+:
+V
+j
+!
+U
+ist Homö omorphismus.
+D. h. es existiert ein
+y
+2
+V
+j
+, so dass
+p
+j
+V
+j
+(
+y
+) =
+x
+. Da
+x
+2
+X
+b eliebig war und ein
+y
+2
+Y
+existiert, mit
+p
+(
+y
+) =
+x
+, ist
+p
+surjektiv.
+
+54
+3.3. ÜBERLAGERUNGEN
+1
+i
+z
+z
+2
+'
+'
+z
+2
+Abbildung 3.12
+:
+t
+7!
+(cos 4
+ˇ t;
+sin 4
+ˇ t
+)
+De˝nition 49
+Seien
+(
+X ;
+T
+X
+)
+;
+(
+Y ;
+T
+Y
+)
+top ologische Räume und
+f
+:
+X
+!
+Y
+eine Abbildung.
+f
+heiÿt
+o˙en
+:
+, 8
+U
+2
+T
+X
+:
+f
+(
+U
+)
+2
+T
+Y
+.
+Beispiel 37 (O˙ene und stetige Abbildungen)
+Sei
+X
+ein top ologischer Raum und seien
+f
+i
+:
+R
+!
+R
+mit
+i
+2 f
+1
+;
+2
+;
+3
+g
+und
+g
+:
+R
+!
+S
+1
+=
+f
+z
+2
+C
+j k
+z
+k
+= 1
+g
+Abbildungen.
+1)
+f
+1
+:=
+id
+R
+ist eine o˙ene und stetige Abbildung.
+2)
+g
+(
+x
+) :=
+e
+2
+ˇ i x
+ist eine o˙ene, ab er keine stetige Abbildung (vgl.
+ Abbildung 1.5
+).
+3)
+f
+2
+(
+x
+) := 42
+ist eine stetige, ab er keine o˙ene Abbildung.
+4)
+f
+3
+(
+x
+) :=
+(
+0
+falls
+x
+2
+Q
+42
+falls
+x
+2
+R
+n
+Q
+ist weder stetig no ch o˙en.
+Bemerkung 51
+Üb erlagerungen sind o˙ene Abbildungen.
+Beweis:
+Sei
+y
+2
+V
+und
+x
+2
+p
+(
+V
+)
+, so dass
+x
+=
+p
+(
+y
+)
+gilt. Sei weiter
+U
+=
+U
+x
+eine o˙ene Umgebung
+von
+x
+wie in
+ De˝nition 48
+ und
+V
+j
+die Komp onente von
+p
+
+1
+(
+U
+)
+, die
+y
+enthält.
+Dann ist
+V
+\
+V
+j
+o˙ene Umgebung von
+y
+.
+)
+p
+(
+V
+\
+V
+j
+)
+ist o˙en in
+p
+(
+V
+j
+)
+, also auch o˙en in
+X
+. Auÿerdem ist
+p
+(
+y
+) =
+x
+2
+p
+(
+V
+\
+V
+j
+)
+und
+p
+(
+V
+\
+V
+j
+)
+
+p
+(
+V
+)
+.
+)
+p
+(
+V
+)
+ist o˙en.
+De˝nition 50
+Sei
+X
+ein top ologischer Raum und
+M
+
+X
+.
+M
+heiÿt
+diskret
+in
+X
+, wenn
+M
+in
+X
+keinen Häufungspunkt hat.
+Bemerkung 52
+Sei
+p
+:
+Y
+!
+X
+Üb erlagerung,
+x
+2
+X
+.
+a)
+X
+hausdor˙sch
+)
+Y
+hausdor˙sch
+b)
+p
+
+1
+(
+x
+)
+ist diskret in
+Y
+für jedes
+x
+2
+X
+.
+Beweis:
+a)
+ Seien
+y
+1
+; y
+2
+2
+Y
+.
+1. Fall
+:
+p
+(
+y
+1
+) =
+p
+(
+y
+2
+) =
+x
+.
+55
+3.3. ÜBERLAGERUNGEN
+Sei
+U
+Umgebung von
+x
+wie in
+ De˝nition 48
+,
+V
+j
+1
+bzw.
+V
+j
+2
+die Komp onente von
+p
+
+1
+(
+U
+)
+,
+die
+y
+1
+bzw.
+y
+2
+enthält.
+Dann ist
+V
+j
+1
+6
+=
+V
+j
+2
+, weil b eide ein Element aus
+p
+
+1
+(
+x
+)
+enthalten.
+)
+V
+j
+1
+\
+V
+j
+2
+=
+;
+nach Voraussetzung.
+2. Fall
+:
+p
+(
+y
+1
+)
+6
+=
+p
+(
+y
+2
+)
+.
+Dann seien
+U
+1
+und
+U
+2
+disjunkte Umgebungen von
+p
+(
+y
+1
+)
+und
+p
+(
+y
+2
+)
+.
+)
+p
+
+1
+(
+U
+1
+)
+und
+p
+
+1
+(
+U
+2
+)
+sind disjunkte Umgebungen von
+y
+1
+und
+y
+2
+.
+b)
+ Sei
+x
+2
+X
+b eliebig, ab er fest.
+Zu zeigen
+:
+8
+y
+i
+2
+p
+
+1
+(
+x
+) :
+9
+V
+i
+2
+T
+Y
+mit
+y
+i
+2
+V
+i
+, so dass gilt:
+i
+6
+=
+j
+)
+V
+i
+\
+V
+j
+=
+;
+.
+Die
+V
+i
+existieren wegen der De˝nition einer Üb erlagerung:
+p
+heiÿt Üb erlagerung
+:
+, 8
+x
+2
+X
+9
+U
+=
+U
+(
+x
+)
+2
+T
+X
+:
+p
+
+1
+(
+U
+) =
+_
+S
+V
+i
+2
+T
+Y
+V
+i
+und
+p
+j
+V
+i
+ist Homö omorphismus.
+)
+(
+p
+j
+V
+i
+)
+
+1
+(
+x
+) =
+f
+y
+i
+g
+)
+Alle
+y
+i
+liegen diskret in
+Y
+, da Häufungspunkte unendlich viele Elemente in jeder
+Umgebung b enötigen.
+
+Bemerkung 53 (Eindeutigkeit des Üb erlagerungsgrades)
+Sei
+p
+:
+Y
+!
+X
+Üb erlagerung. Dann gilt:
+8
+x
+1
+; x
+2
+2
+X
+:
+j
+p
+
+1
+(
+x
+1
+)
+j
+=
+j
+p
+
+1
+(
+x
+2
+)
+j
+Hinweis:
+j
+p
+
+1
+(
+x
+1
+)
+j
+=
+1
+ist erlaubt!
+Beweis:
+Sei
+U
+Umgebung von
+x
+1
+wie in
+ De˝nition 48
+,
+x
+2
+U
+. Dann enthält jedes
+V
+j
+mit
+j
+2
+I
+genau ein Element von
+p
+
+1
+(
+x
+)
+.
+) j
+p
+
+1
+(
+x
+)
+j
+ist konstant für
+x
+2
+U
+X
+zhgd.
+====
+) j
+p
+
+1
+(
+x
+)
+j
+ist konstant für
+x
+2
+X
+.
+De˝nition 51
+Es seien
+X ; Y ; Z
+top ologische Räume,
+p
+:
+Y
+!
+X
+eine Üb erlagerung und
+f
+:
+Z
+!
+X
+stetig.
+Eine stetige Abbildung
+~
+f
+:
+Z
+!
+Y
+heiÿt
+Liftung
+von
+f
+, wenn
+p
+
+~
+f
+=
+f
+ist.
+Y
+X
+Z
+p
+~
+f
+f
+Bemerkung 54 (Eindeutigkeit der Liftung)
+Sei
+Z
+zusammenhängend und
+f
+0
+; f
+1
+:
+Z
+!
+Y
+Liftungen von
+f
+.
+9
+z
+0
+2
+Z
+:
+f
+0
+(
+z
+0
+) =
+f
+1
+(
+z
+0
+)
+)
+f
+0
+=
+f
+1
+Beweis:
+Sei
+T
+=
+f
+z
+2
+Z
+j
+f
+0
+(
+z
+) =
+f
+1
+(
+z
+)
+g
+.
+Z. z.
+:
+T
+ist o˙en und
+Z
+n
+T
+ist auch o˙en.
+56
+3.3. ÜBERLAGERUNGEN
+0
+1
+2
+3
+4
+5
+6
+0
+1
+2
+3
+4
+5
+6
+T
+Liften
+!
+R
+2
+=
+Z
+2
+Abbildung 3.13
+:
+Beim Liften eines Weges bleib en geschlossene Wege im allgemeinen nicht ge-
+schlossen
+Sei
+z
+2
+T ; x
+=
+f
+(
+z
+)
+; U
+Umgebung von
+x
+wie in
+ De˝nition 48
+,
+V
+die Komp onente von
+p
+
+1
+(
+U
+)
+,
+die
+y
+:=
+f
+0
+(
+z
+) =
+f
+1
+(
+z
+)
+enthält.
+Sei
+q
+:
+U
+!
+V
+die Umkehrabbildung zu
+p
+j
+V
+.
+Sei
+W
+:=
+f
+
+1
+(
+U
+)
+\
+f
+
+1
+0
+(
+V
+)
+\
+f
+
+1
+1
+(
+V
+)
+.
+W
+ist o˙ene Umgebung in
+Z
+von
+z
+.
+Behauptung:
+W
+
+T
+Denn für
+w
+2
+W
+ist
+q
+(
+f
+(
+w
+)) =
+q
+((
+p
+
+f
+0
+))(
+w
+) = ((
+q
+
+p
+)
+
+f
+0
+)(
+w
+) =
+f
+0
+(
+w
+) =
+q
+(
+f
+(
+w
+)) =
+f
+1
+(
+w
+)
+)
+T
+ist o˙en.
+Analog:
+Z
+n
+T
+ist o˙en.
+Satz 3.2
+Sei
+p
+:
+Y
+!
+X
+Üb erlagerung,
+
+:
+I
+!
+X
+ein Weg,
+y
+2
+Y
+mit
+p
+(
+y
+) =
+
+(0) =:
+x
+.
+Dann gibt es genau einen Weg
+~
+
+:
+I
+!
+Y
+mit
+~
+
+(0) =
+y
+und
+p
+
+~
+
+=
+
+.
+p
+:
+Y
+!
+X
+Üb erlagerung,
+X ; Y
+wegzusammenhängend.
+p
+stetig und surjektiv, zu
+x
+2
+X
+9
+Umgebung
+U
+, so dass
+p
+
+1
+(
+U
+) =
+S
+V
+j
+p
+j
+V
+j
+:
+V
+j
+!
+U
+Homö omorphismus.
+Bemerkung 55
+Wege in
+X
+lassen sich zu Wegen in
+Y
+liften.
+Zu jedem
+y
+2
+p
+
+1
+(
+
+(0))
+gibt es genau einen Lift von
+
+.
+57
+3.3. ÜBERLAGERUNGEN
+Prop osition 3.3
+Seien
+p
+:
+Y
+!
+X
+eine Üb erlagerung,
+a; b
+2
+X
+,
+
+0
+; 
+1
+:
+I
+!
+X
+homotop e Wege von
+a
+nach
+b
+,
+~
+a
+2
+p
+
+1
+(
+a
+)
+;
+~
+
+0
+;
+~
+
+1
+Liftungen von
+
+0
+bzw.
+
+1
+mit
+~
+
+i
+(0) = ~
+a
+.
+Dann ist
+~
+
+0
+(1) = ~
+
+1
+(1)
+und
+~
+
+0
+˘
+~
+
+1
+.
+Beweis:
+Sei
+H
+:
+I
+
+I
+!
+X
+Homotopie zwischen
+
+1
+und
+
+2
+.
+Für
+s
+2
+I
+sei
+
+s
+:
+I
+!
+X
+,
+t
+7!
+H
+(
+t; s
+)
+.
+Sei
+~
+
+s
+Lift von
+
+s
+mit
+~
+
+s
+(0) = ~
+a
+Sei
+~
+H
+:
+I
+
+I
+!
+Y ;
+~
+H
+(
+t; s
+) := ( ~
+
+s
+(
+t
+)
+; s
+)
+Dann gilt:
+(i)
+~
+H
+ist stetig (Beweis wie für
+ B emerkung 54
+)
+(ii)
+~
+H
+(
+t;
+0) = ~
+
+0
+(
+t
+)
+;
+~
+H
+(
+t;
+1) = ~
+
+1
+(
+t
+)
+(iii)
+~
+H
+(0
+; s
+) = ~
+
+s
+(0) = ~
+a
+(iv)
+~
+H
+(1
+; s
+)
+2
+p
+
+1
+(
+b
+)
+Da
+p
+
+1
+(
+b
+)
+diskrete Teilmenge von
+Y
+ist
+)
+~
+b
+s
+=
+~
+H
+(1
+; s
+) =
+~
+H
+(1
+;
+0)
+8
+s
+2
+I
+)
+~
+b
+0
+=
+~
+b
+1
+und
+~
+H
+ist Homotopie zwischen
+~
+
+0
+und
+~
+
+1
+.
+
+Folgerung 3.4
+Sei
+p
+:
+Y
+!
+X
+eine Üb erlagerung,
+x
+0
+2
+X ; y
+0
+2
+p
+
+1
+(
+x
+0
+)
+a)
+p
+
+:
+ˇ
+1
+(
+Y ; y
+0
+)
+!
+ˇ
+1
+(
+X ; x
+0
+)
+ist injektiv
+b)
+[
+ˇ
+1
+(
+X ; x
+0
+) :
+p
+
+(
+ˇ
+1
+(
+Y ; y
+0
+))] = de g (
+p
+)
+Beweis:
+a)
+ Sei
+~
+
+ein Weg in
+Y
+um
+y
+0
+und
+p
+
+([ ~
+
+]) =
+e
+, also
+p
+
+~
+
+˘
+
+x
+0
+Nach
+ Prop osition 3.3
+ ist dann
+~
+
+homotop zum Lift des konstanten Wegs
+
+x
+0
+mit
+Anfangspunkt
+y
+0
+, also zu
+
+y
+0
+)
+[ ~
+
+] =
+e
+b)
+Sei
+d
+=
+deg
+p
+und
+p
+
+1
+(
+x
+0
+) =
+f
+y
+0
+; y
+1
+; : : : ; y
+d
+
+1
+g
+. Für einen geschlossenen Weg
+
+in
+X
+um
+x
+0
+sei
+~
+
+die Liftung mit
+~
+
+(0) =
+y
+0
+.
+~
+
+(1)
+2 f
+y
+0
+; : : : ; y
+d
+
+1
+g
+hängt nur von
+[
+
+]
+2
+ˇ
+1
+(
+X ; x
+0
+)
+ab.
+Für geschlossene Wege
+
+0
+; 
+1
+um
+x
+gilt:
+~
+
+0
+(1) = ~
+
+1
+(1)
+,
+[ ~
+
+0
+
+~
+
+1
+
+1
+]
+2
+ˇ
+1
+(
+Y ; y
+0
+)
+,
+[
+
+0
+
+
+
+1
+1
+]
+2
+p
+
+(
+ˇ
+1
+(
+Y ; y
+0
+))
+,
+[
+
+0
+]
+und
+[
+
+1
+]
+liegen in der selb en Neb enklasse bzgl.
+p
+
+(
+ˇ
+1
+(
+Y ; y
+0
+))
+58
+3.3. ÜBERLAGERUNGEN
+Zu
+i
+2 f
+0
+; : : : ; d
+
+1
+g
+gibt es Weg
+
+i
+in
+Y
+mit
+
+i
+(0) =
+y
+0
+und
+
+i
+(1) =
+y
+i
+)
+p
+[
+
+i
+ist geschlossener Weg in
+X
+um
+x
+0
+.
+)
+Jedes
+y
+i
+mit
+i
+= 0
+; : : : ; d
+
+1
+ist
+~
+
+(1)
+für ein
+[
+
+]
+2
+ˇ
+1
+(
+X ; x
+0
+)
+.
+Bemerkung 56
+Sei
+p
+:
+Y
+!
+X
+Üb erlagerung und
+X
+einfach zusammenhängend.
+Dann ist
+p
+ein Homö omorphismus.
+Beweis:
+Wegen
+ Bemerkung 55.a
+ ist auch
+Y
+einfach zusammenhängend und wegen
+ Bemer-
+kung 55.b
+ ist
+deg (
+p
+) = 1
+,
+p
+ist also bijektiv.
+Nach
+ Bemerkung 51
+ ist
+p
+o˙en
+)
+p
+
+1
+ist stetig.
+)
+p
+ist Homö omorphismus.
+
+De˝nition 52
+Eine Üb erlagerung
+p
+:
+~
+X
+!
+X
+heiÿt
+universell
+, wenn
+~
+X
+einfach zusammenhängend ist.
+Beispiel 38 (Universelle Üb erlagerungen)
+R
+!
+S
+1
+; t
+7!
+(cos 2
+ˇ t;
+sin 2
+ˇ t
+)
+R
+2
+!
+T
+2
+=
+R
+2
+=
+Z
+2
+S
+n
+! P
+n
+(
+R
+)
+für
+n
+
+2
+Satz 3.5
+Sei
+p
+:
+~
+X
+!
+X
+eine universelle Üb erlagerung,
+q
+:
+Y
+!
+X
+weitere Üb erlagerung.
+Sei
+x
+0
+2
+X ;
+~
+x
+0
+2
+~
+X ; y
+0
+2
+Y
+mit
+q
+(
+y
+0
+) =
+x
+0
+=
+p
+( ~
+x
+0
+)
+.
+Dann gibt es genau eine Üb erlagerung
+~
+p
+:
+~
+X
+!
+Y
+mit
+~
+p
+( ~
+x
+0
+) =
+y
+0
+.
+Beweis:
+Sei
+z
+2
+~
+X ; 
+z
+:
+I
+!
+~
+X
+ein Weg von
+~
+x
+0
+nach
+z
+.
+Sei
+
+z
+die eindeutige Liftung von
+p
+
+
+z
+nach
+Y
+mit
+
+z
+(0) =
+y
+0
+.
+Setze
+~
+p
+(
+z
+) =
+
+z
+(1)
+.
+Da
+~
+X
+einfach zusammenhängend ist, hängt
+~
+p
+(
+z
+)
+nicht vom gewählten Weg
+
+z
+ab.
+O˙ensichtlich ist
+q
+( ~
+p
+(
+z
+)) =
+p
+(
+z
+)
+.
+Zu zeigen:
+~
+p
+ist stetig in
+z
+2
+~
+X
+:
+Sei
+W
+
+Y
+o˙ene Umgebung von
+~
+p
+(
+z
+)
+.
+q
+o˙en
+====
+)
+q
+(
+W
+)
+ist o˙ene Umgebung von
+p
+(
+z
+)
+
+d
+( ~
+p
+(
+z
+))
+.
+Sei
+U
+
+q
+(
+W
+)
+o˙en wie in
+ De˝nition 48
+ und
+V
+
+q
+
+1
+(
+U
+)
+die Komp onente, die
+~
+p
+(
+z
+)
+enthält.
+O. B . d. A. sei
+V
+
+W
+.
+Sei
+Z
+:=
+p
+
+1
+(
+U
+)
+. Für
+u
+2
+Z
+sei
+
+ein Weg in
+Z
+von
+z
+nach
+u
+.
+)
+
+z
+
+
+ist Weg von
+x
+0
+nach
+u
+)
+~
+p
+(
+u
+)
+2
+V
+)
+Z
+
+~
+p
+
+1
+(
+W
+)
+)
+~
+p
+ist stetig
+59
+3.3. ÜBERLAGERUNGEN
+Folgerung 3.6
+Sind
+p
+:
+~
+X
+!
+X
+und
+q
+:
+~
+Y
+!
+X
+universelle Üb erlagerungen, so sind
+~
+X
+und
+~
+Y
+homö omorph.
+Beweis:
+Seien
+x
+0
+2
+X ;
+~
+x
+0
+2
+~
+X
+mit
+p
+( ~
+x
+0
+) =
+x
+0
+und
+~
+y
+0
+2
+q
+
+1
+(
+x
+0
+)
+
+~
+Y
+.
+Nach
+ Satz 3.5
+ gibt es genau eine Üb erlagerung
+f
+:
+~
+X
+!
+~
+Y
+mit
+f
+(
+x
+0
+) = ~
+y
+0
+und
+q
+
+f
+=
+p
+und genau eine Üb erlagerung
+g
+:
+~
+Y
+!
+~
+X
+mit
+g
+( ~
+y
+0
+) = ~
+x
+0
+und
+p
+
+g
+=
+q
+Damit gilt:
+p
+
+q
+
+f
+=
+q
+
+f
+=
+p
+,
+q
+
+f
+
+g
+=
+p
+
+g
+=
+q
+. Also ist
+g
+
+f
+:
+~
+X
+!
+~
+X
+Lift von
+p
+:
+~
+X
+!
+X
+mit
+(
+g
+
+f
+)( ~
+x
+0
+) = ~
+x
+0
+.
+Da auch id
+~
+x
+diese Eigenschaft hat, folgt mit
+ Bemerkung 53
+:
+g
+
+f
+=
+id
+~
+X
+.
+Analog gilt
+f
+
+g
+=
+id
+~
+Y
+.
+
+Die Frage, wann es eine universelle Üb erlagerung gibt, b eantwortet der folgende Satz:
+De˝nition 53
+Sei
+(
+X ;
+T
+)
+ein top ologischer Raum und
+x
+2
+X
+.
+U
+
+T
+heiÿt eine
+Umgebungsbasis
+von
+x
+, wenn jede o˙ene Umgebung von
+x
+eine Teilmenge
+von
+U
+enthält.
+Satz 3.7
+Es sei
+X
+ein wegzusammenhängender top ologischer Raum in dem jeder Punkt eine
+Umgebungsbasis aus einfach zusammenhängenden Mengen hat.
+Dann gibt es eine universelle Üb erlagerung.
+Beweis:
+Sei
+x
+0
+2
+X
+und
+~
+X
+:=
+f
+(
+x;
+[
+
+])
+j
+x
+2
+X ; 
+Weg von
+x
+o
+nach
+x
+g
+und
+p
+:
+~
+X
+!
+X ;
+(
+x;
+[
+
+])
+7!
+x
+.
+Die Top ologie auf
+~
+X
+ist folgende: De˝niere eine Umgebungsbasis von
+(
+x;
+[
+
+])
+wie folgt: Es
+sei
+U
+eine einfach zusammenhängende Umgebung von
+x
+und
+~
+U
+=
+~
+U
+(
+x;
+[
+
+]) :=
+f
+(
+y ;
+[
+
+
+
+])
+j
+y
+2
+U; 
+Weg in
+U
+von
+x
+nach
+y
+g
+p
+ist Üb erlagerung:
+p
+j
+~
+U
+:
+~
+U
+!
+U
+bijektiv.
+p
+ist stetig und damit
+p
+j
+~
+U
+ein Homö omorphismus.
+Sind
+
+1
+; 
+2
+Wege von
+x
+0
+nach
+x
+und
+
+1
+˘
+
+2
+, so ist
+~
+U
+(
+x;
+[
+
+1
+])
+\
+~
+U
+(
+x;
+[
+
+2
+]) =
+;
+, denn: Ist
+
+1
+
+
+˘
+
+2
+
+
+, so ist auch
+
+1
+˘
+
+2
+. Also ist
+p
+eine Üb erlagerung.
+~
+X
+ist einfach zusammenhängend: Es sei
+~
+x
+0
+:= (
+x
+0
+; e
+)
+und
+~
+
+:
+I
+!
+~
+X
+ein geschlossener Weg
+um
+~
+x
+0
+.
+Sei
+
+:=
+p
+( ~
+
+)
+.
+Annahme
+:
+[ ~
+
+]
+6
+=
+e
+Mit
+ B emerkung 55.a
+ folgt dann:
+[
+
+]
+6
+=
+e
+.
+Dann ist der Lift von
+
+nach
+~
+x
+mit Anfangspunkt
+~
+x
+0
+ein Weg von
+~
+x
+0
+nach
+(
+x
+0
+;
+[
+
+])
+. Wider-
+spruch.
+60
+3.3. ÜBERLAGERUNGEN
+De˝nition 54
+Es sei
+p
+:
+Y
+!
+X
+eine Üb erlagerung und
+f
+:
+Y
+!
+Y
+ein Homö omorphismus.
+a)
+f
+heiÿt
+Decktransformation
+von
+p
+:
+,
+p
+
+f
+=
+p
+.
+b)
+Die Decktransformationen von
+p
+:
+Y
+!
+X
+bilden mit der Verkettung eine Grupp e,
+die sog.
+Decktransformationsgrupp e
+. Man schreibt:
+Deck
+(
+p
+)
+,
+Deck
+(
+Y =X
+)
+o der
+Deck(
+Y
+!
+X
+)
+.
+c)
+p
+heiÿt
+regulär
+, wenn
+j
+Deck(
+Y =X
+)
+j
+= deg
+p
+gilt.
+Bemerkung 57 (Eigenschaften der Decktransformation)
+a)
+(Deck
+Y =X ;
+
+)
+ist eine Grupp e
+b)
+ Ist
+f
+2
+Deck(
+Y =X
+)
+und
+f
+6
+=
+id, dann hat
+f
+keinen Fixpunkt.
+c)
+j
+Deck(
+Y =X
+)
+j 
+deg
+p
+d)
+Ist
+f
+eine reguläre Üb erlagerung, dann gilt:
+8
+x
+2
+X
+:
+Deck
+(
+Y =X
+)
+op eriert transitiv
+auf der Menge der Urbilder
+f
+
+1
+(
+x
+)
+.
+Beweis:
+a)
+ Es gilt:
+
+id
+Y
+2
+Deck
+Y =X
+,
+
+f ; g
+2
+Deck
+Y =X
+)
+p
+
+(
+f
+
+g
+) = (
+p
+
+f
+)
+
+g
+=
+p
+
+g
+)
+f
+
+g
+2
+Deck
+Y =X
+
+f
+2
+Deck
+Y =X
+)
+p
+
+f
+=
+p
+)
+p
+
+f
+
+1
+= (
+p
+
+f
+)
+
+f
+
+1
+=
+p
+
+(
+f
+
+f
+
+1
+) =
+p
+)
+f
+
+1
+2
+Deck
+Y =X
+b)
+ Die Menge
+Fix(
+f
+) =
+f
+y
+2
+Y
+j
+f
+(
+y
+) =
+y
+g
+ist abgeschlossen als Urbild der Diagonale
+
+
+Y
+
+Y
+unter der stetigen Abbildung
+y
+7!
+(
+f
+(
+y
+)
+; y
+)
+. Auÿerdem ist
+Fix
+(
+f
+)
+o˙en, denn ist
+y
+2
+Fix
+(
+f
+)
+, so sei
+U
+eine Umgebung
+von
+p
+(
+y
+)
+2
+X
+wie in
+ De˝nition 48
+ und
+U
+
+p
+
+1
+(
+U
+)
+die Komp onente, die
+y
+enthält;
+also
+p
+:
+V
+!
+U
+ein Homö omorphismus. Dann ist
+W
+:=
+f
+
+1
+(
+V
+)
+\
+V
+o˙ene Umgebung
+von
+y
+.
+Für
+z
+2
+W
+ist
+f
+(
+z
+)
+2
+V
+und
+p
+(
+f
+(
+z
+)) =
+p
+(
+z
+)
+. Da
+p
+injektiv auf
+V
+ist, folgt
+f
+(
+z
+) =
+z
+,
+d. h.
+Fix(
+f
+)
+6
+=
+;
+.
+Da
+Y
+zusammenhängend ist, folgt aus
+Fix(
+~
+f
+)
+6
+=
+;
+schon
+Fix(
+f
+) =
+Y
+, also
+f
+=
+id
+Y
+.
+c)
+Es sei
+x
+0
+2
+X
+,
+deg
+(
+p
+) =
+d
+und
+p
+
+1
+(
+x
+0
+) =
+f
+y
+0
+; : : : ; y
+d
+
+1
+g
+. Für
+f
+2
+Deck
+(
+Y =X
+)
+ist
+f
+(
+y
+0
+) =
+f
+y
+0
+; : : : ; y
+d
+
+1
+g
+.
+Zu
+i
+2 f
+0
+; : : : ; d
+
+1
+g
+gibt es hö chstens ein
+f
+2
+Deck
+(
+Y =X
+)
+mit
+f
+(
+y
+0
+) =
+y
+1
+, denn ist
+f
+(
+y
+0
+) =
+g
+(
+y
+0
+)
+, so ist
+(
+g
+
+1
+
+f
+)(
+y
+0
+) =
+y
+0
+, also nach
+ Bemerkung 57.c
+g
+
+1
+
+f
+=
+id
+Y
+.
+d)
+ Wenn jemand den Beweis macht, bitte an info@martin-thoma.de schicken.
+Beispiel 39 (Decktransformationen)
+1)
+p
+:
+R
+!
+S
+1
+: Deck(
+R
+=S
+1
+) =
+f
+t
+7!
+t
++
+n
+j
+n
+2
+Z
+g
+˘
+=
+Z
+2)
+p
+:
+R
+2
+!
+T
+2
+: Deck(
+R
+2
+=T
+2
+)
+˘
+=
+Z
+
+Z
+=
+Z
+2
+3)
+p
+:
+S
+n
+! P
+n
+(
+R
+) : De ck(
+S
+n
+=
+P
+n
+(
+R
+)) =
+f
+x
+7! 
+x
+g
+˘
+=
+Z
+=
+2
+Z
+61
+3.3. ÜBERLAGERUNGEN
+Nun werden wir eine Verbindung zwischen der Decktransformationsgrupp e und der Fundamen-
+talgrupp e herstellen:
+Satz 3.8
+Ist
+p
+:
+~
+X
+!
+X
+eine universelle Üb erlagerung, so gilt:
+Deck(
+~
+X =X
+)
+˘
+=
+ˇ
+1
+(
+X ; x
+0
+)
+8
+x
+0
+2
+X
+Beweis:
+Wähle
+~
+x
+0
+2
+p
+
+1
+(
+x
+0
+)
+. Es sei
+ˆ
+:
+Deck
+(
+~
+x=x
+)
+!
+ˇ
+1
+(
+X ; x
+0
+)
+die Abbildung, die
+f
+auf
+[
+p
+(
+
+f
+)]
+abbildet, wob ei
+
+f
+ein Weg von
+~
+x
+0
+nach
+f
+(
+~
+x
+0
+)
+sei. Da
+~
+x
+einfach zusammenhängend ist, ist
+
+f
+bis auf Homotopie eindeutig b estimmt und damit auch
+ˆ
+wohlde˝niert.
+
+ˆ
+ist Grupp enhomomorphismus
+: Seien
+f ; g
+2
+Deck
+(
+~
+X =X
+)
+)
+
+g
+
+f
+=
+
+g
+
+g
+(
+
+f
+)
+)
+p
+(
+
+g
+
+f
+) =
+p
+(
+
+g
+)
+
+(
+p
+
+g
+)
+|
+{z
+}
+=
+p
+(
+
+f
+) =
+ˆ
+(
+g
+)
+6
+=
+ˆ
+(
+f
+)
+
+ˆ
+ist injektiv
+:
+ˆ
+(
+f
+) =
+e
+)
+p
+(
+
+f
+)
+˘
+
+x
+0
+Satz
+3
+:
+2
+====
+)
+
+f
+˘
+
+~
+x
+0
+)
+f
+(
+x
+0
+) =
+~
+x
+0
+Bem. 57.c
+======
+)
+f
+=
+id
+~
+x
+.
+
+ˆ
+ist surjektiv
+: Sei
+[
+
+]
+2
+ˇ
+1
+(
+X ; x
+0
+)
+,
+~
+
+Lift von
+
+nach
+~
+x
+mit Anfangspunkt
+~
+x
+0
+. Der
+Endpunkt von
+~
+
+sei
+~
+x
+1
+.
+p
+ist reguläre Üb erlagerung
+: Seien
+~
+x
+0
+;
+~
+x
+1
+2
+~
+X
+mit
+p
+(
+~
+x
+0
+) =
+p
+(
+~
+x
+1
+)
+. Nach
+ Satz 3.5
+ gibt
+es genau eine Üb erlagerung
+~
+p
+:
+~
+X
+!
+X
+mit
+p
+=
+p
+
+~
+p
+und
+~
+p
+(
+~
+x
+0
+) =
+~
+x
+1
+. Somit ist
+~
+p
+eine
+Decktransformation und damit
+p
+eine reguläre Üb erlagerung.
+Da
+p
+reguläre Üb erlagerung ist, gibt es ein
+f
+2
+Deck(
+~
+X =X
+)
+mit
+f
+( ~
+x
+0
+) = ~
+x
+1
+.
+Aus der De˝nition von
+ˆ
+folgt:
+ˆ
+(
+f
+) =
+p
+(
+
+f
+) =
+
+
+Beispiel 40 (Besti mmung von
+ˇ
+1
+(
+S
+1
+)
+)
+p
+:
+R
+!
+S
+1
+,
+t
+7!
+(
+cos
+2
+ˇ t;
+sin
+2
+ˇ t
+)
+ist universelle Üb erlagerung, da
+R
+zusammenhängend ist.
+Für
+n
+2
+Z
+sei
+f
+n
+:
+R
+!
+R
+; t
+7!
+t
++
+n
+die Translation um
+n
+.
+Es gilt:
+(
+p
+
+f
+n
+)(
+t
+) =
+p
+(
+f
+n
+(
+t
+)) =
+p
+(
+t
+)
+8
+t
+2
+R
+, d. h.
+f
+n
+ist D ecktransformation.
+Ist umgekehrt
+g
+irgendeine Decktransformation, so gilt insb esondere für
+t
+= 0
+:
+(cos(2
+ˇ g
+(0))
+;
+sin(2
+ˇ g
+(0))) = (
+p
+
+g
+)(0) =
+p
+(0) = (1
+;
+0)
+Es existiert
+n
+2
+Z
+mit
+g
+(0) =
+n
+. Da auch
+f
+n
+(0) = 0 +
+n
+=
+n
+gilt, folgt mit
+ Bemerkung 57.c
+g
+=
+f
+n
+. Damit folgt:
+Deck(
+R
+=S
+1
+) =
+f
+f
+n
+j
+n
+2
+Z
+g
+˘
+=
+Z
+Nach
+ Satz 3.8
+ also
+ˇ
+1
+(
+S
+1
+)
+˘
+=
+Deck(
+R
+=S
+1
+)
+˘
+=
+Z
+62
+3.4. GRUPPENOPERATIONEN
+3.4 Grupp enop erationen
+De˝nition 55
+Sei
+(
+G;
+
+)
+eine Grupp e und
+X
+eine Menge.
+Eine
+Grupp enop eration
+von
+G
+auf
+X
+ist eine Abbildung
+
+:
+G
+
+X
+!
+X
+für die gilt:
+a)
+1
+G
+
+x
+=
+x
+8
+x
+2
+X
+b)
+(
+g
+
+h
+)
+
+x
+=
+g
+
+(
+h
+
+x
+)
+8
+g ; h
+2
+G
+8
+x
+2
+X
+Beispiel 41
+1)
+G
+= (
+Z
+;
++)
+; X
+=
+R
+; n
+
+x
+=
+x
++
+n
+2)
+G
+op eriert auf
+X
+=
+G
+durch
+g
+
+h
+:=
+g
+
+h
+3)
+G
+op eriert auf
+X
+=
+G
+durch
+g
+
+h
+:=
+g
+
+h
+
+g
+
+1
+, denn
+i)
+1
+G
+
+h
+= 1
+G
+
+h
+
+1
+
+1
+G
+=
+h
+ii)
+(
+g
+1
+
+g
+2
+)
+
+h
+= (
+g
+1
+
+g
+2
+)
+
+h
+
+(
+g
+
+g
+2
+)
+
+1
+=
+g
+1
+
+(
+g
+2
+
+h
+
+g
+
+1
+2
+)
+
+g
+
+1
+1
+=
+g
+1
+
+(
+g
+2
+
+h
+)
+De˝nition 56
+Sei
+G
+eine Grupp e,
+X
+ein top ologischer Raum und
+
+:
+G
+
+X
+!
+X
+eine Grupp enop eration.
+a)
+G
+op eriert durch Homö omorphismen
+, wenn für jedes
+g
+2
+G
+die Abbildung
+m
+g
+:
+X
+!
+X ; x
+7!
+g
+
+x
+ein Homö omorphismus ist.
+b)
+ Ist
+G
+eine top ologische Grupp e, so heiÿt die Grupp enop eration
+
+stetig
+, wenn
+8
+g
+2
+G
+:
+m
+g
+ist stetig
+gilt.
+Bemerkung 58
+Jede stetige Grupp enop eration ist eine Grupp enop eration durch Homö omorphismen.
+Beweis:
+Nach Voraussetzung ist
+m
+g
+:=
+j
+f
+g
+g
+X
+:
+X
+!
+X ; x
+7!
+g
+
+x
+stetig.
+Die Umkehrabbildung zu
+m
+g
+ist
+m
+g
+
+1
+:
+(
+m
+g
+
+1
+
+m
+g
+)(
+x
+) =
+m
+g
+
+1
+(
+m
+g
+(
+x
+))
+=
+m
+g
+
+1
+(
+g
+
+x
+)
+=
+g
+
+1
+
+(
+g
+
+x
+)
+Def. 55.b
+= (
+g
+
+1
+
+g
+)
+
+x
+= 1
+G
+
+x
+Def. 55.a
+=
+x
+Beispiel 42
+In Beispiel
+ 41.1
+ op eriert
+Z
+durch Homö omorphismen.
+63
+3.4. GRUPPENOPERATIONEN
+Bemerkung 59
+Sei
+G
+eine Grupp e und
+X
+eine Menge.
+a)
+Die Grupp enop eration von
+G
+auf
+X
+entsprechen bijektiv den Grupp enhomomorphismen
+%
+:
+G
+!
+Perm(
+X
+) = Sym (
+X
+) =
+f
+f
+:
+X
+!
+X
+j
+f
+ist bijektiv
+g
+b)
+Ist
+X
+ein top ologischer Raum, so entsprechen dab ei die Grupp enop erationen durch
+Homö omorphismus den Grupp enhomomorphismen
+G
+!
+Homö o
+(
+X
+)
+Beweis:
+Sei
+
+:
+G
+
+X
+!
+X
+eine Grupp enop eration von
+G
+auf
+X
+. Dann sei
+%
+:
+G
+!
+Perm
+(
+X
+)
+de˝niert durch
+%
+(
+g
+)(
+X
+) =
+g
+
+x
+8
+g
+2
+G; x
+2
+X
+, also
+%
+(
+g
+) =
+m
+g
+.
+%
+ist Homomorphismus:
+%
+(
+g
+1
+
+g
+2
+) =
+m
+g
+1
+
+g
+2
+=
+m
+g
+1
+
+m
+g
+2
+=
+%
+(
+g
+1
+)
+
+%
+(
+g
+2
+)
+, denn für
+x
+2
+X
+:
+%
+(
+g
+1
+
+g
+2
+)(
+x
+) = (
+g
+1
+
+g
+2
+)
+
+x
+=
+g
+1
+
+(
+g
+2
+
+x
+) =
+%
+(
+g
+1
+)(
+%
+(
+g
+2
+)(
+x
+)) = (
+%
+(
+g
+1
+)
+
+%
+(
+g
+2
+))(
+x
+)
+Umgekehrt: Sei
+%
+:
+G
+!
+Perm
+(
+X
+)
+Grupp enhomomorphismus. De˝niere
+
+:
+G
+
+X
+!
+X
+durch
+g
+
+x
+=
+%
+(
+g
+)(
+x
+)
+.
+z. z.
+ De˝nition 55.b
+:
+g
+1
+
+(
+g
+2
+
+x
+) =
+%
+(
+g
+1
+)(
+g
+2
+
+x
+)
+=
+%
+(
+g
+1
+)(
+%
+(
+g
+2
+)(
+x
+))
+= (
+%
+(
+g
+1
+)
+
+%
+(
+g
+2
+))(
+x
+)
+%
+ist Hom.
+=
+%
+(
+g
+1
+
+g
+2
+)(
+x
+)
+= (
+g
+1
+
+g
+2
+)
+
+x
+z. z.
+ De˝nition 55.a
+:
+1
+G
+
+x
+=
+%
+(1
+G
+)(
+x
+) =
+id
+X
+(
+x
+) =
+x
+, weil
+%
+ein Homomorphismus ist.
+Beispiel 43
+Sei
+X
+ein wegzusammenhängender top ologischer Raum,
+p
+:
+~
+X
+!
+X
+eine universelle Üb erla-
+gerung,
+x
+0
+2
+X
+,
+~
+x
+0
+2
+~
+X
+mit
+p
+( ~
+x
+0
+) =
+x
+0
+.
+Dann op eriert
+ˇ
+1
+(
+X ; x
+0
+)
+auf
+~
+X
+durch Homö omorphismen wie folgt:
+Für
+[
+
+]
+2
+ˇ
+1
+(
+X ; x
+0
+)
+und
+~
+x
+2
+~
+X
+sei
+[
+
+]
+
+~
+x
+=
+~
+
+
+%
+(1)
+wob ei
+~
+
+ein Weg von
+~
+x
+0
+nach
+~
+x
+in
+~
+X
+sei,
+%
+:=
+p
+(
+~
+
+) =
+p
+
+
+.
+Also:
+
+ist ein Weg in
+X
+von
+x
+0
+nach
+x
+=
+p
+(
+~
+x
+)
+und
+]
+
+
+
+die L iftung von
+
+
+
+mit
+Anfangspunkt
+~
+x
+0
+.
+[
+
+]
+
+~
+x
+hängt nicht von der Wahl von
+~
+
+ab; ist
+~
+
+0
+ein anderer Weg von
+~
+x
+0
+nach
+~
+x
+, so sind
+~
+
+und
+~
+
+0
+homotop, also auch
+]
+
+
+
+und
+]
+
+
+
+0
+homotop.
+Grupp enop eration, denn:
+i)
+[
+e
+]
+
+~
+x
+=
+g
+e
+
+
+= ~
+x
+ii)
+^
+
+1
+
+
+2
+
+
+(1) = [
+
+1
+
+
+2
+]
+
+~
+x
+= ([
+
+1
+]
+
+[
+
+2
+])
+
+~
+x
+
+1
+
+
+2
+
+
+(1) = [
+
+1
+]
+
+(
+~
+
+2
+
+
+)(1) = [
+
+1
+]
+
+([
+
+2
+]
+
+~
+x
+)
+Erinnerung
+:Die Konstruktion aus
+ Bemerkung 59
+ induziert zu der Grupp enop eration
+ˇ
+1
+(
+X ; x
+0
+)
+aus
+ Beispiel 43
+ einen Grupp enhomomorphismus
+%
+:
+ˇ
+1
+(
+X ; x
+0
+)
+!
+Homö o
+(
+X
+)
+. Nach
+ Satz 3.8
+ ist
+%
+(
+ˇ
+1
+(
+X ; x
+0
+)) = Deck(
+~
+X =X
+)
+=
+n
+f
+:
+~
+X
+!
+~
+X
+Homö omorphismus
+
+
+
+p
+
+f
+=
+p
+o
+64
+3.4. GRUPPENOPERATIONEN
+Beispiel 44
+Sei
+X
+:=
+S
+2
+
+R
+3
+und
+˝
+die Drehung um die
+z
+-Achse um
+180
+
+.
+g
+=
+h
+˝
+i
+=
+f
+id
+; ˝
+g
+op eriert auf
+S
+2
+durch Homö omorphismen.
+Frage: Was ist
+S
+2
+=G
+? Ist
+S
+2
+=G
+eine Mannigfaltigkeit?
+4 Euklidische und nichteuklidische
+Geometrie
+De˝nition 57
+Das Trip el
+(
+X ; d; G
+)
+heiÿt genau dann eine
+Geometrie
+, wenn
+(
+X ; d
+)
+ein metrischer Raum
+und
+; 6
+=
+G
+ P
+(
+X
+)
+gilt. Dann heiÿt
+G
+die Menge aller
+Geraden
+.
+4.1 Axiome für die euklidische Eb ene
+Axiome bilden die Grundbausteine jeder mathematischen Theorie. Eine Sammlung aus Axiomen
+nennt man Axiomensystem. Da der Begri˙ des Axiomensystems so grundlegend ist, hat man
+auch ein paar sehr grundlegende Forderungen an ihn: Axiomensysteme sollen
+widerspruchsfrei
+sein, die Axiome sollen möglichst
+unabhängig
+sein und
+Vollständigkeit
+wäre auch toll. Mit
+Unabhängigkeit ist gemeint, dass kein Axiom sich aus einem anderem herleiten lässt. Dies scheint
+auf den ersten Blick eine einfache Eigenschaft zu sein. Auf den zweiten Blick muss man jedo ch
+einsehen, dass das Parallelenproblem, also die Frage ob das Parallelenaxiom unabhängig von
+den restlichen Axiomen ist, üb er 2000 Jahre nicht gelöst wurde. Ein ganz anderes Kalib er ist
+die Frage nach der Vollständigkeit. Ein Axiomensystem gilt als Vollständig, wenn jede Aussage
+innerhalb des Systems veri˝zierbar o der falsi˝zierbar ist. Interessant ist hierb ei der Gö delsche
+Unvollständigkeitssatz, der z. B. für die Arithmetik b eweist, dass nicht alle Aussagen formal
+b ewiesen o der widerlegt werden können.
+Kehren wir nun jedo ch zurück zur Geometrie. Euklid hat in seiner Abhandlung Die Elemente
+ein Axiomensystem für die Geometrie aufgestellt.
+Euklids Axiome
+
+Strecke
+zwischen je zwei Punkten
+
+Jede Strecke b estimmt genau eine
+Gerade
+
+Kreis
+(um jeden Punkt mit jedem Radius)
+
+Je zwei rechte Winkel sind gleich (Isometrie, Bewegung)
+
+Parallelenaxiom von Euklid:
+Wird eine Gerade so von zwei Geraden geschnitten, dass die Summe der Innenwinkel
+kleiner als zwei Rechte ist, dann schneiden sich diese Geraden auf der Seite dieser W inkel.
+Man mache sich klar, dass das nur dann nicht der Fall ist, wenn b eide Geraden par-
+allel sind und senkrecht auf die erste stehen.
+De˝nition 58
+Eine
+euklidische Eb ene
+ist eine Geometrie
+(
+X ; d; G
+)
+, die Axiome
+ 
+ -
+ 
+ erfüllt:
+
+Inzidenzaxiome
+:
+66 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+(i)
+ Zu
+P
+6
+=
+Q
+2
+X
+gibt es genau ein
+g
+2
+G
+mit
+f
+P ; Q
+g 
+g
+.
+(ii)
+j
+g
+j 
+2
+8
+g
+2
+G
+(iii)
+X =
+2
+G
+
+Abstandsaxiom
+: Zu
+P ; Q; R
+2
+X
+gibt es genau dann ein
+g
+2
+G
+mit
+f
+P ; Q; R
+g 
+g
+,
+wenn gilt:
+
+d
+(
+P ; R
+) =
+d
+(
+P ; Q
+) +
+d
+(
+Q; R
+)
+o der
+
+d
+(
+P ; Q
+) =
+d
+(
+P ; R
+) +
+d
+(
+R ; Q
+)
+o der
+
+d
+(
+Q; R
+) =
+d
+(
+Q; P
+) +
+d
+(
+P ; R
+)
+De˝nition 59
+Sei
+(
+X ; d; G
+)
+eine Geometrie und seien
+P ; Q; R
+2
+X
+.
+a)
+P ; Q; R
+liegen
+kollinear
+, wenn es
+g
+2
+G
+gibt mit
+f
+P ; Q; R
+g 
+g
+.
+b)
+Q
+liegt zwischen
+P
+und
+R
+, wenn
+d
+(
+P ; R
+) =
+d
+(
+P ; Q
+) +
+d
+(
+Q; R
+)
+c)
+Strecke
+P R
+:=
+f
+Q
+2
+X
+j
+Q
+liegt zwischen
+P
+und
+R
+g
+d)
+Halbgeraden
+:
+P R
++
+:=
+f
+Q
+2
+X
+j
+Q
+liegt zwischen
+P
+und
+R
+o der
+R
+liegt zwischen
+P
+und
+Q
+g
+P R
+
+:=
+f
+Q
+2
+X
+j
+P
+liegt zwischen
+Q
+und
+R
+g
+P
+R
+P R
+
+P R
+P R
++
+Abbildung 4.1
+:
+ Halbgeraden
+Bemerkung 60
+a)
+P R
++
+[
+P R
+
+=
+P R
+b)
+P R
++
+\
+P R
+
+=
+f
+P
+g
+Beweis:
+a)
+ 
+
+ folgt direkt aus der De˝nition von
+P R
++
+und
+P R
+
+
+
+: Sei
+Q
+2
+P R
+)
+P ; Q; R
+sind kollinear.
+2
+)
+8
+>
+<
+>
+:
+Q
+liegt zwischen
+P
+und
+R
+)
+Q
+2
+P R
+R
+liegt zwischen
+P
+und
+Q
+)
+Q
+2
+P R
+P
+liegt zwischen
+Q
+und
+R
+)
+Q
+2
+P R
+b)
+ 
+
+ ist o˙ensichtlich
+
+
+: Sei
+P R
++
+\
+P R
+
+. Dann ist
+d
+(
+Q; R
+) =
+d
+(
+P ; Q
+) +
+d
+(
+P ; R
+)
+weil
+Q
+2
+P R
+
+und
+ˆ
+d
+(
+P ; R
+) =
+d
+(
+P ; Q
+) +
+d
+(
+Q; R
+)
+o der
+d
+(
+P ; Q
+) =
+d
+(
+P ; R
+) +
+d
+(
+R ; Q
+)
+˙
+67 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+)
+d
+(
+Q; R
+) = 2
+d
+(
+P ; Q
+) +
+d
+(
+Q; R
+)
+)
+d
+(
+P ; Q
+) = 0
+)
+P
+=
+Q
+d
+(
+P ; Q
+) = 2
+d
+(
+P ; R
+) +
+d
+(
+P ; Q
+)
+)
+P
+=
+R
+)
+Widerspruch
+De˝nition 60
+
+Anordnungsaxiome
+(i)
+Zu jeder Halbgerade
+H
+mit Anfangspunkt
+P
+2
+X
+und jedem
+r
+2
+R
+
+0
+gibt es
+genau ein
+Q
+2
+H
+mit
+d
+(
+P ; Q
+) =
+r
+.
+(ii)
+Jede Gerade zerlegt
+X
+n
+g
+=
+H
+1
+_
+[
+H
+2
+in zwei nichtleere Teilmengen
+H
+1
+; H
+2
+, so dass
+für alle
+A
+2
+H
+i
+,
+B
+2
+H
+j
+mit
+i; j
+2 f
+1
+;
+2
+g
+gilt:
+AB
+\
+g
+6
+=
+; ,
+i
+6
+=
+j
+.
+Diese Teilmengen
+H
+i
+heiÿen
+Halb eb enen
+bzgl.
+g
+.
+
+Bewegungsaxiom
+: Zu
+P ; Q; P
+0
+; Q
+0
+2
+X
+mit
+d
+(
+P ; Q
+) =
+d
+(
+P
+0
+; Q
+0
+)
+gibt es mindestens
+2 Isometrien
+'
+1
+; '
+2
+mit
+'
+i
+(
+P
+) =
+P
+0
+und
+'
+i
+(
+Q
+) =
+Q
+0
+mit
+i
+= 1
+;
+2
+.
+1
+
+Parallelenaxiom
+: Zu jeder Geraden
+g
+2
+G
+und jedem Punkt
+P
+2
+X
+n
+g
+gibt es
+hö chstens ein
+h
+2
+G
+mit
+P
+2
+h
+und
+h
+\
+g
+=
+;
+.
+h
+heiÿt
+Parallele zu
+g
+durch
+P
+.
+Satz 4.1 (Satz von Pasch)
+Seien
+P
+,
+Q
+,
+R
+nicht kollinear,
+g
+2
+G
+mit
+g
+\ f
+P ; Q; R
+g
+=
+;
+und
+g
+\
+P Q
+6
+=
+;
+.
+Dann ist entweder
+g
+\
+P R
+6
+=
+;
+o der
+g
+\
+QR
+6
+=
+;
+.
+Dieser Satz b esagt, dass Geraden, die eine Seite eines Dreiecks (also nicht nur eine Ecke)
+schneiden, auch eine weitere Seite schneiden.
+Beweis:
+g
+\
+P Q
+6
+=
+;
+3(
+ii
+)
+)
+P
+und
+Q
+liegen in verschiedenen Halb eb enen bzgl.
+g
+)
+o. B. d. A.
+R
+und
+P
+liegen in verschieden Halb eb enen bzgl.
+g
+)
+g
+\
+R P
+6
+=
+;
+Bemerkung 61
+Sei
+P ; Q
+2
+X
+mit
+P
+6
+=
+Q
+sowie
+A; B
+2
+X
+n
+P Q
+mit
+A
+6
+=
+B
+. Auÿerdem seien
+A
+und
+B
+in der
+selb en Halb eb ene bzgl.
+P Q
+sowie
+Q
+und
+B
+in der selb en Halb eb ene bzgl.
+P A
+.
+Dann gilt:
+P B
++
+\
+AQ
+6
+=
+;
+Auch
+ Bemerkung 61
+ lässt sich umgangssprachlich sehr viel einfacher ausdrücken: Die Diagonalen
+eines konvexen Vierecks schneiden sich.
+Beweis:
+Sei
+P
+0
+2
+P Q
+
+; P
+0
+6
+=
+P
+Satz
+4
+:
+1
+====
+)
+P B
+schneidet
+AP
+0
+[
+AQ
+Sei
+C
+der Schnittpunkt. Dann gilt:
+1
+Die Verschiebung von
+P
+0
+Q
+0
+nach
+P Q
+und die Isometrie, die zusätzlich an der Gerade durch
+P
+und
+Q
+spiegelt.
+68 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+P
+P
+0
+Q
+A
+B
+C
+Abbildung 4.2
+:
+ Situation aus
+ Bemerkung 61
+(i)
+C
+2
+P B
++
+, denn
+A
+und
+B
+liegen in derselb en Halb eb ene bzgl.
+P Q
+=
+P
+0
+Q
+, also auch
+AP
+0
+und
+AQ
+.
+(ii)
+C
+liegt in derselb en Halb eb ene bzgl.
+P A
+wie
+B
+, weil das für
+Q
+gilt.
+AP
+0
+liegt in der anderen Halb eb ene bzgl.
+P A
+)
+C =
+2
+P
+0
+A
+)
+C
+2
+AQ
+Da
+C
+2
+P B
++
+und
+C
+2
+AQ
+folgt nun direkt:
+; 6
+=
+f
+C
+g 
+P B
++
+\
+AQ
+
+Bemerkung 62
+Seien
+P ; Q
+2
+X
+mit
+P
+6
+=
+Q
+und
+A; B
+2
+X
+n
+P Q
+in der selb en Halb eb ene bzgl.
+P Q
+. Auÿerdem
+sei
+d
+(
+A; P
+) =
+d
+(
+B ; P
+)
+und
+d
+(
+A; Q
+) =
+d
+(
+B ; Q
+)
+.
+Dann ist
+A
+=
+B
+.
+P
+Q
+A
+B
+Abbildung 4.3
+:
+Bemerkung 62
+: Die b eiden roten und die b eiden blauen Linien sind gleich lang.
+Intuitiv weiÿ man, dass daraus folgt, dass
+A
+=
+B
+gilt.
+Beweis:
+durch Widerspruch
+Annahme
+:
+A
+6
+=
+B
+Dann ist
+B =
+2
+(
+P A
+[
+QA
+)
+wegen
+ 
+.
+1. Fall
+:
+Q
+und
+B
+liegen in derselb en Halb eb ene bzgl.
+P A
+Bem.
+61
+=====
+)
+P B
++
+\
+AQ
+6
+=
+;
+.
+Sei
+C
+der Schnittpunkt vom
+P B
+und
+AQ
+.
+Dann gilt:
+(i)
+d
+(
+A; C
+) +
+d
+(
+C ; Q
+) =
+d
+(
+A; Q
+)
+Vor.
+=
+d
+(
+B ; Q
+)
+< d
+(
+B ; C
+) +
+d
+(
+C ; Q
+)
+)
+d
+(
+A; C
+)
+< d
+(
+B ; C
+)
+69 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+P
+Q
+B
+C
+A
+(a)
+ 1. Fall
+P
+Q
+A
+B
+(b)
+ 2. Fall
+Abbildung 4.4
+:
+ Fallunterscheidung aus
+ Bemerkung 62
+(ii)
+ a)
+B
+liegt zwischen
+P
+und
+C
+.
+d
+(
+P ; A
+) +
+d
+(
+A; C
+)
+> d
+(
+P ; C
+) =
+d
+(
+P ; B
+) +
+d
+(
+B ; C
+) =
+d
+(
+P ; A
+) +
+d
+(
+B ; C
+)
+)
+d
+(
+A; C
+)
+> d
+(
+B ; C
+)
+)
+Widerspruch zu
+ Punkt (i)
+b)
+C
+liegt zwischen
+P
+und
+B
+d
+(
+P ; C
+) +
+d
+(
+C ; A
+)
+> d
+(
+P ; A
+) =
+d
+(
+P ; B
+) =
+d
+(
+P ; C
+) +
+d
+(
+C ; B
+)
+)
+d
+(
+C ; A
+)
+> d
+(
+C ; B
+)
+)
+Widerspruch zu
+ Punkt (i)
+2. Fall
+:
+Q
+und
+B
+liegen auf verschieden Halb eb enen bzgl.
+P A
+.
+Dann liegen
+A
+und
+Q
+in derselb en Halb eb ene bzgl.
+P B
+.
+Tausche
+A
+und
+B
+)
+Fall 1
+
+Bemerkung 63
+Sei
+(
+X ; d; G
+)
+eine Geometrie, die
+ 
+ -
+ 
+ erfüllt,
+P ; Q
+2
+X
+mit
+P
+6
+=
+Q
+und
+'
+eine Isometrie
+mit
+'
+(
+P
+) =
+P
+und
+'
+(
+Q
+) =
+Q
+.
+Dann gilt
+'
+(
+S
+) =
+S
+8
+S
+2
+P Q
+.
+Beweis:
+O. B. d. A. sei
+S
+2
+P Q
+2
+,
+d
+(
+P ; Q
+) =
+d
+(
+P ; S
+) +
+d
+(
+S ; Q
+)
+'
+2
+Iso(
+X
+)
+)
+d
+(
+'
+(
+P
+)
+; '
+(
+Q
+)) =
+d
+(
+'
+(
+P
+)
+; '
+(
+S
+)) +
+d
+(
+'
+(
+S
+)
+; '
+(
+Q
+))
+P ;Q
+2
+Fix(
+'
+)
+)
+d
+(
+P ; Q
+) =
+d
+(
+P ; '
+(
+S
+)) +
+d
+(
+'
+(
+S
+)
+; Q
+)
+)
+'
+(
+S
+)
+liegt zwischen
+P
+und
+Q
+)
+d
+(
+P ; S
+) =
+d
+(
+'
+(
+P
+)
+; '
+(
+S
+)) =
+d
+(
+P ; '
+(
+S
+))
+3(
+i
+)
+)
+'
+(
+S
+) =
+S
+
+Prop osition 4.2
+In einer Geometrie, die
+ 
+ -
+ 
+ erfüllt, gibt es zu
+P ; P
+0
+; Q; Q
+0
+mit
+d
+(
+P ; Q
+) =
+d
+(
+P
+0
+; Q
+0
+)
+hö chstens zwei Isometrien mit
+'
+(
+P
+) =
+P
+0
+und
+'
+(
+Q
+) =
+Q
+0
+70 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+Aus den Axiomen folgt, dass es in der Situation von
+ 
+ hö chstens zwei Isometrien mit
+'
+i
+(
+P
+) =
+P
+0
+und
+'
+i
+(
+Q
+) =
+Q
+0
+gibt.
+Beweis:
+Seien
+'
+1
+; '
+2
+; '
+3
+Isometrien mit
+'
+i
+(
+P
+) =
+P
+0
+,
+'
+i
+(
+Q
+) =
+Q
+0
+mit
+i
+= 1
+;
+2
+;
+3
+.
+Der Beweis von
+ Prop osition 4.2
+ erfolgt üb er zwei Teilaussagen:
+(Teil i)
+9
+R
+2
+X
+n
+P Q
+mit
+'
+1
+(
+R
+) =
+'
+2
+(
+R
+)
+.
+(Teil ii)
+ Hat
+'
+3 F ixpunkte, die nicht kollinear sind, so ist
+'
+=
+id
+X
+.
+Aus
+ (Teil i)
+ und
+ (Teil ii)
+ folgt, dass
+'
+
+1
+2
+
+'
+1
+=
+id
+X
+, also
+'
+2
+=
+'
+1
+, da
+P
+,
+Q
+und
+R
+in diesem
+Fall Fixpunkte sind.
+Nun zu den Beweisen der Teilaussagen:
+(Teil i)
+Sei
+R
+2
+X
+n
+P Q
+. Von den drei Punkten
+'
+1
+(
+R
+)
+; '
+2
+(
+R
+)
+; '
+3
+(
+R
+)
+liegen zwei in der selb en
+Halb eb ene bzgl.
+P
+0
+Q
+0
+=
+'
+i
+(
+P Q
+)
+.
+O. B . d. A. seien
+'
+1
+(
+R
+)
+und
+'
+2
+(
+R
+)
+in der selb en Halb eb ene.
+Es gilt:
+d
+(
+P
+0
+; '
+1
+(
+R
+)) =
+d
+(
+'
+1
+(
+P
+)
+; '
+1
+(
+R
+))
+=
+d
+(
+P ; R
+)
+=
+d
+(
+'
+2
+(
+P
+)
+; '
+2
+(
+R
+))
+=
+d
+(
+P
+0
+; '
+2
+(
+R
+))
+und analog
+d
+(
+Q
+0
+; '
+1
+(
+R
+)) =
+d
+(
+Q
+0
+; '
+2
+(
+R
+))
+(Teil ii)
+Seien
+P
+,
+Q
+und
+R
+Fixpunkte von
+'
+,
+R =
+2
+P Q
+und
+A =
+2
+P Q
+[
+P R
+[
+QR
+. Sei
+B
+2
+P Q
+n f
+P ; Q
+g
+. Dann ist
+'
+(
+B
+) =
+B
+wegen
+ Bemerkung 63
+.
+Ist
+R
+2
+AB
+, so enthält
+AB
+2 Fixpunkte von
+'
+Bem.
+63
+=====
+)
+'
+(
+A
+) =
+A
+.
+P
+B
+Q
+C
+R
+A
+Abbildung 4.5
+:
+P ; Q; R
+sind Fixpunkte,
+B
+2
+P Q
+n f
+P ; Q
+g
+,
+A =
+2
+P Q
+[
+P R
+[
+QR
+Ist
+R =
+2
+AB
+, so ist
+AB
+\
+P R
+6
+=
+;
+o der
+AB
+2
+R Q
+6
+=
+;
+nach
+ Satz 4.1
+. Der Schnittpunkt
+C
+ist dann Fixpunkt von
+'
+0
+nach
+ Bemerkung 63
+)
+'
+(
+A
+) =
+A
+.
+Bemerkung 64 (SWS-Kongruenzsatz)
+Sei
+(
+X ; d; G
+)
+eine Geometrie, die
+ 
+ -
+ 
+ erfüllt. Seien auÿerdem
+4
+AB C
+und
+4
+A
+0
+B
+0
+C
+0
+Dreiecke, für die gilt:
+(i)
+d
+(
+A; B
+) =
+d
+(
+A
+0
+; B
+0
+)
+(ii)
+\
+C AB
+˘
+=
+\
+C
+0
+A
+0
+B
+0
+71 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+(iii)
+d
+(
+A; C
+) =
+d
+(
+A
+0
+; C
+0
+)
+Dann ist
+4
+AB C
+kongruent zu
+4
+A
+0
+B
+0
+C
+0
+.
+Beweis:
+Sei
+'
+die Isometrie mit
+'
+(
+A
+0
+) =
+A
+,
+'
+(
+A
+0
+C
+0
++
+) =
+AC
++
+und
+'
+(
+A
+0
+B
+0
++
+) =
+AB
++
+. Diese
+Isometrie existiert wegen
+ Punkt 
+.
+)
+C
+2
+'
+(
+A
+0
+C
+0
++
+)
+und
+B
+2
+'
+(
+A
+0
+B
+0
++
+)
+.
+d
+(
+A
+0
+; C
+0
+) =
+d
+(
+'
+(
+A
+0
+)
+; '
+(
+C
+0
+)) =
+d
+(
+A; '
+(
+C
+0
+))
+3(
+i
+)
+==
+)
+'
+(
+C
+0
+) =
+C
+d
+(
+A
+0
+; B
+0
+) =
+d
+(
+'
+(
+A
+0
+)
+; '
+(
+B
+0
+)) =
+d
+(
+A; '
+(
+B
+0
+))
+3(
+i
+)
+==
+)
+'
+(
+B
+0
+) =
+B
+Also gilt insb esondere
+'
+(
+4
+A
+0
+B
+0
+C
+0
+) =
+4
+AB C
+.
+
+Bemerkung 65 (WSW-Kongruenzsatz)
+Sei
+(
+X ; d; G
+)
+eine Geometrie, die
+ 
+ -
+ 
+ erfüllt. Seien auÿerdem
+4
+AB C
+und
+4
+A
+0
+B
+0
+C
+0
+Dreiecke, für die gilt:
+(i)
+d
+(
+A; B
+) =
+d
+(
+A
+0
+; B
+0
+)
+(ii)
+\
+C AB
+˘
+=
+\
+C
+0
+A
+0
+B
+0
+(iii)
+\
+AB C
+˘
+=
+\
+A
+0
+B
+0
+C
+0
+Dann ist
+4
+AB C
+kongruent zu
+4
+A
+0
+B
+0
+C
+0
+.
+Beweis:
+Sei
+'
+die Isometrie mit
+'
+(
+A
+0
+) =
+A
+,
+'
+(
+B
+0
+) =
+B
+und
+'
+(
+C
+0
+)
+liegt in der selb en Halb eb ene
+bzgl.
+AB
+wie
+C
+. Diese Isometrie existiert wegen
+ 
+.
+Aus
+\
+C AB
+=
+\
+C
+0
+A
+0
+B
+0
+=
+\
+'
+(
+C
+0
+)
+'
+(
+A
+0
+)
+'
+(
+B
+0
+) =
+\
+'
+(
+C
+0
+)
+AB
+folgt, dass
+'
+(
+C
+0
+)
+2
+AC
++
+.
+Analog folgt aus
+\
+AB C
+=
+\
+A
+0
+B
+0
+C
+0
+=
+\
+'
+(
+A
+0
+)
+'
+(
+B
+0
+)
+'
+(
+C
+0
+) =
+\
+AB '
+(
+C
+0
+)
+, dass
+'
+(
+C
+0
+)
+2
+B C
++
+.
+Dann gilt
+'
+(
+C
+0
+)
+2
+AC
+\
+B C
+=
+f
+C
+g )
+'
+(
+C
+0
+) =
+C
+.
+Es gilt also
+'
+(
+4
+A
+0
+B
+0
+C
+0
+) =
+4
+AB C
+.
+
+De˝nition 61
+a)
+Ein
+Winkel
+ist ein Punkt
+P
+2
+X
+zusammen mit
+2
+Halbgeraden mit Anfangspunkt
+P
+.
+Man schreibt:
+\
+R
+1
+P R
+2
+bzw.
+\
+R
+2
+P R
+1
+2
+b)
+Zwei Winkel sind
+gleich
+, wenn es eine Isometrie gibt, die den einen Winkel auf den
+anderen abbildet.
+c)
+\
+R
+0
+1
+P
+0
+R
+0
+2
+heiÿt
+kleiner
+als
+\
+R
+1
+P R
+2
+, wenn es eine Isometrie
+'
+gibt, mit
+'
+(
+P
+0
+) =
+P
+,
+'
+(
+P
+0
+R
+0
++
+1
+) =
+P R
++
+1
+und
+'
+(
+R
+0
+2
+)
+liegt in der gleichen Halb eb ene bzgl.
+P R
+1
+wie
+R
+2
+und in
+der gleichen Halb eb ene bzgl.
+P R
+2
+wie
+R
+1
+d)
+ Im D reieck
+4
+P QR
+gibt es
+Innenwinkel
+und
+Auÿenwinkel
+.
+Bemerkung 66
+In einem Dreieck ist jeder Innenwinkel kleiner als jeder nicht anliegende Auÿenwinkel.
+Beweis:
+Zeige
+\
+P R Q <
+\
+R QP
+0
+.
+Sei
+M
+der Mittelpunkt der Strecke
+QR
+und
+P
+0
+2
+P Q
++
+n
+P Q
+. Sei
+A
+2
+M P
+
+mit
+d
+(
+P ; M
+) =
+d
+(
+M ; A
+)
+.
+2
+Für dieses Skript gilt:
+\
+R
+1
+P R
+2
+=
+\
+R
+2
+P R
+1
+. Also sind insb esondere alle Winkel
+
+180
+
+.
+72 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+P
+R
+0
+1
+R
+1
+R
+0
+2
+R
+2
+(a)
+\
+R
+0
+1
+P
+0
+R
+0
+2
+ist kleiner als
+\
+R
+1
+P R
+2
+,
+vgl.
+ De˝nition 61.c
+P
+Q
+R
+(b)
+Innenwinkel
+ und
+ Auÿenwin-
+kel
+ in
+4
+P QR
+, vgl.
+ De˝niti-
+on 61.d
+Abbildung 4.6
+:
+ Situation aus
+ De˝nition 61
+Q
+M
+A
+P
+R
+(a)
+Parallelogramm AQPR
+
+
+R
+Q
+P
+(b)
+Innen- un d Auÿenwin-
+kel von
+4
+P QR
+Abbildung 4.7
+:
+ Situation aus
+ Bemerkung 66
+Es gilt:
+d
+(
+Q; M
+) =
+d
+(
+M ; R
+)
+und
+d
+(
+P ; M
+) =
+d
+(
+M ; A
+)
+sowie
+\
+P M R
+=
+\
+AM Q
+) 4
+M R Q
+ist kongruent zu
+4
+AM Q
+, denn eine der b eiden Isometrien, die
+\
+P M R
+auf
+\
+AM Q
+abbildet,
+bildet
+R
+auf
+Q
+und
+P
+auf
+A
+ab.
+)
+\
+M QA
+=
+\
+M R P
+=
+\
+QR P
+=
+\
+P R Q
+.
+No ch zu zeigen:
+\
+M QA <
+\
+R QP
+0
+, denn
+A
+liegt in der selb en Halb eb ene bzgl.
+P Q
+wie
+M
+.
+Prop osition 4.3 (Existenz der Parallelen)
+Sei
+(
+X ; d; G
+)
+eine Geometrie mit den Axiomen
+ 
+ -
+ 
+.
+Dann gibt es zu jeder Geraden
+g
+2
+G
+und jedem Punkt
+P
+2
+X
+n
+g
+mindestens eine
+Parallele
+h
+2
+G
+mit
+P
+2
+h
+und
+g
+\
+h
+=
+;
+.
+Beweis:
+Seien
+P ; Q
+2
+f
+2
+G
+und
+'
+die Isometrie, die
+Q
+auf
+P
+und
+P
+auf
+P
+0
+2
+f
+mit
+d
+(
+P ; P
+0
+) =
+d
+(
+P ; Q
+)
+abbildet und die Halb eb enen bzgl.
+f
+erhält.
+73 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+Q
+h
+f
+g
+P
+Abbildung 4.8
+:
+ Situation aus
+ Prop osition 4.3
+Annahme:
+'
+(
+g
+)
+\
+g
+6
+=
+;
+)
+Es gibt einen Schnittpunkt
+f
+R
+g
+=
+'
+(
+g
+)
+\
+g
+.
+Dann ist
+\
+R QP
+=
+\
+R QP
+0
+<
+\
+R P P
+0
+nach
+ Bemerkung 66
+ und
+\
+R QP
+=
+\
+R P P
+0
+, weil
+'
+(
+\
+R QP
+) =
+\
+R P P
+0
+.
+)
+Widerspruch
+)
+'
+(
+g
+)
+\
+g
+=
+;
+
+Folgerung 4.4
+Die Summe zweier Innenwinkel in einem D reieck ist kleiner als
+ˇ
+.
+D. h. es gibt eine Isometrie
+'
+mit
+'
+(
+Q
+) =
+P
+und
+'
+(
+QP
++
+) =
+P R
++
+, so dass
+'
+(
+R
+)
+in der gleichen
+Halb eb ene bzgl.
+P Q
+liegt wie
+R
+.
+Beweis:
+Die Summe eines Innenwinkels mit den anliegenden Auÿenwinkeln ist
+ˇ
+, d. h. die
+b eiden Halbgeraden bilden eine Gerade.
+Abbildung 4.9
+:
+In der sphärischen Geometrie gibt es, im Gegensatz zur euklidischen Geometrie,
+Dreiecke mit drei
+90
+
+-Winkeln.
+Prop osition 4.5
+In einer Geometrie mit den Axiomen
+ 
+ -
+ 
+ ist in jedem Dreieck die Summe der
+Innenwinkel
+
+ˇ
+.
+74 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
+Sei im Folgenden 
+IWS
+ die Innenwinkelsumme.
+Beweis:
+Sei
+4
+ein Dreieck mit
+IWS(
+4
+) =
+ˇ
++
+"
+
+
+
+P
+(a)
+ S umme der Winkel
+
+,
+
+und
+
+
+1
+
+2
+
+
+M
+A
+B
+C
+A
+0
+
+(b)
+ Situation aus
+ Prop osition 4.5
+Abbildung 4.10
+:
+ Situation aus
+ Prop osition 4.5
+Sei
+
+ein Innenwinkel von
+4
+.
+Beh.:
+Es gibt ein Dreieck
+4
+0
+mit
+IWS(
+4
+0
+) = IWS(
+4
+)
+und einem Innenwinkel
+
+0
+
+
+2
+.
+Dann gibt es für jedes
+n
+ein
+4
+n
+mit
+IWS
+(
+4
+n
+) =
+IWS
+(
+4
+)
+und Innenwinkel
+
+0
+
+
+2
+n
+. Für
+
+2
+n
+< "
+ist dann die Summe der b eiden Innenwinkel um
+4
+n
+gröÿer als
+ˇ
+)
+Widerspruch
+zu
+ Folgerung 4.4
+.
+Beweis:
+Es seien
+A; B ; C
+2
+X
+und
+4
+das Dreieck mit den Eckpunkten
+A; B ; C
+und
+
+sei
+der Innenwinkel b ei
+A
+,
+
+der Innenwinkel b ei
+B
+und
+
+der Innenwinkel b ei
+C
+.
+Sei
+M
+der Mittelpunkt der Strecke
+B C
+. Sei auÿerdem
+
+1
+=
+\
+C AM
+und
+
+2
+=
+\
+B AM
+.
+Sei weiter
+A
+0
+2
+M A
+
+mit
+d
+(
+A
+0
+; M
+) =
+d
+(
+A; M
+)
+.
+Die Situation ist in
+ Abbildung 4.10b
+ skizziert.
+) 4
+(
+M A
+0
+C
+)
+und
+4
+(
+M AB
+)
+sind kongruent.
+)
+\
+AB M
+=
+\
+A
+0
+C M
+und
+\
+M A
+0
+C
+=
+\
+M AB
+.
+)
+
++
+
++
+
+=
+IWS
+(
+4
+AB C
+) =
+IWS
+(
+4
+AA
+0
+C
+)
+und
+
+1
++
+
+2
+=
+
+, also o. B. d. A.
+
+1
+
+
+2
+Bemerkung 67
+In einer euklidischen Eb ene ist in jedem Dreieck die Innenwinkelsumme gleich
+ˇ
+.
+
+0
+
+00
+
+
+
+0
+
+A
+B
+C
+g
+Abbildung 4.11
+:
+ Situation aus
+ Bemerkung 67
+Beweis:
+Sei
+g
+eine Parallele von
+AB
+durch
+C
+.
+
+Es gilt
+
+0
+=
+
+wegen
+ Prop osition 4.3
+.
+
+Es gilt
+
+0
+=
+
+wegen
+ Prop osition 4.3
+.
+
+Es gilt
+
+00
+=
+
+0
+wegen
+ Aufgab e 8
+.
+75 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
+)
+IWS(
+4
+AB C
+) =
+
++
+
+00
++
+
+0
+=
+ˇ
+Aus der Eigenschaft, dass die Innenwinkelsumme von Dreiecken in der euklidischen Eb ene gleich
+ˇ
+ist, folgen direkt die Kongruenzsätze SWW und WWS üb er den Kongruenzsatz WSW.
+4.2 Weitere Eigenschaften einer euklidischen Eb ene
+Satz 4.6 (Strahlensatz)
+In ähnlichen Dreiecken sind Verhältnisse entsprechender Seiten gleich.
+x
+y
+
+1
+0
+1
+2
+3
+4
+0
+1
+2
+3
+z
+x
+
+2
+z
+
+2
+x
+Abbildung 4.12
+:
+ Strahlensatz
+Der B eweis wird hier nicht geführt. Für Beweisvorschläge wäre ich dankbar.
+A
+B
+0
+C
+0
+B
+C
+c
+b
+a
+c
+0
+b
+0
+a
+0
+Abbildung 4.13
+:
+ Die Dreiecke
+4
+AB C
+und
+4
+AB
+0
+C
+0
+sind ähnlich.
+4.2.1 Flächeninhalt
+De˝nition 62
+Simplizialkomplexe in euklidischer Eb ene
+(
+X ; d
+)
+heiÿen
+˛ächengleich
+, wenn sie sich in
+kongruente Dreiecke zerlegen lassen.
+76 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
+(a)
+ Zwei kongruente Dreiecke
+(b)
+Zwei weitere kongruente Drei-
+ecke
+Abbildung 4.14
+:
+ Flächengleichheit
+Der F lächeninhalt eines Dreiecks ist
+1
+=
+2
+
+Grundseite
+
+Höhe.
+A
+B
+C
+L
+C
+h
+c
+c
+(a)
+1
+=
+2
+ j
+AB
+j  j
+h
+c
+j
+
+A
+B
+C
+L
+A
+h
+a
+c
+(b)
+1
+=
+2
+ j
+B C
+j  j
+h
+a
+j
+Abbildung 4.15
+:
+ Flächenb erechnung im Dreieck
+Zu zeigen:
+Unabhängigkeit von der gewählten Grundseite.
+
+
+
+
+A
+B
+C
+L
+A
+L
+C
+Abbildung 4.16
+:
+4
+AB L
+a
+und
+4
+C L
+C
+B
+sind ähnlich, weil
+IWS =
+ˇ
+Strahlensatz
+=======
+)
+a
+h
+c
+=
+c
+h
+a
+!
+a
+
+h
+a
+=
+c
+
+h
+c
+Satz 4.7 (Satz des Pythagoras)
+Im rechtwinkligen Dreieck gilt
+a
+2
++
+b
+2
+=
+c
+2
+, wob ei
+c
+die Hyp otenuse und
+a; b
+die b eiden
+Katheten sind.
+Beweis:
+(
+a
++
+b
+)
+
+(
+a
++
+b
+) =
+a
+2
++ 2
+ab
++
+b
+2
+=
+c
+2
++ 4
+
+(
+1
+2
+
+a
+
+b
+)
+77 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
+c
+b
+a
+A
+B
+C
+
+(a)
+a; b
+sind K ath eten und
+c
+ist die Hyp o-
+tenu se
+b
+a
+b
+a
+b
+a
+b
+a
+
+
+
+
+
+(b)
+ Beweisskizze
+Abbildung 4.17
+:
+ Satz des Pythagoras
+Satz 4.8
+Bis auf Isometrie gibt es genau eine euklidische Eb ene
+(
+X ; d; G
+)
+, nämlich
+X
+=
+R
+2
+,
+d
+=
+euklidischer Abstand,
+G
+=
+Menge der üblichen Geraden.
+Beweis:
+(i)
+(
+R
+2
+; d
+Euklid
+)
+ist o˙ensichtlich eine euklidische Eb ene.
+(ii)
+Sei
+(
+X ; d
+)
+eine euklidische Eb ene und
+g
+1
+; g
+2
+Geraden in
+X
+, die sich in einem Punkt
+0
+im rechten Winkel schneiden.
+Sei
+P
+2
+X
+n
+(
+g
+1
+[
+g
+2
+)
+ein Punkt und
+P
+X
+der Fuÿpunkt des Lots von
+P
+auf
+g
+1
+(vgl.
+Aufgab e 9 (c)
+) und
+P
+Y
+der Fuÿpunkt des Lots von
+P
+auf
+g
+2
+.
+Sei
+x
+P
+:=
+d
+(
+P
+X
+;
+0)
+und
+y
+P
+:=
+d
+(
+P
+Y
+;
+0)
+.
+In
+ Abbildung 4.19
+ wurde die Situation skizziert.
+Sei
+h
+:
+X
+!
+R
+2
+eine Abbildung mit
+h
+(
+P
+) := (
+x
+P
+; y
+P
+)
+Dadurch wird
+h
+auf dem
+Quadranten de˝niert, in dem
+P
+liegt, d. h.
+8
+Q
+2
+X
+mit
+P Q
+\
+g
+1
+=
+;
+=
+P Q
+\
+g
+2
+Fortsetzung auf ganz
+X
+durch konsistente Vorzeichenwahl.
+Im Folgenden werden zwei Aussagen gezeigt:
+(i)
+h
+ist surjektiv
+(ii)
+h
+ist eine Isometrie
+Da jede Isometrie injektiv ist, folgt aus
+ (i)
+ und
+ (ii)
+, dass
+h
+bijektiv ist.
+Nun zu den Beweisen der Teilaussagen:
+78 4.3. HYPERBOLISCHE GEOMETRIE
+
+g
+1
+g
+2
+P
+X
+(a)
+ Schritt 1
+
+g
+1
+g
+2
+x
+P
+y
+P
+P
+0
+P
+X
+P
+Y
+X
+(b)
+ Schritt 2
+Abbildung 4.18
+:
+ Beweis zu
+ Satz 4.8
+(i)
+Sei
+(
+x; y
+)
+2
+R
+2
+, z. B.
+x
+
+0
+; y
+
+0
+. Sei
+P
+0
+2
+g
+1
+mit
+d
+(0
+; P
+0
+) =
+x
+und
+P
+0
+auf der
+gleichen Seite von
+g
+2
+wie
+P
+.
+g
+1
+g
+2
+x
+P
+y
+P
+P
+Q
+0
+R
+X
+Abbildung 4.19
+:
+ Beweis zu
+ Satz 4.8
+(ii)
+ Zu Zeigen:
+d
+(
+P ; Q
+) =
+d
+(
+h
+(
+P
+)
+; h
+(
+Q
+))
+d
+(
+P ; Q
+)
+2
+Pythagoras
+=
+d
+(
+P ; R
+)
+2
++
+d
+(
+R ; Q
+)
+2
+= (
+y
+Q
+
+y
+P
+)
+2
++ (
+x
+Q
+
+x
+P
+)
+2
+.
+h
+(
+Q
+) = (
+x
+Q
+; y
+Q
+)
+4.3 Hyp erb olische Geometrie
+De˝nition 63
+Sei
+H
+:=
+f
+z
+2
+C
+j =
+(
+z
+)
+>
+0
+g
+=
+
+(
+x; y
+)
+2
+R
+2
+
+
+y >
+0
+	
+79 4.3. HYPERBOLISCHE GEOMETRIE
+die ob ere Halb eb ene bzw. Poincaré-Halb eb ene und
+G
+=
+G
+1
+[
+G
+2
+mit
+G
+1
+=
+f
+g
+1
+
+H
+j 9
+m
+2
+R
+; r
+2
+R
+>
+0
+:
+g
+1
+=
+f
+z
+2
+H
+:
+j
+z
+
+m
+j
+=
+r
+g g
+G
+2
+=
+f
+g
+2
+
+H
+j 9
+x
+2
+R
+:
+g
+2
+=
+f
+z
+2
+H
+:
+<
+(
+z
+) =
+x
+g g
+Die Elemente aus
+G
+heiÿen
+hyp erb olische Geraden
+.
+Bemerkung 68 (Eigenschaften der hyp erb olischen Geraden)
+Die hyp erb olischen Geraden erfüllen. . .
+a)
+ . . . die Inzidenzaxiome
+ 
+b)
+ . . . das Anordnungsaxiom
+ (ii)
+c)
+ . . . nicht das Parallelenaxiom
+ 
+Beweis:
+a)
+ O˙ensichtlich sind
+ (iii)
+ und
+ (ii)
+ erfüllt. Für
+1 (i)
+ gilt:
+Gegeb en
+z
+1
+; z
+2
+2
+H
+Existenz:
+Fall 1
+<
+(
+z
+1
+) =
+<
+(
+z
+2
+)
+)
+z
+1
+und
+z
+2
+liegen auf
+g
+=
+f
+z
+2
+C
+j <
+(
+z
+) =
+<
+(
+z
+1
+)
+^
+H
+g
+Siehe
+ Abbildung 4.20a
+.
+Fall 2
+<
+(
+z
+1
+)
+6
+=
+<
+(
+z
+2
+)
+Betrachte nun
+z
+1
+und
+z
+2
+als Punkte in der euklidischen Eb ene. Die Mittelsenkrech-
+te zu diesen Punkten schneidet die
+x
+-Achse. Alle Punkte auf der Mittelsenkrechten
+zu
+z
+1
+und
+z
+2
+sind gleich weit von
+z
+1
+und
+z
+2
+entfernt. Daher ist der Schnittpunkt mit
+der
+x
+-Achse der Mittelpunkt eines Kreises durch
+z
+1
+und
+z
+2
+(vgl.
+ Abbildung 4.20b
+)
+x
+y
+
+1
+0
+1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+Z
+1
+Z
+2
+<
+(
+Z
+1
+)
+(a)
+ Fall 1
+x
+y
+
+1
+0
+1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+Z
+1
+Z
+2
+(b)
+ Fall 2
+Abbildung 4.20
+:
+Zwei Punkte liegen in der hyp erb olischen Geometrie immer auf genau einer
+Geraden
+b)
+ Sei
+g
+2
+G
+1
+_
+[
+G
+2
+eine hyp erb olische G erade.
+80 4.3. HYPERBOLISCHE GEOMETRIE
+Es existieren disjunkte Zerlegungen von
+H
+n
+g
+:
+Fall 1:
+g
+=
+f
+z
+2
+H
+k
+z
+
+m
+j
+=
+r
+g 2
+G
+1
+Dann gilt:
+H
+=
+f
+z
+2
+H
+k
+z
+
+m
+j
+< r
+g
+|
+{z
+}
+=:
+H
+1
+(Kreisinneres)
+_
+[ f
+z
+2
+H
+k
+z
+
+m
+j
+> r
+g
+|
+{z
+}
+=:
+H
+2
+(Kreisäuÿeres)
+Da
+r >
+0
+ist
+H
+1
+nicht leer, da
+r
+2
+R
+ist
+H
+2
+nicht leer.
+Fall 2:
+g
+=
+f
+z
+2
+H
+j <
+z
+=
+x
+g 2
+G
+2
+Die disjunkte Zerlegung ist:
+H
+=
+f
+z
+2
+H
+j <
+(
+z
+)
+< x
+g
+|
+{z
+}
+=:
+H
+1
+(Links)
+_
+[ f
+z
+2
+H
+j <
+(
+z
+)
+> x
+g
+|
+{z
+}
+=:
+H
+2
+(Rechts)
+Zu zeigen:
+8
+A
+2
+H
+i
+,
+B
+2
+H
+j
+mit
+i; j
+2 f
+1
+;
+2
+g
+gilt:
+AB
+\
+g
+6
+=
+; ,
+i
+6
+=
+j
+
+(
+:
+A
+2
+H
+1
+; B
+2
+H
+2
+:
+AB
+\
+g
+6
+=
+;
+Da
+d
+H
+stetig ist, folgt diese Richtung direkt. Alle P unkte in
+H
+1
+hab en einen Abstand
+von
+m
+der kleiner ist als
+r
+und alle Punkte in
+H
+2
+hab en einen Abstand von
+m
+der
+gröÿer ist als
+r
+. Da man jede Strecke von
+A
+nach
+B
+insb esondere auch als stetige
+Abbildung
+f
+:
+R
+!
+R
+>
+0
+au˙assen kann, greift der Zwischenwertsatz
+)
+AB
+\
+g
+6
+=
+;
+
+)
+:
+A
+2
+H
+i
+; B
+2
+H
+j
+mit
+i; j
+2 f
+1
+;
+2
+g
+:
+AB
+\
+g
+6
+=
+; )
+i
+6
+=
+j
+Sei
+h
+die Gerade, die durch
+A
+und
+B
+geht.
+Da
+A; B =
+2
+g
+, ab er
+A; B
+2
+h
+gilt, hab en
+g
+und
+h
+insb esondere mindestens einen
+unterschiedlichen Punkt. Aus
+ (i)
+ folgt, dass sich
+g
+und
+h
+in hö chstens einen Punkt
+schneiden. Sei
+C
+dieser Punkt.
+Aus
+A; B =
+2
+g
+folgt:
+C
+6
+=
+A
+und
+C
+6
+=
+B
+. Also liegt
+C
+zwischen
+A
+und
+B
+. Daraus folgt,
+dass
+A
+und
+B
+bzgl.
+g
+in verschiedenen Halb eb enen liegen.
+c)
+ Siehe
+ Abbildung 4.21
+.
+x
+y
+
+5
+
+4
+
+3
+
+2
+
+1
+0
+1
+2
+3
+4
+5
+6
+0
+1
+2
+3
+4
+5
+Abbildung 4.21
+:
+ Hyp erb olische Geraden erfüllen
+ 
+ nicht.
+81 4.3. HYPERBOLISCHE GEOMETRIE
+De˝nition 64
+Es seien
+a; b; c; d
+2
+R
+mit
+ad
+
+bc
+6
+= 0
+und
+˙
+:
+C
+!
+C
+eine Abbildung de˝niert durch
+˙
+(
+z
+) :=
+az
++
+b
+cz
++
+d
+˙
+heiÿt
+Möbiustransformation
+.
+Prop osition 4.9
+a)
+ Die Grupp e
+SL
+2
+(
+R
+)
+op eriert auf
+H
+durch die Möbiustransformation
+˙
+(
+z
+) :=
+
+a b
+c d
+
+
+z
+:=
+az
++
+b
+cz
++
+d
+b)
+ Die Grupp e
+PSL
+2
+(
+R
+) = SL
+2
+(
+R
+)
+=
+(
+
+I
+)
+op eriert durch
+˙
+auf
+H
+.
+c)
+PSL
+2
+(
+R
+)
+op eriert auf
+R
+[ f 1 g
+. Diese Grupp enop eration ist 3-fach transitiv, d. h.
+zu
+x
+0
+< x
+1
+< x
+1
+2
+R
+gibt es genau ein
+˙
+2
+PSL
+2
+(
+R
+)
+mit
+˙
+(
+x
+0
+) = 0
+,
+˙
+(
+x
+1
+) = 1
+,
+˙
+(
+x
+1
+) =
+1
+.
+d)
+SL
+2
+(
+R
+)
+wird von den Matrizen
+
+
+0
+0
+
+
+1
+
+|
+{z
+}
+=:
+A
+
+;
+
+1
+t
+0 1
+
+|
+{z
+}
+=:
+B
+t
+und
+
+0 1
+
+1 0
+
+|
+{z
+}
+=:
+C
+mit
+t; 
+2
+R
+
+erzeugt.
+e)
+PSL
+2
+(
+R
+)
+op eriert auf
+G
+.
+Beweis:
+a)
+ Sei
+z
+=
+x
++
+i y
+2
+H
+, d. h.
+y >
+0
+und
+˙
+=
+
+a b
+c d
+
+2
+SL
+2
+(
+R
+)
+)
+˙
+(
+z
+) =
+a
+(
+x
++
+i y
+) +
+b
+c
+(
+x
++
+i y
+) +
+d
+=
+(
+ax
++
+b
+) +
+i ay
+(
+cx
++
+d
+) +
+i cy
+
+(
+cx
++
+d
+)
+
+i cy
+(
+cx
++
+d
+)
+
+i cy
+=
+(
+ax
++
+b
+)(
+cx
++
+d
+) +
+ay cy
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
++
+i
+ay
+(
+cx
++
+d
+)
+
+(
+ax
++
+b
+)
+cy
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
+=
+axcx
++
+axd
++
+bcx
++
+bd
++
+ay cy
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
++
+i
+(
+ad
+
+bc
+)
+y
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
+SL
+2
+(
+R
+)
+=
+ac
+(
+x
+2
++
+y
+2
+) +
+adx
++
+bcx
++
+bd
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
++
+i
+y
+(
+cx
++
+d
+)
+2
++ (
+cy
+)
+2
+) =
+(
+˙
+(
+z
+)) =
+y
+(
+cx
++
+d
+)
+2
++(
+cy
+)
+2
+>
+0
+Die Abbildung bildet also nach
+H
+ab. Auÿerdem gilt:
+
+1 0
+0 1
+
+
+z
+=
+x
++
+i y
+1
+=
+x
++
+i y
+=
+z
+82 4.3. HYPERBOLISCHE GEOMETRIE
+und
+
+a b
+c d
+
+
+
+a
+0
+b
+0
+c
+0
+d
+0
+
+
+z
+
+=
+
+a b
+c d
+
+
+a
+0
+z
++
+b
+0
+c
+0
+z
++
+d
+0
+=
+a
+a
+0
+z
++
+b
+0
+c
+0
+z
++
+d
+0
++
+b
+c
+a
+0
+z
++
+b
+0
+c
+0
+z
++
+d
+0
++
+d
+=
+a
+(
+a
+0
+z
++
+b
+0
+)+
+b
+(
+c
+0
+z
++
+d
+0
+)
+c
+0
+z
++
+d
+0
+c
+(
+a
+0
+z
++
+b
+0
+)+
+d
+(
+c
+0
+z
++
+d
+0
+)
+c
+0
+z
++
+d
+0
+=
+a
+(
+a
+0
+z
++
+b
+0
+) +
+b
+(
+c
+0
+z
++
+d
+0
+)
+c
+(
+a
+0
+z
++
+b
+0
+) +
+d
+(
+c
+0
+z
++
+d
+0
+)
+=
+(
+aa
+0
++
+bc
+0
+)
+z
++
+ab
+0
++
+bd
+0
+(
+ca
+0
++
+db
+0
+)
+z
++
+cb
+0
++
+dd
+0
+=
+
+aa
+0
++
+bc
+0
+ab
+0
++
+bd
+0
+ca
+0
++
+db
+0
+cb
+0
++
+dd
+0
+
+
+z
+=
+
+a b
+c d
+
+
+
+a
+0
+b
+0
+c
+0
+d
+0
+
+
+z
+b)
+ Es gilt
+˙
+(
+z
+) = (
+
+˙
+)(
+z
+)
+für alle
+˙
+2
+SL
+2
+(
+R
+)
+und
+z
+2
+H
+.
+c)
+ Ansatz:
+˙
+=
+
+a b
+c d
+
+˙
+(
+x
+0
+) =
+ax
+0
++
+b
+cx
+0
++
+d
+!
+= 0
+)
+ax
+0
++
+b
+= 0
+)
+b
+=
+
+ax
+0
+˙
+(
+x
+1
+) =
+1 )
+cx
+1
++
+d
+= 0
+)
+d
+=
+
+cx
+1
+˙
+(
+x
+1
+) = 1
+)
+ax
+1
++
+b
+=
+cx
+1
++
+d
+a
+(
+x
+1
+
+x
+0
+) =
+c
+(
+x
+1
+
+x
+1
+)
+)
+c
+=
+a
+x
+1
+
+x
+0
+x
+1
+
+x
+1
+) 
+a
+2
+
+x
+1
+x
+1
+
+x
+0
+x
+1
+
+x
+1
++
+a
+2
+x
+0
+x
+1
+
+x
+0
+x
+1
+
+x
+1
+= 1
+)
+a
+2
+x
+1
+
+x
+0
+x
+0
+
+x
+1
+(
+x
+0
+
+x
+1
+) = 1
+)
+a
+2
+=
+x
+1
+
+x
+1
+(
+x
+1
+
+x
+1
+)(
+x
+1
+
+x
+0
+)
+d)
+ Es gilt:
+A
+
+1
+
+=
+A
+1
+
+B
+
+1
+t
+=
+B
+
+t
+C
+
+1
+=
+C
+3
+Daher genügt es zu zeigen, dass man mit
+A
+
+,
+B
+t
+und
+C
+alle Matrizen aus
+SL
+2
+(
+R
+)
+erzeugen kann, genügt es also von einer b eliebigen Matrix durch Multiplikation mit
+Matrizen der Form
+A
+
+,
+B
+t
+und
+C
+die Einheitsmatrix zu generieren.
+Sei also
+M
+=
+
+a b
+c d
+
+2
+SL
+2
+(
+R
+)
+b eliebig.
+Fall 1:
+a
+= 0
+Da
+M
+2
+SL
+2
+(
+R
+)
+ist, gilt
+det
+M
+= 1 =
+ad
+
+bc
+=
+
+bc
+. Daher ist insb esondere
+c
+6
+= 0
+. Es
+folgt:
+
+0 1
+
+1 0
+
+
+
+a b
+c d
+
+=
+
+c d
+
+a
+
+b
+
+83 4.3. HYPERBOLISCHE GEOMETRIE
+Gehe zu Fall 2.
+Fall 2:
+a
+6
+= 0
+Nun wird in
+M
+durch
+M
+
+A
+1
+a
+an der Stelle von
+a
+eine
+1
+erzeugt:
+
+a b
+c d
+
+
+
+1
+a
+0
+0
+a
+
+=
+
+1
+ab
+c
+a
+ad
+
+Gehe zu Fall 3.
+Fall 3:
+a
+= 1
+
+1
+b
+c d
+
+
+
+1
+
+b
+0 1
+
+=
+
+1 0
+c d
+
+bc
+
+Da wir
+det
+M
+= 1 =
+ad
+
+bc
+=
+d
+
+bc
+wissen, gilt sogar
+M
+2
+;
+2
+= 1
+.
+Gehe zu Fall 4.
+Fall 4:
+a
+= 1
+,
+b
+= 0
+,
+d
+= 1
+A
+
+1
+C B
+c
+C
+
+1 0
+c
+1
+
+=
+
+1 0
+0 1
+
+Daher erzeugen Matrizen der Form
+A
+
+,
+B
+t
+und
+C
+die Grupp e
+SL
+2
+R
+.
+
+e)
+ Es genügt die Aussage für Matrizen aus
+ Prop osition 4.9 (d)
+ zu zeigen.
+
+˙
+=
+
+
+0
+0
+
+
+1
+
+, also
+˙
+(
+z
+) =
+
+2
+z
+. Daraus ergeb en sich die Situationen, die in
+Abbildung 4.22a
+ und
+ Abbildung 4.22b
+ dargestellt sind.
+x
+y
+
+1
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+m
+
+2
+m
+m
++
+i r
+
+2
+m
++
+i 
+2
+r
+m
++ 1
+(a)
+ Fall 1
+x
+y
+
+1
+0
+1
+2
+3
+4
+0
+1
+2
+3
+z
+x
+
+2
+z
+
+2
+x
+(b)
+ Fall 2 (Strahlensatz)
+Abbildung 4.22
+:
+ Beweis von
+ Prop osition 4.9 (e)
+ für eine Diagonalmatrix
+
+O˙ensichtlich gilt die Aussage für
+˙
+=
+
+1
+a
+0 1
+
+
+Sei nun
+˙
+=
+
+0 1
+
+1 0
+
+, also
+˙
+(
+z
+) =
+
+1
+z
+Bemerkung 69
+Zu hyp erb olischen Geraden
+g
+1
+; g
+2
+gibt es
+˙
+2
+PSL
+2
+(
+R
+)
+mit
+˙
+(
+g
+1
+) =
+g
+2
+.
+84 4.3. HYPERBOLISCHE GEOMETRIE
+
+x
+y
+
+1
+0
+1
+0
+1
+z
+=
+r
+
+e
+i '
+1
+z
+=
+1
+r
+
+e
+i '
+Abbildung 4.23
+:
+ Inversion am Kreis
+Beweis:
+Nach
+ Prop osition 4.9 (c)
+ gibt es
+˙
+mit
+˙
+(
+a
+1
+) =
+b
+1
+und
+˙
+(
+a
+2
+) =
+b
+2
+. Dann existiert
+˙
+(
+g
+1
+) :=
+g
+2
+wegen dem Inzidenzaxiom
+ 
+ und ist eindeutig b estimmt.
+De˝nition 65
+Seien
+z
+1
+; z
+2
+; z
+3
+; z
+4
+2
+C
+paarweise verschieden.
+Dann heiÿt
+DV (
+z
+1
+; z
+2
+; z
+3
+; z
+4
+) :=
+z
+1
+
+z
+4
+z
+1
+
+z
+2
+z
+3
+
+z
+4
+z
+3
+
+z
+2
+=
+(
+z
+1
+
+z
+4
+)
+
+(
+z
+3
+
+z
+2
+)
+(
+z
+1
+
+z
+2
+)
+
+(
+z
+3
+
+z
+4
+)
+Dopp elverhältnis
+von
+z
+1
+; : : : ; z
+4
+.
+Bemerkung 70 (Eigenschaften des Dopp elverhältnisses)
+a)
+DV (
+z
+1
+; : : : ; z
+4
+)
+2
+C
+n f
+0
+;
+1
+g
+b)
+DV (
+z
+1
+; z
+4
+; z
+3
+; z
+2
+) =
+1
+DV (
+z
+1
+;z
+2
+;z
+3
+;z
+4
+)
+c)
+DV (
+z
+3
+; z
+2
+; z
+1
+; z
+4
+) =
+1
+DV (
+z
+1
+;z
+2
+;z
+3
+;z
+4
+)
+d)
+DV
+ist auch wohlde˝niert, wenn eines der
+z
+i
+=
+1
+o der wenn zwei der
+z
+i
+gleich sind.
+e)
+DV (0
+;
+1
+;
+1
+; z
+4
+) =
+z
+4
+(Der Fall
+z
+4
+2 f
+0
+;
+1
+;
+1 g
+ist zugelassen).
+f )
+ Für
+˙
+2
+PSL
+2
+(
+C
+)
+und
+z
+1
+; : : : ; z
+4
+2
+C
+[ f 1 g
+ist
+DV (
+˙
+(
+z
+1
+)
+; ˙
+(
+z
+2
+)
+; ˙
+(
+z
+3
+)
+; ˙
+(
+z
+4
+)) = DV (
+z
+1
+; z
+2
+; z
+3
+; z
+4
+)
+und für
+˙
+(
+z
+) =
+1
+z
+gilt
+DV (
+˙
+(
+z
+1
+)
+; ˙
+(
+z
+2
+)
+; ˙
+(
+z
+3
+)
+; ˙
+(
+z
+4
+)) =
+DV (
+z
+1
+; z
+2
+; z
+3
+; z
+4
+)
+g)
+DV (
+z
+1
+; z
+2
+; z
+3
+; z
+4
+)
+2
+R
+[ f 1 g ,
+z
+1
+; : : : ; z
+4
+liegen auf einer hyp erb olischen Geraden.
+Beweis:
+a)
+DV (
+z
+1
+; : : : ; z
+4
+)
+6
+= 0
+, da
+z
+i
+paarweise verschieden
+DV (
+z
+1
+; : : : ; z
+4
+)
+6
+= 1
+, da:
+Annahme:
+DV (
+z
+1
+; : : : ; z
+4
+) = 1
+,
+(
+z
+1
+
+z
+2
+)(
+z
+3
+
+z
+4
+) = (
+z
+1
+
+z
+4
+)(
+z
+3
+
+z
+2
+)
+85 4.3. HYPERBOLISCHE GEOMETRIE
+,
+z
+1
+z
+3
+
+z
+2
+z
+3
+
+z
+1
+z
+4
++
+z
+2
+z
+4
+=
+z
+1
+z
+3
+
+z
+3
+z
+4
+
+z
+1
+z
+2
++
+z
+2
+z
+4
+,
+z
+2
+z
+3
++
+z
+1
+z
+4
+=
+z
+3
+z
+4
++
+z
+1
+z
+2
+,
+z
+2
+z
+3
+
+z
+3
+z
+4
+=
+z
+1
+z
+2
+
+z
+1
+z
+4
+,
+z
+3
+(
+z
+2
+
+z
+4
+) =
+z
+1
+(
+z
+2
+
+z
+4
+)
+,
+z
+3
+=
+z
+1
+o der
+z
+2
+=
+z
+4
+Alle
+z
+i
+sind paarweise verschieden
+)
+Widerspruch
+
+b)
+DV (
+z
+1
+; z
+4
+; z
+3
+; z
+2
+) =
+(
+z
+1
+
+z
+2
+)
+
+(
+z
+3
+
+z
+4
+)
+(
+z
+1
+
+z
+4
+)
+
+(
+z
+3
+
+z
+2
+)
+=
+1
+DV (
+z
+1
+;z
+2
+;z
+3
+;z
+4
+)
+c)
+DV (
+z
+3
+; z
+2
+; z
+1
+; z
+4
+) =
+(
+z
+3
+
+z
+4
+)
+
+(
+z
+1
+
+z
+2
+)
+(
+z
+3
+
+z
+2
+)
+
+(
+z
+1
+
+z
+4
+)
+=
+1
+DV (
+z
+1
+;z
+2
+;z
+3
+;z
+4
+)
+d)
+ Zwei der
+z
+i
+dürfen gleich sein, da:
+Fall 1
+z
+1
+=
+z
+4
+o der
+z
+3
+=
+z
+2
+In diesem Fall ist
+DV (
+z
+1
+; : : : ; z
+4
+) = 0
+Fall 2
+z
+1
+=
+z
+2
+o der
+z
+3
+=
+z
+4
+Mit der Regel von L 'Hospital folgt, dass in diesem Fall
+DV
+(
+z
+1
+; : : : ; z
+4
+) =
+1
+gilt.
+Fall 3
+z
+1
+=
+z
+3
+o der
+z
+2
+=
+z
+4
+Durch Einsetzen ergibt sich
+DV (
+z
+1
+; : : : ; z
+4
+) = 1
+.
+Im Fall, dass ein
+z
+i
+=
+1
+ist, ist entweder
+DV
+(0
+;
+1
+;
+1
+; z
+4
+) = 0
+o der
+DV
+(0
+;
+1
+;
+1
+; z
+4
+)
+ 1
+e)
+DV (0
+;
+1
+;
+1
+; z
+4
+) =
+(0
+
+z
+4
+)
+
+(
+
+1)
+(0
+
+1)
+
+(
+
+z
+4
+)
+=
+z
+4
+
+(
+
+1)
+
+z
+4
+=
+z
+4
+f )
+ Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
+g)
+Sei
+˙
+2
+PSL
+2
+(
+C
+)
+mit
+˙
+(
+z
+1
+) = 0
+,
+˙
+(
+z
+2
+) = 1
+,
+˙
+(
+z
+3
+) =
+1
+. Ein solches
+˙
+existiert, da man
+drei Parameter von
+˙
+wählen darf.
+Bem. 70.f
+)
+DV (
+z
+1
+; : : : ; z
+4
+) = DV (0
+;
+1
+;
+1
+; ˙
+(
+z
+4
+))
+)
+DV (
+z
+1
+; : : : ; z
+4
+)
+2
+R
+[ f 1 g
+,
+˙
+(
+z
+4
+)
+2
+R
+[ f 1 g
+Behauptung folgt, weil
+˙
+
+1
+(
+R
+[ 1
+)
+ein Kreis o der eine Gerade in
+C
+ist.
+De˝nition 66
+Für
+z
+1
+; z
+2
+2
+H
+sei
+g
+z
+1
+;z
+2
+die eindeutige hyp erb olische Gerade durch
+z
+1
+und
+z
+2
+und
+a
+1
+; a
+2
+die
+Schnittpunkte von
+g
+z
+1
+;z
+2
+mit
+R
+[ f 1 g
+.
+Dann sei
+d
+H
+(
+z
+1
+; z
+2
+) :=
+1
+2
+j
+ln DV (
+a
+1
+; z
+1
+; a
+2
+; z
+2
+)
+j
+und heiÿe
+hyp erb olische Metrik
+.
+Beh.:
+Für
+z
+1
+; z
+2
+2
+H
+sei
+g
+z
+1
+;z
+2
+die eindeutige hyp erb olische Gerade durch
+z
+1
+und
+z
+2
+und
+a
+1
+; a
+2
+die Schnittpunkte von
+g
+z
+1
+;z
+2
+mit
+R
+[ f 1 g
+.
+Dann gilt:
+1
+2
+j
+ln DV (
+a
+1
+; z
+1
+; a
+2
+; z
+2
+)
+j
+=
+1
+2
+j
+ln DV (
+a
+2
+; z
+1
+; a
+1
+; z
+2
+)
+j
+Beweis:
+Wegen
+ Bemerkung 70.c
+ gilt:
+DV (
+a
+1
+; z
+1
+; a
+2
+; z
+2
+) =
+1
+DV (
+a
+2
+; z
+1
+; a
+1
+; z
+2
+)
+Auÿerdem gilt:
+ln
+1
+x
+= ln
+x
+
+1
+= (
+
+1)
+
+ln
+x
+=
+
+ln
+x
+86 4.3. HYPERBOLISCHE GEOMETRIE
+Da der
+ln
+im Betrag steht, folgt direkt:
+1
+2
+j
+ln DV (
+a
+1
+; z
+1
+; a
+2
+; z
+2
+)
+j
+=
+1
+2
+j
+ln DV (
+a
+2
+; z
+1
+; a
+1
+; z
+2
+)
+j
+Es ist also egal in welcher Reihenfolge die Schnittpunkte mit der
+x
+-Achse im Dopp elver-
+hältnis genutzt werden.
+
+Beh.:
+Die hyp erb olische Metrik ist eine Metrik auf
+H
+.
+Beweis:
+Wegen
+ Bemerkung 70.f
+ ist
+d
+(
+z
+1
+; z
+2
+) :=
+d
+(
+˙
+(
+z
+1
+)
+; ˙
+(
+z
+2
+))
+mit
+˙
+(
+a
+1
+) = 0
+; ˙
+(
+a
+2
+) =
+1
+d. h.
+˙
+(
+g
+z
+1
+;z
+2
+) =
+i
+R
+(imaginäre Achse).
+also gilt o. B. d. A.
+z
+1
+=
+i a
+und
+z
+2
+=
+i b
+mit
+a; b
+2
+R
+und
+a < b
+.
+2
+d
+(
+i a; i b
+) =
+j
+ln DV (0
+; i a;
+1
+; i b
+)
+j
+=
+j
+ln
+(0
+
+i b
+)(
+1 
+i a
+)
+(0
+
+i a
+)(
+1 
+i b
+)
+j
+=
+j
+ln
+b
+a
+j
+= ln
+b
+
+ln
+a
+Also:
+d
+(
+z
+1
+; z
+2
+)
+
+0
+,
+d
+(
+z
+1
+; z
+2
+) = 0
+,
+z
+1
+=
+z
+2
+2
+d
+(
+z
+2
+; z
+1
+) =
+j
+ln DV (
+a
+2
+; z
+2
+; a
+1
+; z
+1
+)
+j
+=
+j
+ln DV (
+1
+; i b;
+0
+; i a
+)
+j
+Bem. 70.b
+=
+j
+ln DV (0
+; i b;
+1
+; i a
+)
+j
+= 2
+d
+(
+z
+1
+; z
+2
+)
+Liegen drei Punkte
+z
+1
+; z
+2
+; z
+3
+2
+C
+auf einer hyp erb olischen Geraden, so gilt
+d
+(
+z
+1
+; z
+3
+) =
+d
+(
+z
+1
+; z
+2
+) +
+d
+(
+z
+2
+; z
+3
+)
+(wenn
+z
+2
+zwischen
+z
+1
+und
+z
+3
+liegt).
+Dreiecksungleichung: Beweis ist umständlich und wird hier nicht geführt. Es sei auf die
+Vorlesung Hyp erb olische Geometrie verwiesen.
+Satz 4.10
+Die hyp erb olische Eb ene
+H
+mit der hyp erb olischen Metrik
+d
+und den hyp erb olischen
+Geraden bildet eine nichteuklidische Geometrie, d. h. die Axiome
+ 
+ -
+ 
+ sind erfüllt,
+ab er Axiom
+ 
+ ist verletzt.
+87 4.3. HYPERBOLISCHE GEOMETRIE
+Übungsaufgab en
+Aufgab e 8
+Seien
+(
+X ; d
+)
+eine absolute Eb ene und
+P ; Q; R
+2
+X
+Punkte. D er
+Scheitelwinkel
+des Winkels
+\
+P QR
+ist der Winkel, der aus den Halbgeraden
+QP
+
+und
+QR
+
+gebildet wird. Die
+Nebenwinkel
+von
+\
+P QR
+sind die von
+QP
++
+und
+QR
+
+bzw.
+QP
+
+und
+QR
++
+gebildeten
+Winkel.
+Zeigen Sie:
+(a)
+ Die b eiden Neb enwinkel von
+\
+P QR
+sind gleich.
+(b)
+ Der Winkel
+\
+P QR
+ist gleich seinem Scheitelwinkel.
+Aufgab e 9
+Sei
+(
+X ; d
+)
+eine absolute Eb ene. Der
+Abstand
+eines Punktes
+P
+zu einer Menge
+Y
+
+X
+von
+Punkten ist de˝niert durch
+d
+(
+P ; Y
+) := inf
+d
+(
+P ; y
+)
+j
+y
+2
+Y
+.
+Zeigen Sie:
+(a)
+Ist
+4
+AB C
+ein Dreieck, in dem die Seiten
+AB
+und
+AC
+kongruent sind, so sind die
+Winkel
+\
+AB C
+und
+\
+B C A
+gleich.
+(b)
+Ist
+4
+AB C
+ein b eliebiges Dreieck, so liegt der längeren Seite der gröÿere Winkel
+gegenüb er und umgekehrt.
+(c)
+Sind
+g
+eine Gerade und
+P =
+2
+g
+ein Punkt, so gibt es eine eindeutige Gerade
+h
+mit
+P
+2
+h
+und die
+g
+im rechten Winkel schneidet. Diese Grade heiÿt
+Lot
+von
+P
+auf
+g
+und der Schnittpunkt des Lots mit
+g
+heiÿt
+Lotfuÿpunkt
+.
+Aufgab e 10
+Seien
+f ; g ; h
+2
+G
+und paarweise verschieden.
+Zeigen Sie:
+f
+k
+g
+^
+g
+k
+h
+)
+f
+k
+h
+Aufgab e 11
+Beweise den Kongruenzsatz
+S S S
+.
+5 Krümmung
+De˝nition 67
+Sei
+f
+: [
+a; b
+]
+!
+R
+n
+eine eine Funktion aus
+C
+1
+. D ann heiÿt
+f
+Kurve
+.
+5.1 Krümmung von Kurven
+De˝nition 68
+Sei
+
+:
+I
+= [
+a; b
+]
+!
+R
+n
+eine Kurve.
+a)
+ Die Kurve
+
+heiÿt
+durch Bogenlänge parametrisiert
+, wenn gilt:
+k
+
+0
+(
+t
+)
+k
+2
+= 1
+8
+t
+2
+I
+Dab ei ist
+
+0
+(
+t
+) = (
+
+0
+1
+(
+t
+)
+; 
+0
+2
+(
+t
+)
+; : : : ; 
+0
+n
+(
+t
+))
+.
+b)
+l
+(
+
+) =
+R
+b
+a
+k
+
+0
+(
+t
+)
+k
+d
+t
+heiÿt
+Länge von
+
+.
+Bemerkung 71 (Eigenschaften von Kurven I)
+Sei
+
+:
+I
+= [
+a; b
+]
+!
+R
+n
+eine
+C
+1
+-Funktion.
+a)
+ Ist
+
+durch Bogenlänge parametrisiert, so ist
+l
+(
+
+) =
+b
+
+a
+.
+b)
+ Ist
+
+durch Bogenlänge parametrisiert, so ist
+
+0
+(
+t
+)
+orthogonal zu
+
+00
+(
+t
+)
+für alle
+t
+2
+I
+.
+Beweis:
+a)
+l
+(
+
+) =
+R
+b
+a
+k
+
+0
+(
+t
+)
+k
+d
+t
+=
+R
+b
+a
+1d
+t
+=
+b
+
+a
+.
+b)
+Im Folgenden wird die Aussage nur für
+
+: [
+a; b
+]
+!
+R
+2
+b ewiesen. Allerdings funktioniert
+der Beweis im
+R
+n
+analog. Es muss nur die Ableitung angepasst werden.
+1 =
+k
+
+0
+(
+t
+)
+k
+=
+k
+
+0
+(
+t
+)
+k
+2
+=
+h
+
+0
+(
+t
+)
+; 
+0
+(
+t
+)
+i
+)
+0 =
+d
+d
+t
+h
+
+0
+(
+t
+)
+; 
+0
+(
+t
+)
+i
+=
+d
+d
+t
+(
+
+0
+1
+(
+t
+)
+
+0
+1
+(
+t
+) +
+
+0
+2
+(
+t
+)
+
+0
+2
+(
+t
+))
+= 2
+
+(
+
+00
+1
+(
+t
+)
+
+
+0
+1
+(
+t
+) +
+
+00
+2
+(
+t
+)
+
+
+0
+2
+(
+t
+))
+= 2
+ h
+
+00
+(
+t
+)
+; 
+0
+(
+t
+)
+i
+De˝nition 69
+Sei
+
+:
+I
+!
+R
+2
+eine durch Bogenlänge parametrisierte Kurve.
+a)
+ Für
+t
+2
+I
+sei
+n
+(
+t
+)
+Normalenvekto r
+an
+
+in
+t
+wenn gilt:
+h
+n
+(
+t
+)
+; 
+0
+(
+t
+)
+i
+= 0
+,
+k
+n
+(
+t
+)
+k
+= 1
+und
+det((
+
+0
+(
+t
+)
+; n
+(
+t
+))) = +1
+89
+5.1. KRÜMMUNG VON KURVEN
+b)
+ Seit
+
+:
+I
+!
+R
+so, dass gilt:
+
+00
+(
+t
+) =
+
+(
+t
+)
+
+n
+(
+t
+)
+Dann heiÿt
+
+(
+t
+)
+Krümmung
+von
+
+in
+t
+.
+Da
+n
+(
+t
+)
+und
+
+00
+(
+t
+)
+nach
+ Bemerkung 71.b
+ linear abhängig sind, existiert
+
+(
+t
+)
+.
+Beispiel 45
+Gegeb en sei ein Kreis mit Radius
+r
+, d. h. mit Umfang
+2
+ˇ r
+. Es gilt:
+
+(
+t
+) =
+
+r
+
+cos
+t
+r
+; r
+
+sin
+t
+r
+
+für
+t
+2
+[0
+;
+2
+ˇ r
+]
+ist parametrisiert durch Bogenlänge, da gilt:
+
+0
+(
+t
+) =
+
+(
+r
+
+1
+r
+)(
+
+sin
+t
+r
+)
+; r
+1
+r
+cos
+t
+r
+
+=
+
+
+sin
+t
+r
+;
+cos
+t
+r
+
+Der Normalenvektor von
+
+in
+t
+ist
+n
+(
+t
+) =
+
+
+cos
+t
+r
+;
+
+sin
+t
+r
+
+da gilt:
+h
+n
+(
+t
+)
+; 
+0
+(
+t
+)
+i
+=
+˝
+
+cos
+t
+r
+
+sin
+t
+r
+
+;
+
+
+sin
+t
+r
+cos
+t
+r
+˛
+= (
+
+cos
+t
+r
+)
+
+(
+
+sin
+t
+r
+) + (
+
+sin
+t
+r
+)
+
+(cos
+t
+r
+)
+= 0
+k
+n
+(
+t
+)
+k
+=
+
+
+
+
+(
+
+cos
+t
+r
+;
+
+sin
+t
+r
+)
+
+
+
+
+= (
+
+cos
+t
+r
+)
+2
++ (
+
+sin
+t
+r
+)
+2
+= 1
+det(
+
+0
+1
+(
+t
+)
+; n
+(
+t
+)) =
+
+
+
+
+
+
+sin
+t
+r
+
+cos
+t
+r
+cos
+t
+r
+
+sin
+t
+r
+
+
+
+
+
+= (
+
+sin
+t
+r
+)
+2
+
+(
+
+cos
+t
+r
+)
+
+cos
+t
+r
+= 1
+Die Krümmung ist für jedes
+t
+konstant
+1
+r
+, da gilt:
+
+00
+(
+t
+) =
+
+
+1
+r
+cos
+t
+r
+;
+
+1
+r
+sin
+t
+r
+
+=
+1
+r
+
+
+
+cos
+t
+r
+;
+
+sin
+t
+r
+
+)
+
+(
+t
+) =
+1
+r
+90
+5.2. TANGENTIALEBENE
+De˝nition 70
+Sei
+
+:
+I
+!
+R
+3
+eine durch Bogenlänge parametrisierte Kurve.
+a)
+ Für
+t
+2
+I
+heiÿt
+
+(
+t
+) :=
+k
+
+00
+(
+t
+)
+k
+die
+Krümmung
+von
+
+in
+t
+.
+b)
+ Ist für
+t
+2
+I
+die Ableitung
+
+00
+(
+t
+)
+6
+= 0
+, so heiÿt
+
+00
+(
+t
+)
+k
+
+00
+(
+t
+)
+k
+Normalenvekto r
+an
+
+in
+t
+.
+c)
+b
+(
+t
+)
+sei ein Vektor, der
+
+0
+(
+t
+)
+; n
+(
+t
+)
+zu einer orientierten Orthonormalbasis von
+R
+3
+ergänzt.
+Also gilt:
+det(
+
+0
+(
+t
+)
+; n
+(
+t
+)
+; b
+(
+t
+)) = 1
+b
+(
+t
+)
+heiÿt
+Binormalenvekto r
+, die Orthonormalbasis
+
+
+0
+(
+t
+)
+; n
+(
+t
+)
+; b
+(
+t
+)
+	
+heiÿt
+b egleitendes Dreib ein
+.
+Bemerkung 72 (Eigenschaften von Kurven I I)
+Sei
+
+:
+I
+!
+R
+3
+durch Bogenlänge parametrisierte Kurve.
+a)
+n
+(
+t
+)
+ist orthogonal zu
+
+0
+(
+t
+)
+.
+b)
+b
+(
+t
+)
+aus
+ De˝nition 70.c
+ ist eindeutig.
+5.2 Tangentialeb ene
+Erinnerung Sie sich an
+ De˝nition 32
+ reguläre Fläche.
+Äquivalent dazu ist:
+S
+ist lokal von der Form
+V
+(
+f
+) =
+
+x
+2
+R
+3
+
+
+f
+(
+x
+) = 0
+	
+für eine
+C
+1
+-Funktion
+f
+:
+R
+3
+!
+R
+.
+De˝nition 71
+Sei
+S
+
+R
+3
+eine reguläre Fläche,
+s
+2
+S
+,
+F
+:
+U
+!
+V
+\
+S
+eine lokale Parametrisierung um
+s
+2
+V
+:
+(
+u; v
+)
+7!
+(
+x
+(
+u; v
+)
+; y
+(
+u; v
+)
+; z
+(
+u; v
+))
+Für
+p
+=
+F
+
+1
+(
+s
+)
+2
+U
+sei
+J
+F
+(
+p
+) =
+0
+@
+@ x
+@ u
+(
+p
+)
+@ x
+@ v
+(
+p
+)
+@ y
+@ u
+(
+p
+)
+@ y
+@ v
+(
+p
+)
+@ z
+@ u
+(
+p
+)
+@ z
+@ v
+(
+p
+)
+1
+A
+und
+D
+p
+F
+:
+R
+2
+!
+R
+3
+die durch
+J
+F
+(
+p
+)
+de˝nierte lineare Abbildung.
+Dann heiÿt
+T
+s
+S
+:= Bild(
+D
+p
+F
+)
+die
+Tangentialeb ene
+an
+s
+2
+S
+.
+Bemerkung 73 (Eigenschaften der Tangentialeb ene)
+a)
+T
+s
+S
+ist
+2
+-dimensionaler Untervektorraum von
+R
+3
+.
+b)
+T
+s
+S
+=
+h
+~
+u;
+~
+v
+i
+, wob ei
+~
+u;
+~
+v
+die Spaltenvektoren der Jacobi-Matrix
+J
+F
+(
+p
+)
+sind.
+c)
+T
+s
+S
+hängt nicht von der gewählten Parametrisierung ab.
+91
+5.2. TANGENTIALEBENE
+d)
+Sei
+S
+=
+V
+(
+f
+)
+eine reguläre F läche in
+R
+3
+, also
+f
+:
+V
+!
+R
+eine
+C
+1
+-Funktion,
+V
+
+R
+3
+o˙en,
+grad(
+f
+)(
+x
+)
+6
+= 0
+für alle
+x
+2
+S
+.
+Dann ist
+T
+s
+S
+= (grad(
+f
+)(
+s
+))
+?
+für jedes
+s
+2
+S
+.
+Beweis:
+a)
+J
+F
+ist eine
+3
+
+2
+-Matrix, die mit einem
+2
+
+1
+-Vektor multipliziert wird. Das ist
+eine lineare Abbildung und aus der linearen Algebra ist b ekannt, das das Bild ein
+Vektorraum ist. Da
+Rg (
+J
+F
+) = 2
+, ist auch
+dim(
+T
+s
+S
+) = 2
+.
+b)
+ Hier kann man wie in
+ Punkt a)
+ argumentieren
+c)
+T
+s
+S
+=
+f
+x
+2
+R
+3
+j9
+parametrisierte Kurve
+
+: [
+
+";
++
+"
+]
+!
+S
+für ein
+" >
+0
+mit
+
+(0) =
+s
+und
+
+0
+(0) =
+x
+g
+Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
+d)
+Sei
+x
+2
+T
+s
+S ; 
+: [
+
+";
++
+"
+]
+!
+S
+eine parametrisierte Kurve mit
+" >
+0
+und
+
+0
+(0) =
+s
+,
+so dass
+
+0
+(0) =
+x
+gilt. Da
+
+(
+t
+)
+2
+S
+für alle
+t
+2
+[
+
+"; "
+]
+, ist
+f
+
+
+= 0
+)
+0 = (
+f
+
+
+)
+0
+(0) =
+h
+grad(
+f
+)(
+
+(0))
+; 
+0
+(0)
+i
+)
+T
+s
+S
+
+grad(
+f
+)(
+s
+)
+?
+dim=2
+====
+)
+T
+s
+S
+= (grad(
+f
+)(
+s
+))
+?
+De˝nition 72
+a)
+Ein
+Normalenfeld
+auf der regulären Fläche
+S
+
+R
+3
+ist eine Abbildung
+n
+:
+S
+!
+S
+2
+
+R
+3
+mit
+n
+(
+s
+)
+2
+T
+s
+S
+?
+für jedes
+s
+2
+S
+.
+b)
+S
+heiÿt
+orientierbar
+, wenn es ein stetiges Normalenfeld auf
+S
+gibt.
+Manchmal wird zwischen einem
+Normalenfeld
+und einem
+Einheitsnormalenfeld
+unterschieden.
+Im Folgenden werden diese Begri˙e jedo ch synonym b enutzt.
+Bemerkung 74 (Eigenschaften von Normalenfeldern)
+a)
+ Ein Normalenfeld auf
+S
+ist genau dann stetig, wenn es glatt ist (also
+C
+1
+).
+b)
+Zu jedem
+s
+2
+S
+gibt es eine Umgebung
+V
+
+R
+3
+von
+s
+und eine lokale Parametrisierung
+F
+:
+U
+!
+V
+von
+S
+um
+s
+, so dass auf
+F
+(
+U
+) =
+V
+\
+S
+ein stetiges Normalenfeld existiert.
+c)
+S
+ist genau dann orientierbar, wenn es einen di˙erenzierbaren Atlas von
+S
+aus lokalen
+Parametrisierungen
+F
+i
+:
+U
+i
+!
+V
+i
+; i
+2
+I
+gibt, so dass für alle
+i; j
+2
+F
+und alle
+s
+2
+V
+i
+\
+V
+j
+\
+S
+gilt:
+det(
+D
+s
+V
+i
+!
+V
+j
+z
+}|
+{
+F
+j
+
+F
+
+1
+i
+|
+{z
+}
+2
+R
+3
+
+3
+)
+>
+0
+Beweis:
+Wird hier nicht geführt.
+Beispiel 46 (Normalenfelder)
+1)
+S
+=
+S
+2
+,
+n
+1
+=
+id
+S
+2
+ist ein stetiges Normalenfeld.
+Auch
+n
+2
+=
+
+id
+S
+2
+ist ein stetiges Normalenfeld.
+2)
+S
+=
+Möbiusband
+(vgl.
+ Abbildung 5.1
+) ist nicht orientierbar. Es existiert ein Norma-
+lenfeld, ab er kein stetiges Normalenfeld.
+92
+5.3. GAUSS-KRÜMMUNG
+Abbildung 5.1
+:
+ Möbiusband
+5.3 Gauÿ-Krümmun g
+Bemerkung 75
+Sei
+S
+eine reguläre Fläche,
+s
+2
+S
+,
+n
+(
+s
+)
+ist ein Normalenvektor in
+s
+,
+x
+2
+T
+s
+S
+,
+k
+x
+k
+= 1
+.
+Sei
+E
+der von
+x
+und
+n
+(
+s
+)
+aufgespannte 2-dimensionale Untervektorraum von
+R
+3
+.
+Dann gibt es eine Umgebung
+V
+
+R
+3
+von
+s
+, so dass
+C
+:= (
+s
++
+E
+)
+\
+S
+\
+V
+das Bild einer durch Bogenlänge parametrisierten Kurve
+
+: [
+
+"; "
+]
+!
+S
+enthält mit
+
+(0) =
+s
+und
+
+0
+(0) =
+x
+.
+Beweis:
+Satz üb er implizite Funktionen
+1
+De˝nition 73
+In der Situation aus
+ Bemerkung 75
+ heiÿt die Krümmung
+
+
+(0)
+der Kurve
+
+in der Eb ene
+(
+s
++
+E
+)
+im Punkt
+s
+die
+Normalkrümmung
+von
+S
+in
+s
+in Richtung
+x
+=
+
+0
+(0)
+.
+Man schreibt:
+
+Nor
+(
+s; x
+) :=
+
+
+(0)
+Hinweis
+: D ie Krümmung ist nur bis auf das Vorzeichen b estimmt.
+Beispiel 47 (Gauÿ-Krüm mung)
+1)
+S
+=
+S
+2
+=
+V
+(
+X
+2
++
+Y
+2
++
+Z
+2
+
+1)
+ist die Kugel um den Ursprung mit Radius 1,
+n
+=
+id
+,
+s
+= (0
+;
+0
+;
+1)
+,
+x
+= (1
+;
+0
+;
+0)
+)
+E
+=
+R
+
+x
++
+R
+
+n
+(
+s
+)
+(
+x; z
+-Eb ene)
+C
+=
+E
+\
+S
+ist Kreislinie
+
+Nor
+(
+s; x
+) =
+1
+r
+= 1
+2)
+S
+=
+V
+(
+X
+2
++
+Z
+2
+
+1)
+
+R
+3
+ist ein Zylinder (siehe
+ Abbildung 5.2a
+).
+s
+= (1
+;
+0
+;
+0)
+x
+1
+= (0
+;
+1
+;
+0)
+)
+E
+1
+=
+R
+
+e
+1
++
+R
+
+e
+2
+(
+x; y
+-Eb ene)
+S
+\
+E
+1
+=
+V
+(
+X
+2
++
+Y
+2
+
+1)
+\
+E
+, Kreislinie in
+E
+)
+
+Nor
+(
+s; x
+1
+) =
+
+1
+x
+2
+= (0
+;
+0
+;
+1)
+; E
+2
+=
+R
+
+e
+1
++
+R
+
+e
+3
+(
+x; z
+-Eb ene)
+1
+Siehe z. B.
+https://github.com/MartinThoma/LaTeX- examples/tree/master/documents/Analysis%20II
+93
+5.3. GAUSS-KRÜMMUNG
+V
+\
+E
+2
+\
+S
+=
+
+(1
+;
+0
+; z
+)
+2
+R
+3
+
+
+z
+2
+R
+	
+ist eine Gerade
+)
+
+Nor
+(
+s; x
+2
+) = 0
+3)
+S
+=
+V
+(
+X
+2
+
+Y
+2
+
+Z
+)
+,
+s
+= (0
+;
+0
+;
+0)
+(Hyp erb olisches Parab oloid, siehe
+ Abbildung 5.2b
+)
+x
+1
+= (1
+;
+0
+;
+0)
+,
+n
+(
+s
+) = (0
+;
+0
+;
+1)
+x
+2
+= (0
+;
+1
+;
+0)
+
+Nor
+(
+s; x
+1
+) = 2
+
+Nor
+(
+s; x
+2
+) =
+
+2
+
+1
+:
+5
+
+1
+
+0
+:
+5
+0
+0
+:
+5
+1
+1
+:
+5
+
+1
+0
+1
+0
+1
+2
+3
+4
+5
+x
+y
+z
+(a)
+S
+=
+V
+(
+X
+2
++
+Z
+2
+
+1)
+
+2
+
+1
+:
+5
+
+1
+
+0
+:
+5
+0
+0
+:
+5
+1
+1
+:
+5
+2
+
+2
+
+1
+0
+1
+2
+
+2
+0
+2
+x
+y
+z
+
+4
+
+2
+0
+2
+4
+f
+(
+x; y
+)
+(b)
+S
+=
+V
+(
+X
+2
+
+Y
+2
+
+Z
+)
+Abbildung 5.2
+:
+ Beispiele für reguläre Flächen
+De˝nition 74
+Sei
+S
+
+R
+3
+eine reguläre Fläche,
+s
+2
+S
+und
+n
+ein stetiges Normalenfeld auf
+S
+.
+
+: [
+
+"; "
+]
+!
+S
+eine nach Bogenlänge parametrisierte Kurve (
+" >
+0
+) mit
+
+(0) =
+s
+und
+
+00
+(0)
+6
+= 0
+.
+Sei
+n
+(0) :=
+
+00
+(0)
+k
+
+00
+(0)
+k
+. Zerlege
+n
+(0) =
+n
+(0)
+t
++
+n
+(0)
+?
+mit
+n
+(0)
+t
+2
+T
+s
+S
+und
+n
+(0)
+?
+2
+(
+T
+s
+S
+)
+?
+Dann ist
+n
+(0)
+?
+=
+h
+n
+(0)
+; n
+(
+s
+)
+i 
+n
+(
+s
+)
+
+Nor
+(
+s; 
+) :=
+h
+
+00
+(0)
+; n
+(
+s
+)
+i
+die
+Normalkrümmung
+.
+Bemerkung 76
+Sei
+
+(
+t
+) =
+
+(
+
+t
+)
+,
+t
+2
+[
+
+"; "
+]
+. Dann ist
+
+Nor
+(
+s;
+
+) =
+
+Nor
+(
+s; 
+)
+.
+Beweis:
+
+00
+(0) =
+
+00
+(0)
+, da
+
+0
+(0) =
+
+
+0
+(0)
+.
+Es gilt:
+
+Nor
+(
+s; 
+)
+hängt nur von
+j
+
+0
+(0)
+j
+ab und ist gleich
+
+Nor
+(
+s; 
+0
+(0))
+.
+Bemerkung 77
+Sei
+S
+eine reguläre Fläche und
+n
+=
+n
+(
+s
+)
+ein Normalenvektor an
+S
+in
+s
+.
+Sei
+T
+1
+s
+S
+=
+f
+x
+2
+T
+s
+S
+j k
+x
+k
+= 1
+g
+˘
+=
+S
+1
+. Dann ist
+
+n
+Nor
+(
+s
+) :
+T
+1
+s
+S
+!
+R
+; x
+7!
+
+Nor
+(
+s; x
+)
+eine glatte Funktion und
+Bild
+
+n
+Nor
+(
+s
+)
+ist ein abgeschlossenes Intervall.
+De˝nition 75
+Sei
+S
+eine reguläre Fläche und
+n
+=
+n
+(
+s
+)
+ein Normalenvektor an
+S
+in
+s
+.
+94
+5.3. GAUSS-KRÜMMUNG
+a)
+
+n
+1
+(
+s
+) : = min
+
+
+n
+Nor
+(
+s; x
+)
+
+
+x
+2
+T
+1
+s
+S
+	
+und
+
+n
+2
+(
+s
+) : = max
+
+
+n
+Nor
+(
+s; x
+)
+
+
+x
+2
+T
+1
+s
+S
+	
+heiÿen
+Hauptkrümmungen
+von
+S
+in
+s
+.
+b)
+K
+(
+s
+) :=
+
+n
+1
+(
+s
+)
+
+
+n
+2
+(
+s
+)
+heiÿt
+Gauÿ-Krümmung
+von
+S
+in
+s
+.
+Bemerkung 78
+Ersetzt man
+n
+durch
+
+n
+, so gilt:
+
+
+n
+Nor
+(
+s; x
+) =
+
+
+n
+Nor
+(
+x
+)
+8
+x
+2
+T
+1
+s
+S
+)
+
+
+n
+1
+(
+s
+) =
+
+
+n
+2
+(
+s
+)
+
+
+n
+2
+(
+s
+) =
+
+
+n
+1
+(
+s
+)
+und
+K
+
+n
+(
+s
+) =
+K
+n
+(
+s
+) =:
+K
+(
+s
+)
+Beispiel 48
+1)
+S
+=
+S
+2
+. Dann ist
+
+1
+(
+s
+) =
+
+2
+(
+s
+) =
+
+1
+8
+s
+2
+S
+2
+)
+K
+(
+s
+) = 1
+2)
+ Zylinder:
+
+1
+(
+s
+) = 0
+; 
+2
+(
+s
+) = 1
+)
+K
+(
+s
+) = 0
+3)
+ Sattelpunkt auf hyp erb olischem Parab oloid:
+
+1
+(
+s
+)
+<
+0
+; 
+2
+(
+s
+) = 0
+!
+K
+(
+s
+)
+<
+0
+4)
+S
+=
+Torus. Siehe
+ Abbildung 5.3
+Abbildung 5.3
+:
+K
+(
+s
+1
+)
+>
+0
+,
+K
+(
+s
+2
+) = 0
+,
+K
+(
+s
+3
+)
+<
+0
+Bemerkung 79
+Sei
+S
+eine reguläre Fläche,
+s
+2
+S
+ein P unkt.
+95 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
+a)
+ Ist
+K
+(
+s
+)
+>
+0
+, so liegt
+S
+in einer Umgebung von
+s
+ganz auf einer Seite von
+T
+s
+S
++
+s
+.
+b)
+ Ist
+K
+(
+s
+)
+<
+0
+, so schneidet jede Umgebung von
+s
+in
+S
+b eide Seiten von
+T
+s
+S
++
+s
+.
+5.4 Erste und zweite Fundamental form
+Sei
+S
+
+R
+3
+eine reguläre Fläche,
+s
+2
+S
+,
+T
+s
+S
+die Tangentialeb ene an
+S
+in
+s
+und
+F
+:
+U
+!
+V
+eine
+lokale Parametrisierung von
+S
+um
+s
+. Weiter sei
+p
+:=
+F
+
+1
+(
+s
+)
+.
+De˝nition 76
+Sei
+I
+S
+2
+R
+2
+
+2
+de˝niert als
+I
+S
+: =
+
+g
+1
+;
+1
+(
+s
+)
+g
+1
+;
+2
+(
+s
+)
+g
+1
+;
+2
+(
+s
+)
+g
+2
+;
+2
+(
+s
+)
+
+=
+
+E
+(
+s
+)
+F
+(
+s
+)
+F
+(
+s
+)
+G
+(
+s
+)
+
+mit
+g
+i;j
+=
+g
+s
+(
+D
+p
+F
+(
+e
+i
+)
+; D
+p
+F
+(
+e
+j
+))
+=
+h
+@ F
+@ u
+i
+(
+p
+)
+;
+@ F
+@ u
+j
+(
+p
+)
+i
+i; j
+2 f
+1
+;
+2
+g
+Die Matrix
+I
+S
+heiÿt
+erste Fundamentalform
+von
+S
+bzgl. der Parametrisierung
+F
+.
+Bemerkung 80
+a)
+Die Einschränkung des Standardskalarpro duktes des
+R
+3
+auf
+T
+s
+S
+macht
+T
+s
+S
+zu einem
+euklidischen Vektorraum.
+b)
+f
+D
+p
+F
+(
+e
+1
+)
+; D
+p
+F
+(
+e
+2
+)
+g
+ist eine Basis von
+T
+s
+S
+.
+c)
+Bzgl. der Basis
+f
+D
+p
+F
+(
+e
+1
+)
+; D
+p
+F
+(
+e
+2
+)
+g
+hat das Standardskalarpro dukt aus
+ Bemer-
+kung 80.a
+ die Darstellungsmatrix
+I
+S
+.
+d)
+g
+i;j
+(
+s
+)
+ist eine di˙erenzierbare Funktion von
+s
+.
+Bemerkung 81
+det(
+I
+S
+) =
+
+
+
+
+@ F
+@ u
+1
+(
+p
+)
+
+@ F
+@ u
+2
+(
+p
+)
+
+
+
+
+2
+Beweis:
+Sei
+@ F
+@ u
+1
+(
+p
+) =
+0
+@
+x
+1
+x
+2
+x
+3
+1
+A
+;
+@ F
+@ u
+2
+(
+p
+) =
+0
+@
+y
+1
+y
+2
+y
+3
+1
+A
+Dann ist
+@ F
+@ u
+1
+(
+p
+)
+
+@ F
+@ u
+2
+(
+p
+) =
+0
+@
+z
+1
+z
+2
+z
+3
+1
+A
+mit
+z
+1
+=
+x
+2
+y
+3
+
+x
+3
+y
+2
+z
+2
+=
+x
+3
+y
+1
+
+x
+1
+y
+3
+z
+3
+=
+x
+1
+y
+2
+
+x
+2
+y
+1
+) k
+@ F
+@ u
+1
+(
+p
+)
+
+@ F
+@ u
+2
+(
+p
+)
+k
+=
+z
+2
+1
++
+z
+2
+2
++
+z
+2
+3
+96 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
+det(
+I
+S
+) =
+g
+1
+;
+1
+g
+2
+;
+2
+
+g
+2
+1
+;
+2
+=
+*
+0
+@
+x
+1
+x
+2
+x
+3
+1
+A
+;
+0
+@
+x
+1
+x
+2
+x
+3
+1
+A
++ *
+0
+@
+y
+1
+y
+2
+y
+3
+1
+A
+;
+0
+@
+y
+1
+y
+2
+y
+3
+1
+A
++
+
+*
+0
+@
+x
+1
+x
+2
+x
+3
+1
+A
+;
+0
+@
+y
+1
+y
+2
+y
+3
+1
+A
++
+2
+= (
+x
+2
+1
++
+x
+2
+2
++
+x
+2
+3
+)(
+y
+2
+1
++
+y
+2
+2
++
+y
+2
+3
+)
+
+(
+x
+1
+y
+1
++
+x
+2
+y
+2
++
+x
+3
+y
+3
+)
+2
+De˝nition 77
+a)
+Das Di˙erential
+d
+A
+=
+p
+det(
+I
+)
+d
+u
+1
+d
+u
+2
+heiÿt
+Flächenelement
+von
+S
+bzgl. der Para-
+metrisierung
+F
+.
+b)
+ Für eine Funktion
+f
+:
+V
+!
+R
+heiÿt
+Z
+V
+f
+d
+A
+:=
+Z
+U
+f
+(
+F
+(
+u
+1
+; u
+2
+)
+|
+{z
+}
+=:
+s
+)
+p
+det
+I
+(
+s
+)d
+u
+1
+d
+u
+2
+der
+Wert des Integrals
+von
+f
+üb er
+V
+, falls das Integral rechts existiert.
+Bemerkung 82
+a)
+R
+V
+f
+d
+A
+ist unabhängig von der gewählten Parametrisierung.
+b)
+ Sei
+f
+:
+S
+!
+R
+eine Funktion, die im Sinne von
+ De˝nition 77.b
+ lokal integrierbar ist.
+Dann ist
+R
+S
+f
+d
+A
+wohlde˝niert, falls (z. B.)
+S
+kompakt ist.
+Etwa:
+Z
+S
+f
+d
+A
+=
+n
+X
+i
+=1
+Z
+V
+i
+f
+d
+A
+
+X
+i
+6
+=
+j
+Z
+V
+i
+\
+V
+j
+f
+d
+A
++
+X
+i;j;k
+Z
+V
+i
+\
+V
+j
+\
+V
+k
+f
+d
+A
+
+: : :
+Beweis:
+a)
+ Mit Transformationsformel.
+b)
+ Ist dem Leser üb erlassen.
+Prop osition 5.1
+Sei
+S
+
+R
+3
+eine reguläre, orientierbare Fläche mit glatten Normalenfeld
+n
+:
+S
+!
+S
+2
+.
+Dann gilt:
+a)
+n
+induziert für jedes
+s
+2
+S
+eine lineare Abbildung
+d
+s
+n
+:
+T
+s
+S
+!
+T
+n
+(
+s
+)
+S
+2
+durch
+d
+s
+n
+(
+x
+) =
+d
+d
+t
+n
+(
+s
++
+tx
+|
+{z
+}
+Soll auf Fläche
+S
+bleib en
+)
+
+
+
+t
+=0
+Die Abbildung
+d
+s
+n
+heiÿt
+Weingarten-Abbildung
+97 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
+b)
+T
+n
+(
+s
+)
+S
+2
+=
+T
+s
+S
+.
+c)
+d
+s
+n
+ist ein Endomorphismus von
+T
+s
+S
+.
+d)
+d
+s
+n
+ist selbstadjungiert bzgl. des Skalarpro duktes
+I
+S
+.
+Hinweis:
+Die Weingarten-Abbildung wird auch
+Formoperator
+genannt.
+98 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
+Beweis:
+a)
+ Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
+b)
+T
+n
+(
+S
+)
+S
+2
+=
+h
+n
+(
+s
+)
+i
+?
+=
+T
+s
+S
+c)
+ Wegen
+ Prop osition 5.1 (a)
+ ist
+d
+s
+n
+ein Homomorphismus.
+d)
+ Zu zeigen:
+8
+x; y
+2
+I
+s
+S
+:
+h
+x; d
+s
+n
+(
+y
+)
+i
+=
+h
+d
+s
+n
+(
+x
+)
+; y
+i
+Aufgrund der Bilinearität des Skalarpro duktes genügt es diese Eigenschaft für die
+Basisvektoren zu zeigen.
+Sei
+x
+i
+=
+D
+p
+F
+(
+e
+i
+) =
+@ F
+@ u
+i
+(
+p
+)
+i
+= 1
+;
+2
+Beh.:
+h
+x
+i
+; d
+s
+n
+(
+x
+j
+)
+i
+=
+h
+@
+2
+F
+@ u
+i
+@ u
+j
+(
+p
+)
+; d
+s
+n
+(
+x
+i
+)
+i
+) h
+@
+2
+F
+@ u
+i
+@ u
+j
+(
+p
+)
+; d
+s
+n
+(
+x
+i
+)
+i
+=
+h
+x
+j
+; d
+s
+n
+(
+x
+i
+)
+i
+Bew.:
+0 =
+h
+@ F
+@ u
+(
+p
++
+te
+j
+)
+; n
+(
+p
++
+te
+j
+)
+i
+)
+0 =
+d
+d
+t
+
+h
+@ F
+@ u
+(
+p
++
+te
+j
+)
+; n
+(
+p
++
+te
+j
+)
+i
+
+
+
+
+t
+=0
+=
+h
+d
+d
+t
+@ F
+@ u
+i
+(
+p
++
+te
+j
+)
+|
+{z
+}
+@
+2
+F
+@ u
+j
+@ u
+i
+(
+p
+)
+
+
+
+t
+=0
+; n
+(
+s
+)
+i
++
+h
+x
+i
+; d
+s
+n D
+p
+F
+(
+e
+j
+)
+|
+{z
+}
+x
+j
+i
+De˝nition 78
+Die durch
+
+d
+s
+n
+de˝nierte symmetrische B ilinearform auf
+T
+s
+S
+heiÿt
+zweite Fundamental-
+form
+von
+S
+in
+s
+bzgl.
+F
+.
+Man schreibt:
+I I
+s
+(
+x; y
+) =
+
+d
+s
+n
+(
+x
+)
+; y
+i
+=
+I
+s
+(
+
+d
+s
+n
+(
+x
+)
+; y
+)
+Bemerkung 83
+Bezüglich der Basis
+f
+x
+1
+; x
+2
+g
+von
+T
+s
+S
+hat
+I I
+s
+die Darstellungsmatrix
+(
+h
+(
+s
+)
+i;j
+)
+i;j
+=1
+;
+2
+mit
+h
+i;j
+(
+s
+) =
+h
+@
+2
+F
+@ u
+i
+@ u
+j
+(
+p
+)
+; n
+(
+s
+)
+i
+Prop osition 5.2
+Sei
+
+: [
+
+"; "
+]
+!
+S
+eine nach Bogenlänge parametrisierte Kurve mit
+
+(0) =
+s
+. Dann gilt:
+
+Nor
+(
+s; 
+) =
+I I
+s
+(
+
+0
+(0)
+; 
+0
+(0))
+Beweis:
+Nach
+ De˝nition 74
+ ist
+
+Nor
+(
+s; 
+) =
+h
+
+00
+(0)
+; n
+(
+s
+)
+i
+. Nach Voraussetzung gilt
+n
+(
+
+(
+t
+))
+?
+
+0
+(
+t
+)
+, h
+
+00
+(0)
+; n
+(
+s
+)
+i
+= 0
+Die Ableitung nach
+t
+ergibt
+0 =
+d
+d
+t
+(
+h
+n
+(
+
+(
+t
+))
+; 
+0
+(
+t
+))
+=
+˝
+d
+d
+t
+n
+(
+
+(
+t
+))
+
+
+
+t
+=0
+; 
+0
+(0)
+˛
++
+h
+n
+(
+s
+)
+; 
+00
+(0)
+i
+99 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
+=
+h
+d
+s
+n
+(
+
+0
+(0))
+; 
+0
+(0)
+i
++
+
+Nor
+(
+s; 
+)
+=
+
+I I
+s
+(
+
+0
+(0)
+; 
+0
+(0)) +
+
+Nor
+(
+s; 
+)
+Folgerung 5.3
+Die b eiden De˝nitionen von Normalkrümmung in
+ Abschnitt 5.1
+ stimmen üb erein:
+
+Nor
+(
+s; 
+) =
+
+Nor
+(
+s; 
+0
+(0))
+Satz 5.4
+Sei
+S
+
+R
+3
+eine reguläre, orientierbare Fläche und
+s
+2
+S
+.
+a)
+ Die Hauptkrümmungen
+
+1
+(
+s
+)
+; 
+2
+(
+s
+)
+sind die Eigenwerte von
+I I
+s
+.
+b)
+ Für die Gauÿ-Krümmung gilt:
+K
+(
+s
+) = det(
+I I
+s
+)
+Beweis:
+a)
+I I
+s
+ist symmetrisch,
+I
+s
+S
+hat also eine Orthonormalbasis aus Eigenvektoren
+y
+1
+; y
+2
+von
+I I
+s
+. Ist
+x
+2
+T
+s
+S
+,
+k
+x
+k
+= 1
+, so gibt es
+'
+2
+[0
+;
+2
+ˇ
+)
+mit
+x
+= cos
+'
+
+y
+1
++ sin
+'
+
+y
+2
+.
+Seien
+
+1
+; 
+2
+die E igenwerte von
+I I
+s
+, also
+I I
+s
+(
+y
+i
+; y
+i
+) =
+
+i
+. Dann gilt:
+I I
+s
+(
+x; x
+) = cos
+2
+'
+1
++ sin
+2
+'
+2
+= (1
+
+sin
+2
+'
+)
+
+1
++ sin
+2
+'
+2
+=
+
+1
++ sin
+2
+'
+(
+
+2
+
+
+1
+)
+
+
+1
+= cos
+2
+'
++ (1
+
+cos
+2
+'
+)
+
+2
+=
+
+2
+
+cos
+2
+'
+(
+
+2
+
+
+1
+)
+
+
+2
+Prop.
+5
+:
+2
+=====
+)
+
+1
+= min
+
+
+Nor
+(
+s; x
+)
+
+
+x
+2
+T
+1
+s
+S
+	
+
+2
+= max
+
+
+Nor
+(
+s; x
+)
+
+
+x
+2
+T
+1
+s
+S
+	
+Satz 5.5 (Satz von Gauÿ-Bonnet)
+Sei
+S
+
+R
+3
+eine kompakte orientierbare reguläre Fläche. Dann gilt:
+Z
+S
+K
+(
+s
+)d
+A
+= 2
+ˇ ˜
+(
+S
+)
+Dab ei ist
+˜
+(
+S
+)
+die Euler-Charakteristik von
+S
+.
+Beweis:
+Der Beweis wird hier nicht geführt. Er kann in Elementare Di˙erentialgeometrie von
+Christian Bär (2. Au˛age), ISB N 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
+Lösungen der Übungsaufgab en
+Lösung zu Aufgab e
+ 1
+Teilaufgab e a)
+Es gilt:
+(i)
+;
+; X
+2
+T
+X
+.
+(ii)
+T
+X
+ist o˙ensichtlich unter Durchschnitten abgeschlossen, d. h. es gilt für alle
+U
+1
+; U
+2
+2
+T
+X
+:
+U
+1
+\
+U
+2
+2
+T
+X
+.
+(iii)
+Auch unter b eliebigen Vereinigungen ist
+T
+X
+abgeschlossen, d. h. es gilt für eine
+b eliebige Indexmenge
+I
+und alle
+U
+i
+2
+T
+X
+für alle
+i
+2
+I
+:
+S
+i
+2
+I
+U
+i
+2
+T
+X
+Also ist
+(
+X ;
+T
+X
+)
+ein top ologischer R aum.
+Teilaufgab e b)
+Wähle
+x
+= 1
+; y
+= 0
+. Dann gilt
+x
+6
+=
+y
+und die einzige Umgebung von
+x
+ist
+X
+. Da
+y
+= 0
+2
+X
+können also
+x
+und
+y
+nicht durch o˙ene Mengen getrennt werden.
+(
+X ;
+T
+X
+)
+ist also nicht hausdor˙sch.
+Teilaufgab e c)
+Nach Bemerkung
+ 4
+ sind metrische Räume hausdor˙sch. Da
+(
+X ;
+T
+X
+)
+nach
+(b) nicht hausdor˙sch ist, liefert die Kontrap osition der Trennungseigenschaft, dass
+(
+X ;
+T
+X
+)
+kein metrischer Raum sein kann.
+Lösung zu Aufgab e
+ 2
+Teilaufgab e a)
+Beh.:
+8
+a
+2
+Z
+:
+f
+a
+g
+ist abgeschlossen.
+Sei
+a
+2
+Z
+b eliebig. Dann gilt:
+Wenn jemand diese Aufgab e gemacht hat, bitte die Lösung an info@martin-thoma.de
+schicken.
+Teilaufgab e b)
+Beh.:
+f 
+1
+;
+1
+g
+ist nicht o˙en
+Bew.:
+durch Widerspruch
+Annahme:
+f 
+1
+;
+1
+g
+ist o˙en.
+Dann gibt es
+T
+
+B
+, so dass
+S
+M
+2
+T
+M
+=
+f 
+1
+;
+1
+g
+. Ab er alle
+U
+2
+B
+hab en unendlich viele
+Elemente. Auch endlich viele Schnitte von Elementen in
+B
+hab en unendlich viele Elemente
+)
+keine endliche nicht-leere Menge kann in dieser Top ologie o˙en sein
+) f 
+1
+;
+1
+g
+ist
+nicht o˙en.
+
+Teilaufgab e c)
+Beh.:
+Es gibt unendlich viele Primzahlen.
+101
+Lösung en der Übungsaufgaben
+Bew.:
+durch Widerspruch
+Annahme: Es gibt nur endlich viele Primzahlen
+p
+2
+P
+Dann ist
+Z
+n f 
+1
+;
++1
+g
+FS d. Arithmetik
+=
+[
+p
+2
+P
+U
+0
+;p
+endlich. Das ist ein Widerspruch zu
+j
+Z
+j
+ist unendlich und
+j f 
+1
+;
+1
+g j
+ist endlich.
+
+Lösung zu Aufgab e
+ 3
+(a)
+Beh.:
+Die o˙enen Mengen von
+P
+sind Vereinigungen von Mengen der Form
+Y
+j
+2
+J
+U
+j
+
+Y
+i
+2
+N
+;i
+6
+=
+j
+P
+i
+wob ei
+J
+
+N
+endlich und
+U
+j
+
+P
+j
+o˙en ist.
+Beweis:
+Nach De˝nition der Pro dukttop ologie bilden Mengen der Form
+Y
+i
+2
+J
+U
+j
+
+Y
+i
+2
+N
+n
+J
+P
+i
+wob ei
+J
+
+N
+endlich und
+U
+j
+
+P
+j
+o˙en
+8
+j
+2
+J
+eine Basis der Top ologie.
+Damit sind die o˙enen Mengen von
+P
+Vereinigungen von Mengen der obigen
+Form.
+
+(b)
+Beh.:
+Die Zusammenhangskomp onenten von
+P
+sind alle einpunktig.
+Beweis:
+Es seinen
+x; y
+2
+P
+und
+x
+sowie
+y
+liegen in der gleichen Zusammenhangs-
+komp onente
+Z
+
+P
+. D a
+Z
+zusammenhängend ist und
+8
+i
+2
+I
+:
+p
+i
+:
+P
+!
+P
+i
+ist
+stetig, ist
+p
+i
+(
+Z
+)
+
+P
+i
+zusammenhängend für alle
+i
+2
+N
+. Die zusammenhängenden
+Mengen von
+P
+i
+sind genau
+f
+0
+g
+und
+f
+1
+g
+, d. h. für alle
+i
+2
+N
+gilt entweder
+p
+i
+(
+Z
+)
+ f
+0
+g
+o der
+p
+i
+(
+Z
+)
+ f
+1
+g
+. Es sei
+z
+i
+2 f
+0
+;
+1
+g
+so, dass
+p
+i
+(
+Z
+)
+ f
+z
+i
+g
+für
+alle
+i
+2
+N
+. D ann gilt also:
+p
+i
+(
+x
+)
+|
+{z
+}
+=
+x
+i
+=
+z
+i
+=
+p
+i
+(
+y
+)
+|
+{z
+}
+=
+y
+i
+8
+i
+2
+N
+Somit folgt:
+x
+=
+y
+
+Lösung zu Aufgab e
+ 4
+(a)
+Beh.:
+GL
+n
+(
+R
+)
+ist nicht kompakt.
+Bew.:
+det
+:
+GL
+n
+(
+R
+)
+!
+R
+n f
+0
+g
+ist stetig. Auÿerdem ist
+det
+(
+GL
+n
+(
+R
+)) =
+R
+n f
+0
+g
+nicht kompakt.
+22
+)
+GL
+n
+(
+R
+)
+ist nicht kompakt.
+
+(b)
+Beh.:
+SL
+1
+(
+R
+)
+ist nicht kompakt, für
+n >
+1
+ist
+SL
+n
+(
+R
+)
+kompakt.
+Bew.:
+Für
+SL
+1
+(
+R
+)
+gilt:
+SL
+1
+(
+R
+) =
+
+A
+2
+R
+1
+
+1
+
+
+det
+A
+= 1
+	
+=
+
+1
+
+˘
+=
+f
+1
+g
+.
+22
+)
+SL
+1
+(
+R
+)
+ist kompakt.
+102
+Lösung en der Übungsaufgaben
+SL
+n
+(
+R
+)
+
+GL
+n
+(
+R
+)
+lässt sich mit einer Teilmenge des
+R
+n
+2
+identi˝zieren. Nach
+ Satz 1.1
+sind diese genau dann kompakt, wenn sie b eschränkt und abgeschlossen sind. De˝niere
+nun für für
+n
+2
+N
+
+2
+; m
+2
+N
+:
+A
+m
+=
+diag
+n
+(
+m;
+1
+m
+; : : : ;
+1)
+Dann gilt:
+det
+A
+m
+= 1
+, d. h.
+A
+m
+2
+SL
+n
+(
+R
+)
+, und
+A
+m
+ist unb eschränkt, da
+k
+A
+m
+k
+1
+=
+m
+!
+m
+!1
+1
+.
+
+(c)
+Beh.:
+P
+(
+R
+)
+ist kompakt.
+Bew.:
+P
+(
+R
+)
+˘
+=
+S
+n
+=
+x
+
+x
+. Per De˝nition der Quotiententop ologie ist die Klassenabbil-
+dung stetig. Da
+S
+n
+als abgeschlossene und b eschränkte Teilmenge des
+R
+n
++1
+kompakt
+ist
+22
+) P
+(
+R
+)
+ist kompakt.
+
+Lösung zu Aufgab e
+ 5
+Die De˝nition von Homö omorphismus kann auf
+ Seite 9
+ nachgelesen werden.
+De˝nition 79
+Seien
+(
+G;
+
+)
+und
+(
+H ;
+
+)
+Grupp en und
+'
+:
+G
+!
+H
+eine Abbildung.
+'
+heiÿt
+Homomorphismus
+, wenn
+8
+g
+1
+; g
+2
+2
+G
+:
+'
+(
+g
+1
+
+g
+2
+) =
+'
+(
+g
+1
+)
+
+'
+(
+g
+2
+)
+gilt.
+Es folgt direkt:
+1)
+Sei
+X
+=
+R
+mit der Standarttop ologie und
+'
+1
+:
+id
+R
+und
+R
+= (
+R
+;
++)
+. Dann ist
+'
+1
+ein
+Grupp enhomomorphismus und ein Homö omorphismus.
+2)
+Sei
+G
+= (
+Z
+;
++)
+und
+H
+= (
+Z
+=
+3
+Z
+;
++)
+. Dann ist
+'
+2
+:
+G
+!
+H ; x
+7!
+x
+mo d
+3
+ein
+Grupp enhomomorphismus. Jedo ch ist
+'
+2
+nicht injektiv, also sicher kein Homö omor-
+phismus.
+3)
+Sei
+X
+ein top ologischer Raum. Dann ist
+id
+X
+ein Homö omorphismus. Da keine
+Verknüpfung auf
+X
+de˝niert wurde, ist
+X
+keine Grupp e und daher auch kein Grup-
+p enhomomorphismus.
+Also: Obwohl die Begri˙e ähnlich klingen, werden sie in ganz unterschiedlichen Kontexten
+verwendet.
+Lösung zu Aufgab e
+ 6
+Die De˝nition einer Isotopie kann auf
+ Seite 20
+ nachgelesen werden, die einer Isometrie auf
+Seite 6
+.
+De˝nition 80
+Seien
+(
+G;
+
+)
+und
+(
+H ;
+
+)
+Grupp en und
+'
+:
+G
+!
+H
+eine Abbildung.
+'
+heiÿt
+Isomorphismus
+, wenn
+'
+ein bijektiver Homomorphismus ist.
+Eine Isotopie ist also für Knoten de˝niert, Isometrien machen nur in metrischen Räumen
+Sinn und ein Isomorphismus b enötigt eine Grupp enstruktur.
+103
+Lösung en der Übungsaufgaben
+Lösung zu Aufgab e
+ 7
+(a)
+Vor.:
+Sei
+M
+eine top ologische Mannigfaltigkeit.
+Beh.:
+M
+ist wegzusammehängend
+,
+M
+ist zusammenhängend
+Beweis:
+
+)
+: Da
+M
+insb esondere ein top ologischer Raum ist folgt diese Richtung
+direkt aus
+ Bemerkung 23
+.
+
+(
+: Seien
+x; y
+2
+M
+und
+Z
+:=
+f
+z
+2
+M
+j 9
+Weg von
+x
+nach
+z
+g
+Es gilt:
+(i)
+Z
+6
+=
+;
+, da
+M
+lokal wegzusammenhängend ist
+(ii)
+Z
+ist o˙en, da
+M
+lokal wegzusammenhängend ist
+(iii)
+Z
+C
+:=
+f
+~
+z
+2
+M
+j
+@
+Weg von
+x
+nach
+~
+z
+g
+ist o˙en
+Da
+M
+eine Mannigfaltigkeit ist, existiert zu jedem
+~
+z
+2
+Z
+C
+eine o˙ene und
+wegzusammenhängende Umgebung
+U
+~
+z
+
+M
+.
+Es gilt sogar
+U
+~
+z
+
+Z
+C
+, denn gäb e es ein
+U
+~
+z
+3
+z
+2
+Z
+, so gäb e es Wege
+
+2
+:
+[0
+;
+1]
+!
+M ; 
+2
+(0) =
+z ; 
+2
+(1) =
+x
+und
+
+1
+: [0
+;
+1]
+!
+M ; 
+1
+(0) =
+~
+z ; 
+1
+(1) =
+z
+.
+Dann wäre ab er
+
+: [0
+;
+1]
+!
+M ;
+
+(
+x
+) =
+(
+
+1
+(2
+x
+)
+falls
+0
+
+x
+
+1
+2
+
+2
+(2
+x
+
+1)
+falls
+1
+2
+< x
+
+1
+ein stetiger Weg von
+~
+z
+nach
+x
+)
+Widerspruch.
+Da
+M
+zusammenhängend ist und
+M
+=
+Z
+|{z}
+o˙en
+[
+Z
+C
+|{z}
+o˙en
+, sowie
+Z
+6
+=
+;
+folgt
+Z
+C
+=
+;
+.
+Also ist
+M
+=
+Z
+wegzusammenhängend.
+
+(b)
+Beh.:
+X
+ist wegzusammenhängend.
+Beweis:
+X
+:= (
+R
+n f
+0
+g
+)
+[ f
+0
+1
+;
+0
+2
+g
+und
+(
+R
+n f
+0
+g
+)
+[ f
+0
+2
+g
+sind homö omorph zu
+R
+.
+Also sind die einzigen kritischen Punkte, die man nicht verbinden können könnte
+0
+1
+und
+0
+2
+.
+Da
+(
+R
+n f
+0
+g
+)
+[ f
+0
+1
+g
+homö omorph zu
+R
+ist, exisitert ein Weg
+
+1
+von
+0
+1
+zu einem
+b eliebigen Punkt
+a
+2
+R
+n f
+0
+g
+.
+Da
+(
+R
+n f
+0
+g
+)
+[ f
+0
+2
+g
+eb enfalls homö omorph zu
+R
+ist, existiert auÿerdem ein
+Weg
+
+2
+von
+a
+nach
+0
+2
+. Damit existiert ein (nicht einfacher) Weg
+
+von
+0
+1
+nach
+0
+2
+.
+
+Lösung zu Aufgab e
+ 9
+Vor.:
+Sei
+(
+X ; d
+)
+eine absolute Eb ene,
+A; B ; C
+2
+X
+und
+4
+AB C
+ein D reieck.
+104
+Lösung en der Übungsaufgaben
+(a)
+Beh.:
+AB
+˘
+=
+AC
+)
+\
+AB C
+˘
+=
+\
+AC B
+Bew.:
+Sei
+AB
+˘
+=
+AC
+.
+) 9
+Isometrie
+'
+mit
+'
+(
+B
+) =
+C
+und
+'
+(
+C
+) =
+B
+und
+'
+(
+A
+) =
+A
+.
+)
+'
+(
+\
+AB C
+) =
+\
+AC B
+)
+\
+AB C
+˘
+=
+\
+AC B
+
+(b)
+Beh.:
+Der längeren Seite von
+4
+AB C
+liegt der gröÿere Winkel gegenüb er und umge-
+kehrt.
+Bew.:
+Sei
+d
+(
+A; C
+)
+> d
+(
+A; B
+)
+. Nach
+3 (i)
+ gibt es
+C
+0
+2
+AC
++
+mit
+d
+(
+A; C
+0
+) =
+d
+(
+A; B
+)
+)
+C
+0
+liegt zwischen
+A
+und
+C
+.
+Es gilt
+]
+AB C
+0
+<
+]
+AB C
+und aus
+ Aufgab e 9 (a)
+ folgt:
+]
+AB C
+0
+=
+]
+AC
+0
+B
+.
+\
+B C
+0
+A
+ist ein nicht anliegender Auÿenwinkel zu
+\
+B C A
+Bem.
+66
+=====
+)
+]
+B C
+0
+A >
+]
+B C A
+)
+]
+B C A <
+]
+B C
+0
+A
+=
+]
+AB C
+0
+<
+]
+AB C
+Sei umgekehrt
+]
+AB C >
+]
+B C A
+, kann
+wegen 1. Teil von
+ Aufgab e 9 (b)
+ nicht
+d
+(
+A; B
+)
+> d
+(
+A; C
+)
+gelten.
+Wegen
+ Aufgab e 9 (a)
+ kann nicht
+d
+(
+A; B
+) =
+d
+(
+A; C
+)
+gelten.
+)
+d
+(
+A; B
+)
+< d
+(
+A; C
+)
+
+(c)
+Vor.:
+Sei
+g
+eine Gerade,
+P
+2
+X
+und
+P =
+2
+g
+Beh.:
+9
+!
+Lot
+Bew.:
+ÜB10 A4(a): Es gibt Geradenspiegelung
+'
+an
+g
+.
+'
+vertauscht die b eiden
+Halb eb enen bzgl.
+g
+.
+)
+'
+(
+P
+)
+P
+schneidet
+g
+in
+F
+.
+Es gibt eine Geradenspiegelung
+'
+an
+g
+.
+'
+vertauscht die b eiden Halb eb enen bzgl.
+g
+)
+'
+(
+P
+)
+P
+schneidet
+g
+in
+F
+.
+Sei
+A
+2
+g
+n f
+F
+g
+. Dann gilt
+'
+(
+\
+AF P
+) =
+\
+AF '
+(
+P
+) =
+ˇ
+)
+\
+AF P
+ist rechter Winkel.
+Gäb e es nun
+G
+2
+g
+n f
+F
+g
+, so dass
+P G
+weiteres Lot von
+P
+auf
+g
+ist, wäre
+4
+P F G
+ein Dreieck mit zwei rechten Innenwinkeln (vgl.
+ Abbildung 5.4
+).
+
+
+A
+G
+P
+F
+g
+Abbildung 5.4
+:
+ Zwei L ote zu einer Geraden
+g
+durch einen Punkt
+P
+Nach
+ Folgerung 4.4
+ ist die Summe von zwei Innenwinkeln immer
+< ˇ
+)
+G
+gibt es nicht.
+
+Lösung zu Aufgab e
+ 10
+Sei
+f
+k
+h
+und o. B. d. A.
+f
+k
+g
+.
+f
+,
+h
+)
+f
+\
+h
+6
+=
+;
+, sei also
+x
+2
+f
+\
+h
+. Mit Axiom
+ 
+ folgt: Es gibt hö chstens eine Parallele
+zu
+g
+durch
+x
+, da
+x =
+2
+g
+. Diese ist
+f
+, da
+x
+2
+f
+und
+f
+k
+g
+. Da ab er
+x
+2
+h
+, kann
+h
+nicht
+105
+Lösung en der Übungsaufgaben
+parallel zu
+g
+sein, denn ansonsten gäb e es zwei Parallelen zu
+g
+durch
+x
+(
+f
+6
+=
+h
+).
+)
+g
+,
+h
+
+Lösung zu Aufgab e
+ 11
+Sei
+(
+X ; d; G
+)
+eine Geometrie, die
+ 
+-
+
+ erfüllt. Seien auÿerdem
+4
+AB C
+und
+4
+A
+0
+B
+0
+C
+0
+Dreiecke, für die gilt:
+d
+(
+A; B
+) =
+d
+(
+A
+0
+; B
+0
+)
+d
+(
+A; C
+) =
+d
+(
+A
+0
+; C
+0
+)
+d
+(
+B ; C
+) =
+d
+(
+B
+0
+; C
+0
+)
+Sei
+'
+die Isometrie mit
+'
+(
+A
+) =
+A
+0
+,
+'
+(
+B
+) =
+B
+0
+und
+'
+(
+C
+0
+)
+liegt in der selb en Halb eb ene
+bzgl.
+AB
+wie
+C
+. Diese Isometrie existiert wegen
+ 
+.
+Es gilt
+d
+(
+A; C
+) =
+d
+(
+A
+0
+; C
+0
+) =
+d
+(
+'
+(
+A
+0
+)
+; '
+(
+C
+0
+)) =
+d
+(
+A; '
+(
+C
+0
+))
+und
+d
+(
+B ; C
+) =
+d
+(
+B
+0
+; C
+0
+) =
+d
+(
+'
+(
+B
+0
+)
+; '
+(
+C
+0
+)) =
+d
+(
+B ; '
+(
+C
+0
+))
+.
+Bem.
+62
+=====
+)
+C
+=
+'
+(
+C
+)
+.
+Es gilt also
+'
+(
+4
+A
+0
+B
+0
+C
+0
+) =
+4
+AB C
+.
+
+Bildquellen
+Alle B ilder, die hier nicht aufgeführt sind, wurden von Martin Thoma erstellt.
+Teilweise wurden die im folgenden aufgelisteten Bilder no ch leicht mo di˝ziert.
+Abb.
+ 0.1a
+S
+2
+: Tom Bombadil,
+ tex.stackexchange.com/a/42865
+Abb.
+ 0.1b
+ Würfel: Jan Hlavacek,
+ tex.stackexchange.com/a/12069
+Abb.
+ 0.1e
+T
+2
+: Jake,
+ tex.stackexchange.com/a/70979/5645
+Abb.
+ 1.6
+ Stereographische Pro jektion:
+ texample.net/tikz/examples/map-pro jections
+Abb.
+ 1.11
+ Knoten von Jim.b elk aus der 
+ Blue knots
+-Serie:
+
+Trivialer Knoten:
+commons.wik imedia.org/wiki/File:B lue_Unknot.png
+
+Kleeblattknoten:
+commons.wiki media.org/wiki/File:Bl ue_Trefoil_Knot.png
+
+Achterknoten:
+commons.wik imedia.org/wiki/File:B lue_Figure- Eight_Knot.png
+
+6
+2
+-Knoten:
+commons.wiki media.org/wiki/File:Bl ue_6_2_Knot.png
+Abb.
+ 1.12
+ Reidemeister-Züge: YAMASHITA Makoto (
+1
+,
+ 2
+,
+ 3
+)
+Abb.
+ 1.13
+Kleeblattknoten, 3-Färbung: Jim.b elk,
+commons.wik imedia.org/wiki/File:T ricoloring.
+png
+Abb.
+ 2.1
+Dopp eltorus: Oleg Alexandrov,
+commons.wiki media.org/wiki/File:D ouble\_torus\_illustra tion.
+png
+Abb.
+ 2.8
+ Faltungsdiagramm: Jérôme Urhausen, Email vom 11.02.2014.
+Abb.
+ 3.3b
+ 3 Pfade auf Torus:
+ Charles Staats
+,
+tex.stackex change.com/a/149991/56 45
+Abb.
+ 3.10
+ Üb erlagerung von
+S
+1
+mit
+R
+:
+ Alex
+,
+tex.stackex change.com/a/149706/56 45
+Abb.
+ 4.7a
+ Sphärisches Dreieck:
+ Dominique Toussaint
+,
+commons.wik imedia.org/wiki/File: Spherical_triangle_3d_ opti.png
+Abb.
+ 5.1
+ Möbiusband:
+ Jake
+,
+tex.stackexc hange.com/a/118573/564 5
+Abb.
+ 5.3
+ Krümmung des Torus:
+ Charles Staats
+,
+tex.stackex change.com/a/149991/5 645
+Abkürzungsverzeichnis
+Beh.
+Behauptung
+Bew.
+Beweis
+bzgl.
+b ezüglich
+bzw.
+b eziehungsweise
+ca.
+circa
+d. h.
+das heiÿt
+Def.
+De˝nition
+etc.
+et cetera
+ex.
+existieren
+Hom.
+Homomorphismus
+o. B. d. A.
+ohne Beschränkung der Allgemeinheit
+Prop.
+Prop osition
+sog.
+sogenannte
+Vor.
+Voraussetzung
+vgl.
+vergleiche
+z. B.
+zum Beispiel
+zhgd.
+zusammenhängend
+z. z.
+zu zeigen
+Ergänzende De˝nitionen und Sätze
+Da dieses Skript in die Geometrie und Top ologie einführen soll, sollten soweit wie möglich alle
+b enötigten Begri˙e de˝niert und erklärt werden. Die folgenden Begri˙e wurden zwar verwendet,
+ab er nicht erklärt, da sie Bestandteil der Vorlesungen Analysis I und I I sowie Lineare Algebra
+und analytische Geometrie I und I I sind. Jedo ch will ich zumindest die De˝nitionen b ereitstellen.
+De˝nition 81
+Sei
+D
+
+R
+und
+x
+0
+2
+R
+.
+x
+0
+heiÿt ein
+Häufungspunkt
+von
+D
+:
+, 9
+Folge
+x
+n
+in
+D
+n f
+x
+0
+g
+mit
+x
+n
+!
+x
+0
+.
+Folgende De˝nition wurde dem Skript von Herrn P rof. Dr. Leuzinger für Lineare Algebra
+entnommen:
+De˝nition 82
+Es seien
+V
+und
+W
+K
+-Vektorräume und
+A
+(
+V
+)
+und
+A
+(
+W
+)
+die zugehörigen a˚nen Räume.
+Eine Abbildung
+f
+:
+V
+!
+W
+heiÿt
+a˚n
+, falls für alle
+a; b
+2
+V
+und alle
+; 
+2
+K
+mit
+
++
+
+= 1
+gilt:
+f
+(
+a
++
+
+) =
+f
+(
+a
+) +
+
+(
+b
+)
+De˝nition 83
+Sei
+V
+ein Vektorraum und
+S
+
+V
+eine Teilmenge.
+S
+heiÿt eine
+Orthonormalbasis
+von
+V
+, wenn gilt:
+(i)
+S
+ist eine Basis von
+V
+(ii)
+8
+v
+2
+S
+:
+k
+v
+k
+= 1
+(iii)
+8
+v
+1
+; v
+2
+2
+S
+:
+v
+1
+6
+=
+v
+2
+) h
+v
+1
+; v
+2
+i
+= 0
+Satz (Zwischenwertsatz)
+Sei
+a < b
+und
+f
+2
+C
+[
+a; b
+] :=
+C
+([
+a; b
+])
+, weiter sei
+y
+0
+2
+R
+und
+f
+(
+a
+)
+< y
+0
+< f
+(
+b
+)
+o der
+f
+(
+b
+)
+< y
+0
+< f
+(
+a
+)
+. Dann existiert ein
+x
+0
+2
+[
+a; b
+]
+mit
+f
+(
+x
+0
+) =
+y
+0
+.
+De˝nition 84
+Sei
+V
+ein Vektorraum üb er einem Körp er
+K
+und
+f
+:
+V
+!
+V
+eine lineare Abbildung.
+v
+2
+V
+n f
+0
+g
+heiÿt
+Eigenvektor
+:
+, 9
+
+2
+K
+:
+f
+(
+v
+) =
+v
+.
+Wenn ein solches
+
+2
+K
+existiert, heiÿt es
+Eigenwert
+von
+f
+.
+Satz (Binomischer Lehrsatz)
+Sei
+x; y
+2
+R
+. Dann gilt:
+(
+x
++
+y
+)
+n
+=
+n
+X
+k
+=0
+
+n
+k
+
+x
+n
+
+k
+y
+k
+8
+n
+2
+N
+0
+De˝nition 85
+Seien
+a; b
+2
+R
+3
+Vektoren.
+a
+
+b
+:=
+0
+@
+a
+1
+b
+3
+a
+3
+1
+A
+
+0
+@
+a
+1
+b
+3
+a
+3
+1
+A
+=
+0
+@
+a
+2
+b
+3
+
+a
+3
+b
+2
+a
+3
+b
+1
+
+a
+1
+b
+3
+a
+1
+b
+2
+
+a
+2
+b
+1
+1
+A
+Symb olverzeichnis
+Mengenop erationen
+Seien
+A; B
+und
+M
+Mengen.
+A
+C
+Komplement von
+A
+P
+(
+M
+)
+Potenzmenge von
+M
+M
+Abschluss von
+M
+@ M
+Rand der Menge
+M
+M
+
+Inneres der Menge
+M
+A
+
+B
+Kreuzpro dukt
+A
+
+B
+Teilmengenb eziehung
+A
+(
+B
+echte Teilmengenb eziehung
+A
+n
+B
+Di˙erenzmenge
+A
+[
+B
+Vereinigung
+A
+_
+[
+B
+Disjunkte Vereinigung
+A
+\
+B
+Schnitt
+Geometrie
+AB
+Gerade durch die Punkte
+A
+und
+B
+AB
+Strecke mit E ndpunkten
+A
+und
+B
+4
+AB C
+Dreieck mit Eckpunkten
+A; B ; C
+AB
+˘
+=
+C D
+Die Strecken
+AB
+und
+C D
+sind
+isometrisch
+j
+K
+j
+Geometrische Realisierung des
+Simplizialkomplexes
+K
+Grupp en
+Sei
+X
+ein top ologischer Raum und
+K
+ein Kör-
+p er.
+Homö o
+(
+X
+)
+Homö omorphismengrupp e
+Iso(
+X
+)
+Isometriengrupp e
+GL
+n
+(
+K
+)
+Allgemeine lineare Grupp e (von
+G
+eneral
+L
+inear Group
+)
+SL
+n
+(
+K
+)
+Sp ezielle lineare Grupp e
+PSL
+n
+(
+K
+)
+Pro jektive lineare Grupp e
+Perm(
+X
+)
+Permutationsgrupp e
+Sym(
+X
+)
+Symmetrische Grupp e
+Wege
+Sei
+
+:
+I
+!
+X
+ein Weg.
+[
+
+]
+Homotopieklasse von
+
+
+1
+
+
+2
+Zusammenhängen von Wegen
+
+1
+˘
+
+2
+Homotopie von Wegen
+
+(
+x
+)
+Inverser Weg, also
+
+(
+x
+) :=
+
+(1
+
+x
+)
+C
+Bild eines Weges
+
+, also
+C
+:=
+
+([0
+;
+1])
+Weiteres
+B
+Basis einer Top ologie
+B
+
+(
+x
+)
+
+-Kugel um
+x
+S
+Subbasis einer Top ologie
+T
+Top ologie
+A
+Atlas
+P
+Pro jektiver Raum
+h
+;
+i
+Skalarpro dukt
+X=
+˘
+X
+mo dulo
+˘
+[
+x
+]
+˘
+Äquivalenzklassen von
+x
+bzgl.
+˘
+k
+x
+k
+Norm von
+x
+j
+x
+j
+Betrag von
+x
+h
+a
+i
+Erzeugnis von
+a
+S
+n
+Sphäre
+T
+n
+Torus
+f
+
+g
+Verkettung von
+f
+und
+g
+ˇ
+X
+Pro jektion auf
+X
+f
+j
+U
+f
+eingeschränkt auf
+U
+f
+
+1
+(
+M
+)
+Urbild von
+M
+Rg (
+M
+)
+Rang von
+M
+˜
+(
+K
+)
+Euler-Charakteristik von
+K
+110
+Symbolverz eichnis
+
+k
+Standard-Simplex
+X
+#
+Y
+Verklebung von
+X
+und
+Y
+d
+n
+Lineare Abbildung aus
+ Bemer-
+kung 37
+A
+˘
+=
+B A
+ist isometrisch zu
+B
+f
+
+Abbildung zwischen Fundamental-
+grupp en (vgl.
+ Seite 49
+)
+111
+Symbolverz eichnis
+Zahlenmengen
+N
+=
+f
+1
+;
+2
+;
+3
+; : : :
+g
+Natürliche Zahlen
+Z
+=
+N
+[ f
+0
+;
+
+1
+;
+
+2
+; : : :
+g
+Ganze Zahlen
+Q
+=
+Z
+[
+
+1
+2
+;
+1
+3
+;
+2
+3
+	
+=
+
+z
+n
+mit
+z
+2
+Z
+und
+n
+2
+Z
+n f
+0
+g
+	
+Rationale Zahlen
+R
+=
+Q
+[
+
+p
+2
+;
+
+3
+p
+3
+; : : :
+	
+Reele Zahlen
+R
++
+Echt p ositive reele Zahlen
+R
+n
++
+;
+0
+:=
+f
+(
+x
+1
+; : : : ; x
+n
+)
+2
+R
+n
+j
+x
+n
+
+0
+g
+Halbraum
+R
+
+=
+R
+n f
+0
+g
+Einheitengrupp e von
+R
+C
+=
+f
+a
++
+ib
+j
+a; b
+2
+R
+g
+Komplexe Zahlen
+P
+=
+f
+2
+;
+3
+;
+5
+;
+7
+; : : :
+g
+Primzahlen
+H
+=
+f
+z
+2
+C
+j =
+z >
+0
+g
+ob ere Halb eb ene
+I
+= [0
+;
+1]
+( R
+Einheitsintervall
+f
+:
+S
+1
+,
+!
+R
+2
+Einb ettung der Kreislinie in die Eb ene
+ˇ
+1
+(
+X ; x
+)
+Fundamentalgrupp e im top ologischen Raum
+X
+um
+x
+2
+X
+Fix(
+f
+)
+Menge der Fixpunkte der Abbildung
+f
+k  k
+2
+2-Norm; Euklidische Norm
+
+Krümmung
+
+Nor
+Normalenkrümmung
+V
+(
+f
+)
+Nullstellenmenge von
+f
+2
+Krümmung
+D
+p
+F
+:
+R
+2
+!
+R
+3
+Lineare Abbildung mit Jacobi-Matrix in
+p
+(siehe
+ Seite 89
+)
+T
+s
+S
+Tangentialeb ene an
+S
+
+R
+3
+durch
+s
+2
+S
+d
+s
+n
+(
+x
+)
+Weingarten-Abbildung
+2
+von
+V
+anishing Set
+Stichwortverzeichnis
+Abbildung
+a˚ne,
+ 107
+di˙erenzierbare,
+ 29
+homotop e,
+ 50
+o˙ene,
+ 53
+simpliziale,
+ 35
+stetige,
+ 9
+Abschluss,
+ 3
+Abstand,
+ 86
+Abstandsaxiom,
+ 65
+Achterknoten,
+ 20
+Aktion,
+siehe
+Grupp enop eration
+Anordnungsaxiome,
+ 66
+Atlas,
+ 24
+Auÿenwinkel,
+ 70
+Axiom,
+ 64
+Axiomensystem,
+ 64
+Basis,
+ 3
+Baum,
+ 37
+Betti-Zahl,
+ 41
+Bewegungsaxiom,
+ 66
+Binormalenvektor,
+ 89
+Cantorsches Diskontinuum,
+ 22
+C
+k
+-Struktur,
+ 29
+Decktransformation,
+ 59
+Decktransformationsgrupp e,
+ 59
+Deformationsretrakt,
+ 47
+dicht,
+ 3
+Di˙eomorphismus,
+ 29
+Dimension,
+ 34
+diskret,
+ 53
+Dopp elverhältnis,
+ 83
+Dreib ein
+b egleitendes,
+ 89
+Eb ene
+euklidische,
+ 64
+Eigenvektor,
+ 107
+Eigenwert,
+ 107
+einfach zusammenhängend,
+ 49
+Einheitsnormalenfeld,
+ 90
+Euler-Charakteristik,
+siehe
+Eulerzahl
+Eulersche Polyederformel,
+ 38
+Eulerzahl,
+ 36
+Färbbarkeit,
+ 21
+Faser,
+siehe
+Urbild
+Fläche
+orientierbare,
+ 90
+reguläre,
+ 30
+Flächenelement,
+ 95
+Formop erator,
+siehe
+Weingarten-Abbildung
+Fundamentalform
+erste,
+ 94
+zweite,
+ 97
+Fundamentalgrupp e,
+ 47
+Gauÿ-Krümmung,
+ 92
+, 9194
+Geometrie,
+ 64
+Gerade,
+ 64
+hyp erb olische,
+ 77
+Graph,
+ 37
+Grenzwert,
+ 8
+Grupp e
+allgemeine lineare,
+ 22
+,
+ 26
+sp ezielle lineare,
+ 22
+top ologische,
+ 33
+Grupp e op eriert durch Homö omorphismen,
+61
+Grupp enaktion,
+siehe
+Grupp enop eration
+Grupp enop eration,
+ 60
+, 6063
+stetige,
+ 61
+Häufungspunkt,
+ 107
+Hülle
+konvexe,
+ 34
+Halb eb ene,
+ 66
+Halbgerade,
+ 65
+Halbraum,
+ 28
+Hauptkrümmung,
+ 92
+Hilb ert-Kurve,
+ 19
+,
+ 19
+113
+Stichwor tverz eichnis
+Homö omorphismengrupp e,
+ 10
+Homö omorphismus,
+ 9
+Homologiegrupp e,
+ 41
+Homomorphismus,
+ 101
+Homotopie,
+ 44
+Homotopieklasse,
+ 47
+Inklusionsabbildung,
+ 47
+Innenwinkel,
+ 70
+Inneres,
+ 3
+Inzidenzaxiome,
+ 64
+Isometrie,
+ 6
+,
+ 10
+Isometriegrupp e,
+ 10
+Isomorphismus,
+ 101
+Isotopie,
+ 20
+Jordankurve,
+ 19
+geschlossene,
+ 19
+Karte,
+ 24
+Kartenwechsel,
+ 28
+Kern
+o˙ener,
+ 3
+Kleeblattknoten,
+ 20
+Klump entop ologie,
+siehe
+triviale Top ologie
+Knoten,
+ 20
+, 1721
+äquivalente,
+ 20
+trivialer,
+ 20
+Knotendiagramm,
+ 20
+kollinear,
+ 65
+kongruent,
+siehe
+isometrisch
+Kongruenz,
+siehe
+Isometrie
+Kongruenzsatz
+SSS,
+ 104
+SWS,
+ 69
+SWW,
+ 74
+WSW,
+ 70
+Krümmung,
+ 88
+,
+ 89
+Kreis,
+ 37
+Kreuzpro dukt,
+ 107
+Kurve,
+ 87
+Länge einer,
+ 87
+Lage
+allgemeine,
+ 34
+Lehrsatz
+Binomischer,
+ 107
+Lie-Grupp e,
+ 33
+liegt zwischen,
+ 65
+Liftung,
+ 54
+Limes,
+ 8
+lokal,
+ 3
+Lot,
+ 86
+Lotfuÿpunkt,
+ 86
+Möbiusband,
+ 91
+Möbiustransformation,
+ 80
+Mannigfaltigkeit,
+ 24
+di˙erenzierbare,
+ 29
+geschlossene,
+ 25
+glatte,
+ 29
+mit Rand,
+ 28
+Menge
+abgeschlossene,
+ 2
+o˙ene,
+ 2
+zusammenhängende,
+ 11
+Metrik,
+ 6
+diskrete,
+ 6
+hyp erb olische,
+ 84
+SNCF,
+ 8
+Neb enwinkel,
+ 86
+Neilsche Parab el,
+ 27
+Normalenfeld,
+ 90
+Normalenvektor,
+ 87
+,
+ 89
+Normalkrümmung,
+ 91
+,
+ 92
+,
+ 98
+Oktaeder,
+ 34
+Orthonormalbasis,
+ 107
+Parab oloid
+hyp erb olisches,
+ 92
+Parallele,
+ 66
+Parallelenaxiom,
+ 64
+parametrisiert
+durch Bogenlänge,
+ 87
+Parametrisierung
+reguläre,
+ 30
+Polyzylinder,
+ 17
+Pro dukttop ologie,
+ 4
+Pro jektion
+stereographische,
+ 11
+Punkt,
+ 34
+Quotiententop ologie,
+ 5
+,
+ 10
+,
+ 11
+Rand,
+ 3
+,
+ 28
+Raum
+hausdor˙scher,
+ 8
+kompakter,
+ 14
+metrischer,
+ 6
+pro jektiver,
+ 5
+,
+ 22
+,
+ 25
+,
+ 52
+114
+Stichwor tverz eichnis
+top ologischer,
+ 2
+zusammenhängender,
+ 11
+Realisierung
+geometrische,
+ 34
+Retraktion,
+ 47
+Satz von
+Gauÿ-Bonnet,
+ 98
+Scheitelwinkel,
+ 86
+Seite,
+ 34
+Sierpi«skiraum,
+ 3
+,
+ 22
+Simplex,
+ 34
+Simplizialkomplex,
+ 34
+Simplizialkomplexe
+˛ächengleiche,
+ 74
+Sphäre
+exotische,
+ 29
+Standard-Simplex,
+ 34
+Standardtop ologie,
+ 2
+sternförmig,
+ 48
+Stetigkeit, 911
+Strecke,
+ 65
+Struktur
+di˙erenzierbare,
+ 29
+Subbasis,
+ 3
+Tangentialeb ene,
+ 89
+, 8990
+Teilraum,
+ 4
+Teilraumtop ologie,
+ 4
+Teilsimplex,
+ 34
+Top ologie
+diskrete,
+ 2
+,
+ 6
+euklidische,
+ 2
+feinste,
+ 11
+triviale,
+ 2
+Zariski,
+ 2
+,
+ 12
+,
+ 15
+Torus,
+ iii
+,
+ 5
+,
+ 38
+,
+ 51
+,
+ 93
+Total Unzusammenhängend,
+ 100
+Triangulierung,
+ 38
+Üb erdeckung,
+ 14
+Üb ergangsfunktion,
+siehe
+Kartenwechsel
+Üb erlagerung,
+ 51
+, 5160
+reguläre,
+ 59
+universelle,
+ 57
+Umgebung,
+ 3
+Umgebungsbasis,
+ 58
+vanishing set,
+ 26
+Vektorpro dukt,
+siehe
+Kreuzpro dukt
+Verklebung,
+ 26
+verträglich,
+ 29
+Würfel,
+ 34
+Weg,
+ 17
+einfacher,
+ 17
+geschlossener,
+ 17
+homotop e,
+ 44
+inverser,
+ 48
+zusammengesetzter,
+ 46
+Wegzusammenhang,
+ 18
+Weingarten-Abbildung,
+ 95
+Winkel,
+ 70
+Zusammenhang, 1114
+Zusammenhangskomp onente,
+ 13
+Zwischenwertsatz,
+ 107

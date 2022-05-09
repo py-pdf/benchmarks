@@ -248,22 +248,25 @@ def get_score(doc: Document, library_name: str):
 
 
 if __name__ == "__main__":
-    DOIs = [
-        "2201.00021",  #  2.7 MB: 10 pages
-        "2201.00022",  #  1.1 MB: 11 pages
-        "2201.00029",  #  0.8 MB: 12 pages
-        "2201.00037",  #  3.1 MB: 33 pages
-        "2201.00069",  # 15.4 MB: 15 pages
-        "2201.00151",  #  1.6 MB: 12 pages
-        "2201.00178",  #  2.4 MB: 16 pages
-        "2201.00200",  #  0.3 MB:  7 pages,
-        "2201.00201",  #  1.3 MB:  9 pages,
-        "2201.00214",  #  2.5 MB: 22 pages
-        "1707.09725",  #  7.3 MB: 73 pages, 39 figures
-        "1601.03642",  #  1.0 MB:  5 pages, 4 figures
-        "1602.06541",  #  3.1 MB: 16 pages
+    docs = [
+        Document(name="2201.00214", url="https://arxiv.org/pdf/2201.00214.pdf"),
+        Document(
+            name="GeoTopo-book",
+            url="https://github.com/py-pdf/sample-files/raw/main/009-pdflatex-geotopo/GeoTopo.pdf",
+        ),
+        Document(name="2201.00151", url="https://arxiv.org/pdf/2201.00151.pdf"),
+        Document(name="1707.09725", url="https://arxiv.org/pdf/1707.09725.pdf"),
+        Document(name="2201.00021", url="https://arxiv.org/pdf/2201.00021.pdf"),
+        Document(name="2201.00037", url="https://arxiv.org/pdf/2201.00037.pdf"),
+        Document(name="2201.00069", url="https://arxiv.org/pdf/2201.00069.pdf"),
+        Document(name="2201.00178", url="https://arxiv.org/pdf/2201.00178.pdf"),
+        Document(name="2201.00201", url="https://arxiv.org/pdf/2201.00201.pdf"),
+        Document(name="1602.06541", url="https://arxiv.org/pdf/1602.06541.pdf"),
+        Document(name="2201.00200", url="https://arxiv.org/pdf/2201.00200.pdf"),
+        Document(name="2201.00022", url="https://arxiv.org/pdf/2201.00022.pdf"),
+        Document(name="2201.00029", url="https://arxiv.org/pdf/2201.00029.pdf"),
+        Document(name="1601.03642", url="https://arxiv.org/pdf/1601.03642.pdf"),
     ]
-    docs = [Document(name=doi, url=f"https://arxiv.org/pdf/{doi}.pdf") for doi in DOIs]
     libraries = {
         "tika": Library(
             "Tika",
