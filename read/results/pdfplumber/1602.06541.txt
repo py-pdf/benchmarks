@@ -19,13 +19,13 @@ convolutionalneuralnetworksarementionedandtypical single-class afﬁliation (see
 0 given.
 fashion (see Section II-D).
 2
-
+ 
 y
 I. INTRODUCTION
 a
 M Semantic segmentation is the task of clustering A. Allowed classes
 parts of images together which belong to the same
-
+ 
 1 object class. This type of algorithm has several use- Semantic segmentation is a classiﬁcation task. As
 1 cases such as detecting road signs [MBLAGJ+07], such, the classes on which the algorithm is trained is a
    detecting tumors [MBVLG02], detecting medical in- central design decision.
@@ -35,7 +35,7 @@ C tation [CRSS14], land use and land cover classiﬁca- some even only work on b
 . tion [HDT02]. In contrast, non-semantic segmentation ground vs background [RM07], [CS10] or street vs
 cs onlyclusterspixelstogetherbasedongeneralcharacter- no street [BKTT15].
 [ istics of single objects. Hence the task of non-semantic However, there are also unsupervised segmentation
-
+ 
   segmentation is not well-deﬁned, as many different algorithms which do not distinguish classes at all (see
 2
 v segmentations might be acceptable. Section V-B) as well as segmentation algorithms which

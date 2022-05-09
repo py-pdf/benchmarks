@@ -6,7 +6,9 @@ import os
 import platform
 import re
 import subprocess
+import tempfile
 import time
+from dataclasses import dataclass
 from io import BytesIO
 from itertools import product
 from typing import Callable, Dict, List, NamedTuple
@@ -22,6 +24,7 @@ from Levenshtein import ratio  # python-Levenshtein
 from pdfminer.high_level import extract_text
 from rich.progress import track
 from tika import parser
+from utils import table_to_markdown
 
 
 def get_processor_name():
@@ -41,12 +44,29 @@ def get_processor_name():
     return ""
 
 
+@dataclass(frozen=True)
+class Document:
+    name: str
+    url: str
+    layout: str = ""
+
+    @property
+    def path(self):
+        return os.path.join(os.path.dirname(__file__), "pdfs", f"{self.name}.pdf")
+
+    @property
+    def filesize(self):
+        return os.path.getsize(self.path)
+
+
 class Library(NamedTuple):
     name: str
     url: str
     extraction_function: Callable[[bytes], str]
     version: str
     dependencies: str = ""
+    license: str = ""
+    last_release_date: str = ""
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -75,6 +95,18 @@ def pdfplubmer_get_text(data: bytes) -> str:
     return text
 
 
+def pdftotext_get_text(data: bytes) -> str:
+    new_file, filename = tempfile.mkstemp()
+    with open(filename, "wb") as fp:
+        fp.write(data)
+    args = ["/usr/bin/pdftotext", "-enc", "UTF-8", filename, "-"]
+    res = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output = res.stdout.decode("utf-8")
+    os.close(new_file)
+    os.remove(filename)
+    return output
+
+
 def get_pdf_bytes(doi: str) -> bytes:
     destination = f"pdfs/{doi}.pdf"
     if not os.path.exists(destination):
@@ -89,25 +121,13 @@ def get_pdf_bytes(doi: str) -> bytes:
         return f.read()
 
 
-def main(extract_functions: Dict[str, Library]) -> None:
+def main(
+    docs: List[Document], extract_functions: Dict[str, Library], add_quality=True
+) -> None:
     names = sorted(list(extract_functions.keys()))
     times_all: Dict[str, List[float]] = {name: [] for name in names}
 
-    DOIs = [
-        "2201.00021",  #  2.7 MB: 10 pages
-        "2201.00022",  #  1.1 MB: 11 pages
-        "2201.00029",  #  0.8 MB: 12 pages
-        "2201.00037",  #  3.1 MB: 33 pages
-        "2201.00069",  # 15.4 MB: 15 pages
-        "2201.00151",  #  1.6 MB: 12 pages
-        "2201.00178",  #  2.4 MB: 16 pages
-        "2201.00200",  #  0.3 MB:  7 pages,
-        "2201.00201",  #  1.3 MB:  9 pages,
-        "2201.00214",  #  2.5 MB: 22 pages
-        "1707.09725",  #  7.3 MB: 73 pages, 39 figures
-        "1601.03642",  #  1.0 MB:  5 pages, 4 figures
-        "1602.06541",  #  3.1 MB: 16 pages
-    ]
+    DOIs = [doc.name for doc in docs]
 
     for doi, name in track(list(product(DOIs, names))):
         data = get_pdf_bytes(doi)
@@ -117,7 +137,7 @@ def main(extract_functions: Dict[str, Library]) -> None:
         t1 = time.time()
         times_all[name].append(t1 - t0)
         write_single_result(name, doi, text)
-    write_benchmark_report(names, extract_functions, times_all, DOIs)
+    write_benchmark_report(names, extract_functions, times_all, DOIs, add_quality)
 
 
 def write_single_result(pdf_library_name: str, doi: str, extracted_text: str) -> None:
@@ -133,6 +153,7 @@ def write_benchmark_report(
     extract_functions: Dict[str, Library],
     times_all: Dict[str, List[float]],
     dois: List[str],
+    add_quality: bool = True,
 ) -> None:
     """Create a benchmark report from all timing results."""
     # avg_times = {name: np.mean(times_all[name]) for name in names}
@@ -154,81 +175,55 @@ def write_benchmark_report(
         for name in names:
             lib = extract_functions[name]
             if lib.dependencies:
-                f.write(
-                    f"* {lib.name}: {lib.version} (depends on {lib.dependencies})\n"
-                )
+                f.write(f"* {lib.name} {lib.version} (depends on {lib.dependencies})\n")
             else:
                 f.write(f"* {lib.name}: {lib.version}\n")
 
+        doi_headers = [
+            f"[{i:^7}](https://arxiv.org/pdf/{doi}.pdf)"
+            for i, doi in enumerate(dois, start=1)
+        ]
         # ---------------------------------------------------------------------
 
         f.write("\n")
         f.write("## Text Extraction Speed\n\n")
-        f.write(
-            f"| # | {'Library':<15}|  "
-            + f"{'Avgerage':<6} |  "
-            + "|".join(
-                [
-                    f"[{i:^7}](https://arxiv.org/pdf/{doi}.pdf)"
-                    for i, doi in enumerate(dois, start=1)
-                ]
-            )
-            + "\n"
-        )
-        f.write(
-            "|---|"
-            + "-" * 15
-            + "|---------|---"
-            + "|".join(["-" * 6 for _ in dois])
-            + "\n"
-        )
+        table = []
+        headings = ["#", "Library", "Average"] + doi_headers
         averages = [np.mean(times_all[name]) for name in names]
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
             lib = extract_functions[library_name]
             avg = averages[index]
-            details = "|".join([f"{t:6.2f}s" for t in times_all[library_name]])
-            f.write(
-                f"|{place:>2} | [{lib.name:<15}]({lib.url})| {avg:6.2f}s | {details}\n"
-            )
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.2f}s"]
+            row += [f"{t:0.2f}s" for t in times_all[library_name]]
+            table.append(row)
+        f.write(table_to_markdown(table, headings=headings))
+        f.write("\n")
 
         # ---------------------------------------------------------------------
+        if add_quality:
+            f.write("## Text Extraction Quality\n\n")
+            # Get data
+            all_scores: Dict[str, List[float]] = {}
+            for library_name in names:
+                lib = extract_functions[library_name]
+                all_scores[library_name] = []
+                for doi in track(dois):
+                    all_scores[library_name].append(get_score(doi, library_name))
 
-        f.write("\n")
-        f.write("## Text Extraction Quality\n\n")
-        f.write(
-            f"| # | {'Library':<15}|  "
-            + f"{'Avgerage':<6} |  "
-            + "|".join(
-                [
-                    f"[{i:^7}](https://arxiv.org/pdf/{doi}.pdf)"
-                    for i, doi in enumerate(dois, start=1)
-                ]
-            )
-            + "\n"
-        )
-        # Get data
-        all_scores: Dict[str, List[float]] = {}
-        for library_name in names:
-            lib = extract_functions[library_name]
-            all_scores[library_name] = []
-            for doi in track(dois):
-                all_scores[library_name].append(get_score(doi, library_name))
-
-        # Print table
-        f.write(
-            "|---|" + "-" * 15 + "|---|---" + "|".join(["-" * 6 for _ in dois]) + "\n"
-        )
-        averages = [np.mean(all_scores[name]) for name in names]
-        sort_order = np.argsort([-avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = extract_functions[library_name]
-            avg = averages[index]
-            f.write(
-                f"|{place:>2} | [{lib.name:<15}]({lib.url}) | {avg*100:3.0f}% | {' | '.join([f'{score*100:3.0f}%' for score in all_scores[library_name]])}\n"
-            )
+            # Print table
+            table = []
+            averages = [np.mean(all_scores[name]) for name in names]
+            sort_order = np.argsort([-avg for avg in averages])
+            for place, index in enumerate(sort_order, start=1):
+                library_name = names[index]
+                lib = extract_functions[library_name]
+                avg = averages[index]
+                row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
+                row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
+                table.append(row)
+            f.write(table_to_markdown(table, headings=headings))
 
 
 def load_extracted_data(path: str) -> str:
@@ -243,6 +238,22 @@ def get_score(doi: str, library_name: str):
 
 
 if __name__ == "__main__":
+    DOIs = [
+        "2201.00021",  #  2.7 MB: 10 pages
+        "2201.00022",  #  1.1 MB: 11 pages
+        "2201.00029",  #  0.8 MB: 12 pages
+        "2201.00037",  #  3.1 MB: 33 pages
+        "2201.00069",  # 15.4 MB: 15 pages
+        "2201.00151",  #  1.6 MB: 12 pages
+        "2201.00178",  #  2.4 MB: 16 pages
+        "2201.00200",  #  0.3 MB:  7 pages,
+        "2201.00201",  #  1.3 MB:  9 pages,
+        "2201.00214",  #  2.5 MB: 22 pages
+        "1707.09725",  #  7.3 MB: 73 pages, 39 figures
+        "1601.03642",  #  1.0 MB:  5 pages, 4 figures
+        "1602.06541",  #  3.1 MB: 16 pages
+    ]
+    docs = [Document(name=doi, url=f"https://arxiv.org/pdf/{doi}.pdf") for doi in DOIs]
     libraries = {
         "tika": Library(
             "Tika",
@@ -275,5 +286,12 @@ if __name__ == "__main__":
             PyMuPDF.version[0],
             "MuPDF",
         ),
+        "pdftotext": Library(
+            "pdftotext",
+            "https://pypi.org/project/pdftotext/",
+            lambda n: pdftotext_get_text(n),
+            "0.86.1",
+            "build-essential libpoppler-cpp-dev pkg-config python3-dev",
+        ),
     }
-    main(libraries)
+    main(docs, libraries, add_quality=True)

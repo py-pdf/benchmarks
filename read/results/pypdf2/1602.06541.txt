@@ -464,27 +464,27 @@ CRSS14
 ]. It is calculated as ﬁthe harmonic mean
 of the precision and recallﬂ [PH05]:
 F
-
+
 = (1 +
-
+
 )
 2
 tp
 (1 +
-
+
 2
 )
 
 tp
 +
-
+
 2
 
 fn
 +
 fp
 where
-
+
 = 1
 is chosen in most cases and
 tp
@@ -1212,7 +1212,7 @@ is the
 feature vector and
 y
 i
-2 f
+2 f 
 1
 ;
 1
@@ -1363,7 +1363,7 @@ m
 X
 i
 =1
-
+
 i
 y
 i
@@ -1372,14 +1372,14 @@ i
 where
 y
 i
-2 f
+2 f 
 1
 ;
 1
 g
 represents the class of the
 training example and
-
+
 i
 are Lagrange multipliers.
 The usage of Lagrange multipliers is explained
@@ -1387,15 +1387,15 @@ with some examples in [
 Smi04
 ]. The usage of the
 Lagrange multipliers
-
+
 i
 changes the optimization
 problem depend on the
-
+
 i
 which are weights for
 the feature vectors. It turns out that most
-
+
 i
 will
 be zero. The non-zero weighted vectors are called
@@ -1404,13 +1404,13 @@ support vectors
 The optimization problem is now, according
 to [Bur98]:
 maximize
-
+
 i
 m
 X
 i
 =1
-
+
 i
 
 1
@@ -1423,9 +1423,9 @@ m
 X
 j
 =1
-
+
 i
-
+
 j
 y
 i
@@ -1445,7 +1445,7 @@ i
 =1
 0
 
-
+
 i
 
 C
@@ -1454,7 +1454,7 @@ m
 X
 i
 =1
-
+
 i
 y
 i
@@ -1579,7 +1579,7 @@ i
 ;
 x
 j
-i
+i 
 r
 )
 where the parameter
@@ -1851,7 +1851,7 @@ y
 X
 c
 2C
-
+ 
 c
 (
 x
@@ -1859,7 +1859,7 @@ x
 y
 )
 where
-
+ 
 is called a
 clique potential
 . One choice for
@@ -1874,7 +1874,7 @@ x
 2
 )
 is [KP06]
-
+ 
 c
 (
 x
@@ -1982,7 +1982,7 @@ x
 Y
 c
 2C
-
+ 
 c
 (
 y
@@ -1991,7 +1991,7 @@ j
 x
 )
 The simplest way to dene the clique potentials
-
+ 
 is
 the count of the class
 y

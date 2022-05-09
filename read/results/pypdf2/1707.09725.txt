@@ -1617,7 +1617,7 @@ of the Drop out layer:
 out
 =
 D
-
+
 in with
 d
 i
@@ -1627,11 +1627,11 @@ B
 ; p
 )
 where
-
+
 is the Hadamard pro duct
 (
 A
-
+
 B
 )
 i;j
@@ -1817,7 +1817,7 @@ two parameters
 (
 k
 )
-;
+; 
 (
 k
 )
@@ -1839,7 +1839,7 @@ x
 k
 )
 +
-
+
 (
 k
 )
@@ -1848,7 +1848,7 @@ is applied. If it is applied after the activation, it harms the training in earl
 convolution, only one
 
 and one
-
+
 is learned p er feature map.
 One imp ortant sp ecial case is
 
@@ -1869,7 +1869,7 @@ k
 +
 "
 and
-
+
 (
 k
 )
@@ -2798,7 +2798,7 @@ i
 1]
 For two-class problems there are many other metrics like precision, recall and
 F
-
+
 -score.
 Quality criteria for semantic segmentation are explained in [Tho16].
 Besides the quality of the classi˝cation result, several other quality criteria are imp ortant
@@ -3295,12 +3295,12 @@ X
 o
 2
 O
-
-
-
-
-
-
+
+
+
+
+
+
 X
 p
 2
@@ -3320,12 +3320,12 @@ p;o
 E
 o
 )
-
-
-
-
-
-
+
+
+
+
+
+
 where
 O
 is the set of output no des,
@@ -3533,7 +3533,7 @@ which are b elow a threshold
 
 :
 w
-
+ 
 8
 <
 :
@@ -4859,18 +4859,18 @@ most of them is smaller than
 Similarly, Figure 5.4 and Figure 5.5 show the distribution of the
 
 and the
-
+
 parameter of
 Batch Normalization. It is exp ected that
 
 is close to 1 and
-
+
 is close to 0. In those cases,
 the Batch Normalization layer equals the identity and thus is only relevant for the training.
 While
 
 and
-
+
 do not show as clear patterns as the ˝lter and bias weights of convolutional
 layers, some observations are also consistent through all mo dels even for di˙erent datasets:
 ‹
@@ -4878,12 +4878,12 @@ layers, some observations are also consistent through all mo dels even for di˙e
 of the last layer (layer 16) is bigger than 1.3.
 ‹
 The 99-p ercentile interval for
-
+
 of the last layer is longer than the other 99-p ercentile
 intervals.
 ‹
 The 99-p ercentile interval for
-
+
 of the fourth-last (layer 14 for STL-10, layer 10 for
 all other mo dels) is more negative then all other layers.
 Finally, the distribution of ˝lter weight ranges is plotted in Figure 5.6 for each convolutional
@@ -4952,7 +4952,7 @@ parameter of Batch Normalization layers of a
 baseline mo del train ed on CIFAR-100.
 Figure 5.5.:
 The distribution of the
-
+
 parameter of Batch Normalization layers of a baseline mo del
 trained on CIFAR-100.
 43
@@ -6477,7 +6477,7 @@ Removing the biases did not have a noticeable e˙ect on the ˝lter weight range,
 weight distribution or the distribution of the remaining biases. Also, the
 
 and
-
+
 parameters
 of the Batch Normalization layers did not noticeably change.
 59
@@ -6733,7 +6733,7 @@ x
 + 1
 if
 x
-
+ 
 2
 x
 if
@@ -7060,7 +7060,7 @@ ELU
 Table 5.11.:
 Training and test accuracy of adjusted baseline mo dels trained with di˙erent activation
 functions on CIFAR-100. For LReLU,
-
+
 = 0
 :
 3
@@ -7308,14 +7308,14 @@ t
 (
 x
 ) =
-
+
 
 t
 (
 x
 ) + (1
 
-
+
 )
 y
 E
@@ -7323,7 +7323,7 @@ E
 x
 )
 where
-
+
 2
 [0
 ;
@@ -7355,7 +7355,7 @@ could b e relaxed.
 m
 smo oth
 are trained with the
-
+
 = 0
 :
 5
@@ -8224,7 +8224,7 @@ in [
 MSM16
 ], improves the network. Neither with ELU nor with leaky recti˝ed linear
 unit (LReLU) and
-
+
 = 0
 :
 3
@@ -8395,13 +8395,13 @@ T
 c
 )
 b estScore
-
+ 
 accuracy
 (
 C
 )
 b estC
-
+ 
 C
 for
 i
@@ -8410,12 +8410,12 @@ i
 i <
 steps;
 i
-
+ 
 i
 + 1
 do
 p
-
+ 
 randomFloat
 (0
 ;
@@ -8429,13 +8429,13 @@ then
 .
 Swap rows
 i
-
+ 
 randomInteger
 (1
 ; : : : ; n
 )
 j
-
+ 
 randomInteger
 (1
 ; : : : ; n
@@ -8444,20 +8444,20 @@ n f
 i
 g
 p
-
+ 
 randomUniform
 (0
 ;
 1)
 C
 0
-
+ 
 swap
 (
 C ; i; j
 )
 s
-
+ 
 accuracy
 (
 C
@@ -8473,7 +8473,7 @@ T
 )
 then
 C
-
+ 
 C
 0
 if
@@ -8481,13 +8481,13 @@ s >
 b estScore
 then
 b estScore
-
+ 
 s
 b estC
-
+ 
 C
 T
-
+ 
 T
 
 c
@@ -8495,7 +8495,7 @@ else
 .
 Move Blo ck
 s
-
+ 
 randomInteger
 (1
 ; : : : ; n
@@ -8503,7 +8503,7 @@ randomInteger
 .
 Blo ck start
 e
-
+ 
 randomInteger
 (
 s; : : : ; n
@@ -8511,7 +8511,7 @@ s; : : : ; n
 .
 Blo ck end
 i
-
+ 
 randomInteger
 (1
 ; : : : ; n
@@ -8737,7 +8737,7 @@ ELU
 Table A.2.:
 Test accuracy of adjusted baseline mo dels trained with di˙erent activation functions on
 HASYv2. For LReLU,
-
+
 = 0
 :
 3
@@ -8942,7 +8942,7 @@ ELU
 Table A.3.:
 Test accuracy of adjusted baseline mo dels trained with di˙erent activation functions on
 STL-10. For LReLU,
-
+
 = 0
 :
 3
@@ -9128,21 +9128,21 @@ Weight initializations are usually chosen to b e small and centered around zero.
 characterize many initialization schemes is by
 w
 ˘
-
+
  U
 [
 
 1
 ;
 1] +
-
+
  N
 (0
 ;
 1) +
 
 with
- ;  ;
+ ;  ; 
 
 0
 Table B.2 shows six commonly used weight initialization schemes. Several schemes use the
@@ -9150,19 +9150,19 @@ same idea, that unit-variance is desired for each layer as the training converge
 IS15
 ].
 Name
-
+  
 Reference
 Constant
-
+
 = 0
-
+
 = 0
 
 
 0
 used by [ZF14]
 Xavier/Glorot uniform
-
+
 =
 q
 6
@@ -9171,15 +9171,15 @@ in
 +
 n
 out
-
+
 = 0
 
 = 0
 [GB10]
 Xavier/Glorot normal
-
+
 = 0
-
+
 =
 
 2
@@ -9196,9 +9196,9 @@ out
 = 0
 [GB10]
 He
-
+
 = 0
-
+
 =
 2
 n
@@ -9206,25 +9206,25 @@ in
 
 = 0
 [HZRS15b]
-Orthogonal
+Orthogonal 
 
 = 0
 [SMG13]
-LSUV
+LSUV 
 
 = 0
 [MM15]
 Table B.2.: Weight initialization schemes of the form
 w
 ˘
-
+
  U
 [
 
 1
 ;
 1] +
-
+
  N
 (0
 ;
@@ -9347,7 +9347,7 @@ Most relevant optimization techniques for CNNs are based on SGD, which up dates 
 weights according to the rule
 w
 j i
-
+ 
 w
 j i
 + 
@@ -9406,7 +9406,7 @@ lead to longer training times due to computational overhead and to more training
 to gradient noise.
 w
 j i
-
+ 
 w
 j i
 + 
@@ -9431,7 +9431,7 @@ w
 t
 +1)
 j i
-
+ 
 w
 (
 t
@@ -9458,7 +9458,7 @@ B
 @ w
 j i
 +
-
+
 
 w
 (
@@ -9466,7 +9466,7 @@ t
 )
 j i
 with
-
+
 2
 [0
 ;
@@ -9631,7 +9631,7 @@ x
 if
 x <
 0
-f
+f 
 1
 ;
 1
@@ -9744,7 +9744,7 @@ x
 if
 x >
 0
-
+
 if
 x <
 0
@@ -9774,7 +9774,7 @@ x
 if
 x >
 0
-
+
 (
 e
 x
@@ -9886,13 +9886,13 @@ and functions marked w ith
 z
 op erate on all elements of a layer simultaneously. The
 hyp erparameters
-
+
 2
 (0
 ;
 1)
 of Leaky ReL U and ELU are typically
-
+
 = 0
 :
 01
@@ -9906,7 +9906,7 @@ Heaviside step function, tanh for the sign function, softplus for ReLU.
 Softmax is the standard activation function for the last layer of a classi˝cation network
 as it pro duces a probability distribu tion. See Figure B.1 for a plot of some of them.
 2
-
+
 is a hyp erparameter in leaky ReLU, but a learnable parameter in th e parametric ReLU function.
 84
 
@@ -10549,13 +10549,11 @@ Its architecture is shown in Figure D.2 and describ ed in Table D.2. It has ab o
 param-
 eters. A trained AlexNet can b e downloaded at www.cs.toronto.edu/guerzhoy/tf_alexnet.
 Note that the uncompressed size is at least
-60 965 224
-oats
+60 965 224 oats
 
 32
 bit
-
-oat
+oat
 ˇ
 244 MB
 .
@@ -10725,13 +10723,11 @@ https://gi thub
 com/machris aa/
 tensorflow- vgg
 . Note that the uncompressed size is at least
-138 357 544
-oats
+138 357 544 oats
 
 32
 bit
-
-oat
+oat
 ˇ
 520 MB
 . The downloaded Numpy binary ˝le
@@ -11464,7 +11460,7 @@ Asirra is a CAPTCHA created by Microsoft and was used in the Cats vs Dogs comp
 Dataset Mo del typ e / name Result Score
 Achieved /
 Claimed by
-MNIST
+MNIST 
 0
 :
 21 %
@@ -11556,13 +11552,13 @@ S
 )
 D
 C
-
+ 
 List
 w
-
+ 
 desired image width
 h
-
+ 
 desired image height
 for
 Image and asso ciated lab el
@@ -11574,7 +11570,7 @@ D
 S
 do
 i
-
+ 
 randint
 (0
 ; L:
@@ -11583,7 +11579,7 @@ width
 w
 )
 j
-
+ 
 randint
 (0
 ; L:
@@ -11593,7 +11589,7 @@ h
 )
 c
 L
-
+ 
 crop
 (
 y ;
@@ -11615,7 +11611,7 @@ are of one class
 then
 c
 I
-
+ 
 crop
 (
 x;
@@ -11701,7 +11697,7 @@ G. List of Figures
 
 distribution . . . . . . . . . . . . . . . . . . . . . . . . . . 43
 5.5 Baseline mo del
-
+
 distribution . . . . . . . . . . . . . . . . . . . . . . . . . . 43
 5.6 Baseline mo del ˝lter weight range distribution . . . . . . . . . . . . . . . . . 44
 5.7 Baseline mo del CIFAR-100 validation accuracy . . . . . . . . . . . . . . . . 45

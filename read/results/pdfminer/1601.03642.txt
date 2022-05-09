@@ -177,12 +177,12 @@ optimization technique called gradient descent. The gradient
 descent algorithm takes a function which has to be derivable,
 starts at any point of the surface of this error function and
 
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
 makes a step in the direction which goes downwards. Hence
 it tries to ﬁnd a minimum of this high-dimensional function.
 
@@ -948,3 +948,5 @@ set_pid_sum((unsigned long)state, current_state_str(),
 (unsigned long)-1->lr_full; low;
 
 }
+
+
