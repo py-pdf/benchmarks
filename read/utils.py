@@ -64,7 +64,7 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
             columns[i].append(evalute_field(record, field))
 
     # Fill out any missing alignment characters.
-    extended_align = alignment if alignment != None else []
+    extended_align = alignment if alignment is not None else []
     if len(extended_align) > num_columns:
         extended_align = extended_align[0:num_columns]
     elif len(extended_align) < num_columns:
@@ -100,3 +100,11 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
     for row in zip(*columns):
         ret_val += row_template.format(*row).rstrip() + "\n"
     return ret_val
+
+
+def sizeof_fmt(num, suffix="B"):
+    for unit in ["", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi"]:
+        if abs(num) < 1024.0:
+            return f"{num:3.1f}{unit}{suffix}"
+        num /= 1024.0
+    return f"{num:.1f}Yi{suffix}"

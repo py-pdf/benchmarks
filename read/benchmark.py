@@ -24,7 +24,7 @@ from Levenshtein import ratio  # python-Levenshtein
 from pdfminer.high_level import extract_text
 from rich.progress import track
 from tika import parser
-from utils import table_to_markdown
+from utils import sizeof_fmt, table_to_markdown
 
 
 def get_processor_name():
@@ -50,6 +50,20 @@ class Document:
     url: str
     layout: str = ""
 
+    def __post_init__(self):
+        if not os.path.exists(self.path):
+            self.download()
+
+    def download(self):
+        response = requests.get(self.url)
+        with open(self.path, "wb") as f:
+            f.write(response.content)
+
+    @property
+    def data(self):
+        with open(self.path, "rb") as f:
+            return f.read()
+
     @property
     def path(self):
         return os.path.join(os.path.dirname(__file__), "pdfs", f"{self.name}.pdf")
@@ -57,6 +71,11 @@ class Document:
     @property
     def filesize(self):
         return os.path.getsize(self.path)
+
+    @property
+    def nb_pages(self):
+        doc = PyMuPDF.open(self.path)
+        return doc.page_count
 
 
 class Library(NamedTuple):
@@ -107,44 +126,28 @@ def pdftotext_get_text(data: bytes) -> str:
     return output
 
 
-def get_pdf_bytes(doi: str) -> bytes:
-    destination = f"pdfs/{doi}.pdf"
-    if not os.path.exists(destination):
-        if not os.path.exists("pdfs"):
-            os.makedirs("pdfs")
-        url = f"https://arxiv.org/pdf/{doi}.pdf"
-        print(f"Now {url} ...")
-        response = requests.get(url)
-        with open(destination, "wb") as f:
-            f.write(response.content)
-    with open(destination, "rb") as f:
-        return f.read()
-
-
 def main(
     docs: List[Document], extract_functions: Dict[str, Library], add_quality=True
 ) -> None:
     names = sorted(list(extract_functions.keys()))
     times_all: Dict[str, List[float]] = {name: [] for name in names}
 
-    DOIs = [doc.name for doc in docs]
-
-    for doi, name in track(list(product(DOIs, names))):
-        data = get_pdf_bytes(doi)
-        print(f"{name} now parses {doi}...")
+    for doc, name in track(list(product(docs, names))):
+        data = doc.data
+        print(f"{name} now parses {doc.name}...")
         t0 = time.time()
         text = extract_functions[name].extraction_function(data)
         t1 = time.time()
         times_all[name].append(t1 - t0)
-        write_single_result(name, doi, text)
-    write_benchmark_report(names, extract_functions, times_all, DOIs, add_quality)
+        write_single_result(name, doc.name, text)
+    write_benchmark_report(names, extract_functions, times_all, docs, add_quality)
 
 
-def write_single_result(pdf_library_name: str, doi: str, extracted_text: str) -> None:
+def write_single_result(pdf_library_name: str, name: str, extracted_text: str) -> None:
     folder = f"results/{pdf_library_name}"
     if not os.path.exists(folder):
         os.makedirs(folder)
-    with open(f"{folder}/{doi}.txt", "w") as f:
+    with open(f"{folder}/{name}.txt", "w") as f:
         f.write(extracted_text)
 
 
@@ -152,7 +155,7 @@ def write_benchmark_report(
     names: List[str],
     extract_functions: Dict[str, Library],
     times_all: Dict[str, List[float]],
-    dois: List[str],
+    docs: List[Document],
     add_quality: bool = True,
 ) -> None:
     """Create a benchmark report from all timing results."""
@@ -167,8 +170,18 @@ def write_benchmark_report(
         f.write(f"{get_processor_name()}\n\n")
 
         f.write("## Input Documents\n")
-        for i, doi in enumerate(dois, start=1):
-            f.write(f"{i}. [{doi}](https://arxiv.org/pdf/{doi}.pdf)\n")
+        table = []
+        header = ["#", "Name", "File Size", "Pages"]
+        alignment = ["^>", "^<", "^>", "^>"]
+        for i, doc in enumerate(docs, start=1):
+            row = [
+                i,
+                f"[{doc.name}]({doc.url})",
+                sizeof_fmt(doc.filesize),
+                doc.nb_pages,
+            ]
+            table.append(row)
+        f.write(table_to_markdown(table, header, alignment=alignment))
         f.write("\n")
 
         f.write("## Libraries\n")
@@ -179,16 +192,13 @@ def write_benchmark_report(
             else:
                 f.write(f"* {lib.name}: {lib.version}\n")
 
-        doi_headers = [
-            f"[{i:^7}](https://arxiv.org/pdf/{doi}.pdf)"
-            for i, doi in enumerate(dois, start=1)
-        ]
+        doc_headers = [f"[{i:^7}]({doc.url})" for i, doc in enumerate(docs, start=1)]
         # ---------------------------------------------------------------------
 
         f.write("\n")
         f.write("## Text Extraction Speed\n\n")
         table = []
-        headings = ["#", "Library", "Average"] + doi_headers
+        headings = ["#", "Library", "Average"] + doc_headers
         averages = [np.mean(times_all[name]) for name in names]
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
@@ -209,8 +219,8 @@ def write_benchmark_report(
             for library_name in names:
                 lib = extract_functions[library_name]
                 all_scores[library_name] = []
-                for doi in track(dois):
-                    all_scores[library_name].append(get_score(doi, library_name))
+                for doc in track(docs):
+                    all_scores[library_name].append(get_score(doc, library_name))
 
             # Print table
             table = []
@@ -231,9 +241,9 @@ def load_extracted_data(path: str) -> str:
         return fp.read()
 
 
-def get_score(doi: str, library_name: str):
-    gt_data = load_extracted_data(f"extraction-ground-truth/{doi}.txt")
-    extracted_data = load_extracted_data(f"results/{library_name}/{doi}.txt")
+def get_score(doc: Document, library_name: str):
+    gt_data = load_extracted_data(f"extraction-ground-truth/{doc.name}.txt")
+    extracted_data = load_extracted_data(f"results/{library_name}/{doc.name}.txt")
     return ratio(gt_data, extracted_data)
 
 
