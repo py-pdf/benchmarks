@@ -257,10 +257,17 @@ def write_benchmark_report(
 
         f.write("## Libraries\n")
         table = []
-        header = ["Name", "Version", "Dependencies", "License"]
+        header = ["Name", "Last PyPI Release", "License", "Version", "Dependencies"]
         for name in names:
             lib = extract_functions[name]
-            row = [lib.name, lib.version, lib.dependencies, lib.license]
+            row = [
+                lib.name,
+                lib.last_release_date,
+                lib.license,
+                lib.version,
+                lib.dependencies,
+            ]
+            table.append(row)
 
         f.write(table_to_markdown(table, header, alignment=alignment))
         f.write("\n")
@@ -272,6 +279,11 @@ def write_benchmark_report(
         f.write("## Text Extraction Speed\n\n")
         table = []
         headings = ["#", "Library", "Average"] + doc_headers
+        names = [
+            name
+            for name in text_extraction_times.keys()
+            if len(text_extraction_times[name]) > 0
+        ]
         averages = [np.mean(text_extraction_times[name]) for name in names]
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
@@ -289,6 +301,7 @@ def write_benchmark_report(
         table = []
         headings = ["#", "Library", "Average"] + doc_headers
         names = list(watermarking_times.keys())
+        names = [name for name in names if len(watermarking_times[name]) > 0]
         averages = [
             np.mean(watermarking_times[name])
             for name in names
@@ -370,6 +383,9 @@ if __name__ == "__main__":
             "https://pypi.org/project/tika/",
             lambda n: parser.from_buffer(BytesIO(n))["content"],
             tika.__version__,
+            dependencies="Apache Tika",
+            license="Apache v2",
+            last_release_date="2020-03-21",
         ),
         "pypdf2": Library(
             "PyPDF2",
@@ -378,18 +394,23 @@ if __name__ == "__main__":
             version=PyPDF2.__version__,
             watermarking_function=pypdf2_watermarking,
             license="BSD 3-Clause",
+            last_release_date="2022-05-02",
         ),
         "pdfminer": Library(
             "pdfminer.six",
             "https://pypi.org/project/pdfminer.six/",
             lambda n: extract_text(BytesIO(n)),
             version=pdfminer.__version__,
+            license="MIT/X",
+            last_release_date="2022-05-06",
         ),
         "pdfplumber": Library(
             "pdfplumber",
             "https://pypi.org/project/pdfplumber/",
             pdfplubmer_get_text,
             version=pdfplumber.__version__,
+            license="MIT",
+            last_release_date="2022-05-06",
         ),
         "pymupdf": Library(
             "PyMuPDF",
@@ -398,15 +419,27 @@ if __name__ == "__main__":
             version=PyMuPDF.version[0],
             watermarking_function=None,
             dependencies="MuPDF",
+            license="GNU AFFERO GPL 3.0 / Commerical",
+            last_release_date="2022-05-05",
         ),
         "pdftotext": Library(
             "pdftotext",
-            "https://pypi.org/project/pdftotext/",
+            "https://poppler.freedesktop.org/",
             pdftotext_get_text,
             "0.86.1",
             None,
             "build-essential libpoppler-cpp-dev pkg-config python3-dev",
+            last_release_date="-",
+            license="GPL",
         ),
-        "borb": Library("Borb", "https://pypi.org/project/borb/", borb_get_text, "?"),
+        "borb": Library(
+            "Borb",
+            "https://pypi.org/project/borb/",
+            borb_get_text,
+            "2.0.25",
+            None,
+            license="AGPL/Commercial",
+            last_release_date="2022-05-05",
+        ),
     }
     main(docs, libraries, add_text_extraction_quality=True)
