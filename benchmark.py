@@ -20,6 +20,8 @@ import pdfplumber
 import PyPDF2
 import requests
 import tika
+from borb.pdf.pdf import PDF
+from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from Levenshtein import ratio  # python-Levenshtein
 from pdfminer.high_level import extract_text
 from rich.progress import track
@@ -121,6 +123,22 @@ def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
         return bytes_stream.read()
 
 
+def borb_get_text(data: bytes) -> str:
+    text = ""
+    try:
+        l = SimpleTextExtraction()
+        d = PDF.loads(BytesIO(data), [l])
+        page_nb = 0
+        extr = l.get_text_for_page(page_nb)
+        while extr != "":
+            text += extr
+            extr = l.get_text_for_page(page_nb)
+            page_nb += 1
+    except Exception as exc:
+        print(exc)
+    return text
+
+
 def pdfplubmer_get_text(data: bytes) -> str:
     text = ""
     with pdfplumber.open(BytesIO(data)) as pdf:
@@ -195,9 +213,12 @@ def write_single_result(
     folder = f"{benchmark}/results/{pdf_library_name}"
     if not os.path.exists(folder):
         os.makedirs(folder)
-    mode = "wb" if extension == "pdf" else "w"
+    mode = "wb" if extension == "pdf" or isinstance(data, bytes) else "w"
     with open(f"{folder}/{pdf_file_name}.{extension}", mode) as f:
-        f.write(data)
+        try:
+            f.write(data)
+        except Exception as exc:
+            print(exc)
 
 
 def write_benchmark_report(
@@ -386,5 +407,6 @@ if __name__ == "__main__":
             None,
             "build-essential libpoppler-cpp-dev pkg-config python3-dev",
         ),
+        "borb": Library("Borb", "https://pypi.org/project/borb/", borb_get_text, "?"),
     }
     main(docs, libraries, add_text_extraction_quality=True)
