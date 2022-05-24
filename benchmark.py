@@ -104,14 +104,14 @@ def pypdf2_get_text(data: bytes) -> str:
     text = ""
     reader = PyPDF2.PdfFileReader(BytesIO(data))
     for i in range(reader.getNumPages()):
-        page = reader.getPage(i)
+        page = reader.pages[i]
         text += page.extractText()
     return text
 
 
 def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     watermark_pdf = PyPDF2.PdfFileReader(BytesIO(watermark_data))
-    watermark_page = watermark_pdf.getPage(0)
+    watermark_page = watermark_pdf.pages[0]
     reader = PyPDF2.PdfFileReader(BytesIO(data))
     writer = PyPDF2.PdfFileWriter()
     for page in reader.pages:
