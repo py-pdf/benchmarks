@@ -115,8 +115,8 @@ def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     reader = PyPDF2.PdfFileReader(BytesIO(data))
     writer = PyPDF2.PdfFileWriter()
     for page in reader.pages:
-        page.mergePage(watermark_page)
-        writer.addPage(page)
+        page.merge_page(watermark_page)
+        writer.add_page(page)
     with BytesIO() as bytes_stream:
         writer.write(bytes_stream)
         bytes_stream.seek(0)
