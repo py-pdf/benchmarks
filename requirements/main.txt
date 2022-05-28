@@ -16,7 +16,7 @@ charset-normalizer==2.0.12
     # via requests
 commonmark==0.9.1
     # via rich
-cryptography==36.0.2
+cryptography==37.0.2
     # via pdfminer-six
 fonttools==4.33.3
     # via borb
@@ -32,7 +32,7 @@ pdfplumber==0.6.2
     # via -r requirements/main.in
 pdftotext==2.2.2
     # via -r requirements/main.in
-pillow==9.1.0
+pillow==9.1.1
     # via
     #   borb
     #   pdfplumber
@@ -54,7 +54,7 @@ requests==2.27.1
     #   -r requirements/main.in
     #   borb
     #   tika
-rich==12.4.0
+rich==12.4.1
     # via -r requirements/main.in
 tika==1.24
     # via -r requirements/main.in
