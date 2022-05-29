@@ -2,6 +2,7 @@
 Compare text extraction performance of different PDF parsers.
 """
 
+import json
 import os
 import platform
 import re
@@ -11,6 +12,7 @@ import time
 from dataclasses import dataclass
 from io import BytesIO
 from itertools import product
+from pathlib import Path
 from typing import Callable, Dict, List, Literal, NamedTuple, Optional, Union
 
 import fitz as PyMuPDF
@@ -24,6 +26,7 @@ from borb.pdf.pdf import PDF
 from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from Levenshtein import ratio  # python-Levenshtein
 from pdfminer.high_level import extract_text
+from pydantic import BaseModel, Field
 from rich.progress import track
 from tika import parser
 
@@ -83,6 +86,7 @@ class Document:
 
 class Library(NamedTuple):
     name: str
+    pathname: str
     url: str
     text_extraction_function: Callable[[bytes], str]
     version: str
@@ -90,6 +94,33 @@ class Library(NamedTuple):
     dependencies: str = ""
     license: str = ""
     last_release_date: str = ""
+
+
+class Cache(BaseModel):
+    # First str: lib
+    # Second str: doc
+    benchmark_times: Dict[str, Dict[str, Dict[str, float]]] = Field(
+        default_factory=dict
+    )
+    read_quality: Dict[str, Dict[str, float]] = Field(default_factory=dict)
+
+    def has_doc(self, libary: Library, document: Document) -> bool:
+        lib = libary.pathname
+        doc = document.name
+
+        if lib not in self.benchmark_times:
+            self.benchmark_times[lib] = {}
+        if doc not in self.benchmark_times[lib]:
+            self.benchmark_times[lib][doc] = {}
+
+        if lib not in self.read_quality:
+            self.read_quality[lib] = {}
+
+        return doc in self.benchmark_times[lib] and doc in self.read_quality[lib]
+
+    def write(self, path: Path):
+        with open(path, "w") as f:
+            f.write(self.json(indent=4, sort_keys=True))
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -165,11 +196,13 @@ def main(
     libraries: Dict[str, Library],
     add_text_extraction_quality=True,
 ) -> None:
+    cache_path = Path("cache.json")
+    if cache_path.exists():
+        with open(cache_path, "r") as f:
+            cache = Cache.parse_obj(json.load(f))
+    else:
+        cache = Cache()
     names = sorted(list(libraries.keys()))
-    text_extraction_times: Dict[str, List[float]] = {name: [] for name in names}
-    watermarking_times: Dict[str, List[float]] = {
-        name: [] for name in names if libraries[name].watermarking_function
-    }
 
     watermark_file = os.path.join(
         os.path.dirname(__file__), "watermark", "pdfs", "python-quote.pdf"
@@ -180,26 +213,30 @@ def main(
     for doc, name in track(list(product(docs, names))):
         data = doc.data
         lib = libraries[name]
+        if cache.has_doc(lib, doc):
+            continue
         print(f"{name} now parses {doc.name}...")
         t0 = time.time()
         text = lib.text_extraction_function(data)
         t1 = time.time()
-        text_extraction_times[name].append(t1 - t0)
         write_single_result("read", name, doc.name, text, "txt")
+        cache.benchmark_times[lib.pathname][doc.name]["read"] = t1 - t0
+        cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
+            doc, lib.pathname
+        )
+        cache.write(cache_path)
 
         if lib.watermarking_function:
             t0 = time.time()
             watermarked = lib.watermarking_function(watermark_data, data)
             t1 = time.time()
-            watermarking_times[name].append(t1 - t0)
             write_single_result("watermark", name, doc.name, watermarked, "pdf")
+            cache.benchmark_times[lib.pathname][doc.name]["watermark"] = t1 - t0
     write_benchmark_report(
         names,
         libraries,
-        text_extraction_times,
-        watermarking_times,
         docs,
-        add_text_extraction_quality,
+        cache,
     )
 
 
@@ -221,13 +258,23 @@ def write_single_result(
             print(exc)
 
 
+def get_times(
+    cache: Cache, docs: List[Document], benchmark_type: str
+) -> Dict[str, List[Optional[float]]]:
+    text_extraction_times = {}  # library : [doc1, doc2, ...]
+    for lib_name in cache.benchmark_times:
+        text_extraction_times[lib_name] = []
+        tmp = cache.benchmark_times[lib_name]  # doc:
+        doc2read_time = {doc: tmp[doc].get(benchmark_type) for doc in tmp}
+        text_extraction_times[lib_name] = [doc2read_time[doc.name] for doc in docs]
+    return text_extraction_times
+
+
 def write_benchmark_report(
     names: List[str],
     extract_functions: Dict[str, Library],
-    text_extraction_times: Dict[str, List[float]],
-    watermarking_times: Dict[str, List[float]],
     docs: List[Document],
-    add_text_extraction_quality: bool = True,
+    cache: Cache,
 ) -> None:
     """Create a benchmark report from all timing results."""
     # avg_times = {name: np.mean(times_all[name]) for name in names}
@@ -279,6 +326,7 @@ def write_benchmark_report(
         f.write("## Text Extraction Speed\n\n")
         table = []
         headings = ["#", "Library", "Average"] + doc_headers
+        text_extraction_times = get_times(cache, docs, "read")
         names = [
             name
             for name in text_extraction_times.keys()
@@ -300,8 +348,13 @@ def write_benchmark_report(
         f.write("## Watermarking Speed\n\n")
         table = []
         headings = ["#", "Library", "Average"] + doc_headers
+        watermarking_times = get_times(cache, docs, "watermark")
         names = list(watermarking_times.keys())
-        names = [name for name in names if len(watermarking_times[name]) > 0]
+        names = [
+            name
+            for name in names
+            if len([el for el in watermarking_times[name] if el is not None]) > 0
+        ]
         averages = [
             np.mean(watermarking_times[name])
             for name in names
@@ -319,31 +372,30 @@ def write_benchmark_report(
         f.write("\n")
 
         # ---------------------------------------------------------------------
-        if add_text_extraction_quality:
-            names = list(text_extraction_times.keys())
-            f.write("## Text Extraction Quality\n\n")
-            # Get data
-            all_scores: Dict[str, List[float]] = {}
-            for library_name in names:
-                lib = extract_functions[library_name]
-                all_scores[library_name] = []
-                for doc in track(docs):
-                    all_scores[library_name].append(
-                        get_text_extraction_score(doc, library_name)
-                    )
+        names = list(text_extraction_times.keys())
+        f.write("## Text Extraction Quality\n\n")
+        # Get data
+        all_scores: Dict[str, List[float]] = {}
+        for library_name in names:
+            lib = extract_functions[library_name]
+            all_scores[library_name] = []
+            for doc in track(docs):
+                all_scores[library_name].append(
+                    cache.read_quality[library_name][doc.name]
+                )
 
-            # Print table
-            table = []
-            averages = [np.mean(all_scores[name]) for name in names]
-            sort_order = np.argsort([-avg for avg in averages])
-            for place, index in enumerate(sort_order, start=1):
-                library_name = names[index]
-                lib = extract_functions[library_name]
-                avg = averages[index]
-                row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
-                row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
-                table.append(row)
-            f.write(table_to_markdown(table, headings=headings))
+        # Print table
+        table = []
+        averages = [np.mean(all_scores[name]) for name in names]
+        sort_order = np.argsort([-avg for avg in averages])
+        for place, index in enumerate(sort_order, start=1):
+            library_name = names[index]
+            lib = extract_functions[library_name]
+            avg = averages[index]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
+            row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
+            table.append(row)
+        f.write(table_to_markdown(table, headings=headings))
 
 
 def load_extracted_data(path: str) -> str:
@@ -380,6 +432,7 @@ if __name__ == "__main__":
     libraries = {
         "tika": Library(
             "Tika",
+            "tika",
             "https://pypi.org/project/tika/",
             lambda n: parser.from_buffer(BytesIO(n))["content"],
             tika.__version__,
@@ -389,6 +442,7 @@ if __name__ == "__main__":
         ),
         "pypdf2": Library(
             "PyPDF2",
+            "pypdf2",
             "https://pypi.org/project/PyPDF2/",
             pypdf2_get_text,
             version=PyPDF2.__version__,
@@ -398,6 +452,7 @@ if __name__ == "__main__":
         ),
         "pdfminer": Library(
             "pdfminer.six",
+            "pdfminer",
             "https://pypi.org/project/pdfminer.six/",
             lambda n: extract_text(BytesIO(n)),
             version=pdfminer.__version__,
@@ -405,6 +460,7 @@ if __name__ == "__main__":
             last_release_date="2022-05-06",
         ),
         "pdfplumber": Library(
+            "pdfplumber",
             "pdfplumber",
             "https://pypi.org/project/pdfplumber/",
             pdfplubmer_get_text,
@@ -414,6 +470,7 @@ if __name__ == "__main__":
         ),
         "pymupdf": Library(
             "PyMuPDF",
+            "pymupdf",
             "https://pypi.org/project/PyMuPDF/",
             lambda n: pymupdf_get_text(n),
             version=PyMuPDF.version[0],
@@ -423,6 +480,7 @@ if __name__ == "__main__":
             last_release_date="2022-05-05",
         ),
         "pdftotext": Library(
+            "pdftotext",
             "pdftotext",
             "https://poppler.freedesktop.org/",
             pdftotext_get_text,
@@ -434,6 +492,7 @@ if __name__ == "__main__":
         ),
         "borb": Library(
             "Borb",
+            "borb",
             "https://pypi.org/project/borb/",
             borb_get_text,
             "2.0.25",
