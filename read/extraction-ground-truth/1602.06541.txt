@@ -116,41 +116,7 @@ class affiliation segmentation [LRAL08]. Similarly,
 recent publications in pixel-level object segmentation
 used layered models [YHRF12].
 
-ar
-X
-
-iv
-:1
-
-60
-2.
-
-06
-54
-
-1v
-2
-
- [
-cs
-
-.C
-V
-
-]
- 1
-
-1
-M
-
-ay
- 2
-
-01
-6
-
-
-
+arXiv:1602.06541v2 [cs.CV] 11 May 2016
 2
 
 C. Input Data
@@ -334,7 +300,7 @@ Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets
 completely ignored for all quality measures. Hence the
-total number of pixels is assumed to be width ·height−
+total number of pixels is assumed to be width·height−
 number of void pixels.
 
 One way to deal with problem P1 and problem P2
@@ -342,7 +308,7 @@ is giving the confusion matrix as done in [SWRC06].
 However, this approach is not feasible if many classes
 are given.
 
-The F -measure is useful for binary classifica-
+The F-measure is useful for binary classifica-
 tion task such as the KITTI road segmentation
 benchmark [FKG13] or crypt segmentation as done
 by [CRSS14]. It is calculated as “the harmonic mean
@@ -2279,64 +2245,3 @@ PASCAL VOC 2012 (142 px − 500 px)× ( 71 px − 500 px) 2913 20 3 [EVGW+12]
 Warwick-QU (567 px − 775 px)× (430 px − 522 px) 165 5 3 [CSM09]
 
 Table I: An overview over publicly available image databases with a semantic segmentation ground trouth.
-
-
-	I Introduction
-	II Taxonomy of Segmentation Algorithms
-	II-A Allowed classes
-	II-B Class affiliation of pixels
-	II-C Input Data
-	II-D Operation state
-
-	III Evaluation and Datasets
-	III-A Quality measures for evaluation
-	III-A1 Accuracy
-	III-A2 Speed
-	III-A3 Stability
-	III-A4 Memory usage
-
-	III-B Datasets
-	III-B1 PASCAL VOC
-	III-B2 MSRCv2
-	III-B3 Medical Databases
-
-
-	IV Segmentation Pipeline
-	V Traditional Approaches
-	V-A Features and Preprocessing methods
-	V-A1 Pixel Color
-	V-A2 Histogram of oriented Gradients
-	V-A3 SIFT
-	V-A4 BOV
-	V-A5 Poselets
-	V-A6 Textons
-	V-A7 Dimensionality Reduction
-
-	V-B Unsupervised Segmentation
-	V-B1 Clustering Algorithms
-	V-B2 Graph Based Image Segmentation
-	V-B3 Random Walks
-	V-B4 Active Contour Models
-	V-B5 Watershed Segmentation
-
-	V-C Random Decision Forests
-	V-D SVMs
-	V-E Markov Random Fields
-	V-F Conditional Random Fields
-	V-G Post-processing methods
-
-	VI Neural Networks for Semantic Segmentation
-	VII Possible Problems in the Data for Segmentation algorithms
-	VII-A Lens Flare
-	VII-B Vignetting
-	VII-C Blurred images
-	VII-D Other Problems
-	VII-D1 Partial Occlusions
-	VII-D2 Camouflage
-	VII-D3 Semi-transparent Occlusion
-	VII-D4 Viewpoints
-
-
-	VIII Discussion
-	References
-	Appendix A: Tables

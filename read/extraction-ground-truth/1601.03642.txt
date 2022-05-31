@@ -59,8 +59,8 @@ by Tom Mitchel [Mit97]:
 
 A computer program is said to learn from experi-
 ence E with respect to some class of tasks T and
-performance measure P , if its performance at tasks
-in T , as measured by P , improves with experience E.
+performance measure P, if its performance at tasks
+in T, as measured by P, improves with experience E.
 
 Σ ϕ
 
@@ -846,28 +846,3 @@ set_pid_sum((unsigned long)state, current_state_str(),
 
 (unsigned long)-1->lr_full; low;
 }
-
-
-	I Introduction
-	II Basics of Machine Learning
-	III Image Data
-	III-A Google DeepDream
-	III-B Artistic Style Imitation
-	III-C Drawing Robots
-
-	IV Text Data
-	IV-A Similar Texts Generation
-	IV-B Chatbots
-
-	V Audio Data
-	V-A Emily Howell
-	V-B GRUV
-	V-C Audio Synthesization
-
-	VI Discussion
-	References
-	Appendix A: Automatically generated Texts
-	A-A Shakespeare
-	A-B Wikipeda
-	A-C Linux Code, 1
-	A-D Linux Code, 2
