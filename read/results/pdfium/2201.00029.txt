@@ -1,0 +1,109 @@
+ 1
+Exploring new techniques for analyzing variability in white dwarf KIC 8626021
+Thomas Huckans, Peter Stine
+Department of Physics and Engineering, Bloomsburg University of Pennsylvania, 400 E 2nd St., 
+Bloomsburg, PA 17815
+2
+Abstract
+As is common with the collection of astronomical data, signals are frequently dominated 
+by noise. However, when performing FTs of light curves, re-binning data can improve the signalto-noise ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope, 
+we sequentially re-binned data three times to investigate the SNR improvement of lower frequency 
+(< 17 µHz) variability in white dwarf KIC 8626021. We found that the SNR at approximately 5.8
+µHz greatly improved through this process, and we postulate that this frequency is linked to the 
+rotation of KIC 8626021.
+Introduction
+First detected in 1862, white dwarfs long posed a mystery for early observers. When the 
+companion to Sirius was detected, apparent contradictions concerning the mass, luminosities, and 
+densities baffled astronomers. Lacking full understanding of atomic structures and the energy 
+states of electrons, these early researchers believed white dwarfs too dense to exist. However, new 
+discoveries at the turn of the 20th century explained the existence of these stars, and between the 
+world wars white dwarfs were increasingly studied and modeled (Holberg, 2009).
+As stars age, those that lack the mass to become neutron stars and black holes become 
+white dwarf stars, representing 98% of the stars in our galaxy (Winget & Kepler, 2008). They are 
+composed of a core of carbon and oxygen ions that slowly cools over billions of years, and the 
+light emanating from these stars is a result of thermal energy. White dwarf stars are no longer 
+supported against the force of gravity by fusion, so the stars collapse into an electron-degenerate 
+state where the electrons in the carbon and oxygen atoms occupy the lowest energy levels. As two 
+electrons cannot occupy the same quantum state, Pauli repulsion keeps white dwarfs from 
+collapsing entirely.
+For many years, accurate detection of light variability in white dwarfs was difficult due to 
+a lack of adequate instruments. However, the launch of the Kepler space telescope in 2009 made 
+capturing the light of distant stars much more efficient and effective (Basri et al., 2010). Kepler 
+was initially developed with the intention of surveying our region of the Milky Way galaxy in 
+order to find potentially habitable planets. The purpose of the mission was to identify key traits for 
+such planets by determining the number of planets in habitable zones, the sizes and shapes of orbits, 
+and the characteristics of the stars being orbited. Over the lifespan of its first mission, Kepler 
+observed approximately 1.5 x 105 stars (Johnson, 2018), affording scientists excellent 
+opportunities to research stellar variability. Due to the loss of a second reaction wheel in 2013, 
+NASA developed the K2 mission, a way to prolong Kepler’s assistance to astronomy and 
+astrophysics.
+Utilizing Kepler’s ability to maintain three-dimensional control, NASA proceeded to use 
+the telescope to collect photometry data of certain sections of our galaxy, although the number of 
+targets was significantly reduced. In addition, the K2 mission was designed to be communityoriented, with the scientific community having an influence on the fields observed and serving as 
+the analysts of the vast amounts of data being received (Howell et al., 2014). Although Kepler was 
+deactivated in 2018, the data used in this paper came from observations during 2010 and 2012 of 
+white dwarf KIC 8626021 and was obtained from the Kepler Asteroseismic Science Operations 
+Center (KASOC).
+
+4
+FIG. 1: Pictured top is the light curve constructed for Q7, below is the light curve for Q13. Q7 
+lasted from September 24 – December 13, 2010, and Q13 was from March 29 – June 23, 2012.
+Both graphs were constructed by plotting corrected flux magnitude (flux corrected for 
+instrumental artifacts) versus time in Excel, and gaps in the data were filled in by interpolating 
+between points. Q7 had forty-three interpolated points, and Q13 had sixty-six.
+5
+FIG. 2: The graphs show the initial FTs of Q7, and then the FTs of the three successive re-bins of 
+the light curve data. The significant frequencies of 5.886 µHz and 5.889 µHz are circled. The 
+disappearance of the frequency in the last FT is most likely a byproduct of the method, and the 
+spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the rebinning process.
+
+
+
+
+
+11
+Acknowledgments
+We wish to thank Bloomsburg University of Pennsylvania for its continued support of our 
+research.
+This paper includes data collected by the Kepler mission and obtained from the MAST 
+data archive at the Space Telescope Science Institute (STScI). Funding for the Kepler mission is 
+provided by the NASA Science Mission Directorate. STScI is operated by the Association of 
+Universities for Research in Astronomy, Inc., under NASA contract NAS 5–26555.
+References
+Basri, G., Walkowicz, L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D., 
+Caldwell, D., Dupree, A. K., Latham, D. W., Meibom, S., Howell, S., & Brown, T. (2010). 
+PHOTOMETRIC VARIABILITY IN KEPLER TARGET stars: THE SUN AMONG 
+stars—a FIRST LOOK. The Astrophysical Journal, 713(2), L155-L159. 
+https://doi.org/10.1088/2041-8205/713/2/L155
+Bischoff-Kim, A., Østensen, R. H., Hermes, J.j., & Provencal, J. L. (2015). Seven-Period 
+asteroseismic fit of KIC 8626021. EPJ Web of Conferences, 101, 06009. 
+https://doi.org/10.1051/epjconf/201510106009
+Córsico, A. H. (2020). White-Dwarf asteroseismology with the kepler space telescope. Frontiers 
+in Astronomy and Space Sciences, 7. https://doi.org/10.3389/fspas.2020.00047
+Holberg, J. B. (2009). The discovery of the existence of white dwarf stars: 1862 to 1930. Journal 
+for the History of Astronomy, 40(2), 137-154. 
+https://doi.org/10.1177%2F002182860904000201
+Howell, S. B., Sobeck, C., Haas, M., Still, M., Barclay, T., Mullally, F., Troeltzsch, J., Aigrain, S., 
+Bryson, S. T., Caldwell, D., Chaplin, W. J., Cochran, W. D., Huber, D., Marcy, G. W., 
+Miglio, A., Najita, J. R., Smith, M., Twicken, J. D., & Fortney, J. J. (2014). The k2 mission: 
+Characterization and early results. Publications of the Astronomical Society of the Pacific, 
+126(938), 398-408. https://doi.org/10.1086/676406
+Johnson, M. (Ed.). (2018, October 30). Mission overview. National Aeronautics and Space 
+Administration. Retrieved September 2, 2021, from 
+https://www.nasa.gov/mission_pages/kepler/overview/index.html
+Koch, D. G., Borucki, W. J., Basri, G., Batalha, N. M., Brown, T. M., Caldwell, D., Christensendalsgaard, J., Cochran, W. D., Devore, E., Dunham, E. W., Gautier, T. N., Geary, J. C., 
+Gilliland, R. L., Gould, A., Jenkins, J., Kondo, Y., Latham, D. W., Lissauer, J. J., Marcy, 
+G., . . . Morrison, D. (2010). KEPLER MISSION design, REALIZED PHOTOMETRIC 
+performance, AND EARLY SCIENCE. The Astrophysical Journal, 713(2), L79-L86. 
+https://dx.doi.org/10.1088/2041-8205/713/2/L79
+Østensen, R. H., Bloemen, S., Vučković, M., Aerts, C., Oreiro, R., Kinemuchi, K., Still, M., & 
+Koester, D. (2011). AT last—a v777 HER PULSATOR IN THE KEPLER FIELD. The 
+Astrophysical Journal, 736(2), L39. https://doi.org/10.1088/2041-8205/736/2/L39 
+Santos, A. R. G., Cunha, M. S., Avelino, P. P., García, R. A., & Mathur, S. (2017). Starspot 
+signature on the light curve. Astronomy & Astrophysics, 599, A1. 
+https://doi.org/10.1051/0004-6361/201629923
+12
+Winget, D.e., & Kepler, S.o. (2008). Pulsating white dwarf stars and precision asteroseismology. 
+Annual Review of Astronomy and Astrophyics, 46(1), 157-199. 
+https://doi.org/10.1146/annurev.astro.46.060407.145250
+Wolfram Research, Inc., Mathematica, Version 12.3.1, Champaign, IL (2021).

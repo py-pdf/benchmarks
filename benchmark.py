@@ -20,6 +20,7 @@ import numpy as np
 import pdfminer
 import pdfplumber
 import PyPDF2
+import pypdfium2 as pdfium
 import requests
 import tika
 from borb.pdf.pdf import PDF
@@ -137,6 +138,20 @@ def pypdf2_get_text(data: bytes) -> str:
     for i in range(reader.getNumPages()):
         page = reader.pages[i]
         text += page.extractText()
+    return text
+
+
+def pdfium_get_text(data: bytes) -> str:
+    text = ""
+    doc = pdfium.PdfDocument(BytesIO(data))
+    for page_num in range(len(doc)):
+        textpage = doc.get_textpage(page_num)
+        try:
+            text += textpage.get_text()
+        except Exception:
+            pass
+        text += "\n"
+    doc.close()
     return text
 
 
@@ -261,13 +276,13 @@ def write_single_result(
 def get_times(
     cache: Cache, docs: List[Document], benchmark_type: str
 ) -> Dict[str, List[Optional[float]]]:
-    text_extraction_times = {}  # library : [doc1, doc2, ...]
+    times = {}  # library : [doc1, doc2, ...]
     for lib_name in cache.benchmark_times:
-        text_extraction_times[lib_name] = []
+        times[lib_name] = []
         tmp = cache.benchmark_times[lib_name]  # doc:
         doc2read_time = {doc: tmp[doc].get(benchmark_type) for doc in tmp}
-        text_extraction_times[lib_name] = [doc2read_time[doc.name] for doc in docs]
-    return text_extraction_times
+        times[lib_name] = [doc2read_time[doc.name] for doc in docs]
+    return times
 
 
 def write_benchmark_report(
@@ -356,7 +371,7 @@ def write_benchmark_report(
             if len([el for el in watermarking_times[name] if el is not None]) > 0
         ]
         averages = [
-            np.mean(watermarking_times[name])
+            np.mean([el for el in watermarking_times[name] if el is not None])
             for name in names
             if name in watermarking_times
         ]
@@ -499,6 +514,17 @@ if __name__ == "__main__":
             None,
             license="AGPL/Commercial",
             last_release_date="2022-05-05",
+        ),
+        "pdfium": Library(
+            "pypdfium2",
+            "pdfium",
+            "https://pypi.org/project/pypdfium2/",
+            pdfium_get_text,
+            "1.10.0",
+            None,
+            license="Apache-2.0 or BSD-3-Clause",
+            last_release_date="2022-05-25",
+            dependencies="PDFium (Foxit/Google)",
         ),
     }
     main(docs, libraries, add_text_extraction_quality=True)
