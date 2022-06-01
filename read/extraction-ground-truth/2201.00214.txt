@@ -185,100 +185,59 @@ Finally, these loops are chosen:
 happening around the loops with the specification we are looking for. So this selected LOS
 X-flare, which occurs near the loops is of rare cases. We consider EUV images of NOAA
 AR 11283, in the time period of 22:10UT till 23:00UT of 2011 September 6 with the cadence
-
-
-
 of 12 sec. This period of time is selected since no other flare is happening during it. A
-
 few distinct loops are visible and follow-able here during this period. Loop shapes in our
 active region change permanently; therefore, it is difficult or impossible to follow a loop
-
 over a very long time. Hence, it is not useful to extend the time interval of this region
 to the time before the flare. The transverse oscillations of two loops in this region were
-
 analyzed before by Jain et al. (2015). We mark these loops by A and B in Figure 1 b. They
-
 detected fundamental mode oscillation with periods of roughly 2 minutes and decay time
 of 5 minutes for these loops. We are curious to see the loops’ thermal oscillations (if any)
-
 or thermal fluctuations in this condition. Figure 1a (left) displays AR 11283 and the area,
 indicated by the white box is featured in a zoom-in view in Figure 1.b (right) and the five
-
 selected parts of the center of the three chosen loops are shown by red lines (the movie of
-
 the region is available in this link). As it is clear in the movie, these three loops oscillate
 together and their oscillations decay simultaneously. The center of figure 1.a is coordinated
-
-at (230, 165) arcsec and its width and height are 450
-′′
-
-× 456
-′′
-
-/750 × 775 pixels. The flare
+at (230, 165) arcsec and its width and height are 450′′× 456′′ /750 × 775 pixels. The flare
 occurring in this active region is an X2.1 class flare located close to the disk center at latitude
-
 14◦ north and longitude 18◦ west (269.9 arcsec, 129.9 arcsec). This flare initiates at 22:12UT,
-
 ends about 22:24UT with the peak at 22:20UT, and associates with a coronal mass ejection
 (CME) which occurs from 2011 September 6, 21:36:05T to 2011 September 7, 02:24:05T, with
-
 the radial velocity of 469 km/s,angular width of 252 deg, and position angle of 275 deg (for
-
 more details look at LASCO CME catalogue.) 1
 
 – Three loops of non-flaring active region 12194: As a blind test, we select three loops of the
-
 non-flaring (nonf hereafter) active region 12194 in the smooth time period of 08:00:00UT till
 09:00:00UT of 2014 October 26. The center of figure 2.a is coordinated at (0, -264) arcsec
-
-and its width and height are 615
-′′
-
-× 615
-′′
-
-/1025 × 1025 pixels. We consider the images of
-
+and its width and height are 615′′× 615′′ /1025 × 1025 pixels. We consider the images of
 the selected area with the cadence of 12 sec in the same six wavelengths mentioned above.
 These loops are relatively motionless and do not show any transversal oscillation (see the
-
 region’s movie in the link). We select the loops in such a way that they do not have any
 crossing over the neighbor loops (in our perspective) during this time. In figure 2 the
-
 selected loops are distinguished in red in the mentioned active region. The size of the final
-
 cut of non-flaring region (represented in the right) is 351 × 401 pixels.
 
 The data set are primarily downloaded at level 1 with a pixel resolution of 0.6 arcsec. We use
 the standard aia_prep.pro subroutine available in SDO package SolarSoftWare library to adjust
-
 the screen scale between the four arms of the AIA. This pre-processing step increases the data
-
 level from 1 to 1.5, so that finally no jump or sudden movement is observed in the image series.
 We also used drot_map.pro subroutine to correct the differential rotation effect. According to the
-
 movie made by pre-processed images, the most obvious loops (marked in the abovementioned
 figures) are selected in each region (with obvious transversal oscillations in the case of the flaring
-
 active region).
 
 III. Temperature Analysis Method
 
 We extract the selected loop segment pixels, for each loop, and calculate the normal vectors
 to each point of the loop’s direction. Then by using these data, we straighten each loop in a
-
 considered box with the thickness of 15 to 40 pixels (macro-pixels, depending on the available
 empty area around each loop and the distance to the neighbor loop). The area around the
-
 loop is needed for calculations of background subtraction. The selected loop segment is cut in
-
 1Based on data on these WebSites: https://solarflare.njit.edu/webapp.html, and https://www.swpc.noaa.gov/
 
 
 
 all wavelengths and at the same considered box from the images set. These loop images are
-
 necessary entrances for our thermal analysis process. Then the loop is divided into different
 strips and its best division in terms of pixel intervals is considered. To do thermal analysis, we
 
@@ -286,18 +245,13 @@ use the spatially-synthesized Gaussian DEM forward-fitting method founded by Asc
 et al. (2015).
 
 The images in the above six wavelength filters are considered to calculate the temperature in
-
 each strip of the loop. The DEM function is considered a single-Gaussian function relative to the
 temperature determined by the forward fitting method. To obtain the temperature for each loop,
-
 we divided the loop into narrow strips, and then the intensity flux was averaged over each strip.
 The number of each strip is displayed with the index i. One of the usual methods to subtract
-
 the background from observed data is fitting a single-Gaussian cospatial function with a linear
-
 function on the flux profile. The DEM for each strip is considered to be single-Gaussian DEM
 in terms of the logarithm of the temperature, which has three free parameters (Aschwanden &
-
 Boerner, 2011):
 
 DEMi =
@@ -394,7 +348,6 @@ oscillations for the first 3 strips of Loop A, and first 2 strips of loops B1. W
 errors for each point (temperature) but removed in the presentation to avoid overcrowding of the
 
 figures. As we observe in Figures 3 and 4), the temperature oscillations are started and increase
-
 around 22:12 before the flare peak time (22:20) and are mostly continuing after the flare ended
 (22:24). These temperature oscillations follow the transverse loop oscillations observed by Jain
 
@@ -506,7 +459,6 @@ the loops receive energy even after the flare occurrence and it is probably the 
 expected cooling does not occur.
 
 
-
 The thermal oscillations periods obtained the Lomb-Scargle method, do not have the same
 significance in all strips of the loops, but for most strips of the flaring loops, the significances are
 very near to one. To be assured about these oscillations, we probed the intensity time-series for
@@ -526,10 +478,8 @@ the vertical axis shows the logarithm of the temperature and the horizontal axis
 duration. Figure 6 displays the time-series of temperature variations for the first two strips of
 the non-flaring Loops A, and B. These figures are all co-scaled in the range of 5.7 to 6.9 for the
 logarithm of temperature (like the flaring loops range). The most powerful periods, observed in
-
 most of these non-flaring loops’ strips (listed in Table2) are from 8.5 min. to 30 min. Comparing
 the periods of the loops in the flaring region (Table1) with the non-flaring one (Table2), we see
-
 that the temperature periods of the flaring loops have lower values on average and have more
 diversity than the non-flaring ones. As Tables 1 and 2 show, the mean temperatures of nonf-
 
@@ -569,8 +519,6 @@ region toward the end times, is not observed here. The temperatures are also tot
 nonf-loops in comparison with the flaring loops. Conversely, it seems that different strips of the
 non-flaring loops have relatively more similar temperature fluctuations.
 
-
-
 As figure 8 shows, the peaks of the observed temperature periods for the loops’ strips of the
 flaring active region (blue ones), and non-flaring active region (red ones), are around 18 minutes,
 and 30 minutes, respectively. The temperature periods’ diversity is higher in the loops’ strips of
@@ -600,91 +548,60 @@ loops in this respect.
 
 Here we used data of three loops of the flaring active region (AR11283) around the time of the
 Flare X2.1, from 22:10UT till 23:00UT on 2011 September 6, plus three loops of the non-flaring
-
 active region (AR12194), from 08:00:00UT till 09:00:00UT of 2014 October 26 (marked in figures
-
 1 and 2). To calculate the time series of the loop temperature values, we first extracted the loop
 pixels in each image and then displayed the loop straightly for all the images in the time series
-
 of different wavelengths. To do thermal analysis, we used the spatially-synthesized Gaussian
 DEM forward-fitting method founded by Aschwanden et al. (2015). We calculated the peak
-
 temperatures for each strip of the loops. Then we applied the Lomb-Scargle method to analyze
-
 temperature oscillations of the time-series for each strip of the loops.
 We observed temperature oscillations which are following the transverse loop oscillations
-
 observed by Jain et al. (2015) for the flaring loops. Furthermore, the temperature oscillations in
 these flaring loops happen before the transverse oscillations start and continue even in the time
-
 duration after the transverse oscillations decay. As observed, the temperature oscillations do not
-
 decay as rapidly as the transverse oscillations do. Conversely, the strips’ temperatures increase
 at the end of the oscillating mode and a rather sensible rise is observed in the final temperatures
-
 of the f-loops’ segments. The ranges of the obtained periods are from 7 min. to 28.4 min. for the
-
 flaring loops, and from 8.5 min. to 30 min. for the non-flaring loops. With the onset of X-flare in
 the F-loopA, which has a distinct transverse oscillation in the flaring time with period of roughly
-
 2 minutes and decay time of 5 minutes, a temperature oscillation is observed with periods of
 roughly 10 to 28.5 minutes in different segments of this loop. And as the transverse oscillation
-
 decays in this interval, no special definite decay is observed in its temperature oscillations.
 
 The temperature periods of the flaring loops are rather shorter than the temperature periods
-
-
-
 of the non-flaring loops. The loops of the flaring region show some short temperature oscillations
-
 periods in which some are less than 10 minutes (Table1). These kind of short periods are more
 frequently observed for the loops of the flaring active region and in the case of the non-flaring
-
 ones, are very scarce. We observed that the periods of the flaring loops have more diversity
 than those of the non-flaring ones. Based on our confined observations, the non-flaring loops’
-
 periods are longer and their temperatures’ values are totally lower. So our research showed that
-
 thermal structures of the flaring loops differ from the non-flaring ones in the ways described
 above. As temperature maps show, the temperature fluctuations are increasing at the flaring time
-
 and around 20 min. after, in the flaring loops. This happens with some oscillations in strips’
 temperature. Conversely, it seems that different strips of the non-flaring loops have relatively
-
 more similar temperature fluctuations. The temperatures are either higher in average in the flar-
-
 ing loops’ segments as expected. The significances of the periods, obtained by the Lomb-Scargle
 method, are calculated for each strip of each loop and the results show that these significances
-
 for the loops’ strips of the flaring region are high and close to one, while for the loops’ strips of
 the non-flaring region are less than 0.5. Hence the detected periods in the flaring loops’ strips
-
 have high significances (near to one) and are oscillations. Whereas the detected periods in the
-
 non-flaring loops’ strips have less significances in comparison with the flaring ones, and maybe
 they are just fluctuations.
 
 Using this method for the coronal loops showed that the oscillation modes obtained for the
 temperatures of the flaring loops are very close to those of the spatial slow-mode oscillations of
-
 the coronal loops. So the origin of temperature oscillation is probably slow-mode waves. These
-
 kind of oscillations often occur in hot coronal loops (log(T) > 6) of active regions especially the
 ones associated with small (or micro-) flares (Wang et al. (2021)). The loops of our flaring active
-
 region are also hot loops with the mean temperature above this range. They also show intensity
-
 oscillations. Hence we think the above evidence confirms the slow-mode oscillations for flaring
 loops. The temperature of the non-flaring loops are lower (log(T) < 6) and as discussed above,
 we believe that the observed oscillation-like periods in non-flaring loops should be more probably
 related to the high amplitude fluctuations.
 
 Comparing the loops of the flaring and non-flaring regions, we observed that the amplitudes
-
 of the fluctuations show a discrepancy. Mean of the parameter (Max(log T)-Min(log T)) in the
 FloopA, , FloopB1, FLoopB2, FloopC1, and FloopC2, are 1.21, 1.10, 0.81, 1.48, and 0.88, respec-
-
 tively. And for non-flaring region, mean of (Max(log T)-Min(log T)), are 0.81, 0.62, and 0.56, for
 nonfloopA, B, and C respectively. Therefore the values of the quantity mean of (Max(log T)-
 Min(log T)) for these non-flaring loops show a difference from the flaring ones and are lower.
@@ -1374,7 +1291,6 @@ time
 LogT
 
 Figure 6: from top to down: The time-series of the temperature for the first 2 strips (from top to down) of the non-
-
 flaring Loops A and B. Horizontal axis is the time and the vertical axis is the logarithm of the temperature.
 
 
@@ -1564,9 +1480,6 @@ Habbal, S. R., & Rosner, R. 1979, ApJ, 234, 1113
 Hindman, B. W., & Jain, R. 2014, ApJ, 784, 103
 Jain, R., Maurya, R. A., & Hindman, B. W. 2015, ApJ, 804, L19
 Jess, D. B., Reznikova, V. E., Ryans, R. S. I., et al. 2016, Nature Physics, 12, 179
-
-
-
 Kolotkov, D. Y., Nakariakov, V. M., & Zavershinskii, D. I. 2019, A&A, 628, A133
 Krishna Prasad, S., Jess, D. B., & Van Doorsselaere, T. 2019, Frontiers in Astronomy and Space
 Sciences, 6, 57

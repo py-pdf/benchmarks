@@ -1,8 +1,4 @@
-Geometrie und Topologie
-
-
 Einführung in die
-
 Geometrie und Topologie
 
 0. Auflage, 31. Dezember 2016 Martin Thoma
@@ -35,9 +31,9 @@ E-Mail und nach dem Tutorium beantwortet. Danke!
 
 Was ist Topologie?
 
-Die Kugeloberfläche S2 lässt sich durch strecken, stauchen und umformen zur Würfeloberfläche
-oder der Oberfläche einer Pyramide verformen, aber nicht zum R2 oder zu einem Torus T 2. Für
-den R2 müsste man die Oberfläche unendlich ausdehnen und für einen Torus müsste man ein
+Die Kugeloberfläche S² lässt sich durch strecken, stauchen und umformen zur Würfeloberfläche
+oder der Oberfläche einer Pyramide verformen, aber nicht zum R² oder zu einem Torus T². Für
+den R² müsste man die Oberfläche unendlich ausdehnen und für einen Torus müsste man ein
 Loch machen.
 
 Erforderliche Vorkenntnisse
@@ -52,18 +48,10 @@ Außerdem wird vorausgesetzt, dass (affine) Vektorräume, Faktorräume, lineare 
 der Spektralsatz und der projektive Raum P(R) aus „Lineare Algebra I“ bekannt sind. In „Lineare
 Algebra II“ wird der Begriff der Orthonormalbasis eingeführt.
 
-http://martin-thoma.com/geotopo/
-
-
 iii
 
-(a) S2 (b) Würfel (c) Pyramide
-
-y
-
-x
-
-(d) R2 (e) T 2
+(a) S² (b) Würfel (c) Pyramide
+(d) R² (e) T²
 
 Abbildung 0.1: Beispiele für verschiedene Formen
 
@@ -137,12 +125,8 @@ mit folgenden Eigenschaften
 
 (i) ∅, X ∈ T
 (ii) Sind U1, U2 ∈ T, so ist U1 ∩ U2 ∈ T
-
 (iii) Ist I eine Menge und Ui ∈ T für jedes i ∈ I, so ist
-⋃
-i∈I
-
-Ui ∈ T
+⋃_{i∈I} U_i ∈ T
 
 Die Elemente von T heißen offene Teilmengen von X.
 
@@ -167,43 +151,37 @@ anderem alle offenen Kugeln, aber z. B. auch Schnitte zweier Kugeln mit untersch
 chem Mittelpunkt (vgl. Definition 1.ii).
 
 2) Jeder metrische Raum (X, d) ist auch ein topologischer Raum.
-
 3) Für eine Menge X heißt TDiskret = P(X) diskrete Topologie.
-
-4) X := R,TZ := { U ⊆ R | R \ U endlich } ∪ { ∅ } heißt Zariski-Topologie
+4) X := R, TZ := { U ⊆ R | R \ U endlich } ∪ { ∅ } heißt Zariski-Topologie
 Beobachtungen:
-
 • U ∈ TZ ⇔ ∃f ∈ R[X], sodass R \ U = V (f) = { x ∈ R | f(x) = 0 }
-• Es gibt keine disjunkten offenen Mengen in TZ .
-
-
+• Es gibt keine disjunkten offenen Mengen in TZ.
 
 4 1.1. TOPOLOGISCHE RÄUME
 
 5) X := Rn,TZ = {U ⊆ Rn|Es gibt Polynome f1, . . . , fr ∈ R[X1, . . . , Xn] sodass
 Rn \ U = V (f1, . . . , fr)}
-
 6) X := { 0, 1 } ,T = { ∅, { 0, 1 } , { 0 } } heißt Sierpińskiraum.
 ∅, { 0, 1 } , { 1 } sind dort alle abgeschlossenen Mengen.
 
 Definition 2
 Sei (X,T) ein topologischer Raum und x ∈ X.
 Eine Teilmenge U ⊆ X heißt Umgebung von x, wenn es ein U0 ∈ T gibt mit x ∈ U0 und
-U0 ⊆ U .
+U0 ⊆ U.
 
 Gilt eine Eigenschaft in einer Umgebung, so sagt man, dass die Eigenschaft lokal gilt.
 
 Definition 3
 Sei (X,T) ein topologischer Raum und M ⊆ X eine Teilmenge.
 
-a) M◦ := { x ∈M |M ist Umgebung von x } =
+a) M◦:= { x ∈M |M ist Umgebung von x } =
 ⋃
 U⊆M
 U∈T
 
 U heißt Inneres oder offener
 
-Kern von M .
+Kern von M.
 
 b) M :=
 ⋂
@@ -211,9 +189,9 @@ M⊆A
 
 A abgeschlossen
 
-A heißt abgeschlossene Hülle oder Abschluss von M .
+A heißt abgeschlossene Hülle oder Abschluss von M.
 
-c) ∂M := M \M◦ heißt Rand von M .
+c) ∂M := M \M◦ heißt Rand von M.
 
 d) M heißt dicht in X, wenn M = X ist.
 
@@ -297,53 +275,31 @@ Abbildung 1.1: Zu x = (x1, x2) gibt es Umgebungen U1, U2 mit U1 × U2 ⊆ U
 
 Beispiel 4 (Produkttopologien)
 1) X1 = X2 = R mit euklidischer Topologie.
-⇒ Die Produkttopologie auf R× R = R2 stimmt mit der euklidischen Topologie auf
-R2 überein.
+⇒ Die Produkttopologie auf R × R = R² stimmt mit der euklidischen Topologie auf
+R² überein.
 
-2) X1 = X2 = R mit Zariski-Topologie. T Produkttopologie auf R2: U1 × U2
+2) X1 = X2 = R mit Zariski-Topologie. T Produkttopologie auf R²: U1 × U2
 (Siehe Abbildung 1.2)
 
 
 
 6 1.1. TOPOLOGISCHE RÄUME
 
-U1 = R \ N
+[IMAGE]
 
-U
-2
-
-=
-R
-\
-N
-
-Abbildung 1.2: Zariski-Topologie auf R2
+Abbildung 1.2: Zariski-Topologie auf R²
 
 Definition 7
 Sei X ein topologischer Raum, ∼ eine Äquivalenzrelation auf X, X = X/∼ sei die Menge
 der Äquivalenzklassen, π : X → X, x 7→ [x]∼.
 
-TX :=
-{
-U ⊆ X
-
-∣∣ π−1(U) ∈ TX }
+TX := { U ⊆ X ∣∣ π−1(U) ∈ TX }
 (X,TX) heißt Quotiententopologie.
 
 Beispiel 5
 X = R, a ∼ b :⇔ a− b ∈ Z
 
-R-1 0 1 2 3 4 5
-
-0
-
-a
-
-U
-
-aπ
-−1(u)
-
+[IMAGE]
 0 ∼ 1, d. h. [0] = [1]
 Beispiel 6
 
@@ -363,15 +319,7 @@ X = Pn(R)
 
 Also für n = 1:
 
-−4 −2 2 4 6 8
-
-−4
-
-−2
-
-2
-
-4
+[IMAGE]
 
 1.2 Metrische Räume
 
@@ -1361,7 +1309,6 @@ Geben Sie, falls möglich, ein Beispiel für folgende Fälle an. Falls es nicht 
 begründen Sie warum.
 
 1) Ein Homomorphismus, der zugleich ein Homöomorphismus ist,
-
 2) ein Homomorphismus, der kein Homöomorphismus ist,
 
 
@@ -1607,17 +1554,13 @@ Beispiel 21
 Mannigfaltigkeiten mit Dimension 1:
 
 1) Offene Intervalle, R, (0, 1) sind alle homöomorph
-
 2) S1
 
 Mannigfaltigkeiten mit Dimension 2:
 
 1) R2
-
 2) S2 (0 Henkel)
-
 3) T 2 (1 Henkel)
-
 4) oder mehr Henkel, wie z.B. der Zweifachtorus in Abbildung 2.1
 
 Bemerkung 27
@@ -4954,9 +4897,7 @@ Bemerkung 68 (Eigenschaften der hyperbolischen Geraden)
 Die hyperbolischen Geraden erfüllen. . .
 
 a) . . . die Inzidenzaxiome §1
-
 b) . . . das Anordnungsaxiom §3 (ii)
-
 c) . . . nicht das Parallelenaxiom §5
 
 Beweis:
@@ -7168,7 +7109,6 @@ Es gilt:
 
 (i) Z 6= ∅, da M lokal wegzusammenhängend ist
 (ii) Z ist offen, da M lokal wegzusammenhängend ist
-
 (iii) ZC := { z̃ ∈M | @Weg von x nach z̃ } ist offen
 Da M eine Mannigfaltigkeit ist, existiert zu jedem z̃ ∈ ZC eine offene und
 wegzusammenhängende Umgebung Uz̃ ⊆M .
@@ -7435,7 +7375,6 @@ Sei V ein Vektorraum und S ⊆ V eine Teilmenge.
 S heißt eine Orthonormalbasis von V , wenn gilt:
 
 (i) S ist eine Basis von V
-
 (ii) ∀v ∈ S : ‖v‖ = 1
 (iii) ∀v1, v2 ∈ S : v1 6= v2 ⇒ 〈v1, v2〉 = 0
 
@@ -7666,7 +7605,6 @@ homotope, 50
 offene, 53
 simpliziale, 35
 stetige, 9
-
 Abschluss, 3
 Abstand, 86
 Abstandsaxiom, 65
@@ -7677,16 +7615,13 @@ Atlas, 24
 Außenwinkel, 70
 Axiom, 64
 Axiomensystem, 64
-
 Basis, 3
 Baum, 37
 Betti-Zahl, 41
 Bewegungsaxiom, 66
 Binormalenvektor, 89
-
 Cantorsches Diskontinuum, 22
 Ck-Struktur, 29
-
 Decktransformation, 59
 Decktransformationsgruppe, 59
 Deformationsretrakt, 47
@@ -7696,79 +7631,57 @@ Dimension, 34
 diskret, 53
 Doppelverhältnis, 83
 Dreibein
-
 begleitendes, 89
-
 Ebene
 euklidische, 64
-
 Eigenvektor, 107
 Eigenwert, 107
-
 einfach zusammenhängend, 49
 Einheitsnormalenfeld, 90
 Euler-Charakteristik, siehe Eulerzahl
 Eulersche Polyederformel, 38
 Eulerzahl, 36
-
 Färbbarkeit, 21
 Faser, siehe Urbild
 Fläche
-
 orientierbare, 90
 reguläre, 30
-
 Flächenelement, 95
 Formoperator, siehe Weingarten-Abbildung
 Fundamentalform
-
 erste, 94
 zweite, 97
-
 Fundamentalgruppe, 47
-
 Gauß-Krümmung, 92, 91–94
 Geometrie, 64
 Gerade, 64
-
 hyperbolische, 77
 Graph, 37
 Grenzwert, 8
 Gruppe
-
 allgemeine lineare, 22, 26
 spezielle lineare, 22
 topologische, 33
-
 Gruppe operiert durch Homöomorphismen,
 61
-
 Gruppenaktion, siehe Gruppenoperation
 Gruppenoperation, 60, 60–63
-
 stetige, 61
-
 Häufungspunkt, 107
 Hülle
-
 konvexe, 34
 Halbebene, 66
 Halbgerade, 65
 Halbraum, 28
 Hauptkrümmung, 92
 Hilbert-Kurve, 19, 19
-
-
-
-113 Stichwortverzeichnis
-
+Homomorphismus, 101
 Homöomorphismengruppe, 10
 Homöomorphismus, 9
 Homologiegruppe, 41
 Homomorphismus, 101
 Homotopie, 44
 Homotopieklasse, 47
-
 Inklusionsabbildung, 47
 Innenwinkel, 70
 Inneres, 3
@@ -7777,136 +7690,99 @@ Isometrie, 6, 10
 Isometriegruppe, 10
 Isomorphismus, 101
 Isotopie, 20
-
 Jordankurve, 19
 geschlossene, 19
-
 Karte, 24
 Kartenwechsel, 28
 Kern
-
 offener, 3
 Kleeblattknoten, 20
 Klumpentopologie, siehe triviale Topologie
 Knoten, 20, 17–21
-
 äquivalente, 20
 trivialer, 20
-
 Knotendiagramm, 20
 kollinear, 65
 kongruent, siehe isometrisch
 Kongruenz, siehe Isometrie
 Kongruenzsatz
-
 SSS, 104
 SWS, 69
 SWW, 74
 WSW, 70
-
 Krümmung, 88, 89
 Kreis, 37
 Kreuzprodukt, 107
 Kurve, 87
-
 Länge einer, 87
-
 Lage
 allgemeine, 34
-
 Lehrsatz
 Binomischer, 107
-
 Lie-Gruppe, 33
 liegt zwischen, 65
 Liftung, 54
 Limes, 8
-
 lokal, 3
 Lot, 86
 Lotfußpunkt, 86
-
 Möbiusband, 91
 Möbiustransformation, 80
 Mannigfaltigkeit, 24
-
 differenzierbare, 29
 geschlossene, 25
 glatte, 29
 mit Rand, 28
-
 Menge
 abgeschlossene, 2
 offene, 2
 zusammenhängende, 11
-
 Metrik, 6
 diskrete, 6
 hyperbolische, 84
 SNCF, 8
-
 Nebenwinkel, 86
 Neilsche Parabel, 27
 Normalenfeld, 90
 Normalenvektor, 87, 89
 Normalkrümmung, 91, 92, 98
-
 Oktaeder, 34
 Orthonormalbasis, 107
-
 Paraboloid
 hyperbolisches, 92
-
 Parallele, 66
 Parallelenaxiom, 64
 parametrisiert
-
 durch Bogenlänge, 87
 Parametrisierung
-
 reguläre, 30
 Polyzylinder, 17
 Produkttopologie, 4
 Projektion
-
 stereographische, 11
 Punkt, 34
-
 Quotiententopologie, 5, 10, 11
-
 Rand, 3, 28
 Raum
-
 hausdorffscher, 8
 kompakter, 14
 metrischer, 6
 projektiver, 5, 22, 25, 52
-
-
-
-114 Stichwortverzeichnis
-
 topologischer, 2
 zusammenhängender, 11
-
 Realisierung
 geometrische, 34
-
 Retraktion, 47
-
 Satz von
 Gauß-Bonnet, 98
-
 Scheitelwinkel, 86
 Seite, 34
 Sierpińskiraum, 3, 22
 Simplex, 34
 Simplizialkomplex, 34
 Simplizialkomplexe
-
 flächengleiche, 74
 Sphäre
-
 exotische, 29
 Standard-Simplex, 34
 Standardtopologie, 2
@@ -7914,55 +7790,42 @@ sternförmig, 48
 Stetigkeit, 9–11
 Strecke, 65
 Struktur
-
 differenzierbare, 29
 Subbasis, 3
-
 Tangentialebene, 89, 89–90
 Teilraum, 4
 Teilraumtopologie, 4
 Teilsimplex, 34
 Topologie
-
 diskrete, 2, 6
 euklidische, 2
 feinste, 11
 triviale, 2
 Zariski, 2, 12, 15
-
 Torus, iii, 5, 38, 51, 93
 Total Unzusammenhängend, 100
 Triangulierung, 38
-
 Überdeckung, 14
 Übergangsfunktion, siehe Kartenwechsel
 Überlagerung, 51, 51–60
-
 reguläre, 59
 universelle, 57
-
 Umgebung, 3
 Umgebungsbasis, 58
-
 vanishing set, 26
 Vektorprodukt, siehe Kreuzprodukt
 Verklebung, 26
-
 verträglich, 29
-
 Würfel, 34
 Weg, 17
-
 einfacher, 17
 geschlossener, 17
 homotope, 44
 inverser, 48
 zusammengesetzter, 46
-
 Wegzusammenhang, 18
 Weingarten-Abbildung, 95
 Winkel, 70
-
 Zusammenhang, 11–14
 Zusammenhangskomponente, 13
 Zwischenwertsatz, 107

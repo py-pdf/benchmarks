@@ -1,8 +1,3 @@
-Art in Machine Learning
-
-
-1
-
 Creativity in Machine Learning
 
 Martin Thoma
@@ -62,23 +57,7 @@ ence E with respect to some class of tasks T and
 performance measure P, if its performance at tasks
 in T, as measured by P, improves with experience E.
 
-Σ ϕ
-
-x0
-x1
-x2
-x3
-
-xn
-
-w0
-w1
-w2
-
-w3
-
-wn
-...
+[IMAGE]
 
 (a) Example of an artificial neuron unit.
 xi are the input signals and wi are
@@ -134,8 +113,7 @@ w1, . . . , wn ∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
 an activation function is the sigmoid function ϕ(x) = 1
 
-1+e−x
-.
+1+e−x.
 
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
@@ -145,41 +123,7 @@ optimization technique called gradient descent. The gradient
 descent algorithm takes a function which has to be derivable,
 starts at any point of the surface of this error function and
 
-ar
-X
-
-iv
-:1
-
-60
-1.
-
-03
-64
-
-2v
-1
-
- [
-cs
-
-.C
-V
-
-]
- 1
-
-2
-Ja
-
-n
-20
-
-16
-
-
-
-2
+arXiv:1601.03642v1 [cs.CV] 12 Jan 2016
 
 makes a step in the direction which goes downwards. Hence
 it tries to find a minimum of this high-dimensional function.
@@ -193,7 +137,7 @@ III. IMAGE DATA
 Applying a simple neural network on image data directly can
 work, but the number of parameters gets extraordinary large.
 One would take one neuron per pixel and channel. This means
-for 500 px× 500 px RGB images one would get 750,000 input
+for 500 px×500 px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
 the full connection between the input layer and the first
@@ -270,10 +214,9 @@ different artists to an arbitrary image of their choice.
 
 
 
-3
+[IMAGE]
 
 (a) Original Image (b) Style image
-
 (c) The artistic style of Van Gogh’s “Starry Night” applied to the photograph
 of a Scottish Highland Cattle.
 
@@ -368,11 +311,6 @@ With that training data, the models can generate similar texts.
 New works which look like Shakespeare plays, new Wikipedia
 articles, new Linux code and new papers about algebraic
 geometry can thus automatically be generated. At a first
-
-
-
-4
-
 glance, they do look authentic. The syntax was mostly used
 correctly, the formatting looks as expected, the sentences are
 grammatically correct. However, when one looks at the broader
@@ -432,7 +370,6 @@ are speech recognition, speaker identification, identification of
 songs. This leads to some less-common, but interesting topics:
 The composition of music, the synthesizing of audio as art.
 While the composition might be considered in Section IV,
-
 we will now investigate the work which was done in audio
 synthesization.
 
@@ -492,11 +429,6 @@ C. Audio Synthesization
 
 Audio synthesization is generating new audio files. This can
 either be music or speech. With the techniques described before,
-
-
-
-5
-
 neural networks can be trained to generate music note by note.
 However, it is desirable to allow multiple notes being played
 at the same time.
@@ -531,161 +463,94 @@ REFERENCES
 [Cop87] D. Cope, “Experiments in music intelligence (emi),” 1987.
 [Online]. Available: http://hdl.handle.net/2027/spo.bbp2372.1987.
 025
-
 [Cop05] ——, Computer models of musical creativity. MIT Press
 Cambridge, 2005.
-
 [Cop12] ——, “Emily howell fugue,” YouTube, Oct. 2012. [Online].
 Available: https://www.youtube.com/watch?v=jLR- c uCwI
-
 [Cop13] ——, “The well-programmed clavier: Style in computer music
 composition,” XRDS: Crossroads, The ACM Magazine for
 Students, vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2460444
-
 [Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [On-
 line]. Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
 78691781-c9b7-30a0-9a0a-3ff76e8bfe58
-
 [Gad06] A. Gadsby, Ed., Dictionary of Contemporary English. Pearson
 Education Limited, 2006.
-
 [GEB15] L. A. Gatys, A. S. Ecker, and M. Bethge, “A neural algorithm of
 artistic style,” arXiv preprint arXiv:1508.06576, 2015. [Online].
 Available: http://arxiv.org/abs/1508.06576
-
 [goo15] “Inceptionism: Going deeper into neural networks,” Google
 Photos, Jun. 2015. [Online]. Available: https://goo.gl/Bydofw
-
 [HS97] S. Hochreiter and J. Schmidhuber, “Long short-term memory,”
 Neural computation, vol. 9, no. 8, pp. 1735–1780, 1997.
 [Online]. Available: http://ieeexplore.ieee.org/xpl/freeabs all.jsp?
 arnumber=6795963
-
 [hut] “50’000 euro prize for compressing human knowledge.” [Online].
 Available: http://prize.hutter1.net/
-
 [HZRS15] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning
 for image recognition,” arXiv preprint arXiv:1512.03385, 2015.
 [Online]. Available: http://arxiv.org/abs/1512.03385
-
 [Joh15a] D. Johnson, “Biaxial recurrent neural network for music
 composition,” GitHub, Aug. 2015. [Online]. Available: https:
 //github.com/hexahedria/biaxial-rnn-music-composition
-
 [Joh15b] ——, “Composing music with recurrent neu-
 ral networks,” Personal Blog, Aug. 2015. [On-
 line]. Available: http://www.hexahedria.com/2015/08/03/
 composing-music-with-recurrent-neural-networks/
-
 [Joh16] J. Johnson, “neural-style,” GitHub, Jan. 2016. [Online]. Available:
 https://github.com/jcjohnson/neural-style
-
 [Kar15a] A. Karpathy, “char-rnn,” GitHub, Nov. 2015. [Online]. Available:
 https://github.com/karpathy/char-rnn
-
 [Kar15b] ——, “The unreasonable effectiveness of recurrent neural
 networks,” Personal Blog, May 2015. [Online]. Available:
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-
 [KMN+02] T. Kanungo, D. Mount, N. Netanyahu, C. Piatko, R. Silverman,
 and A. Wu, “An efficient k-means clustering algorithm: analysis
 and implementation,” Pattern Analysis and Machine Intelligence,
 IEEE Transactions on, vol. 24, no. 7, pp. 881–892, Jul 2002.
-
 [Mit97] T. M. Mitchell, Machine learning, ser. McGraw Hill series in
 computer science. McGraw-Hill, 1997.
-
 [MOT15] A. Mordvintsev, C. Olah, and M. Tyka, “Inceptionism: Going
 deeper into neural networks,” googleresearch.blogspot.co.uk,
 Jun. 2015. [Online]. Available: http://googleresearch.blogspot.de/
 2015/06/inceptionism-going-deeper-into-neural.html
-
 [Nie15] M. A. Nielsen, Neural Networks and Deep Learn-
 ing. Determination Press, 2015. [Online]. Avail-
 able: http://neuralnetworksanddeeplearning.com/chap6.html#
 introducing convolutional networks
-
 [NV15] A. Nayebi and M. Vitelli, “GRUV: Algorithmic music generation
 using recurrent neural networks,” 2015. [Online]. Available:
 http://cs224d.stanford.edu/reports/NayebiAran.pdf
-
 [Red] “Deepdream,” Reddit. [Online]. Available: https://www.reddit.
 com/r/deepdream/
-
 [Shi14] Y. Shih, “Style transfer for headshot portraits,” YouTube, Jun.
 2014. [Online]. Available: https://www.youtube.com/watch?v=
 Hj5lGFzlubU
-
 [SPB+14] Y. Shih, S. Paris, C. Barnes, W. T. Freeman, and F. Durand,
 “Style transfer for headshot portraits,” ACM Transactions on
 Graphics (TOG), vol. 33, no. 4, p. 148, 2014. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2601137
-
 [TL05] P. Tresset and F. F. Leymarie, “Generative portrait sketching,” in
 Proceedings of VSMM, 2005, pp. 739–748.
-
 [Vit15] M. Vitelli, “Algorithmic music generation with recurrent
 neural networks,” YouTube, Jun. 2015. [Online]. Available:
 https://youtu.be/0VTI1BBLydE
-
 [VKMT13] C. Vondrick, A. Khosla, T. Malisiewicz, and A. Torralba,
 “Hoggles: Visualizing object detection features,” in Computer
 Vision (ICCV), 2013 IEEE International Conference on. IEEE,
 2013, pp. 1–8. [Online]. Available: http://ieeexplore.ieee.org/
 xpls/abs all.jsp?arnumber=6751109
-
 [VL15] O. Vinyals and Q. Le, “A neural conversational model,”
 arXiv preprint arXiv:1506.05869, Jul. 2015. [Online]. Available:
 http://arxiv.org/abs/1506.05869v2
-
 [VN15] M. Vitelli and A. Nayebi, “GRUV,” Aug. 2015. [Online].
 Available: https://github.com/MattVitelli/GRUV
-
 [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
 Judgement to Calculation. W.H.Freeman & Co Ltd, 1976.
-
 [ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding con-
 volutional networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.
 
-http://hdl.handle.net/2027/spo.bbp2372.1987.025
-http://hdl.handle.net/2027/spo.bbp2372.1987.025
-https://www.youtube.com/watch?v=jLR-_c_uCwI
-http://dl.acm.org/citation.cfm?id=2460444
-http://www.bbc.co.uk/blogs/adamcurtis/entries/78691781-c9b7-30a0-9a0a-3ff76e8bfe58
-http://www.bbc.co.uk/blogs/adamcurtis/entries/78691781-c9b7-30a0-9a0a-3ff76e8bfe58
-http://arxiv.org/abs/1508.06576
-https://goo.gl/Bydofw
-http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=6795963
-http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=6795963
-http://prize.hutter1.net/
-http://arxiv.org/abs/1512.03385
-https://github.com/hexahedria/biaxial-rnn-music-composition
-https://github.com/hexahedria/biaxial-rnn-music-composition
-http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/
-http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/
-https://github.com/jcjohnson/neural-style
-https://github.com/karpathy/char-rnn
-http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-http://googleresearch.blogspot.de/2015/06/inceptionism-going-deeper-into-neural.html
-http://googleresearch.blogspot.de/2015/06/inceptionism-going-deeper-into-neural.html
-http://neuralnetworksanddeeplearning.com/chap6.html#introducing_convolutional_networks
-http://neuralnetworksanddeeplearning.com/chap6.html#introducing_convolutional_networks
-http://cs224d.stanford.edu/reports/NayebiAran.pdf
-https://www.reddit.com/r/deepdream/
-https://www.reddit.com/r/deepdream/
-https://www.youtube.com/watch?v=Hj5lGFzlubU
-https://www.youtube.com/watch?v=Hj5lGFzlubU
-http://dl.acm.org/citation.cfm?id=2601137
-https://youtu.be/0VTI1BBLydE
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6751109
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6751109
-http://arxiv.org/abs/1506.05869v2
-https://github.com/MattVitelli/GRUV
-
-
-6
 
 APPENDIX A
 AUTOMATICALLY GENERATED TEXTS
@@ -743,45 +608,36 @@ was starting to signing a major tripad of aid exile.]]
 C. Linux Code, 1
 
 /*
-* Increment the size file of the new incorrect UI_FILTER group information
-* of the size generatively.
-*/
+ * Increment the size file of the new incorrect UI_FILTER group information
+ * of the size generatively.
+ */
 static int indicate_policy(void)
 {
-
-int error;
-if (fd == MARN_EPT) {
-
-/*
-* The kernel blank will coeld it to userspace.
-*/
-if (ss->segment < mem_total)
-
-unblock_graph_and_set_blocked();
-else
-
-ret = 1;
-goto bail;
-
-}
-segaddr = in_SB(in.addr);
-selector = seg / 16;
-setup_works = true;
-for (i = 0; i < blocks; i++) {
-
-seq = buf[i++];
-bpf = bd->bd.next + i * search;
-if (fd) {
-
-current = blocked;
-}
-
-}
-rw->name = "Getjbbregs";
-bprm_self_clearl(&iv->version);
-regs->new = blocks[(BPF_STATS << info->historidac)] | PFMR_CLOBATHINC_SECONDS << 12;
-return segtable;
-
+    int error;
+    if (fd == MARN_EPT) {
+        /*
+         * The kernel blank will coeld it to userspace.
+         */
+        if (ss->segment < mem_total)
+            unblock_graph_and_set_blocked();
+        else
+            ret = 1;
+        goto bail;
+    }
+    segaddr = in_SB(in.addr);
+    selector = seg / 16;
+    setup_works = true;
+    for (i = 0; i < blocks; i++) {
+        seq = buf[i++];
+        bpf = bd->bd.next + i * search;
+        if (fd) {
+            current = blocked;
+        }
+    }
+    rw->name = "Getjbbregs";
+    bprm_self_clearl(&iv->version);
+    regs->new = blocks[(BPF_STATS << info->historidac)] | PFMR_CLOBATHINC_SECONDS << 12;
+    return segtable;
 }
 
 D. Linux Code, 2
@@ -809,11 +665,6 @@ D. Linux Code, 2
 #include <linux/io.h>
 #include <linux/platform_device.h>
 #include <linux/multi.h>
-
-
-
-8
-
 #include <linux/ckevent.h>
 
 #include <asm/io.h>
