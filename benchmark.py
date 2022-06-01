@@ -463,7 +463,7 @@ if __name__ == "__main__":
             version=PyPDF2.__version__,
             watermarking_function=pypdf2_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2022-05-02",
+            last_release_date="2022-06-01",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -520,10 +520,10 @@ if __name__ == "__main__":
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
             pdfium_get_text,
-            "1.10.0",
+            "1.11.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-05-25",
+            last_release_date="2022-06-01",
             dependencies="PDFium (Foxit/Google)",
         ),
     }

@@ -12,8 +12,8 @@ This paper gives a high level overview of how they are created
 and gives some examples. It is meant to be a summary of the
 current work and give people who are new to machine learning
 some starting points.
-I . I
-N T R O D U C T I O N
+I. I
+NTRODUCTION
 According to [Gad06]
 creativity
 is ﬁthe ability to use your
@@ -30,25 +30,25 @@ learning, Section III gives examples of creativity with images,
 Section IV gives examples of machines producing textual
 content, and Section V gives examples of machine learning
 and music. A discussion follows in Section VI.
-I I . B
-A S I C S O F
+II. B
+ASICS OF
 M
-A C H I N E
+ACHINE
 L
-E A R N I N G
+EARNING
 The traditional approach of solving problems with software
 is to program machines to do so. The task is divided in as
 simple sub-tasks as possible, the subtasks are analyzed and the
 machine is instructed to process the input with human-designed
 algorithms to produce the desired output. However, for some
 tasks like object recognition this approach is not feasible. There
-are way to many different objects, diff erent lighting situations,
+are way to many different objects, different lighting situations,
 variations in rotation and the arrangement of a scene for a
 human to think of all of them and model them. But with the
 internet, cheap computers, cameras, crowd-sourcing platforms
 like Wikipedia and lots of Websites, services like Amazon
 Mechanical Turk and several other changes in the past decades
-a lot of data has become available. The idea of machine learning
+alotofdatahasbecomeavailable.Theideaofmachinelearning
 is to make use of this data.
 A formal denition of the eld of Machine Learning is given
 by Tom Mitchel [Mit97]:
@@ -94,7 +94,7 @@ n
 .
 .
 (a)
-Example of an articial neuron unit.
+Exampleofanarticialneuronunit.
 x
 i
 are the input signals and
@@ -111,7 +111,7 @@ is applied.
 (b)
 A visualization of a simple feed-
 forward neural network. The 5 in-
-put nodes are red, the 2 bias nodes
+putnodesarered,the2biasnodes
 are gray, the 3 hidden units are
 green and the single output node
 is blue.
@@ -156,14 +156,14 @@ num-
 bers
 x
 1
-; : : : ; x
+;:::;x
 n
 2
 R
 as input, multiply them with weights
 w
 1
-; : : : ; w
+;:::;w
 n
 2
 R
@@ -185,7 +185,7 @@ x
 .
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
-visualized in Figure 1(b). The interesting qu estion is how
+visualized in Figure 1(b). The interesting question is how
 the parameters
 w
 i
@@ -202,8 +202,8 @@ it tries to nd a minimum of this high-dimensional function.
 There is, of course, a lot more to say about machine learning.
 The interested reader might want to read the introduction given
 by Mitchell [Mit97].
-I I I . I
-M A G E
+III. I
+MAGE
 D
 ATA
 Applying a simple neural network on image data directly can
@@ -240,11 +240,11 @@ recognize various images like bananas. This technique turns
 the network upside down and starts with random noise. To
 analyze what the network considers bananas to look like, the
 random noise image is gradually tweaked so that it generates
-the output ﬁbananaﬂ. Additio nally, the changes can be restricted
+the output ﬁbananaﬂ. Additionally, the changes can be restricted
 in a way that the statistics of the input image have to be similar
 to natural images. One example of this is that neighboring
 pixels are correlated.
-Another technique is to amplify the output of layers. Th is was
+Another technique is to amplify the output of layers. This was
 described in [MOT15]:
 We ask the network: ﬁWhatever you see there, I want
 more of it!ﬂ This creates a feedback loop: if a cloud
@@ -286,7 +286,7 @@ different artists to an arbitrary image of their choice.
 (a) Original Image
 (b) Style image
 (c)
-The artistic style of Van Gogh's ﬁStarry Nightﬂ applied to the photograph
+TheartisticstyleofVanGogh'sﬁStarryNightﬂappliedtothephotograph
 of a Scottish Highland Cattle.
 Fig. 4: The algorithm takes both, the original image and the
 style image to produce the result.
@@ -318,8 +318,8 @@ similar to the artists impression of the image. However, the
 system described in [TL05] seems not to be a machine
 learning computer program according to the denition by Tom
 Mitchell [Mit97].
-I V. T
-E X T
+IV. T
+EXT
 D
 ATA
 Digital text is the rst form of natural communication which
@@ -358,7 +358,7 @@ word predictor.
 Character predictors can be implemented with RNNs. In con-
 trast to standard feed-forward neural networks like multilayer
 Perceptrons (MLPs) which was shown in Figure 1(b), those
-networks are trained to take their output at some point as well as
+networksaretrainedtotaketheiroutputatsomepointaswellas
 the normal input. This means they can keep some information
 over time. One of the most common variant to implement
 RNNs is by using so called Long short-term memory (LSTM)
@@ -373,7 +373,7 @@ weight sharing
 which means that those unrolled neurons share
 the same weight.
 A. Similar Texts Generation
-Karpathy trained multiple character RNNs on diff erent datasets
+Karpathy trained multiple character RNNs on different datasets
 and gave an excellent introduction [Kar15b]. He trained it on
 Paul Graham's essays, all the works of Shakespeare, the Hutter
 Prize [hut]
@@ -440,7 +440,7 @@ Human
 Machine
 : to live forever .
 V. A
-U D I O
+UDIO
 D
 ATA
 Common machine learning tasks which involve audio data
@@ -492,14 +492,14 @@ waveforms are feature vectors given for time steps
 0
 ;
 1
-; : : : ; t
+;:::;t
 
 1
-; t
+;t
 . The network is given those feature vectors
 X
 1
-; : : : ; X
+;:::;X
 t
 and has to predict the following feature vector
 X
@@ -512,7 +512,7 @@ Transformation (DFT) was used on chunks of length
 N
 of the
 music to obtain features in the frequency domain.
-An implementation can be found at [VN15] and a demonstration
+Animplementationcanbefoundat[VN15]andademonstration
 can be found at [Vit15].
 C. Audio Synthesization
 Audio synthesization is generating new audio les. This can
@@ -526,8 +526,8 @@ wrote a very good introduction into neural networks for music
 composition which explains those ideas [Joh15b]. Example
 compositions are available there, too. He also made the code for
 his Biaxial Recurrent Neural Network available under [Joh15a].
-V I . D
-I S C U S S I O N
+VI. D
+ISCUSSION
 What does these examples mean for our understanding of
 creativity? Does it inuence how much we value art? Could
 we dene art and creativity better after having those and similar
@@ -543,7 +543,7 @@ follow a central theme. They lack the ability to plan. Although
 clever algorithms were implemented for composing music, it
 seems as if there is still a lot of supervision involved.
 R
-E F E R E N C E S
+EFERENCES
 [Cop87]
 D. Cope, ﬁExperiments in music intelligence (emi),ﬂ 1987.
 [Online]. Available: http://hdl.handle.net/2027/spo.bbp2372.1987.
@@ -568,7 +568,7 @@ http://dl.acm.org/citation.cfm?id=2460444
 [Cur14]
 A. Curtis, ﬁNow then,ﬂ BBC, Jul. 2014. [On-
 line]. Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
-78691781- c9b7- 30a0- 9a0a- 3ff76e8bfe58
+78691781-c9b7-30a0-9a0a-3ff76e8bfe58
 [Gad06]
 A. Gadsby, Ed.,
 Dictionary of Contemporary English
@@ -602,27 +602,27 @@ arXiv preprint arXiv:1512.03385
 [Joh15a]
 D. Johnson, ﬁBiaxial recurrent neural network for music
 composition,ﬂ GitHub, Aug. 2015. [Online]. Available: https:
-//github.com/hexahedria/biaxial- rnn- music- composition
+//github.com/hexahedria/biaxial-rnn-music-composition
 [Joh15b]
 ŠŠ, ﬁComposing music with recurrent neu-
 ral networks,ﬂ Personal Blog, Aug. 2015. [On-
 line]. Available: http://www.hexahedria.com/2015/08/03/
-composing- music- with- recurrent- neural- networks/
+composing-music-with-recurrent-neural-networks/
 [Joh16]
 J. Johnson, ﬁneural-style,ﬂ GitHub, Jan. 2016. [Online]. Available:
-https://github.com/jcjohnson/neural- style
+https://github.com/jcjohnson/neural-style
 [Kar15a]
 A. Karpathy, ﬁchar-rnn,ﬂ GitHub, Nov. 2015. [Online]. Available:
-https://github.com/karpathy/char- rnn
+https://github.com/karpathy/char-rnn
 [Kar15b]
 ŠŠ, ﬁThe unreasonable effectiveness of recurrent neural
 networks,ﬂ Personal Blog, May 2015. [Online]. Available:
-http://karpathy.github.io/2015/05/21/rnn- effectiveness/
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 [KMN
 +
 02]
 T. Kanungo, D. Mount, N. Netanyahu, C. Piatko, R. Silverman,
-and A. Wu, ﬁAn ef cient k-means clustering algorithm: analysis
+and A. Wu, ﬁAn efcient k-means clustering algorithm: analysis
 and implementation,ﬂ
 Pattern Analysis and Machine Intelligence,
 IEEE Transactions on
@@ -636,7 +636,7 @@ computer science. McGraw-Hill, 1997.
 A. Mordvintsev, C. Olah, and M. Tyka, ﬁInceptionism: Going
 deeper into neural networks,ﬂ googleresearch.blogspot.co.uk,
 Jun. 2015. [Online]. Available: http://googleresearch.blogspot.de/
-2015/06/inceptionism- going- deeper- into- neural.html
+2015/06/inceptionism-going-deeper-into-neural.html
 [Nie15]
 M. A. Nielsen,
 Neural Networks and Deep Learn-
@@ -704,12 +704,12 @@ Computer VisionŒECCV 2014
 2014, pp. 818Œ833.
 6
 A
-P P E N D I X
+PPENDIX
 A
 A
-U T O M AT I C A L LY G E N E R AT E D
+UTOMATICALLY GENERATED
 T
-E X T S
+EXTS
 The following texts were generated by [Kar15a] and published by Karpathy on [Kar15b]. This is meant to be a copy for
 convenience and the case that the website is not reachable.
 A. Shakespeare

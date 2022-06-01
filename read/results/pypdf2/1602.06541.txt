@@ -14,8 +14,8 @@ convolutional neural networks are mentioned and typical
 problematic situations for segmentation algorithms are
 examined. A taxonomy of segmentation algorithms is
 given.
-I . I
-N T R O D U C T I O N
+I. I
+NTRODUCTION
 Semantic segmentation is the task of clustering
 parts of images together which belong to the same
 object class. This type of algorithm has several use-
@@ -29,7 +29,7 @@ MBVLG02
 ], detecting medical in-
 struments in operations [
 WAH97
-], colon crypts segmen -
+], colon crypts segmen-
 tation [
 CRSS14
 ], land use and land cover classica-
@@ -47,12 +47,12 @@ mentation, has to distinguish different instances of the
 same object. While having a semantic segmentation
 is certainly a big advantage when trying to get object
 instances, there are a couple of problems: neighboring
-pixels of the same class might belong to diff erent object
-instances and regions which are not con nected my
+pixels of the same class might belong to different object
+instances and regions which are not connected my
 belong to the same object instance. For example, a
 tree in front of a car which visually divides the car into
 two parts.
-This paper is organized as follows: It begins by giving
+Thispaperisorganizedasfollows:Itbeginsbygiving
 a taxonomy of segmentation algorithms in Section II.
 A summary of quality measures and datasets which are
 used for semantic segmentation follows in Section III.
@@ -63,12 +63,12 @@ semantic segmentation algorithms which are based on
 neural networks in Section VI. Finally, Section VII
 informs the reader about typical problematic cases for
 segmentation algorithms.
-I I . T
-A X O N O M Y O F
+II. T
+AXONOMY OF
 S
-E G M E N TAT I O N
+EGMENTATION
 A
-L G O R I T H M S
+LGORITHMS
 The computer vision community has published a
 wide range of segmentation algorithms so far. Those
 algorithms can be grouped by the kind of data they
@@ -104,7 +104,7 @@ CS10
 street vs
 no street
 [BKTT15].
-However, there are also unsupervised segmentatio n
+However, there are also unsupervised segmentation
 algorithms which do not distinguish classes at all (see
 Section
 V-B
@@ -204,15 +204,15 @@ HHR01
 is called a voxel.
 D. Operation state
 The operation state of the classifying machine can
-either be
+eitherbe
 active
-as in [
+asin[
 SUM
 +
 11
-], [
+],[
 SSA12
-] where robots
+]whererobots
 can move objects to nd a segmentation or
 passive
 ,
@@ -224,7 +224,7 @@ interactive
 mode.
 One example would be a system where the user clicks
 on the background or marks a coarse segmentation and
-the algorithm n ds a ne-grained segmentation. [
+the algorithm nds a ne-grained segmentation. [
 BJ00
 ],
 [
@@ -240,10 +240,10 @@ mentation
 Figure 1:
 An example of a scene and a possible visu-
 alization of a found segmentation.
-I I I . E
-VA L U AT I O N A N D
+III. E
+VALUATION AND
 D
-ATA S E T S
+ATASETS
 A. Quality measures for evaluation
 A performance measure is a crucial part of any
 machine learning system. As users of a semantic
@@ -253,7 +253,7 @@ there are other measures of quality which matter when
 segmentation algorithms are compared. This section
 gives an overview of those quality measures.
 1) Accuracy:
-Showing the correctness of the segmen-
+Showingthecorrectnessofthesegmen-
 tation hypotheses is done in most publications about
 semantic segmentation. However, there are a couple
 of different ways how this accuracy can be displayed.
@@ -262,7 +262,7 @@ of the obtained segmentations is by showing examples
 such as Figure 1.
 However, this can only support the explanation of
 particular problems or showcase special situation. For
-meaningful information about the overall accuracy, there
+meaningfulinformationabouttheoverallaccuracy,there
 are a couple of metrics how accuracy can be dened.
 For this section, let
 k
@@ -275,10 +275,10 @@ ij
 N
 0
 with
-i; j
+i;j
 2
 1
-; : : : ; k
+;:::;k
 be the number of pixels
 which belong to class
 i
@@ -391,7 +391,7 @@ k
 j
 =1
 n
-j i
+ji
 2
 [0
 ;
@@ -429,7 +429,7 @@ k
 j
 =1
 n
-j i
+ji
 2
 [0
 ;
@@ -465,12 +465,12 @@ CRSS14
 of the precision and recallﬂ [PH05]:
 F
 
-= (1 +
+= (1+
 
 )
 2
 tp
-(1 +
+(1+
 
 2
 )
@@ -514,16 +514,16 @@ CSI
 09
 ] on dermoscopy images. Other
 non-semantic segmentation measures were introduced
-in [
+in[
 MFTM01
-], but the reason for creating them seems to
-be to deal with the under-dened task description of non-
+],butthereasonforcreatingthemseemsto
+betodealwiththeunder-denedtaskdescriptionofnon-
 semantic segmentation. These accuracy measures try to
 deal with different levels of coarsity of the segmentation.
-This is much less of a problem in semantic segmentation
+Thisismuchlessofaprobleminsemanticsegmentation
 and thus those measures are not explained here.
 2) Speed:
-A maximum upper bound on the execution
+Amaximumupperboundontheexecution
 time for the inference on a single image is a hard
 requirement for some applications. For example, in the
 case of autonomous cars an algorithm which classies
@@ -560,7 +560,7 @@ be meaningful.
 However, it does still make sense to mention the
 execution time as well as the hardware in individual
 papers. This gives the interested reader the possibility to
-estimate how dif cult it might be to adjust the algorithm
+estimate how difcult it might be to adjust the algorithm
 to work in the required time-constraints.
 Besides the latency, the
 throughput
@@ -720,10 +720,10 @@ semantic segmentation can be rened by
 simple morphologic operations or by more
 complex approaches such as Markov Random
 Fields (MRFs).
-I V. S
-E G M E N TAT I O N
+IV. S
+EGMENTATION
 P
-I P E L I N E
+IPELINE
 Typically, semantic segmentation is done with a
 classier which operates on xed-size feature inputs
 and a
@@ -759,7 +759,7 @@ approach has to apply the patch classier
 512
 
 512 =
-262 144
+262144
 times for images of size
 512
 px
@@ -770,7 +770,7 @@ px
 are techniques for speeding it up such as applying a
 stride and interpolating the results.
 Neural networks are able to apply the sliding window
-approach in a very ef cient way by handling a trained
+approach in a very efcient way by handling a trained
 network as a convolution and applying the convolution
 on the complete image.
 However, there are alternatives. Namely MRFs and
@@ -779,9 +779,9 @@ information of the complete image and segment it in
 an holistic approach.
 5
 V. T
-R A D I T I O N A L
+RADITIONAL
 A
-P P R O A C H E S
+PPROACHES
 Image segmentation algorithms which use traditional
 approaches, hence don't apply neural networks and
 make heavy use of domain knowledge, are wide-spread
@@ -816,7 +816,7 @@ approaches. The most commonly used local and global
 features are explained in the following as well as feature
 dimensionality reduction algorithms.
 1) Pixel Color:
-Pixel color in diff erent image spaces
+Pixel color in different image spaces
 (e.g. 3 features for RGB, 3 features for HSV, 1 feature
 for the gray-value) are the most widely used features. A
 typical image is in the RGB color space, but depending
@@ -855,13 +855,13 @@ N
 2
 ! f
 0
-; : : : ;
+;:::;
 255
 g
 which
 maps the position
 (
-x; y
+x;y
 )
 to a color. For each pixel, there
 are two gradients: The partial derivative of
@@ -872,7 +872,7 @@ y
 Now the original image is transformed to two feature
 maps of equal size which represents the gradient. These
 feature maps are splitted into patches and a histogram of
-the directions is calculated for each patch. HOG features
+thedirectionsiscalculatedforeachpatch.HOGfeatures
 were proposed in [
 DT05
 ] and are used in [
@@ -923,11 +923,11 @@ keypoints such as ﬁright shoulderﬂ, ﬁleft shoulderﬂ,
 ﬁright kneeﬂ and ﬁleft kneeﬂ. They were originally
 used for human pose estimation. Finding those extra
 keypoints is easily possible for well-known image
-classes like humans. However, it is dif cult for classes
+classes like humans. However, it is difcult for classes
 like airplanes, ships, organs or cells where the human
 annotators do not know the keypoints. Additionally, the
-keypoints have to be chosen for every single class. There
-are strategies to deal with those problems like viewpoint-
+keypointshavetobechosenforeverysingleclass.There
+arestrategiestodealwiththoseproblemslikeviewpoint-
 dependent keypoints. Poselets were used in [
 BMBM10
 ]
@@ -948,7 +948,7 @@ An excellent explanation of textons can be found
 in [ZGWX05].
 7) Dimensionality Reduction:
 High-resolution im-
-ages have a lot of pixels. Having one or more feature per
+ageshavealotofpixels.Havingoneormorefeatureper
 pixel results in well over a million features. This makes
 training difcult while the higher resolution might not
 contain much more information. A simple approach
@@ -964,7 +964,7 @@ feature vectors can be projected with a minimal loss
 of information. A detailed description of PCA is given
 by [Smi02].
 One problem of PCA is the fact that it does not
-distinguish diff erent classes. This means it can happen
+distinguish different classes. This means it can happen
 that a perfectly linearly separable set of feature vectors
 becomes not separable at all after applying PCA.
 There are many other techniques for dimensionality
@@ -1010,7 +1010,7 @@ CM02
 tation tasks. The algorithm nds the cluster centers
 by initializing centroids at random seed points and
 iteratively shifting them to the mean coordinate within
-a certain range. Instead of taking a hard range constraint,
+acertainrange.Insteadoftakingahardrangeconstraint,
 the mean can also be calculated by using any kernel.
 This effectively applies a weight to the coordinates
 of the points. The mean shift algorithm nds cluster
@@ -1125,7 +1125,7 @@ are decision trees. A decision tree is a tree where each
 inner node uses one or more features to decide in which
 branch to descend. Each leaf is a class.
 One strength of Random Decision Forests compared
-to many other classiers like SVMs and neural networks
+tomanyotherclassierslikeSVMsandneuralnetworks
 is that the scale of measure of the features (nominal,
 ordinal, interval, ratio) can be arbitrary. Another advan-
 tage of Random Decision Forests compared to SVMs,
@@ -1145,7 +1145,7 @@ decision trees being used, and if the depth of the trees
 is restricted. Typically in the context of classication,
 decision trees are trained by adding new nodes until
 each leaf contains only nodes of a single class or until it
-is not possible to sp lit further. This is called a
+is not possible to split further. This is called a
 stopping
 criterion
 .
@@ -1202,7 +1202,7 @@ training data is represented as
 (
 x
 i
-; y
+;y
 i
 )
 where
@@ -1212,7 +1212,7 @@ is the
 feature vector and
 y
 i
-2 f 
+2 f
 1
 ;
 1
@@ -1222,7 +1222,7 @@ training example
 i
 2 f
 1
-; : : : ; m
+;:::;m
 g
 .
 1)
@@ -1230,8 +1230,8 @@ If data is linearly separable, it can be separated
 by a hyperplane. There is one hyperplane which
 maximizes the distance to the next datapoints
 (
-support vectors
-). This hyperplane should be taken:
+supportvectors
+).Thishyperplaneshouldbetaken:
 minimize
 w
 ;b
@@ -1372,7 +1372,7 @@ i
 where
 y
 i
-2 f 
+2 f
 1
 ;
 1
@@ -1535,7 +1535,7 @@ r
 p
 of degree
 p
-and coef cient
+and coefcient
 r
 , the Gaussian radial
 basis function (RBF) kernel
@@ -1579,7 +1579,7 @@ i
 ;
 x
 j
-i 
+i
 r
 )
 where the parameter
@@ -1620,7 +1620,7 @@ EVGW
 10
 ]. They
 did not hand their classier in to the challenge itself,
-but calculated an average rank of 7 among the diff erent
+but calculated an average rank of 7 among the different
 categories.
 [
 FGMR10
@@ -1739,14 +1739,14 @@ and gets the raw RGB values as features has
 {z
 }
 input
-+ 224
++224
 
 224
 |
 {z
 }
 output
-= 200 704
+= 200704
 random variables. Those random variables are condi-
 tionally independent, given their local neighborhood.
 These (in)dependencies can be expressed with a graph.
@@ -1784,13 +1784,13 @@ y
 live
 on
 1
-; : : : ;
+;:::;
 nr of classes
 and the random variables
 x
 typically live on
 0
-; : : : ;
+;:::;
 255
 or
 [0
@@ -1870,7 +1870,7 @@ y
 = (
 x
 1
-; x
+;x
 2
 )
 is [KP06]
@@ -1879,14 +1879,14 @@ c
 (
 x
 1
-; x
+;x
 2
 ) =
-w 
+w
 (
 x
 1
-; x
+;x
 2
 ) =
 (
@@ -2049,14 +2049,14 @@ BBMM11
 contour map [AMFM09].
 Active contour models are another example of a
 post-processing method [KWT88].
-V I . N
-E U R A L
+VI. N
+EURAL
 N
-E T W O R K S F O R
+ETWORKS FOR
 S
-E M A N T I C
+EMANTIC
 S
-E G M E N TAT I O N
+EGMENTATION
 Articial neural networks are classiers which are
 inspired by biologic neurons. Every single articial
 neuron has some inputs which are weighted and sumed
@@ -2104,8 +2104,8 @@ rectied linear unit
 ReLU
 (
 x
-) = m ax(0
-; x
+) = max(0
+;x
 )
 Those are much faster to train than the commonly used
 sigmoid activation functions
@@ -2118,7 +2118,7 @@ x
 e
 
 x
-+ 1
++1
 Krizhevsky et al. implemented those ideas and partici-
 pated in the ImageNet Large-Scale Visual Recognition
 Challenge (ILSVRC). The best other system, which
@@ -2151,7 +2151,7 @@ Since AlexNet was developed, a lot of different
 neural networks have been proposed. One interesting
 example is [
 PC13
-], where a recu rrent CNN for semantic
+], where a recurrent CNN for semantic
 segmentation is presented.
 10
 Another notable paper is [
@@ -2161,7 +2161,7 @@ presented there makes use of a classifying network such
 as AlexNet, but applies the complete network as an
 image lter. This way, each pixel gets a probability
 distribution for each of the trained classes. By taking
-the mo st likely class, a semantic segmentation can be
+the most likely class, a semantic segmentation can be
 done with arbitrary image sizes.
 A very recent publication by Dai et al. [
 DHS15
@@ -2170,14 +2170,14 @@ showed that segmentation with much deeper networks
 is possible and achieves better results.
 More detailed explanations to neural networks for
 visual recognition is given by [LKJ15].
-V I I . P
-O S S I B L E
+VII. P
+OSSIBLE
 P
-R O B L E M S I N T H E
+ROBLEMS IN THE
 D
-ATA F O R
+ATA FOR
 S
-E G M E N TAT I O N A L G O R I T H M S
+EGMENTATION ALGORITHMS
 Different segmentation workows have different
 problems. However, there are a couple of special cases
 which should be tested. Those cases might not occur
@@ -2194,7 +2194,7 @@ FKG13
 couple of photos with this problem. Figure 4(a) shows
 an extreme example of lens are.
 B. Vignetting
-Vignetting is the eff ect of a photograph getting darker
+Vignetting is the effect of a photograph getting darker
 in the corners. This can have many reasons, for example
 lters on the camera blocking light at the corners.
 C. Blurred images
@@ -2231,7 +2231,7 @@ Examples of images which might cause
 semantic segmentation systems to fail.
 2) Camouage:
 Some objects, like animals in the
-wild, actively try to hide (see Figure 4(d) as an example).
+wild,activelytrytohide(seeFigure4(d)asanexample).
 In other cases it might just be bad luck that objects
 are hard for humans to detect. This problem has two
 interesting aspects: On the one hand, the segmenting
@@ -2249,19 +2249,19 @@ label or the smartphone label?
 4) Viewpoints:
 Changes in viewpoints can be a
 problem, if they don't occur in the training data. For
-example, an image cap tioning system which was trained
+example, an image captioning system which was trained
 on photographs of professional photographers might
-not have photos from the point of view o f a child. This
+not have photos from the point of view of a child. This
 is visualized in Figure 4(f).
 11
-V I I I . D
-I S C U S S I O N
+VIII. D
+ISCUSSION
 Ohta et al. wrote [
 OKS78
 ] 38 years ago. It is one
 of the rst papers mentioning semantic segmentation.
 In this time, a lot of work was done and many
-diff erent directions have been explored. Different kinds
+different directions have been explored. Different kinds
 of semantic segmentation have emerged.
 This paper presents a taxonomy of those kinds
 of semantic segmentation and a brief overview of
@@ -2273,7 +2273,7 @@ as the ones presented in Table I. Another open
 question is the inuence of the problems described
 in Section VII. This could be done using a subset of the
 thousands of images of Wikipedia Commons, such as
-https://commons.wikimedia.org/wiki/Category:Blu rring
+https://commons.wikimedia.org/wiki/Category:Blurring
 for blurred images.
 A combination of different classiers in an ensemble
 would be an interesting option to explore in order to
@@ -2283,7 +2283,7 @@ with CRFs [ZJRP
 +
 15].
 R
-E F E R E N C E S
+EFERENCES
 [AM98]
 M. S. Atkins and B. T. Mackiewich, ﬁFully
 automatic segmentation of the brain in
@@ -2362,7 +2362,7 @@ springer
 com/
 chapter/10
 :
-1007/978- 3- 540- 40899- 4_28
+1007/978-3-540-40899-4_28
 [BKR11]
 A. Blake, P. Kohli, and C. Rother,
 Markov random
@@ -2394,11 +2394,11 @@ springer
 com/chapter/10
 :
 1007/
-978- 3- 642- 15567- 3_13#page- 1
+978-3-642-15567-3_13#page-1
 [Bur98]
 C. J. Burges, ﬁA tutorial on support vector machines
-for pattern recognition,ﬂ
-Data mining and knowledge
+forpatternrecognition,ﬂ
+Dataminingandknowledge
 discovery
 , vol. 2, no. 2, pp. 121Œ167, 1998.
 [BVZ01]
@@ -2427,7 +2427,7 @@ computer vision, ECCV
 2004, pp. 1Œ2.
 [CJSW01]
 H.-D. Cheng, X. Jiang, Y. Sun, and J. Wang,
-ﬁColor image segmentation: advances and prospects,ﬂ
+ﬁColorimagesegmentation:advancesandprospects,ﬂ
 Pattern recognition
 , vol. 34, no. 12, pp. 2259Œ2281,
 2001.
@@ -2494,7 +2494,7 @@ xrce
 xerox
 :
 com/layout/set/print/
-content/download/16654/118653/le/2008- 023
+content/download/16654/118653/le/2008-023
 :
 pdf
 [CRSS]
@@ -2660,7 +2660,7 @@ html
 +
 10]
 M. Everingham, L. Van Gool, C. K. Williams,
-J. Winn, and A. Zisserman, ﬁThe pascal visual object
+J.Winn,andA.Zisserman,ﬁThepascalvisualobject
 classes (voc) challenge,ﬂ
 International journal of
 computer vision
@@ -2768,8 +2768,8 @@ Clustering algorithms
 [HDT02]
 C. Huang, L. Davis, and J. Townshend, ﬁAn
 assessment of support vector machines for land
-cover classication,ﬂ
-International Journal of remote
+coverclassication,ﬂ
+InternationalJournalofremote
 sensing
 , vol. 23, no. 4, pp. 725Œ749, 2002.
 [HHR01]
@@ -2809,7 +2809,7 @@ on
 , vol. 1. IEEE, 1995, pp. 278Œ282.
 [Online]. Available: http://ect
 :
-bell- labs
+bell-labs
 :
 com/who/
 tkh/publications/papers/odt
@@ -2862,12 +2862,12 @@ jsp?tp=&arnumber=1260033
 [Kaf07]
 L. Kaffer, ﬁFile:great male leopard in south afrika-
 jd.jpg,ﬂ Wikipedia Commons, Jul. 2007. [Online].
-Available: https://commons
+Available:https://commons
 :
 wikimedia
 :
 org/wiki/File:
-Great_male_Leopard_in_South_Afrika- JD
+Great_male_Leopard_in_South_Afrika-JD
 :
 JPG
 [KKV
@@ -3133,7 +3133,7 @@ able: http://research
 :
 microsoft
 :
-com/en- us/projects/
+com/en-us/projects/
 objectclassrecognition/
 [Mur12]
 K. P. Murphy,
@@ -3179,7 +3179,7 @@ C. Pantofaru and M. Hebert, ﬁA
 comparison of image segmentation algorithms,ﬂ
 Robotics Institute
 , p. 336, 2005. [Online].
-Available: http://riweb- backend
+Available: http://riweb-backend
 :
 ri
 :
@@ -3258,8 +3258,8 @@ org/
 1023/A%3A1022643204877
 [Qui93]
 ŠŠ,
-C4.5: Programs for Machine Learning
-, P. Lan-
+C4.5:ProgramsforMachineLearning
+,P.Lan-
 gley, Ed. Morgan Kaufmann Publishers, Inc., 1993.
 [RKB04]
 C. Rother, V. Kolmogorov, and A. Blake, ﬁGrabcut:
@@ -3275,7 +3275,7 @@ acm
 org/10
 :
 1145/1020000/
-1015720/p309- rother
+1015720/p309-rother
 :
 pdf
 [RM00]
@@ -3601,7 +3601,7 @@ papers/CRFasRNN
 :
 pdf
 G
-L O S S A RY
+LOSSARY
 ACM
 active contour model. 6
 BOV
@@ -3633,10 +3633,10 @@ SVM
 Support Vector Machine. 4, 6Œ8
 16
 A
-P P E N D I X
+PPENDIX
 A
 T
-A B L E S
+ABLES
 Database Image Resolution (width
 
 height)

@@ -1,46 +1,46 @@
 Einführung in die
-Geometrie und Top ologie
-0. Au˛age, 31. Dezemb er 2016 Martin Thoma
+Geometrie und Topologie
+0. Au˛age, 31. Dezember 2016 Martin Thoma
 Vorwort
-Dieses Skript wurde im Wintersemester 2013/2014 von Martin Thoma geschrieb en. Es b einhaltet
+Dieses Skript wurde im Wintersemester 2013/2014 von Martin Thoma geschrieben. Es beinhaltet
 die Mitschriften aus der Vorlesung von Prof. Dr. Herrlich sowie die Mitschriften einiger Übungen
 und Tutorien.
-Das Skript ist kostenlos üb er
- martin-thoma.com/geotop o
+Das Skript ist kostenlos über
+ martin-thoma.com/geotopo
  verfügbar. Wer es gerne in A5 (Schwarz-
 Weiÿ, Ringbindung) für 10 Euro hätte, kann mir eine E-Mail schicken (info@martin-thoma.de).
 Danksagungen
-An dieser Stelle mö chte ich Herrn Prof. D r. Herrlich für einige Korrekturvorschläge und einen
+An dieser Stelle möchte ich Herrn Prof. Dr. Herrlich für einige Korrekturvorschläge und einen
 gut strukturierten Tafelanschrieb danken, der als Vorlage für dieses Skript diente. Tatsächlich
-basiert die Struktur dieses Skripts auf der Vorlesung von Herrn Prof. D r. Herrlich und ganze
+basiert die Struktur dieses Skripts auf der Vorlesung von Herrn Prof. Dr. Herrlich und ganze
 Abschnitte konnten direkt mit L
 A
 T
 E
 X umgesetzt werden. Vielen Dank für die Erlaubnis, Ihre
 Inhalte in diesem Skript einbauen zu dürfen!
-Vielen Dank auch an Frau Lenz und Frau Randecker, die es mir erlaubt hab en, ihre Übungsauf-
-gab en und Lösungen zu b enutzen.
-Jérôme Urhausen hat durch viele Verb esserungsvorschläge und Beweise zu einer erheblichen
-Qualitätssteigerung am Skript b eigetragen und meine Tutorin Sarah hat mir viele Fragen p er
-E-Mail und nach dem Tutorium b eantwortet. D anke!
-Was ist Top ologie?
-Die Kugelob er˛äche
+Vielen Dank auch an Frau Lenz und Frau Randecker, die es mir erlaubt haben, ihre Übungsauf-
+gaben und Lösungen zu benutzen.
+Jérôme Urhausen hat durch viele Verbesserungsvorschläge und Beweise zu einer erheblichen
+Qualitätssteigerung am Skript beigetragen und meine Tutorin Sarah hat mir viele Fragen per
+E-Mail und nach dem Tutorium beantwortet. Danke!
+Was ist Topologie?
+Die Kugelober˛äche
 S
 2
-lässt sich durch strecken, stauchen und umformen zur Würfelob er˛äche
-o der der Ob er˛äche einer Pyramide verformen, ab er nicht zum
+lässt sich durch strecken, stauchen und umformen zur Würfelober˛äche
+oder der Ober˛äche einer Pyramide verformen, aber nicht zum
 R
 2
-o der zu einem Torus
+oder zu einem Torus
 T
 2
-. F ür
+. Für
 den
 R
 2
-müsste man die Ob er˛äche unendlich ausdehnen und für einen Torus müsste man ein
-Lo ch machen.
+müsste man die Ober˛äche unendlich ausdehnen und für einen Torus müsste man ein
+Loch machen.
 Erforderliche Vorkenntnisse
 Es wird ein sicherer Umgang mit den Quantoren (
 8
@@ -63,19 +63,19 @@ M
 )
 )
 und ganz allgemein formaler Schreibweise vorausgesetzt. Auch die Beweisführung mittels Wider-
-spruchsb eweisen sollte b ekannt sein und der Umgang mit komplexen Zahlen
+spruchsbeweisen sollte bekannt sein und der Umgang mit komplexen Zahlen
 C
 , deren Betrag,
 Folgen und Häufungspunkten nicht weiter schwer fallen. Diese Vorkenntnisse werden vor allem
 in Analysis I vermittelt.
 Auÿerdem wird vorausgesetzt, dass (a˚ne) Vektorräume, Faktorräume, lineare Unabhängigkeit,
-der Sp ektralsatz und der pro jektive Raum
+der Spektralsatz und der projektive Raum
 P
 (
 R
 )
-aus Lineare Algebra I b ekannt sind. In Lineare
-Algebra I I wird der Begri˙ der Orthonormalbasis eingeführt.
+aus Lineare Algebra I bekannt sind. In Lineare
+Algebra II wird der Begri˙ der Orthonormalbasis eingeführt.
 iii
 (a)
 S
@@ -83,7 +83,7 @@ S
 (b)
  Würfel
 (c)
- Pyramid e
+ Pyramide
 y
 x
 (d)
@@ -96,11 +96,11 @@ Abbildung 0.1
 :
  Beispiele für verschiedene Formen
 Obwohl es nicht vorausgesetzt wird, könnte es von Vorteil sein Einführung in die Algebra und
-Zahlentheorie gehört zu hab en.
+Zahlentheorie gehört zu haben.
 Inhaltsverzeichnis
-1 Top ologische Grundb egri˙e
+1 Topologische Grundbegri˙e
  2
-1.1 Top ologische Räume
+1.1 Topologische Räume
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  2
 1.2 Metrische Räume
@@ -118,12 +118,12 @@ Inhaltsverzeichnis
 1.6 Wege und Knoten
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  17
-Übungsaufgab en
+Übungsaufgaben
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  22
-2 Mannigfaltigkeiten und Si mplizialkomplexe
+2 Mannigfaltigkeiten und Simplizialkomplexe
  24
-2.1 Top ologische Mannigfaltigkeiten
+2.1 Topologische Mannigfaltigkeiten
  . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  24
 2.2 Di˙erenzierbare Mannigfaltigkeiten
@@ -132,38 +132,38 @@ Inhaltsverzeichnis
 2.3 Simplizialkomplex
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  34
-Übungsaufgab en
+Übungsaufgaben
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  43
-3 Fundamentalgrupp e und Üb erlagerungen
+3 Fundamentalgruppe und Überlagerungen
  44
 3.1 Homotopie von Wegen
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  44
-3.2 Fundamentalgrupp e
+3.2 Fundamentalgruppe
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  47
-3.3 Üb erlagerungen
+3.3 Überlagerungen
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  51
-3.4 Grupp enop erationen
+3.4 Gruppenoperationen
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  61
 4 Euklidische und nichteuklidische Geometrie
  64
-4.1 Axiome für die euklidische Eb ene
+4.1 Axiome für die euklidische Ebene
  . . . . . . . . . . . . . . . . . . . . . . . . . . .
  64
-4.2 Weitere Eigenschaften einer euklidischen Eb ene
+4.2 Weitere Eigenschaften einer euklidischen Ebene
  . . . . . . . . . . . . . . . . . . .
  74
 4.2.1 Flächeninhalt
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  74
-4.3 Hyp erb olische Geometrie
+4.3 Hyperbolische Geometrie
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  77
-Übungsaufgab en
+Übungsaufgaben
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  86
 5 Krümmung
@@ -171,7 +171,7 @@ Inhaltsverzeichnis
 5.1 Krümmung von Kurven
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  87
-5.2 Tangentialeb ene
+5.2 Tangentialebene
  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
  89
 5.3 Gauÿ-Krümmung
@@ -180,7 +180,7 @@ Inhaltsverzeichnis
 5.4 Erste und zweite Fundamentalform
  . . . . . . . . . . . . . . . . . . . . . . . . . .
  94
-Lösungen der Übungsaufgab en
+Lösungen der Übungsaufgaben
  99
 Bildquellen
 105
@@ -188,23 +188,23 @@ Abkürzungsverzeichnis
  106
 Ergänzende De˝nitionen und Sätze
  107
-Symb olverzeichnis
+Symbolverzeichnis
  108
 2
-Inhaltsverz eichnis
+Inhaltsverzeichnis
 Stichwortverzeichnis
  111
-1 Top ologische Grundb egri˙e
-1.1 Top ol ogi sche Räume
+1 Topologische Grundbegri˙e
+1.1 Topologische Räume
 De˝nition 1
 Ein
-top ologischer Raum
+topologischer Raum
 ist ein Paar
 (
-X ;
+X;
 T
 )
-b estehend aus einer Menge
+bestehend aus einer Menge
 X
 und
 T
@@ -215,14 +215,14 @@ X
 mit folgenden Eigenschaften
 (i)
 ;
-; X
+;X
 2
 T
 (ii)
  Sind
 U
 1
-; U
+;U
 2
 2
 T
@@ -272,7 +272,7 @@ X
 n
 A
 o˙en ist.
-Es gibt auch Mengen, die weder abgeschlossen, no ch o˙en sind wie z. B.
+Es gibt auch Mengen, die weder abgeschlossen, noch o˙en sind wie z. B.
 [0
 ;
 1)
@@ -284,12 +284,12 @@ Betrachte
 und
 X
 mit der
-trivialen Top olog ie
+trivialen Topologie
 T
 triv
 =
-f ;
-; X
+f;
+;X
 g
 .
 Es gilt:
@@ -315,7 +315,7 @@ X
 T
 und
 X
-n ;
+n;
 =
 X
 2
@@ -326,13 +326,13 @@ und
 ;
 sind als Komplement o˙ener Mengen abgeschlossen.
 
-Beispiel 1 (Top ologien)
+Beispiel 1 (Topologien)
 1)
 X
 =
 R
 n
-mit der von der euklidischen Metrik erzeugten Top ologie
+mit der von der euklidischen Metrik erzeugten Topologie
 T
 Euklid
 :
@@ -350,7 +350,7 @@ gibt es
 r >
 0
 ,
-so dass
+sodass
 B
 r
 (
@@ -364,25 +364,25 @@ n
 j
 d
 (
-x; y
+x;y
 )
 < r
 g 
 U
-Diese Top ologie wird auch Standardtop ologie des
+Diese Topologie wird auch Standardtopologie des
 R
 n
- genannt. Sie b einhaltet unter
-anderem alle o˙enen Kugeln, ab er z. B. auch Schnitte zweier Kugeln mit unterschiedli-
+ genannt. Sie beinhaltet unter
+anderem alle o˙enen Kugeln, aber z. B. auch Schnitte zweier Kugeln mit unterschiedli-
 chem Mittelpunkt (vgl.
  De˝nition 1.ii
 ).
 2)
  Jeder metrische Raum
 (
-X ; d
+X;d
 )
-ist auch ein top ologischer Raum.
+ist auch ein topologischer Raum.
 3)
  Für eine Menge
 X
@@ -394,7 +394,7 @@ P
 (
 X
 )
-diskrete Top ologie
+diskrete Topologie
 .
 4)
 X
@@ -413,9 +413,9 @@ R
 n
 U
 endlich
-g [ f ; g
+g[f;g
 heiÿt
-Zariski-Top o logie
+Zariski-Topologie
 Beobachtungen:
 
 U
@@ -429,7 +429,7 @@ R
 [
 X
 ]
-, so dass
+, sodass
 R
 n
 U
@@ -473,17 +473,17 @@ j
 Es gibt Polynome
 f
 1
-; : : : ; f
+;:::;f
 r
 2
 R
 [
 X
 1
-; : : : ; X
+;:::;X
 n
 ]
-so dass
+sodass
 R
 n
 n
@@ -493,7 +493,7 @@ V
 (
 f
 1
-; : : : ; f
+;:::;f
 r
 )
 g
@@ -508,7 +508,7 @@ g
 ;
 T
 =
-f ;
+f;
 ;
 f
 0
@@ -518,7 +518,7 @@ g
 ;
 f
 0
-g g
+gg
 heiÿt
 Sierpi«skiraum
 .
@@ -537,10 +537,10 @@ sind dort alle abgeschlossenen Mengen.
 De˝nition 2
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 x
 2
 X
@@ -575,10 +575,10 @@ gilt.
 De˝nition 3
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 M
 
 X
@@ -607,7 +607,7 @@ T
 U
 heiÿt
 Inneres
-o der
+oder
 o˙ener
 Kern
 von
@@ -625,13 +625,13 @@ abgeschlossen
 A
 heiÿt
 abgeschlossene Hülle
-o der
+oder
 Abschluss
 von
 M
 .
 c)
-@ M
+@M
 :=
 M
 n
@@ -659,7 +659,7 @@ Beispiel 2
 X
 =
 R
-mit euklidischer Top ologie und
+mit euklidischer Topologie und
 M
 =
 Q
@@ -680,12 +680,12 @@ R
 und
 M
 = (
-a; b
+a;b
 )
 . Dann gilt:
 M
 = [
-a; b
+a;b
 ]
 3)
  Sei
@@ -700,26 +700,26 @@ Z
 und
 M
 = (
-a; b
+a;b
 )
-. D ann gilt:
+. Dann gilt:
 M
 =
 R
 De˝nition 4
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum.
+ein topologischer Raum.
 a)
 B
 
 T
 heiÿt
 Basis
-der Top ologie
+der Topologie
 T
 , wenn jedes
 U
@@ -734,7 +734,7 @@ S 
 T
 heiÿt
 Subbasis
-der Top ologie
+der Topologie
 T
 , wenn jedes
 U
@@ -751,27 +751,27 @@ S
 =
 f
 (
-a; b
+a;b
 )
 j
-a; b
+a;b
 2
 R
-; a < b
+;a < b
 g
 ist für
 R
-mit der Standardtop ologie sowohl Basis als
+mit der Standardtopologie sowohl Basis als
 auch Subbasis.
 2)
- Gegeb en sei
+ Gegeben sei
 X
 =
 R
 n
-mit euklidischer Top ologie
+mit euklidischer Topologie
 T
-. D ann ist
+. Dann ist
 B
 =
 f
@@ -786,7 +786,7 @@ r
 Q
 >
 0
-; x
+;x
 2
 Q
 n
@@ -797,10 +797,10 @@ T
 3)
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum mit
+eintopologischerRaummit
 X
 =
 f
@@ -813,7 +813,7 @@ g
 und
 T
 =
-f ;
+f;
 ;
 f
 0
@@ -830,13 +830,13 @@ f
 ;
 2
 g
-; X
+;X
 g
 .
 Dann ist
 S
 =
-f ;
+f;
 ;
 f
 0
@@ -848,7 +848,7 @@ f
 0
 ;
 2
-g g
+gg
 eine Subbasis von
 T
 , da gilt:
@@ -880,7 +880,7 @@ f
 0
 ;
 1
-g \ f
+g\f
 0
 ;
 2
@@ -892,7 +892,7 @@ f
 0
 ;
 1
-g [ f
+g[f
 0
 ;
 2
@@ -901,7 +901,7 @@ Allerings ist
 S
 keine Basis von
 (
-X ;
+X;
 T
 )
 , da
@@ -920,7 +920,7 @@ S  P
 (
 X
 )
-. D ann gibt es genau eine Top ologie
+. Dann gibt es genau eine Topologie
 T
 auf
 X
@@ -930,10 +930,10 @@ Subbasis ist.
 De˝nition 5
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 Y
 
 X
@@ -950,16 +950,16 @@ U
 2
 T
 g
-ist eine Top ologie auf
+ist eine Topologie auf
 Y
 .
 T
 Y
 heiÿt
-Teilraumtop ologie
+Teilraumtopologie
 und
 (
-Y ;
+Y;
 T
 Y
 )
@@ -967,22 +967,22 @@ heiÿt ein
 Teilraum
 von
 (
-X ;
+X;
 T
 )
 .
-Die Teilraumtop ologie wird auch
+Die Teilraumtopologie wird auch
 Spurtopologie
-o der
+oder
 Unterraumtopologie
 genannt.
 De˝nition 6
 Seien
 X
 1
-; X
+;X
 2
-top ologische Räume.
+topologische Räume.
 U
 
 X
@@ -995,7 +995,7 @@ x
 = (
 x
 1
-; x
+;x
 2
 )
 2
@@ -1011,7 +1011,7 @@ i
 = 1
 ;
 2
-gibt, so dass
+gibt, sodass
 U
 1
 
@@ -1034,14 +1034,14 @@ j
 U
 o˙en
 g
-ist eine Top ologie auf
+ist eine Topologie auf
 X
 1
 
 X
 2
 . Sie heiÿt
-Pro dukttop ologie
+Produkttopologie
 .
 B
 =
@@ -1057,7 +1057,7 @@ i
 o˙en in
 X
 i
-; i
+;i
 = 1
 ;
 2
@@ -1086,13 +1086,13 @@ x
 = (
 x
 1
-; x
+;x
 2
 )
 gibt es Umgebungen
 U
 1
-; U
+;U
 2
 mit
 U
@@ -1102,7 +1102,7 @@ U
 2
 
 U
-Beispiel 4 (Pro dukttop ologien)
+Beispiel 4 (Produkttopologien)
 1)
 X
 1
@@ -1111,19 +1111,19 @@ X
 2
 =
 R
-mit euklidischer Top ologie.
+mit euklidischer Topologie.
 )
-Die Pro dukttop ologie auf
+Die Produkttopologie auf
 R
 
 R
 =
 R
 2
-stimmt mit der euklidischen Top ologie auf
+stimmt mit der euklidischen Topologie auf
 R
 2
-üb erein.
+überein.
 2)
 X
 1
@@ -1132,9 +1132,9 @@ X
 2
 =
 R
-mit Zariski-Top ologie.
+mit Zariski-Topologie.
 T
-Pro dukttop ologie auf
+Produkttopologie auf
 R
 2
 :
@@ -1162,13 +1162,13 @@ n
 N
 Abbildung 1.2
 :
- Zariski-Top ologie auf
+ Zariski-Topologie auf
 R
 2
 De˝nition 7
 Sei
 X
-ein top ologischer Raum,
+ein topologischer Raum,
 ˘
 eine Äquivalenzrelation auf
 X
@@ -1183,7 +1183,7 @@ der Äquivalenzklassen,
 :
 X
 !
-X ; x
+X; x
 7!
 [
 x
@@ -1210,18 +1210,18 @@ T
 X
 	
 (
-X ;
+X;
 T
 X
 )
 heiÿt
-Quotiententop ologie
+Quotiententopologie
 .
 Beispiel 5
 X
 =
 R
-; a
+;a
 ˘
 b
 :
@@ -1264,14 +1264,14 @@ und
 (
 x
 1
-; y
+;y
 1
 )
 ˘
 (
 x
 2
-; y
+;y
 2
 )
 ,
@@ -1294,13 +1294,13 @@ Z
 X=
 ˘
 ein Torus.
-Beispiel 7 (Pro jektiver Raum)
+Beispiel 7 (Projektiver Raum)
 X
 =
 R
 n
 +1
-n f
+nf
 0
 g
 ; x
@@ -1369,52 +1369,52 @@ Metrik
  De˝nitheit:
 d
 (
-x; y
+x;y
 ) = 0
 ,
 x
 =
 y
 8
-x; y
+x;y
 2
 X
 (ii)
  Symmetrie:
 d
 (
-x; y
+x;y
 ) =
 d
 (
-y ; x
+y;x
 )
 8
-x; y
+x;y
 2
 X
 (iii)
  Dreiecksungleichung:
 d
 (
-x; z
+x;z
 )
 
 d
 (
-x; y
-) +
+x;y
+)+
 d
 (
-y ; z
+y;z
 )
 8
-x; y ; z
+x;y;z
 2
 X
 Das Paar
 (
-X ; d
+X;d
 )
 heiÿt ein
 metrischer Raum
@@ -1422,7 +1422,7 @@ metrischer Raum
 Bemerkung 3
 Sei
 (
-X ; d
+X;d
 )
 ein metrischer Raum und
 B
@@ -1437,14 +1437,14 @@ X
 j
 d
 (
-x; y
+x;y
 )
 < r
 g
 für
 x
 2
-X ; r
+X;r
 2
 R
 +
@@ -1463,23 +1463,23 @@ X
 j
 x
 2
-X ; r
+X;r
 2
 R
 +
 g
-ist Basis einer Top ologie auf
+ist Basis einer Topologie auf
 X
 .
 De˝nition 9
 Seien
 (
-X ; d
+X;d
 X
 )
 und
 (
-Y ; d
+Y;d
 Y
 )
 metrische Räume und
@@ -1492,7 +1492,7 @@ eine Abbildung mit
 8
 x
 1
-; x
+;x
 2
 2
 X
@@ -1502,7 +1502,7 @@ X
 (
 x
 1
-; x
+;x
 2
 ) =
 d
@@ -1513,7 +1513,7 @@ Y
 x
 1
 )
-; '
+;'
 (
 x
 2
@@ -1527,10 +1527,10 @@ X
 nach
 Y
 .
-Beispiel 8 (Skalarpro dukt erzeugt Metrik )
+Beispiel 8 (Skalarprodukt erzeugt Metrik)
 Sei
 V
-ein euklidischer o der hermitescher Vektorraum mit Skalarpro dukt
+ein euklidischer oder hermitescher Vektorraum mit Skalarprodukt
 h
 ;
 i
@@ -1539,13 +1539,13 @@ V
 durch
 d
 (
-x; y
+x;y
 ) :=
 p
 h
 x
 
-y ; x
+y;x
 
 y
 i
@@ -1556,7 +1556,7 @@ X
 eine Menge. Dann heiÿt
 d
 (
-x; y
+x;y
 ) =
 (
 0
@@ -1575,7 +1575,7 @@ diskrete Metrik
 . Die Metrik
 d
 induziert die
-diskrete Top ologie
+diskrete Topologie
 .
 8
 1.2. METRISCHE RÄUME
@@ -1589,16 +1589,16 @@ d
 ((
 x
 1
-; y
+;y
 1
 )
 ;
 (
 x
 2
-; y
+;y
 2
-)) := m ax(
+)) := max(
 k
 x
 1
@@ -1618,7 +1618,7 @@ k
 ist Metrik.
 Beobachtung:
 d
-erzeugt die euklidische Top ologie.
+erzeugt die euklidische Topologie.
 B
 r
 (0) =
@@ -1631,16 +1631,16 @@ B
 r
 (0)
 (b)
- Euklidische Top ologie
+ Euklidische Topologie
 Abbildung 1.3
 :
  Veranschaulichungen zur Metrik
 d
 aus
- B eispiel 10
+ Beispiel 10
 9
 1.2. METRISCHE RÄUME
-Beispiel 11 (SNCF-Metr ik
+Beispiel 11 (SNCF-Metrik
 1
 )
 X
@@ -1662,7 +1662,7 @@ R
 2
 4
 De˝nition 10
-Ein top ologischer Raum
+Ein topologischer Raum
 X
 heiÿt
 hausdor˙sch
@@ -1683,7 +1683,7 @@ U
 y
 um
 y
-gibt, so dass
+gibt, sodass
 U
 x
 \
@@ -1696,7 +1696,7 @@ Bemerkung 4 (Trennungseigenschaft)
 Metrische Räume sind hausdor˙sch, wegen
 d
 (
-x; y
+x;y
 )
 >
 0
@@ -1715,7 +1715,7 @@ B
 y
 ) =
 ;
-Beispiel 12 (Top ologische Räume und Hausdor˙-Räume)
+Beispiel 12 (Topologische Räume und Hausdor˙-Räume)
 1)
 (
 R
@@ -1723,7 +1723,7 @@ R
 T
 Z
 )
-ist ein top ologischer Raum, der nicht hausdor˙sch ist.
+ist ein topologischer Raum, der nicht hausdor˙sch ist.
 2)
 (
 R
@@ -1731,12 +1731,12 @@ R
 T
 Euklid
 )
-ist ein top ologischer Hausdor˙-Raum.
+ist ein topologischer Hausdor˙-Raum.
 Bemerkung 5 (Eigenschaften von Hausdor˙-Räumen)
 Seien
-X ; X
+X;X
 1
-; X
+;X
 2
 Hausdor˙-Räume.
 a)
@@ -1755,7 +1755,7 @@ ist hausdor˙sch (vgl.
 De˝nition 11
 Sei
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 (
 x
 )
@@ -1770,7 +1770,7 @@ x
 X
 heiÿt
 Grenzwert
-o der
+oder
 Limes
 von
 (
@@ -1784,7 +1784,7 @@ x
 ein
 n
 0
-gibt, so dass
+gibt, sodass
 x
 n
 2
@@ -1800,7 +1800,7 @@ Ist
 X
 hausdor˙sch, so hat jede Folge in
 X
-hö chstens einen Grenzwert.
+höchstens einen Grenzwert.
 Beweis:
 Sei
 (
@@ -1869,21 +1869,21 @@ x
 y
 
 1
-Diese M etri k wird auch 
- französische Eisenbahnmetrik
+Diese Metrik wird auch 
+französische Eisenbahnmetrik
  genannt.
 10
 1.3. STETIGKEIT
 (
 x
 1
-; y
+;y
 1
 )
 (
 x
 2
-; y
+;y
 2
 )
 x
@@ -1909,7 +1909,7 @@ Abbildung 1.4
  Wenn
 X
 1
-; X
+;X
 2
 hausdor˙sch sind, dann auch
 X
@@ -1921,17 +1921,17 @@ X
 De˝nition 12
 Seien
 (
-X ;
+X;
 T
 X
 )
 ;
 (
-Y ;
+Y;
 T
 Y
 )
-top ologische Räume und
+topologische Räume und
 f
 :
 X
@@ -1962,7 +1962,7 @@ X
 b)
 f
 heiÿt
-Homö omorphismus
+Homöomorphismus
 , wenn
 f
 stetig ist und es eine stetige Abbildung
@@ -1971,7 +1971,7 @@ g
 Y
 !
 X
-gibt, so dass
+gibt, sodass
 g
 
 f
@@ -1989,7 +1989,7 @@ Y
 Bemerkung 7
 2
 Seien
-X ; Y
+X;Y
 metrische Räume und
 f
 :
@@ -2011,11 +2011,11 @@ und jedem
 gibt es
 
 (
-x; "
+x;"
 )
 >
 0
-, so dass für
+, sodass für
 alle
 y
 2
@@ -2023,7 +2023,7 @@ X
 mit
 d
 (
-x; y
+x;y
 )
 < 
 gilt
@@ -2034,7 +2034,7 @@ f
 (
 x
 )
-; f
+;f
 (
 y
 ))
@@ -2046,9 +2046,9 @@ Beweis:
 : Sei
 x
 2
-X ; " >
+X;" >
 0
-gegeb en und
+gegeben und
 U
 :=
 B
@@ -2088,7 +2088,7 @@ U
 ) 9
  >
 0
-, so dass
+, sodass
 B
 
 (
@@ -2119,7 +2119,7 @@ j
 d
 X
 (
-x; y
+x;y
 )
 < 
 g )
@@ -2143,7 +2143,7 @@ U
 Dann gibt es
 " >
 0
-, so dass
+, sodass
 B
 "
 (
@@ -2159,7 +2159,7 @@ Vor.
 Es gibt
  >
 0
-, so dass
+, sodass
 f
 (
 B
@@ -2203,8 +2203,8 @@ U
 
 Bemerkung 8
 Seien
-X ; Y
-top ologische Räume und
+X;Y
+topologische Räume und
 f
 :
 X
@@ -2229,9 +2229,9 @@ A
 
 X
 ist abgeschlossen.
-Beispiel 13 (Stetige Abbildungen und Homö omorphismen)
+Beispiel 13 (Stetige Abbildungen und Homöomorphismen)
 1)
- Für jeden top ologischen Raum
+ Für jeden topologischen Raum
 X
 gilt: id
 X
@@ -2239,19 +2239,19 @@ X
 X
 !
 X
-ist Homö omorphismus.
+ist Homöomorphismus.
 2
-Es wird die Äquivalenz von Stetigkeit im Sinne der Analysis und Top ologie auf metrisch en Räumen gezeigt.
+Es wird die Äquivalenz von Stetigkeit im Sinne der Analysis und Topologie auf metrischen Räumen gezeigt.
 11
 1.3. STETIGKEIT
 2)
 Ist
 (
-Y ;
+Y;
 T
 Y
 )
-trivialer top ologischer Raum, d. h.
+trivialer topologischer Raum, d. h.
 T
 Y
 =
@@ -2267,13 +2267,13 @@ stetig.
 3)
 Ist
 X
-diskreter top ologischer Raum, so ist
+diskreter topologischer Raum, so ist
 f
 :
 X
 !
 Y
-stetig für jeden top ologischen
+stetig für jeden topologischen
 Raum
 Y
 und jede Abbildung
@@ -2285,7 +2285,7 @@ X
 = [0
 ;
 1)
-; Y
+;Y
 =
 S
 1
@@ -2306,7 +2306,7 @@ t
 ) =
 e
 2
-ˇ it
+ˇit
 .
 R
 0
@@ -2333,10 +2333,10 @@ U
 nicht o˙en ist (vgl.
  Abbildung 1.5
 ).
-Bemerkung 9 (Ver kettungen stetiger Abbildungen sind stetig)
+Bemerkung 9 (Verkettungen stetiger Abbildungen sind stetig)
 Seien
-X ; Y ; Z
-top ologische Räume,
+X;Y;Z
+topologische Räume,
 f
 :
 X
@@ -2430,10 +2430,10 @@ stetig ist.
 
 Bemerkung 10
 a)
- Für jeden top ologischen Raum
+ Für jeden topologischen Raum
 X
 ist
-Homö o
+Homöo
 (
 X
 ) :=
@@ -2445,9 +2445,9 @@ X
 X
 j
 f
-ist Homö omorphismus
+ist Homöomorphismus
 g
-eine Grupp e.
+eine Gruppe.
 b)
  Jede Isometrie
 f
@@ -2455,7 +2455,7 @@ f
 X
 !
 Y
-zwischen metrischen Räumen ist ein Homö omorphismus.
+zwischen metrischen Räumen ist ein Homöomorphismus.
 c)
 Iso
 (
@@ -2471,8 +2471,8 @@ j
 f
 ist Isometrie
 g
-ist eine Untergrupp e von
-Homö o
+ist eine Untergruppe von
+Homöo
 (
 X
 )
@@ -2480,10 +2480,10 @@ für
 jeden metrischen Raum
 X
 .
-Bemerkung 11 (Pro jektionen sind stetig)
+Bemerkung 11 (Projektionen sind stetig)
 Seien
-X ; Y
-top ologische Räume.
+X;Y
+topologische Räume.
 ˇ
 X
 :
@@ -2501,11 +2501,11 @@ X
 Y
 !
 Y
-die Pro jektionen
+die Projektionen
 ˇ
 X
 : (
-x; y
+x;y
 )
 7!
 x
@@ -2513,7 +2513,7 @@ und
 ˇ
 Y
 : (
-x; y
+x;y
 )
 7!
 y
@@ -2521,7 +2521,7 @@ Wird
 X
 
 Y
-mit der Pro dukttop ologie versehen, so sind
+mit der Produkttopologie versehen, so sind
 ˇ
 X
 und
@@ -2554,7 +2554,7 @@ Y
 Bemerkung 12
 Sei
 X
-ein top ologischer Raum,
+ein topologischer Raum,
 ˘
 eine Äquivalenzrelation auf
 X
@@ -2564,7 +2564,7 @@ X
 X=
 ˘
 der Bahnenraum
-versehen mit der Quotiententop ologie,
+versehen mit der Quotiententopologie,
 ˇ
 :
 X
@@ -2601,19 +2601,19 @@ X
 o˙en.
 
 Beobachtung:
-Die Quotiententop ologie ist die feinste Top ologie, so dass
+Die Quotiententopologie ist die feinste Topologie, sodass
 ˇ
 stetig wird.
-Beispiel 14 (Stereographische Pro jektion)
+Beispiel 14 (Stereographische Projektion)
 R
 n
 und
 S
 n
-n f
+nf
 N
 g
-sind homö omorph für b eliebiges
+sind homöomorph für beliebiges
 N
 2
 S
@@ -2680,7 +2680,7 @@ A
 N
 und
 P
-schneidet die Eb ene
+schneidet die Ebene
 H
 in genau
 einem Punkt
@@ -2696,7 +2696,7 @@ f
 :
 S
 n
-n f
+nf
 N
 g !
 R
@@ -2711,7 +2711,7 @@ L
 P
 \
 H
-wob ei
+wobei
 R
 n
 =
@@ -2807,18 +2807,18 @@ P
 .
 Es gilt:
 f
-ist bijektiv und die Umkehrabbildung ist eb enfalls stetig.
-1.4 Zusammenhan g
+ist bijektiv und die Umkehrabbildung ist ebenfalls stetig.
+1.4 Zusammenhang
 De˝nition 13
 a)
-Ein Raum
+EinRaum
 X
 heiÿt
 zusammenhängend
-, wenn es keine o˙enen, nichtleeren Teilmengen
+,wenneskeineo˙enen,nichtleerenTeilmengen
 U
 1
-; U
+;U
 2
 von
 X
@@ -2846,8 +2846,8 @@ Y
 X
 heiÿt zusammenhängend, wenn
 Y
-als top ologischer Raum mit
-der Teilraumtop ologie zusammenhängend ist.
+als topologischer Raum mit
+der Teilraumtopologie zusammenhängend ist.
 13
 1.4. ZUSAMMENHANG
 x
@@ -2860,7 +2860,7 @@ P
 P
 Abbildung 1.6
 :
- Visualisierung der stereographischen Pro jektion
+ Visualisierung der stereographischen Projektion
 Bemerkung 13
 X
 ist zusammenhängend
@@ -2868,7 +2868,7 @@ ist zusammenhängend
 Es gibt keine abgeschlossenen, nichtleeren Teilmengen
 A
 1
-; A
+;A
 2
 mit
 A
@@ -2887,7 +2887,7 @@ A
 =
 X
 .
-Beispiel 15 (Zusammenhang von R äumen)
+Beispiel 15 (Zusammenhang von Räumen)
 1)
 (
 R
@@ -2913,7 +2913,7 @@ mit
 =
 U
 1
-; U
+;U
 2
 2
 T
@@ -2924,13 +2924,13 @@ x
 2
 U
 1
-; y
+;y
 2
 U
 2
 und
 [
-x; y
+x;y
 ]
 die Strecke zwischen
 x
@@ -2939,14 +2939,14 @@ y
 . Sei
 V
 = [
-x; y
+x;y
 ]
 . Nun
-b etrachten wir
+betrachten wir
 V
 ( R
 n
-als (metrischen) Teilraum mit der Teilraumtop ologie
+als (metrischen) Teilraum mit der Teilraumtopologie
 T
 V
 .
@@ -2955,17 +2955,17 @@ U
 1
 \
 [
-x; y
+x;y
 ]
 2
 T
 V
-wegen der De˝nition der Teilraumtop ologie.
+wegen der De˝nition der Teilraumtopologie.
 Dann gibt es
 z
 2
 [
-x; y
+x;y
 ]
 mit
 z
@@ -2976,9 +2976,9 @@ U
 1
 \
 [
-x; y
+x;y
 ])
-, ab er
+, aber
 z =
 2
 U
@@ -3001,12 +3001,12 @@ U
 o˙en.
 2)
 R
-n f
+nf
 0
 g
 ist nicht zusammenhängend, denn
 R
-n f
+nf
 0
 g
 =
@@ -3020,7 +3020,7 @@ R
 3)
 R
 2
-n f
+nf
 0
 g
 ist zusammenhängend.
@@ -3053,16 +3053,16 @@ ist zusammenhängend für jedes
 x
 2
 X
-, wob ei
+, wobei
 X
-ein top ologischer R aum ist.
+ein topologischer Raum ist.
 6)
 R
-mit Zariski-Top ologie ist zusammenhängend.
+mit Zariski-Topologie ist zusammenhängend.
 Bemerkung 14
 Sei
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 A
 
 X
@@ -3191,8 +3191,8 @@ ist zusammenhängend.
 Bemerkung 15
 Sei
 X
-ein top ologischer Raum und
-A; B
+ein topologischer Raum und
+A;B
 
 X
 zusammenhängend.
@@ -3220,7 +3220,7 @@ _
 [
 U
 2
-; U
+;U
 i
 6
 =
@@ -3297,7 +3297,7 @@ ist unerlaubte Zerlegung.
 De˝nition 14
 Sei
 X
-ein top ologischer Raum.
+ein topologischer Raum.
 Für
 x
 2
@@ -3328,12 +3328,12 @@ Z
 x
 )
 heiÿt
-Zusammenhangskomp onente
+Zusammenhangskomponente
 .
-Bemerkung 16 (Eigenschaften von Zusammenhangskomp onenten)
+Bemerkung 16 (Eigenschaften von Zusammenhangskomponenten)
 Sei
 X
-ein top ologischer Raum. Dann gilt:
+ein topologischer Raum. Dann gilt:
 a)
 Z
 (
@@ -3352,7 +3352,7 @@ x
 ist abgeschlossen.
 c)
 X
-ist disjunkte Vereinigung von Zusammenhangskomp onenten.
+ist disjunkte Vereinigung von Zusammenhangskomponenten.
 Beweis:
 15
 1.5. KOMPAKTHEIT
@@ -3546,7 +3546,7 @@ U
 [
 U
 2
-; U
+;U
 i
 6
 =
@@ -3613,7 +3613,7 @@ U
 =
 ;
 
-1.5 Kompakth ei t
+1.5 Kompaktheit
 De˝nition 15
 Sei
 X
@@ -3626,7 +3626,7 @@ X
 .
 U
 heiÿt eine
-Üb erdeckung
+Überdeckung
 von
 X
 , wenn gilt:
@@ -3644,11 +3644,11 @@ x
 2
 M
 De˝nition 16
-Ein top ologischer Raum
+Ein topologischer Raum
 X
 heiÿt
 kompakt
-, wenn jede o˙ene Üb erdeckung von
+, wenn jede o˙ene Überdeckung von
 X
 U
 =
@@ -3664,7 +3664,7 @@ U
 i
 o˙en in
 X
-eine endliche Teilüb erdeckung
+eine endliche Teilüberdeckung
 [
 i
 2
@@ -3680,14 +3680,14 @@ j
 J
 j 2
 N
-b esitzt.
+besitzt.
 Bemerkung 18
 Das Einheitsintervall
 I
 := [0
 ;
 1]
-ist kompakt b ezüglich der euklidischen Top ologie.
+ist kompakt bezüglich der euklidischen Topologie.
 Beweis:
 Sei
 (
@@ -3697,13 +3697,13 @@ i
 i
 2
 J
-eine o˙ene Üb erdeckung von
+eine o˙ene Überdeckung von
 I
 .
 Es genügt zu zeigen, dass es ein
  >
 0
-gibt, so dass jedes Teilintervall der Länge
+gibt, sodass jedes Teilintervall der Länge
 
 von
 I
@@ -3723,7 +3723,7 @@ der Länge
 unterteilen und alle
 U
 i
-in die endliche Üb erdeckung aufnehmen, die Teilintervalle
+in die endliche Überdeckung aufnehmen, die Teilintervalle
 enthalten.
 Angenommen, es gibt kein solches
 
@@ -3742,7 +3742,7 @@ der Länge
 1
 =
 n
-so dass
+sodass
 I
 n
 (
@@ -3786,11 +3786,11 @@ i
 o˙en ist, gibt es ein
 " >
 0
-, so dass
+, sodass
 (
 x
 
-"; x
+";x
 +
 "
 )
@@ -3801,7 +3801,7 @@ i
 Dann gibt es
 n
 0
-, so dass gilt:
+, sodass gilt:
 1
 =
 n
@@ -3834,7 +3834,7 @@ n
 (
 x
 
-"; x
+";x
 +
 "
 )
@@ -3849,14 +3849,14 @@ N
 4
 )
 Widerspruch
-Dann üb erdecke
+Dann überdecke
 [0
 ;
 1]
 mit endlich vielen Intervallen
 I
 1
-; : : : ; I
+;:::;I
 d
 der Länge
 
@@ -3871,10 +3871,10 @@ enthalten.
 U
 j
 1
-; : : : ; U
+;:::;U
 j
 d
-ist endliche Teilüb erdeckung von
+ist endliche Teilüberdeckung von
 U
 .
 
@@ -3912,7 +3912,7 @@ n
 1)
 3)
 R
-mit der Zariski-Top ologie ist kompakt und jede Teilmenge von
+mit der Zariski-Topologie ist kompakt und jede Teilmenge von
 R
 ist es auch.
 Bemerkung 19
@@ -3934,7 +3934,7 @@ i
 i
 2
 I
-o˙ene Üb erdeckung von A.
+o˙ene Überdeckung von A.
 Dann gibt es für jedes
 i
 2
@@ -3972,25 +3972,25 @@ j
 i
 2
 I
-g [ f
+g[f
 X
 n
 A
 g
-ist o˙ene Üb erdeckung von
+ist o˙ene Überdeckung von
 X
 X
-ko mpakt
+kompakt
 =======
 )
 es gibt
 i
 1
-; : : : ; i
+;:::;i
 n
 2
 I
-, so dass
+, sodass
 n
 [
 j
@@ -4066,21 +4066,21 @@ A
 V
 i
 1
-; : : : ; V
+;:::;V
 i
 n
-üb erdecken
+überdecken
 A
 .
 
 Bemerkung 20
 Seien
-X ; Y
-kompakte top ologische Räume. Dann ist
+X;Y
+kompakte topologische Räume. Dann ist
 X
 
 Y
-mit der Pro dukttop ologie
+mit der Produkttopologie
 kompakt.
 Beweis:
 Sei
@@ -4091,13 +4091,13 @@ i
 i
 2
 I
-eine o˙ene Üb erdeckung von
+eine o˙ene Überdeckung von
 X
 
 Y
 . Für jedes
 (
-x; y
+x;y
 )
 2
 X
@@ -4118,7 +4118,7 @@ sowie ein
 i
 2
 I
-, so dass
+, sodass
 U
 x;y
 
@@ -4129,7 +4129,7 @@ W
 i
 .
 3
-Dies gi lt nicht fü r alle
+Dies gilt nicht für alle
 n
 
 n
@@ -4170,11 +4170,11 @@ und alle
 y
 2
 Y
-üb erdecken
+überdecken
 f
 x
 0
-g 
+g
 y
 . Da
 Y
@@ -4182,12 +4182,12 @@ kompakt ist, ist auch
 f
 x
 0
-g 
+g
 Y
 kompakt. Also gibt es
 y
 1
-; : : : ; y
+;:::;y
 m
 (
 x
@@ -4216,7 +4216,7 @@ i
  f
 x
 0
-g 
+g
 Y
 .
 Sei
@@ -4241,7 +4241,7 @@ X
 kompakt ist, gibt es
 x
 1
-; : : : ; x
+;:::;x
 n
 2
 X
@@ -4299,7 +4299,7 @@ i
 (
 x
 j
-; y
+;y
 i
 ) =
 X
@@ -4347,7 +4347,7 @@ Umgebungen von
 x
 bzw. von
 y
-, so dass
+, sodass
 U
 x
 \
@@ -4366,11 +4366,11 @@ K
 kompakt ist, gibt es endlich viele
 x
 1
-; : : : ; x
+;:::;x
 n
 2
 K
-, so dass
+, sodass
 S
 m
 i
@@ -4415,7 +4415,7 @@ K
 ;
 )
 V
-ist Üb erdeckung von
+ist Überdeckung von
 y
 , die ganz in
 X
@@ -4434,8 +4434,8 @@ abgeschlossen.
 
 Bemerkung 22
 Seien
-X ; Y
-top ologische Räume,
+X;Y
+topologische Räume,
 f
 :
 X
@@ -4463,7 +4463,7 @@ i
 i
 2
 I
-o˙ene Üb erdeckung von
+o˙ene Überdeckung von
 f
 (
 K
@@ -4483,7 +4483,7 @@ i
 i
 2
 I
-ist o˙ene Üb erdeckung von
+ist o˙ene Überdeckung von
 K
 Kompakt
 =====
@@ -4491,9 +4491,9 @@ Kompakt
 es gibt
 i
 1
-; : : : ; i
+;:::;i
 n
-, so dass
+, sodass
 f
 
 1
@@ -4502,7 +4502,7 @@ V
 i
 1
 )
-; : : : ; f
+;:::;f
 
 1
 (
@@ -4510,7 +4510,7 @@ V
 i
 n
 )
-Üb erdeckung von
+Überdeckung von
 K
 ist.
 )
@@ -4524,7 +4524,7 @@ V
 i
 1
 ))
-; : : : ; f
+;:::;f
 (
 f
 
@@ -4534,7 +4534,7 @@ V
 i
 n
 ))
-üb erdecken
+überdecken
 f
 (
 K
@@ -4556,14 +4556,14 @@ f
 X
 )
 
-Satz 1.1 (Heine-Borel )
+Satz 1.1 (Heine-Borel)
 Eine Teilmenge von
 R
 n
-o der
+oder
 C
 n
-ist genau dann kompakt, wenn sie b eschränkt und
+ist genau dann kompakt, wenn sie beschränkt und
 abgeschlossen ist.
 Beweis:
 
@@ -4573,7 +4573,7 @@ K
 
 R
 n
-(o der
+(oder
 C
 n
 ) kompakt.
@@ -4590,11 +4590,11 @@ nach
  abgeschlossen. Nach Vorausset-
 zung kann
 K
-mit endlich vielen o˙enen Kugeln von Radien 1 üb erdeckt werden
+mit endlich vielen o˙enen Kugeln von Radien 1 überdeckt werden
 )
 K
 ist
-b eschränkt.
+beschränkt.
 
 (
  Sei
@@ -4602,20 +4602,20 @@ A
 
 R
 n
-(o der
+(oder
 C
 n
-) b eschränkt und abgeschlossen.
+) beschränkt und abgeschlossen.
 Dann gibt es einen Würfel
 W
 = [
 
-N ; N
+N;N
 ]
-    
+
 [
 
-N ; N
+N;N
 ]
 |
 {z
@@ -4633,7 +4633,7 @@ f
 (
 z
 1
-; : : : ; z
+;:::;z
 n
 )
 2
@@ -4647,7 +4647,7 @@ N
 für
 i
 = 1
-; : : : ; n
+;:::;n
 g
 Nach
  Bemerkung 20
@@ -4672,10 +4672,10 @@ z
 j 
 1
 g
-homö omorph zu
+homöomorph zu
 
 (
-x; y
+x;y
 )
 2
 R
@@ -4684,7 +4684,7 @@ R
 
 k
 (
-x; y
+x;y
 )
 k 
 1
@@ -4695,7 +4695,7 @@ ist.
 De˝nition 17
 Sei
 X
-ein top ologischer Raum.
+ein topologischer Raum.
 19
 1.6. WEGE UND KNOTEN
 a)
@@ -4758,12 +4758,12 @@ ist zusammenhängend für jeden Weg
 
 .
 De˝nition 18
-Ein top ologischer Raum
+Ein topologischer Raum
 X
 heiÿt
 wegzusammenhängend
 , wenn es zu je zwei Punkten
-x; y
+x;y
 2
 X
 einen Weg
@@ -4785,7 +4785,7 @@ y
 Bemerkung 23
 Sei
 X
-ein top ologischer Raum.
+ein topologischer Raum.
 a)
 X
 ist wegzusammenhängend
@@ -4802,10 +4802,10 @@ Beweis:
 a)
 Sei
 X
-ein wegzusammenhängender top ologischer Raum,
+ein wegzusammenhängender topologischer Raum,
 A
 1
-; A
+;A
 2
 nichtleere, disjunkte,
 abgeschlossene Teilmengen von
@@ -4823,11 +4823,11 @@ x
 2
 A
 1
-; y
+;y
 2
 A
 2
-; 
+;
 : [0
 ;
 1]
@@ -4883,7 +4883,7 @@ X
 =
 n
 (
-x; y
+x;y
 )
 2
 R
@@ -4899,7 +4899,7 @@ y
 = 1
 _
 y
-= 1 + 2
+= 1+2
 
 e
 
@@ -4917,7 +4917,7 @@ U
 U
 2
 =
-X ; U
+X;U
 1
 6
 =
@@ -4925,7 +4925,7 @@ U
 2
 =
 ;
-; U
+;U
 i
 o˙en.
 X
@@ -4938,7 +4938,7 @@ C
 
 U
 1
-o der
+oder
 C
 
 U
@@ -4959,7 +4959,7 @@ S
 =
 U
 2
-(o der umgekehrt).
+(oder umgekehrt).
 Sei
 y
 2
@@ -4967,7 +4967,7 @@ C
 =
 U
 1
-; " >
+;" >
 0
 und
 B
@@ -4984,7 +4984,7 @@ y
 U
 1
 enthalten ist.
-Ab er:
+Aber:
 B
 "
 (
@@ -5000,10 +5000,10 @@ Widerspruch
 X
 [
 S
-ist zusammenhängend, ab er nicht
+ist zusammenhängend, aber nicht
 wegzusammenhängend.
 
-Beispiel 18 (Hilb ert-Kurve)
+Beispiel 18 (Hilbert-Kurve)
 Es gibt stetige, surjektive Abbildungen
 [0
 ;
@@ -5019,15 +5019,15 @@ Es gibt stetige, surjektive Abbildungen
 . Ein Beispiel ist die in
  Abbil-
 dung 1.9
- dargestellte Hilb ert-Kurve.
+ dargestellte Hilbert-Kurve.
 De˝nition 19
 Sei
 X
-ein top ologischer Raum. Eine
+ein topologischer Raum. Eine
 Jordankurve
 in
 X
-ist ein Homö omorphismus
+ist ein Homöomorphismus
 
 :
 [0
@@ -5046,7 +5046,7 @@ S
 C
 
 X
-, wob ei
+, wobei
 C
 := Bild
 
@@ -5091,7 +5091,7 @@ Y
  Sinus
 Abbildung 1.8
 :
-Beispiele für Räume, die zusammenhängend, ab er nicht wegzusammenhängend
+Beispiele für Räume, die zusammenhängend, aber nicht wegzusammenhängend
 sind.
 (a)
 n
@@ -5110,7 +5110,7 @@ n
 = 5
 Abbildung 1.9
 :
- Hilb ert-Kurve
+ Hilbert-Kurve
 Jede Jordankurve ist also ein einfacher Weg.
 Satz 1.2 (Jordanscher Kurvensatz)
 Ist
@@ -5129,17 +5129,17 @@ R
 n
 C
 genau zwei
-Zusammenhangskomp onenten, von denen eine b eschränkt ist und eine unb eschränkt.
+Zusammenhangskomponenten, von denen eine beschränkt ist und eine unbeschränkt.
 auÿen
 innen
 Jordankurve
 Abbildung 1.10
 :
-Die unb eschränkte Zusammenhangskomp onente wird häu˝g inneres, die b e-
+Die unbeschränkte Zusammenhangskomponente wird häu˝g inneres, die be-
 schränkte äuÿeres genannt.
 Beweis:
-ist technisch mühsam und wird hier nicht geführt. Er kann in Algebraische Top ologie:
-Eine Einführung von R. Stö cker und H. Zieschang auf S. 301f (ISBN 978-3519122265)
+ist technisch mühsam und wird hier nicht geführt. Er kann in Algebraische Topologie:
+Eine Einführung von R. Stöcker und H. Zieschang auf S. 301f (ISBN 978-3519122265)
 nachgelesen werden.
 Idee: Ersetze Weg
 C
@@ -5171,7 +5171,7 @@ De˝nition 21
 Zwei Knoten
 
 1
-; 
+;
 2
 :
 S
@@ -5196,7 +5196,7 @@ R
 gibt mit
 H
 (
-z ;
+z;
 0) =
 
 1
@@ -5210,7 +5210,7 @@ S
 1
 H
 (
-z ;
+z;
 1) =
 
 2
@@ -5237,11 +5237,11 @@ S
 !
 R
 3
-; z
+;z
 7!
 H
 (
-z ; t
+z;t
 )
 ein Knoten. Die Abbildung
 H
@@ -5265,14 +5265,14 @@ R
 3
 ein Knoten,
 E
-eine Eb ene und
+eine Ebene und
 ˇ
 :
 R
 3
 !
 E
-eine Pro jektion auf
+eine Projektion auf
 E
 .
 ˇ
@@ -5317,14 +5317,14 @@ x
 f
 y
 1
-; y
+;y
 2
 g
 , so
 liegt
 y
 1
-üb er
+über
 y
 2
 , wenn gilt:
@@ -5345,7 +5345,7 @@ x
 )
 Satz 1.3 (Satz von Reidemeister)
 Zwei endliche Knotendiagramme gehören genau dann zu äquivalenten Knoten, wenn sie
-durch endlich viele Reidemeister-Züge ineinander üb erführt werden können.
+durch endlich viele Reidemeister-Züge ineinander überführt werden können.
 22
 1.6. WEGE UND KNOTEN
 (a)
@@ -5371,18 +5371,18 @@ Ein Knotendiagramm heiÿt
 3-färbbar
 , wenn jeder Bogen von
 D
-so mit einer Farb e gefärbt
-werden kann, dass an jeder Kreuzung eine o der 3 Farb en auftreten und alle 3 Farb en
+so mit einer Farbe gefärbt
+werden kann, dass an jeder Kreuzung eine oder 3 Farben auftreten und alle 3 Farben
 auftreten.
 Abbildung 1.13
 :
- Ein 3-gefärb er Kleeblattknoten
+ Ein 3-gefärber Kleeblattknoten
 5
-Siehe Knot Theory and Its Applications von Kunio Mu rasugi. ISBN 978-0817638177.
+Siehe Knot Theory and Its Applications von Kunio Murasugi. ISBN 978-0817638177.
 23
 1.6. WEGE UND KNOTEN
-Übungsaufgab en
-Aufgab e 1 (Sierpi«skiraum)
+Übungsaufgaben
+Aufgabe 1 (Sierpi«skiraum)
 Es sei
 X
 :=
@@ -5395,26 +5395,26 @@ und
 T
 X
 :=
-f ;
+f;
 ;
 f
 0
 g
-; X
+;X
 g
 . Dies ist der sogenannte Sierpi«skiraum.
 (a)
  Beweisen Sie, dass
 (
-X ;
+X;
 T
 X
 )
-ein top ologischer Raum ist.
+ein topologischer Raum ist.
 (b)
  Ist
 (
-X ;
+X;
 T
 X
 )
@@ -5424,7 +5424,7 @@ hausdor˙sch?
 T
 X
 von einer Metrik erzeugt?
-Aufgab e 2
+Aufgabe 2
 Es sei
 Z
 mit der von den Mengen
@@ -5439,14 +5439,14 @@ Z
 a
 2
 Z
-; b
+;b
 2
 Z
-n f
+nf
 0
 g
 )
-erzeugten Top ologie
+erzeugten Topologie
 versehen.
 Zeigen Sie:
 (a)
@@ -5457,7 +5457,7 @@ und jede einelementige Teilmenge von
 Z
 ist abgeschlossen.
 (b)
-f 
+f
 1
 ;
 1
@@ -5465,7 +5465,7 @@ g
 ist nicht o˙en.
 (c)
  Es gibt unendlich viele Primzahlen.
-Aufgab e 3 (Cantorsches Dis kontinuum)
+Aufgabe 3 (Cantorsches Diskontinuum)
 Für jedes
 i
 2
@@ -5479,7 +5479,7 @@ f
 ;
 1
 g
-mit der diskreten Top ologie. Weiter Sei
+mit der diskreten Topologie. Weiter Sei
 P
 :=
 Q
@@ -5494,10 +5494,10 @@ i
 P
 aus?
 (b)
- Was können Sie üb er den Zusammenhang von
+ Was können Sie über den Zusammenhang von
 P
 sagen?
-Aufgab e 4 (Kompak thei t)
+Aufgabe 4 (Kompaktheit)
 (a)
  Ist
 GL
@@ -5547,30 +5547,30 @@ P
 R
 )
 kompakt?
-Aufgab e 5 (Begri˙e)
-De˝nieren Sie die Begri˙e Homomorphismus und Homö omorphismus.
-Geb en Sie, falls möglich, ein Beispiel für folgende Fälle an. Falls es nicht möglich ist,
-b egründen Sie warum.
+Aufgabe 5 (Begri˙e)
+De˝nieren Sie die Begri˙e Homomorphismus und Homöomorphismus.
+Geben Sie, falls möglich, ein Beispiel für folgende Fälle an. Falls es nicht möglich ist,
+begründen Sie warum.
 1)
- Ein Homomorphismus, der zugleich ein Homö omorphismus ist,
+ Ein Homomorphismus, der zugleich ein Homöomorphismus ist,
 2)
- ein Homomorphismus, der kein Homö omorphismus ist,
+ ein Homomorphismus, der kein Homöomorphismus ist,
 24
 1.6. WEGE UND KNOTEN
 3)
- ein Homö omorphismus, der kein Homomorphismus ist
-Aufgab e 6 (Begri˙e)
+ ein Homöomorphismus, der kein Homomorphismus ist
+Aufgabe 6 (Begri˙e)
 De˝nieren Sie die Begri˙e Isomorphismus, Isotopie und Isometrie.
 2 Mannigfaltigkeiten und
 Simplizialkomplexe
-2.1 Top ol ogi sche Mannigfal tigkeiten
+2.1 Topologische Mannigfaltigkeiten
 De˝nition 24
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 n
 2
 N
@@ -5584,9 +5584,9 @@ auf
 X
 ist ein Paar
 (
-U; '
+U;'
 )
-, wob ei
+, wobei
 U
 2
 T
@@ -5596,7 +5596,7 @@ und
 U
 !
 V
-Homö omorphismus von
+Homöomorphismus von
 U
 auf eine o˙ene Teilmenge
 V
@@ -5616,7 +5616,7 @@ ist eine Familie
 (
 U
 i
-; '
+;'
 i
 )
 i
@@ -5625,7 +5625,7 @@ I
 von Karten auf
 X
 ,
-so dass
+sodass
 S
 i
 2
@@ -5637,23 +5637,23 @@ X
 .
 c)
 X
-heiÿt (top ologische)
+heiÿt (topologische)
 n
 -dimensionale
 Mannigfaltigkeit
 , wenn
 X
 hausdor˙sch ist,
-eine abzählbare Basis der Top ologie hat und einen
+eine abzählbare Basis der Topologie hat und einen
 n
--dimensionalen Atlas b esitzt.
+-dimensionalen Atlas besitzt.
 Anschaulich ist also ein
 n
 -dimensionale Mannigfaltigkeit lokal dem
 R
 n
 ähnlich.
-Bemerkung 24 (Mächtigkeit von Mannigf alti gkeiten)
+Bemerkung 24 (Mächtigkeit von Mannigfaltigkeiten)
 Jede
 n
 -dimensionale Mannigfaltigkeit mit
@@ -5666,12 +5666,12 @@ R
 Beweis:
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 (
-U; '
+U;'
 )
 mit
 U
@@ -5686,11 +5686,11 @@ V
 
 R
 n
-, wob ei
+, wobei
 V
 o˙en und
 '
-ein Homö omorphismus ist, eine Karte auf
+ein Homöomorphismus ist, eine Karte auf
 X
 .
 Da jede o˙ene Teilmenge des
@@ -5701,8 +5701,8 @@ R
 n
 ,
 '
-als Homö omorphismus
-insb esondere bijektiv ist und Mengen, zwischen denen eine Bijektion existiert, gleich mächtig
+als Homöomorphismus
+insbesondere bijektiv ist und Mengen, zwischen denen eine Bijektion existiert, gleich mächtig
 sind, ist
 U
 genauso mächtig wie der
@@ -5717,10 +5717,10 @@ n
 .
 
 Hinweis:
-Es gibt auch no ch
+Es gibt auch noch
 0
 -dimensionale Mannigfaltigkeiten. Diese Mannigfaltigkeiten können
-b eliebig viele Elemente hab en.
+beliebig viele Elemente haben.
 Bemerkung 25
 a)
  Es gibt surjektive, stetige Abbildungen
@@ -5747,7 +5747,7 @@ n
 und
 R
 m
-nicht homö omorph. Zum Beweis b enutzt man den Satz
+nicht homöomorph. Zum Beweis benutzt man den Satz
 von der Gebietstreue (Brouwer):
 Ist
 U
@@ -5772,7 +5772,7 @@ n < m
 und
 R
 m
-homö omorph zu
+homöomorph zu
 R
 n
 , so wäre
@@ -5790,20 +5790,20 @@ n
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 )
 7!
 (
 x
 1
-; x
+;x
 2
-; : : : ; x
+;:::;x
 n
 ;
 0
-; : : : ;
+;:::;
 0)
 eine stetige injektive Abbildung. Also müsste
 f
@@ -5836,7 +5836,7 @@ n
 (
 z
 1
-; : : : ; z
+;:::;z
 n
 )
 7!
@@ -5852,7 +5852,7 @@ z
 z
 1
 )
-; : : : ;
+;:::;
 <
 (
 z
@@ -5873,7 +5873,7 @@ R
 R
 n
 +1
-n f
+nf
 0
 g
 )
@@ -5905,7 +5905,7 @@ f
 x
 0
 :
-  
+
 :
 x
 n
@@ -5924,7 +5924,7 @@ g 8
 i
 2
 0
-; : : : ; n
+;:::;n
 . Dann ist
 P
 n
@@ -5947,7 +5947,7 @@ n
 x
 0
 :
-  
+
 :
 x
 n
@@ -5958,7 +5958,7 @@ x
 0
 x
 i
-; : : : ;
+;:::;
 
 
 
@@ -5966,7 +5966,7 @@ x
 i
 x
 i
-; : : : ;
+;:::;
 x
 n
 x
@@ -5976,7 +5976,7 @@ i
 y
 1
 :
-  
+
 :
 y
 i
@@ -5986,7 +5986,7 @@ i
 y
 i
 :
-  
+
 :
 y
 n
@@ -5995,7 +5995,7 @@ n
 (
 y
 1
-; : : : ; y
+;:::;y
 n
 )
 ist bijektiv.
@@ -6005,7 +6005,7 @@ i
 mit
 i
 = 0
-; : : : ; n
+;:::;n
 bilden einen
 n
 -dimensionalen Atlas:
@@ -6049,7 +6049,7 @@ v
 )
 j k
 (
-u; v
+u;v
 )
 k
 <
@@ -6115,7 +6115,7 @@ b
 a
 )
 2
-+ (
++(
 c
 a
 )
@@ -6137,7 +6137,7 @@ a
 c
 )
 2
-+ (
++(
 b
 c
 )
@@ -6179,7 +6179,7 @@ f
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 +1
 )
@@ -6195,7 +6195,7 @@ g !
 B
 1
 (0
-; : : : ;
+;:::;
 0
 |
 {z
@@ -6211,7 +6211,7 @@ f
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 +1
 )
@@ -6227,12 +6227,12 @@ g !
 B
 1
 (0
-; : : : ;
+;:::;
 0)
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 +1
 )
@@ -6240,12 +6240,12 @@ n
 (
 x
 1
-; : : : ;
+;:::;
 ˆ
 ˆ
 x
 i
-; : : : ; x
+;:::;x
 n
 +1
 )
@@ -6253,14 +6253,14 @@ n
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 )
 7!
 (
 x
 1
-; : : : ; x
+;:::;x
 i
 
 1
@@ -6275,12 +6275,12 @@ k
 x
 2
 k
-; x
+;x
 i
-; : : : ; x
+;:::;x
 n
 )
-, o der
+, oder
 
 q
 1
@@ -6313,7 +6313,7 @@ i
 Als kompakte Mannigfaltigkeit wird
 S
 n
-auch  geschlossene Mannigfaltigkeit genannt.
+auch geschlossene Mannigfaltigkeit genannt.
 5)
 [0
 ;
@@ -6325,7 +6325,7 @@ in
 [0
 ;
 1]
-, die homö omorph zu einem o˙enem Intervall
+, die homöomorph zu einem o˙enem Intervall
 ist.
 1
 x
@@ -6338,7 +6338,7 @@ V
 =
 
 (
-x; y
+x;y
 )
 2
 R
@@ -6356,18 +6356,18 @@ Das Problem ist
 ;
 0)
 . Wenn man diesen Punkt entfernt, zerfällt der Raum in 4
-Zusammenhangskomp onenten. Jeder
+Zusammenhangskomponenten. Jeder
 R
 n
-zerfällt jedo ch in hö chstens zwei Zusammen-
-hangskomp onenten, wenn man einen Punkt entfernt.
+zerfällt jedoch in höchstens zwei Zusammen-
+hangskomponenten, wenn man einen Punkt entfernt.
 7)
 V
 2
 =
 
 (
-x; y
+x;y
 )
 2
 R
@@ -6385,7 +6385,7 @@ ist eine Mannigfaltigkeit.
 X
 = (
 R
-n f
+nf
 0
 g
 )
@@ -6405,7 +6405,7 @@ o˙en
 U
 o˙en in
 R
-n f
+nf
 0
 g
 ;
@@ -6423,7 +6423,7 @@ U
 " >
 0 : (
 
-"; "
+";"
 )
 
 U
@@ -6436,33 +6436,33 @@ U;
 2
 2
 U
-Insb esondere sind
+Insbesondere sind
 (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 1
 g
 und
 (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 2
 g
-o˙en und homö omorph
+o˙en und homöomorph
 zu
 R
 .
-Ab er:
+Aber:
 X
 ist nicht hausdor˙sch! Denn es gibt keine disjunkten Umgebungen von
 0
@@ -6487,7 +6487,7 @@ n
 eine Mannigfaltigkeit bilden.
 De˝nition 25
 Seien
-X ; Y n
+X;Y n
 -dimensionale Mannigfaltigkeiten,
 U
 
@@ -6502,7 +6502,7 @@ U
 !
 V
 ein Ho-
-mö omorphismus
+möomorphismus
 Z
 = (
 X
@@ -6525,7 +6525,7 @@ U
 erzeugten Äquivalenzrelation
 und der von
 ˘
-induzierten Quotiententop ologie.
+induzierten Quotiententopologie.
 Z
 heiÿt
 Verklebung
@@ -6539,7 +6539,7 @@ und
 V
 .
 Z
-b esitzt einen Atlas aus
+besitzteinenAtlasaus
 n
 -dimensionalen
 Karten. Falls
@@ -6551,7 +6551,7 @@ n
 -dimensionale Mannigfaltigkeit.
 Bemerkung 26
 Sind
-X ; Y
+X;Y
 Mannigfaltigkeiten der Dimension
 n
 bzw.
@@ -6567,7 +6567,7 @@ n
 m
 .
 Beweis:
-Pro dukte von Karten sind Karten.
+Produkte von Karten sind Karten.
 
 Beispiel 21
 Mannigfaltigkeiten mit Dimension 1:
@@ -6578,7 +6578,7 @@ R
 (0
 ;
 1)
-sind alle homö omorph
+sind alle homöomorph
 2)
 S
 1
@@ -6595,14 +6595,14 @@ T
 2
 (1 Henkel)
 4)
- o der mehr Henkel, wie z.B. der Zweifachtorus in
+ oder mehr Henkel, wie z.B. der Zweifachtorus in
  Abbildung 2.1
 Bemerkung 27
 Sei
 n
 2
 N
-; F
+;F
 :
 R
 n
@@ -6627,7 +6627,7 @@ x
 ) = 0
 g
 das
-vanishing set .
+vanishing set.
 Dann gilt:
 28 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 Abbildung 2.1
@@ -6675,7 +6675,7 @@ F
 stetig ist, gibt es
  >
 0
-, so dass
+, sodass
 F
 (
 B
@@ -6737,8 +6737,8 @@ x
 6
 = 0
 , also o. B. d. A.
-@ F
-@ X
+@F
+@X
 1
 (
 x
@@ -6750,7 +6750,7 @@ x
 = (
 x
 1
-; : : : ; x
+;:::;x
 n
 )
 ,
@@ -6759,7 +6759,7 @@ x
 := (
 x
 2
-; : : : ; x
+;:::;x
 n
 )
 2
@@ -6779,7 +6779,7 @@ g
 U
 !
 R
-, so dass
+, sodass
 G
 :
 U
@@ -6793,7 +6793,7 @@ g
 (
 u
 )
-; u
+;u
 )
 eine stetige Abbildung auf eine o˙ene Umgebung
 V
@@ -6813,7 +6813,7 @@ R
 R
 ;
 (
-x; y ; z
+x;y;z
 )
 7!
 x
@@ -6840,7 +6840,7 @@ F
 ) = (2
 x;
 2
-y ;
+y;
 2
 z
 )
@@ -6864,7 +6864,7 @@ R
 R
 ;
 (
-x; y
+x;y
 )
 7!
 y
@@ -6929,12 +6929,12 @@ z
 100
 f
 (
-x; y
+x;y
 )
 (a)
 F
 (
-x; y
+x;y
 ) =
 y
 2
@@ -6972,23 +6972,23 @@ ax
 = 0
 Abbildung 2.2
 :
- Rechts ist die Neilsche Parab el für verschiedene Parameter
+ Rechts ist die Neilsche Parabel für verschiedene Parameter
 a
 .
-Daher ist
- Bemerkung 27.b
- nicht anwendbar, ab er
+Daherist
+Bemerkung 27.b
+nichtanwendbar,aber
 V
 (
 F
 )
-ist trotzdem eine 1-dimensionale
-top ologische Mannigfaltigkeit.
+isttrotzdemeine1-dimensionale
+topologische Mannigfaltigkeit.
 29 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 De˝nition 26
 Sei
 X
-ein Hausdor˙raum mit abzählbarer Basis der Top ologie.
+ein Hausdor˙raum mit abzählbarer Basis der Topologie.
 X
 heiÿt
 n
@@ -6998,10 +6998,10 @@ Mannigfaltigkeit mit Rand
 (
 U
 i
-; '
+;'
 i
 )
-gibt, wob ei
+gibt, wobei
 U
 i
 
@@ -7010,7 +7010,7 @@ i
 o˙en und
 '
 i
-ein Homö omorphismus auf eine o˙ene Teilmenge von
+ein Homöomorphismus auf eine o˙ene Teilmenge von
 R
 n
 +
@@ -7021,7 +7021,7 @@ f
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 )
 2
@@ -7039,13 +7039,13 @@ n
 +
 ;
 0
-ist ein Halbraum .
+ist ein Halbraum.
 Hinweis:
 Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 ˘
 =
 (a)
- Halb rau m
+ Halbraum
 ˘
 =
 (b)
@@ -7053,7 +7053,7 @@ Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 ˘
 =
 (c)
- Sp häre mit ein em Lo ch
+ Sphäre mit einem Loch
 Abbildung 2.3
 :
  Beispiele für Mannigfaltigkeiten mit Rand
@@ -7064,8 +7064,8 @@ eine
 n
 -dimensionale Mannigfaltigkeit mit Rand und Atlas
 A
-. D ann heiÿt
-@ X
+. Dann heiÿt
+@X
 :=
 [
 (
@@ -7086,7 +7086,7 @@ Rand
 von
 X
 .
-@ X
+@X
 ist eine Mannigfaltigkeit der Dimension
 n
 
@@ -7101,14 +7101,14 @@ n
 (
 U
 i
-; '
+;'
 i
 )
 i
 2
 I
 Für
-i; j
+i;j
 2
 I
 mit
@@ -7151,8 +7151,8 @@ U
 j
 )
 Kartenwechsel
-o der
-Üb ergangsfunktion
+oder
+Übergangsfunktion
 .
 30 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 R
@@ -7175,7 +7175,7 @@ j
 Abbildung 2.4
 :
  Kartenwechsel
-2.2 Di˙erenzierbare Mannigfaltigkei ten
+2.2 Di˙erenzierbare Mannigfaltigkeiten
 De˝nition 29
 Sei
 X
@@ -7185,7 +7185,7 @@ n
 (
 U
 i
-; '
+;'
 i
 )
 i
@@ -7202,7 +7202,7 @@ k
 wechselabbildung
 '
 ij
-; i; j
+; i;j
 2
 I k
 -mal stetig di˙erenzierbar ist.
@@ -7233,13 +7233,13 @@ k
 k
 2
 N
-[ f 1 g
+[ f1g
 ) mit Atlas
 A
 = (
 U
 i
-; '
+;'
 i
 )
 i
@@ -7249,7 +7249,7 @@ I
 a)
 Eine Karte
 (
-U; '
+U;'
 )
 auf
 X
@@ -7320,10 +7320,10 @@ gibt es auf
 S
 n
 mehrere verschiedene di˙erenzierbare Strukturen, die sogenannten
-exotische Sphären .
+exotische Sphären.
 De˝nition 31
 Seien
-X ; Y
+X;Y
 di˙erenzierbare Mannigfaltigkeiten der Dimension
 n
 bzw.
@@ -7350,7 +7350,7 @@ k
 ), wenn
 es Karten
 (
-U; '
+U;'
 )
 von
 X
@@ -7360,7 +7360,7 @@ x
 U
 und
 (
-V ;  
+V; 
 )
 von
 Y
@@ -7371,7 +7371,7 @@ U
 )
 
 V
-gibt, so dass
+gibt, sodass
  
 
 f
@@ -7446,14 +7446,14 @@ Seien
 (
 U
 0
-; '
+;'
 0
 )
 und
 (
 V
 0
-;  
+; 
 0
 )
 Karten von
@@ -7536,7 +7536,7 @@ R
 7!
 x
 3
-ist kein Di˙eomorphismus, ab er Homö omorphismus, da mit
+ist kein Di˙eomorphismus, aber Homöomorphismus, da mit
 g
 (
 x
@@ -7574,7 +7574,7 @@ j
 f
 ist Di˙eomorphismus
 g
-eine Untergrupp e von Homö o
+eine Untergruppe von Homöo
 (
 X
 )
@@ -7635,54 +7635,54 @@ S
 .
 F
 (
-u; v
+u;v
 ) = (
 x
 (
-u; v
+u;v
 )
-; y
+;y
 (
-u; v
+u;v
 )
-; z
+;z
 (
-u; v
+u;v
 ))
 J
 F
 (
-u; v
+u;v
 ) =
 0
 @
-@ x
-@ u
+@x
+@u
 (
 p
 )
-@ x
-@ v
+@x
+@v
 (
 p
 )
-@ y
-@ u
+@y
+@u
 (
 p
 )
-@ y
-@ v
+@y
+@v
 (
 p
 )
-@ z
-@ u
+@z
+@u
 (
 p
 )
-@ z
-@ v
+@z
+@v
 (
 p
 )
@@ -7707,28 +7707,28 @@ R
 R
 3
 (
-u; v
+u;v
 )
 7!
 (
 r
 (
 u
-) cos(
+)cos(
 u
 )
-; r
+;r
 (
 v
-) sin(
+)sin(
 u
 )
-; v
+;v
 )
 J
 F
 (
-u; v
+u;v
 ) =
 0
 @
@@ -7736,36 +7736,36 @@ u; v
 r
 (
 v
-) sin
+)sin
 u r
 0
 (
 v
-) cos
+)cos
 u
 r
 (
 v
-) cos
+)cos
 u r
 0
 (
 v
-) sin
+)sin
 u
 0 1
 1
 A
 hat Rang 2 für alle
 (
-u; v
+u;v
 )
 2
 R
 2
 .
 2)
- Kugelko ordinaten:
+ Kugelkoordinaten:
 F
 :
 R
@@ -7775,7 +7775,7 @@ R
 3
 ,
 (
-u; v
+u;v
 )
 7!
 (
@@ -7783,18 +7783,18 @@ R
 cos
 v
 cos
-u; R
+u;R
 cos
 v
 sin
-u; R
+u;R
 sin
 v
 )
 Es gilt:
 F
 (
-u; v
+u;v
 )
 2
 S
@@ -7807,22 +7807,22 @@ cos
 2
 (
 v
-) cos
+)cos
 2
 (
 u
-) +
+)+
 R
 2
 cos
 2
 (
 v
-) sin
+)sin
 2
 (
 u
-) +
+)+
 R
 2
 sin
@@ -7837,19 +7837,19 @@ R
 2
 (
 v
-) cos
+)cos
 2
 (
 u
-) + cos
+)+cos
 2
 (
 v
-) sin
+)sin
 2
 (
 u
-) + sin
+)+sin
 2
 (
 v
@@ -7866,11 +7866,11 @@ v
 2
 (
 u
-) + sin
+)+sin
 2
 (
 u
-)) + sin
+))+sin
 2
 (
 v
@@ -7884,7 +7884,7 @@ cos
 2
 (
 v
-) + sin
+)+sin
 2
 (
 v
@@ -7895,7 +7895,7 @@ R
 2
 32 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 (a)
- K ugel ko ordi naten
+ Kugelkoordinaten
 
 1
 0
@@ -7916,15 +7916,15 @@ R
 8
 1
 (b)
- Rotati on skörp er
+ Rotationskörper
 (c)
- S inus und Kosinus hab en keine gemeinsame Nullstelle
+ Sinus und Kosinus haben keine gemeinsame Nullstelle
 33 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 Die Jacobi-Matrix
 J
 F
 (
-u; v
+u;v
 ) =
 0
 @
@@ -7988,7 +7988,7 @@ regulären Flächen folgt direkt, dass Karten
 (
 U
 i
-; F
+;F
 i
 )
 und
@@ -7998,7 +7998,7 @@ j
 
 R
 2
-; F
+;F
 j
 :
 R
@@ -8018,7 +8018,7 @@ j
 6
 =
 ;
-existieren, wob ei
+existieren, wobei
 F
 i
 und
@@ -8068,7 +8068,7 @@ in Umgebung
 W
 von
 s
-, so dass
+, sodass
 g
 F
 
@@ -8114,7 +8114,7 @@ v
 )
 .
 Da
-Rg (
+Rg(
 J
 F
 j
@@ -8125,14 +8125,14 @@ v
 ist, ist o. B. d. A.
 det
 
-@ x
-@ u
-@ x
-@ v
-@ y
-@ u
-@ y
-@ v
+@x
+@u
+@x
+@v
+@y
+@u
+@y
+@v
 
 (
 v
@@ -8144,19 +8144,19 @@ und
 F
 j
 (
-u; v
+u;v
 ) = (
 x
 (
-u; v
+u;v
 )
-; y
+;y
 (
-u; v
+u;v
 )
-; z
+;z
 (
-u; v
+u;v
 ))
 .
 De˝niere
@@ -8176,20 +8176,20 @@ f
 F
 j
 (
-u; v ; t
+u;v;t
 ) := (
 x
 (
-u; v
+u;v
 )
-; y
+;y
 (
-u; v
+u;v
 )
-; z
+;z
 (
-u; v
-) +
+u;v
+)+
 t
 )
 O˙ensichtlich:
@@ -8212,20 +8212,20 @@ j
 =
 0
 @
-@ x
-@ u
-@ x
-@ v
+@x
+@u
+@x
+@v
 0
-@ y
-@ u
-@ y
-@ v
+@y
+@u
+@y
+@v
 0
-@ z
-@ u
-@ z
-@ v
+@z
+@u
+@z
+@v
 1
 1
 A
@@ -8242,7 +8242,7 @@ v
 0)
 6
 = 0
-Analysis I I
+Analysis II
 ======
 )
 Es gibt Umgebungen
@@ -8266,7 +8266,7 @@ v
 0
 ) =
 s
-, so dass
+, sodass
 f
 F
 j
@@ -8344,11 +8344,11 @@ eine Mannigfaltigkeit und
 G;
 
 )
-eine Grupp e.
+eine Gruppe.
 a)
 G
 heiÿt
-top ologische Grupp e
+topologische Gruppe
 , wenn die Abbildungen
 
 :
@@ -8385,7 +8385,7 @@ Ist
 G
 eine di˙erenzierbare Mannigfaltigkeit, so heiÿt
 G
-Lie-Grupp e
+Lie-Gruppe
 , wenn
 (
 G;
@@ -8393,12 +8393,12 @@ G;
 )
 und
 (
-G; 
+G;
 )
 di˙erenzierbar sind.
-Beispiel 25 (Lie-G rupp en)
+Beispiel 25 (Lie-Gruppen)
 1)
- Alle endlichen Grupp en sind 0-dimensionale Lie-Grupp en.
+ Alle endlichen Gruppen sind 0-dimensionale Lie-Gruppen.
 2)
 GL
 n
@@ -8431,7 +8431,7 @@ A
 
 B
 (
-i; j
+i;j
 ) =
 P
 n
@@ -8440,14 +8440,14 @@ k
 a
 ik
 b
-k j
+kj
 ist nach allen Variablen di˙erenzierbar
 (
 A
 
 1
 )(
-i; j
+i;j
 ) =
 det(
 A
@@ -8464,7 +8464,7 @@ B
 a
 i
 1
-: : : a
+::: a
 in
 .
 .
@@ -8478,7 +8478,7 @@ in
 a
 n
 1
-: : : a
+::: a
 nn
 1
 C
@@ -8528,7 +8528,7 @@ g
 Bemerkung 32
 Ist
 G
-eine Lie-Grupp e und
+eine Lie-Gruppe und
 g
 2
 G
@@ -8547,12 +8547,12 @@ h
 ein Di˙eomorphismus.
 35
 2.3. SIMPLIZIALKOMPLEX
-2.3 Simpli zialkomplex
+2.3 Simplizialkomplex
 De˝nition 34
 Seien
 v
 0
-; : : : ; v
+;:::;v
 k
 2
 R
@@ -8561,7 +8561,7 @@ Punkte.
 a)
 v
 0
-; : : : ; v
+;:::;v
 k
 sind
 in allgemeiner Lage
@@ -8574,7 +8574,7 @@ k
 -dimensionalen a˚nen Untervektorraum, der
 v
 0
-; : : : ; v
+;:::;v
 k
 enthält
 ,
@@ -8583,7 +8583,7 @@ v
 
 v
 0
-; : : : ; v
+;:::;v
 k
 
 v
@@ -8594,7 +8594,7 @@ conv
 (
 v
 0
-; : : : ; v
+;:::;v
 k
 ) :=
 n
@@ -8627,7 +8627,7 @@ konvexe Hülle
 von
 v
 0
-; : : : ; v
+;:::;v
 k
 .
 De˝nition 35
@@ -8640,7 +8640,7 @@ conv
 (
 e
 0
-; : : : ; e
+;:::;e
 n
 )
 
@@ -8650,7 +8650,7 @@ n
 die konvexe Hülle der Standard-Basisvektoren
 e
 0
-; : : : ; e
+;:::;e
 n
 .
 Dann heiÿt
@@ -8659,12 +8659,12 @@ n
 Standard-Simplex
 und
 n
-die D imension des Simplex.
+die Dimension des Simplex.
 b)
 Für Punkte
 v
 0
-; : : : ; v
+;:::;v
 k
 im
 R
@@ -8673,14 +8673,14 @@ in allgemeiner Lage heiÿt
 (
 v
 0
-; : : : ; v
+;:::;v
 k
 ) =
 conv
 (
 v
 0
-; : : : ; v
+;:::;v
 k
 )
 ein
@@ -8695,7 +8695,7 @@ Ist
 (
 v
 0
-; : : : ; v
+;:::;v
 k
 )
 ein
@@ -8706,11 +8706,11 @@ I
 f
 i
 0
-; : : : ; i
+;:::;i
 r
 g  f
 0
-; : : : ; k
+;:::;k
 g
 , so ist
 s
@@ -8719,11 +8719,11 @@ i
 ;:::;i
 r
 :=
-conv (
+conv(
 v
 i
 0
-; : : : ; v
+;:::;v
 i
 r
 )
@@ -8731,7 +8731,7 @@ ein
 r
 -Simplex und heiÿt
 Teilsimplex
-o der
+oder
 Seite
 von
 
@@ -8751,7 +8751,7 @@ e
 e
 1
 (b)
- 1-S imp lex
+ 1-Simplex
 
 1
 1
@@ -8767,7 +8767,7 @@ e
 e
 2
 (c)
- 2-Si mp lex
+ 2-Simplex
 
 2
 e
@@ -8827,7 +8827,7 @@ ist
 \
 
 2
-leer o der ein Teilsimplex von
+leer oder ein Teilsimplex von
 
 1
 und von
@@ -8844,7 +8844,7 @@ S
 2
 K
 
-(mit Teilraumtop ologie) heiÿt
+(mit Teilraumtopologie) heiÿt
 geometrische Realisierung
 von
 K
@@ -8885,21 +8885,21 @@ K
 (e)
  2D Simplizialkomplex
 P
-(f )
+(f)
 P
 ist kein Teilsimplex, da Eigen-
 schaft
- Punkt b .ii
+ Punkt b.ii
  verletzt ist
 P
 (g)
- Simpl izial komplex
+ Simplizialkomplex
 Abbildung 2.7
 :
  Beispiele für Simplizialkomplexe
 De˝nition 37
 Seien
-K ; L
+K;L
 Simplizialkomplexe. Eine stetige Abbildung
 f
 :
@@ -8947,7 +8947,7 @@ e
 b
 2
 '
-ist eine eindeutig b estimmte lineare Abbildung
+ist eine eindeutig bestimmte lineare Abbildung
 37
 2.3. SIMPLIZIALKOMPLEX
 0
@@ -9018,7 +9018,7 @@ n
 K
 )
 Eulerzahl
-(o der Euler-Charakteristik) von
+(oder Euler-Charakteristik) von
 K
 .
 Beispiel 27
@@ -9034,22 +9034,22 @@ Beispiel 27
 2
 ) = 3
 
-3 + 1 = 1
+3+1 = 1
 ˜
 (
 3
 ) = 4
 
-6 + 4
+6+4
 
 1 = 1
 2)
 ˜
 (
-Oktaeder-Ob er˛äche
+Oktaeder-Ober˛äche
 ) = 6
 
-12 + 8 = 2
+12+8 = 2
 ˜
 (
 Rand des Tetraeders
@@ -9059,20 +9059,20 @@ Rand des Tetraeders
 Ikosaeder
 ) = 12
 
-30 + 20 = 2
+30+20 = 2
 3)
 ˜
 (
 Würfel
 ) = 8
 
-12 + 6 = 2
+12+6 = 2
 ˜
 (
 Würfel, unterteilt in Dreiecks˛ächen
 ) = 8
 
-(12 + 6) + (6
+(12+6)+(6
 
 2) = 2
 Bemerkung 33
@@ -9094,7 +9094,7 @@ ist die konvexe Hülle von
 (
 e
 0
-; : : : ; e
+;:::;e
 n
 )
 in
@@ -9104,13 +9104,13 @@ n
 . Jede
 (
 k
-+ 1)
++1)
 -elementige Teilmenge
 von
 f
 e
 0
-; : : : ; e
+;:::;e
 n
 g
 de˝niert ein
@@ -9130,7 +9130,7 @@ k
 
 ; k
 = 0
-; : : : ; n
+;:::;n
 )
 ˜
 (
@@ -9155,7 +9155,7 @@ f
 x
 ) = (
 x
-+ 1)
++1)
 n
 +1
 Binomischer
@@ -9208,7 +9208,7 @@ a)
 Graph
 .
 b)
- Ein Graph, der homö omorph zu
+ Ein Graph, der homöomorph zu
 S
 1
 ist, heiÿt
@@ -9220,9 +9220,9 @@ Baum
 , wenn er keinen Kreis enthält.
 (a)
 Dies wird häu˝g auch als
-Multigraph b ezeichnet.
+Multigraph bezeichnet.
 (b)
-Planare Einb ettung des Te-
+Planare Einbettung des Te-
 traeders
 (c)
 K
@@ -9245,7 +9245,7 @@ T
 ) = 1
 .
 Beweis:
-Induktion üb er die Anzahl der E cken.
+Induktion über die Anzahl der Ecken.
 Bemerkung 35
 a)
 Jeder zusammenhängende Graph
@@ -9399,7 +9399,7 @@ k
 k
 
 n
-+ 1
++1
 k
 
 |
@@ -9417,7 +9417,7 @@ n
 De˝nition 40
 Sei
 X
-ein top ologischer Raum,
+ein topologischer Raum,
 K
 ein Simplizialkomplex und
 h
@@ -9426,7 +9426,7 @@ j
 K
 j !
 X
-ein Homö omorphismus von der geometrischen Realisierung
+ein Homöomorphismus von der geometrischen Realisierung
 j
 K
 j
@@ -9440,12 +9440,12 @@ von
 X
 .
 Beispiel 28 (Triangulierung des Torus)
-Für eine Triangulierung des Torus werden mindestens 14 Dreiecke b enötigt. Beispiele für
+Für eine Triangulierung des Torus werden mindestens 14 Dreiecke benötigt. Beispiele für
 fehlerhafte Triangulierungen sind in
  Beispiel 28
  zu sehen. Korrekte Triangulierungen sind
 in
- B eispiel 28
+ Beispiel 28
 .
 Satz 2.1 (Eulersche Polyederformel)
 Sei
@@ -9454,22 +9454,22 @@ ein konvexes Polyeder in
 R
 3
 , d. h.
-@ P
+@P
 ist ein 2-dimensionaler Simplizialkomplex,
-so dass gilt:
+sodass gilt:
 8
-x; y
+x;y
 2
-@ P
+@P
 : [
-x; y
+x;y
 ]
 
 P
 Dann ist
 ˜
 (
-@ P
+@P
 ) = 2
 .
 Beweis:
@@ -9486,8 +9486,8 @@ P
 B
 1
 (0)
-. Pro jeziere
-@ P
+. Projeziere
+@P
 von
 0
 aus auf
@@ -9505,10 +9505,10 @@ S
 40
 2.3. SIMPLIZIALKOMPLEX
 (a)
-Die b eiden markierten Dreiecke schneiden sich im
+Die beiden markierten Dreiecke schneiden sich im
 Mittelpunkt und in einer Seite.
 (b)
-Die b eiden marki erten Dreiecke schneiden sich im
+Die beiden markierten Dreiecke schneiden sich im
 Mittelpunkt und auÿen.
 Abbildung 2.11
 :
@@ -9516,7 +9516,7 @@ Abbildung 2.11
 (a)
  Einfache Triangulierung
 (b)
- Minimale Trian gu lierung
+ Minimale Triangulierung
 Abbildung 2.12
 :
  Triangulierungen des Torus
@@ -9532,7 +9532,7 @@ P
 konvexe Polygone und
 T
 1
-; T
+;T
 2
 die zugehörigen Triangulierungen von
 S
@@ -9569,7 +9569,7 @@ Nach
  ist
 ˜
 (
-@ P
+@P
 1
 ) =
 ˜
@@ -9588,7 +9588,7 @@ T
 ) =
 ˜
 (
-@ P
+@P
 2
 ) = 2
 , weil o. B. d. A.
@@ -9631,7 +9631,7 @@ g
 für
 n
 = 0
-; : : : ; d
+;:::;d
 = dim(
 K
 )
@@ -9688,7 +9688,7 @@ Sei
 = (
 x
 0
-; : : : ; x
+;:::;x
 n
 )
 2
@@ -9697,20 +9697,20 @@ n
 (
 K
 )
-, so dass
+, sodass
 x
 0
 < x
 1
 <
-  
+
 < x
 n
 .
 Für
 i
 = 0
-; : : : ; n
+;:::;n
 sei
 @
 i
@@ -9718,11 +9718,11 @@ i
 := (
 x
 0
-; : : : ;
+;:::;
 ^
 x
 i
-; : : : ; x
+;:::;x
 n
 )
 die
@@ -9833,7 +9833,7 @@ b
 c
 
 a
-) + (
+)+(
 b
 
 a
@@ -9847,91 +9847,91 @@ a < b < c < d
 d
 3
 ((
-a; b; c; d
-)) =  (
-b; c; d
+a;b;c;d
+)) = (
+b;c;d
 )
 
 (
-a; c; d
-) + (
-a; b; d
+a;c;d
+)+(
+a;b;d
 )
 
 (
-a; b; c
+a;b;c
 )
 ;
-wob ei:
+wobei:
 d
 2
 ( (
-b; c; d
+b;c;d
 )) =
  (
-c; d
+c;d
 )
 
 (
-b; d
+b;d
 )
- +
- (
-b; c
++
+(
+b;c
 )
 d
 2
 (
 
 (
-a; c; d
+a;c;d
 )) =
 
 (
-c; d
+c;d
 )
- +
- (
-a; d
++
+(
+a;d
 )
 
 (
-a; c
+a;c
 )
 d
 2
 ( (
-a; b; d
+a;b;d
 )) =
  (
-b; d
+b;d
 )
 
 (
-a; d
+a;d
 )
- +
- (
-a; b
++
+(
+a;b
 )
 d
 2
 (
 
 (
-a; b; c
+a;b;c
 )) =
 
 (
-b; c
+b;c
 )
- +
- (
-a; c
++
+(
+a;c
 )
 
 (
-a; b
+a;b
 )
 )
 d
@@ -9940,7 +9940,7 @@ d
 d
 3
 ((
-a; b; c; d
+a;b;c;d
 ))) = 0
 Beweis:
 Sei
@@ -9948,7 +9948,7 @@ Sei
 2
 A
 n
-. D ann gilt:
+. Dann gilt:
 d
 n
 
@@ -10042,11 +10042,11 @@ j
 i
 (
 ˙
-)) +
+))+
 X
 0
 
-j <i
+j<i
 
 n
 (
@@ -10065,7 +10065,7 @@ j
 ˙
 )
 = 0
-weil jeder Summand aus der ersten Summe auch in der zweiten Summe vorkommt, ab er mit
+weil jeder Summand aus der ersten Summe auch in der zweiten Summe vorkommt, aber mit
 umgekehrten Vorzeichen.
 
 De˝nition 41
@@ -10104,7 +10104,7 @@ n
 H
 n
 (
-K ;
+K;
 R
 ) :=
 Z
@@ -10114,7 +10114,7 @@ n
 heiÿt
 n
 -te
-Homologiegrupp e
+Homologiegruppe
 von
 K
 .
@@ -10225,7 +10225,7 @@ n
 = dim
 Z
 n
-+ dim
++dim
 B
 n
 
@@ -10252,7 +10252,7 @@ n
 =
 b
 n
-+ dim
++dim
 B
 n
 
@@ -10269,10 +10269,10 @@ d
 =
 b
 d
-+ dim
++dim
 B
 d
-, wob ei
+, wobei
 dim
 B
 d
@@ -10347,7 +10347,7 @@ k
 (dim
 Z
 k
-+ dim
++dim
 B
 k
 
@@ -10428,7 +10428,7 @@ k
 k
 b
 k
-+ (
++(
 
 1)
 d
@@ -10461,7 +10461,7 @@ k
 k
 b
 k
-+ (
++(
 
 1)
 d
@@ -10480,10 +10480,10 @@ b
 k
 44
 2.3. SIMPLIZIALKOMPLEX
-Übungsaufgab en
-Aufgab e 7 (Zusammenhang)
+Übungsaufgaben
+Aufgabe 7 (Zusammenhang)
 (a)
-Beweisen Sie, dass eine top ologische Mannigfaltigkeit genau dann wegzusammenhän-
+Beweisen Sie, dass eine topologische Mannigfaltigkeit genau dann wegzusammenhän-
 gend ist, wenn sie zusammenhängend ist
 (b)
 Betrachten Sie nun wie in
@@ -10492,11 +10492,11 @@ Betrachten Sie nun wie in
 X
 := (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 1
 ;
@@ -10504,10 +10504,10 @@ g
 2
 g
 versehen
-mit der dort de˝nierten Top ologie. Ist
+mit der dort de˝nierten Topologie. Ist
 X
 wegzusammenhängend?
-3 Fund amentalgrupp e und Üb erlagerungen
+3 Fundamentalgruppe und Überlagerungen
 3.1 Homotopie von Wegen
 a
 b
@@ -10523,7 +10523,7 @@ und
 2
 sind homotop,
 da man sie zueinander ver-
-schi eb en kann.
+schieben kann.
 a
 b
 
@@ -10549,14 +10549,14 @@ und
 De˝nition 42
 Sei
 X
-ein top ologischer Raum,
-a; b
+ein topologischer Raum,
+a;b
 2
 X
 ,
 
 1
-; 
+;
 2
 :
 I
@@ -10627,13 +10627,13 @@ I
 und
 H
 (0
-; s
+;s
 ) =
 a
 und
 H
 (1
-; s
+;s
 ) =
 b
 für alle
@@ -10659,14 +10659,14 @@ und
 Bemerkung 40
 Sei
 X
-ein top ologischer Raum,
-a; b
+ein topologischer Raum,
+a;b
 2
 X
 ,
 
 1
-; 
+;
 2
 :
 I
@@ -10692,14 +10692,14 @@ s
 :
 I
 !
-X ; 
+X; 
 s
 (
 t
 ) =
 H
 (
-t; s
+t;s
 )
 ist Weg in
 X
@@ -10717,20 +10717,20 @@ H
 ist stetig, also ist
 H
 (
-t; s
+t;s
 )
-insb esondere für jedes feste
+insbesondere für jedes feste
 s
 stetig. Da
 H
 (0
-; s
+;s
 ) =
 a
 und
 H
 (1
-; s
+;s
 ) =
 b
 für alle
@@ -10774,7 +10774,7 @@ Beweis:
 re˛exiv:
 H
 (
-t; s
+t;s
 ) =
 
 (
@@ -10782,7 +10782,7 @@ t
 )
 für alle
 (
-t; s
+t;s
 )
 2
 I
@@ -10793,7 +10793,7 @@ symmetrisch:
 H
 0
 (
-t; s
+t;s
 ) =
 H
 (
@@ -10804,7 +10804,7 @@ s
 )
 für alle
 (
-t; s
+t;s
 )
 2
 I
@@ -10833,7 +10833,7 @@ nach
 Dann sei
 H
 (
-t; s
+t;s
 ) :=
 (
 H
@@ -10900,7 +10900,7 @@ T
 .
 
 1
-; 
+;
 2
 und
 
@@ -10969,7 +10969,7 @@ I
 .
 H
 (
-t; s
+t;s
 ) := (1
 
 s
@@ -11006,7 +11006,7 @@ I
 Bemerkung 42
 Sei
 X
-ein top ologischer Raum,
+ein topologischer Raum,
 
 :
 I
@@ -11024,7 +11024,7 @@ stetig mit
 ,
 '
 (1) = 1
-. D ann sind
+. Dann sind
 
 und
 
@@ -11035,7 +11035,7 @@ Beweis:
 Sei
 H
 (
-t; s
+t;s
 ) =
 
 ((1
@@ -11074,14 +11074,14 @@ t
 ))
 ; H
 (0
-; s
+;s
 ) =
 
 (0)
 und
 H
 (1
-; s
+;s
 ) =
 
 (1
@@ -11115,7 +11115,7 @@ De˝nition 43
 Seien
 
 1
-; 
+;
 2
 Wege in
 X
@@ -11158,7 +11158,7 @@ t
 1
 ein Weg in
 X
-. E r heiÿt
+. Er heiÿt
 zusammengesetzter Weg
 und man schreibt
 
@@ -11329,14 +11329,14 @@ t
 Bemerkung 44
 Sei
 X
-ein top ologischer Raum,
-a; b; c
+ein topologischer Raum,
+a;b;c
 2
 X
 ,
 
 1
-; 
+;
 0
 1
 Wege von
@@ -11346,7 +11346,7 @@ b
 und
 
 2
-; 
+;
 0
 2
 Wege von
@@ -11423,13 +11423,13 @@ i
 Dann ist
 H
 (
-t; s
+t;s
 ) :=
 (
 H
 1
 (2
-t; s
+t;s
 )
 falls
 0
@@ -11448,7 +11448,7 @@ H
 t
 
 1
-; s
+;s
 )
 falls
 1
@@ -11472,11 +11472,11 @@ und
 0
 2
 .
-Eine sp ezielle Homotopieäquivalenz sind sog. Deformationsretraktionen:
+Eine spezielle Homotopieäquivalenz sind sog. Deformationsretraktionen:
 De˝nition 44
 Sei
 X
-ein top ologischer Raum,
+ein topologischer Raum,
 A
 
 X
@@ -11552,7 +11552,7 @@ S
 1
 
 R
-ein top ologischer Raum und
+ein topologischer Raum und
 r
 :
 S
@@ -11562,7 +11562,7 @@ R
 !
 S
 1
- f
+f
 0
 g
 ˘
@@ -11572,7 +11572,7 @@ S
 mit
 r
 (
-x; y
+x;y
 ) := (
 x;
 0)
@@ -11603,7 +11603,7 @@ S
 
 R
 (
-x; y
+x;y
 )
 7!
 (
@@ -11624,13 +11624,13 @@ S
 
 R
 (
-x; y ; t
+x;y;t
 )
 7!
 (
-x; ty
+x;ty
 )
-3.2 Fund amentalgrupp e
+3.2 Fundamentalgruppe
 Für einen Weg
 
 sei
@@ -11643,7 +11643,7 @@ Homotopieklasse
 De˝nition 45
 Sei
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 x
 2
 X
@@ -11651,7 +11651,7 @@ X
 ˇ
 1
 (
-X ; x
+X;x
 ) :=
 f
 [
@@ -11691,11 +11691,11 @@ wird
 ˇ
 1
 (
-X ; x
+X;x
 )
-zu einer Grupp e. Diese Grupp e heiÿt
+zu einer Gruppe. Diese Gruppe heiÿt
 Funda-
-mentalgrupp e
+mentalgruppe
 von
 X
 im Basispunkt
@@ -11706,7 +11706,7 @@ Im
 R
 2
 gibt es nur eine Homotopieklasse.
-Beweis: (Fundamentalgrupp e ist eine Grupp e)
+Beweis: (Fundamentalgruppe ist eine Gruppe)
 a)
  Abgeschlossenheit folgt direkt aus der De˝nition von
 
@@ -11721,7 +11721,7 @@ e
 
 0
 ]
-; 
+;
 0
 (
 t
@@ -11830,30 +11830,30 @@ Z
 ˘
 =
 Z
-. Dab ei ist
+. Dabei ist
 
 (
 t
 ) =
 e
 2
-ˇ i t
+ˇit
 =
 cos
 (2
-ˇ t
-) +
+ˇt
+)+
 i
 sin
 (2
-ˇ t
+ˇt
 )
 und
 
 k
 :=
 
-    
+
 
 |
 {z
@@ -11880,7 +11880,7 @@ R
 (
 R
 2
-; x
+;x
 ) =
 f
 e
@@ -11896,7 +11896,7 @@ R
 (
 R
 n
-; x
+;x
 ) =
 f
 e
@@ -11923,7 +11923,7 @@ y
 G
 auch die Strecke
 [
-x; y
+x;y
 ]
 
 G
@@ -11937,7 +11937,7 @@ ist
 ˇ
 1
 (
-G; x
+G;x
 ) =
 f
 e
@@ -11953,7 +11953,7 @@ Abbildung 3.6
 (
 S
 2
-; x
+;x
 0
 ) =
 f
@@ -11967,14 +11967,14 @@ f
 e
 g
 sind. Mithilfe der stereogra-
-phischen Pro jektion kann von
+phischen Projektion kann von
 S
 2
 auf den
 R
 2
 abgebildet werden.
-Dieses Argument funktioniert nicht mehr b ei ˛ächenfüllenden Wegen, d. h. wenn
+Dieses Argument funktioniert nicht mehr bei ˛ächenfüllenden Wegen, d. h. wenn
 
 :
 I
@@ -11985,8 +11985,8 @@ surjektiv ist.
 Bemerkung 46
 Sei
 X
-ein top ologischer Raum,
-a; b
+ein topologischer Raum,
+a;b
 2
 X
 ,
@@ -12006,13 +12006,13 @@ Dann ist die Abbildung
 ˇ
 1
 (
-X ; a
+X;a
 )
 !
 ˇ
 1
 (
-X ; b
+X;b
 ) [
 
 ]
@@ -12024,7 +12024,7 @@ X ; b
 
 
 ]
-ein Grupp enisomorphismus.
+ein Gruppenisomorphismus.
 50
 3.2. FUNDAMENTALGRUPPE
 a
@@ -12104,7 +12104,7 @@ Beweis:
 2
 ])
 De˝nition 46
-Ein wegzusammenhängender top ologischer Raum
+Ein wegzusammenhängender topologischer Raum
 X
 heiÿt
 einfach zusammenhängend
@@ -12113,7 +12113,7 @@ wenn
 ˇ
 1
 (
-X ; x
+X;x
 ) =
 f
 e
@@ -12127,7 +12127,7 @@ Wenn
 ˇ
 1
 (
-X ; x
+X;x
 ) =
 f
 e
@@ -12145,8 +12145,8 @@ X
 .
 Bemerkung 47
 Es seien
-X ; Y
-top ologische Räume,
+X;Y
+topologische Räume,
 f
 :
 X
@@ -12155,7 +12155,7 @@ Y
 eine stetige Abbildung,
 x
 2
-X ; y
+X;y
 :=
 f
 (
@@ -12172,13 +12172,13 @@ f
 ˇ
 1
 (
-X ; x
+X;x
 )
 !
 ˇ
 1
 (
-Y ; y
+Y;y
 )
 ;
 [
@@ -12190,12 +12190,12 @@ f
 
 
 ]
-ein Grupp enhomomor-
+ein Gruppenhomomor-
 phismus.
 b)
 Ist
 Z
-ein weiterer top ologischer Raum und
+ein weiterer topologischer Raum und
 g
 :
 Y
@@ -12226,13 +12226,13 @@ f
 ˇ
 1
 (
-X ; x
+X;x
 )
 !
 ˇ
 1
 (
-Z ; z
+Z;z
 )
 Beweis:
 a)
@@ -12241,9 +12241,9 @@ f
 ist wohlde˝niert: Seien
 
 1
-; 
+;
 2
-homotop e Wege von
+homotope Wege von
 x
 . z.Z.:
 f
@@ -12287,11 +12287,11 @@ t
 ;
 H
 (0
-; s
+;s
 ) =
 H
 (1
-; s
+;s
 ) =
 x
 .
@@ -12447,7 +12447,7 @@ S
 !
 R
 2
-ist injektiv, ab er
+ist injektiv, aber
 f
 
 :
@@ -12480,17 +12480,17 @@ R
 !
 S
 1
-; t
+;t
 7!
 (
 cos
 2
-ˇ t;
+ˇt;
 sin
 2
-ˇ t
+ˇt
 )
-ist surjektiv, ab er
+istsurjektiv,aber
 f
 
 :
@@ -12523,8 +12523,8 @@ f
 X
 !
 Y
-ein Homö omorphismus zwischen top ologischen Räumen
-X ; Y
+ein Homöomorphismus zwischen topologischen Räumen
+X;Y
 . Dann gilt:
 f
 
@@ -12532,13 +12532,13 @@ f
 ˇ
 1
 (
-X ; x
+X;x
 )
 !
 ˇ
 1
 (
-Y ; f
+Y;f
 (
 x
 ))
@@ -12592,7 +12592,7 @@ id
 ˇ
 1
 (
-Y ;f
+Y;f
 (
 X
 )
@@ -12607,20 +12607,20 @@ id
 ˇ
 1
 (
-X ;x
+X;x
 )
 .
 De˝nition 47
 Seien
-X ; Y
-top ologische Räume,
+X;Y
+topologische Räume,
 x
 0
 2
-X ; y
+X;y
 0
 2
-Y ; f ; g
+Y;f;g
 :
 X
 !
@@ -12686,7 +12686,7 @@ H
 (
 x
 0
-; s
+;s
 ) =
 y
 0
@@ -12710,14 +12710,14 @@ g
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 !
 ˇ
 1
 (
-Y ; y
+Y;y
 0
 )
 .
@@ -12737,7 +12737,7 @@ x
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 .
@@ -12757,9 +12757,9 @@ I
 
 I
 !
-Y ;
+Y;
 (
-t; s
+t;s
 )
 7!
 H
@@ -12768,7 +12768,7 @@ H
 (
 t
 )
-; s
+;s
 )
 . Dann gilt:
 H
@@ -12797,19 +12797,19 @@ I
 H
 
 (1
-; s
+;s
 ) =
 H
 (
 
 (1)
-; s
+;s
 ) =
 H
 (
 x
 0
-; s
+;s
 ) =
 y
 0
@@ -12845,7 +12845,7 @@ f
 :
 X
 !
-Y ; g
+Y;g
 :
 Y
 !
@@ -12924,9 +12924,9 @@ I
 !
 R
 2
-; H
+;H
 (
-x; s
+x;s
 ) = (1
 
 s
@@ -12954,18 +12954,18 @@ x;
 ,
 H
 (0
-; s
+;s
 ) = 0
 8
 s
 2
 I
 .
-Satz 3.1 (Satz von Seifert und van Kamp en light)
+Satz 3.1 (Satz von Seifert und van Kampen light)
 Sei
 X
-ein top ologischer Raum,
-U; V
+ein topologischer Raum,
+U;V
 
 X
 o˙en mit
@@ -12984,7 +12984,7 @@ Dann wird
 ˇ
 1
 (
-X ; x
+X;x
 )
 für
 x
@@ -12996,7 +12996,7 @@ erzeugt von geschlossenen Wegen um
 x
 , die ganz in
 U
-o der ganz in
+oder ganz in
 V
 verlaufen.
 52
@@ -13010,15 +13010,15 @@ I
 X
 ein geschlossener Weg um
 x
-. Üb erdecke
+. Überdecke
 I
 mit endlich vielen o˙enen
 Intervallen
 I
 1
-; I
+;I
 2
-; : : : ; I
+;:::;I
 n
 , die ganz in
 
@@ -13027,7 +13027,7 @@ n
 (
 U
 )
-o der ganz in
+oder ganz in
 
 
 1
@@ -13035,14 +13035,14 @@ o der ganz in
 V
 )
 liegen.
-O. B . d. A. sei
+O. B. d. A. sei
 
 (
 I
 1
 )
 
-U; 
+U;
 (
 I
 2
@@ -13114,7 +13114,7 @@ U
 }
 in
 V
-    
+
 ˙
 n
 
@@ -13135,9 +13135,9 @@ b
 x
 Abbildung 3.8
 :
- Top ologischer Raum
+ Topologischer Raum
 X
-Beispiel 35 (Satz von Seif ert und van Kamp en)
+Beispiel 35 (Satz von Seifert und van Kampen)
 1)
 Sei
 X
@@ -13147,7 +13147,7 @@ wie in
 ˇ
 1
 (
-X ; x
+X;x
 )
 wird frei erzeugt von
 a
@@ -13157,7 +13157,7 @@ b
 ˇ
 1
 (
-U; x
+U;x
 ) =
 h
 a
@@ -13165,10 +13165,10 @@ i
 ˘
 =
 Z
-; ˇ
+;ˇ
 1
 (
-V ; x
+V;x
 ) =
 h
 b
@@ -13176,7 +13176,7 @@ i
 ˘
 =
 Z
-, insb esondere ist
+, insbesondere ist
 a
 
 b
@@ -13192,7 +13192,7 @@ a
 (
 T
 2
-; X
+;X
 )
 wird erzeugt von
 a
@@ -13225,11 +13225,11 @@ a
 b
 ˘
 e
-3.3 Üb erlagerungen
+3.3 Überlagerungen
 De˝nition 48
 Es seien
-X ; Y
-zusammenhängende top ologische Räume und
+X;Y
+zusammenhängende topologische Räume und
 p
 :
 Y
@@ -13239,7 +13239,7 @@ eine stetige Abbil-
 dung.
 p
 heiÿt
-Üb erlagerung
+Überlagerung
 , wenn jedes
 x
 2
@@ -13253,8 +13253,8 @@ x
 )
 
 X
-b esitzt,
-so dass
+besitzt,
+sodass
 p
 
 1
@@ -13282,12 +13282,12 @@ V
 j
 !
 U
-ein Homö omorphismus ist.
+ein Homöomorphismus ist.
 j
 I
 j
 heiÿt
-Grad der Üb erlagerung
+Grad der Überlagerung
 p
 und man schreibt:
 deg
@@ -13307,10 +13307,10 @@ S
 ,
 t
 7!
-(cos 2
-ˇ t;
-sin 2
-ˇ t
+(cos2
+ˇt;
+sin2
+ˇt
 )
 Beispiel 36
 1)
@@ -13418,7 +13418,7 @@ R
 Z
 2
 Bemerkung 50
-Üb erlagerungen sind surjektiv.
+Überlagerungen sind surjektiv.
 Beweis:
 Sei
 p
@@ -13426,11 +13426,11 @@ p
 Y
 !
 X
-eine Üb erlagerung und
+eine Überlagerung und
 x
 2
 X
-b eliebig. D ann existiert eine o˙ene
+beliebig. Dann existiert eine o˙ene
 Umgebung
 U
 (
@@ -13464,7 +13464,7 @@ V
 j
 !
 U
-ist Homö omorphismus.
+ist Homöomorphismus.
 D. h. es existiert ein
 y
 2
@@ -13483,7 +13483,7 @@ x
 x
 2
 X
-b eliebig war und ein
+beliebig war und ein
 y
 2
 Y
@@ -13512,25 +13512,25 @@ Abbildung 3.12
 :
 t
 7!
-(cos 4
-ˇ t;
-sin 4
-ˇ t
+(cos4
+ˇt;
+sin4
+ˇt
 )
 De˝nition 49
 Seien
 (
-X ;
+X;
 T
 X
 )
 ;
 (
-Y ;
+Y;
 T
 Y
 )
-top ologische Räume und
+topologische Räume und
 f
 :
 X
@@ -13558,7 +13558,7 @@ Y
 Beispiel 37 (O˙ene und stetige Abbildungen)
 Sei
 X
-ein top ologischer Raum und seien
+ein topologischer Raum und seien
 f
 i
 :
@@ -13606,8 +13606,8 @@ x
 ) :=
 e
 2
-ˇ i x
-ist eine o˙ene, ab er keine stetige Abbildung (vgl.
+ˇix
+ist eine o˙ene, aber keine stetige Abbildung (vgl.
  Abbildung 1.5
 ).
 3)
@@ -13616,7 +13616,7 @@ f
 (
 x
 ) := 42
-ist eine stetige, ab er keine o˙ene Abbildung.
+ist eine stetige, aber keine o˙ene Abbildung.
 4)
 f
 3
@@ -13636,9 +13636,9 @@ x
 R
 n
 Q
-ist weder stetig no ch o˙en.
+ist weder stetig noch o˙en.
 Bemerkung 51
-Üb erlagerungen sind o˙ene Abbildungen.
+Überlagerungen sind o˙ene Abbildungen.
 Beweis:
 Sei
 y
@@ -13651,7 +13651,7 @@ p
 (
 V
 )
-, so dass
+, sodass
 x
 =
 p
@@ -13671,7 +13671,7 @@ wie in
  und
 V
 j
-die Komp onente von
+die Komponente von
 p
 
 1
@@ -13742,7 +13742,7 @@ ist o˙en.
 De˝nition 50
 Sei
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 M
 
 X
@@ -13764,7 +13764,7 @@ p
 Y
 !
 X
-Üb erlagerung,
+Überlagerung,
 x
 2
 X
@@ -13794,7 +13794,7 @@ a)
  Seien
 y
 1
-; y
+;y
 2
 2
 Y
@@ -13829,7 +13829,7 @@ bzw.
 V
 j
 2
-die Komp onente von
+die Komponente von
 p
 
 1
@@ -13853,7 +13853,7 @@ j
 V
 j
 2
-, weil b eide ein Element aus
+, weil beide ein Element aus
 p
 
 1
@@ -13934,7 +13934,7 @@ b)
 x
 2
 X
-b eliebig, ab er fest.
+beliebig, aber fest.
 Zu zeigen
 :
 8
@@ -13959,7 +13959,7 @@ i
 2
 V
 i
-, so dass gilt:
+, sodass gilt:
 i
 6
 =
@@ -13976,9 +13976,9 @@ j
 Die
 V
 i
-existieren wegen der De˝nition einer Üb erlagerung:
+existieren wegen der De˝nition einer Überlagerung:
 p
-heiÿt Üb erlagerung
+heiÿt Überlagerung
 :
 , 8
 x
@@ -14015,7 +14015,7 @@ p
 j
 V
 i
-ist Homö omorphismus.
+ist Homöomorphismus.
 )
 (
 p
@@ -14039,20 +14039,20 @@ i
 liegen diskret in
 Y
 , da Häufungspunkte unendlich viele Elemente in jeder
-Umgebung b enötigen.
+Umgebung benötigen.
 
-Bemerkung 53 (Eindeutigkeit des Üb erlagerungsgrades)
+Bemerkung 53 (Eindeutigkeit des Überlagerungsgrades)
 Sei
 p
 :
 Y
 !
 X
-Üb erlagerung. Dann gilt:
+Überlagerung. Dann gilt:
 8
 x
 1
-; x
+;x
 2
 2
 X
@@ -14146,14 +14146,14 @@ X
 .
 De˝nition 51
 Es seien
-X ; Y ; Z
-top ologische Räume,
+X;Y;Z
+topologische Räume,
 p
 :
 Y
 !
 X
-eine Üb erlagerung und
+eine Überlagerung und
 f
 :
 Z
@@ -14192,7 +14192,7 @@ Z
 zusammenhängend und
 f
 0
-; f
+;f
 1
 :
 Z
@@ -14280,25 +14280,25 @@ Z
 2
 Abbildung 3.13
 :
-Beim Liften eines Weges bleib en geschlossene Wege im allgemeinen nicht ge-
+Beim Liften eines Weges bleiben geschlossene Wege im allgemeinen nicht ge-
 schlossen
 Sei
 z
 2
-T ; x
+T;x
 =
 f
 (
 z
 )
-; U
+;U
 Umgebung von
 x
 wie in
  De˝nition 48
 ,
 V
-die Komp onente von
+die Komponente von
 p
 
 1
@@ -14428,7 +14428,7 @@ p
 Y
 !
 X
-Üb erlagerung,
+Überlagerung,
 
 :
 I
@@ -14472,8 +14472,8 @@ p
 Y
 !
 X
-Üb erlagerung,
-X ; Y
+Überlagerung,
+X;Y
 wegzusammenhängend.
 p
 stetig und surjektiv, zu
@@ -14502,7 +14502,7 @@ V
 j
 !
 U
-Homö omorphismus.
+Homöomorphismus.
 Bemerkung 55
 Wege in
 X
@@ -14523,27 +14523,27 @@ gibt es genau einen Lift von
 .
 57
 3.3. ÜBERLAGERUNGEN
-Prop osition 3.3
+Proposition 3.3
 Seien
 p
 :
 Y
 !
 X
-eine Üb erlagerung,
-a; b
+eine Überlagerung,
+a;b
 2
 X
 ,
 
 0
-; 
+;
 1
 :
 I
 !
 X
-homotop e Wege von
+homotope Wege von
 a
 nach
 b
@@ -14627,7 +14627,7 @@ t
 7!
 H
 (
-t; s
+t;s
 )
 .
 Sei
@@ -14651,25 +14651,25 @@ I
 
 I
 !
-Y ;
+Y;
 ~
 H
 (
-t; s
-) := ( ~
+t;s
+) := (~
 
 s
 (
 t
 )
-; s
+;s
 )
 Dann gilt:
 (i)
 ~
 H
 ist stetig (Beweis wie für
- B emerkung 54
+ Bemerkung 54
 )
 (ii)
 ~
@@ -14697,7 +14697,7 @@ t
 ~
 H
 (0
-; s
+;s
 ) = ~
 
 s
@@ -14707,7 +14707,7 @@ a
 ~
 H
 (1
-; s
+;s
 )
 2
 p
@@ -14734,7 +14734,7 @@ s
 ~
 H
 (1
-; s
+;s
 ) =
 ~
 H
@@ -14773,11 +14773,11 @@ p
 Y
 !
 X
-eine Üb erlagerung,
+eine Überlagerung,
 x
 0
 2
-X ; y
+X;y
 0
 2
 p
@@ -14794,14 +14794,14 @@ p
 ˇ
 1
 (
-Y ; y
+Y;y
 0
 )
 !
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 ist injektiv
@@ -14810,7 +14810,7 @@ b)
 ˇ
 1
 (
-X ; x
+X;x
 0
 ) :
 p
@@ -14819,9 +14819,9 @@ p
 ˇ
 1
 (
-Y ; y
+Y;y
 0
-))] = de g (
+))] = deg(
 p
 )
 Beweis:
@@ -14837,7 +14837,7 @@ y
 und
 p
 
-([ ~
+([~
 
 ]) =
 e
@@ -14851,7 +14851,7 @@ p
 x
 0
 Nach
- Prop osition 3.3
+ Proposition 3.3
  ist dann
 ~
 
@@ -14868,7 +14868,7 @@ y
 y
 0
 )
-[ ~
+[~
 
 ] =
 e
@@ -14889,9 +14889,9 @@ x
 f
 y
 0
-; y
+;y
 1
-; : : : ; y
+;:::;y
 d
 
 1
@@ -14919,7 +14919,7 @@ y
 2 f
 y
 0
-; : : : ; y
+;:::;y
 d
 
 1
@@ -14932,14 +14932,14 @@ hängt nur von
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 ab.
 Für geschlossene Wege
 
 0
-; 
+;
 1
 um
 x
@@ -14952,7 +14952,7 @@ gilt:
 1
 (1)
 ,
-[ ~
+[~
 
 0
 
@@ -14966,7 +14966,7 @@ gilt:
 ˇ
 1
 (
-Y ; y
+Y;y
 0
 )
 ,
@@ -14986,7 +14986,7 @@ p
 ˇ
 1
 (
-Y ; y
+Y;y
 0
 ))
 ,
@@ -14999,14 +14999,14 @@ und
 
 1
 ]
-liegen in der selb en Neb enklasse bzgl.
+liegen in der selben Nebenklasse bzgl.
 p
 
 (
 ˇ
 1
 (
-Y ; y
+Y;y
 0
 ))
 58
@@ -15015,7 +15015,7 @@ Zu
 i
 2 f
 0
-; : : : ; d
+;:::;d
 
 1
 g
@@ -15054,7 +15054,7 @@ i
 mit
 i
 = 0
-; : : : ; d
+;:::;d
 
 1
 ist
@@ -15069,7 +15069,7 @@ für ein
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 .
@@ -15080,12 +15080,12 @@ p
 Y
 !
 X
-Üb erlagerung und
+Überlagerung und
 X
 einfach zusammenhängend.
 Dann ist
 p
-ein Homö omorphismus.
+ein Homöomorphismus.
 Beweis:
 Wegen
  Bemerkung 55.a
@@ -15095,7 +15095,7 @@ einfach zusammenhängend und wegen
  Bemer-
 kung 55.b
  ist
-deg (
+deg(
 p
 ) = 1
 ,
@@ -15113,10 +15113,10 @@ p
 ist stetig.
 )
 p
-ist Homö omorphismus.
+ist Homöomorphismus.
 
 De˝nition 52
-Eine Üb erlagerung
+Eine Überlagerung
 p
 :
 ~
@@ -15129,17 +15129,17 @@ universell
 ~
 X
 einfach zusammenhängend ist.
-Beispiel 38 (Universelle Üb erlagerungen)
+Beispiel 38 (Universelle Überlagerungen)
 R
 !
 S
 1
 ; t
 7!
-(cos 2
-ˇ t;
-sin 2
-ˇ t
+(cos2
+ˇt;
+sin2
+ˇt
 )
 R
 2
@@ -15171,24 +15171,24 @@ p
 X
 !
 X
-eine universelle Üb erlagerung,
+eine universelle Überlagerung,
 q
 :
 Y
 !
 X
-weitere Üb erlagerung.
+weitere Überlagerung.
 Sei
 x
 0
 2
-X ;
+X;
 ~
 x
 0
 2
 ~
-X ; y
+X;y
 0
 2
 Y
@@ -15207,7 +15207,7 @@ x
 0
 )
 .
-Dann gibt es genau eine Üb erlagerung
+Dann gibt es genau eine Überlagerung
 ~
 p
 :
@@ -15230,7 +15230,7 @@ Sei
 z
 2
 ~
-X ; 
+X;
 z
 :
 I
@@ -15286,7 +15286,7 @@ z
 ab.
 O˙ensichtlich ist
 q
-( ~
+(~
 p
 (
 z
@@ -15331,7 +15331,7 @@ z
 )
 
 d
-( ~
+(~
 p
 (
 z
@@ -15355,14 +15355,14 @@ q
 (
 U
 )
-die Komp onente, die
+die Komponente, die
 ~
 p
 (
 z
 )
 enthält.
-O. B . d. A. sei
+O. B. d. A. sei
 V
 
 W
@@ -15438,19 +15438,19 @@ q
 Y
 !
 X
-universelle Üb erlagerungen, so sind
+universelle Überlagerungen, so sind
 ~
 X
 und
 ~
 Y
-homö omorph.
+homöomorph.
 Beweis:
 Seien
 x
 0
 2
-X ;
+X;
 ~
 x
 0
@@ -15483,7 +15483,7 @@ Y
 .
 Nach
  Satz 3.5
- gibt es genau eine Üb erlagerung
+ gibt es genau eine Überlagerung
 f
 :
 ~
@@ -15505,7 +15505,7 @@ q
 f
 =
 p
-und genau eine Üb erlagerung
+und genau eine Überlagerung
 g
 :
 ~
@@ -15515,7 +15515,7 @@ Y
 X
 mit
 g
-( ~
+(~
 y
 0
 ) = ~
@@ -15604,14 +15604,14 @@ id
 Y
 .
 
-Die Frage, wann es eine universelle Üb erlagerung gibt, b eantwortet der folgende Satz:
+Die Frage, wann es eine universelle Überlagerung gibt, beantwortet der folgende Satz:
 De˝nition 53
 Sei
 (
-X ;
+X;
 T
 )
-ein top ologischer Raum und
+ein topologischer Raum und
 x
 2
 X
@@ -15619,22 +15619,22 @@ X
 U
 
 T
-heiÿt eine
+heiÿteine
 Umgebungsbasis
 von
 x
-, wenn jede o˙ene Umgebung von
+,wennjedeo˙eneUmgebungvon
 x
-eine Teilmenge
+eineTeilmenge
 von
 U
 enthält.
 Satz 3.7
 Es sei
 X
-ein wegzusammenhängender top ologischer Raum in dem jeder Punkt eine
+ein wegzusammenhängender topologischer Raum in dem jeder Punkt eine
 Umgebungsbasis aus einfach zusammenhängenden Mengen hat.
-Dann gibt es eine universelle Üb erlagerung.
+Dann gibt es eine universelle Überlagerung.
 Beweis:
 Sei
 x
@@ -15654,7 +15654,7 @@ x;
 j
 x
 2
-X ; 
+X;
 Weg von
 x
 o
@@ -15667,7 +15667,7 @@ p
 ~
 X
 !
-X ;
+X;
 (
 x;
 [
@@ -15676,7 +15676,7 @@ x;
 7!
 x
 .
-Die Top ologie auf
+Die Topologie auf
 ~
 X
 ist folgende: De˝niere eine Umgebungsbasis von
@@ -15703,7 +15703,7 @@ x;
 ]) :=
 f
 (
-y ;
+y;
 [
 
 
@@ -15712,7 +15712,7 @@ y ;
 j
 y
 2
-U; 
+U;
 Weg in
 U
 von
@@ -15721,7 +15721,7 @@ nach
 y
 g
 p
-ist Üb erlagerung:
+ist Überlagerung:
 p
 j
 ~
@@ -15738,11 +15738,11 @@ p
 j
 ~
 U
-ein Homö omorphismus.
+ein Homöomorphismus.
 Sind
 
 1
-; 
+;
 2
 Wege von
 x
@@ -15792,7 +15792,7 @@ x;
 2
 . Also ist
 p
-eine Üb erlagerung.
+eine Überlagerung.
 ~
 X
 ist einfach zusammenhängend: Es sei
@@ -15802,7 +15802,7 @@ x
 := (
 x
 0
-; e
+;e
 )
 und
 ~
@@ -15822,20 +15822,20 @@ Sei
 
 :=
 p
-( ~
+(~
 
 )
 .
 Annahme
 :
-[ ~
+[~
 
 ]
 6
 =
 e
 Mit
- B emerkung 55.a
+ Bemerkung 55.a
  folgt dann:
 [
 
@@ -15876,13 +15876,13 @@ p
 Y
 !
 X
-eine Üb erlagerung und
+eine Überlagerung und
 f
 :
 Y
 !
 Y
-ein Homö omorphismus.
+ein Homöomorphismus.
 a)
 f
 heiÿt
@@ -15904,9 +15904,9 @@ p
 Y
 !
 X
-bilden mit der Verkettung eine Grupp e,
+bilden mit der Verkettung eine Gruppe,
 die sog.
-Decktransformationsgrupp e
+Decktransformationsgruppe
 . Man schreibt:
 Deck
 (
@@ -15915,9 +15915,9 @@ p
 ,
 Deck
 (
-Y =X
+Y=X
 )
-o der
+oder
 Deck(
 Y
 !
@@ -15931,7 +15931,7 @@ regulär
 , wenn
 j
 Deck(
-Y =X
+Y=X
 )
 j
 = deg
@@ -15940,16 +15940,16 @@ gilt.
 Bemerkung 57 (Eigenschaften der Decktransformation)
 a)
 (Deck
-Y =X ;
+Y=X;
 
 )
-ist eine Grupp e
+ist eine Gruppe
 b)
  Ist
 f
 2
 Deck(
-Y =X
+Y=X
 )
 und
 f
@@ -15961,7 +15961,7 @@ keinen Fixpunkt.
 c)
 j
 Deck(
-Y =X
+Y=X
 )
 j 
 deg
@@ -15969,7 +15969,7 @@ p
 d)
 Ist
 f
-eine reguläre Üb erlagerung, dann gilt:
+eine reguläre Überlagerung, dann gilt:
 8
 x
 2
@@ -15977,9 +15977,9 @@ X
 :
 Deck
 (
-Y =X
+Y=X
 )
-op eriert transitiv
+operiert transitiv
 auf der Menge der Urbilder
 f
 
@@ -15996,13 +15996,13 @@ id
 Y
 2
 Deck
-Y =X
+Y=X
 ,
 
-f ; g
+f;g
 2
 Deck
-Y =X
+Y=X
 )
 p
 
@@ -16027,12 +16027,12 @@ f
 g
 2
 Deck
-Y =X
+Y=X
 
 f
 2
 Deck
-Y =X
+Y=X
 )
 p
 
@@ -16071,7 +16071,7 @@ f
 1
 2
 Deck
-Y =X
+Y=X
 b)
  Die Menge
 Fix(
@@ -16102,7 +16102,7 @@ f
 (
 y
 )
-; y
+;y
 )
 . Auÿerdem ist
 Fix
@@ -16137,7 +16137,7 @@ p
 (
 U
 )
-die Komp onente, die
+die Komponente, die
 y
 enthält;
 also
@@ -16146,7 +16146,7 @@ p
 V
 !
 U
-ein Homö omorphismus. Dann ist
+ein Homöomorphismus. Dann ist
 W
 :=
 f
@@ -16246,7 +16246,7 @@ x
 f
 y
 0
-; : : : ; y
+;:::;y
 d
 
 1
@@ -16256,7 +16256,7 @@ f
 2
 Deck
 (
-Y =X
+Y=X
 )
 ist
 f
@@ -16267,7 +16267,7 @@ y
 f
 y
 0
-; : : : ; y
+;:::;y
 d
 
 1
@@ -16277,16 +16277,16 @@ Zu
 i
 2 f
 0
-; : : : ; d
+;:::;d
 
 1
 g
-gibt es hö chstens ein
+gibt es höchstens ein
 f
 2
 Deck
 (
-Y =X
+Y=X
 )
 mit
 f
@@ -16391,7 +16391,7 @@ n
 n
 (
 R
-) : De ck(
+) : Deck(
 S
 n
 =
@@ -16413,8 +16413,8 @@ Z
 Z
 61
 3.3. ÜBERLAGERUNGEN
-Nun werden wir eine Verbindung zwischen der Decktransformationsgrupp e und der Fundamen-
-talgrupp e herstellen:
+Nun werden wir eine Verbindung zwischen der Decktransformationsgruppe und der Fundamen-
+talgruppe herstellen:
 Satz 3.8
 Ist
 p
@@ -16423,17 +16423,17 @@ p
 X
 !
 X
-eine universelle Üb erlagerung, so gilt:
+eine universelle Überlagerung, so gilt:
 Deck(
 ~
-X =X
+X=X
 )
 ˘
 =
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 8
@@ -16466,7 +16466,7 @@ x=x
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 die Abbildung, die
@@ -16478,7 +16478,7 @@ p
 
 f
 )]
-abbildet, wob ei
+abbildet, wobei
 
 f
 ein Weg von
@@ -16498,19 +16498,19 @@ x
 einfach zusammenhängend ist, ist
 
 f
-bis auf Homotopie eindeutig b estimmt und damit auch
+bis auf Homotopie eindeutig bestimmt und damit auch
 ˆ
 wohlde˝niert.
 
 ˆ
-ist Grupp enhomomorphismus
+ist Gruppenhomomorphismus
 : Seien
-f ; g
+f;g
 2
 Deck
 (
 ~
-X =X
+X=X
 )
 )
 
@@ -16625,7 +16625,7 @@ ist surjektiv
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 ,
@@ -16650,7 +16650,7 @@ x
 1
 .
 p
-ist reguläre Üb erlagerung
+ist reguläre Überlagerung
 : Seien
 ~
 x
@@ -16678,7 +16678,7 @@ x
 . Nach
  Satz 3.5
  gibt
-es genau eine Üb erlagerung
+es genau eine Überlagerung
 ~
 p
 :
@@ -16710,15 +16710,15 @@ p
 eine
 Decktransformation und damit
 p
-eine reguläre Üb erlagerung.
+eine reguläre Überlagerung.
 Da
 p
-reguläre Üb erlagerung ist, gibt es ein
+reguläre Überlagerung ist, gibt es ein
 f
 2
 Deck(
 ~
-X =X
+X=X
 )
 mit
 f
@@ -16743,7 +16743,7 @@ f
 ) =
 
 
-Beispiel 40 (Besti mmung von
+Beispiel 40 (Bestimmung von
 ˇ
 1
 (
@@ -16763,12 +16763,12 @@ t
 (
 cos
 2
-ˇ t;
+ˇt;
 sin
 2
-ˇ t
+ˇt
 )
-ist universelle Üb erlagerung, da
+ist universelle Überlagerung, da
 R
 zusammenhängend ist.
 Für
@@ -16782,7 +16782,7 @@ n
 R
 !
 R
-; t
+;t
 7!
 t
 +
@@ -16817,19 +16817,19 @@ R
 , d. h.
 f
 n
-ist D ecktransformation.
+ist Decktransformation.
 Ist umgekehrt
 g
-irgendeine Decktransformation, so gilt insb esondere für
+irgendeine Decktransformation, so gilt insbesondere für
 t
 = 0
 :
 (cos(2
-ˇ g
+ˇg
 (0))
 ;
 sin(2
-ˇ g
+ˇg
 (0))) = (
 p
 
@@ -16850,7 +16850,7 @@ n
 . Da auch
 f
 n
-(0) = 0 +
+(0) = 0+
 n
 =
 n
@@ -16898,18 +16898,18 @@ R
 Z
 62
 3.4. GRUPPENOPERATIONEN
-3.4 Grupp enop erationen
+3.4 Gruppenoperationen
 De˝nition 55
 Sei
 (
 G;
 
 )
-eine Grupp e und
+eine Gruppe und
 X
 eine Menge.
 Eine
-Grupp enop eration
+Gruppenoperation
 von
 G
 auf
@@ -16951,7 +16951,7 @@ h
 x
 )
 8
-g ; h
+g;h
 2
 G
 8
@@ -16965,10 +16965,10 @@ G
 Z
 ;
 +)
-; X
+;X
 =
 R
-; n
+;n
 
 x
 =
@@ -16977,7 +16977,7 @@ x
 n
 2)
 G
-op eriert auf
+operiert auf
 X
 =
 G
@@ -16991,7 +16991,7 @@ g
 h
 3)
 G
-op eriert auf
+operiert auf
 X
 =
 G
@@ -17085,9 +17085,9 @@ h
 De˝nition 56
 Sei
 G
-eine Grupp e,
+eine Gruppe,
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 
 :
 G
@@ -17095,10 +17095,10 @@ G
 X
 !
 X
-eine Grupp enop eration.
+eine Gruppenoperation.
 a)
 G
-op eriert durch Homö omorphismen
+operiert durch Homöomorphismen
 , wenn für jedes
 g
 2
@@ -17109,16 +17109,16 @@ g
 :
 X
 !
-X ; x
+X;x
 7!
 g
 
 x
-ein Homö omorphismus ist.
+ein Homöomorphismus ist.
 b)
  Ist
 G
-eine top ologische Grupp e, so heiÿt die Grupp enop eration
+eine topologische Gruppe, so heiÿt die Gruppenoperation
 
 stetig
 , wenn
@@ -17132,7 +17132,7 @@ g
 ist stetig
 gilt.
 Bemerkung 58
-Jede stetige Grupp enop eration ist eine Grupp enop eration durch Homö omorphismen.
+Jede stetige Gruppenoperation ist eine Gruppenoperation durch Homöomorphismen.
 Beweis:
 Nach Voraussetzung ist
 m
@@ -17146,7 +17146,7 @@ X
 :
 X
 !
-X ; x
+X;x
 7!
 g
 
@@ -17222,30 +17222,30 @@ x
 Beispiel 42
 In Beispiel
  41.1
- op eriert
+ operiert
 Z
-durch Homö omorphismen.
+durch Homöomorphismen.
 63
 3.4. GRUPPENOPERATIONEN
 Bemerkung 59
 Sei
 G
-eine Grupp e und
+eine Gruppe und
 X
 eine Menge.
 a)
-Die Grupp enop eration von
+DieGruppenoperationvon
 G
 auf
 X
-entsprechen bijektiv den Grupp enhomomorphismen
+entsprechenbijektivdenGruppenhomomorphismen
 %
 :
 G
 !
 Perm(
 X
-) = Sym (
+) = Sym(
 X
 ) =
 f
@@ -17261,11 +17261,11 @@ g
 b)
 Ist
 X
-ein top ologischer Raum, so entsprechen dab ei die Grupp enop erationen durch
-Homö omorphismus den Grupp enhomomorphismen
+ein topologischer Raum, so entsprechen dabei die Gruppenoperationen durch
+Homöomorphismus den Gruppenhomomorphismen
 G
 !
-Homö o
+Homöo
 (
 X
 )
@@ -17278,7 +17278,7 @@ G
 X
 !
 X
-eine Grupp enop eration von
+eine Gruppenoperation von
 G
 auf
 X
@@ -17304,7 +17304,7 @@ x
 8
 g
 2
-G; x
+G;x
 2
 X
 , also
@@ -17418,7 +17418,7 @@ Perm
 (
 X
 )
-Grupp enhomomorphismus. De˝niere
+Gruppenhomomorphismus. De˝niere
 
 :
 G
@@ -17535,14 +17535,14 @@ ein Homomorphismus ist.
 Beispiel 43
 Sei
 X
-ein wegzusammenhängender top ologischer Raum,
+ein wegzusammenhängender topologischer Raum,
 p
 :
 ~
 X
 !
 X
-eine universelle Üb erla-
+eine universelle Überla-
 gerung,
 x
 0
@@ -17564,17 +17564,17 @@ x
 x
 0
 .
-Dann op eriert
+Dann operiert
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 auf
 ~
 X
-durch Homö omorphismen wie folgt:
+durch Homöomorphismen wie folgt:
 Für
 [
 
@@ -17583,7 +17583,7 @@ Für
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 und
@@ -17605,7 +17605,7 @@ x
 
 %
 (1)
-wob ei
+wobei
 ~
 
 ein Weg von
@@ -17650,7 +17650,7 @@ und
 
 
 
-die L iftung von
+die Liftung von
 
 
 
@@ -17699,7 +17699,7 @@ und
 
 0
 homotop.
-Grupp enop eration, denn:
+Gruppenoperation, denn:
 i)
 [
 e
@@ -17779,26 +17779,26 @@ x
 Erinnerung
 :Die Konstruktion aus
  Bemerkung 59
- induziert zu der Grupp enop eration
+ induziert zu der Gruppenoperation
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 aus
  Beispiel 43
- einen Grupp enhomomorphismus
+ einen Gruppenhomomorphismus
 %
 :
 ˇ
 1
 (
-X ; x
+X;x
 0
 )
 !
-Homö o
+Homöo
 (
 X
 )
@@ -17810,11 +17810,11 @@ X
 ˇ
 1
 (
-X ; x
+X;x
 0
 )) = Deck(
 ~
-X =X
+X=X
 )
 =
 n
@@ -17825,7 +17825,7 @@ X
 !
 ~
 X
-Homö omorphismus
+Homöomorphismus
 
 
 
@@ -17862,12 +17862,12 @@ i
 =
 f
 id
-; ˝
+;˝
 g
-op eriert auf
+operiert auf
 S
 2
-durch Homö omorphismen.
+durch Homöomorphismen.
 Frage: Was ist
 S
 2
@@ -17880,15 +17880,15 @@ eine Mannigfaltigkeit?
 4 Euklidische und nichteuklidische
 Geometrie
 De˝nition 57
-Das Trip el
+Das Tripel
 (
-X ; d; G
+X;d;G
 )
 heiÿt genau dann eine
 Geometrie
 , wenn
 (
-X ; d
+X;d
 )
 ein metrischer Raum
 und
@@ -17904,7 +17904,7 @@ G
 die Menge aller
 Geraden
 .
-4.1 Axiome für die euklidische Eb ene
+4.1 Axiome für die euklidische Ebene
 Axiome bilden die Grundbausteine jeder mathematischen Theorie. Eine Sammlung aus Axiomen
 nennt man Axiomensystem. Da der Begri˙ des Axiomensystems so grundlegend ist, hat man
 auch ein paar sehr grundlegende Forderungen an ihn: Axiomensysteme sollen
@@ -17915,21 +17915,21 @@ sein und
 Vollständigkeit
 wäre auch toll. Mit
 Unabhängigkeit ist gemeint, dass kein Axiom sich aus einem anderem herleiten lässt. Dies scheint
-auf den ersten Blick eine einfache Eigenschaft zu sein. Auf den zweiten Blick muss man jedo ch
+auf den ersten Blick eine einfache Eigenschaft zu sein. Auf den zweiten Blick muss man jedoch
 einsehen, dass das Parallelenproblem, also die Frage ob das Parallelenaxiom unabhängig von
-den restlichen Axiomen ist, üb er 2000 Jahre nicht gelöst wurde. Ein ganz anderes Kalib er ist
+den restlichen Axiomen ist, über 2000 Jahre nicht gelöst wurde. Ein ganz anderes Kaliber ist
 die Frage nach der Vollständigkeit. Ein Axiomensystem gilt als Vollständig, wenn jede Aussage
-innerhalb des Systems veri˝zierbar o der falsi˝zierbar ist. Interessant ist hierb ei der Gö delsche
-Unvollständigkeitssatz, der z. B. für die Arithmetik b eweist, dass nicht alle Aussagen formal
-b ewiesen o der widerlegt werden können.
-Kehren wir nun jedo ch zurück zur Geometrie. Euklid hat in seiner Abhandlung Die Elemente
+innerhalb des Systems veri˝zierbar oder falsi˝zierbar ist. Interessant ist hierbei der Gödelsche
+Unvollständigkeitssatz, der z. B. für die Arithmetik beweist, dass nicht alle Aussagen formal
+bewiesen oder widerlegt werden können.
+Kehren wir nun jedoch zurück zur Geometrie. Euklid hat in seiner Abhandlung Die Elemente
 ein Axiomensystem für die Geometrie aufgestellt.
 Euklids Axiome
 
 Strecke
 zwischen je zwei Punkten
 
-Jede Strecke b estimmt genau eine
+Jede Strecke bestimmt genau eine
 Gerade
 
 Kreis
@@ -17939,15 +17939,15 @@ Je zwei rechte Winkel sind gleich (Isometrie, Bewegung)
 
 Parallelenaxiom von Euklid:
 Wird eine Gerade so von zwei Geraden geschnitten, dass die Summe der Innenwinkel
-kleiner als zwei Rechte ist, dann schneiden sich diese Geraden auf der Seite dieser W inkel.
-Man mache sich klar, dass das nur dann nicht der Fall ist, wenn b eide Geraden par-
+kleiner als zwei Rechte ist, dann schneiden sich diese Geraden auf der Seite dieser Winkel.
+Man mache sich klar, dass das nur dann nicht der Fall ist, wenn beide Geraden par-
 allel sind und senkrecht auf die erste stehen.
 De˝nition 58
 Eine
-euklidische Eb ene
+euklidische Ebene
 ist eine Geometrie
 (
-X ; d; G
+X;d;G
 )
 , die Axiome
  
@@ -17972,7 +17972,7 @@ g
 G
 mit
 f
-P ; Q
+P;Q
 g 
 g
 .
@@ -17992,7 +17992,7 @@ G
 
 Abstandsaxiom
 : Zu
-P ; Q; R
+P;Q;R
 2
 X
 gibt es genau dann ein
@@ -18001,7 +18001,7 @@ g
 G
 mit
 f
-P ; Q; R
+P;Q;R
 g 
 g
 ,
@@ -18009,56 +18009,56 @@ wenn gilt:
 
 d
 (
-P ; R
+P;R
 ) =
 d
 (
-P ; Q
-) +
+P;Q
+)+
 d
 (
-Q; R
+Q;R
 )
-o der
+oder
 
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
-P ; R
-) +
+P;R
+)+
 d
 (
-R ; Q
+R;Q
 )
-o der
+oder
 
 d
 (
-Q; R
+Q;R
 ) =
 d
 (
-Q; P
-) +
+Q;P
+)+
 d
 (
-P ; R
+P;R
 )
 De˝nition 59
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie und seien
-P ; Q; R
+P;Q;R
 2
 X
 .
 a)
-P ; Q; R
+P;Q;R
 liegen
 kollinear
 , wenn es
@@ -18067,7 +18067,7 @@ g
 G
 gibt mit
 f
-P ; Q; R
+P;Q;R
 g 
 g
 .
@@ -18080,19 +18080,19 @@ R
 , wenn
 d
 (
-P ; R
+P;R
 ) =
 d
 (
-P ; Q
-) +
+P;Q
+)+
 d
 (
-Q; R
+Q;R
 )
 c)
 Strecke
-P R
+PR
 :=
 f
 Q
@@ -18108,7 +18108,7 @@ g
 d)
 Halbgeraden
 :
-P R
+PR
 +
 :=
 f
@@ -18121,14 +18121,14 @@ liegt zwischen
 P
 und
 R
-o der
+oder
 R
 liegt zwischen
 P
 und
 Q
 g
-P R
+PR
 
 :=
 f
@@ -18144,28 +18144,28 @@ R
 g
 P
 R
-P R
+PR
 
-P R
-P R
+PR
+PR
 +
 Abbildung 4.1
 :
  Halbgeraden
 Bemerkung 60
 a)
-P R
+PR
 +
 [
-P R
+PR
 
 =
-P R
+PR
 b)
-P R
+PR
 +
 \
-P R
+PR
 
 =
 f
@@ -18176,19 +18176,19 @@ a)
  
 
  folgt direkt aus der De˝nition von
-P R
+PR
 +
 und
-P R
+PR
 
 
 
 : Sei
 Q
 2
-P R
+PR
 )
-P ; Q; R
+P;Q;R
 sind kollinear.
 2
 )
@@ -18205,7 +18205,7 @@ R
 )
 Q
 2
-P R
+PR
 R
 liegt zwischen
 P
@@ -18214,7 +18214,7 @@ Q
 )
 Q
 2
-P R
+PR
 P
 liegt zwischen
 Q
@@ -18223,7 +18223,7 @@ R
 )
 Q
 2
-P R
+PR
 b)
  
 
@@ -18231,75 +18231,75 @@ b)
 
 
 : Sei
-P R
+PR
 +
 \
-P R
+PR
 
 . Dann ist
 d
 (
-Q; R
+Q;R
 ) =
 d
 (
-P ; Q
-) +
+P;Q
+)+
 d
 (
-P ; R
+P;R
 )
 weil
 Q
 2
-P R
+PR
 
 und
 ˆ
 d
 (
-P ; R
+P;R
 ) =
 d
 (
-P ; Q
-) +
+P;Q
+)+
 d
 (
-Q; R
+Q;R
 )
-o der
+oder
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
-P ; R
-) +
+P;R
+)+
 d
 (
-R ; Q
+R;Q
 )
 ˙
 67 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 )
 d
 (
-Q; R
+Q;R
 ) = 2
 d
 (
-P ; Q
-) +
+P;Q
+)+
 d
 (
-Q; R
+Q;R
 )
 )
 d
 (
-P ; Q
+P;Q
 ) = 0
 )
 P
@@ -18307,15 +18307,15 @@ P
 Q
 d
 (
-P ; Q
+P;Q
 ) = 2
 d
 (
-P ; R
-) +
+P;R
+)+
 d
 (
-P ; Q
+P;Q
 )
 )
 P
@@ -18347,7 +18347,7 @@ H
 mit
 d
 (
-P ; Q
+P;Q
 ) =
 r
 .
@@ -18366,9 +18366,9 @@ H
 in zwei nichtleere Teilmengen
 H
 1
-; H
+;H
 2
-, so dass
+, sodass
 für alle
 A
 2
@@ -18380,7 +18380,7 @@ B
 H
 j
 mit
-i; j
+i;j
 2 f
 1
 ;
@@ -18402,36 +18402,36 @@ Diese Teilmengen
 H
 i
 heiÿen
-Halb eb enen
+Halbebenen
 bzgl.
 g
 .
 
 Bewegungsaxiom
 : Zu
-P ; Q; P
+P;Q;P
 0
-; Q
+;Q
 0
 2
 X
 mit
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
 P
 0
-; Q
+;Q
 0
 )
 gibt es mindestens
 2 Isometrien
 '
 1
-; '
+;'
 2
 mit
 '
@@ -18469,7 +18469,7 @@ X
 n
 g
 gibt es
-hö chstens ein
+höchstens ein
 h
 2
 G
@@ -18504,15 +18504,15 @@ g
 G
 mit
 g
-\ f
-P ; Q; R
+\f
+P;Q;R
 g
 =
 ;
 und
 g
 \
-P Q
+PQ
 6
 =
 ;
@@ -18520,11 +18520,11 @@ P Q
 Dann ist entweder
 g
 \
-P R
+PR
 6
 =
 ;
-o der
+oder
 g
 \
 QR
@@ -18532,12 +18532,12 @@ QR
 =
 ;
 .
-Dieser Satz b esagt, dass Geraden, die eine Seite eines Dreiecks (also nicht nur eine Ecke)
+Dieser Satz besagt, dass Geraden, die eine Seite eines Dreiecks (also nicht nur eine Ecke)
 schneiden, auch eine weitere Seite schneiden.
 Beweis:
 g
 \
-P Q
+PQ
 6
 =
 ;
@@ -18548,25 +18548,25 @@ ii
 P
 und
 Q
-liegen in verschiedenen Halb eb enen bzgl.
+liegen in verschiedenen Halbebenen bzgl.
 g
 )
 o. B. d. A.
 R
 und
 P
-liegen in verschieden Halb eb enen bzgl.
+liegen in verschieden Halbebenen bzgl.
 g
 )
 g
 \
-R P
+RP
 6
 =
 ;
 Bemerkung 61
 Sei
-P ; Q
+P;Q
 2
 X
 mit
@@ -18575,11 +18575,11 @@ P
 =
 Q
 sowie
-A; B
+A;B
 2
 X
 n
-P Q
+PQ
 mit
 A
 6
@@ -18590,17 +18590,17 @@ A
 und
 B
 in der
-selb en Halb eb ene bzgl.
-P Q
+selben Halbebene bzgl.
+PQ
 sowie
 Q
 und
 B
-in der selb en Halb eb ene bzgl.
-P A
+in der selben Halbebene bzgl.
+PA
 .
 Dann gilt:
-P B
+PB
 +
 \
 AQ
@@ -18616,9 +18616,9 @@ Sei
 P
 0
 2
-P Q
+PQ
 
-; P
+;P
 0
 6
 =
@@ -18629,7 +18629,7 @@ Satz
 1
 ====
 )
-P B
+PB
 schneidet
 AP
 0
@@ -18645,7 +18645,7 @@ P
 Q
 0
 nach
-P Q
+PQ
 und die Isometrie, die zusätzlich an der Gerade durch
 P
 und
@@ -18666,14 +18666,14 @@ Abbildung 4.2
 (i)
 C
 2
-P B
+PB
 +
 , denn
 A
 und
 B
-liegen in derselb en Halb eb ene bzgl.
-P Q
+liegen in derselben Halbebene bzgl.
+PQ
 =
 P
 0
@@ -18686,8 +18686,8 @@ AQ
 .
 (ii)
 C
-liegt in derselb en Halb eb ene bzgl.
-P A
+liegt in derselben Halbebene bzgl.
+PA
 wie
 B
 , weil das für
@@ -18695,8 +18695,8 @@ Q
 gilt.
 AP
 0
-liegt in der anderen Halb eb ene bzgl.
-P A
+liegt in der anderen Halbebene bzgl.
+PA
 )
 C =
 2
@@ -18710,7 +18710,7 @@ AQ
 Da
 C
 2
-P B
+PB
 +
 und
 C
@@ -18722,14 +18722,14 @@ folgt nun direkt:
 f
 C
 g 
-P B
+PB
 +
 \
 AQ
 
 Bemerkung 62
 Seien
-P ; Q
+P;Q
 2
 X
 mit
@@ -18738,31 +18738,31 @@ P
 =
 Q
 und
-A; B
+A;B
 2
 X
 n
-P Q
-in der selb en Halb eb ene bzgl.
-P Q
+PQ
+in der selben Halbebene bzgl.
+PQ
 . Auÿerdem
 sei
 d
 (
-A; P
+A;P
 ) =
 d
 (
-B ; P
+B;P
 )
 und
 d
 (
-A; Q
+A;Q
 ) =
 d
 (
-B ; Q
+B;Q
 )
 .
 Dann ist
@@ -18777,7 +18777,7 @@ B
 Abbildung 4.3
 :
 Bemerkung 62
-: Die b eiden roten und die b eiden blauen Linien sind gleich lang.
+: Die beiden roten und die beiden blauen Linien sind gleich lang.
 Intuitiv weiÿ man, dass daraus folgt, dass
 A
 =
@@ -18795,7 +18795,7 @@ Dann ist
 B =
 2
 (
-P A
+PA
 [
 QA
 )
@@ -18807,13 +18807,13 @@ wegen
 Q
 und
 B
-liegen in derselb en Halb eb ene bzgl.
-P A
+liegen in derselben Halbebene bzgl.
+PA
 Bem.
 61
 =====
 )
-P B
+PB
 +
 \
 AQ
@@ -18824,7 +18824,7 @@ AQ
 Sei
 C
 der Schnittpunkt vom
-P B
+PB
 und
 AQ
 .
@@ -18832,38 +18832,38 @@ Dann gilt:
 (i)
 d
 (
-A; C
-) +
+A;C
+)+
 d
 (
-C ; Q
+C;Q
 ) =
 d
 (
-A; Q
+A;Q
 )
 Vor.
 =
 d
 (
-B ; Q
+B;Q
 )
 < d
 (
-B ; C
-) +
+B;C
+)+
 d
 (
-C ; Q
+C;Q
 )
 )
 d
 (
-A; C
+A;C
 )
 < d
 (
-B ; C
+B;C
 )
 69 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 P
@@ -18893,40 +18893,40 @@ C
 .
 d
 (
-P ; A
+P;A
 ) +
 d
 (
-A; C
+A;C
 )
 > d
 (
-P ; C
+P;C
 ) =
 d
 (
-P ; B
+P;B
 ) +
 d
 (
-B ; C
+B;C
 ) =
 d
 (
-P ; A
+P;A
 ) +
 d
 (
-B ; C
+B;C
 )
 )
 d
 (
-A; C
+A;C
 )
 > d
 (
-B ; C
+B;C
 )
 )
 Widerspruch zu
@@ -18939,36 +18939,36 @@ und
 B
 d
 (
-P ; C
-) +
+P;C
+)+
 d
 (
-C ; A
+C;A
 )
 > d
 (
-P ; A
+P;A
 ) =
 d
 (
-P ; B
+P;B
 ) =
 d
 (
-P ; C
-) +
+P;C
+)+
 d
 (
-C ; B
+C;B
 )
 )
 d
 (
-C ; A
+C;A
 )
 > d
 (
-C ; B
+C;B
 )
 )
 Widerspruch zu
@@ -18978,15 +18978,15 @@ Widerspruch zu
 Q
 und
 B
-liegen auf verschieden Halb eb enen bzgl.
-P A
+liegen auf verschieden Halbebenen bzgl.
+PA
 .
 Dann liegen
 A
 und
 Q
-in derselb en Halb eb ene bzgl.
-P B
+in derselben Halbebene bzgl.
+PB
 .
 Tausche
 A
@@ -18998,14 +18998,14 @@ Fall 1
 Bemerkung 63
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie, die
  
  -
  
  erfüllt,
-P ; Q
+P;Q
 2
 X
 mit
@@ -19038,26 +19038,26 @@ S
 8
 S
 2
-P Q
+PQ
 .
 Beweis:
 O. B. d. A. sei
 S
 2
-P Q
+PQ
 2
 ,
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
-P ; S
-) +
+P;S
+)+
 d
 (
-S ; Q
+S;Q
 )
 '
 2
@@ -19071,7 +19071,7 @@ d
 (
 P
 )
-; '
+;'
 (
 Q
 )) =
@@ -19081,21 +19081,21 @@ d
 (
 P
 )
-; '
+;'
 (
 S
-)) +
+))+
 d
 (
 '
 (
 S
 )
-; '
+;'
 (
 Q
 ))
-P ;Q
+P;Q
 2
 Fix(
 '
@@ -19103,21 +19103,21 @@ Fix(
 )
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
-P ; '
+P;'
 (
 S
-)) +
+))+
 d
 (
 '
 (
 S
 )
-; Q
+;Q
 )
 )
 '
@@ -19131,7 +19131,7 @@ Q
 )
 d
 (
-P ; S
+P;S
 ) =
 d
 (
@@ -19139,13 +19139,13 @@ d
 (
 P
 )
-; '
+;'
 (
 S
 )) =
 d
 (
-P ; '
+P;'
 (
 S
 ))
@@ -19159,29 +19159,29 @@ S
 ) =
 S
 
-Prop osition 4.2
+Proposition 4.2
 In einer Geometrie, die
  
  -
  
  erfüllt, gibt es zu
-P ; P
+P;P
 0
-; Q; Q
+;Q;Q
 0
 mit
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
 P
 0
-; Q
+;Q
 0
 )
-hö chstens zwei Isometrien mit
+höchstens zwei Isometrien mit
 '
 (
 P
@@ -19198,7 +19198,7 @@ Q
 70 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 Aus den Axiomen folgt, dass es in der Situation von
  
- hö chstens zwei Isometrien mit
+ höchstens zwei Isometrien mit
 '
 i
 (
@@ -19219,9 +19219,9 @@ Beweis:
 Seien
 '
 1
-; '
+;'
 2
-; '
+;'
 3
 Isometrien mit
 '
@@ -19248,15 +19248,15 @@ i
 3
 .
 Der Beweis von
- Prop osition 4.2
- erfolgt üb er zwei Teilaussagen:
+ Proposition 4.2
+ erfolgt über zwei Teilaussagen:
 (Teil i)
 9
 R
 2
 X
 n
-P Q
+PQ
 mit
 '
 1
@@ -19272,7 +19272,7 @@ R
 (Teil ii)
  Hat
 '
-3 F ixpunkte, die nicht kollinear sind, so ist
+3 Fixpunkte, die nicht kollinear sind, so ist
 '
 =
 id
@@ -19314,25 +19314,25 @@ R
 2
 X
 n
-P Q
+PQ
 . Von den drei Punkten
 '
 1
 (
 R
 )
-; '
+;'
 2
 (
 R
 )
-; '
+;'
 3
 (
 R
 )
-liegen zwei in der selb en
-Halb eb ene bzgl.
+liegen zwei in der selben
+Halbebene bzgl.
 P
 0
 Q
@@ -19341,10 +19341,10 @@ Q
 '
 i
 (
-P Q
+PQ
 )
 .
-O. B . d. A. seien
+O. B. d. A. seien
 '
 1
 (
@@ -19356,13 +19356,13 @@ und
 (
 R
 )
-in der selb en Halb eb ene.
+in der selben Halbebene.
 Es gilt:
 d
 (
 P
 0
-; '
+;'
 1
 (
 R
@@ -19374,7 +19374,7 @@ d
 (
 P
 )
-; '
+;'
 1
 (
 R
@@ -19382,7 +19382,7 @@ R
 =
 d
 (
-P ; R
+P;R
 )
 =
 d
@@ -19392,7 +19392,7 @@ d
 (
 P
 )
-; '
+;'
 2
 (
 R
@@ -19402,7 +19402,7 @@ d
 (
 P
 0
-; '
+;'
 2
 (
 R
@@ -19412,7 +19412,7 @@ d
 (
 Q
 0
-; '
+;'
 1
 (
 R
@@ -19421,7 +19421,7 @@ d
 (
 Q
 0
-; '
+;'
 2
 (
 R
@@ -19438,21 +19438,21 @@ Fixpunkte von
 ,
 R =
 2
-P Q
+PQ
 und
 A =
 2
-P Q
+PQ
 [
-P R
+PR
 [
 QR
 . Sei
 B
 2
-P Q
-n f
-P ; Q
+PQ
+nf
+P;Q
 g
 . Dann ist
 '
@@ -19489,20 +19489,20 @@ R
 A
 Abbildung 4.5
 :
-P ; Q; R
+P;Q;R
 sind Fixpunkte,
 B
 2
-P Q
-n f
-P ; Q
+PQ
+nf
+P;Q
 g
 ,
 A =
 2
-P Q
+PQ
 [
-P R
+PR
 [
 QR
 Ist
@@ -19512,14 +19512,14 @@ AB
 , so ist
 AB
 \
-P R
+PR
 6
 =
 ;
-o der
+oder
 AB
 2
-R Q
+RQ
 6
 =
 ;
@@ -19542,7 +19542,7 @@ A
 Bemerkung 64 (SWS-Kongruenzsatz)
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie, die
  
@@ -19550,7 +19550,7 @@ eine Geometrie, die
  
  erfüllt. Seien auÿerdem
 4
-AB C
+ABC
 und
 4
 A
@@ -19563,18 +19563,18 @@ Dreiecke, für die gilt:
 (i)
 d
 (
-A; B
+A;B
 ) =
 d
 (
 A
 0
-; B
+;B
 0
 )
 (ii)
 \
-C AB
+CAB
 ˘
 =
 \
@@ -19588,18 +19588,18 @@ B
 (iii)
 d
 (
-A; C
+A;C
 ) =
 d
 (
 A
 0
-; C
+;C
 0
 )
 Dann ist
 4
-AB C
+ABC
 kongruent zu
 4
 A
@@ -19672,7 +19672,7 @@ d
 (
 A
 0
-; C
+;C
 0
 ) =
 d
@@ -19682,14 +19682,14 @@ d
 A
 0
 )
-; '
+;'
 (
 C
 0
 )) =
 d
 (
-A; '
+A;'
 (
 C
 0
@@ -19709,7 +19709,7 @@ d
 (
 A
 0
-; B
+;B
 0
 ) =
 d
@@ -19719,14 +19719,14 @@ d
 A
 0
 )
-; '
+;'
 (
 B
 0
 )) =
 d
 (
-A; '
+A;'
 (
 B
 0
@@ -19742,7 +19742,7 @@ B
 0
 ) =
 B
-Also gilt insb esondere
+Also gilt insbesondere
 '
 (
 4
@@ -19754,13 +19754,13 @@ C
 0
 ) =
 4
-AB C
+ABC
 .
 
 Bemerkung 65 (WSW-Kongruenzsatz)
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie, die
  
@@ -19768,7 +19768,7 @@ eine Geometrie, die
  
  erfüllt. Seien auÿerdem
 4
-AB C
+ABC
 und
 4
 A
@@ -19781,18 +19781,18 @@ Dreiecke, für die gilt:
 (i)
 d
 (
-A; B
+A;B
 ) =
 d
 (
 A
 0
-; B
+;B
 0
 )
 (ii)
 \
-C AB
+CAB
 ˘
 =
 \
@@ -19804,7 +19804,7 @@ B
 0
 (iii)
 \
-AB C
+ABC
 ˘
 =
 \
@@ -19816,7 +19816,7 @@ C
 0
 Dann ist
 4
-AB C
+ABC
 kongruent zu
 4
 A
@@ -19849,7 +19849,7 @@ und
 C
 0
 )
-liegt in der selb en Halb eb ene
+liegt in der selben Halbebene
 bzgl.
 AB
 wie
@@ -19859,7 +19859,7 @@ C
 .
 Aus
 \
-C AB
+CAB
 =
 \
 C
@@ -19904,7 +19904,7 @@ AC
 .
 Analog folgt aus
 \
-AB C
+ABC
 =
 \
 A
@@ -19931,7 +19931,7 @@ C
 0
 ) =
 \
-AB '
+AB'
 (
 C
 0
@@ -19943,7 +19943,7 @@ C
 0
 )
 2
-B C
+BC
 +
 .
 Dann gilt
@@ -19955,7 +19955,7 @@ C
 2
 AC
 \
-B C
+BC
 =
 f
 C
@@ -19979,7 +19979,7 @@ C
 0
 ) =
 4
-AB C
+ABC
 .
 
 De˝nition 61
@@ -19999,13 +19999,13 @@ Man schreibt:
 \
 R
 1
-P R
+PR
 2
 bzw.
 \
 R
 2
-P R
+PR
 1
 2
 b)
@@ -20029,7 +20029,7 @@ als
 \
 R
 1
-P R
+PR
 2
 , wenn es eine Isometrie
 '
@@ -20050,7 +20050,7 @@ R
 +
 1
 ) =
-P R
+PR
 +
 1
 und
@@ -20060,23 +20060,23 @@ R
 0
 2
 )
-liegt in der gleichen Halb eb ene bzgl.
-P R
+liegt in der gleichen Halbebene bzgl.
+PR
 1
 wie
 R
 2
 und in
-der gleichen Halb eb ene bzgl.
-P R
+der gleichen Halbebene bzgl.
+PR
 2
 wie
 R
 1
 d)
- Im D reieck
+ Im Dreieck
 4
-P QR
+PQR
 gibt es
 Innenwinkel
 und
@@ -20087,9 +20087,9 @@ In einem Dreieck ist jeder Innenwinkel kleiner als jeder nicht anliegende Auÿen
 Beweis:
 Zeige
 \
-P R Q <
+PRQ <
 \
-R QP
+RQP
 0
 .
 Sei
@@ -20100,23 +20100,23 @@ und
 P
 0
 2
-P Q
+PQ
 +
 n
-P Q
+PQ
 . Sei
 A
 2
-M P
+MP
 
 mit
 d
 (
-P ; M
+P;M
 ) =
 d
 (
-M ; A
+M;A
 )
 .
 2
@@ -20124,15 +20124,15 @@ Für dieses Skript gilt:
 \
 R
 1
-P R
+PR
 2
 =
 \
 R
 2
-P R
+PR
 1
-. Also sind insb esondere alle Winkel
+. Also sind insbesondere alle Winkel
 
 180
 
@@ -20163,7 +20163,7 @@ ist kleiner als
 \
 R
 1
-P R
+PR
 2
 ,
 vgl.
@@ -20178,7 +20178,7 @@ Innenwinkel
 kel
  in
 4
-P QR
+PQR
 , vgl.
  De˝niti-
 on 61.d
@@ -20199,10 +20199,10 @@ R
 Q
 P
 (b)
-Innen- un d Auÿenwin-
+Innen- und Auÿenwin-
 kel von
 4
-P QR
+PQR
 Abbildung 4.7
 :
  Situation aus
@@ -20210,38 +20210,38 @@ Abbildung 4.7
 Es gilt:
 d
 (
-Q; M
+Q;M
 ) =
 d
 (
-M ; R
+M;R
 )
 und
 d
 (
-P ; M
+P;M
 ) =
 d
 (
-M ; A
+M;A
 )
 sowie
 \
-P M R
+PMR
 =
 \
-AM Q
+AMQ
 ) 4
-M R Q
+MRQ
 ist kongruent zu
 4
-AM Q
-, denn eine der b eiden Isometrien, die
+AMQ
+, denn eine der beiden Isometrien, die
 \
-P M R
+PMR
 auf
 \
-AM Q
+AMQ
 abbildet,
 bildet
 R
@@ -20254,34 +20254,34 @@ A
 ab.
 )
 \
-M QA
+MQA
 =
 \
-M R P
+MRP
 =
 \
-QR P
+QRP
 =
 \
-P R Q
+PRQ
 .
-No ch zu zeigen:
+Noch zu zeigen:
 \
-M QA <
+MQA <
 \
-R QP
+RQP
 0
 , denn
 A
-liegt in der selb en Halb eb ene bzgl.
-P Q
+liegt in der selben Halbebene bzgl.
+PQ
 wie
 M
 .
-Prop osition 4.3 (Existenz der Parallelen)
+Proposition 4.3 (Existenz der Parallelen)
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie mit den Axiomen
  
@@ -20316,7 +20316,7 @@ h
 .
 Beweis:
 Seien
-P ; Q
+P;Q
 2
 f
 2
@@ -20337,14 +20337,14 @@ f
 mit
 d
 (
-P ; P
+P;P
 0
 ) =
 d
 (
-P ; Q
+P;Q
 )
-abbildet und die Halb eb enen bzgl.
+abbildet und die Halbebenen bzgl.
 f
 erhält.
 73 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
@@ -20356,7 +20356,7 @@ P
 Abbildung 4.8
 :
  Situation aus
- Prop osition 4.3
+ Proposition 4.3
 Annahme:
 '
 (
@@ -20382,32 +20382,32 @@ g
 .
 Dann ist
 \
-R QP
+RQP
 =
 \
-R QP
+RQP
 0
 <
 \
-R P P
+RPP
 0
 nach
  Bemerkung 66
  und
 \
-R QP
+RQP
 =
 \
-R P P
+RPP
 0
 , weil
 '
 (
 \
-R QP
+RQP
 ) =
 \
-R P P
+RPP
 0
 .
 )
@@ -20423,7 +20423,7 @@ g
 ;
 
 Folgerung 4.4
-Die Summe zweier Innenwinkel in einem D reieck ist kleiner als
+Die Summe zweier Innenwinkel in einem Dreieck ist kleiner als
 ˇ
 .
 D. h. es gibt eine Isometrie
@@ -20440,16 +20440,16 @@ und
 QP
 +
 ) =
-P R
+PR
 +
-, so dass
+, sodass
 '
 (
 R
 )
 in der gleichen
-Halb eb ene bzgl.
-P Q
+Halbebene bzgl.
+PQ
 liegt wie
 R
 .
@@ -20457,7 +20457,7 @@ Beweis:
 Die Summe eines Innenwinkels mit den anliegenden Auÿenwinkeln ist
 ˇ
 , d. h. die
-b eiden Halbgeraden bilden eine Gerade.
+beiden Halbgeraden bilden eine Gerade.
 Abbildung 4.9
 :
 In der sphärischen Geometrie gibt es, im Gegensatz zur euklidischen Geometrie,
@@ -20465,7 +20465,7 @@ Dreiecke mit drei
 90
 
 -Winkeln.
-Prop osition 4.5
+Proposition 4.5
 In einer Geometrie mit den Axiomen
  
  -
@@ -20494,7 +20494,7 @@ IWS(
 
 P
 (a)
- S umme der Winkel
+ Summe der Winkel
 
 ,
 
@@ -20515,11 +20515,11 @@ A
 
 (b)
  Situation aus
- Prop osition 4.5
+ Proposition 4.5
 Abbildung 4.10
 :
  Situation aus
- Prop osition 4.5
+ Proposition 4.5
 Sei
 
 ein Innenwinkel von
@@ -20570,7 +20570,7 @@ n
 2
 n
 < "
-ist dann die Summe der b eiden Innenwinkel um
+ist dann die Summe der beiden Innenwinkel um
 4
 n
 gröÿer als
@@ -20582,60 +20582,60 @@ zu
 .
 Beweis:
 Es seien
-A; B ; C
+A;B;C
 2
 X
 und
 4
 das Dreieck mit den Eckpunkten
-A; B ; C
+A;B;C
 und
 
 sei
-der Innenwinkel b ei
+der Innenwinkel bei
 A
 ,
 
-der Innenwinkel b ei
+der Innenwinkel bei
 B
 und
 
-der Innenwinkel b ei
+der Innenwinkel bei
 C
 .
 Sei
 M
 der Mittelpunkt der Strecke
-B C
+BC
 . Sei auÿerdem
 
 1
 =
 \
-C AM
+CAM
 und
 
 2
 =
 \
-B AM
+BAM
 .
 Sei weiter
 A
 0
 2
-M A
+MA
 
 mit
 d
 (
 A
 0
-; M
+;M
 ) =
 d
 (
-A; M
+A;M
 )
 .
 Die Situation ist in
@@ -20643,32 +20643,32 @@ Die Situation ist in
  skizziert.
 ) 4
 (
-M A
+MA
 0
 C
 )
 und
 4
 (
-M AB
+MAB
 )
 sind kongruent.
 )
 \
-AB M
+ABM
 =
 \
 A
 0
-C M
+CM
 und
 \
-M A
+MA
 0
 C
 =
 \
-M AB
+MAB
 .
 )
 
@@ -20680,7 +20680,7 @@ M AB
 IWS
 (
 4
-AB C
+ABC
 ) =
 IWS
 (
@@ -20704,7 +20704,7 @@ und
 
 2
 Bemerkung 67
-In einer euklidischen Eb ene ist in jedem Dreieck die Innenwinkelsumme gleich
+In einer euklidischen Ebene ist in jedem Dreieck die Innenwinkelsumme gleich
 ˇ
 .
 
@@ -20739,7 +20739,7 @@ Es gilt
 =
 
 wegen
- Prop osition 4.3
+ Proposition 4.3
 .
 
 Es gilt
@@ -20748,7 +20748,7 @@ Es gilt
 =
 
 wegen
- Prop osition 4.3
+ Proposition 4.3
 .
 
 Es gilt
@@ -20758,13 +20758,13 @@ Es gilt
 
 0
 wegen
- Aufgab e 8
+ Aufgabe 8
 .
 75 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
 )
 IWS(
 4
-AB C
+ABC
 ) =
 
 +
@@ -20775,10 +20775,10 @@ AB C
 0
 =
 ˇ
-Aus der Eigenschaft, dass die Innenwinkelsumme von Dreiecken in der euklidischen Eb ene gleich
+Aus der Eigenschaft, dass die Innenwinkelsumme von Dreiecken in der euklidischen Ebene gleich
 ˇ
-ist, folgen direkt die Kongruenzsätze SWW und WWS üb er den Kongruenzsatz WSW.
-4.2 Weitere Eigenschaften einer euklidischen Eb ene
+ist, folgen direkt die Kongruenzsätze SWW und WWS über den Kongruenzsatz WSW.
+4.2 Weitere Eigenschaften einer euklidischen Ebene
 Satz 4.6 (Strahlensatz)
 In ähnlichen Dreiecken sind Verhältnisse entsprechender Seiten gleich.
 x
@@ -20805,7 +20805,7 @@ x
 Abbildung 4.12
 :
  Strahlensatz
-Der B eweis wird hier nicht geführt. Für Beweisvorschläge wäre ich dankbar.
+Der Beweis wird hier nicht geführt. Für Beweisvorschläge wäre ich dankbar.
 A
 B
 0
@@ -20826,7 +20826,7 @@ Abbildung 4.13
 :
  Die Dreiecke
 4
-AB C
+ABC
 und
 4
 AB
@@ -20836,9 +20836,9 @@ C
 sind ähnlich.
 4.2.1 Flächeninhalt
 De˝nition 62
-Simplizialkomplexe in euklidischer Eb ene
+Simplizialkomplexe in euklidischer Ebene
 (
-X ; d
+X;d
 )
 heiÿen
 ˛ächengleich
@@ -20848,12 +20848,12 @@ kongruente Dreiecke zerlegen lassen.
 (a)
  Zwei kongruente Dreiecke
 (b)
-Zwei weitere kongruente Drei-
+ZweiweiterekongruenteDrei-
 ecke
 Abbildung 4.14
 :
  Flächengleichheit
-Der F lächeninhalt eines Dreiecks ist
+Der Flächeninhalt eines Dreiecks ist
 1
 =
 2
@@ -20873,9 +20873,9 @@ c
 1
 =
 2
- j
+j
 AB
-j  j
+jj
 h
 c
 j
@@ -20892,15 +20892,15 @@ c
 1
 =
 2
- j
-B C
-j  j
+j
+BC
+jj
 h
 a
 j
 Abbildung 4.15
 :
- Flächenb erechnung im Dreieck
+ Flächenberechnung im Dreieck
 Zu zeigen:
 Unabhängigkeit von der gewählten Grundseite.
 
@@ -20917,11 +20917,11 @@ C
 Abbildung 4.16
 :
 4
-AB L
+ABL
 a
 und
 4
-C L
+CL
 C
 B
 sind ähnlich, weil
@@ -20957,11 +20957,11 @@ b
 =
 c
 2
-, wob ei
+, wobei
 c
-die Hyp otenuse und
-a; b
-die b eiden
+die Hypotenuse und
+a;b
+die beiden
 Katheten sind.
 Beweis:
 (
@@ -20977,7 +20977,7 @@ b
 ) =
 a
 2
-+ 2
++2
 ab
 +
 b
@@ -20985,7 +20985,7 @@ b
 =
 c
 2
-+ 4
++4
 
 (
 1
@@ -21004,11 +21004,11 @@ B
 C
 
 (a)
-a; b
-sind K ath eten und
+a;b
+sind Katheten und
 c
-ist die Hyp o-
-tenu se
+ist die Hypo-
+tenuse
 b
 a
 b
@@ -21028,9 +21028,9 @@ Abbildung 4.17
 :
  Satz des Pythagoras
 Satz 4.8
-Bis auf Isometrie gibt es genau eine euklidische Eb ene
+Bis auf Isometrie gibt es genau eine euklidische Ebene
 (
-X ; d; G
+X;d;G
 )
 , nämlich
 X
@@ -21049,19 +21049,19 @@ Beweis:
 (
 R
 2
-; d
+;d
 Euklid
 )
-ist o˙ensichtlich eine euklidische Eb ene.
+ist o˙ensichtlich eine euklidische Ebene.
 (ii)
 Sei
 (
-X ; d
+X;d
 )
-eine euklidische Eb ene und
+eine euklidische Ebene und
 g
 1
-; g
+;g
 2
 Geraden in
 X
@@ -21089,7 +21089,7 @@ auf
 g
 1
 (vgl.
-Aufgab e 9 (c)
+Aufgabe 9 (c)
 ) und
 P
 Y
@@ -21137,7 +21137,7 @@ P
 ) := (
 x
 P
-; y
+;y
 P
 )
 Dadurch wird
@@ -21151,14 +21151,14 @@ Q
 2
 X
 mit
-P Q
+PQ
 \
 g
 1
 =
 ;
 =
-P Q
+PQ
 \
 g
 2
@@ -21215,7 +21215,7 @@ Abbildung 4.18
 (i)
 Sei
 (
-x; y
+x;y
 )
 2
 R
@@ -21224,7 +21224,7 @@ R
 x
 
 0
-; y
+;y
 
 0
 . Sei
@@ -21236,7 +21236,7 @@ g
 mit
 d
 (0
-; P
+;P
 0
 ) =
 x
@@ -21271,7 +21271,7 @@ Abbildung 4.19
  Zu Zeigen:
 d
 (
-P ; Q
+P;Q
 ) =
 d
 (
@@ -21279,26 +21279,26 @@ h
 (
 P
 )
-; h
+;h
 (
 Q
 ))
 d
 (
-P ; Q
+P;Q
 )
 2
 Pythagoras
 =
 d
 (
-P ; R
+P;R
 )
 2
 +
 d
 (
-R ; Q
+R;Q
 )
 2
 = (
@@ -21309,7 +21309,7 @@ y
 P
 )
 2
-+ (
++(
 x
 Q
 
@@ -21324,10 +21324,10 @@ Q
 ) = (
 x
 Q
-; y
+;y
 Q
 )
-4.3 Hyp erb olische Geometrie
+4.3 Hyperbolische Geometrie
 De˝nition 63
 Sei
 H
@@ -21346,7 +21346,7 @@ g
 =
 
 (
-x; y
+x;y
 )
 2
 R
@@ -21357,7 +21357,7 @@ y >
 0
 	
 79 4.3. HYPERBOLISCHE GEOMETRIE
-die ob ere Halb eb ene bzw. Poincaré-Halb eb ene und
+die obere Halbebene bzw. Poincaré-Halbebene und
 G
 =
 G
@@ -21378,7 +21378,7 @@ j 9
 m
 2
 R
-; r
+;r
 2
 R
 >
@@ -21399,7 +21399,7 @@ m
 j
 =
 r
-g g
+gg
 G
 2
 =
@@ -21426,22 +21426,22 @@ H
 z
 ) =
 x
-g g
+gg
 Die Elemente aus
 G
 heiÿen
-hyp erb olische Geraden
+hyperbolische Geraden
 .
-Bemerkung 68 (Eigenschaften der hyp erb olischen Geraden)
-Die hyp erb olischen Geraden erfüllen. . .
+Bemerkung 68 (Eigenschaften der hyperbolischen Geraden)
+Die hyperbolischen Geraden erfüllen...
 a)
- . . . die Inzidenzaxiome
+ ...die Inzidenzaxiome
  
 b)
- . . . das Anordnungsaxiom
+ ...das Anordnungsaxiom
  (ii)
 c)
- . . . nicht das Parallelenaxiom
+ ...nicht das Parallelenaxiom
  
 Beweis:
 a)
@@ -21452,10 +21452,10 @@ a)
  erfüllt. Für
 1 (i)
  gilt:
-Gegeb en
+Gegeben
 z
 1
-; z
+;z
 2
 2
 H
@@ -21518,7 +21518,7 @@ z
 und
 z
 2
-als Punkte in der euklidischen Eb ene. Die Mittelsenkrech-
+als Punkte in der euklidischen Ebene. Die Mittelsenkrech-
 te zu diesen Punkten schneidet die
 x
 -Achse. Alle Punkte auf der Mittelsenkrechten
@@ -21528,13 +21528,13 @@ z
 und
 z
 2
-sind gleich weit von
+sindgleichweitvon
 z
 1
 und
 z
 2
-entfernt. Daher ist der Schnittpunkt mit
+entfernt.DaheristderSchnittpunktmit
 der
 x
 -Achse der Mittelpunkt eines Kreises durch
@@ -21595,7 +21595,7 @@ Z
  Fall 2
 Abbildung 4.20
 :
-Zwei Punkte liegen in der hyp erb olischen Geometrie immer auf genau einer
+Zwei Punkte liegen in der hyperbolischen Geometrie immer auf genau einer
 Geraden
 b)
  Sei
@@ -21607,7 +21607,7 @@ _
 [
 G
 2
-eine hyp erb olische G erade.
+eine hyperbolische Gerade.
 80 4.3. HYPERBOLISCHE GEOMETRIE
 Es existieren disjunkte Zerlegungen von
 H
@@ -21653,7 +21653,7 @@ H
 1
 (Kreisinneres)
 _
-[ f
+[f
 z
 2
 H
@@ -21720,7 +21720,7 @@ H
 1
 (Links)
 _
-[ f
+[f
 z
 2
 H
@@ -21749,7 +21749,7 @@ B
 H
 j
 mit
-i; j
+i;j
 2 f
 1
 ;
@@ -21773,7 +21773,7 @@ A
 2
 H
 1
-; B
+;B
 2
 H
 2
@@ -21787,10 +21787,10 @@ g
 Da
 d
 H
-stetig ist, folgt diese Richtung direkt. Alle P unkte in
+stetig ist, folgt diese Richtung direkt. Alle Punkte in
 H
 1
-hab en einen Abstand
+haben einen Abstand
 von
 m
 der kleiner ist als
@@ -21798,7 +21798,7 @@ r
 und alle Punkte in
 H
 2
-hab en einen Abstand von
+haben einen Abstand von
 m
 der
 gröÿer ist als
@@ -21807,7 +21807,7 @@ r
 A
 nach
 B
-insb esondere auch als stetige
+insbesondere auch als stetige
 Abbildung
 f
 :
@@ -21831,12 +21831,12 @@ A
 2
 H
 i
-; B
+;B
 2
 H
 j
 mit
-i; j
+i;j
 2 f
 1
 ;
@@ -21861,30 +21861,30 @@ und
 B
 geht.
 Da
-A; B =
+A;B =
 2
 g
-, ab er
-A; B
+, aber
+A;B
 2
 h
-gilt, hab en
+gilt, haben
 g
 und
 h
-insb esondere mindestens einen
+insbesondere mindestens einen
 unterschiedlichen Punkt. Aus
  (i)
  folgt, dass sich
 g
 und
 h
-in hö chstens einen Punkt
+in höchstens einen Punkt
 schneiden. Sei
 C
 dieser Punkt.
 Aus
-A; B =
+A;B =
 2
 g
 folgt:
@@ -21910,7 +21910,7 @@ und
 B
 bzgl.
 g
-in verschiedenen Halb eb enen liegen.
+in verschiedenen Halbebenen liegen.
 c)
  Siehe
  Abbildung 4.21
@@ -21942,13 +21942,13 @@ y
 5
 Abbildung 4.21
 :
- Hyp erb olische Geraden erfüllen
+ Hyperbolische Geraden erfüllen
  
  nicht.
 81 4.3. HYPERBOLISCHE GEOMETRIE
 De˝nition 64
 Es seien
-a; b; c; d
+a;b;c;d
 2
 R
 mit
@@ -21978,15 +21978,15 @@ d
 heiÿt
 Möbiustransformation
 .
-Prop osition 4.9
+Proposition 4.9
 a)
- Die Grupp e
+ Die Gruppe
 SL
 2
 (
 R
 )
-op eriert auf
+operiert auf
 H
 durch die Möbiustransformation
 ˙
@@ -22007,7 +22007,7 @@ cz
 +
 d
 b)
- Die Grupp e
+ Die Gruppe
 PSL
 2
 (
@@ -22022,7 +22022,7 @@ R
 
 I
 )
-op eriert durch
+operiert durch
 ˙
 auf
 H
@@ -22033,10 +22033,10 @@ PSL
 (
 R
 )
-op eriert auf
+operiert auf
 R
-[ f 1 g
-. Diese Grupp enop eration ist 3-fach transitiv, d. h.
+[f1g
+. Diese Gruppenoperation ist 3-fach transitiv, d. h.
 zu
 x
 0
@@ -22119,7 +22119,7 @@ und
 =:
 C
 mit
-t; 
+t;
 2
 R
 
@@ -22130,7 +22130,7 @@ PSL
 (
 R
 )
-op eriert auf
+operiert auf
 G
 .
 Beweis:
@@ -22140,7 +22140,7 @@ z
 =
 x
 +
-i y
+iy
 2
 H
 , d. h.
@@ -22168,29 +22168,29 @@ a
 (
 x
 +
-i y
-) +
+iy
+)+
 b
 c
 (
 x
 +
-i y
-) +
+iy
+)+
 d
 =
 (
 ax
 +
 b
-) +
-i ay
+)+
+iay
 (
 cx
 +
 d
-) +
-i cy
+)+
+icy
 
 (
 cx
@@ -22198,14 +22198,14 @@ cx
 d
 )
 
-i cy
+icy
 (
 cx
 +
 d
 )
 
-i cy
+icy
 =
 (
 ax
@@ -22215,15 +22215,15 @@ b
 cx
 +
 d
-) +
-ay cy
+)+
+aycy
 (
 cx
 +
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22248,7 +22248,7 @@ cx
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22261,14 +22261,14 @@ bcx
 +
 bd
 +
-ay cy
+aycy
 (
 cx
 +
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22286,7 +22286,7 @@ cx
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22303,7 +22303,7 @@ x
 +
 y
 2
-) +
+)+
 adx
 +
 bcx
@@ -22315,7 +22315,7 @@ cx
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22328,7 +22328,7 @@ cx
 d
 )
 2
-+ (
++(
 cy
 )
 2
@@ -22363,12 +22363,12 @@ z
 =
 x
 +
-i y
+iy
 1
 =
 x
 +
-i y
+iy
 =
 z
 82 4.3. HYPERBOLISCHE GEOMETRIE
@@ -22498,7 +22498,7 @@ z
 +
 b
 0
-) +
+)+
 b
 (
 c
@@ -22516,7 +22516,7 @@ z
 +
 b
 0
-) +
+)+
 d
 (
 c
@@ -22831,7 +22831,7 @@ SL
 (
 R
 )
-erzeugen kann, genügt es also von einer b eliebigen Matrix durch Multiplikation mit
+erzeugen kann, genügt es also von einer beliebigen Matrix durch Multiplikation mit
 Matrizen der Form
 A
 
@@ -22854,7 +22854,7 @@ SL
 (
 R
 )
-b eliebig.
+beliebig.
 Fall 1:
 a
 = 0
@@ -22876,7 +22876,7 @@ bc
 =
 
 bc
-. Daher ist insb esondere
+. Daher ist insbesondere
 c
 6
 = 0
@@ -22993,7 +22993,7 @@ d
 A
 
 1
-C B
+CB
 c
 C
 
@@ -23014,7 +23014,7 @@ B
 t
 und
 C
-die Grupp e
+die Gruppe
 SL
 2
 R
@@ -23022,7 +23022,7 @@ R
 
 e)
  Es genügt die Aussage für Matrizen aus
- Prop osition 4.9 (d)
+ Proposition 4.9 (d)
  zu zeigen.
 
 ˙
@@ -23043,7 +23043,7 @@ z
 
 2
 z
-. Daraus ergeb en sich die Situationen, die in
+. Daraus ergeben sich die Situationen, die in
 Abbildung 4.22a
  und
  Abbildung 4.22b
@@ -23070,16 +23070,16 @@ m
 m
 m
 +
-i r
+ir
 
 2
 m
 +
-i 
+i
 2
 r
 m
-+ 1
++1
 (a)
  Fall 1
 x
@@ -23108,7 +23108,7 @@ x
 Abbildung 4.22
 :
  Beweis von
- Prop osition 4.9 (e)
+ Proposition 4.9 (e)
  für eine Diagonalmatrix
 
 O˙ensichtlich gilt die Aussage für
@@ -23137,10 +23137,10 @@ z
 1
 z
 Bemerkung 69
-Zu hyp erb olischen Geraden
+Zu hyperbolischen Geraden
 g
 1
-; g
+;g
 2
 gibt es
 ˙
@@ -23174,7 +23174,7 @@ z
 r
 
 e
-i '
+i'
 1
 z
 =
@@ -23182,13 +23182,13 @@ z
 r
 
 e
-i '
+i'
 Abbildung 4.23
 :
  Inversion am Kreis
 Beweis:
 Nach
- Prop osition 4.9 (c)
+ Proposition 4.9 (c)
  gibt es
 ˙
 mit
@@ -23217,29 +23217,29 @@ g
 2
 wegen dem Inzidenzaxiom
  
- und ist eindeutig b estimmt.
+ und ist eindeutig bestimmt.
 De˝nition 65
 Seien
 z
 1
-; z
+;z
 2
-; z
+;z
 3
-; z
+;z
 4
 2
 C
 paarweise verschieden.
 Dann heiÿt
-DV (
+DV(
 z
 1
-; z
+;z
 2
-; z
+;z
 3
-; z
+;z
 4
 ) :=
 z
@@ -23293,41 +23293,41 @@ z
 z
 4
 )
-Dopp elverhältnis
+Doppelverhältnis
 von
 z
 1
-; : : : ; z
+;:::;z
 4
 .
-Bemerkung 70 (Eigenschaften des Dopp elverhältnisses)
+Bemerkung 70 (Eigenschaften des Doppelverhältnisses)
 a)
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 )
 2
 C
-n f
+nf
 0
 ;
 1
 g
 b)
-DV (
+DV(
 z
 1
-; z
+;z
 4
-; z
+;z
 3
-; z
+;z
 2
 ) =
 1
-DV (
+DV(
 z
 1
 ;z
@@ -23338,18 +23338,18 @@ z
 4
 )
 c)
-DV (
+DV(
 z
 3
-; z
+;z
 2
-; z
+;z
 1
-; z
+;z
 4
 ) =
 1
-DV (
+DV(
 z
 1
 ;z
@@ -23366,17 +23366,17 @@ z
 i
 =
 1
-o der wenn zwei der
+oder wenn zwei der
 z
 i
 gleich sind.
 e)
-DV (0
+DV(0
 ;
 1
 ;
 1
-; z
+;z
 4
 ) =
 z
@@ -23389,9 +23389,9 @@ z
 ;
 1
 ;
-1 g
+1g
 ist zugelassen).
-f )
+f)
  Für
 ˙
 2
@@ -23403,40 +23403,40 @@ C
 und
 z
 1
-; : : : ; z
+;:::;z
 4
 2
 C
-[ f 1 g
+[f1g
 ist
-DV (
+DV(
 ˙
 (
 z
 1
 )
-; ˙
+;˙
 (
 z
 2
 )
-; ˙
+;˙
 (
 z
 3
 )
-; ˙
+;˙
 (
 z
 4
-)) = DV (
+)) = DV(
 z
 1
-; z
+;z
 2
-; z
+;z
 3
-; z
+;z
 4
 )
 und für
@@ -23447,62 +23447,62 @@ z
 1
 z
 gilt
-DV (
+DV(
 ˙
 (
 z
 1
 )
-; ˙
+;˙
 (
 z
 2
 )
-; ˙
+;˙
 (
 z
 3
 )
-; ˙
+;˙
 (
 z
 4
 )) =
-DV (
+DV(
 z
 1
-; z
+;z
 2
-; z
+;z
 3
-; z
+;z
 4
 )
 g)
-DV (
+DV(
 z
 1
-; z
+;z
 2
-; z
+;z
 3
-; z
+;z
 4
 )
 2
 R
-[ f 1 g ,
+[f1g ,
 z
 1
-; : : : ; z
+;:::;z
 4
-liegen auf einer hyp erb olischen Geraden.
+liegen auf einer hyperbolischen Geraden.
 Beweis:
 a)
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 )
 6
@@ -23511,20 +23511,20 @@ z
 z
 i
 paarweise verschieden
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 )
 6
 = 1
 , da:
 Annahme:
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 ) = 1
 ,
@@ -23659,7 +23659,7 @@ z
 =
 z
 1
-o der
+oder
 z
 2
 =
@@ -23673,14 +23673,14 @@ sind paarweise verschieden
 Widerspruch
 
 b)
-DV (
+DV(
 z
 1
-; z
+;z
 4
-; z
+;z
 3
-; z
+;z
 2
 ) =
 (
@@ -23715,7 +23715,7 @@ z
 )
 =
 1
-DV (
+DV(
 z
 1
 ;z
@@ -23726,14 +23726,14 @@ z
 4
 )
 c)
-DV (
+DV(
 z
 3
-; z
+;z
 2
-; z
+;z
 1
-; z
+;z
 4
 ) =
 (
@@ -23768,7 +23768,7 @@ z
 )
 =
 1
-DV (
+DV(
 z
 1
 ;z
@@ -23789,17 +23789,17 @@ z
 =
 z
 4
-o der
+oder
 z
 3
 =
 z
 2
 In diesem Fall ist
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 ) = 0
 Fall 2
@@ -23808,18 +23808,18 @@ z
 =
 z
 2
-o der
+oder
 z
 3
 =
 z
 4
-Mit der Regel von L 'Hospital folgt, dass in diesem Fall
+Mit der Regel von L'Hospital folgt, dass in diesem Fall
 DV
 (
 z
 1
-; : : : ; z
+;:::;z
 4
 ) =
 1
@@ -23830,17 +23830,17 @@ z
 =
 z
 3
-o der
+oder
 z
 2
 =
 z
 4
 Durch Einsetzen ergibt sich
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 ) = 1
 .
@@ -23856,27 +23856,27 @@ DV
 1
 ;
 1
-; z
+;z
 4
 ) = 0
-o der
+oder
 DV
 (0
 ;
 1
 ;
 1
-; z
+;z
 4
 )
- 1
+1
 e)
-DV (0
+DV(0
 ;
 1
 ;
 1
-; z
+;z
 4
 ) =
 (0
@@ -23910,7 +23910,7 @@ z
 =
 z
 4
-f )
+f)
  Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
 g)
 Sei
@@ -23948,31 +23948,31 @@ drei Parameter von
 wählen darf.
 Bem. 70.f
 )
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
-) = DV (0
+) = DV(0
 ;
 1
 ;
 1
-; ˙
+;˙
 (
 z
 4
 ))
 )
-DV (
+DV(
 z
 1
-; : : : ; z
+;:::;z
 4
 )
 2
 R
-[ f 1 g
+[f1g
 ,
 ˙
 (
@@ -23981,23 +23981,23 @@ z
 )
 2
 R
-[ f 1 g
+[f1g
 Behauptung folgt, weil
 ˙
 
 1
 (
 R
-[ 1
+[1
 )
-ein Kreis o der eine Gerade in
+ein Kreis oder eine Gerade in
 C
 ist.
 De˝nition 66
 Für
 z
 1
-; z
+;z
 2
 2
 H
@@ -24007,7 +24007,7 @@ z
 1
 ;z
 2
-die eindeutige hyp erb olische Gerade durch
+die eindeutige hyperbolische Gerade durch
 z
 1
 und
@@ -24016,7 +24016,7 @@ z
 und
 a
 1
-; a
+;a
 2
 die
 Schnittpunkte von
@@ -24027,7 +24027,7 @@ z
 2
 mit
 R
-[ f 1 g
+[f1g
 .
 Dann sei
 d
@@ -24035,31 +24035,31 @@ H
 (
 z
 1
-; z
+;z
 2
 ) :=
 1
 2
 j
-ln DV (
+lnDV(
 a
 1
-; z
+;z
 1
-; a
+;a
 2
-; z
+;z
 2
 )
 j
 und heiÿe
-hyp erb olische Metrik
+hyperbolische Metrik
 .
 Beh.:
 Für
 z
 1
-; z
+;z
 2
 2
 H
@@ -24069,7 +24069,7 @@ z
 1
 ;z
 2
-die eindeutige hyp erb olische Gerade durch
+die eindeutige hyperbolische Gerade durch
 z
 1
 und
@@ -24078,7 +24078,7 @@ z
 und
 a
 1
-; a
+;a
 2
 die Schnittpunkte von
 g
@@ -24088,20 +24088,20 @@ z
 2
 mit
 R
-[ f 1 g
+[f1g
 .
 Dann gilt:
 1
 2
 j
-ln DV (
+lnDV(
 a
 1
-; z
+;z
 1
-; a
+;a
 2
-; z
+;z
 2
 )
 j
@@ -24109,14 +24109,14 @@ j
 1
 2
 j
-ln DV (
+lnDV(
 a
 2
-; z
+;z
 1
-; a
+;a
 1
-; z
+;z
 2
 )
 j
@@ -24124,25 +24124,25 @@ Beweis:
 Wegen
  Bemerkung 70.c
  gilt:
-DV (
+DV(
 a
 1
-; z
+;z
 1
-; a
+;a
 2
-; z
+;z
 2
 ) =
 1
-DV (
+DV(
 a
 2
-; z
+;z
 1
-; a
+;a
 1
-; z
+;z
 2
 )
 Auÿerdem gilt:
@@ -24170,14 +24170,14 @@ im Betrag steht, folgt direkt:
 1
 2
 j
-ln DV (
+lnDV(
 a
 1
-; z
+;z
 1
-; a
+;a
 2
-; z
+;z
 2
 )
 j
@@ -24185,24 +24185,24 @@ j
 1
 2
 j
-ln DV (
+lnDV(
 a
 2
-; z
+;z
 1
-; a
+;a
 1
-; z
+;z
 2
 )
 j
 Es ist also egal in welcher Reihenfolge die Schnittpunkte mit der
 x
--Achse im Dopp elver-
+-Achse im Doppelver-
 hältnis genutzt werden.
 
 Beh.:
-Die hyp erb olische Metrik ist eine Metrik auf
+Die hyperbolische Metrik ist eine Metrik auf
 H
 .
 Beweis:
@@ -24213,7 +24213,7 @@ d
 (
 z
 1
-; z
+;z
 2
 ) :=
 d
@@ -24223,7 +24223,7 @@ d
 z
 1
 )
-; ˙
+;˙
 (
 z
 2
@@ -24256,14 +24256,14 @@ also gilt o. B. d. A.
 z
 1
 =
-i a
+ia
 und
 z
 2
 =
-i b
+ib
 mit
-a; b
+a;b
 2
 R
 und
@@ -24272,13 +24272,13 @@ a < b
 2
 d
 (
-i a; i b
+ia;ib
 ) =
 j
-ln DV (0
-; i a;
+lnDV(0
+;ia;
 1
-; i b
+;ib
 )
 j
 =
@@ -24286,17 +24286,17 @@ j
 ln
 (0
 
-i b
+ib
 )(
-1 
-i a
+1
+ia
 )
 (0
 
-i a
+ia
 )(
-1 
-i b
+1
+ib
 )
 j
 =
@@ -24315,7 +24315,7 @@ d
 (
 z
 1
-; z
+;z
 2
 )
 
@@ -24325,7 +24325,7 @@ d
 (
 z
 1
-; z
+;z
 2
 ) = 0
 ,
@@ -24339,37 +24339,37 @@ d
 (
 z
 2
-; z
+;z
 1
 ) =
 j
-ln DV (
+lnDV(
 a
 2
-; z
+;z
 2
-; a
+;a
 1
-; z
+;z
 1
 )
 j
 =
 j
-ln DV (
+lnDV(
 1
-; i b;
+;ib;
 0
-; i a
+;ia
 )
 j
 Bem. 70.b
 =
 j
-ln DV (0
-; i b;
+lnDV(0
+;ib;
 1
-; i a
+;ia
 )
 j
 = 2
@@ -24377,38 +24377,38 @@ d
 (
 z
 1
-; z
+;z
 2
 )
 Liegen drei Punkte
 z
 1
-; z
+;z
 2
-; z
+;z
 3
 2
 C
-auf einer hyp erb olischen Geraden, so gilt
+auf einer hyperbolischen Geraden, so gilt
 d
 (
 z
 1
-; z
+;z
 3
 ) =
 d
 (
 z
 1
-; z
+;z
 2
-) +
+)+
 d
 (
 z
 2
-; z
+;z
 3
 )
 (wenn
@@ -24422,37 +24422,37 @@ z
 3
 liegt).
 Dreiecksungleichung: Beweis ist umständlich und wird hier nicht geführt. Es sei auf die
-Vorlesung Hyp erb olische Geometrie verwiesen.
+Vorlesung Hyperbolische Geometrie verwiesen.
 Satz 4.10
-Die hyp erb olische Eb ene
+Die hyperbolische Ebene
 H
-mit der hyp erb olischen Metrik
+mit der hyperbolischen Metrik
 d
-und den hyp erb olischen
+und den hyperbolischen
 Geraden bildet eine nichteuklidische Geometrie, d. h. die Axiome
  
  -
  
  sind erfüllt,
-ab er Axiom
+aber Axiom
  
  ist verletzt.
 87 4.3. HYPERBOLISCHE GEOMETRIE
-Übungsaufgab en
-Aufgab e 8
+Übungsaufgaben
+Aufgabe 8
 Seien
 (
-X ; d
+X;d
 )
-eine absolute Eb ene und
-P ; Q; R
+eine absolute Ebene und
+P;Q;R
 2
 X
-Punkte. D er
+Punkte. Der
 Scheitelwinkel
 des Winkels
 \
-P QR
+PQR
 ist der Winkel, der aus den Halbgeraden
 QP
 
@@ -24463,7 +24463,7 @@ gebildet wird. Die
 Nebenwinkel
 von
 \
-P QR
+PQR
 sind die von
 QP
 +
@@ -24480,21 +24480,21 @@ gebildeten
 Winkel.
 Zeigen Sie:
 (a)
- Die b eiden Neb enwinkel von
+ Die beiden Nebenwinkel von
 \
-P QR
+PQR
 sind gleich.
 (b)
  Der Winkel
 \
-P QR
+PQR
 ist gleich seinem Scheitelwinkel.
-Aufgab e 9
+Aufgabe 9
 Sei
 (
-X ; d
+X;d
 )
-eine absolute Eb ene. Der
+eine absolute Ebene. Der
 Abstand
 eines Punktes
 P
@@ -24506,11 +24506,11 @@ von
 Punkten ist de˝niert durch
 d
 (
-P ; Y
+P;Y
 ) := inf
 d
 (
-P ; y
+P;y
 )
 j
 y
@@ -24521,7 +24521,7 @@ Zeigen Sie:
 (a)
 Ist
 4
-AB C
+ABC
 ein Dreieck, in dem die Seiten
 AB
 und
@@ -24529,17 +24529,17 @@ AC
 kongruent sind, so sind die
 Winkel
 \
-AB C
+ABC
 und
 \
-B C A
+BCA
 gleich.
 (b)
 Ist
 4
-AB C
-ein b eliebiges Dreieck, so liegt der längeren Seite der gröÿere Winkel
-gegenüb er und umgekehrt.
+ABC
+ein beliebiges Dreieck, so liegt der längeren Seite der gröÿere Winkel
+gegenüber und umgekehrt.
 (c)
 Sind
 g
@@ -24566,9 +24566,9 @@ g
 heiÿt
 Lotfuÿpunkt
 .
-Aufgab e 10
+Aufgabe 10
 Seien
-f ; g ; h
+f;g;h
 2
 G
 und paarweise verschieden.
@@ -24584,16 +24584,16 @@ h
 f
 k
 h
-Aufgab e 11
+Aufgabe 11
 Beweise den Kongruenzsatz
-S S S
+SSS
 .
 5 Krümmung
 De˝nition 67
 Sei
 f
 : [
-a; b
+a;b
 ]
 !
 R
@@ -24601,7 +24601,7 @@ n
 eine eine Funktion aus
 C
 1
-. D ann heiÿt
+. Dann heiÿt
 f
 Kurve
 .
@@ -24612,7 +24612,7 @@ Sei
 :
 I
 = [
-a; b
+a;b
 ]
 !
 R
@@ -24637,7 +24637,7 @@ k
 t
 2
 I
-Dab ei ist
+Dabei ist
 
 0
 (
@@ -24649,13 +24649,13 @@ t
 (
 t
 )
-; 
+;
 0
 2
 (
 t
 )
-; : : : ; 
+;:::;
 0
 n
 (
@@ -24689,7 +24689,7 @@ Sei
 :
 I
 = [
-a; b
+a;b
 ]
 !
 R
@@ -24763,12 +24763,12 @@ b)
 Im Folgenden wird die Aussage nur für
 
 : [
-a; b
+a;b
 ]
 !
 R
 2
-b ewiesen. Allerdings funktioniert
+bewiesen. Allerdings funktioniert
 der Beweis im
 R
 n
@@ -24797,7 +24797,7 @@ h
 (
 t
 )
-; 
+;
 0
 (
 t
@@ -24814,7 +24814,7 @@ h
 (
 t
 )
-; 
+;
 0
 (
 t
@@ -24836,7 +24836,7 @@ t
 1
 (
 t
-) +
+)+
 
 0
 2
@@ -24864,7 +24864,7 @@ t
 1
 (
 t
-) +
+)+
 
 00
 2
@@ -24879,13 +24879,13 @@ t
 t
 ))
 = 2
- h
+h
 
 00
 (
 t
 )
-; 
+;
 0
 (
 t
@@ -24910,7 +24910,7 @@ n
 (
 t
 )
-Normalenvekto r
+Normalenvektor
 an
 
 in
@@ -24921,7 +24921,7 @@ n
 (
 t
 )
-; 
+;
 0
 (
 t
@@ -24943,7 +24943,7 @@ det((
 (
 t
 )
-; n
+;n
 (
 t
 ))) = +1
@@ -25002,11 +25002,11 @@ t
 )
 .
 Beispiel 45
-Gegeb en sei ein Kreis mit Radius
+Gegeben sei ein Kreis mit Radius
 r
 , d. h. mit Umfang
 2
-ˇ r
+ˇr
 . Es gilt:
 
 (
@@ -25018,7 +25018,7 @@ r
 cos
 t
 r
-; r
+;r
 
 sin
 t
@@ -25030,7 +25030,7 @@ t
 [0
 ;
 2
-ˇ r
+ˇr
 ]
 ist parametrisiert durch Bogenlänge, da gilt:
 
@@ -25050,7 +25050,7 @@ sin
 t
 r
 )
-; r
+;r
 1
 r
 cos
@@ -25094,7 +25094,7 @@ n
 (
 t
 )
-; 
+;
 0
 (
 t
@@ -25133,7 +25133,7 @@ r
 sin
 t
 r
-) + (
+)+(
 
 sin
 t
@@ -25178,7 +25178,7 @@ t
 r
 )
 2
-+ (
++(
 
 sin
 t
@@ -25193,7 +25193,7 @@ det(
 (
 t
 )
-; n
+;n
 (
 t
 )) =
@@ -25350,7 +25350,7 @@ k
 t
 )
 k
-Normalenvekto r
+Normalenvektor
 an
 
 in
@@ -25367,7 +25367,7 @@ sei ein Vektor, der
 (
 t
 )
-; n
+;n
 (
 t
 )
@@ -25382,11 +25382,11 @@ det(
 (
 t
 )
-; n
+;n
 (
 t
 )
-; b
+;b
 (
 t
 )) = 1
@@ -25395,7 +25395,7 @@ b
 t
 )
 heiÿt
-Binormalenvekto r
+Binormalenvektor
 , die Orthonormalbasis
 
 
@@ -25403,19 +25403,19 @@ Binormalenvekto r
 (
 t
 )
-; n
+;n
 (
 t
 )
-; b
+;b
 (
 t
 )
 	
 heiÿt
-b egleitendes Dreib ein
+begleitendes Dreibein
 .
-Bemerkung 72 (Eigenschaften von Kurven I I)
+Bemerkung 72 (Eigenschaften von Kurven II)
 Sei
 
 :
@@ -25444,7 +25444,7 @@ t
 aus
  De˝nition 70.c
  ist eindeutig.
-5.2 Tangentialeb ene
+5.2 Tangentialebene
 Erinnerung Sie sich an
  De˝nition 32
  reguläre Fläche.
@@ -25502,21 +25502,21 @@ s
 V
 :
 (
-u; v
+u;v
 )
 7!
 (
 x
 (
-u; v
+u;v
 )
-; y
+;y
 (
-u; v
+u;v
 )
-; z
+;z
 (
-u; v
+u;v
 ))
 Für
 p
@@ -25537,33 +25537,33 @@ p
 ) =
 0
 @
-@ x
-@ u
+@x
+@u
 (
 p
 )
-@ x
-@ v
+@x
+@v
 (
 p
 )
-@ y
-@ u
+@y
+@u
 (
 p
 )
-@ y
-@ v
+@y
+@v
 (
 p
 )
-@ z
-@ u
+@z
+@u
 (
 p
 )
-@ z
-@ v
+@z
+@v
 (
 p
 )
@@ -25596,13 +25596,13 @@ p
 F
 )
 die
-Tangentialeb ene
+Tangentialebene
 an
 s
 2
 S
 .
-Bemerkung 73 (Eigenschaften der Tangentialeb ene)
+Bemerkung 73 (Eigenschaften der Tangentialebene)
 a)
 T
 s
@@ -25624,7 +25624,7 @@ u;
 ~
 v
 i
-, wob ei
+, wobei
 ~
 u;
 ~
@@ -25651,7 +25651,7 @@ V
 (
 f
 )
-eine reguläre F läche in
+eine reguläre Fläche in
 R
 3
 , also
@@ -25709,9 +25709,9 @@ ist eine
 
 1
 -Vektor multipliziert wird. Das ist
-eine lineare Abbildung und aus der linearen Algebra ist b ekannt, das das Bild ein
+eine lineare Abbildung und aus der linearen Algebra ist bekannt, das das Bild ein
 Vektorraum ist. Da
-Rg (
+Rg(
 J
 F
 ) = 2
@@ -25767,7 +25767,7 @@ x
 2
 T
 s
-S ; 
+S;
 : [
 
 ";
@@ -25785,7 +25785,7 @@ und
 (0) =
 s
 ,
-so dass
+sodass
 
 0
 (0) =
@@ -25802,7 +25802,7 @@ t
 2
 [
 
-"; "
+";"
 ]
 , ist
 f
@@ -25823,7 +25823,7 @@ f
 )(
 
 (0))
-; 
+;
 0
 (0)
 i
@@ -25896,7 +25896,7 @@ Normalenfeld
 und einem
 Einheitsnormalenfeld
 unterschieden.
-Im Folgenden werden diese Begri˙e jedo ch synonym b enutzt.
+Im Folgenden werden diese Begri˙e jedoch synonym benutzt.
 Bemerkung 74 (Eigenschaften von Normalenfeldern)
 a)
  Ein Normalenfeld auf
@@ -25927,7 +25927,7 @@ von
 S
 um
 s
-, so dass auf
+, sodass auf
 F
 (
 U
@@ -25953,8 +25953,8 @@ i
 ; i
 2
 I
-gibt, so dass für alle
-i; j
+gibt, sodass für alle
+i;j
 2
 F
 und alle
@@ -26029,13 +26029,13 @@ Möbiusband
 (vgl.
  Abbildung 5.1
 ) ist nicht orientierbar. Es existiert ein Norma-
-lenfeld, ab er kein stetiges Normalenfeld.
+lenfeld, aber kein stetiges Normalenfeld.
 92
 5.3. GAUSS-KRÜMMUNG
 Abbildung 5.1
 :
  Möbiusband
-5.3 Gauÿ-Krümmun g
+5.3 Gauÿ-Krümmung
 Bemerkung 75
 Sei
 S
@@ -26082,7 +26082,7 @@ R
 3
 von
 s
-, so dass
+, sodass
 C
 := (
 s
@@ -26097,7 +26097,7 @@ das Bild einer durch Bogenlänge parametrisierten Kurve
 
 : [
 
-"; "
+";"
 ]
 !
 S
@@ -26112,7 +26112,7 @@ und
 x
 .
 Beweis:
-Satz üb er implizite Funktionen
+Satz über implizite Funktionen
 1
 De˝nition 73
 In der Situation aus
@@ -26123,7 +26123,7 @@ In der Situation aus
 (0)
 der Kurve
 
-in der Eb ene
+in der Ebene
 (
 s
 +
@@ -26148,14 +26148,14 @@ Man schreibt:
 
 Nor
 (
-s; x
+s;x
 ) :=
 
 
 (0)
 Hinweis
-: D ie Krümmung ist nur bis auf das Vorzeichen b estimmt.
-Beispiel 47 (Gauÿ-Krüm mung)
+: Die Krümmung ist nur bis auf das Vorzeichen bestimmt.
+Beispiel 47 (Gauÿ-Krümmung)
 1)
 S
 =
@@ -26206,8 +26206,8 @@ n
 s
 )
 (
-x; z
--Eb ene)
+x;z
+-Ebene)
 C
 =
 E
@@ -26217,7 +26217,7 @@ ist Kreislinie
 
 Nor
 (
-s; x
+s;x
 ) =
 1
 r
@@ -26267,8 +26267,8 @@ R
 e
 2
 (
-x; y
--Eb ene)
+x;y
+-Ebene)
 S
 \
 E
@@ -26291,7 +26291,7 @@ E
 
 Nor
 (
-s; x
+s;x
 1
 ) =
 
@@ -26303,7 +26303,7 @@ x
 0
 ;
 1)
-; E
+;E
 2
 =
 R
@@ -26316,11 +26316,11 @@ R
 e
 3
 (
-x; z
--Eb ene)
+x;z
+-Ebene)
 1
 Siehe z. B.
-https://github.com/MartinThoma/LaTeX- examples/tree/master/documents/Analysis%20II
+https://github.com/MartinThoma/LaTeX-examples/tree/master/documents/Analysis%20II
 93
 5.3. GAUSS-KRÜMMUNG
 V
@@ -26334,7 +26334,7 @@ S
 (1
 ;
 0
-; z
+;z
 )
 2
 R
@@ -26350,7 +26350,7 @@ ist eine Gerade
 
 Nor
 (
-s; x
+s;x
 2
 ) = 0
 3)
@@ -26373,7 +26373,7 @@ s
 0
 ;
 0)
-(Hyp erb olisches Parab oloid, siehe
+(Hyperbolisches Paraboloid, siehe
  Abbildung 5.2b
 )
 x
@@ -26402,13 +26402,13 @@ x
 
 Nor
 (
-s; x
+s;x
 1
 ) = 2
 
 Nor
 (
-s; x
+s;x
 2
 ) =
 
@@ -26500,7 +26500,7 @@ z
 4
 f
 (
-x; y
+x;y
 )
 (b)
 S
@@ -26536,7 +26536,7 @@ S
 
 : [
 
-"; "
+";"
 ]
 !
 S
@@ -26602,11 +26602,11 @@ n
 h
 n
 (0)
-; n
+;n
 (
 s
 )
-i 
+i
 n
 (
 s
@@ -26614,13 +26614,13 @@ s
 
 Nor
 (
-s; 
+s;
 ) :=
 h
 
 00
 (0)
-; n
+;n
 (
 s
 )
@@ -26644,7 +26644,7 @@ t
 2
 [
 
-"; "
+";"
 ]
 . Dann ist
 
@@ -26656,7 +26656,7 @@ s;
 
 Nor
 (
-s; 
+s;
 )
 .
 Beweis:
@@ -26679,7 +26679,7 @@ Es gilt:
 
 Nor
 (
-s; 
+s;
 )
 hängt nur von
 j
@@ -26691,7 +26691,7 @@ ab und ist gleich
 
 Nor
 (
-s; 
+s;
 0
 (0))
 .
@@ -26749,7 +26749,7 @@ R
 
 Nor
 (
-s; x
+s;x
 )
 eine glatte Funktion und
 Bild
@@ -26789,7 +26789,7 @@ s
 n
 Nor
 (
-s; x
+s;x
 )
 
 
@@ -26812,7 +26812,7 @@ s
 n
 Nor
 (
-s; x
+s;x
 )
 
 
@@ -26867,7 +26867,7 @@ n
 n
 Nor
 (
-s; x
+s;x
 ) =
 
 
@@ -26964,7 +26964,7 @@ s
 (
 s
 ) = 0
-; 
+;
 2
 (
 s
@@ -26975,7 +26975,7 @@ K
 s
 ) = 0
 3)
- Sattelpunkt auf hyp erb olischem Parab oloid:
+ Sattelpunkt auf hyperbolischem Paraboloid:
 
 1
 (
@@ -26983,7 +26983,7 @@ s
 )
 <
 0
-; 
+;
 2
 (
 s
@@ -27030,7 +27030,7 @@ eine reguläre Fläche,
 s
 2
 S
-ein P unkt.
+ein Punkt.
 95 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 a)
  Ist
@@ -27063,14 +27063,14 @@ s
 s
 in
 S
-b eide Seiten von
+beide Seiten von
 T
 s
 S
 +
 s
 .
-5.4 Erste und zweite Fundamental form
+5.4 Erste und zweite Fundamentalform
 Sei
 S
 
@@ -27084,7 +27084,7 @@ S
 T
 s
 S
-die Tangentialeb ene an
+die Tangentialebene an
 S
 in
 s
@@ -27185,7 +27185,7 @@ F
 e
 i
 )
-; D
+;D
 p
 F
 (
@@ -27194,21 +27194,21 @@ j
 ))
 =
 h
-@ F
-@ u
+@F
+@u
 i
 (
 p
 )
 ;
-@ F
-@ u
+@F
+@u
 j
 (
 p
 )
 i
-i; j
+i;j
 2 f
 1
 ;
@@ -27226,7 +27226,7 @@ F
 .
 Bemerkung 80
 a)
-Die Einschränkung des Standardskalarpro duktes des
+Die Einschränkung des Standardskalarproduktes des
 R
 3
 auf
@@ -27248,7 +27248,7 @@ F
 e
 1
 )
-; D
+;D
 p
 F
 (
@@ -27271,7 +27271,7 @@ F
 e
 1
 )
-; D
+;D
 p
 F
 (
@@ -27279,7 +27279,7 @@ e
 2
 )
 g
-hat das Standardskalarpro dukt aus
+hat das Standardskalarprodukt aus
  Bemer-
 kung 80.a
  die Darstellungsmatrix
@@ -27304,15 +27304,15 @@ S
 
 
 
-@ F
-@ u
+@F
+@u
 1
 (
 p
 )
 
-@ F
-@ u
+@F
+@u
 2
 (
 p
@@ -27324,8 +27324,8 @@ p
 2
 Beweis:
 Sei
-@ F
-@ u
+@F
+@u
 1
 (
 p
@@ -27341,8 +27341,8 @@ x
 1
 A
 ;
-@ F
-@ u
+@F
+@u
 2
 (
 p
@@ -27358,15 +27358,15 @@ y
 1
 A
 Dann ist
-@ F
-@ u
+@F
+@u
 1
 (
 p
 )
 
-@ F
-@ u
+@F
+@u
 2
 (
 p
@@ -27419,15 +27419,15 @@ x
 y
 1
 ) k
-@ F
-@ u
+@F
+@u
 1
 (
 p
 )
 
-@ F
-@ u
+@F
+@u
 2
 (
 p
@@ -27487,7 +27487,7 @@ x
 3
 1
 A
-+ *
++*
 0
 @
 y
@@ -27624,7 +27624,7 @@ F
 (
 u
 1
-; u
+;u
 2
 )
 |
@@ -27648,7 +27648,7 @@ der
 Wert des Integrals
 von
 f
-üb er
+über
 V
 , falls das Integral rechts existiert.
 Bemerkung 82
@@ -27726,13 +27726,13 @@ f
 d
 A
 
-: : :
+:::
 Beweis:
 a)
  Mit Transformationsformel.
 b)
- Ist dem Leser üb erlassen.
-Prop osition 5.1
+ Ist dem Leser überlassen.
+Proposition 5.1
 Sei
 S
 
@@ -27789,7 +27789,7 @@ tx
 }
 Soll auf Fläche
 S
-bleib en
+bleiben
 )
 
 
@@ -27829,7 +27829,7 @@ d)
 d
 s
 n
-ist selbstadjungiert bzgl. des Skalarpro duktes
+ist selbstadjungiert bzgl. des Skalarproduktes
 I
 S
 .
@@ -27863,7 +27863,7 @@ s
 S
 c)
  Wegen
- Prop osition 5.1 (a)
+ Proposition 5.1 (a)
  ist
 d
 s
@@ -27872,14 +27872,14 @@ ein Homomorphismus.
 d)
  Zu zeigen:
 8
-x; y
+x;y
 2
 I
 s
 S
 :
 h
-x; d
+x;d
 s
 n
 (
@@ -27894,9 +27894,9 @@ n
 (
 x
 )
-; y
+;y
 i
-Aufgrund der Bilinearität des Skalarpro duktes genügt es diese Eigenschaft für die
+Aufgrund der Bilinearität des Skalarproduktes genügt es diese Eigenschaft für die
 Basisvektoren zu zeigen.
 Sei
 x
@@ -27909,8 +27909,8 @@ F
 e
 i
 ) =
-@ F
-@ u
+@F
+@u
 i
 (
 p
@@ -27923,7 +27923,7 @@ Beh.:
 h
 x
 i
-; d
+;d
 s
 n
 (
@@ -27936,14 +27936,14 @@ h
 @
 2
 F
-@ u
+@u
 i
-@ u
+@u
 j
 (
 p
 )
-; d
+;d
 s
 n
 (
@@ -27955,14 +27955,14 @@ i
 @
 2
 F
-@ u
+@u
 i
-@ u
+@u
 j
 (
 p
 )
-; d
+;d
 s
 n
 (
@@ -27974,7 +27974,7 @@ i
 h
 x
 j
-; d
+;d
 s
 n
 (
@@ -27985,15 +27985,15 @@ i
 Bew.:
 0 =
 h
-@ F
-@ u
+@F
+@u
 (
 p
 +
 te
 j
 )
-; n
+;n
 (
 p
 +
@@ -28008,15 +28008,15 @@ d
 t
 
 h
-@ F
-@ u
+@F
+@u
 (
 p
 +
 te
 j
 )
-; n
+;n
 (
 p
 +
@@ -28035,8 +28035,8 @@ h
 d
 d
 t
-@ F
-@ u
+@F
+@u
 i
 (
 p
@@ -28050,9 +28050,9 @@ j
 @
 2
 F
-@ u
+@u
 j
-@ u
+@u
 i
 (
 p
@@ -28062,7 +28062,7 @@ p
 
 t
 =0
-; n
+;n
 (
 s
 )
@@ -28071,9 +28071,9 @@ i
 h
 x
 i
-; d
+;d
 s
-n D
+nD
 p
 F
 (
@@ -28092,7 +28092,7 @@ Die durch
 d
 s
 n
-de˝nierte symmetrische B ilinearform auf
+de˝nierte symmetrische Bilinearform auf
 T
 s
 S
@@ -28107,10 +28107,10 @@ bzgl.
 F
 .
 Man schreibt:
-I I
+II
 s
 (
-x; y
+x;y
 ) =
 
 d
@@ -28119,7 +28119,7 @@ n
 (
 x
 )
-; y
+;y
 i
 =
 I
@@ -28132,14 +28132,14 @@ n
 (
 x
 )
-; y
+;y
 )
 Bemerkung 83
 Bezüglich der Basis
 f
 x
 1
-; x
+;x
 2
 g
 von
@@ -28147,7 +28147,7 @@ T
 s
 S
 hat
-I I
+II
 s
 die Darstellungsmatrix
 (
@@ -28171,24 +28171,24 @@ h
 @
 2
 F
-@ u
+@u
 i
-@ u
+@u
 j
 (
 p
 )
-; n
+;n
 (
 s
 )
 i
-Prop osition 5.2
+Proposition 5.2
 Sei
 
 : [
 
-"; "
+";"
 ]
 !
 S
@@ -28200,15 +28200,15 @@ s
 
 Nor
 (
-s; 
+s;
 ) =
-I I
+II
 s
 (
 
 0
 (0)
-; 
+;
 0
 (0))
 Beweis:
@@ -28218,13 +28218,13 @@ Nach
 
 Nor
 (
-s; 
+s;
 ) =
 h
 
 00
 (0)
-; n
+;n
 (
 s
 )
@@ -28246,7 +28246,7 @@ t
 
 00
 (0)
-; n
+;n
 (
 s
 )
@@ -28267,7 +28267,7 @@ n
 (
 t
 ))
-; 
+;
 0
 (
 t
@@ -28288,7 +28288,7 @@ t
 
 t
 =0
-; 
+;
 0
 (0)
 ˛
@@ -28298,7 +28298,7 @@ n
 (
 s
 )
-; 
+;
 00
 (0)
 i
@@ -28312,7 +28312,7 @@ n
 
 0
 (0))
-; 
+;
 0
 (0)
 i
@@ -28320,37 +28320,37 @@ i
 
 Nor
 (
-s; 
+s;
 )
 =
 
-I I
+II
 s
 (
 
 0
 (0)
-; 
+;
 0
-(0)) +
+(0))+
 
 Nor
 (
-s; 
+s;
 )
 Folgerung 5.3
-Die b eiden De˝nitionen von Normalkrümmung in
+Die beiden De˝nitionen von Normalkrümmung in
  Abschnitt 5.1
- stimmen üb erein:
+ stimmen überein:
 
 Nor
 (
-s; 
+s;
 ) =
 
 Nor
 (
-s; 
+s;
 0
 (0))
 Satz 5.4
@@ -28371,13 +28371,13 @@ a)
 (
 s
 )
-; 
+;
 2
 (
 s
 )
 sind die Eigenwerte von
-I I
+II
 s
 .
 b)
@@ -28386,12 +28386,12 @@ K
 (
 s
 ) = det(
-I I
+II
 s
 )
 Beweis:
 a)
-I I
+II
 s
 ist symmetrisch,
 I
@@ -28400,10 +28400,10 @@ S
 hat also eine Orthonormalbasis aus Eigenvektoren
 y
 1
-; y
+;y
 2
 von
-I I
+II
 s
 . Ist
 x
@@ -28431,7 +28431,7 @@ x
 
 y
 1
-+ sin
++sin
 '
 
 y
@@ -28440,32 +28440,32 @@ y
 Seien
 
 1
-; 
+;
 2
-die E igenwerte von
-I I
+die Eigenwerte von
+II
 s
 , also
-I I
+II
 s
 (
 y
 i
-; y
+;y
 i
 ) =
 
 i
 . Dann gilt:
-I I
+II
 s
 (
-x; x
+x;x
 ) = cos
 2
 '
 1
-+ sin
++sin
 2
 '
 2
@@ -28477,14 +28477,14 @@ sin
 )
 
 1
-+ sin
++sin
 2
 '
 2
 =
 
 1
-+ sin
++sin
 2
 '
 (
@@ -28500,7 +28500,7 @@ sin
 = cos
 2
 '
-+ (1
++(1
 
 cos
 2
@@ -28538,7 +28538,7 @@ Prop.
 
 Nor
 (
-s; x
+s;x
 )
 
 
@@ -28556,7 +28556,7 @@ S
 
 Nor
 (
-s; x
+s;x
 )
 
 
@@ -28582,11 +28582,11 @@ s
 )d
 A
 = 2
-ˇ ˜
+ˇ˜
 (
 S
 )
-Dab ei ist
+Dabei ist
 ˜
 (
 S
@@ -28596,15 +28596,15 @@ S
 .
 Beweis:
 Der Beweis wird hier nicht geführt. Er kann in Elementare Di˙erentialgeometrie von
-Christian Bär (2. Au˛age), ISB N 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
-Lösungen der Übungsaufgab en
-Lösung zu Aufgab e
+Christian Bär (2. Au˛age), ISBN 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
+Lösungen der Übungsaufgaben
+Lösung zu Aufgabe
  1
-Teilaufgab e a)
+Teilaufgabe a)
 Es gilt:
 (i)
 ;
-; X
+;X
 2
 T
 X
@@ -28615,7 +28615,7 @@ X
 ist o˙ensichtlich unter Durchschnitten abgeschlossen, d. h. es gilt für alle
 U
 1
-; U
+;U
 2
 2
 T
@@ -28631,11 +28631,11 @@ T
 X
 .
 (iii)
-Auch unter b eliebigen Vereinigungen ist
+Auch unter beliebigen Vereinigungen ist
 T
 X
 abgeschlossen, d. h. es gilt für eine
-b eliebige Indexmenge
+beliebige Indexmenge
 I
 und alle
 U
@@ -28659,16 +28659,16 @@ T
 X
 Also ist
 (
-X ;
+X;
 T
 X
 )
-ein top ologischer R aum.
-Teilaufgab e b)
+ein topologischer Raum.
+Teilaufgabe b)
 Wähle
 x
 = 1
-; y
+;y
 = 0
 . Dann gilt
 x
@@ -28690,31 +28690,31 @@ und
 y
 nicht durch o˙ene Mengen getrennt werden.
 (
-X ;
+X;
 T
 X
 )
 ist also nicht hausdor˙sch.
-Teilaufgab e c)
+Teilaufgabe c)
 Nach Bemerkung
  4
  sind metrische Räume hausdor˙sch. Da
 (
-X ;
+X;
 T
 X
 )
 nach
-(b) nicht hausdor˙sch ist, liefert die Kontrap osition der Trennungseigenschaft, dass
+(b) nicht hausdor˙sch ist, liefert die Kontraposition der Trennungseigenschaft, dass
 (
-X ;
+X;
 T
 X
 )
 kein metrischer Raum sein kann.
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  2
-Teilaufgab e a)
+Teilaufgabe a)
 Beh.:
 8
 a
@@ -28729,12 +28729,12 @@ Sei
 a
 2
 Z
-b eliebig. Dann gilt:
-Wenn jemand diese Aufgab e gemacht hat, bitte die Lösung an info@martin-thoma.de
+beliebig. Dann gilt:
+Wenn jemand diese Aufgabe gemacht hat, bitte die Lösung an info@martin-thoma.de
 schicken.
-Teilaufgab e b)
+Teilaufgabe b)
 Beh.:
-f 
+f
 1
 ;
 1
@@ -28743,7 +28743,7 @@ ist nicht o˙en
 Bew.:
 durch Widerspruch
 Annahme:
-f 
+f
 1
 ;
 1
@@ -28753,29 +28753,29 @@ Dann gibt es
 T
 
 B
-, so dass
+, sodass
 S
 M
 2
 T
 M
 =
-f 
+f
 1
 ;
 1
 g
-. Ab er alle
+. Aber alle
 U
 2
 B
-hab en unendlich viele
+haben unendlich viele
 Elemente. Auch endlich viele Schnitte von Elementen in
 B
-hab en unendlich viele Elemente
+haben unendlich viele Elemente
 )
-keine endliche nicht-leere Menge kann in dieser Top ologie o˙en sein
-) f 
+keine endliche nicht-leere Menge kann in dieser Topologie o˙en sein
+) f
 1
 ;
 1
@@ -28783,11 +28783,11 @@ g
 ist
 nicht o˙en.
 
-Teilaufgab e c)
+Teilaufgabe c)
 Beh.:
 Es gibt unendlich viele Primzahlen.
 101
-Lösung en der Übungsaufgaben
+Lösungen der Übungsaufgaben
 Bew.:
 durch Widerspruch
 Annahme: Es gibt nur endlich viele Primzahlen
@@ -28796,7 +28796,7 @@ p
 P
 Dann ist
 Z
-n f 
+nf
 1
 ;
 +1
@@ -28815,14 +28815,14 @@ j
 Z
 j
 ist unendlich und
-j f 
+jf
 1
 ;
 1
-g j
+gj
 ist endlich.
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  3
 (a)
 Beh.:
@@ -28846,7 +28846,7 @@ N
 j
 P
 i
-wob ei
+wobei
 J
 
 N
@@ -28858,7 +28858,7 @@ P
 j
 o˙en ist.
 Beweis:
-Nach De˝nition der Pro dukttop ologie bilden Mengen der Form
+Nach De˝nition der Produkttopologie bilden Mengen der Form
 Y
 i
 2
@@ -28874,7 +28874,7 @@ n
 J
 P
 i
-wob ei
+wobei
 J
 
 N
@@ -28889,7 +28889,7 @@ o˙en
 j
 2
 J
-eine Basis der Top ologie.
+eine Basis der Topologie.
 Damit sind die o˙enen Mengen von
 P
 Vereinigungen von Mengen der obigen
@@ -28897,12 +28897,12 @@ Form.
 
 (b)
 Beh.:
-Die Zusammenhangskomp onenten von
+Die Zusammenhangskomponenten von
 P
 sind alle einpunktig.
 Beweis:
 Es seinen
-x; y
+x;y
 2
 P
 und
@@ -28910,11 +28910,11 @@ x
 sowie
 y
 liegen in der gleichen Zusammenhangs-
-komp onente
+komponente
 Z
 
 P
-. D a
+. Da
 Z
 zusammenhängend ist und
 8
@@ -28968,7 +28968,7 @@ Z
  f
 0
 g
-o der
+oder
 p
 i
 (
@@ -29000,7 +29000,7 @@ alle
 i
 2
 N
-. D ann gilt also:
+. Dann gilt also:
 p
 i
 (
@@ -29036,7 +29036,7 @@ x
 =
 y
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  4
 (a)
 Beh.:
@@ -29056,7 +29056,7 @@ R
 )
 !
 R
-n f
+nf
 0
 g
 ist stetig. Auÿerdem ist
@@ -29068,7 +29068,7 @@ n
 R
 )) =
 R
-n f
+nf
 0
 g
 nicht kompakt.
@@ -29143,7 +29143,7 @@ R
 )
 ist kompakt.
 102
-Lösung en der Übungsaufgaben
+Lösungen der Übungsaufgaben
 SL
 n
 (
@@ -29161,14 +29161,14 @@ n
 2
 identi˝zieren. Nach
  Satz 1.1
-sind diese genau dann kompakt, wenn sie b eschränkt und abgeschlossen sind. De˝niere
+sind diese genau dann kompakt, wenn sie beschränkt und abgeschlossen sind. De˝niere
 nun für für
 n
 2
 N
 
 2
-; m
+;m
 2
 N
 :
@@ -29181,7 +29181,7 @@ n
 m;
 1
 m
-; : : : ;
+;:::;
 1)
 Dann gilt:
 det
@@ -29200,7 +29200,7 @@ R
 , und
 A
 m
-ist unb eschränkt, da
+ist unbeschränkt, da
 k
 A
 m
@@ -29234,11 +29234,11 @@ n
 x
 
 x
-. Per De˝nition der Quotiententop ologie ist die Klassenabbil-
+. Per De˝nition der Quotiententopologie ist die Klassenabbil-
 dung stetig. Da
 S
 n
-als abgeschlossene und b eschränkte Teilmenge des
+als abgeschlossene und beschränkte Teilmenge des
 R
 n
 +1
@@ -29251,9 +29251,9 @@ R
 )
 ist kompakt.
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  5
-Die De˝nition von Homö omorphismus kann auf
+Die De˝nition von Homöomorphismus kann auf
  Seite 9
  nachgelesen werden.
 De˝nition 79
@@ -29264,10 +29264,10 @@ G;
 )
 und
 (
-H ;
+H;
 
 )
-Grupp en und
+Gruppen und
 '
 :
 G
@@ -29281,7 +29281,7 @@ Homomorphismus
 8
 g
 1
-; g
+;g
 2
 2
 G
@@ -29312,7 +29312,7 @@ Sei
 X
 =
 R
-mit der Standarttop ologie und
+mit der Standarttopologie und
 '
 1
 :
@@ -29328,7 +29328,7 @@ R
 '
 1
 ein
-Grupp enhomomorphismus und ein Homö omorphismus.
+Gruppenhomomorphismus und ein Homöomorphismus.
 2)
 Sei
 G
@@ -29351,33 +29351,33 @@ Z
 :
 G
 !
-H ; x
+H;x
 7!
 x
-mo d
+mod
 3
 ein
-Grupp enhomomorphismus. Jedo ch ist
+Gruppenhomomorphismus. Jedoch ist
 '
 2
-nicht injektiv, also sicher kein Homö omor-
+nicht injektiv, also sicher kein Homöomor-
 phismus.
 3)
 Sei
 X
-ein top ologischer Raum. Dann ist
+ein topologischer Raum. Dann ist
 id
 X
-ein Homö omorphismus. Da keine
+ein Homöomorphismus. Da keine
 Verknüpfung auf
 X
 de˝niert wurde, ist
 X
-keine Grupp e und daher auch kein Grup-
-p enhomomorphismus.
+keine Gruppe und daher auch kein Grup-
+penhomomorphismus.
 Also: Obwohl die Begri˙e ähnlich klingen, werden sie in ganz unterschiedlichen Kontexten
 verwendet.
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  6
 Die De˝nition einer Isotopie kann auf
  Seite 20
@@ -29392,10 +29392,10 @@ G;
 )
 und
 (
-H ;
+H;
 
 )
-Grupp en und
+Gruppen und
 '
 :
 G
@@ -29409,16 +29409,16 @@ Isomorphismus
 '
 ein bijektiver Homomorphismus ist.
 Eine Isotopie ist also für Knoten de˝niert, Isometrien machen nur in metrischen Räumen
-Sinn und ein Isomorphismus b enötigt eine Grupp enstruktur.
+Sinn und ein Isomorphismus benötigt eine Gruppenstruktur.
 103
-Lösung en der Übungsaufgaben
-Lösung zu Aufgab e
+Lösungen der Übungsaufgaben
+Lösung zu Aufgabe
  7
 (a)
 Vor.:
 Sei
 M
-eine top ologische Mannigfaltigkeit.
+eine topologische Mannigfaltigkeit.
 Beh.:
 M
 ist wegzusammehängend
@@ -29430,14 +29430,14 @@ Beweis:
 )
 : Da
 M
-insb esondere ein top ologischer Raum ist folgt diese Richtung
+insbesondere ein topologischer Raum ist folgt diese Richtung
 direkt aus
  Bemerkung 23
 .
 
 (
 : Seien
-x; y
+x;y
 2
 M
 und
@@ -29508,7 +29508,7 @@ z
 
 Z
 C
-, denn gäb e es ein
+, denn gäbe es ein
 U
 ~
 z
@@ -29516,7 +29516,7 @@ z
 z
 2
 Z
-, so gäb e es Wege
+, so gäbe es Wege
 
 2
 :
@@ -29524,10 +29524,10 @@ Z
 ;
 1]
 !
-M ; 
+M;
 2
 (0) =
-z ; 
+z;
 2
 (1) =
 x
@@ -29538,22 +29538,22 @@ und
 ;
 1]
 !
-M ; 
+M;
 1
 (0) =
 ~
-z ; 
+z;
 1
 (1) =
 z
 .
-Dann wäre ab er
+Dann wäre aber
 
 : [0
 ;
 1]
 !
-M ;
+M;
 
 (
 x
@@ -29628,11 +29628,11 @@ Beweis:
 X
 := (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 1
 ;
@@ -29642,15 +29642,15 @@ g
 und
 (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 2
 g
-sind homö omorph zu
+sind homöomorph zu
 R
 .
 Also sind die einzigen kritischen Punkte, die man nicht verbinden können könnte
@@ -29663,15 +29663,15 @@ und
 Da
 (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 1
 g
-homö omorph zu
+homöomorph zu
 R
 ist, exisitert ein Weg
 
@@ -29680,26 +29680,26 @@ von
 0
 1
 zu einem
-b eliebigen Punkt
+beliebigen Punkt
 a
 2
 R
-n f
+nf
 0
 g
 .
 Da
 (
 R
-n f
+nf
 0
 g
 )
-[ f
+[f
 0
 2
 g
-eb enfalls homö omorph zu
+ebenfalls homöomorph zu
 R
 ist, existiert auÿerdem ein
 Weg
@@ -29720,23 +29720,23 @@ nach
 2
 .
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  9
 Vor.:
 Sei
 (
-X ; d
+X;d
 )
-eine absolute Eb ene,
-A; B ; C
+eine absolute Ebene,
+A;B;C
 2
 X
 und
 4
-AB C
-ein D reieck.
+ABC
+ein Dreieck.
 104
-Lösung en der Übungsaufgaben
+Lösungen der Übungsaufgaben
 (a)
 Beh.:
 AB
@@ -29745,11 +29745,11 @@ AB
 AC
 )
 \
-AB C
+ABC
 ˘
 =
 \
-AC B
+ACB
 Bew.:
 Sei
 AB
@@ -29783,34 +29783,34 @@ A
 '
 (
 \
-AB C
+ABC
 ) =
 \
-AC B
+ACB
 )
 \
-AB C
+ABC
 ˘
 =
 \
-AC B
+ACB
 
 (b)
 Beh.:
 Der längeren Seite von
 4
-AB C
-liegt der gröÿere Winkel gegenüb er und umge-
+ABC
+liegt der gröÿere Winkel gegenüber und umge-
 kehrt.
 Bew.:
 Sei
 d
 (
-A; C
+A;C
 )
 > d
 (
-A; B
+A;B
 )
 . Nach
 3 (i)
@@ -29823,12 +29823,12 @@ AC
 mit
 d
 (
-A; C
+A;C
 0
 ) =
 d
 (
-A; B
+A;B
 )
 )
 C
@@ -29840,16 +29840,16 @@ C
 .
 Es gilt
 ]
-AB C
+ABC
 0
 <
 ]
-AB C
+ABC
 und aus
- Aufgab e 9 (a)
+ Aufgabe 9 (a)
  folgt:
 ]
-AB C
+ABC
 0
 =
 ]
@@ -29858,74 +29858,74 @@ AC
 B
 .
 \
-B C
+BC
 0
 A
 ist ein nicht anliegender Auÿenwinkel zu
 \
-B C A
+BCA
 Bem.
 66
 =====
 )
 ]
-B C
+BC
 0
 A >
 ]
-B C A
+BCA
 )
 ]
-B C A <
+BCA <
 ]
-B C
+BC
 0
 A
 =
 ]
-AB C
+ABC
 0
 <
 ]
-AB C
+ABC
 Sei umgekehrt
 ]
-AB C >
+ABC >
 ]
-B C A
+BCA
 , kann
 wegen 1. Teil von
- Aufgab e 9 (b)
+ Aufgabe 9 (b)
  nicht
 d
 (
-A; B
+A;B
 )
 > d
 (
-A; C
+A;C
 )
 gelten.
 Wegen
- Aufgab e 9 (a)
+ Aufgabe 9 (a)
  kann nicht
 d
 (
-A; B
+A;B
 ) =
 d
 (
-A; C
+A;C
 )
 gelten.
 )
 d
 (
-A; B
+A;B
 )
 < d
 (
-A; C
+A;C
 )
 
 (c)
@@ -29951,8 +29951,8 @@ an
 g
 .
 '
-vertauscht die b eiden
-Halb eb enen bzgl.
+vertauscht die beiden
+Halbebenen bzgl.
 g
 .
 )
@@ -29972,7 +29972,7 @@ an
 g
 .
 '
-vertauscht die b eiden Halb eb enen bzgl.
+vertauscht die beiden Halbebenen bzgl.
 g
 )
 '
@@ -29989,41 +29989,41 @@ Sei
 A
 2
 g
-n f
+nf
 F
 g
 . Dann gilt
 '
 (
 \
-AF P
+AFP
 ) =
 \
-AF '
+AF'
 (
 P
 ) =
 ˇ
 )
 \
-AF P
+AFP
 ist rechter Winkel.
-Gäb e es nun
+Gäbe es nun
 G
 2
 g
-n f
+nf
 F
 g
 , so dass
-P G
+PG
 weiteres Lot von
 P
 auf
 g
 ist, wäre
 4
-P F G
+PFG
 ein Dreieck mit zwei rechten Innenwinkeln (vgl.
  Abbildung 5.4
 ).
@@ -30036,7 +30036,7 @@ F
 g
 Abbildung 5.4
 :
- Zwei L ote zu einer Geraden
+ Zwei Lote zu einer Geraden
 g
 durch einen Punkt
 P
@@ -30048,7 +30048,7 @@ Nach
 G
 gibt es nicht.
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  10
 Sei
 f
@@ -30077,7 +30077,7 @@ f
 h
 . Mit Axiom
  
- folgt: Es gibt hö chstens eine Parallele
+ folgt: Es gibt höchstens eine Parallele
 zu
 g
 durch
@@ -30096,7 +30096,7 @@ und
 f
 k
 g
-. Da ab er
+. Da aber
 x
 2
 h
@@ -30104,10 +30104,10 @@ h
 h
 nicht
 105
-Lösung en der Übungsaufgaben
+Lösungen der Übungsaufgaben
 parallel zu
 g
-sein, denn ansonsten gäb e es zwei Parallelen zu
+sein, denn ansonsten gäbe es zwei Parallelen zu
 g
 durch
 x
@@ -30122,11 +30122,11 @@ g
 ,
 h
 
-Lösung zu Aufgab e
+Lösung zu Aufgabe
  11
 Sei
 (
-X ; d; G
+X;d;G
 )
 eine Geometrie, die
  
@@ -30134,7 +30134,7 @@ eine Geometrie, die
 
  erfüllt. Seien auÿerdem
 4
-AB C
+ABC
 und
 4
 A
@@ -30146,35 +30146,35 @@ C
 Dreiecke, für die gilt:
 d
 (
-A; B
+A;B
 ) =
 d
 (
 A
 0
-; B
+;B
 0
 )
 d
 (
-A; C
+A;C
 ) =
 d
 (
 A
 0
-; C
+;C
 0
 )
 d
 (
-B ; C
+B;C
 ) =
 d
 (
 B
 0
-; C
+;C
 0
 )
 Sei
@@ -30199,7 +30199,7 @@ und
 C
 0
 )
-liegt in der selb en Halb eb ene
+liegt in der selben Halbebene
 bzgl.
 AB
 wie
@@ -30210,13 +30210,13 @@ C
 Es gilt
 d
 (
-A; C
+A;C
 ) =
 d
 (
 A
 0
-; C
+;C
 0
 ) =
 d
@@ -30226,14 +30226,14 @@ d
 A
 0
 )
-; '
+;'
 (
 C
 0
 )) =
 d
 (
-A; '
+A;'
 (
 C
 0
@@ -30241,13 +30241,13 @@ C
 und
 d
 (
-B ; C
+B;C
 ) =
 d
 (
 B
 0
-; C
+;C
 0
 ) =
 d
@@ -30257,14 +30257,14 @@ d
 B
 0
 )
-; '
+;'
 (
 C
 0
 )) =
 d
 (
-B ; '
+B;'
 (
 C
 0
@@ -30293,12 +30293,12 @@ C
 0
 ) =
 4
-AB C
+ABC
 .
 
 Bildquellen
-Alle B ilder, die hier nicht aufgeführt sind, wurden von Martin Thoma erstellt.
-Teilweise wurden die im folgenden aufgelisteten Bilder no ch leicht mo di˝ziert.
+Alle Bilder, die hier nicht aufgeführt sind, wurden von Martin Thoma erstellt.
+Teilweise wurden die im folgenden aufgelisteten Bilder noch leicht modi˝ziert.
 Abb.
  0.1a
 S
@@ -30317,27 +30317,27 @@ T
  tex.stackexchange.com/a/70979/5645
 Abb.
  1.6
- Stereographische Pro jektion:
- texample.net/tikz/examples/map-pro jections
+ Stereographische Projektion:
+ texample.net/tikz/examples/map-projections
 Abb.
  1.11
- Knoten von Jim.b elk aus der 
- Blue knots
+ Knoten von Jim.belk aus der 
+Blue knots
 -Serie:
 
 Trivialer Knoten:
-commons.wik imedia.org/wiki/File:B lue_Unknot.png
+commons.wikimedia.org/wiki/File:Blue_Unknot.png
 
 Kleeblattknoten:
-commons.wiki media.org/wiki/File:Bl ue_Trefoil_Knot.png
+commons.wikimedia.org/wiki/File:Blue_Trefoil_Knot.png
 
 Achterknoten:
-commons.wik imedia.org/wiki/File:B lue_Figure- Eight_Knot.png
+commons.wikimedia.org/wiki/File:Blue_Figure-Eight_Knot.png
 
 6
 2
 -Knoten:
-commons.wiki media.org/wiki/File:Bl ue_6_2_Knot.png
+commons.wikimedia.org/wiki/File:Blue_6_2_Knot.png
 Abb.
  1.12
  Reidemeister-Züge: YAMASHITA Makoto (
@@ -30349,13 +30349,13 @@ Abb.
 )
 Abb.
  1.13
-Kleeblattknoten, 3-Färbung: Jim.b elk,
-commons.wik imedia.org/wiki/File:T ricoloring.
+Kleeblattknoten,3-Färbung:Jim.belk,
+commons.wikimedia.org/wiki/File:Tricoloring.
 png
 Abb.
  2.1
-Dopp eltorus: Oleg Alexandrov,
-commons.wiki media.org/wiki/File:D ouble\_torus\_illustra tion.
+Doppeltorus:OlegAlexandrov,
+commons.wikimedia.org/wiki/File:Double\_torus\_illustration.
 png
 Abb.
  2.8
@@ -30365,10 +30365,10 @@ Abb.
  3 Pfade auf Torus:
  Charles Staats
 ,
-tex.stackex change.com/a/149991/56 45
+tex.stackexchange.com/a/149991/5645
 Abb.
  3.10
- Üb erlagerung von
+ Überlagerung von
 S
 1
 mit
@@ -30376,34 +30376,34 @@ R
 :
  Alex
 ,
-tex.stackex change.com/a/149706/56 45
+tex.stackexchange.com/a/149706/5645
 Abb.
  4.7a
  Sphärisches Dreieck:
  Dominique Toussaint
 ,
-commons.wik imedia.org/wiki/File: Spherical_triangle_3d_ opti.png
+commons.wikimedia.org/wiki/File:Spherical_triangle_3d_opti.png
 Abb.
  5.1
  Möbiusband:
  Jake
 ,
-tex.stackexc hange.com/a/118573/564 5
+tex.stackexchange.com/a/118573/5645
 Abb.
  5.3
  Krümmung des Torus:
  Charles Staats
 ,
-tex.stackex change.com/a/149991/5 645
+tex.stackexchange.com/a/149991/5645
 Abkürzungsverzeichnis
 Beh.
 Behauptung
 Bew.
 Beweis
 bzgl.
-b ezüglich
+bezüglich
 bzw.
-b eziehungsweise
+beziehungsweise
 ca.
 circa
 d. h.
@@ -30419,7 +30419,7 @@ Homomorphismus
 o. B. d. A.
 ohne Beschränkung der Allgemeinheit
 Prop.
-Prop osition
+Proposition
 sog.
 sogenannte
 Vor.
@@ -30433,10 +30433,10 @@ zusammenhängend
 z. z.
 zu zeigen
 Ergänzende De˝nitionen und Sätze
-Da dieses Skript in die Geometrie und Top ologie einführen soll, sollten soweit wie möglich alle
-b enötigten Begri˙e de˝niert und erklärt werden. Die folgenden Begri˙e wurden zwar verwendet,
-ab er nicht erklärt, da sie Bestandteil der Vorlesungen Analysis I und I I sowie Lineare Algebra
-und analytische Geometrie I und I I sind. Jedo ch will ich zumindest die De˝nitionen b ereitstellen.
+Da dieses Skript in die Geometrie und Topologie einführen soll, sollten soweit wie möglich alle
+benötigten Begri˙e de˝niert und erklärt werden. Die folgenden Begri˙e wurden zwar verwendet,
+aber nicht erklärt, da sie Bestandteil der Vorlesungen Analysis I und II sowie Lineare Algebra
+und analytische Geometrie I und II sind. Jedoch will ich zumindest die De˝nitionen bereitstellen.
 De˝nition 81
 Sei
 D
@@ -30461,7 +30461,7 @@ x
 n
 in
 D
-n f
+nf
 x
 0
 g
@@ -30472,7 +30472,7 @@ n
 x
 0
 .
-Folgende De˝nition wurde dem Skript von Herrn P rof. Dr. Leuzinger für Lineare Algebra
+Folgende De˝nition wurde dem Skript von Herrn Prof. Dr. Leuzinger für Lineare Algebra
 entnommen:
 De˝nition 82
 Es seien
@@ -30500,11 +30500,11 @@ W
 heiÿt
 a˚n
 , falls für alle
-a; b
+a;b
 2
 V
 und alle
-; 
+;
 2
 K
 mit
@@ -30522,7 +30522,7 @@ f
 f
 (
 a
-) +
+)+
 
 (
 b
@@ -30559,7 +30559,7 @@ k
 8
 v
 1
-; v
+;v
 2
 2
 S
@@ -30573,7 +30573,7 @@ v
 ) h
 v
 1
-; v
+;v
 2
 i
 = 0
@@ -30585,11 +30585,11 @@ f
 2
 C
 [
-a; b
+a;b
 ] :=
 C
 ([
-a; b
+a;b
 ])
 , weiter sei
 y
@@ -30607,7 +30607,7 @@ a
 (
 b
 )
-o der
+oder
 f
 (
 b
@@ -30623,7 +30623,7 @@ x
 0
 2
 [
-a; b
+a;b
 ]
 mit
 f
@@ -30637,7 +30637,7 @@ y
 De˝nition 84
 Sei
 V
-ein Vektorraum üb er einem Körp er
+ein Vektorraum über einem Körper
 K
 und
 f
@@ -30649,7 +30649,7 @@ eine lineare Abbildung.
 v
 2
 V
-n f
+nf
 0
 g
 heiÿt
@@ -30677,7 +30677,7 @@ f
 .
 Satz (Binomischer Lehrsatz)
 Sei
-x; y
+x;y
 2
 R
 . Dann gilt:
@@ -30709,7 +30709,7 @@ N
 0
 De˝nition 85
 Seien
-a; b
+a;b
 2
 R
 3
@@ -30771,10 +30771,10 @@ b
 1
 1
 A
-Symb olverzeichnis
-Mengenop erationen
+Symbolverzeichnis
+Mengenoperationen
 Seien
-A; B
+A;B
 und
 M
 Mengen.
@@ -30791,7 +30791,7 @@ M
 M
 Abschluss von
 M
-@ M
+@M
 Rand der Menge
 M
 M
@@ -30801,15 +30801,15 @@ M
 A
 
 B
-Kreuzpro dukt
+Kreuzprodukt
 A
 
 B
-Teilmengenb eziehung
+Teilmengenbeziehung
 A
 (
 B
-echte Teilmengenb eziehung
+echte Teilmengenbeziehung
 A
 n
 B
@@ -30834,22 +30834,22 @@ A
 und
 B
 AB
-Strecke mit E ndpunkten
+Strecke mit Endpunkten
 A
 und
 B
 4
-AB C
+ABC
 Dreieck mit Eckpunkten
-A; B ; C
+A;B;C
 AB
 ˘
 =
-C D
+CD
 Die Strecken
 AB
 und
-C D
+CD
 sind
 isometrisch
 j
@@ -30858,28 +30858,28 @@ j
 Geometrische Realisierung des
 Simplizialkomplexes
 K
-Grupp en
+Gruppen
 Sei
 X
-ein top ologischer Raum und
+ein topologischer Raum und
 K
 ein Kör-
-p er.
-Homö o
+per.
+Homöo
 (
 X
 )
-Homö omorphismengrupp e
+Homöomorphismengruppe
 Iso(
 X
 )
-Isometriengrupp e
+Isometriengruppe
 GL
 n
 (
 K
 )
-Allgemeine lineare Grupp e (von
+Allgemeine lineare Gruppe (von
 G
 eneral
 L
@@ -30890,21 +30890,21 @@ n
 (
 K
 )
-Sp ezielle lineare Grupp e
+Spezielle lineare Gruppe
 PSL
 n
 (
 K
 )
-Pro jektive lineare Grupp e
+Projektive lineare Gruppe
 Perm(
 X
 )
-Permutationsgrupp e
+Permutationsgruppe
 Sym(
 X
 )
-Symmetrische Grupp e
+Symmetrische Gruppe
 Wege
 Sei
 
@@ -30956,7 +30956,7 @@ C
 1])
 Weiteres
 B
-Basis einer Top ologie
+Basis einer Topologie
 B
 
 (
@@ -30966,21 +30966,21 @@ x
 -Kugel um
 x
 S
-Subbasis einer Top ologie
+Subbasis einer Topologie
 T
-Top ologie
+Topologie
 A
 Atlas
 P
-Pro jektiver Raum
+Projektiver Raum
 h
 ;
 i
-Skalarpro dukt
+Skalarprodukt
 X=
 ˘
 X
-mo dulo
+modulo
 ˘
 [
 x
@@ -31020,7 +31020,7 @@ und
 g
 ˇ
 X
-Pro jektion auf
+Projektion auf
 X
 f
 j
@@ -31036,7 +31036,7 @@ M
 )
 Urbild von
 M
-Rg (
+Rg(
 M
 )
 Rang von
@@ -31048,7 +31048,7 @@ K
 Euler-Charakteristik von
 K
 110
-Symbolverz eichnis
+Symbolverzeichnis
 
 k
 Standard-Simplex
@@ -31073,11 +31073,11 @@ B
 f
 
 Abbildung zwischen Fundamental-
-grupp en (vgl.
+gruppen (vgl.
  Seite 49
 )
 111
-Symbolverz eichnis
+Symbolverzeichnis
 Zahlenmengen
 N
 =
@@ -31087,13 +31087,13 @@ f
 2
 ;
 3
-; : : :
+;:::
 g
 Natürliche Zahlen
 Z
 =
 N
-[ f
+[f
 0
 ;
 
@@ -31101,7 +31101,7 @@ N
 ;
 
 2
-; : : :
+;:::
 g
 Ganze Zahlen
 Q
@@ -31130,7 +31130,7 @@ und
 n
 2
 Z
-n f
+nf
 0
 g
 	
@@ -31147,12 +31147,12 @@ p
 3
 p
 3
-; : : :
+;:::
 	
 Reele Zahlen
 R
 +
-Echt p ositive reele Zahlen
+Echt positive reele Zahlen
 R
 n
 +
@@ -31163,7 +31163,7 @@ f
 (
 x
 1
-; : : : ; x
+;:::;x
 n
 )
 2
@@ -31180,10 +31180,10 @@ R
 
 =
 R
-n f
+nf
 0
 g
-Einheitengrupp e von
+Einheitengruppe von
 R
 C
 =
@@ -31192,7 +31192,7 @@ a
 +
 ib
 j
-a; b
+a;b
 2
 R
 g
@@ -31207,7 +31207,7 @@ f
 5
 ;
 7
-; : : :
+;:::
 g
 Primzahlen
 H
@@ -31220,7 +31220,7 @@ j =
 z >
 0
 g
-ob ere Halb eb ene
+obere Halbebene
 I
 = [0
 ;
@@ -31235,13 +31235,13 @@ S
 !
 R
 2
-Einb ettung der Kreislinie in die Eb ene
+Einbettung der Kreislinie in die Ebene
 ˇ
 1
 (
-X ; x
+X;x
 )
-Fundamentalgrupp e im top ologischen Raum
+Fundamentalgruppe im topologischen Raum
 X
 um
 x
@@ -31252,7 +31252,7 @@ f
 )
 Menge der Fixpunkte der Abbildung
 f
-k  k
+kk
 2
 2-Norm; Euklidische Norm
 
@@ -31285,7 +31285,7 @@ p
 T
 s
 S
-Tangentialeb ene an
+Tangentialebene an
 S
 
 R
@@ -31311,7 +31311,7 @@ a˚ne,
  107
 di˙erenzierbare,
  29
-homotop e,
+homotope,
  50
 o˙ene,
  53
@@ -31329,7 +31329,7 @@ Achterknoten,
  20
 Aktion,
 siehe
-Grupp enop eration
+Gruppenoperation
 Anordnungsaxiome,
  66
 Atlas,
@@ -31358,7 +31358,7 @@ k
  29
 Decktransformation,
  59
-Decktransformationsgrupp e,
+Decktransformationsgruppe,
  59
 Deformationsretrakt,
  47
@@ -31370,12 +31370,12 @@ Dimension,
  34
 diskret,
  53
-Dopp elverhältnis,
+Doppelverhältnis,
  83
-Dreib ein
-b egleitendes,
+Dreibein
+begleitendes,
  89
-Eb ene
+Ebene
 euklidische,
  64
 Eigenvektor,
@@ -31405,7 +31405,7 @@ reguläre,
  30
 Flächenelement,
  95
-Formop erator,
+Formoperator,
 siehe
 Weingarten-Abbildung
 Fundamentalform
@@ -31413,7 +31413,7 @@ erste,
  94
 zweite,
  97
-Fundamentalgrupp e,
+Fundamentalgruppe,
  47
 Gauÿ-Krümmung,
  92
@@ -31422,27 +31422,27 @@ Geometrie,
  64
 Gerade,
  64
-hyp erb olische,
+hyperbolische,
  77
 Graph,
  37
 Grenzwert,
  8
-Grupp e
+Gruppe
 allgemeine lineare,
  22
 ,
  26
-sp ezielle lineare,
+spezielle lineare,
  22
-top ologische,
+topologische,
  33
-Grupp e op eriert durch Homö omorphismen,
+Gruppe operiert durch Homöomorphismen,
 61
-Grupp enaktion,
+Gruppenaktion,
 siehe
-Grupp enop eration
-Grupp enop eration,
+Gruppenoperation
+Gruppenoperation,
  60
 , 6063
 stetige,
@@ -31452,7 +31452,7 @@ Häufungspunkt,
 Hülle
 konvexe,
  34
-Halb eb ene,
+Halbebene,
  66
 Halbgerade,
  65
@@ -31460,17 +31460,17 @@ Halbraum,
  28
 Hauptkrümmung,
  92
-Hilb ert-Kurve,
+Hilbert-Kurve,
  19
 ,
  19
 113
-Stichwor tverz eichnis
-Homö omorphismengrupp e,
+Stichwortverzeichnis
+Homöomorphismengruppe,
  10
-Homö omorphismus,
+Homöomorphismus,
  9
-Homologiegrupp e,
+Homologiegruppe,
  41
 Homomorphismus,
  101
@@ -31490,7 +31490,7 @@ Isometrie,
  6
 ,
  10
-Isometriegrupp e,
+Isometriegruppe,
  10
 Isomorphismus,
  101
@@ -31509,9 +31509,9 @@ o˙ener,
  3
 Kleeblattknoten,
  20
-Klump entop ologie,
+Klumpentopologie,
 siehe
-triviale Top ologie
+triviale Topologie
 Knoten,
  20
 , 1721
@@ -31544,7 +31544,7 @@ Krümmung,
  89
 Kreis,
  37
-Kreuzpro dukt,
+Kreuzprodukt,
  107
 Kurve,
  87
@@ -31556,7 +31556,7 @@ allgemeine,
 Lehrsatz
 Binomischer,
  107
-Lie-Grupp e,
+Lie-Gruppe,
  33
 liegt zwischen,
  65
@@ -31595,13 +31595,13 @@ Metrik,
  6
 diskrete,
  6
-hyp erb olische,
+hyperbolische,
  84
 SNCF,
  8
-Neb enwinkel,
+Nebenwinkel,
  86
-Neilsche Parab el,
+Neilsche Parabel,
  27
 Normalenfeld,
  90
@@ -31619,8 +31619,8 @@ Oktaeder,
  34
 Orthonormalbasis,
  107
-Parab oloid
-hyp erb olisches,
+Paraboloid
+hyperbolisches,
  92
 Parallele,
  66
@@ -31634,14 +31634,14 @@ reguläre,
  30
 Polyzylinder,
  17
-Pro dukttop ologie,
+Produkttopologie,
  4
-Pro jektion
+Projektion
 stereographische,
  11
 Punkt,
  34
-Quotiententop ologie,
+Quotiententopologie,
  5
 ,
  10
@@ -31658,7 +31658,7 @@ kompakter,
  14
 metrischer,
  6
-pro jektiver,
+projektiver,
  5
 ,
  22
@@ -31667,8 +31667,8 @@ pro jektiver,
 ,
  52
 114
-Stichwor tverz eichnis
-top ologischer,
+Stichwortverzeichnis
+topologischer,
  2
 zusammenhängender,
  11
@@ -31700,7 +31700,7 @@ exotische,
  29
 Standard-Simplex,
  34
-Standardtop ologie,
+Standardtopologie,
  2
 sternförmig,
  48
@@ -31712,16 +31712,16 @@ di˙erenzierbare,
  29
 Subbasis,
  3
-Tangentialeb ene,
+Tangentialebene,
  89
 , 8990
 Teilraum,
  4
-Teilraumtop ologie,
+Teilraumtopologie,
  4
 Teilsimplex,
  34
-Top ologie
+Topologie
 diskrete,
  2
 ,
@@ -31752,12 +31752,12 @@ Total Unzusammenhängend,
  100
 Triangulierung,
  38
-Üb erdeckung,
+Überdeckung,
  14
-Üb ergangsfunktion,
+Übergangsfunktion,
 siehe
 Kartenwechsel
-Üb erlagerung,
+Überlagerung,
  51
 , 5160
 reguläre,
@@ -31770,9 +31770,9 @@ Umgebungsbasis,
  58
 vanishing set,
  26
-Vektorpro dukt,
+Vektorprodukt,
 siehe
-Kreuzpro dukt
+Kreuzprodukt
 Verklebung,
  26
 verträglich,
@@ -31785,7 +31785,7 @@ einfacher,
  17
 geschlossener,
  17
-homotop e,
+homotope,
  44
 inverser,
  48
@@ -31798,7 +31798,7 @@ Weingarten-Abbildung,
 Winkel,
  70
 Zusammenhang, 1114
-Zusammenhangskomp onente,
+Zusammenhangskomponente,
  13
 Zwischenwertsatz,
  107

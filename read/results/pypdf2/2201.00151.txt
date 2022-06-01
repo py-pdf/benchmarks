@@ -6,197 +6,197 @@ manuscriptno.Populations4
 ©
 ESO2022
 January4,2022
-MultiplestellarpopulationsinSchwarzschildmodeling
-andtheapplicationtotheFornaxdwarf
-K laudia KowalczykandE waL . okas
-NicolausCopernicusAstronomicalCenter,PolishAcademyo
-fSciences,Bartycka18,00-716Warsaw,Poland
+Multiple stellar populations in Schwarzschild modeling
+and the application to the Fornax dwarf
+Klaudia Kowalczyk and EwaL.okas
+Nicolaus Copernicus Astronomical Center,PolishAcademy o
+f Sciences, Bartycka 18, 00-716 Warsaw,Poland
 e-mail:
-klaudia.kowalczyk@gmail.com,lokas@camk.edu.pl
-January4,2022
+klaudia.kowalczyk@gmail.com, lokas@camk.edu.pl
+January 4, 2022
 ABSTRACT
-Dwarfspheroidal(dSph)galaxiesarebelievedtobestrongl
-ydarkmatterdominatedandthusareconsideredperfectobje
-ctstostudy
-darkmatterdistributionandtesttheoriesofstructurefor
-mation.Theypossessresolved,multiplestellarpopulatio
-nsthato
+Dwarf spheroidal (dSph) galaxies are believed to be strongl
+y dark matter dominated and thus are considered perfect obje
+cts to study
+dark matter distribution and test theories of structure for
+mation. They possess resolved, multiple stellar populatio
+ns that o
 
-ernew
-possibilitiesformodeling.Apromisingtool forthedynami
-calmodelingoftheseobjectsistheSchwarzschildorbitsup
+er new
+possibilities for modeling. A promising tool for the dynami
+cal modeling of these objects is the Schwarzschild orbit sup
 erposition
-method.Inthisworkweextendourpreviousimplementationo
-ftheschemetoincludemorethanonepopulationofstarsanda
+method. In this work we extend our previous implementation o
+f the scheme toinclude more than one population of stars and a
 more
-generalformofthemass-to-lightratio function.Wetested
-theimprovedapproachonanearlyspherical,gas-freegalax
-yformedin
-thecosmologicalcontextfromtheIllustrissimulation.We
-modeledthebinnedvelocitymomentsforstarssplitintotwo
+general form of the mass-to-light ratio function. We tested
+the improved approach on a nearly spherical, gas-free galax
+y formed in
+the cosmological context from the Illustris simulation. We
+modeled the binned velocity moments for stars split into two
 populations
-bymetallicityanddemonstratethatinspiteoflargersampl
-ingerrors theincreasednumberofconstraintsleadstosign
+bymetallicityanddemonstrate thatinspiteoflargersampl
+ingerrorsthe increasednumber ofconstraints leads tosign
 icantlytighter
-condenceregionsontherecovereddensityandvelocityani
-sotropyproles.WethenappliedthemethodtotheFornaxdSp
-hgalaxy
-withstarssimilarlydividedintotwopopulations.Incompa
-risonwithourearlierwork,wendtheanisotropyparameter
+condence regions on the recovered density and velocity ani
+sotropy proles. We then applied the method tothe Fornax dSp
+h galaxy
+withstarssimilarlydividedintotwopopulations. Incompa
+risonwithourearlierwork,wendtheanisotropy parameter
 tobeslightly
-increasing,ratherthandecreasing,withradiusandmorest
-ronglyconstrained.Wearealsoabletoinferanisotropyfor
-eachstellar
-populationseparatelyandndthemtobesignicantlydi
+increasing, rather than decreasing, with radius and more st
+rongly constrained. We are also able to infer anisotropy for
+each stellar
+population separately and ndthem tobe signicantlydi
 
 erent.
 Keywords.
 galaxies:kinematicsanddynamicsŒgalaxies:structureŒg
 alaxies:fundamentalparametersŒgalaxies:dwarfŒgalaxi
 es:
-starclusters:individual:Fornax
-1.Introduction
+star clusters:individual: Fornax
+1. Introduction
 
-Dwarfspheroidal(dSph)galaxiesoftheLocalGroup(Mateo
+Dwarf spheroidal (dSph) galaxies of the Local Group (Mateo
 
-1998;Tolstoyetal.2009)areconsideredtobeaperfecttool
+1998; Tolstoyet al. 2009) are considered to be a perfect tool
 to
-testourcurrenttheoriesofstructure formationinvolving
+test our current theories of structure formation involving
 dark
-matterinthecontextofnear-eldcosmology.Theobjectsar
+matter in the context of near-eld cosmology. The objects ar
 e
 believedtobestronglydarkmatterdominatedwithmass-to-
 light
 ratiosevenontheorderofafewhundredsolarunits.Duetoth
 eir
-proximitytheyarealsotheonlyextragalacticsystemswher
+proximitytheyare also the onlyextragalacticsystems wher
 ein-
-dividualstarscanberesolvedandtheirvelocitiesmeasure
-dof-
-feringthepossibilitytocreateinterestingdynamicalmod
+dividual stars can be resolved and their velocities measure
+d of-
+fering the possibility to create interesting dynamical mod
 eling
 techniques.
-TherstestimatesofdarkmattercontentindSphgalaxies
+The rst estimates of dark matter content in dSph galaxies
 werebasedonasinglemeasurementoftheline-of-sightvelo
 city
-dispersionofthestarsandtheapplicationofthevirialthe
+dispersion of the stars and the application of the virial the
 orem.
-Asthesamplesofthestarswithkinematicmeasurementsgrew
+As the samples of the stars with kinematic measurements grew
 ,
-itbecamepossibletoestimatetheproleofthevelocitydis
+it became possible to estimate the prole of the velocity dis
 per-
-sionandmodelitusingtheJeansequation(Binney&Tremaine
+sion and model it using the Jeans equation(Binney& Tremaine
 
-2008).Sincethestarsinthegalaxycanmoveonavariety
+2008). Since the stars in the galaxy can move on a variety
 
-oforbits,fromcirculartoradial,thedegeneracybetweent
+of orbits, from circular to radial, the degeneracy between t
 he
-anisotropyoftheorbitsandthemassdistributionisinhere
-ntin
-thistypeofmodeling.Thereasonforthisliesinthe facttha
+anisotropy of the orbits and the mass distribution is inhere
+nt in
+this type of modeling. The reason for this lies in the fact tha
 t
 di
 
-erentcombinationsofthesequantitiescanreproducetheve
+erent combinationsof these quantitiescan reproducethe ve
 -
 locitydispersionproleequallywell.
 Awaytoovercomethisissue,atleastpartially,istoresort
 to
-higherorderline-of-sightvelocitymoments,suchastheku
+higher order line-of-sight velocity moments, such as the ku
 rto-
-sis,andusethecorrespondingJeansequations.Sincetheku
+sis, and use the correspondingJeans equations.Since the ku
 rto-
-sisismoresensitivetothevelocityanisotropythantothem
+sis is more sensitive to the velocity anisotropy than to the m
 ass
 distribution,usefulconstraintscanbeobtainedonboth.S
 till,the
 methodrequireslargekinematicsamplestoestimatethevel
 ocity
-momentsreliablyandsomeassumptiononthefunctionalform
+moments reliably and some assumption on the functional form
 
-oftheanisotropy(okas2002;okasetal.2005).
-TheSchwarzschildmodelingtechnique(Schwarzschild
-1979)o
+ofthe anisotropy(okas2002; okaset al.2005).
+The Schwarzschild modeling technique (Schwarzschild
+1979) o
 
-ersadi
+ers a di
 
-erentapproachtoestimatethepropertiesof
-dSphgalaxieswithoutpriorassumptionsonthetypeoforbit
+erent approach to estimate the properties of
+dSph galaxies without prior assumptions on the type of orbit
 s.
-Itreliesonbuildingagalaxymodeloutofasetofbest-ttin
+It relies on building a galaxy model out of a set of best-ttin
 g
-orbitsprobedintherangeofenergyandangularmomenta.In
+orbits probed in the range of energy and angular momenta. In
 
-thismethod,theanisotropyofthestellarorbitscomesouta
-sa
+this method, the anisotropy of the stellar orbits comes out a
+s a
 resultofthemodelinginthesamewayasthedensityprole.A
 l-
 thoughithasbeenoriginallydevelopedforlargeelliptica
 lgalax-
-ies(vanderMareletal.1998;Vallurietal.2004;Gebhardte
-tal.
-2015),ithasrecentlybeenadoptedforuseondiscretedata
+ies(vanderMarelet al.1998;Vallurietal.2004;Gebhardte
+t al.
+2015), it has recently been adopted for use on discrete data
 
-characteristicofdSphgalaxiesandappliedtoanumberof
+characteristic of dSph galaxies and applied to a number of
 
-dwarfs,includingCarina,Draco,Fornax,Sculptor,andSex
+dwarfs, including Carina, Draco, Fornax, Sculptor, and Sex
 tans
-(Jardel&Gebhardt2008;Jardeletal.2013;Breddels&Helmi
+(Jardel& Gebhardt 2008;Jardelet al.2013;Breddels&Helmi
 
-2013;Breddelsetal.2013;Kowalczyketal.2019).
-ManydSphgalaxiesshowsignsofthepresenceofmultiple
-stellarpopulationsresultingfromafewstarformationepi
+2013;Breddelset al.2013;Kowalczyket al. 2019).
+Many dSph galaxies show signs of the presence of multiple
+stellar populations resulting from a few star formation epi
 sodes
-(Bellazzinietal.2001;delPinoetal.2015;Fabrizioetal.
+(Bellazzinietal.2001;del Pinoetal.2015;Fabrizioet al.
 2016;
-Paceetal.2020).Thisobservationo
+Paceet al. 2020). This observation o
 
-ersawaytoimprovethe
-modelingmethodssince,assumingdynamicalequilibrium,a
+ers a way to improve the
+modeling methods since, assuming dynamical equilibrium, a
 ll
-populationsaresupposedtobeinuencedbythesameunder-
+populations are supposed to be inuenced by the same under-
 
-lyinggravitationalpotentialofthegalaxy,buttheyhaved
+lying gravitational potential of the galaxy, but they have d
 if-
-ferentdistributionssomoreconstraintscanbeimposeddur
+ferent distributions so more constraints can be imposed dur
 ing
-themodeling.ThisapproachwasrstusedbyBattagliaetal.
+the modeling. This approach was rst used by Battagliaet al.
 
-(2008)tomodelthemassdistributionintheSculptordSph
+(2008) to model the mass distribution in the Sculptor dSph
 
-galaxy.Afewattemptshavealsobeenmadetoconstrainthe
+galaxy. A few attempts have also been made to constrain the
 
-innerslopeofthedarkmatterproleindSphgalaxiesusing
+inner slope of the dark matter prole in dSph galaxies using
 
-thistechnique(Walker&Peñarrubia2011;Amorisco&Evans
+this technique(Walker &Peñarrubia 2011; Amorisco&Evans
 
-2012;Hayashietal.2018)inordertoresolvetheso-calledc
+2012;Hayashiet al.2018)inordertoresolvetheso-calledc
 usp-
-coreproblem.Ithasbeenshowntobedi
+core problem. It has been shown to be di
 
-cult,however,due
-Articlenumber,page1of12
+cult, however, due
+Articlenumber, page 1of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
-Table1.
-PropertiesoftheIllustris galaxyusedtocreatemockdata.
-PropertyValue
-SubhaloID16960
+manuscript no. Populations4
+Table 1.
+Properties of the Illustrisgalaxyused tocreate mock data.
+Property Value
+SubhaloID 16960
 
-Numberofstellarparticles(
+Numberofstellar particles(
 N
 ?
-)70446
+) 70446
 Numberofdarkmatterparticles(
 N
 DM
-)78448
+) 78448
 Stellarmass(
 M
 ?
-)5
+) 5
 :
 74
 
@@ -207,7 +207,7 @@ M
 Darkmattermass(
 M
 DM
-)4
+) 4
 :
 91
 
@@ -215,9 +215,9 @@ DM
 11
 M
 
-Meanmassofstellarparticles815808M
+Meanmassofstellar particles 815808M
 
-Stellarhalf-massradius9
+Stellarhalf-massradius 9
 :
 99kpc
 Stellarhalf-numberradius(
@@ -225,7 +225,7 @@ r
 1
 =
 2
-)9.6kpc
+) 9.6kpc
 Axisratio
 c
 =
@@ -246,88 +246,88 @@ r
 =
 2
 0.949
-Triaxiality0.56
-tothenonsphericityofthedwarfsthatintroducesbiasesin
+Triaxiality 0.56
+to the nonsphericityof the dwarfsthat introducesbiases in
 such
-measurements(Kowalczyketal.2013;Geninaetal.2018).
+measurements(Kowalczyket al. 2013; Geninaet al.2018).
 Inourrecentpapers(Kowalczyketal.2017,2018,2019)we
 developedtheSchwarzschildtechniqueintheformapplicab
 leto
-binnedvelocitymomentsofasingletracerandverieditsab
+binned velocity moments of a single tracer and veried its ab
 il-
-itytoreproducethemassdistributionandvelocityanisotr
+ity toreproducethemassdistributionandvelocityanisotr
 opyof
-simulatedgalaxies.Wehavealsostudiedbiasesresultingf
+simulated galaxies. We have also studied biases resulting f
 rom
-thenonsphericityofthemodeledobjects.Later,weapplied
+the nonsphericity of the modeled objects. Later, we applied
 the
 methodtomodelthekinematicsoftheFornaxdSphgalaxyesti
 -
 matingitsmassandanisotropyproleswithunprecedentedp
 re-
 cision.
-Inthispaperwe extendourSchwarzschildmodelingtech-
-niquetoincludemultiplestellarpopulationswiththeaimt
+In this paper we extend our Schwarzschild modeling tech-
+nique to include multiple stellar populations with the aim t
 o
-constrainthepropertiesofdSphgalaxiesevenmorestrongl
+constrain the properties of dSph galaxies even more strongl
 y.
-Wetestourapproachonarealisticsimulatedgalaxyformedi
+We test our approach on a realistic simulated galaxy formed i
 n
-thecosmologicalcontext,originatingfromtheIllustrisp
+the cosmological context, originating from the Illustris p
 roject
-(Vogelsbergeretal.2014a).Althoughnopreciseanalogues
+(Vogelsbergeretal. 2014a). Although no precise analogues
 of
 dSphgalaxiesareavailableinthissimulationbecauseofth
 eres-
-olution,weuseamoremassivegalaxybutwithpropertiesoth
+olution, we use a more massive galaxy but with properties oth
 -
 erwisesimilartodSphs.Thereliabilityofthemodelingdoe
 snot
-dependontheparticularvalueofthemasssowebelievethese
+depend on the particular value of the mass so we believe these
 
-teststobeviable.Wedonotattempttoconstraintheinnerda
+tests to be viable. We do not attempt to constrain the inner da
 rk
-matterdensityprole(whichispoorlyresolvedanyway)but
+matter densityprole (whichis poorlyresolvedanyway)but
 try
-toputtighterlimitsontheestimatesofthemassandanisotr
+to put tighter limits on the estimates of the mass and anisotr
 opy
-proles.Finally,weapplytheimprovedmethodtotheavaila
+proles. Finally,we applythe improvedmethodto the availa
 ble
-kinematicdataforthedistinctstellarpopulationsoftheF
+kinematic data for the distinct stellar populations of the F
 ornax
 dSph.
-Thispaperisorganizedasfollows.InSection2wepresent
-thedataforthesimulatedgalaxyaswellastheirsplittingi
+This paper is organized as follows. In Section 2 we present
+the data for the simulated galaxy as well as their splitting i
 nto
-stellarpopulationsandmockobservationsalongthemainax
+stellar populations and mock observations along the main ax
 es.
 Section3containsanoverviewofourmodelingmethod,theap
 -
-plicationofthemethodtoallstarsandtotwopopulations,a
+plication of the method to all stars and to two populations, a
 nd
-acomparisonoftheresultsobtainedwiththesetwoapproach
+a comparisonof theresults obtainedwith these two approach
 es.
-TheresultsoftheapplicationofthemethodtotheFornaxdSp
+The results of the applicationof the method to the FornaxdSp
 h
-galaxyarepresentedinSection4.Wediscussourndingsand
+galaxy are presented in Section 4. We discuss our ndings and
 
-summarizethepaperinSection5.
+summarizethepaperin Section5.
 
-2.Mockdata
-2.1.Selectionofthesimulatedgalaxy
-Inordertotestourmodelingmethodonrealisticsimulated
+2. Mock data
+2.1. Selection of the simulated galaxy
+In order to test our modeling method on realistic simulated
 
-data,wedecidedtouseagalaxyfromtheIllustrisproject
+data, we decided to use a galaxy from the Illustris project
 
-(Vogelsbergeretal.2014a,b;Geneletal.2014;Nelsonetal
+(Vogelsbergeretal. 2014a,b; Genelet al. 2014; Nelsonetal
 .
 2015),namelytheIllustris-1cosmologicalsimulation.Th
 issim-
 ulationfollowstheformationandevolutionofgalaxiesfro
 mthe
-earlyUniversetothe presentbysolvinggravityandhydrody
+early Universe to the present by solving gravity and hydrody
 -
-namics,aswellasmodelingofstarformation,galacticwind
+namics, as well as modeling of star formation, galactic wind
 s,
 SFR [M
 
@@ -347,13 +347,13 @@ t [Gyr]
  8
  10
  12
-Fig.1.
-StarformationrateasafunctionoftheageoftheUniversein
+Fig. 1.
+Star formation rate as a function of the age of the Universe in
 thesimulatedgalaxyfromtheIllustrisprojectusedtocrea
 temockdata.
-Theblackandgrayverticalarrowsindicatethelastmergers
-whichthe
-galaxyunderwent,wetanddry,respectively.
+The black and gray vertical arrows indicate the last mergers
+which the
+galaxyunderwent, wetand dry, respectively.
 t [Gyr]
 Z [Z
 
@@ -377,36 +377,36 @@ Z [Z
 N [10
 2
 ]
-Fig.2.
-Numberofstarsasa functionoftheirmetallicityandtimeof
+Fig. 2.
+Number of stars as a function of their metallicity and time of
 formation(theageoftheUniverse)inthesimulatedgalaxy.
 Thevertical
-lineindicatestheappliedsplitintostellarpopulations.
+lineindicates the appliedsplit intostellarpopulations.
 
-magneticelds,andthe feedbackfromblackholes.Although
+magnetic elds, and the feedback from black holes. Although
 
 dwarfgalaxiesthatareofourinterestherearenotresolved
 inthe
 suite,thiscanbeeasilyovercomewiththeappropriatechoi
 ceof
 theobjectandthetreatmentofdata.
-AsthekeypropertiesofdSphgalaxyequivalentsweiden-
-tied:thelackofgas,thelackofablackhole,alowspin,
+As the key properties of dSph galaxy equivalents we iden-
+tied: the lack of gas, the lack of a black hole, a low spin,
 
-thestellarmassmuchsmallerthanthedarkmattermassanda
+the stellar mass much smaller than the dark matter mass and a
 
-nearlysphericalshape.Thelastconditionwasadoptedinan
+nearly spherical shape. The last conditionwas adopted in an
 at-
-tempttoavoidanystrongbiasintroducedbythesphericalmo
+temptto avoidany strongbiasintroducedby the sphericalmo
 d-
 elingofanonsphericalobject.Moreover,werequiredthega
 laxy
-topossessasignicantnumberofbothstellaranddarkmat-
+to possess a signicant number of both stellar and dark mat-
 
-terparticles(over10
+ter particles (over 10
 5
-),andawellresolvedcenter.Duetothe
-largesofteningscalefordarkmatterparticlesinthesimul
+), and a well resolved center. Due to the
+large softening scale for dark matter particles in the simul
 ation
 (
 
@@ -414,28 +414,28 @@ DM
 =
 1
 :
-42kpc),welookedforanobjectinwhicheventhe
-moreconcentratedstellarpopulation(seeSection2.2)ext
+42kpc), we looked for an object in which even the
+more concentratedstellar population(see Section 2.2) ext
 ended
-over43kpcsothattheregiona
+over43kpcso thattheregiona
 
 ectedbythenumericalartifacts
 wasenclosedwithin2-3innermostdatabins(weused20linea
 rly
-spacedspatialbins,seeSection3.1).
-Outof27345galaxieslistedinthecatalogofstellarcircu-
+spacedspatial bins,seeSection3.1).
+Out of 27345 galaxies listed in the catalog of stellar circu-
 larities,angularmomenta,andaxisratiospublishedbythe
 Illus-
 tristeam(Geneletal.2015)containingsubhaloswiththest
 ellar
-masslargerthan10
+mass larger than 10
 9
 M
 
-,onlyafewmetourrestrictiverequire-
-Articlenumber,page2of12
-K.Kowalczyk&E.L.okas:MultiplestellarpopulationsinS
-chwarzschildmodeling
+, only a few met our restrictive require-
+Articlenumber, page 2of 12
+K. Kowalczyk & E.L.okas: Multiple stellarpopulations inS
+chwarzschild modeling
 -80
 -40
 0
@@ -572,15 +572,15 @@ POPULATION II
  90
 s
  [km/s]
-Fig.3.
-Mapsoftheprojectedstellardensity,meanstellarvelocit
-y,andstellarvelocitydispersion(inrows)fortwostellar
-populations:themetal-
-richpopulationI(left-handsidepanels)andthemetal-poo
-rpopulationII(right-handside),andobservationsalongt
-heprincipalaxesdetermined
-forallstars(incolumns,alongthemajor,theintermediate
-,andtheminoraxis,respectively).
+Fig. 3.
+Maps of the projected stellar density, mean stellar velocit
+y, and stellar velocity dispersion (in rows) for two stellar
+populations: the metal-
+rich population I (left-hand side panels) and the metal-poo
+r population II (right-hand side), and observations along t
+he principal axes determined
+for allstars (incolumns, along the major, the intermediate
+,and the minor axis, respectively).
 -1
 -0.5
  0
@@ -664,30 +664,30 @@ t
 (r)
 r [kpc]
 Fig.4.
-Proles ofthevelocityanisotropyparameter,radialveloc
-itydispersion,andtangentialvelocitydispersion(incon
-secutivecolumns)calcu-
-latedfromallstars(inred),includingonlypopulationI(i
-norange),andonlypopulationII(inblue).Theupperrowsho
-wstheprolesusingthe
-logarithmicdistancescaleandreachingtheoutskirtsofth
-egalaxywhereasthebottomrowpresentsinthelinearscaleo
-nlytheradialrangeused
-inthemodeling.
+Prolesof the velocityanisotropy parameter, radial veloc
+ity dispersion, andtangential velocitydispersion (incon
+secutive columns) calcu-
+lated from all stars (in red), including only population I (i
+n orange), and only population II (in blue). The upper row sho
+ws the proles using the
+logarithmic distance scale and reaching the outskirts of th
+e galaxy whereas the bottom row presents in the linear scale o
+nly the radial range used
+inthe modeling.
 
-ments.Wedecidedtouseagalaxylabeledassubhalo16960.
+ments. We decided to use a galaxy labeled as subhalo 16960.
 
-AlltherelevantpropertiesofthegalaxyaregiveninTable1
+All the relevant properties of the galaxy are given in Table1
 ,
 includingnumbersofparticlesandtotalmassesforbothcom
 po-
 nents,anddetailsontheshapeofthestellarcomponent:the
 axis
-ratiosminortomajor(shortesttolongest)
+ratios minor to major (shortest to longest)
 c
 =
 a
-,intermediateto
+, intermediate to
 major
 b
 =
@@ -710,14 +710,14 @@ a
 c
 2
 ).
-Wedistinguishbetweenthehalf-massradiusprovidedinthe
+We distinguish between the half-mass radius provided in the
 Il-
-lustrisdatabaseandthehalf-numberradius
+lustris database and the half-number radius
 r
 1
 =
 2
-,whichweuse
+, which we use
 forfurthercalculationsinthispaper.Thedi
 
 erencebetweenthe
@@ -725,18 +725,18 @@ twocomesfromasmallgradientinthestellarmass-to-light
 ratio
 withthedistancefromthegalacticcenter.Sinceinourappr
 oach
-wetreatstarsasequal-massparticlesandrefertonumberde
+we treat stars as equal-mass particles and refer to number de
 n-
-sities(multipliedbythemeanmassofastellarparticlewhe
+sities (multiplied by the mean mass of a stellar particle whe
 n
-needed),theapplicationofthehalf-numberradiusismores
+needed), the application of the half-number radius is more s
 elf-
 consistent.
-Articlenumber,page3of12
+Articlenumber, page 3of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
+manuscript no. Populations4
 10
 -3
 10
@@ -766,65 +766,65 @@ all stars
 pop I
 pop II
 Fig.5.
-Surfacenumberdensityprolesofthestellardatasamplesf
-orthesimulatedgalaxyobservedalongdi
+Surface number density proles ofthe stellardata samples f
+orthe simulated galaxyobserved alongdi
 
-erentlinesofsight(fromtheleftto
-theright).Di
+erent lines of sight (from the leftto
+the right).Di
 
-erentlinesshowprolesforallavailablestars(inred),th
-emetal-richpopulationI(inorange),andthemetal-poorpo
-pulationII(in
-blue).Thinverticallinesindicate
+erent lines show proles for all available stars (inred), th
+e metal-richpopulation I (inorange), and the metal-poor po
+pulation II (in
+blue). Thinverticallines indicate
 r
 0
-(seetext)andtheouterboundaryofthespectroscopicdata.
-2.2.Splittingthestarsintopopulations
-Ourchosengalaxyshowsa complexformationhistoryunder-
+(see text) andthe outer boundary ofthe spectroscopic data.
+2.2. Splitting the stars into populations
+Our chosen galaxy shows a complex formation history under-
 
-goingmultiplemergerswhichresultinextendedstarformat
+going multiple mergers which result in extended star format
 ion
-withafewstarformationbursts.Thelastwetmerger,thatis
+with a few star formation bursts. The last wet merger, that is
 a
-mergerwithanobjectcontaininggas,happensat6.9Gyrfrom
+merger with an object containing gas, happens at 6.9Gyr from
 
-thebeginningofthesimulation,whereasthelastdrymerger
+thebeginningofthesimulation,whereasthelast drymerger
 (no
 gastransfer)at12.1Gyr,givingthegalaxyenoughtimetore
 gain
 dynamicalequilibrium.Wepresentthestarformationrate(
 SFR)
-asafunctionoftime(theageoftheUniverse)inFig.1,where
+as a function of time (the age of the Universe) in Fig.1, where
 
-theselastmergersareindicatedwithblackandgrayvertica
-lar-
-rows.InFig.2weshowthedistributionofstarsasafunction
+these last mergers are indicated with black and gray vertica
+l ar-
+rows. In Fig.2 we show the distributionof stars as a function
 of
 theirmetallicity(insolarunits)andthetimeofformation
 .Inor-
-dertodividethestellarsampleintotwopopulationswecuti
-tin
-halfbasedonthemetallicityindexofeachstellarparticle
-.This
-splitisindicatedinFig.2withtheverticalline.Withsati
+der to dividethe stellar sample into two populationswe cut i
+t in
+half based on the metallicity index of each stellar particle
+. This
+split is indicated in Fig.2 with the vertical line. With sati
 sfying
-accuracyitseparatesthestarsbornbeforeandafter4Gyrsi
+accuracy it separates the stars born before and after 4 Gyr si
 nce
-thestartofthesimulation,whichcorrespondstotheformat
+the start of the simulation, which corresponds to the format
 ion
-timebeforeandaftertheendofthesecondmajorstarburst,a
+time before and after the end of the second major star burst, a
 s
-showninFig.1.Werefertothemetal-richstarsaspopulatio
-nI
-andtothemetal-pooraspopulationII,followingthecommon
+shown in Fig.1. We refer to the metal-rich stars as populatio
+n I
+and to the metal-pooras populationII, followingthe common
 ly
 usednomenclatureinastronomy.
-InFig.3wepresentmapsoftheprojectedstellarmassden-
-sity,line-of-sightvelocity,andline-of-sightvelocity
+In Fig.3 we present maps of the projected stellar mass den-
+sity, line-of-sight velocity, and line-of-sight velocity
 dispersion
-forbothpopulationsobtainedbyprojectingthegalaxyalon
-gits
-principalaxes.Theorientationwasdeterminedfromtheine
+for both populationsobtainedby projectingthe galaxy alon
+g its
+principal axes. The orientation was determined from the ine
 r-
 tiatensorcalculatedfromallstarswithinthehalf-number
 radius
@@ -832,18 +832,18 @@ r
 1
 =
 2
-andthereforeisthesameinbothpanels.Thetwopopula-
-tionsdi
+and therefore is the same in both panels. The two popula-
+tions di
 
-ersignicantlyinthespatialdistributionandkinemat-
-icswiththemetal-rich(consideredtobeyounger)populati
-onI
-beingmoreconcentratedbuthavinglowercentralvelocityd
+er signicantly in the spatial distribution and kinemat-
+ics with the metal-rich (considered to be younger) populati
+on I
+being more concentrated but having lower central velocity d
 is-
-persion.Bothpopulationsshowaweakrotationsignalatlar
+persion. Both populations show a weak rotation signal at lar
 ge
-distancesfromthecenter.
-Thevelocityanisotropyparameter
+distancesfromthe center.
+The velocity anisotropy parameter
 
 (
 r
@@ -872,17 +872,17 @@ r
 ˙
 i
 arevelocitydispersionsinsphericalcoordi-
-nates(Binney&Tremaine2008),describestheorbitalstruc
+nates (Binney& Tremaine 2008), describesthe orbital struc
 ture
 ofgalaxies.Itisoneofthemostimportantdynamicalproper
 ties
-ofboundsystemswhichcannotbeinferreddirectlyfromob-
+of bound systems which cannot be inferred directly from ob-
 
-servationsandhastoberecoveredbydynamicalmodeling.Th
+servationsand has to be recoveredby dynamicalmodeling.Th
 e
-prolesoftheanisotropyparameter
+proles of the anisotropy parameter
 
-aswellastheradial
+as well as the radial
 ˙
 r
 andtangential
@@ -906,75 +906,75 @@ t
 =
 2
 velocitydispersionsforour
-simulatedgalaxyarepresentedintheconsecutivecolumnso
+simulated galaxy are presented in the consecutive columns o
 f
 Fig.4.Throughoutthepaperweusered,orange,andbluecolo
 rs
-toindicatevaluescalculatedorrecoveredforallstars,po
+to indicate values calculated or recovered for all stars, po
 pula-
 tionI,andpopulationII,respectively.Thetworowsofthe
 gure
-showthebehavioroftheparametersatdi
+show the behavior of the parameters at di
 
-erentscales.Thetop
-rowplotstheproleswiththedistancefromthecenterofthe
+erent scales. The top
+row plots the proles with the distance from the center of the
 
 galaxyinthelogarithmicscaleandshowsthedropofanisotr
 opy
-attheouteredgesoftheobject.Thebottomrowusesthelinea
+at the outer edges of the object. The bottom row uses the linea
 r
-distancescaleandfocusesonthemainbodyofthegalaxy.
-Figure5showsthesurfacenumberdensityprolesofthe
-starsasmeasuredindi
+distancescale andfocusesonthemainbodyofthegalaxy.
+Figure 5 shows the surface number density proles of the
+stars as measured in di
 
-erentdirections.Wecanseethatwhile
-thedi
+erent directions. We can see that while
+the di
 
-erentsubsampleshavequitedistinguishableproles,the
+erent subsamples have quite distinguishable proles, the
 di
 
-erencebetweenthelinesofsightissmallbecausethegalaxy
+erencebetweenthelinesofsight issmall becausethe galaxy
 isclosetospherical.
-2.3.Observables
-Wegeneratedninesetsofmockdatabyobservingallstarsand
+2.3. Observables
+We generated nine sets of mock data by observing all stars and
 
-eachpopulationseparatelyalongtheprincipalaxesdeterm
+each population separately along the principal axes determ
 ined
 fromallstars.Fortheobservablestobeusedinthemodeling
 we
-dividedthestarsinto20binsspacedlinearlyindistancefr
+divided the stars into 20 bins spaced linearly in distance fr
 om
-thecenterofthegalaxyupto50kpc,measuringthefraction
+the center of the galaxy up to 50kpc, measuring the fraction
 
-ofthetotalnumberofstarsandthe2nd,3rd,and4thproper
+of the total number of stars and the 2nd, 3rd, and 4th proper
 
-momentsoftheline-of-sightvelocitydenedinEq.8and9
+moments of the line-of-sight velocity dened in Eq.8 and 9
 
-ofKowalczyketal.(2018).Theprolesofthesequantitiesa
+of Kowalczyket al. (2018). The proles of these quantities a
 re
 showninconsecutiverowsinFig.6.Columnscorrespondtodi
 f-
-ferentlinesofsight,fromthelefttotheright:alongthema
+ferent lines of sight, from the left to the right: along the ma
 jor,
 intermediate,andminoraxisofthegalaxy.Forclarityofth
 eg-
-ure,ineachpanelweindicateonlytheerrorbarsforoneofth
+ure, in each panel we indicate only the error bars for one of th
 e
-datasets.However,asthenumberofstarsinasampleremains
+data sets. However, as the number of stars in a sample remains
 
-roughlyconstantbetweenthelinesofsight,theerrorbarsa
+roughly constant between the lines of sight, the error bars a
 re
-verysimilaramongthepanelsinagivenrow.
-Althoughinourpreviousstudiesofthereliabilityof
-theSchwarzschildmodelinganditsapplicationstorealdat
+verysimilaramongthepanelsina givenrow.
+Although in our previous studies of the reliability of
+the Schwarzschild modeling and its applications to real dat
 a
-(Kowalczyketal.2017,2018,2019)weapproximatedtheden-
+(Kowalczyket al. 2017, 2018, 2019) we approximated the den-
 
 sityproleofthetracerwiththeSérsicformula,wefoundth
 atit
-doesnotprovideagoodapproximationofthedataforthesimu
+doesnotprovidea goodapproximationofthe dataforthesimu
 -
-latedgalaxyconsideredhere.Wethereforettheprojected
+latedgalaxyconsideredhere.We thereforet theprojected
 den-
 sityprolewiththeKingformula(King1962)
 I
@@ -1037,9 +1037,9 @@ c
 2
 ;
 (1)
-Articlenumber,page4of12
-K.Kowalczyk&E.L.okas:MultiplestellarpopulationsinS
-chwarzschildmodeling
+Articlenumber, page 4of 12
+K. Kowalczyk & E.L.okas: Multiple stellarpopulations inS
+chwarzschild modeling
 10
 -3
 10
@@ -1172,19 +1172,19 @@ R [kpc]
 all stars
 pop I
 pop II
-Fig.6.
-ObservablesusedinourSchwarzschildmodelingschemeofth
-esimulatedgalaxy.
-Inrows:
-thefractionofthetotalnumberofstars,2nd,
-3rd,and4thvelocitymoment.
-Incolumns:
-mockdatafromthesimulatedgalaxyalongthemajor,interme
-diate,andminoraxis.Inredwepresent
-thevaluesobtainedforallstarswhereasinorangeandbluet
-hoseforpopulationsIandII,respectively.Forclarityoft
-hegure,ineachpanelwe
-indicateonlytheerrorbarsforoneofthedatasets.
+Fig. 6.
+Observables used in our Schwarzschild modeling scheme of th
+e simulated galaxy.
+In rows:
+the fraction of the total number of stars, 2nd,
+3rd, and 4th velocitymoment.
+In columns:
+mock data from the simulated galaxy along the major, interme
+diate, and minor axis. In redwe present
+the values obtained for all stars whereas in orange and blue t
+hose for populations I and II, respectively. For clarity of t
+he gure, in each panel we
+indicate only the error bars for one of the data sets.
 
 where
 I
@@ -1192,11 +1192,11 @@ I
 ,
 R
 c
-,and
+, and
 R
 t
-arethemodelparameters.Theprolecan
-beanalyticallydeprojectedtoobtainthe3Ddensity
+are the model parameters. The prole can
+beanalyticallydeprojectedto obtainthe3Ddensity
 
 ˆ
 (
@@ -1270,25 +1270,25 @@ R
 t
 :
 (4)
-3.Schwarzschildmodeling
+3. Schwarzschild modeling
 
-Inthissectionwebrieypresentourmodelingmethodandits
+In this section we briey present our modeling method and its
 
-applicationtothedatasetsderivedforallstarsandthetwo
+applicationtothe datasets derivedforall starsandthe two
 pop-
-ulationsofthesimulatedgalaxyseparately.Inbothcaseso
+ulations of the simulated galaxy separately. In both cases o
 ur
 aimwastorecovertheprolesofthetotalmassandtheveloci
 ty
 anisotropy.
-3.1.Overviewofthemethod
-WefollowtheapproachintroducedinKowalczyketal.(2018)
+3.1. Overview of the method
+We follow the approach introduced in Kowalczyket al. (2018)
 ,
-namelywemodelthetotalmassprolewiththemass-to-light
+namely we model the total mass prole with the mass-to-light
 
 ratio
 
-varyingwithradius:
+varyingwith radius:
 log
 
 (
@@ -1323,11 +1323,11 @@ r
 r
 0
 (5)
-Articlenumber,page5of12
+Articlenumber, page 5of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
+manuscript no. Populations4
  1
  2
  3
@@ -1399,28 +1399,28 @@ Absolutevaluesof
 obtainedfromthetsofthreedatasets:allstars(topleftp
 anel),populationI(bottomleft),andpopulationII(botto
 m
-right)fortheobservationsalongthemajoraxisofthesimul
-atedgalaxy.Theresultsforthemodelingoftwopopulations
-(topright)wereobtained
-asanalgebraicsumofvaluesforpopulationsIandII.Toavoi
-dlargenumbersinthegure,
+right) for the observations along the major axis of the simul
+atedgalaxy. The results for the modeling of twopopulations
+(topright) were obtained
+as analgebraic sum of values for populations Iand II.Toavoi
+dlarge numbers inthe gure,
 
 0
-wasdividedbythemeanmassofastellarparticle.
+was divided bythe mean mass of a stellarparticle.
 where
 r
-isthedistancefromthecenterofthegalaxy,
+is the distance from the center of the galaxy,
 r
 0
-isa
-constant,while
+is a
+constant, while
 
 0
 ,
 a
-,and
+, and
 c
-aretheparametersofamodel.We
+are the parameters of a model. We
 haveassumedlog
 r
 0
@@ -1428,13 +1428,13 @@ r
 0
 :
 33whichcorrespondstothreesoftening
-scalesforstellarparticlesintheIllustrissimulation.
-Weprobedtheparameter
+scalesforstellarparticlesin theIllustrissimulation.
+We probedtheparameter
 a
 2
-[0:1
+[0 : 1
 :
-3]withastep
+3]with a step
 
 a
 =
@@ -1446,50 +1446,50 @@ c
 2
 [1
 :
-1:2
+1 : 2
 :
-9]withastep
+9] with a step
 
 c
 =
 0
 :
-2,imposingtherequire-
-mentonthetotaldensityproletobemonotonicallydecreas
+2, imposing the require-
+ment onthe total density proleto be monotonicallydecreas
 ing
 withradius.Foreachsetofparametersandforeachlineofsi
 ght
-wegenerated1200orbitsusing100valuesofenergy(express
+we generated1200orbitsusing100valuesofenergy(express
 ed
-withthe radiusofacircularorbit)spacedlogarithmically
+with the radius of a circular orbit) spaced logarithmically
 and
 12valuesoftherelativeangularmomentumspacedlinearly.
 The
-outerradiusoftheorbitlibrary,thatistheapocenterofth
-emost
-extendedorbit,wassetto
+outerradiusoftheorbitlibrary,thatis theapocenterofth
+e most
+extended orbit, was set to
 r
 out
 =
-165kpcinordertocoverover
-0.999ofthetotalstellarmassbasedonthettedKingprole
+165kpc in order to cover over
+0.999 of the total stellar mass based on the tted King prole
 
 parameters.
 Wetthekinematicsweightedwiththefractionofmasswith
-theconstrainedleastsquaresalgorithmwheredi
+the constrained least squares algorithm where di
 
-erentvalues
+erent values
 of
 
 0
-wereobtainedwithasimpletransformationofvelocities
-givenbyEq.12,13,and15inKowalczyketal.(2018).Inor-
+were obtained with a simple transformation of velocities
+given by Eq.12, 13, and 15 in Kowalczyketal. (2018). In or-
 
-dertosmoothoutthenumericalartifacts,thethree-dimens
+der to smooth out the numerical artifacts, the three-dimens
 ional
 ˜
 2
-spacesweretheninterpolatedwith12-orderpolynomials
+spaces were then interpolated with 12-order polynomials
 (
 ˘
 a
@@ -1500,11 +1500,11 @@ c
 4
 
 0
-)thatwerefurtherusedtodeterminetheglobalmin-
-imums(identiedasthebest-ttingmodels)and1,2,3
+) that were further used to determine the global min-
+imums (identied as the best-tting models) and 1, 2, 3
 ˙
 con-
-dencelevelswhichforthreeparameterscorrespondto
+dence levels which for three parameters correspond to
 
 ˜
 2
@@ -1519,39 +1519,39 @@ con-
 ;
 14
 :
-2(Pressetal.1992).
-3.2.Applicationtomockdata
-Inthefollowingwepresentthedirectandinferredresultso
+2(Pressetal. 1992).
+3.2. Applicationto mock data
+In the following we present the direct and inferred results o
 f
-theSchwarzschildmodelingofthedatasetsdescribedinSec
+the Schwarzschild modeling of the data sets described in Sec
 -
 tion2.3.
-First,Fig.7showsthedistributionoftheabsolutevalueso
+First, Fig.7 shows the distribution of the absolute values o
 f
 the
 ˜
 2
-asafunctionofthreeparametersofthemass-to-lightra-
-tio.Inordertoavoidunnecessaryrepetitions,weincludeo
+as a function of three parameters of the mass-to-light ra-
+tio. In order to avoid unnecessary repetitions, we include o
 nly
-theplotforthemockdataobtainedbyobservingtheIllustri
+the plot for the mock data obtained by observing the Illustri
 s
 galaxyalongitsmajoraxisastheothersarequalitativelys
 imilar.
-Thefourpanelsrefertotsforallstars(topleft),themeta
+Thefourpanelsreferto ts forall stars (topleft), themeta
 l-rich
-populationI(bottomleft),themetal-poorpopulationII(b
+populationI (bottom left), the metal-poorpopulationII (b
 ottom
-right),andtheonenamed"populations"(topright)whichis
+right),and the one named "populations"(top right) which is
 the
 algebraicsumofvaluesforbothpopulations.
-Asourparametrizationofthemass-to-lightratioisnotint
+As our parametrizationof the mass-to-lightratio is not int
 u-
 itivewepresentitsprolesexplicitlyintherstrowsofth
 eleft-
-Articlenumber,page6of12
-K.Kowalczyk&E.L.okas:MultiplestellarpopulationsinS
-chwarzschildmodeling
+Articlenumber, page 6of 12
+K. Kowalczyk & E.L.okas: Multiple stellarpopulations inS
+chwarzschild modeling
 10
 6
 10
@@ -1782,41 +1782,41 @@ r [kpc]
  50
 POPULATIONS
 r [kpc]
-Fig.8.
-Left-handside:resultsofSchwarzschildmodelingofthree
-mockdatasetsobtainedbyobservingthesimulatedgalaxyal
-ongtheprincipal
+Fig. 8.
+Left-hand side: results of Schwarzschild modeling of three
+mock data sets obtained by observing the simulated galaxy al
+ong the principal
 axes.
-Inrows:
-derivedmass-to-lightratio,totaldensity,totalmass,an
-danisotropyparameter.
-Incolumns:
-observationsalongthemajor,interme-
-diate,andminoraxis,respectively.Greenlinesindicatev
-aluesforthebest-tmodelswhereasthecoloredareasofdec
-reasingintensityshowthe
-1,2,and 3
+In rows:
+derived mass-to-light ratio, total density, total mass, an
+d anisotropy parameter.
+In columns:
+observations along the major, interme-
+diate, and minor axis, respectively. Green lines indicate v
+alues for the best-t models whereas the colored areas of dec
+reasing intensity show the
+1, 2, and 3
 ˙
-condencelevels.Thetruevaluesarepresentedasblacklin
-es.Thinverticallinesmarkthevaluesof
+condence levels. The true values are presented as black lin
+es. Thin vertical lines mark the values of
 r
 0
-andtheouterrangeofthe
-datasets,fromlefttoright.Right-handside:sameasleftb
-utforthetoftwostellarpopulations.
-andright-handsidepanelsofFig.8fortheresultsobtained
+and the outer range of the
+data sets, from lefttoright.Right-hand side: same as leftb
+ut for the tof twostellarpopulations.
+and right-hand side panels of Fig.8 for the results obtained
 for
-allstarsandthepopulations,respectively.Wefurthercal
+all stars and the populations, respectively. We further cal
 culate
-thetotaldensity(secondrows)andthetotalmasscontent(t
+the total density (second rows) and the total mass content (t
 hird
-rows).Weincludetheobtainedorbitanisotropywithinthem
+rows).We includetheobtainedorbitanisotropywithinthem
 od-
 eledrangeinthebottomrows.Theconsecutivecolumnsprese
 nt
-theresultsfortheobservationsalongthemajor,intermedi
+the results for the observations along the major, intermedi
 ate,
-andminoraxis.Greenlinesindicatevaluesforthebest-tm
+and minoraxis. Greenlines indicatevaluesforthe best-t m
 od-
 elswhereasthecoloredareasofdecreasingintensitycorre
 spond
@@ -1835,109 +1835,109 @@ r
 andtheouterrange
 ofthedatasetsbeyondwhichthereliabilityofresultsdrop
 ssig-
-nicantly.Thetruemass-to-lightratioprolewasobtaine
-dby
-dividingthetotalmassbythettedKingproles,therefore
+nicantly. The true mass-to-light ratio prole was obtaine
+d by
+dividing the total mass by the tted King proles, therefore
 the
-dropat100kpcisthe numericalartifactoccurringatthe ver
+drop at 100kpc is the numerical artifact occurring at the ver
 y
 outskirtsofthegalaxy.
-Whereasintheright-handsidepanelsofFig.8theresulting
-anisotropyisobtainedfromthetofallstarsandusesonlyt
+Whereas in the right-handside panels of Fig.8 the resulting
+anisotropy is obtained from the t of all stars and uses only t
 he
 locationofglobalminimumandcondencelevelsfromtwopop
 -
-ulations(asinthetoprightpanelofFig.7),inFig.9wepres
+ulations(as in the top right panel of Fig.7), in Fig.9 we pres
 ent
-anothermethodofcalculatingtheanisotropy.Inthesecond
+another method of calculating the anisotropy.In the second
 and
-thirdrowweshowthederivedprolesforpopulationIandII
+third row we show the derived proles for population I and II
 
-separatelyandcombinethemasstellarmassweightedaverag
+separately and combine them as stellar mass weighted averag
 e
-inthetoprow.Asinpreviousgures,threecolumnsrefertot
+in thetop row.As inpreviousgures,three columnsreferto t
 he
 di
 
-erentlinesofsightwhereasthenarrowfourthoneshowsthe
+erent lines of sight whereasthe narrowfourthone shows the
 behaviorofthetrueprolesoutsidethemodeledrangewhich
 ,as
-wenoticedinourpreviousstudies,inalimitedwayinuence
+we noticed in our previous studies, in a limited way inuence
 s
-theresults.Suchanimpactisunderstandablesincethestar
-sat
-largerdistancesfromthecenterarestillincludedintheli
+the results. Such an impact is understandable since the star
+s at
+larger distances from the center are still included in the li
 ne-of-
 sightmeasurements.
-3.3.Comparisonofttingresults
-Themainstrengthofthetwopopulationsmethodcomesfrom
+3.3. Comparison of tting results
+The main strength of the two populations method comes from
 
-tracingtheunderlyinggravitationalpotentialatdi
+tracing the underlying gravitational potential at di
 
-erentscales.
+erent scales.
 AscanbeseeninthebottompanelsofFig.7,populationI,whi
 ch
-ismoreconcentrated,isalsomoresensitiveto
+is more concentrated, is also more sensitive to
 
 0
-,butgives
-weakerconstraintson
+, but gives
+weaker constraints on
 a
 or
 c
-.Ontheotherhand,populationII
-attemptstoreproducethetotalmasscontentatlargerdista
+. On the other hand, population II
+attempts to reproduce the total mass content at larger dista
 nces
 aswell,thereforeshowingstrongercouplingbetweenthepa
 ram-
 eters.
-Theglobalminimumsofthe
+The global minimums of the
 ˜
 2
-distributionsforbothap-
-proaches,thatismodelingoneandtwopopulations,whichwe
+distributions for both ap-
+proaches, that is modeling one and two populations, which we
 
 identifyasthebest-ttingmodels,closelycoincideshowi
 ngthat
-thereisnointernalbiasintheimprovedmethod.However,si
+there is no internal bias in the improvedmethod. However, si
 g-
-nicantdi
+nicant di
 
-erencescanbeobservedwhencomparingthecon-
-dencelevels,mainlyat1and3
+erences can be observed when comparing the con-
+dence levels, mainly at 1 and 3
 ˙
-.Namely,wendthatusing
-twopopulations,theconstraintsweobtainonthedensityan
+. Namely, we nd that using
+two populations, the constraints we obtain on the density an
 d
 anisotropyprolearemuchstronger.
-Additionally,themoreaccuratemethodallowsustostudy
-othere
+Additionally, the more accurate method allows us to study
+other e
 
-ectsandbiases,forexampletheconsequencesofthe
-nonsphericityofthemodeledobject.Whereasforthetofal
+ects and biases, for example the consequences of the
+nonsphericity of the modeled object. Whereas for the t of al
 l
 starsthetruevaluesofthedensity,mass,andanisotropypr
 oles
-arecontainedwithin1
+are contained within 1
 ˙
-condenceregions,theresultsforthe
+condence regions, the results for the
 populationsaremoreorlessbiaseddependingontheaxis.Th
 ey
-arewellreproducedfortheobservationalongtheintermedi
+are well reproduced for the observation along the intermedi
 ate
-axis,forwhichthee
+axis, for which the e
 
-ectsofnonsphericityseemtocancelout,
-andmorebiasedfortheremaininglinesofsight.Wenoticea
+ects of nonsphericity seem to cancel out,
+and more biased for the remaining lines of sight. We notice a
 
-trendfromunder-tooverestimationoftheanisotropywheng
+trend from under- to overestimationof the anisotropy when g
 o-
-ingfromthemajortotheminoraxis.
-Articlenumber,page7of12
+ingfromthemajorto theminoraxis.
+Articlenumber, page 7of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
+manuscript no. Populations4
 -1
 0
 1
@@ -2035,75 +2035,75 @@ s
 3
 s
 Fig.9.
-Proles oftheanisotropyparameterobtainedwiththeSchwa
-rzschildmodelingoftwostellarpopulationsofthesimulat
+Prolesofthe anisotropy parameter obtainedwiththeSchwa
+rzschild modelingof twostellarpopulations of thesimulat
 edgalaxy.
 Inrows:
-resultsforallstars(calculatedasthesuperpositionoftw
-opopulations),populationI,andpopulationII.Colorsfol
-lowtheconventionusedin
-previousgures.
-Incolumns:
-observationsalongthemajor,intermediate,andminoraxis
-.Thelastnarrowercolumnshowsthedata(blacklines)
-outsidethemodeledradialrange.Colorlinesindicatevalu
-esforthebest-tmodelswhereasthecoloredareasofdecrea
-singintensityshowthe1,
-2,and3
+results for all stars (calculated as the superposition of tw
+o populations), population I, and population II. Colors fol
+low the convention used in
+previous gures.
+In columns:
+observations along the major, intermediate, and minor axis
+. The last narrower column shows the data (black lines)
+outside the modeled radial range. Color lines indicate valu
+es for the best-t models whereas the colored areas of decrea
+sing intensity show the 1,
+2, and3
 ˙
-condenceregions.
-4.ModelingFornaxdSph
+condence regions.
+4. Modeling Fornax dSph
 
-InthissectionwepresenttheapplicationofourSchwarzsch
+In this section we present the application of our Schwarzsch
 ild
-modelingschemetotheobservationaldatafortheFornaxdSp
+modeling scheme to the observational data for the Fornax dSp
 h
-galaxyobtainedbydelPinoetal. (2015)anddelPinoetal.
+galaxy obtained by delPinoet al. (2015) and del Pinoetal.
 
 (2017).Thisstudyisafollow-upoftheworkofKowalczyketa
 l.
-(2019)andcanbedirectlycomparedtotheresultspresented
+(2019) and can be directly compared to the results presented
 
-there.Moreover,wereferthereadertothesepreviouspubli
+there. Moreover, we refer the reader to these previous publi
 ca-
-tionsfordetailsontheoriginofdataandourproceduresuse
+tions for details on the origin of data and our procedures use
 d
 forcleaningthespectroscopicsample.
-SimilarlytotheapproachintroducedinSection2.2,wedi-
+Similarly to the approach introduced in Section 2.2, we di-
 videdallavailablestarsintotwoequal-sizepopulationsb
 asedon
-theirmetallicityandthencross-correlatedthesampleswi
-ththe
-datausedinKowalczyketal.(2019).Themetallicityhistog
+their metallicity and then cross-correlated the samples wi
+th the
+data used in Kowalczyket al. (2019). The metallicity histog
 ram
-ofthenalspectroscopicsampleisshowninFig.10.Additio
+of the nal spectroscopic sample is shown in Fig.10. Additio
 n-
-ally,wecolor-codedeachbinwiththepopulationithasbeen
+ally, we color-coded each bin with the population it has been
 
-assignedto,namelyorangeorblueforpopulationIorII.Int
+assigned to, namely orange or blue for population I or II. Int
 er-
-estingly,thecaseofFornaxissimilartooursimulatedgala
+estingly, the case of Fornax is similar to our simulated gala
 xy
-asthesplitat[Fe
+as the split at [Fe
 /
 H]
 =
 
-1alsocapturesanimportantfeature
-oftheobject'sstarformationhistory,separatingstarsin
-tosub-
-samplesolderandyoungerthan6Gyr,asshowninFig.12of
+1 also captures an important feature
+of the object's star formation history, separating stars in
+to sub-
+samples older and younger than 6 Gyr, as shown in Fig. 12 of
 
-delPinoetal.(2015)andFig.8ofdelPinoetal.(2017).The
+delPinoet al. (2015) and Fig. 8 of delPinoet al. (2017). The
 
-numbersofstarscontainedinthesamplesofallstars,popul
+numbers of stars contained in the samples of all stars, popul
 a-
-tionI,andpopulationIIaregiveninTable2,wheretheindic
+tion I, and population II are given in Table2, where the indic
 es
-"phot"and"spec"refertothephotometricandkinematicsam
+"phot" and "spec" refer to the photometric and kinematic sam
 -
-ples.Thesumofstarsinthepopulationsislowerthaninthe
-sampleofallstarssinceonlystarswithreliablemeasureme
+ples. The sum of stars in the populations is lower than in the
+sample of all stars since only stars with reliable measureme
 nts
 ofmetallicitycouldbeincluded.
 N
@@ -2123,30 +2123,30 @@ pop II
 -0.5
  0
 Fig.10.
-Metallicityhistogramofthenalspectroscopicsampleuse
+Metallicityhistogram of thenal spectroscopic sample use
 din
-themodelingoftwostellarpopulationsintheFornaxdSph.E
+themodeling of twostellarpopulations intheFornaxdSph. E
 achbinis
-color-codedaccordingtothepopulationithasbeenassigne
-dto,orange
-orblueforpopulationIandII,respectively.
+color-coded according tothe population it has been assigne
+d to,orange
+orblue for population I andII,respectively.
 Aswehaveshowninourearlierwork,thelightproleofthe
-FornaxdSphcanbewellreproducedwiththethree-parameter
-Articlenumber,page8of12
-K.Kowalczyk&E.L.okas:MultiplestellarpopulationsinS
-chwarzschildmodeling
-Table2.
-PropertiesofthedatasamplesfortheFornaxdSph.
-PropertyALLPOPIPOPII
+Fornax dSph can be well reproduced with the three-parameter
+Articlenumber, page 8of 12
+K. Kowalczyk & E.L.okas: Multiple stellarpopulations inS
+chwarzschild modeling
+Table 2.
+Properties of the data samples for the Fornax dSph.
+Property ALL POP I POP II
 Numberofstars(
 N
 phot
-)657971488249205
+) 65797 14882 49205
 Numberofstars(
 N
 spec
-) 328611361151
-Starswithin1.8kpc326811341130
+) 3286 1136 1151
+Starswithin1.8kpc 3268 1134 1130
 Fittednormalization(
 N
 0
@@ -2154,14 +2154,14 @@ N
 
 10
 4
-]6.951.815.45
-Sérsicradius(
+] 6.95 1.81 5.45
+Sérsic radius(
 R
 S
-)[kpc]0.4540.4290.420
-Sérsicparameter(
+)[kpc] 0.454 0.429 0.420
+Sérsic parameter(
 m
-)0.8080.8070.898
+) 0.808 0.807 0.898
 10
 2
 10
@@ -2184,29 +2184,29 @@ R [kpc]
 all stars
 popI
 popII
-Fig.11.
-Surfacenumberdensityprolesofthephotometricdatasam-
+Fig. 11.
+Surface number density proles of the photometric data sam-
 plesfortheFornaxdSph:allavailablestars(inred),theme
 tal-richpop-
-ulationI(inorange),andthemetal-poorpopulationII(inb
-lue).Thin
-verticallinesindicate
+ulation I (in orange), and the metal-poor population II (in b
+lue). Thin
+vertical lines indicate
 r
 0
-(seetext)and theouterboundaryofthespec-
-troscopicdata.
+(see text) and the outer boundary of the spec-
+troscopic data.
 
 Sérsicformula(Sérsic1968).Theprolesofnumberdensity
 for
 allstarsandbothpopulationstogetherwiththebest-ttin
 gSérsic
-prolesarepresentedinFig.11.Thecolorsfollowtheconve
+proles are presented in Fig.11. The colors follow the conve
 n-
-tionintroducedinprevioussections.Thinverticallinesi
+tion introducedin previoussections. Thin vertical lines i
 ndicate
-theinnermostdatapointforthelightproleforallstarsan
+the innermost data point for the light prole for all stars an
 d
-theouterboundaryofthekinematicsample.Theformer,seta
+the outer boundary of the kinematic sample. The former, set a
 t
 log
 r
@@ -2214,23 +2214,23 @@ r
 
 0
 :
-16,isalsousedastheminimumofthemass-to-light
-ratioprole(
+16,is also used as the minimum of the mass-to-light
+ratio prole (
 r
 0
-inEq.5).Thettedparametersoftheproles,
-thatisthenormalization
+in Eq.5). The tted parameters of the proles,
+that isthe normalization
 N
 0
-,theSérsicradius
+, theSérsic radius
 R
 S
-,andtheSérsic
+, andtheSérsic
 parameter
 m
-,areincludedinthesecondpartofTable2.
-Figure12presentstheprolesoftheobservablesusedinthe
-Schwarzschildmodeling:thefractionofstarsandthe2nd,3
+,areincludedinthe secondpartofTable2.
+Figure12presentstheprolesoftheobservablesusedin the
+Schwarzschild modeling: the fraction of stars and the 2nd, 3
 rd,
 and4thvelocitymoments(toptobottom)forthethreedatasa
 m-
@@ -2239,69 +2239,69 @@ nge,and
 blue,respectively).Theerrorbarsindicate1
 ˙
 samplingerrors.
-Theparameterspacefor
+The parameter space for
 
 (
 r
-)hasbeenprobedasfollows:
+) has been probed as follows:
 a
 2
-[0:1
+[0 : 1
 :
-85]withastep
+85] with a step
 
 a
 =
 0
 :
-05and
+05 and
 c
 2
 [1
 :
-2:6]witha
+2 : 6] with a
 step
 
 c
 =
 0
 :
-2.WepointoutthatinKowalczyketal.(2019)the
+2. We point out that in Kowalczyket al. (2019) the
 parameter
 c
-wasxedat
+was xed at
 c
 =
-3andnowwetitasafreepa-
-rameter.AsforthemockdatainSection3.2,di
+3 and now we t it as a free pa-
+rameter. As for the mock data in Section 3.2, di
 
-erentvaluesof
+erent valuesof
 
 0
-wereobtainedwiththetransformationofvelocitymoments
-withinthe
+were obtained with the transformation of velocity moments
+within the
 ˜
 2
-ttingroutine.Thevaluesof
+tting routine. The values of
 
 ˜
 2
-forallstarsand
-thepopulationsareshowninthetwopanelsofFig.13(leftan
+for all stars and
+the populations are shown in the two panels of Fig.13 (left an
 d
-right-handside,respectively).Duetothedensecoverageo
-fthe
-grid,wedecidedtoincludeonlythevalueswithin3
+right-hand side, respectively). Due to the dense coverage o
+f the
+grid, we decided to include only the values within 3
 ˙
-fromthe
-ttedminimums(seeSection3.1).
-Theprolesofthemass-to-lightratio,totaldensity,tota
+from the
+tted minimums(seeSection3.1).
+The proles of the mass-to-light ratio, total density, tota
 l
 mass,andvelocityanisotropyresultingfromthe
 ˜
 2
 distributions
-arepresentedintheconsecutiverowsofFig.14.Theanisotr
+are presentedin the consecutiverowsof Fig.14. Theanisotr
 opy
 proleforthepopulationsisbasedonthetofallstarsbutu
 sing
@@ -2380,37 +2380,37 @@ m
 4
 ]
 R [kpc]
-Fig.12.
-ObservablesoftheFornaxdSphusedinourSchwarzschild
-modelingscheme.
+Fig. 12.
+Observables of the Fornax dSph used in our Schwarzschild
+modeling scheme.
 Inrows:
-thefractionofthetotalnumberofstars,the
+the fraction ofthe total number of stars,the
 2nd,3rd,and4thvelocitymoment.Inredwepresentthevalue
 sobtained
-forallstarswhereasinorangeandbluethoseforpopulation
-sI andII,
+for all stars whereas in orange and blue those for population
+s I and II,
 respectively.
 
 thecondencelevelson
 
 fromthetoftwopopulations.Green
-linesindicatethevaluesforthebest-ttingmodelswherea
-sthe
+lines indicate the values for the best-tting models wherea
+s the
 coloredareasofdecreasingintensityshowthe1,2,and3
 ˙
 con-
 denceregions.Additionally,withblackdashedlineswein
 clude
-theresultsfromKowalczyketal.(2019)forcomparison.
-Asaresultoffreeingthesteepnessofthemass-to-light
-ratioprole(parameter
+theresultsfromKowalczyket al. (2019) forcomparison.
+As a result of freeing the steepness of the mass-to-light
+ratio prole (parameter
 c
-)withrespecttothepreviousstudy
-Articlenumber,page9of12
+) with respect to the previous study
+Articlenumber, page 9of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
+manuscript no. Populations4
  0
  0.5
  1
@@ -2458,21 +2458,21 @@ c
 c
 2
 min
-Fig.13.
-Valuesof
+Fig. 13.
+Values of
 ˜
 2
-relativetothettedminimumwithintherangeof3
+relative tothe ttedminimum withinthe range of 3
 ˙
-condencelevelforallstars(leftpanel)andforthepopula
-tions(right
-panel)fortheFornaxdSph.
+condence level for all stars (leftpanel) and for the popula
+tions (right
+panel) for the Fornax dSph.
 
 (Kowalczyketal.2019),weobtainedhigherestimatesofthe
 en-
-closedtotalmassatlargerradii.Inparticular,forthemas
-sen-
-closedwithin1.8kpcweget
+closed total mass at larger radii. In particular, for the mas
+s en-
+closed within 1.8 kpc we get
 M
 all
 (
@@ -2497,14 +2497,14 @@ all
 8
 M
 
-fromthetforallstarsand
+from the t for all stars and
 M
 pops
 (
 <
 1
 :
-8kpc)
+8 kpc)
 =
 4
 :
@@ -2522,14 +2522,14 @@ pops
 8
 M
 
-fromthetofpopulations,whilepreviouslywehad
+from the t of populations, while previously we had
 M
 old
 (
 <
 1
 :
-8kpc)
+8 kpc)
 =
 3
 :
@@ -2548,8 +2548,8 @@ old
 M
 
 .
-Interestingly,despitethesignicantshiftofthepositio
-nof
+Interestingly, despite the signicant shift of the positio
+n of
 ˜
 2
 
@@ -2559,43 +2559,43 @@ c
 =
 4
 :
-2forallstarsand3.6forpopulations),theob-
+2 for all stars and 3.6 for populations), the ob-
 tainedproleoftheanisotropyparameterremainsdecreasi
 ngor
-atforallstarsbutchangestoincreasingfrom0to0.5forth
+at for all stars but changes to increasing from 0 to 0.5 for th
 e
-populations.Nevertheless,eveninthelattercasetheprev
+populations. Nevertheless, even in the latter case the prev
 ious
-resultagreeswiththenewndingwithin1
+resultagreeswiththe newndingwithin1
 ˙
 .
-ThedetailedanalysisoftheanisotropyisshowninFig.15
-wherethemiddleandbottompanelspresenttheprolesob-
+The detailed analysis of the anisotropy is shown in Fig.15
+where the middle and bottom panels present the proles ob-
 
-tainedforeachpopulationseparately.Wenoticethatthepr
+tained for each population separately. We notice that the pr
 ole
-forpopulationIisdecreasingorhasalocalminimumwhereas
+for population I is decreasing or has a local minimum whereas
 
-forpopulationIIisincreasing(from
+for population II is increasing (from
 
 0
 :
-25to0.5forthebest-
-ttingmodel).SincepopulationIismoreconcentrated,the
+25 to 0.5 for the best-
+tting model). Since population I is more concentrated, the
 last
-binscontainveryfewstars,whichlimitstheircredibility
-.The
-toppanelofFig.15presentsthe anisotropyofallstarscalc
+bins contain very few stars, which limits their credibility
+. The
+top panel of Fig.15 presents the anisotropy of all stars calc
 u-
-latedasaweightedsuperpositionoftwopopulations.Withs
+lated asa weightedsuperpositionof two populations.With s
 uch
 approachwestillobtaintheincreasingprole(from0to0.5
 )but
-thepreviousresultagreeswithitonlywithin2
+thepreviousresultagreeswithit onlywithin2
 ˙
 .
-SinceFornaxdSphissignicantlyelongatedwiththepro-
-jectedellipticityof
+Since Fornax dSph is signicantly elongated with the pro-
+jected ellipticity of
 
 =
 0
@@ -2604,110 +2604,110 @@ jectedellipticityof
 
 0
 :
-01(Irwin&Hatzidimitriou
-1995),weanticipatesomebiasintheobtainedresultscause
+01 (Irwin&Hatzidimitriou
+1995), we anticipate some bias in the obtained results cause
 d
-bythesphericallysymmetricmodeling.Kowalczyketal.(20
+bythesphericallysymmetricmodeling.Kowalczyket al.(20
 18)
-studiedsuchbiasinanaxisymmetricsimulatedobjectquali
+studied such bias in an axisymmetric simulated object quali
 ta-
-tivelysimilartoFornaxandidentieddi
+tivelysimilar toFornaxandidentieddi
 
-erencesinthesystem-
+erencesinthe system-
 aticerrorsdependingonwhetherthegalaxywasobservedalo
 ng
 itsmajororminoraxis.AssumingthatFornaxisobservedalo
 ng
-thelineofsightinbetweentheseextremes,weexpectthetot
+the line of sight in between these extremes, we expect the tot
 al
 massproletobeslightlyoverestimatedandtheanisotropy
 tobe
-underestimated,furtherstrengtheningthelikelihoodoft
-hereal
-anisotropytoberadialanditsproletobegrowingwithradi
+underestimated, further strengthening the likelihood of t
+he real
+anisotropy to be radial and its prole to be growing with radi
 us
-withrespecttotheresultsofKowalczyketal.(2019).
-Bothconstant(likeforourpopulationI)andgrowing(pop-
-ulationII)anisotropyprolescanarisefrombiasedmodeli
+withrespectto theresultsofKowalczyket al.(2019).
+Both constant (like for our population I) and growing (pop-
+ulation II) anisotropy proles can arise from biased modeli
 ng
-oftherealgrowingprolebyobservinganobjectalongthe
+of the real growing prole by observing an object along the
 
-minorandmajoraxis,respectively.However,forthebiasto
+minor and major axis, respectively. However, for the bias to
 
-occurintwopopulationspresentedhere,theirinnerorient
+occur in two populations presented here, their inner orient
 a-
-tionswouldneedtobeopposite.Sincesuchmorphologicalfe
+tions would need to be opposite. Since such morphologicalfe
 a-
-turesarenotsupportedbythephotometricstudiesofFornax
+tures are not supported by the photometric studies of Fornax
 
-(delPinoetal.2015;Wangetal.2019)whichratherndagood
+(delPinoet al.2015;Wanget al.2019)whichratherndagood
 
-spatialalignmentbetweenthestellarpopulations,weconc
+spatial alignment between the stellar populations, we conc
 lude
-thattheanisotropyprolesofthetwopopulationsmodeledi
+that the anisotropy proles of the two populations modeled i
 n
 thisworkareindeedsignicantlydistinct.
-Finally,itisworthnoticingthattheso-calledmass-follo
+Finally, it is worth noticing that the so-called mass-follo
 ws-
-lightmodel,thatistheonefollowingfromtheassumptionth
+light model, that is the one following from the assumption th
 at
-thetotaldensitytracesthestellardistribution,isnolon
-gersup-
-portedbythetofthepopulations.Withourparametrizatio
+the total density traces the stellar distribution, is no lon
+ger sup-
+ported by the t of the populations. With our parametrizatio
 n,
-themass-follows-lightmodelcorrespondsto
+the mass-follows-lightmodel correspondsto
 a
 =
-0andwhereas
-itisenclosedwithin3
+0 and whereas
+it is enclosed within 3
 ˙
-forthetofallstars,aswasthecase
-inKowalczyketal.(2019),theallowedvaluesfortheimprov
+for the t of all stars, as was the case
+in Kowalczyketal. (2019), the allowed valuesfor the improv
 ed
-methodaremuchlarger,asdemonstratedbytherightpanelof
+method are much larger, as demonstrated by the right panel of
 
 Fig.13.
 
-5.Summaryanddiscussion
+5. Summary and discussion
 
-Buildingonthepreviouslycreatedimplementationofthe
+Building on the previously created implementation of the
 
-Schwarzschildorbitsuperpositionmethodfocusedonmodel
+Schwarzschildorbit superpositionmethod focusedon model
 ing
-dSphgalaxiesoftheLocalGroup(Kowalczyketal.2017,2018
+dSphgalaxiesoftheLocalGroup(Kowalczyket al.2017,2018
 ,
 2019),weimprovedourtoolbyintroducingmultiplestellar
 pop-
-ulations.Suchanimprovementisdesirableandjustiedsin
+ulations. Such an improvement is desirable and justied sin
 ce
-manyofthedwarfsshowsignsofmultiplestarformationburs
+manyof thedwarfsshowsignsof multiplestar formationburs
 ts
 orextendedstarformationepisodes.Asthedi
 
 erentpopulations
-trace thecommonunderlyinggravitationalpotential,onem
+trace the common underlying gravitational potential, one m
 ay
 expectasignicantimprovementintheestimatesofnotonly
 the
-totalmasscontentbutalsotheorbitanisotropysincethisr
+total mass content but also the orbit anisotropysince this r
 obust
-modelingtechniquereproducestheanisotropyasaby-produ
+modeling technique reproduces the anisotropy as a by-produ
 ct
-ofthemodelingratherthantakingitasanassumption.
+ofthe modelingratherthantakingit asanassumption.
 Wehavetestedourhypothesisbymodelingmockdatagener-
-atedfromagalaxyformedintheIllustrissimulation.Dueto
+atedfroma galaxyformedin theIllustrissimulation.Dueto
 the
 limitationsoftheresolution,wechoseagalaxyofmassafew
 or-
-dersofmagnitudelargerthantheestimatedmassesofclassi
+ders of magnitude larger than the estimated masses of classi
 cal
-dwarfs.Still,thegalaxypossessedappropriatequalitati
-vechar-
+dwarfs. Still, the galaxy possessed appropriate qualitati
+ve char-
 acteristics,suchasthelackofgasandanalmostsphericals
 hape,
-Articlenumber,page10of12
-K.Kowalczyk&E.L.okas:MultiplestellarpopulationsinS
-chwarzschildmodeling
+Articlenumber, page 10of 12
+K. Kowalczyk & E.L.okas: Multiple stellarpopulations inS
+chwarzschild modeling
 10
 1
 10
@@ -2792,63 +2792,63 @@ r [kpc]
  1.6
 r [kpc]
 Fig. 14.
-ResultsofSchwarzschildmodelingoftheFornaxdSph.
-Inrows:
-derivedmass-to-lightratio,totaldensity,totalmass,an
+Results of Schwarzschild modeling of the Fornax dSph.
+In rows:
+derived mass-to-light ratio, total density, total mass, an
 d
-anisotropyparameter.
-Incolumns:
-resultsforallstarsandthepopula-
+anisotropy parameter.
+In columns:
+results for all stars and the popula-
 tions,respectively.Greenlinesindicatethevaluesforth
 ebest-tmodels
-whereas thecoloredareasofdecreasingintensityshowthe1
+whereasthecoloredareasofdecreasingintensityshowthe1
 ,2,and3
 ˙
 condenceregions.Thebest-ttingvaluesobtainedbyKowa
-lczyketal.
-(2019)areshownwithblackdashedlines.
+lczyk etal.
+(2019) are shown withblack dashed lines.
 
-thatmadeita goodtestbedformodelingtechniquesapplica-
+that made it a good test bed for modeling techniques applica-
 
-bletodSphgalaxies.We appliedourapproachtoalldataand
+ble to dSph galaxies. We applied our approach to all data and
 
-totwostellarpopulationsseparately,comparingtheaccur
+to two stellar populationsseparately,comparingthe accur
 acyof
-theobtainedresults.Althoughtheadditionofthesecondtr
+the obtained results. Although the addition of the second tr
 acer
-seeminglyincreasesthenumberofconstraintstwice,thein
+seemingly increases the number of constraints twice, the in
 cre-
 mentissomewhatcompromisedbythesamplingerrorssinceth
 e
-numberofstarsineachsampleisthenreduced.Still,wefoun
+number of stars in each sample is then reduced. Still, we foun
 d
-strongimprovementsintheaccuracyofthemethodwhenus-
+strong improvements in the accuracy of the method when us-
 
-ingtwopopulations.Theresultsofthemodelingshowthatth
+ing two populations. The results of the modeling show that th
 e
-densityandvelocityanisotropyprolesaremorestronglyc
+density and velocity anisotropy proles are more strongly c
 on-
-strained,mostimportantlyatthe3
+strained, most importantly at the 3
 ˙
-level,thatistherangeof
-allowedvaluesismuchnarrower.
-SimilarlytotheconclusionsofKowalczyketal.(2018)who
-exploredthee
+level, that is the range of
+allowedvaluesis muchnarrower.
+Similarlytothe conclusionsof Kowalczyketal. (2018)who
+explored the e
 
-ectsofnonsphericityusinglargeandsmall
-datasamples,thecomparisonofresultspresentedinthelef
+ects of nonsphericity using large and small
+data samples, the comparison of results presented in the lef
 t-
-andright-handsidepanelsofFig.8suggeststhattheimprov
+and right-hand side panels of Fig.8 suggests that the improv
 ed
 methodusingtwostellarpopulationsgivesmoreprecisebut
 less
-accurateoutcome.However,inbothstudiestheapparentdet
+accurate outcome. However, in both studies the apparent det
 e-
-riorationofthereliabilityisaconsequenceofmodelingof
+rioration of the reliability is a consequence of modeling of
 a
-nonsphericalobject.Inbothcases,asimplerapproach(muc
+nonspherical object. In both cases, a simpler approach (muc
 h
-smallerdatasamplesorusingonestellarpopulation)resul
+smaller data samples or using one stellar population) resul
 ted
 -2
 -1
@@ -2897,104 +2897,104 @@ s
 3
 s
 K19
-Fig.15.
-Prolesoftheanisotropyparameterobtainedwiththe
+Fig. 15.
+Proles of the anisotropy parameter obtained with the
 SchwarzschildmodelingoftwostellarpopulationsfortheF
 ornaxdSph.
 Inrows:
 resultsforallstars(calculatedasthesuperpositionoftw
 opop-
-ulations),populationI,andpopulationII.Colorlinesind
-icatevalues
+ulations), population I, and population II. Color lines ind
+icate values
 forthebest-tmodelswhereasthecoloredareasofdecreasi
 ngintensity
 showthe1,2,and3
 ˙
-condenceregions.Thedashedblacklineshows
-theresultfromKowalczyketal.(2019)forcomparison.
+condence regions.The dashedblacklineshows
+the resultfrom Kowalczyk et al.(2019) for comparison.
 
-inlargernaluncertainties,usuallycontainingthetruev
+in larger nal uncertainties, usually containing the true v
 alues
-within1
+within 1
 ˙
-condenceregion.Ontheotherhand,theimproved
+condence region. On the other hand, the improved
 methodsexhibitsubstantiallyreduceduncertainties,hig
 hlighting
 theunderlyingbias.
-Ourmethodparametrizesthetotalmasscontentwiththe
+Our method parametrizes the total mass content with the
 mass-to-lightratiovaryingwithradiusasapower-lawinth
 elog-
-logscale.Wemadetwomainchangeswithrespecttoourprevi-
+logscale. We madetwo mainchangeswith respect toourprevi-
 
 ouswork:weaddedathirdparameter
 c
 controllingthesteepness
 ofthemass-to-lightratioprole(previouslyxedattheva
 lueof
-3)andallowedfordi
+3) and allowed for di
 
-erentstellardensityproles(previously
-onlySérsic,nowalsoKing).Thesechangesareofcoursecou-
+erent stellar density proles (previously
+only Sérsic, now also King). These changes are of course cou-
 
 pledsincedi
 
 erentdensityprolesrequiredi
 
 erentexponentsto
-reproducethesamemassprole.Itisvisiblealsoinourresu
+reproduce the same mass prole. It is visible also in our resu
 lts
-sincetheKingproleappliedinthesimulatedgalaxygaveus
+since the King prole applied in the simulated galaxy gave us
 
 valuesof
 c
-lowerthan3.Nevertheless,wedecidedtousedi
+lower than3. Nevertheless,we decidedto use di
 
 er-
 entdensityprolestomakeourmethodmoregeneralandappli
 -
 cabletoobjects,suchasourIllustrisgalaxy,forwhichthe
 Sérsic
-formuladoesnotprovideagoodapproximationofthedensity
+formula does not provide a good approximation of the density
 
 distribution.
-Finally,weappliedtheimprovedmethodtothedataforthe
-FornaxdSphgalaxy.Duetotheadditionofanotherfreeparam
+Finally, we applied the improved method to the data for the
+FornaxdSph galaxy.Due to the additionof another free param
 -
-eterinourfunctionalformforthemass-to-lightratio,our
+eter in our functional form for the mass-to-light ratio, our
 re-
-sultsformodelingallstarsareslightlydi
+sults for modeling all stars are slightly di
 
-erentfromtheones
-Articlenumber,page11of12
+erent from the ones
+Articlenumber, page 11of 12
 A
 &
 A proofs:
-manuscriptno.Populations4
-obtainedinKowalczyketal.(2019).However,intermsofthe
+manuscript no. Populations4
+obtained in Kowalczyket al. (2019). However, in terms of the
 
-totaldensityandmassdistributiontheestimatesobtained
+total density and mass distribution the estimates obtained
 here
-agreeverywellwiththoseearlierresultsintherangecover
+agree very well with those earlier results in the range cover
 ed
-bythedata.Therefore,thedetailedcomparisonwithothere
+by the data. Therefore, the detailed comparison with other e
 sti-
-matesfromtheliteraturepresentedinKowalczyketal.(201
+matesfromtheliteraturepresentedinKowalczyket al.(201
 9)is
-stillvalidandwedonotrepeatithere.
-Amoresignicantdi
+still validandwedonotrepeatit here.
+A more signicant di
 
-erencewithrespecttotheseprevious
-estimatesisseenintheresultsofmodelingtwopopulations
+erence with respect to these previous
+estimates is seen in the results of modeling two populations
 in
 Fornax.Inthiscasewendtheanisotropytobeslightlyincr
 eas-
 ingratherthandecreasingwithradiusand,mostimportantl
 y,the
-condenceregionsforthisparameter,aswellasfortheden-
+condence regions for this parameter, as well as for the den-
 
 sity,aremuchnarrower.Wewerethusabletoobtaintighterc
 on-
-straintsonthepropertiesofFornax,whichmeansthattheim
+straints on the properties of Fornax, which means that the im
 -
 provedmethodissuccessful.Forthersttime,wewerealsoa
 ble
@@ -3002,78 +3002,78 @@ todeducethevelocityanisotropyprolesforeachofthepop
 ula-
 tionsseparately.Wefoundthatthemoreconcentrated,meta
 l-rich
-populationIhasadecreasinganisotropyprolewhilethemo
+population I has a decreasing anisotropy prole while the mo
 re
 extended,metal-poorpopulationIIhastheanisotropyincr
 easing
-withradius.Thisndingmaypartiallyexplainthelargespr
+with radius. This nding may partially explain the large spr
 ead
-oftheanisotropyvaluesobtainedintheliteratureandsumm
+of the anisotropy values obtained in the literature and summ
 a-
-rizedinTable2and3ofKowalczyketal.(2019),whichwere
+rized in Table 2 and 3 of Kowalczyket al. (2019), which were
 
-oftenbasedonmodelingsubsamplesofourspectroscopicdat
+often based on modeling subsamples of our spectroscopic dat
 a
 set.
-Forbothstudiedobjectswesplitthestarsintotwopopula-
-tionsbydividingtheminhalfbasedontheirmetallicity,
+For both studied objects we split the stars into two popula-
+tions by dividing them in half based on their metallicity,
 Z
 (in
-solarunits),fortheIllustrisgalaxyand[Fe
+solar units), for the Illustris galaxyand [Fe
 /
-H]forFornax.Such
-amethodisapproximatebutjustied.Bothgalaxieshavecom
+H] for Fornax.Such
+a method is approximate but justied. Both galaxies have com
 -
 plexstarformationhistorywithmultiplestarformationbu
 rsts,as
-demonstratedbyFig.1inthisworkandFig.7indelPinoetal.
+demonstrated by Fig.1 in this work and Fig. 7 in del Pinoetal.
 
-(2013),producingmultiplestellarpopulationswhichcann
-otbe
-easilytrackedasthemetallicityisagoodbutnotperfectpr
+(2013), producing multiple stellar populations which cann
+ot be
+easily tracked as the metallicity is a good but not perfect pr
 oxy
 forthestellarage.Moreover,themetallicityhistogramsf
 orboth
-objectsare approximatelyunimodalnotallowingforaconve
+objects are approximately unimodal not allowing for a conve
 -
-nientseparation.Morerenedmethodsofdivisionhavebeen
+nient separation. More rened methods of division have been
 
-suggestedintheliterature,forexampleintheformoftheli
+suggestedin the literature,for examplein the formof the li
 keli-
 hoodfunctionbasedontheposition,velocity,andmetallic
 ityin-
-dex(Walker&Peñarrubia2011).However,thelikelihoodfun
+dex(Walker&Peñarrubia 2011).However,thelikelihoodfun
 c-
-tionrequiresmanyassumptionswhichintroduceadditional
+tion requires many assumptions which introduce additional
 un-
-certaintiesintothetreatmentofthedata.Ontheotherhand
+certainties into the treatmentof the data. On the other hand
 ,our
-approachensuresthemaximizationofeachsample(andthere
+approach ensures the maximization of each sample (and there
 -
-foreminimizationofsamplingerrors)whilecapturingthe i
+fore minimization of sampling errors) while capturing the i
 m-
-portantfeaturesofthestarformationhistory.
-FurtherimprovementstotheSchwarzschildmodeling
-methodarecertainlypossible.Onewaytoproceedwouldbeto
+portantfeaturesofthe starformationhistory.
+Further improvements to the Schwarzschild modeling
+method are certainly possible. One way to proceed would be to
 
 includethemodelingofthepropermotionsofthestars.Forn
 ow,
-measurementsoftransversevelocitiesareavailableonlyf
-orthe
-brighteststarsindSphgalaxies,butevensmallsamplesoft
+measurementsof transverse velocities are available only f
+or the
+brightest stars in dSph galaxies, but even small samples of t
 his
-typecouldprovidefurtherconstraintsonthemodels,asdem
+typecouldprovidefurtherconstraintsonthe models,asdem
 on-
-stratedbyStrigarietal.(2007)andMassarietal.(2020).
+stratedbyStrigariet al. (2007) andMassari et al.(2020).
 
 Acknowledgements.
 WearegratefultoAndrésdelPinoforprovidingthedatafor
-theFornaxdSphandtotheIllustristeamformakingtheirsim
-ulationspublicly
-available.Usefulcommentsfromtheanonymousrefereearek
-indlyappreciated.
-ThisresearchwassupportedbythePolishNationalScienceC
-enterundergrant
+the Fornax dSph and to the Illustris team for making their sim
+ulations publicly
+available. Useful comments from the anonymous referee are k
+indly appreciated.
+This research was supported by the Polish National Science C
+enter under grant
 2018
 /
 28
@@ -3085,94 +3085,94 @@ ST9
 00529.
 References
 
-Amorisco,N.C.,&Evans,N.W.2012,MNRAS,419,184
+Amorisco, N.C., &Evans, N.W.2012, MNRAS,419, 184
 
-Battaglia,G.,Helmi,A.,Tolstoy,E.,etal.2008,ApJ,681,
+Battaglia, G.,Helmi, A.,Tolstoy, E.,et al. 2008, ApJ,681,
 L13
-Bellazzini,M.,Ferraro,F.R.,&Pancino,E.2001,MNRAS,32
-7,L15
-Binney,J.,&Tremaine,S.2008,GalacticDynamics,2ndedn.
-(PrincetonUni-
-versityPress,Princeton)
-Breddels,M.A.,&Helmi,A.2013,A&A,558,A35
+Bellazzini, M.,Ferraro, F.R.,&Pancino, E.2001, MNRAS, 32
+7, L15
+Binney, J., & Tremaine, S. 2008, Galactic Dynamics, 2nd edn.
+(Princeton Uni-
+versity Press, Princeton)
+Breddels, M. A.,& Helmi, A.2013, A&A,558, A35
 
 Breddels,M.A.,Helmi,A.,vandenBosch,R.C.E.,vandeVen,
 G.,&Battaglia,
-G.2013,MNRAS,433,3173
-delPino,A.,Hidalgo,S.L.,Aparicio,A.,etal.2013,MNRAS
-,433,1505
-delPino,A.,Aparicio,A.,&Hidalgo,S.L.2015,MNRAS,454,
+G.2013, MNRAS, 433, 3173
+delPino, A.,Hidalgo, S.L.,Aparicio, A.,et al. 2013, MNRAS
+,433, 1505
+delPino, A.,Aparicio, A.,& Hidalgo, S.L.2015, MNRAS,454,
 3996
-delPino,A.,Aparicio,A.,Hidalgo,S.L.,&okas,E.L.2017
-,MNRAS,465,
+del Pino, A., Aparicio, A., Hidalgo, S. L., & okas, E. L. 2017
+, MNRAS, 465,
 3708
-Fabrizio,M.,Bono,G.,Nonino,M.,etal.2016,ApJ,830,126
+Fabrizio, M.,Bono, G.,Nonino, M.,et al. 2016, ApJ,830, 126
 
-Gebhardt,K.,Richstone,D.,Tremaine,S.,etal.2003,ApJ,
-583,92
-Genel,S.,Fall,S.M.,Hernquist,L.,etal.2015,ApJ,804,L
+Gebhardt, K.,Richstone, D.,Tremaine, S.,et al. 2003, ApJ,
+583, 92
+Genel, S.,Fall, S.M.,Hernquist, L.,et al. 2015, ApJ,804, L
 40
-Genel,S.,Vogelsberger,M.,Springel,V.,etal.2014,MNRA
-S,445,175
-Genina,A.,Benitez-Llambay,A.,Frenk,C.S.,etal.2018,M
-NRAS,474,1398
-Hayashi,K.,Fabrizio,M.,okas,E.L.,etal.2018,MNRAS,4
-81,250
-Irwin,M.,&Hatzidimitriou,D.1995,MNRAS,277,1354
+Genel, S.,Vogelsberger, M.,Springel, V.,etal. 2014, MNRA
+S, 445, 175
+Genina, A.,Benitez-Llambay, A.,Frenk, C. S.,etal. 2018, M
+NRAS, 474, 1398
+Hayashi, K.,Fabrizio, M.,okas,E.L.,et al. 2018, MNRAS,4
+81, 250
+Irwin, M.,& Hatzidimitriou, D.1995, MNRAS, 277, 1354
 
-Jardel,J.R.,&Gebhardt,K.2012,ApJ,746,89
+Jardel, J.R., &Gebhardt, K.2012, ApJ, 746,89
 
-Jardel,J.R.,Gebhardt,K.,Fabricius,M.H.,Drory,N.,&Wi
-lliams,M.J.2013,
-ApJ,763,91
-King,I.1962,AJ,67,471
+Jardel, J.R., Gebhardt, K.,Fabricius, M. H.,Drory, N.,& Wi
+lliams, M. J.2013,
+ApJ,763, 91
+King, I.1962, AJ,67, 471
 
-Kowalczyk,K.,okas,E.L.,Kazantzidis,S.,&Mayer,L.201
-3,MNRAS,431,
+Kowalczyk, K.,okas, E. L.,Kazantzidis, S.,& Mayer, L.201
+3, MNRAS, 431,
 2796
-Kowalczyk,K.,okas,E.L.,&Valluri,M.2017,MNRAS,470,3
+Kowalczyk, K.,okas, E.L.,&Valluri, M. 2017, MNRAS,470, 3
 959
-Kowalczyk,K.,okas,E.L.,&Valluri,M.2018,MNRAS,476,2
+Kowalczyk, K.,okas, E.L.,&Valluri, M. 2018, MNRAS,476, 2
 918
-Kowalczyk,K.,delPino,A.,okas,E.L.,&Valluri,M.2019,
-MNRAS,482,
+Kowalczyk, K., del Pino, A., okas, E. L., & Valluri, M. 2019,
+MNRAS, 482,
 5241
-okas,E.L.,2002,MNRAS,333,697
+okas,E.L.,2002, MNRAS, 333, 697
 
-okas,E.L.,Mamon,G.A.,&Prada,F.2005,MNRAS,363,918
+okas,E.L.,Mamon, G.A.,&Prada, F.2005, MNRAS,363, 918
 
-Massari,D.,Helmi,A.,Mucciarelli,A.etal.2020,A&A,633
-,A36
-Mateo,M.1998,ARA&A,36,435
+Massari, D.,Helmi, A.,Mucciarelli, A.et al. 2020, A&A,633
+, A36
+Mateo, M. 1998, ARA&A,36,435
 
-Nelson,D.,Pillepich,A.,Genel,S.,etal.2015,Astronomy
-andComputing,13,
+Nelson, D., Pillepich, A.,Genel, S., et al. 2015, Astronomy
+and Computing, 13,
 12
-Pace,A.B.,Kaplinghat,M.,Kirby,E.,etal.2020,MNRAS,49
-5,3022
-Press,W.H.,Teukolsky,S.A.,Vetterling,W.T.,&Flannery
-,B.P.1992,Numer-
-icalRecipesinC,2ndedn.(CambridgeUniversityPress,Cam
+Pace, A.B.,Kaplinghat, M.,Kirby, E.,etal. 2020, MNRAS,49
+5, 3022
+Press,W.H.,Teukolsky,S.A.,Vetterling, W.T.,&Flannery
+, B.P.1992,Numer-
+ical Recipes in C, 2nd edn. (Cambridge University Press, Cam
 bridge)
-Schwarzschild,M.1979,ApJ,232,236
+Schwarzschild, M. 1979, ApJ,232, 236
 
-Sérsic,J.L.1968,AtlasdeGalaxiasAustrales(Observator
-io Astronomico,Cor-
-doba,Argentina)
-Strigari,L.E.,Bullock,J.S.,&Kaplinghat,M.2007,ApJ,6
-57,L1
-Tolstoy,E.,Hill,V.,&Tosi,M.2009,ARA&A,47,371
+Sérsic, J.L.1968, Atlas deGalaxias Australes (Observator
+io Astronomico, Cor-
+doba, Argentina)
+Strigari, L.E.,Bullock, J.S.,&Kaplinghat, M.2007, ApJ,6
+57, L1
+Tolstoy,E.,Hill, V., &Tosi,M.2009, ARA&A,47, 371
 
-Valluri,M.,Merritt,D.,&Emsellem,E.2004,ApJ,602,66
+Valluri, M.,Merritt, D.,&Emsellem, E.2004, ApJ,602, 66
 
-vanderMarel,R.P.,Cretton,N.,deZeeuw,P.T.,&Rix,H.-W.
-1998,ApJ,493,
+van der Marel, R.P.,Cretton, N.,de Zeeuw,P.T.,&Rix, H.-W.
+1998, ApJ,493,
 613
-Vogelsberger,M.,Genel,S.,Springel,V.,etal.2014a,Nat
-ure,509,177
-Vogelsberger,M.,Genel,S.,Springel,V.,etal.2014b,MNR
-AS,444,1518
-Walker,M.G.,&Peñarrubia,J.2011,ApJ,742,20
+Vogelsberger, M.,Genel, S.,Springel, V.,etal. 2014a, Nat
+ure, 509, 177
+Vogelsberger, M.,Genel, S.,Springel, V.,etal. 2014b, MNR
+AS,444, 1518
+Walker, M.G.,&Peñarrubia, J.2011, ApJ,742, 20
 
-Wang,M.Y.,deBoer,T.,Pieres,A.,etal.2019,ApJ,881,118
-Articlenumber,page12of12
+Wang,M.Y., deBoer, T.,Pieres, A.,et al. 2019, ApJ,881, 118
+Articlenumber, page 12of 12
