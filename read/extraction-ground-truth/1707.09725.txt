@@ -118,36 +118,21 @@ study without having to worry about anything besides my studies. Thank you!
 Finally, I want to thank Timothy Gebhard, Daniel Schütz and Yang Zhang for proof-reading
 my masters thesis and Stephan Gocht for giving me access to a GTX 1070.
 
-ix
-
-
 
 This work can be cited the following way:
 
 @MastersThesis{Thoma:2017,
-
 Title = {Analysis and Optimization of Convolutional Neural Network
-
 Architectures},
-
 Author = {Martin Thoma},
-
 School = {Karlsruhe Institute of Technology},
-
 Year = {2017},
-
 Address = {Karlsruhe, Germany},
-
 Month = jun,
-
 Type = {Masters’s Thesis},
-
 Keywords = {machine learning; artificial neural networks;
-
 classification; supervised learning; CNNs},
-
 Url = {https://martin-thoma.com/msthesis/}
-
 }
 
 A DVD with a digital version of this master thesis and the source code as well as the used
@@ -288,18 +273,13 @@ problems:
 to decide which of the k classes the image belongs to. For example, an image from
 a self-driving cars on-board camera contains either paved road, unpaved road or
 no road: Which of those given three classes is in the image?
-
 • Localization: The algorithm is given an image and one class k. The task is to find
 bounding boxes for all instances of k.
-
 • Detection: Given an image and k classes, find bounding boxes for all instances of
 those classes.
-
 • Semantic Segmentation: Given an image and k classes, classify each pixel.
-
 • Instance segmentation: Given an image and k classes, classify each pixel as one of
 the k classes, but distinguish different instances of the classes.
-
 • Content-based Image Retrieval: Given an image x and n images in a database,
 find the top u images which are most similar to x.
 
@@ -315,10 +295,6 @@ CNNs as well as nine methods for analysis of CNNs is given in Chapter 2.
 
 1Classification is also called identification if the classes are humans. Another name is object recognition,
 although the classes can be humans and animals as well.
-
-1
-
-
 
 1. Introduction
 
@@ -338,10 +314,6 @@ This work focuses on classification problems to keep the presented ideas as pure
 simple as possible. The described techniques are relevant to all six described computer
 vision problems due to the fact that Encoder-Decoder architectures are one component of
 state-of-the-art algorithms for all six of them.
-
-2
-
-
 
 2. Convolutional Neural Networks
 
@@ -363,7 +335,7 @@ The output image I ′ has only one channel. Each pixel I ′(x, y) of the outpu
 calculated by point-wise multiplication of one filter element with one element of the original
 image I:
 
-I ′(x, y) =
+I′(x, y) =
 
 b kw
 2
@@ -387,205 +359,10 @@ I(x+ ix, y + iy, ic) · F (ix, iy, ic)
 
 This procedure is explained by Figure 2.1. It is essentially a discrete convolution.
 
-I ∈ R7×7
-
-Filter kernel
-F ∈ R3×3
-
-Result of point-wise
-multiplication
-
-I ′ ∈ R7×7
-
-104
-116
-
-116
-112
-
-58
-47
-
-47
-
-109
-97
-
-114
-116
-
-105
-110
-
-45
-
-116
-104
-
-111
-109
-
-97
-46
-
-100
-
-101
-47
-
-109
-97
-
-115
-116
-
-101
-
-114
-47
-
-99
-97
-
-116
-99
-
-97
-
-116
-99
-
-97
-116
-
-46
-112
-
-104
-
-112
-63
-
-118
-61
-
-49
-46
-
-48
-
-9
--3
-
--1
-
--6
-5
-
-3
-
-2
--8
-
-0
-
-936
--333
-
--109
-
--282
-545
-
-291
-
-94
--792
-
-0
-
--4
--254
-
--498
--662
-
--849
--642
-
-187
-
--520
-45
-
-240
-211
-
-388
-215
-
--861
-
--340
-559
-
--105
-185
-
--138
--180
-
-503
-
--718
-429
-
-350
-173
-
-251
-268
-
--655
-
--567
--53
-
--75
-80
-
-571
--128
-
-24
-
--408
-596
-
--550
-368
-
-26
-976
-
-156
-
-302
-647
-
-879
-223
-
-811
-54
-
-660
+[IMAGE]
 
 Figure 2.1.: Visualization of the application of a linear k × k × 1 image filter. For each pixel of the
 output image, k2 multiplications and k2 additions of the products have to be calculated.
-
-3
-
 
 
 2. Convolutional Neural Networks
@@ -595,13 +372,10 @@ boundary treatment:
 
 • don’t compute: The image I ′ will be smaller than the original image. I ′ ∈
 R(w−kw+1)×(h−kh+1)×d3 , to be exact.
-
 • zero padding: The image I is padded by zeros where the filter would access elements
 which do not exist. This will result in edges being detected at the border if the border
 pixels are not black, but doesn’t need any computation.
-
 • nearest: Repeat the pixel which is closest to the boundary.
-
 • reflect: Reflect the image at the boundaries.
 
 Common tasks that can be done with linear filters include edge detection, corner detection,
@@ -649,9 +423,7 @@ state-of-the-art in various computer vision tasks.
 Traditional CNNs have three important building tools:
 
 • Convolutional layers with a non-linear activation function as described in Section 2.2.1,
-
 • pooling layers as described in Section 2.2.2 and
-
 • normalization layers as described in Section 2.2.4.
 
 2.2.1. Convolutional Layers
@@ -662,7 +434,7 @@ the linear convolutions are the parameters which are adapted to the training dat
 number n of filters as well as the filter’s size kw × kh are hyperparameters of convolutional
 layers. Sometimes, it is denoted as n@kw × kh. Although the filter depth is usually omitted
 in the notation, the filters are of dimension kw × kh × d(i−1), where d(i−1) is the number of
-feature maps of the input layer (i− 1).
+feature maps of the input layer (i−1).
 
 Another hyperparameter of convolution layers is the stride s ∈ N≥1 and the padding.
 Padding (usually zero-padding [SCL12, SEZ+13, HZRS15a]) is used to make sure that the
@@ -671,11 +443,8 @@ size of the feature maps doesn’t change.
 The hyperparameters of convolutional layers are
 
 • the number of filters n ∈ N≥1,
-
 • kw, kh ∈ N≥1 of the filter size kw × kh × d(i−1),
-
 • the activation function of the layer (see Table B.3) and
-
 • the stride s ∈ N≥1
 
 Typical choices are n ∈ { 32, 64, 128 }, kw = kh = k ∈ { 1, 3, 5, 11 } such as in [KSH12,
@@ -687,9 +456,6 @@ like MLPs. In fact, every CNN has an equivalent MLP which computes the same func
 if only the flattened output is compared.
 
 1also called activation maps or channels
-
-5
-
 
 
 2. Convolutional Neural Networks
@@ -743,25 +509,13 @@ n feature maps
 n filters of
 size k × k × 3
 
-w
-id
-th
-w
+width w
 
-w
-id
-th
-w
+width w
 
-he
-ig
-ht
-h
+height h
 
-he
-ig
-ht
-h
+height h
 
 neural
 network
@@ -880,7 +634,7 @@ See Figure 2.3 for a visualization of max pooling.
 
 9 2 9 6 4 3
 
-2× 2 max pooling
+2 × 2 max pooling
 
 9 5 9
 
@@ -1149,7 +903,6 @@ concatenated.
 The hyperparameters of an aggregation block are:
 
 • The topology of the group members.
-
 • The cardinality C ∈ N≥1. Note that a cardinality of C = 1 is equivalent in every
 aspect to using the group network without an aggregation block.
 
@@ -1201,17 +954,11 @@ Figure 2.6.: Dense block with L = 2 layers and a growth factor of k.
 Dense block have five hyperparameters:
 
 • The activation function being used. The authors use ReLU.
-
 • The size kw × kh of filters. The authors use kw = kh = 3.
-
 • The number of layers L, where L = 2 is a simple convolutional layer.
-
 • The number k of filters added per layer (called growth rate in the paper)
 
-It might be necessary use 1× 1 convolutions to reduce the number of L · k feature maps.
-
-13
-
+It might be necessary use 1 × 1 convolutions to reduce the number of L · k feature maps.
 
 
 2. Convolutional Neural Networks
@@ -1232,11 +979,6 @@ Global pooling is another type of transition layer. It applies pooling over the 
 feature map size to shrink the input to a constant 1× 1 feature map and hence allows one
 network to have different input sizes.
 
-14
-
-
-
-2.5. Analysis Techniques
 
 2.5. Analysis Techniques
 
@@ -1250,17 +992,11 @@ the following, nine diagnostic techniques are explained.
 A machine learning developer has the following choices to improve the model’s quality:
 
 (I1) Change the problem definition (e.g., the classes which are to be distinguished)
-
 (I2) Get more training data
-
 (I3) Clean the training data
-
 (I4) Change the preprocessing (see Appendix B.1)
-
 (I5) Augment the training data set (see Appendix B.2)
-
 (I6) Change the training setup (see Appendices B.3 to B.5)
-
 (I7) Change the model (see Appendices B.6 and B.7)
 
 The preprocessing is usually not changed in modern architectures. However, this still leaves
@@ -1283,12 +1019,6 @@ its quality decreases.
 
 On the other hand, this can show differences in the distribution of validation data which
 are not covered by the training set and thus indicate the need to collect more data.
-
-15
-
-
-
-2. Convolutional Neural Networks
 
 2.5.2. Confusion Matrices
 
@@ -1368,13 +1098,6 @@ typical quality metrics. Other quality metrics can be found in [OHIL16].
 
 In case that the number of training epochs are used as the examined hyperparameter,
 validation curves give an indicator if training longer improves the model’s performance. By
-
-16
-
-
-
-2.5. Analysis Techniques
-
 plotting the error on the training set as well as the error on a validation set, one can also
 estimate if overfitting might become a problem. See Figure 2.7 for an example.
 
@@ -1457,9 +1180,6 @@ k is the output of the classification
 algorithm which depends on the weights. λ1, λ2 ∈ [0,∞) weights the regularization and is
 typically smaller than 0.1.
 
-17
-
-
 
 2. Convolutional Neural Networks
 
@@ -1482,11 +1202,9 @@ network:
 
 • If the loss does not decrease for several epochs, the learning rate might be too low.
 The optimization process might also be stuck in a local minimum.
-
 • Loss being NAN might be due to too high learning rates. Another reason is division
 by zero or taking the logarithm of zero. In both cases, adding a small constant like
 10−7 fixes the problem.
-
 • If the loss-epoch validation curve has a plateau at the beginning, the weight initializa-
 tion might be bad.
 
@@ -1522,8 +1240,7 @@ always classify everything as the most common class.
 
 In order to fix this problem, one can use the mean accuracy:
 
-mean-accuracy(c) =
-1
+mean-accuracy(c) = 1
 
 k
 ·
@@ -1541,17 +1258,12 @@ Besides the quality of the classification result, several other quality criteria
 in practice:
 
 • Speed of evaluation for new images,
-
 • latency,
-
 • power consumption,
-
 • robustness against (non)random perturbations in the training data (see [SZS+13,
 PMW+15]),
-
 • robustness against (non)random perturbations in the training labels (see [NDRT13,
 XXE12]),
-
 • model size
 
 As reducing the floating point accuracy allows to process more data on a given device [Har15],
@@ -1559,11 +1271,6 @@ analysis under this aspect is also highly relevant in some scenarios.
 
 However, the following focuses on the quality of the classification result.
 
-19
-
-
-
-2. Convolutional Neural Networks
 
 2.5.4. Learning Curves
 
@@ -1663,12 +1370,6 @@ image I0 is assigned a score Sc(I0) for a class c of interest. CNNs are non-line
 but they can be approximated by the first order Taylor expansion Sc(I) ≈ wT I + b where
 w is the derivative of Sc at I0.
 
-21
-
-
-
-2. Convolutional Neural Networks
-
 2.5.6. Argmax Method
 
 The argmax method has two variants:
@@ -1710,12 +1411,6 @@ high or low values.
 
 More recent work like [NYC16] tries to make the reconstructions appearance look more
 natural.
-
-22
-
-
-
-2.5. Analysis Techniques
 
 2.5.8. Filter comparison
 
@@ -1774,12 +1469,6 @@ The order of the weight updates as well as possible implications highly depend o
 and the training algorithm. See Appendix B.5 for a short overview of training algorithms
 for neural networks.
 
-23
-
-
-
-2. Convolutional Neural Networks
-
 2.6. Accuracy boosting techniques
 
 There are techniques which can almost always be applied to improve accuracy of CNN
@@ -1807,10 +1496,6 @@ an ensemble, it increases the computational cost of inference.
 Pretraining the classifier on another dataset to obtain start from a good position or finetuning
 a model which was originally created for another task is also a common technique.
 
-24
-
-
-
 2.6. Accuracy boosting techniques
 
 Figure 2.10.: Occlusion sensitivity analysis by [ZF14]: The left column shows three example images,
@@ -1823,18 +1508,8 @@ gives the class with the highest predicted probability. In the case of the Pomer
 it always predicts the correct class if the head is visible. However, if the head of the
 dog is occluded, it predicts other classes.
 
-25
-
-
-
-2. Convolutional Neural Networks
-
 Figure 2.11.: Filter visualization from [ZF14]: The filters themselves as well as the input feature
 maps which caused the highest activation are displayed.
-
-26
-
-
 
 3. Topology Learning
 

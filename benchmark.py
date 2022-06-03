@@ -353,8 +353,8 @@ def write_benchmark_report(
             library_name = names[index]
             lib = extract_functions[library_name]
             avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.2f}s"]
-            row += [f"{t:0.2f}s" for t in text_extraction_times[library_name]]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
+            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
@@ -380,8 +380,8 @@ def write_benchmark_report(
             library_name = names[index]
             lib = extract_functions[library_name]
             avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.2f}s"]
-            row += [f"{t:0.2f}s" for t in text_extraction_times[library_name]]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
+            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")

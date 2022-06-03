@@ -284,11 +284,6 @@ more details).
 
 MNRAS 000, 1–15 (2021)
 
-https://ascl.net/code/v/2627
-https://www.meertrap.org/
-https://github.com/AstroAccelerateOrg/astro-accelerate
-
-
 4 Chibueze et al.
 
 2.2 e-MERLIN Observations
@@ -377,13 +372,7 @@ the same acceptance and under the same observation conditions.
 The theoretical thermal noise of the MeerKAT can be calculated as
 
 𝑆rms =
-1
-[𝑐
-
-SEFD√︃
-𝑛pol × 𝑁 (𝑁 − 1) × Δa × 𝑡int
-
-. (1)
+1[𝑐SEFD√︃𝑛pol × 𝑁 (𝑁 − 1) × Δa × 𝑡int. (1)
 
 The system equivalent flux density (SEFD) of MeerKAT at the
 1.28GHz is 443 Jy and [𝑐 is the correlator efficiency. We used 𝑛pol
@@ -557,14 +546,6 @@ pl
 
 MNRAS 000, 1–15 (2021)
 
-https://www.wis-tns.org/object/20171019a
-https://ned.ipac.caltech.edu
-https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/w3pimms.pl
-https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/w3pimms.pl
-https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3nh/w3nh.pl
-https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3nh/w3nh.pl
-
-
 6 Chibueze et al.
 
 Figure 1. Astrometric comparison between MeerKAT and NVSS discrete compact sources.The open circles represent the difference in position between the
@@ -590,7 +571,6 @@ intensities within the measured rms of the images (see Tables 1 and
 2 for details). The values in the Table 2 are derived by carrying
 out 2D Gaussian fit using similar ellipses enclosing the detected
 persistent emission. The average flux density is ∼ 3 times less than
-
 that of the persistent source associated with FRBs 20121102A, one
 of the most prolific repeaters, located at 𝑧 = 0.19273(8). Persistent
 radio emission from FRB 20201124A was detected by the uGMRT
@@ -671,7 +651,6 @@ large offset from the centre of the galaxymakes the persistent source
 unlikely to be an AGN. So far this FRB has not been seen to repeat.
 Higher resolution imaging will be required to be certain of a direct
 association of the persistent source with the FRB. We did not have
-
 sufficient sensitivity in the sub-band images, thus, we are unable to
 derive the spectral index of the emission of the host galaxy.
 
@@ -896,49 +875,6 @@ Armour W., 2018, ApJS, 239, 28
 
 MNRAS 000, 1–15 (2021)
 
-https://ui.adsabs.harvard.edu/abs/2016arXiv161109704A
-https://ui.adsabs.harvard.edu/abs/2017arXiv171110855A
-https://ui.adsabs.harvard.edu/abs/2017arXiv171110855A
-http://dx.doi.org/10.1051/0004-6361:20065351
-http://adsabs.harvard.edu/abs/2006A%26A...457..899A
-http://dx.doi.org/10.1088/0067-0049/219/1/12
-https://ui.adsabs.harvard.edu/abs/2020arXiv200104510A
-http://dx.doi.org/10.1126/science.aaw5903
-https://ui.adsabs.harvard.edu/abs/2019Sci...365..565B
-http://dx.doi.org/10.3847/2041-8213/aa7a0c
-https://ui.adsabs.harvard.edu/abs/2017ApJ...843L...8B
-http://dx.doi.org/10.3847/2041-8213/aa78f3
-https://ui.adsabs.harvard.edu/abs/2017ApJ...843L..26B
-http://dx.doi.org/10.1051/0004-6361:20066674
-http://adsabs.harvard.edu/abs/2007A%26A...466.1219B
-http://dx.doi.org/10.3847/2041-8213/ab672e
-https://ui.adsabs.harvard.edu/abs/2020ApJ...895L..37B
-http://dx.doi.org/10.1016/j.nima.2014.05.093
-http://dx.doi.org/10.1016/j.nima.2014.05.093
-http://dx.doi.org/10.1016/j.nima.2014.05.093
-http://dx.doi.org/10.1111/j.1365-2966.2010.16832.x
-http://dx.doi.org/10.1111/j.1365-2966.2010.16832.x
-http://dx.doi.org/10.1016/j.astropartphys.2020.102429
-http://dx.doi.org/10.1007/s11214-005-5097-2
-https://ui.adsabs.harvard.edu/abs/2005SSRv..120..165B
-http://dx.doi.org/10.3390/universe7110453
-https://ui.adsabs.harvard.edu/abs/2021Univ....7..453C
-http://dx.doi.org/10.1093/mnras/stz386
-https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.5500C
-http://dx.doi.org/10.1093/mnras/staa1791
-https://ui.adsabs.harvard.edu/abs/2020MNRAS.496.4565C
-http://dx.doi.org/10.1038/nature20797
-https://ui.adsabs.harvard.edu/abs/2017Natur.541...58C
-https://ui.adsabs.harvard.edu/abs/2021ATel14497....1C
-http://dx.doi.org/10.1093/mnras/stv2948
-https://ui.adsabs.harvard.edu/abs/2016MNRAS.457..232C
-http://dx.doi.org/10.3847/2041-8213/aa6745
-https://ui.adsabs.harvard.edu/abs/2017ApJ...838L...7D
-https://ui.adsabs.harvard.edu/abs/2015arXiv151107343D
-http://dx.doi.org/10.3847/1538-4365/aabe88
-https://ui.adsabs.harvard.edu/abs/2018ApJS..239...28D
-
-
 MeerKAT, e-MERLIN, Swift and H.E.S.S., observations of three localised FRBs 13
 
 Figure 8. FRB 20190711A MeerKAT epoch I image and a zoom-in (insert) around the position of the FRB. The white ellipse on the bottom left corner of the
@@ -1027,87 +963,6 @@ Tavani M., et al., 2021, Nature Astronomy, 5, 401–407
 
 MNRAS 000, 1–15 (2021)
 
-http://dx.doi.org/10.3847/1538-4357/aac270
-https://ui.adsabs.harvard.edu/abs/2018ApJ...860...73E
-https://ui.adsabs.harvard.edu/abs/2018ApJ...860...73E
-http://dx.doi.org/10.1051/0004-6361:20077530
-https://ui.adsabs.harvard.edu/abs/2007A&A...469..379E
-http://dx.doi.org/10.1111/j.1365-2966.2009.14913.x
-https://ui.adsabs.harvard.edu/abs/2009MNRAS.397.1177E
-http://dx.doi.org/10.3847/2041-8213/ac242b
-https://ui.adsabs.harvard.edu/abs/2021ApJ...919L..23F
-http://dx.doi.org/10.3847/1538-4357/ac0fe1
-http://dx.doi.org/10.1051/0004-6361/201629178
-https://ui.adsabs.harvard.edu/abs/2016A&A...594A.116H
-http://dx.doi.org/10.3847/1538-4357/abb6fb
-https://ui.adsabs.harvard.edu/abs/2020ApJ...903..152H
-http://dx.doi.org/10.1142/S2251171716410014
-https://ui.adsabs.harvard.edu/abs/2016JAI.....541001H
-http://dx.doi.org/10.3847/2041-8213/abdec0
-https://ui.adsabs.harvard.edu/abs/2021ApJ...908L..10H
-http://dx.doi.org/10.1093/mnras/stz995
-http://hxmten.ihep.ac.cn/bfy/331.jhtml
-http://hxmten.ihep.ac.cn/bfy/331.jhtml
-http://dx.doi.org/10.1093/mnras/staa1361
-https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.2416J
-http://dx.doi.org/10.1088/2041-8205/776/2/L39
-https://ui.adsabs.harvard.edu/abs/2013ApJ...776L..39K
-http://dx.doi.org/10.1093/mnras/sty1221
-https://ui.adsabs.harvard.edu/abs/2018MNRAS.478.2399K
-http://dx.doi.org/10.3847/2041-8213/ab5b08
-https://ui.adsabs.harvard.edu/abs/2019ApJ...887L..30K
-http://dx.doi.org/10.1093/mnras/staa3436
-https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.2525K
-https://ui.adsabs.harvard.edu/abs/2021ATel14526....1L
-http://dx.doi.org/10.1038/s41550-021-01302-6
-http://dx.doi.org/10.3847/0004-637X/826/1/82
-https://ui.adsabs.harvard.edu/abs/2016ApJ...826...82L
-http://dx.doi.org/10.1126/science.1147532
-http://adsabs.harvard.edu/abs/2007Sci...318..777L
-http://dx.doi.org/10.1093/mnrasl/slu046
-http://dx.doi.org/10.1038/s41586-020-2300-2
-https://ui.adsabs.harvard.edu/abs/2020Natur.581..391M
-http://dx.doi.org/10.3847/2041-8213/834/2/L8
-https://ui.adsabs.harvard.edu/abs/2017ApJ...834L...8M
-http://dx.doi.org/10.1038/s41586-019-1866-z
-https://ui.adsabs.harvard.edu/abs/2020Natur.577..190M
-https://ui.adsabs.harvard.edu/abs/2021ATel14603....1M
-http://dx.doi.org/10.3847/1538-4357/ab4c31
-https://ui.adsabs.harvard.edu/abs/2019ApJ...886..110M
-http://dx.doi.org/10.3847/1538-4357/ab5d2d
-https://ui.adsabs.harvard.edu/abs/2020ApJ...888...61M
-http://dx.doi.org/10.3847/2041-8213/aba2cf
-http://dx.doi.org/10.1093/mnras/stz700
-https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4091M
-http://dx.doi.org/10.1093/mnras/stu1368
-https://ui.adsabs.harvard.edu/abs/2014MNRAS.444..606O
-http://dx.doi.org/10.1016/j.astropartphys.2014.03.002
-http://adsabs.harvard.edu/abs/2014APh....56...26P
-https://ui.adsabs.harvard.edu/abs/2021arXiv210710113P
-https://ui.adsabs.harvard.edu/abs/2021arXiv210710113P
-http://dx.doi.org/10.1016/j.physrep.2019.06.003
-https://ui.adsabs.harvard.edu/abs/2019PhR...821....1P
-https://ui.adsabs.harvard.edu/abs/2013arXiv1307.4924P
-http://dx.doi.org/10.1093/mnrasl/slw118
-https://ui.adsabs.harvard.edu/abs/2016MNRAS.462L..16P
-http://dx.doi.org/10.1142/S0218271818440169
-http://dx.doi.org/10.1142/S0218271818440169
-https://ui.adsabs.harvard.edu/abs/2018IJMPD..2744016P
-http://dx.doi.org/10.1126/science.aay0073
-https://ui.adsabs.harvard.edu/abs/2019Sci...366..231P
-http://dx.doi.org/10.1038/s41550-019-0831-y
-https://ui.adsabs.harvard.edu/abs/2019NatAs...3..928R
-https://ui.adsabs.harvard.edu/abs/2020arXiv201014334R
-https://ui.adsabs.harvard.edu/abs/2020arXiv201014334R
-https://ui.adsabs.harvard.edu/abs/2021ATel14549....1R
-http://dx.doi.org/10.1038/s41550-020-01265-0
-http://dx.doi.org/10.1016/j.nima.2005.05.068
-http://dx.doi.org/10.1016/j.nima.2005.05.068
-http://adsabs.harvard.edu/abs/2005NIMPA.551..493R
-http://dx.doi.org/10.1007/s11214-005-5095-4
-http://dx.doi.org/10.1038/s41550-020-01276-x
-https://ui.adsabs.harvard.edu/abs/2021NatAs.tmp...31T
-
 
 14 Chibueze et al.
 
@@ -1177,23 +1032,6 @@ versity, 351 95 Växjö, Sweden
 sité PSL, CNRS, Université de Paris, 92190 Meudon, France
 
 MNRAS 000, 1–15 (2021)
-
-http://dx.doi.org/10.3847/2041-8213/834/2/L7
-https://ui.adsabs.harvard.edu/abs/2017ApJ...834L...7T
-http://dx.doi.org/10.1126/science.1236789
-https://ui.adsabs.harvard.edu/abs/2013Sci...341...53T
-http://dx.doi.org/10.1093/pasj/65.5.L12
-https://ui.adsabs.harvard.edu/abs/2013PASJ...65L..12T
-http://dx.doi.org/10.1051/0004-6361/201730556
-https://ui.adsabs.harvard.edu/abs/2017A&A...602A..64V
-https://ui.adsabs.harvard.edu/abs/2021ATel14529....1W
-http://dx.doi.org/10.1093/pasj/psy029
-https://ui.adsabs.harvard.edu/abs/2018PASJ...70...39Y
-http://dx.doi.org/10.3847/2041-8213/aaadba
-https://ui.adsabs.harvard.edu/abs/2018ApJ...854L..21Z
-http://dx.doi.org/10.1016/j.astropartphys.2009.09.001
-http://adsabs.harvard.edu/abs/2009APh....32..231D
-
 
 MeerKAT, e-MERLIN, Swift and H.E.S.S., observations of three localised FRBs 15
 

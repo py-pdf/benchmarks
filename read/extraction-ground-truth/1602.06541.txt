@@ -1056,7 +1056,7 @@ These (in)dependencies can be expressed with a graph.
 
 Let G = (V, E) be the associated undirected graph
 of an MRF and C be the set of all maximal cliques in
-that graph. Nodes represent random variables x,y and
+that graph. Nodes represent random variables x, y and
 edges represent conditional dependencies. Just like in
 he 4-neighborhood [SWRC06] and the 8-neighborhood
 are reasonable choices for constructing the graph.
@@ -1105,10 +1105,6 @@ According to [Mur12], the most common way of
 inference over the posterior MRF in computer vision
 problems is Maximum A Posteriori (MAP) estimation.
 
-
-
-9
-
 Detailed introductions to MRFs are given by
 [BKR11], [Mur12]. MRFs are used by [ZBS01] and
 [MSB12] for image segmentation.
@@ -1117,8 +1113,8 @@ F. Conditional Random Fields
 
 CRFs are MRFs where all clique potentials are
 conditioned on input features [Mur12]. This means,
-instead of learning the distribution P (y,x), the task
-is reformulated to learn the distribution P (y|x). One
+instead of learning the distribution P(y, x), the task
+is reformulated to learn the distribution P(y|x). One
 consequence of this reformulation is that CRFs need
 much less parameters as the distribution of x does
 not have to be estimated. Another advantage of CRFs
@@ -1127,23 +1123,11 @@ about x has to be made.
 
 A CRF has the partition function Z:
 
-Z(x) =
-∑
-y
-
-P (x,y)
+Z(x) = ∑_y P(x, y)
 
 and joint probability distribution
 
-P (y|x) =
-1
-
-Z(x)
-
-∏
-c∈C
-
-ψc(yc|x)
+P(y|x) = 1 / Z(x) ∏_{c∈C} ψc(yc|x)
 
 The simplest way to define the clique potentials ψ is
 the count of the class yc given x added with a positive
@@ -1223,8 +1207,7 @@ function called rectified linear unit:
 Those are much faster to train than the commonly used
 sigmoid activation functions
 
-ϕSigmoid(x) =
-1
+ϕSigmoid(x) = 1
 
 e−x + 1
 
@@ -1243,10 +1226,6 @@ Since AlexNet was developed, a lot of different
 neural networks have been proposed. One interesting
 example is [PC13], where a recurrent CNN for semantic
 segmentation is presented.
-
-
-
-10
 
 Another notable paper is [LSD14]. The algorithm
 presented there makes use of a classifying network such
@@ -1348,10 +1327,6 @@ example, an image captioning system which was trained
 on photographs of professional photographers might
 not have photos from the point of view of a child. This
 is visualized in Figure 4(f).
-
-
-
-11
 
 VIII. DISCUSSION
 
@@ -1463,25 +1438,6 @@ segmentation via adaptive k-mean clustering and
 knowledge-based morphological operations with
 biomedical applications,” Image Processing, IEEE
 Transactions on, vol. 7, no. 12, pp. 1673–1683, Dec.
-
-https://commons.wikimedia.org/wiki/Category:Blurring
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=668699
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=668699
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5206707
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5206707
-http://www.cs.rug.nl/~imaging/databases/retina_database/retinalfeatures_database.html
-http://www.cs.rug.nl/~imaging/databases/retina_database/retinalfeatures_database.html
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5995659
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5995659
-http://link.springer.com/chapter/10.1007/978-3-540-40899-4_28
-http://link.springer.com/chapter/10.1007/978-3-540-40899-4_28
-http://arxiv.org/abs/1511.00513
-http://link.springer.com/chapter/10.1007/978-3-642-15567-3_13#page-1
-http://link.springer.com/chapter/10.1007/978-3-642-15567-3_13#page-1
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=969114
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=969114
-
-
 12
 
 1998. [Online]. Available: http://ieeexplore.ieee.org/
@@ -1648,42 +1604,6 @@ sensing, vol. 23, no. 4, pp. 725–749, 2002.
 [HHR01] S. Hu, E. Hoffman, and J. Reinhardt, “Automatic
 lung segmentation for accurate quantitation of
 volumetric x-ray ct images,” Medical Imaging, IEEE
-
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=730379
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=730379
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1000236
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1000236
-https://www.andrew.cmu.edu/user/gustavor/chen_isbi_11.pdf
-https://www.andrew.cmu.edu/user/gustavor/chen_isbi_11.pdf
-http://www.xrce.xerox.com/layout/set/print/content/download/16654/118653/file/2008-023.pdf
-http://www.xrce.xerox.com/layout/set/print/content/download/16654/118653/file/2008-023.pdf
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Download.htm
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Download.htm
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Active%20contour%20based%20on%20pixel-level%20classified%20image%20for%20colon%20crypts%20segmentation.pdf
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Active%20contour%20based%20on%20pixel-level%20classified%20image%20for%20colon%20crypts%20segmentation.pdf
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Active%20contour%20based%20on%20pixel-level%20classified%20image%20for%20colon%20crypts%20segmentation.pdf
-http://mis.haifa.ac.il/~ishimshoni/SegmentCrypt/Active%20contour%20based%20on%20pixel-level%20classified%20image%20for%20colon%20crypts%20segmentation.pdf
-http://www.maths.lth.se/matematiklth/personal/sminchis/code/cpmc/
-http://www.maths.lth.se/matematiklth/personal/sminchis/code/cpmc/
-http://arxiv.org/abs/1009.1020
-http://murphylab.web.cmu.edu/data
-http://pages.cs.wisc.edu/~jiaxu/pub/rwcoseg.pdf
-http://pages.cs.wisc.edu/~jiaxu/pub/rwcoseg.pdf
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1467360
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1467360
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2007/index.html
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2007/index.html
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html
-http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html
-http://cs.brown.edu/~pff/segment/
-http://cs.brown.edu/~pff/segment/
-http://link.springer.com/article/10.1023/B:VISI.0000022288.19776.77
-http://link.springer.com/article/10.1023/B:VISI.0000022288.19776.77
-http://www.cvlibs.net/datasets/kitti/eval_road.php
-
-
 13
 
 Transactions on, vol. 20, no. 6, pp. 490–498, Jun.
@@ -1849,45 +1769,6 @@ Learning, vol. 3, no. 4, pp. 319–342, 1989.
 
 [MSB12] G. Moser, S. B. Serpico, and J. A. Benediktsson,
 “Markov random field models for supervised land
-
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=506791
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=506791
-http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf
-http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf
-https://commons.wikimedia.org/wiki/File:CCTV_Lens_flare.jpg
-https://commons.wikimedia.org/wiki/File:CCTV_Lens_flare.jpg
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1315232
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1315232
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1260033
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1260033
-https://commons.wikimedia.org/wiki/File:Great_male_Leopard_in_South_Afrika-JD.JPG
-https://commons.wikimedia.org/wiki/File:Great_male_Leopard_in_South_Afrika-JD.JPG
-http://www2.it.lut.fi/project/imageret/diaretdb1/
-http://www.sciencedirect.com/science/article/pii/S0262885606001223
-http://www.sciencedirect.com/science/article/pii/S0262885606001223
-http://link.springer.com/article/10.1007/BF00133570
-http://link.springer.com/article/10.1007/BF00133570
-http://cs231n.stanford.edu/
-http://dx.doi.org/10.1023/B%3AVISI.0000029664.99615.94
-http://dx.doi.org/10.1023/B%3AVISI.0000029664.99615.94
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4547428
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4547428
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5459248
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5459248
-http://arxiv.org/abs/1411.4038
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4587420
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4587420
-https://commons.wikimedia.org/wiki/File:Randabschattung_Mikroskop_Kamera_6.JPG
-https://commons.wikimedia.org/wiki/File:Randabschattung_Mikroskop_Kamera_6.JPG
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4220659
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4220659
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=937655
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=937655
-http://opencas.webarchiv.kit.edu/?q=node/26
-http://dx.doi.org/10.1023/A%3A1022645801436
-http://dx.doi.org/10.1023/A%3A1022645801436
-
-
 14
 
 cover classification from very high resolution
@@ -2055,48 +1936,6 @@ Springer, 2006, pp. 1–15. [Online]. Available: http:
 [TNL14] J. Tighe, M. Niethammer, and S. Lazebnik,
 “Scene parsing with object instances and
 occlusion ordering,” in Computer Vision and
-
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6381135
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6381135
-http://research.microsoft.com/vision/cambridge/recognition/
-http://research.microsoft.com/vision/cambridge/recognition/
-http://research.microsoft.com/en-us/projects/objectclassrecognition/
-http://research.microsoft.com/en-us/projects/objectclassrecognition/
-http://www.sciencedirect.com/science/article/pii/S0734189X8780186X
-http://www.sciencedirect.com/science/article/pii/S0734189X8780186X
-http://arxiv.org/abs/1306.2795v1
-http://riweb-backend.ri.cmu.edu/pub_files/pub4/pantofaru_caroline_2005_1/pantofaru_caroline_2005_1.pdf
-http://riweb-backend.ri.cmu.edu/pub_files/pub4/pantofaru_caroline_2005_1/pantofaru_caroline_2005_1.pdf
-http://riweb-backend.ri.cmu.edu/pub_files/pub4/pantofaru_caroline_2005_1/pantofaru_caroline_2005_1.pdf
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4130436
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4130436
-http://dx.doi.org/10.1146/annurev.bioeng.2.1.315
-http://dx.doi.org/10.1146/annurev.bioeng.2.1.315
-http://dx.doi.org/10.1023/A%3A1022643204877
-http://dx.doi.org/10.1023/A%3A1022643204877
-http://delivery.acm.org/10.1145/1020000/1015720/p309-rother.pdf
-http://delivery.acm.org/10.1145/1020000/1015720/p309-rother.pdf
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4228537
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4228537
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1640859
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1640859
-http://www.isi.uu.nl/Research/Databases/DRIVE/
-http://research.microsoft.com/pubs/72423/Criminisi_bmvc2008.pdf
-http://research.microsoft.com/pubs/72423/Criminisi_bmvc2008.pdf
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4587503
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4587503
-http://homepages.inf.ed.ac.uk/csutton/publications/crftutv2.pdf
-http://homepages.inf.ed.ac.uk/csutton/publications/crftutv2.pdf
-http://h2t.anthropomatik.kit.edu/pdf/Schiebener2012.pdf
-http://h2t.anthropomatik.kit.edu/pdf/Schiebener2012.pdf
-http://ieeexplore.ieee.org/ielx5/6086637/6100798/06100843.pdf
-http://ieeexplore.ieee.org/ielx5/6086637/6100798/06100843.pdf
-http://link.springer.com/chapter/10.1007/11744023_1
-http://link.springer.com/chapter/10.1007/11744023_1
-
-
-15
-
 Pattern Recognition (CVPR), 2014 IEEE
 Conference on. IEEE, 2014, pp. 3748–3755.
 [Online]. Available: http://ieeexplore.ieee.org/xpls/
@@ -2195,25 +2034,6 @@ RBF radial basis function. 8
 
 SIFT scale-invariant feature transform. 5
 SVM Support Vector Machine. 4, 6–8
-
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6909874
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6909874
-http://repository.cmu.edu/cgi/viewcontent.cgi?article=1365&context=robotics
-http://repository.cmu.edu/cgi/viewcontent.cgi?article=1365&context=robotics
-http://host.robots.ox.ac.uk/pascal/VOC/voc2010/results/index.html
-http://host.robots.ox.ac.uk/pascal/VOC/voc2010/results/index.html
-http://dx.doi.org/10.1007/BFb0029257
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5490399
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5490399
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6042883
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6042883
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=906424
-http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=906424
-http://www.robots.ox.ac.uk/~szheng/papers/CRFasRNN.pdf
-http://www.robots.ox.ac.uk/~szheng/papers/CRFasRNN.pdf
-
-
-16
 
 APPENDIX A
 TABLES

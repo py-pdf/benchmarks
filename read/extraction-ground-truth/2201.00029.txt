@@ -18,9 +18,6 @@ we sequentially re-binned data three times to investigate the SNR improvement of
 µHz greatly improved through this process, and we postulate that this frequency is linked to the
 rotation of KIC 8626021.
 
-
-
-
 Introduction
 
 First detected in 1862, white dwarfs long posed a mystery for early observers. When the
@@ -97,7 +94,7 @@ improvement in signal strength.
 Results
 
 
- Figure 1 presents the lightcurves constructed for quarters seven (Q7) and thirteen (Q13),
+Figure 1 presents the lightcurves constructed for quarters seven (Q7) and thirteen (Q13),
 with corrected flux magnitude (ppm) plotted versus time (Julian days). Figure 2 presents the FTs
 of the first iteration and three successive re-bins for Q7, while Figure 3 presents the FTs of the
 same for Q13.
@@ -105,14 +102,6 @@ same for Q13.
 KIC 8626021 that is found in the FTs of the first iteration and subsequent re-bins for Q7 and
 Q13. Tables 3 and 4 show all data values < 17 µHz found in the first iterations and re-bins of Q7
 and Q13.
-
-
-
-
-
-
-
-
 
 
 FIG. 1: Pictured top is the light curve constructed for Q7, below is the light curve for Q13. Q7
@@ -146,22 +135,6 @@ addition, in the third re-bin, the frequencies 11.641 µHz and 16.823 µHz rise 
 nearly perfect integer multiples of 5.787 µHz. These harmonics are potentially indications of a
 starspot (Santos et al., 2017).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  7
 
 Q7 Significant
 Data Points
@@ -232,17 +205,6 @@ are relative to our significant frequency cutoff of 3𝝈, thus negative numbers
 
 
 
-
-
-
-
-
-
-
-
-
-  8
-
 First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
 
 0.933 0.933 0.215 0.216
@@ -278,12 +240,6 @@ above the cutoff of 3𝝈. The minor shifting of significant frequencies between
 product of the method, and we calculated for such errors when finding our average.
 
 
-
-
-
-
-
-  9
 
 First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
 
@@ -329,11 +285,6 @@ relates to the rotation of the white dwarf.
 
 Through the re-binning process, the SNR clearly improves for both quarters, and for Q7 it
 improves by approximately 1.3 dB, except for the last data re-bin. In the last re-bin, the previous
-
-
-
-  10
-
 significant frequency disappears, which becomes increasingly likely after successive re-binning
 processes. The frequency 5.464 µHz rises as another significant frequency; however, we believe
 that this new frequency is simply an artifact of the re-binning process. In Q13, we saw SNR
@@ -355,9 +306,6 @@ contrast (Santos et al., 2017). Using the process of re-binning, a starspot sign
 dominated by noise, may have been discovered.
 
 
-
-  11
-
 Acknowledgments
 
 We wish to thank Bloomsburg University of Pennsylvania for its continued support of our
@@ -375,7 +323,7 @@ Universities for Research in Astronomy, Inc., under NASA contract NAS 5–26555.
 References
 
 
- Basri, G., Walkowicz, L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D.,
+Basri, G., Walkowicz, L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D.,
 Caldwell, D., Dupree, A. K., Latham, D. W., Meibom, S., Howell, S., & Brown, T. (2010).
 PHOTOMETRIC VARIABILITY IN KEPLER TARGET stars: THE SUN AMONG
 stars—a FIRST LOOK. The Astrophysical Journal, 713(2), L155-L159.
@@ -416,10 +364,6 @@ Astrophysical Journal, 736(2), L39. https://doi.org/10.1088/2041-8205/736/2/L39
 Santos, A. R. G., Cunha, M. S., Avelino, P. P., García, R. A., & Mathur, S. (2017). Starspot
 signature on the light curve. Astronomy & Astrophysics, 599, A1.
 https://doi.org/10.1051/0004-6361/201629923
-
-
-
-  12
 
 Winget, D.e., & Kepler, S.o. (2008). Pulsating white dwarf stars and precision asteroseismology.
 Annual Review of Astronomy and Astrophyics, 46(1), 157-199.
