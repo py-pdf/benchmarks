@@ -1,6 +1,8 @@
 Draft version January 4, 2022
 Typeset using LATEX twocolumn style in AASTeX631
 
+arXiv:2201.00022v1 [astro-ph.GA] 31 Dec 2021
+
 The Formation of Intermediate Mass Black Holes in Galactic Nuclei
 
 Sanaea C. Rose,1, 2 Smadar Naoz,1, 2 Re’em Sari,3 and Itai Linial3
@@ -75,18 +77,12 @@ Gürkan & Rasio 2005; Gualandris & Merritt 2009; Chen
 Collaboration et al. 2020).
 
 Several IMBH formation channels have been suggested
-
 in the literature. For example, IMBHs may have a cos-
-
 mological origin, forming in the early universe either
-
 as a result of the very first stars (e.g., Madau & Rees
-
 2001; Schneider et al. 2002; Johnson & Bromm 2007;
-
 Valiante et al. 2016) or from direct collapse of accumu-
 lated gas (e.g., Begelman et al. 2006; Yue et al. 2014;
-
 Ferrara et al. 2014; Choi et al. 2015; Shlosman et al.
 2016). These high redshift IMBHs would need to sur-
 vive galaxy evolution and mergers to present day (e.g.,
@@ -96,43 +92,24 @@ et al. 2009; Chen & Liu 2013; Bringmann et al. 2012; Eda
 et al. 2013; Naoz & Silk 2014; Naoz et al. 2019). Another
 popular formation channel relies on the coalescence of
 many stellar-mass black holes. For example, IMBHs
-
 may form in the centers of globular clusters, where few-
-
 body interactions lead to the merger of stellar-mass BHs
-
 (e.g., O’Leary et al. 2006; Gürkan et al. 2006; Blecha
-
 et al. 2006; Freitag et al. 2006; Umbreit et al. 2012; Ro-
-
-arXiv:2201.00022v1 [astro-ph.GA] 31 Dec 2021
-
-mailto: srose@astro.ucla.edu
-
-
-2 Rose et al.
-
 driguez et al. 2018; Rodriguez et al. 2019; Fragione et al.
-
 2020b). Other formation mechanisms invoke successive
-
 collisions and mergers of massive stars (e.g., Portegies
-
 Zwart & McMillan 2002; Portegies Zwart et al. 2004;
-
 Freitag et al. 2006; Kremer et al. 2020; González et al.
-
 2021; Di Carlo et al. 2021).
 
 The main obstacle to sequential BH mergers in clus-
 ters is that the merger recoil velocity kick often exceeds
 the escape velocity from the cluster (e.g., Schnittman
 & Buonanno 2007; Centrella et al. 2010; O’Leary et al.
-
 2006; Baibhav et al. 2020, Rom & Sari, in prep.). How-
 ever, nuclear star clusters at the centers of galaxies do
 not encounter this problem. For example, Fragione et al.
-
 (2021) explore repeated BH-BH mergers in nuclear star
 clusters without a SMBH. They considered BH binary-
 single interactions, binary BH GW merger, and GW
@@ -144,11 +121,8 @@ time of a cluster.
 
 However, as discussed in Section 2.2, direct star-BH
 collisions are much more frequent than BH-BH collision
-
 in galactic nuclei, making the former a promising chan-
-
 nel for BH growth. We propose that IMBHs can form
-
 naturally within the central pc of a SMBH in a galactic
 center. Specifically, these IMBHs form through repeated
 collisions with main sequence stars, accreting some or
@@ -161,7 +135,6 @@ The paper is structured as follows: we describe rele-
 vant physical processes and our approach in Section 2.
 
 In particular, we provide an overview of collisions in
-
 Section 2.2 and present our statistical approach in Sec-
 tion 2.3. Section 2.4 discusses our treatment of the
 mass growth with each collision and presents analytic
@@ -368,7 +341,6 @@ guard in our code which takes the ratio tcoll/∆t and rounds it
 to the nearest integer. We take this integer to be the number of
 collisions and increase the BH mass accordingly.
 
-4 Rose et al.
 
 2.4. Mass Growth
 
@@ -640,12 +612,10 @@ Additionally, because they are more massive on
 average than the surrounding objects, BHs are ex-
 pected to segregate inwards in the GN (e.g., Shapiro
 & Marchant 1978; Cohn & Kulsrud 1978; Morris 1993;
-
 Miralda-Escudé & Gould 2000; Baumgardt et al. 2004).
 
 
 
-6 Rose et al.
 
 Figure 3. On the right, we plot final masses of 500 BHs using different values of α in the density profile, shallow (α = 1) to
 cuspy (α = 2). For the latter case, the purple line shows the analytical result from Eq. 8, taking minitial to be the average mass
@@ -811,86 +781,46 @@ dence on distance from the SMBH (see Figure 4).
 
 Mass growth through BH-main-sequence star colli-
 sions may act in concert with other IMBH formation
-
 channels, such as compact object binary mergers (e.g.,
 Hoang et al. 2018; Stephan et al. 2019; Fragione et al.
-
 2021; Wang et al. 2021). While in some cases colli-
-
 sions can unbind a binary (e.g., Sigurdsson & Phinney
-
 1993; Fregeau et al. 2004), BH binaries can be tightly
-
 bound enough to withstand the collisions. Wide bina-
-
 ries may also become unbound due to interactions with
-
 the neighboring stars and compact objects (e.g., Binney
-
 & Tremaine 1987; Rose et al. 2020, see latter study for
-
 the timescale for an arbitrary eccentricity). However,
-
 as highlighted in previous studies, a substantial frac-
-
 tion of these binaries may merge due to the Eccentric
-
 Kozai Lidov mechanism, leaving behind a single star or
-
 a single compact object (e.g., Stephan et al. 2016, 2019;
-
 Hoang et al. 2018). Additionally, to be susceptible to
-
 evaporation, BH binaries must have a wider configura-
-
 tion. Otherwise, they will be more tightly bound that
-
-
-
-8 Rose et al.
-
 the average kinetic energy of the surrounding objects,
-
 and will only harden through weak gravitational inter-
-
 actions with neighboring stars (see for example Figure
-
 6 in Rose et al. 2020).
 
 Not included in this study, collisions between the BH
-
 and other compact objects will increase the BH growth
-
 rate. BH-BH mergers (e.g., O’Leary et al. 2009; Fra-
-
 gione et al. 2021) and even neutron star BH mergers
-
 (e.g., Hoang et al. 2020) become more likely as the BHs
-
 increase in mass through stellar collisions. As a result,
-
 the BH-BH collision timescale, discussed in Section 2.2,
-
 will become relevant to our simulations, allowing the
-
 BHs to grow through this channel in addition to stel-
-
 lar collisions. Additionally, this compact object mergers
-
 result in GW recoil, which may have a large impact on
-
 the dynamics (e.g., Baibhav et al. 2020; Fragione et al.
-
 2021)
 
 The BH’s mass growth increases GW emission, which
-
 dissipates energy from the orbit. Along with relaxation
-
 processes, GW emission causes BHs to sink towards the
-
 SMBH and eventually undergo a merger. As a result,
-
 the GN environment is conducive to the formation of
 EMRIs and IMRIs. The GW emission from EMRIs and
 IMRIs is expected to be at mHz frequencies, making
@@ -906,15 +836,11 @@ tent with recent observational and theoretical studies
 (e.g., Hansen & Milosavljević 2003; Maillard et al. 2004;
 Gürkan & Rasio 2005; Gualandris & Merritt 2009; Chen
 & Liu 2013; Generozov & Madigan 2020; Fragione et al.
-
 2020a; Zheng et al. 2020; Naoz et al. 2020; GRAVITY
-
 Collaboration et al. 2020).
 
 Lastly, the collisions between stellar mass BHs and
-
 stars may contribute to the x-ray emission from our
-
 galactic centre (e.g., Muno et al. 2005, 2009; Hailey et al.
 
 2018; Zhu et al. 2018; Cheng et al. 2018)5. These inter-
@@ -926,9 +852,7 @@ in addition to GW mergers.
 
 SR thanks the Charles E Young fellowship, the Nina
 Byers Fellowship, and the Michael A. Jura Memorial
-
 Graduate Award for support. SR and SN acknowledge
-
 the partial support from NASA ATP 80NSSC20K0505.
 
 SN thanks Howard and Astrid Preston for their gener-

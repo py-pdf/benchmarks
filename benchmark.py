@@ -135,9 +135,8 @@ def pymupdf_get_text(data: bytes) -> str:
 def pypdf2_get_text(data: bytes) -> str:
     text = ""
     reader = PyPDF2.PdfFileReader(BytesIO(data))
-    for i in range(reader.getNumPages()):
-        page = reader.pages[i]
-        text += page.extractText()
+    for page in reader.pages:
+        text += page.extract_text()
     return text
 
 
@@ -463,7 +462,7 @@ if __name__ == "__main__":
             version=PyPDF2.__version__,
             watermarking_function=pypdf2_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2022-06-01",
+            last_release_date="2022-06-06",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -472,7 +471,7 @@ if __name__ == "__main__":
             lambda n: extract_text(BytesIO(n)),
             version=pdfminer.__version__,
             license="MIT/X",
-            last_release_date="2022-05-06",
+            last_release_date="2022-05-24",
         ),
         "pdfplumber": Library(
             "pdfplumber",
@@ -481,7 +480,7 @@ if __name__ == "__main__":
             pdfplubmer_get_text,
             version=pdfplumber.__version__,
             license="MIT",
-            last_release_date="2022-05-06",
+            last_release_date="2022-05-31",
         ),
         "pymupdf": Library(
             "PyMuPDF",
@@ -510,10 +509,10 @@ if __name__ == "__main__":
             "borb",
             "https://pypi.org/project/borb/",
             borb_get_text,
-            "2.0.25",
+            "2.0.27",
             None,
             license="AGPL/Commercial",
-            last_release_date="2022-05-05",
+            last_release_date="2022-06-04",
         ),
         "pdfium": Library(
             "pypdfium2",
