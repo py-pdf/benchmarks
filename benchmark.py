@@ -142,15 +142,14 @@ def pypdf2_get_text(data: bytes) -> str:
 
 def pdfium_get_text(data: bytes) -> str:
     text = ""
-    doc = pdfium.PdfDocument(BytesIO(data))
-    for page_num in range(len(doc)):
-        textpage = doc.get_textpage(page_num)
-        try:
-            text += textpage.get_text()
-        except Exception:
-            pass
+    pdf = pdfium.PdfDocument(data)
+    for i in range(len(pdf)):
+        page = pdf.get_page(i)
+        textpage = page.get_textpage()
+        text += textpage.get_text()
         text += "\n"
-    doc.close()
+        [g.close() for g in (textpage, page)]
+    pdf.close()
     return text
 
 
@@ -519,10 +518,10 @@ if __name__ == "__main__":
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
             pdfium_get_text,
-            "1.11.0",
+            "2.0.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-06-01",
+            last_release_date="2022-06-??",
             dependencies="PDFium (Foxit/Google)",
         ),
     }
