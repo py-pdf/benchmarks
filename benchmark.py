@@ -521,7 +521,7 @@ if __name__ == "__main__":
             "2.0.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-06-??",
+            last_release_date="2022-06-09",
             dependencies="PDFium (Foxit/Google)",
         ),
     }
