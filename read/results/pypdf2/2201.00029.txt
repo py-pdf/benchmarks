@@ -7,7 +7,8 @@
  
 Exploring new techniques for analyzing variability in white dwarf KIC 8626021  
 Thomas Huckans, Peter Stine 
-Department of Physics and Engineering, Bloomsburg University  of Pennsylvania, 400 E 2nd St., 
+Department of Physics and Engineering, Bloomsburg University  of Pennsylvania, 400 E 2nd
+ St., 
 Bloomsburg, PA 17815  
     2 
 Abstract 
@@ -27,7 +28,8 @@ First detected in 1862, white dwarfs long posed a mystery for early observers. W
 companion to Sirius was detected, apparent contradictions concerning the mass, luminosities, and 
 densities  baffled  astronomers.  Lacking  full  understanding  of  atomic  structures  and  the  energy 
 states of electrons, these early researchers believ ed white dwarfs to o dense to exist. However, new 
-discoveries at the turn of the 20th century explained the existence of these stars, and between the 
+discoveries at the turn of the 20th
+ century explained the existence of these stars, and between the 
 world wars white dwarfs were increasingly studied and modeled  (Holberg, 2009). 
 As stars age, those that lack the mass to become neutron stars and black holes become 
 white dwarf stars, representing 98% of the stars in our galaxy  (Winget & Kepler, 2008 ).  They are 
@@ -44,7 +46,8 @@ was initially developed with the intention of surveying our region of the Milky 
 order to find potentially habitable planets. The purpose of the mission was to identify key traits for 
 such planets by determining the number of planets in habitable  zones, the s izes and shapes of orbits, 
 and the characteristics of the stars being orbited. Over the lifespan of its first mission, Kepler 
-observed  approximately 1.5  x  105 stars (Johnson,  2018), affording  scientists  excellent 
+observed  approximately 1.5  x  105
+ stars (Johnson,  2018), affording  scientists  excellent 
 opportunities to research stellar variability. Due to the loss of a second reaction wheel in 2013, 
 NASA  developed  the  K2  mission,  a  way  to prolong Kepler’s  assistance  to  astronomy  and 
 astrophysics. 
@@ -60,7 +63,8 @@ The DBV white dwarf KIC 8626021 has an atmosphere rich in helium. Building upon
 previous studies, this research investigated  novel techniques of analyzing variability in white 
 dwarfs. The dwarf KIC 8626021 was chosen due to the large amount of preexisting research on 
 the star, allowing for the validation of results using our methods. KIC 8626021 has an effective 
-temperature of 29,700 K, log g = 7.890, and mass of 0.56 M☉ (Córsico, 2020). Other research 
+temperature of 29,700 K, log g = 7.890, and mass of 0.56 M
+☉ (Córsico, 2020). Other research 
 has found that this white dwarf is  the DBV with the highest known temperature, and its  helium 
 layer is the thinnest (Bischoff-Kim et al., 2015). Despite the long-cadence light curve being too 
 noisy to draw many conclusions , other FTs of short-cadence data have been performed to find 
@@ -103,7 +107,8 @@ and Q13.
  
     4 
  
- FIG. 1: Pictured top is the light curve constructed for  Q7, below is the light curve for  Q13. Q7 
+ 
+FIG. 1: Pictured top is the light curve constructed for  Q7, below is the light curve for  Q13. Q7 
 lasted from September 24 – December 13, 2010, and Q13 was from March 29 – June 23, 2012. 
 Both graphs were constructed by  plotting corrected flux magnitude (flux corrected for 
 instrumental artifacts) versus time in Excel, and gaps in the data were filled in by interpolating 
@@ -177,7 +182,7 @@ Q7 First
 Iteration 5.886 -1.198 1.966  9.9 
 Q7 Re-bin 1 5.886  -1.477 1.966  12.8 
 Q7 Re-bin 2 5.889 0.597 1.965  19.2 
-TABLE I : The table displays the various  frequencies collected from Q7 and the information 
+TABLE I: The table displays the various  frequencies collected from Q7 and the information 
 found through calculations to find period and SNR.  The frequency of 5.464 µHz is not included, 
 and therefore was not used in any calculations deter mining the average period of rotation.  The 
 values under corrected flux magnitude are relative to our significant frequency cutoff of  3𝝈, thus 
@@ -200,7 +205,7 @@ Q13 Re-bin 2 5.787 4.938 2.000 22.6
 Q13 Re-bin 3 5.787 6.909 2.000 26.3  
 Q13 Re-bin 3 11.641 7.073 0.994 26.4 
 Q13 Re-bin 3 16.823 2.299 0.688 24.1 
-TABLE II : The table displays the various frequencies collected from  Q13 and the information 
+TABLE II: The table displays the various frequencies collected from  Q13 and the information 
 found through calculations to find period and SNR.  The last two significant frequencies (11.641 
 µHz and 16.823 µHz) for Q13 Re-bin 3 represent potential harmonics, which are discussed in 
 further detail in the Conclusions section of this paper. The values under corrected flux magnitude 
@@ -317,7 +322,7 @@ Universities for Research in Astronomy, Inc., under NASA contract NAS 5 –26555
  
 References 
  
- Basri, G., Walkowicz,  L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D., 
+ Basri, G., Walkowicz, L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D., 
 Caldwell, D., Dupree, A. K., Latham, D. W., Meibom, S., Howell, S., & Brown, T. (2010) . 
 PHOTOMETRIC  VARIABILITY  IN  KEPLER  TARGET  stars:  THE  SUN  AMONG 
 stars—a  FIRST  LOOK.  The  Astrophysical  Journal,  713(2),  L155-L159. 
