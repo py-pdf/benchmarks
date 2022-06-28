@@ -128,7 +128,7 @@ def pymupdf_get_text(data: bytes) -> str:
     with PyMuPDF.open(stream=data, filetype="pdf") as doc:
         text = ""
         for page in doc:
-            text += page.get_text()
+            text += page.get_text() + "\n"
     return text
 
 
@@ -136,7 +136,7 @@ def pypdf2_get_text(data: bytes) -> str:
     text = ""
     reader = PyPDF2.PdfFileReader(BytesIO(data))
     for page in reader.pages:
-        text += page.extract_text()
+        text += page.extract_text() + "\n"
     return text
 
 
