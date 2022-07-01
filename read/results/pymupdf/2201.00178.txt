@@ -48,6 +48,7 @@ validated by Hanson et al. (2021) (hereafter H21) by examining the power-spectru
 comparing with previous time-distance studies (Langfellner et al. 2018).
 prasad.subramanian@tifr.res.in
 arXiv:2201.00178v1  [astro-ph.SR]  1 Jan 2022
+
 2
 Mani et al.
 Normal-mode coupling refers to the concept of expressing solar-oscillation eigenfunctions as a linear weighted combi-
@@ -111,6 +112,7 @@ exploited to expedite inversions. Note that Pqj = P ∗
 −qj for the ﬂow ﬁeld to be real in the spatio-
 temporal domain.
 To infer ﬂows from waveﬁelds φ scattered by a perturbation of length scale q, cross-correlate them in the manner
+
 Imaging near-surface flows using mode-coupling analysis
 3
 φω∗
@@ -201,6 +203,7 @@ random process and the waveﬁelds are uncorrelated across wavenumber and freque
 Every independent realization of a mode can be understood as the output of a damped harmonic oscillator driven by a
 random forcing function (see Duvall & Harvey 1986). Modes are thus generated with random phases and amplitudes
 and with ﬁnite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
+
 4
 Mani et al.
 Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p1 (orange) and p2 (green). The shaded
@@ -243,6 +246,7 @@ aﬀecting the quality of the seismic measurements. Owing to these factors, to m
 inspecting the power-spectrum), the parameters describing the extent of coupling over diﬀerent ranges of kR⊙ at ﬁxed
 radial order are diﬀerent. In wavenumber, we restrict our analysis to within 200 ≤ kR⊙ ≤ 2000 and qR⊙ ≤ 300. Our
 frequency range is conﬁned to span the range over which acoustic modes are observed (2 ≤ ω/2π ≤ 5 in mHz).
+
 Imaging near-surface flows using mode-coupling analysis
 5
 Coupling
@@ -313,6 +317,7 @@ M × M) and pre-multiplying by K⊺,
 (11)
 U =(K⊺Λ−1K)−1K⊺Λ−1B.
 (12)
+
 6
 Mani et al.
 Figure 2. Left: Averaging kernel for poloidal ﬂow (see section B.2, eq B17, and left panel of Figure 8) for qR⊙ = [−112, −45],
@@ -358,6 +363,7 @@ min), the velocities are given by vx = ∆x/∆t and vy = ∆y/∆t. This exerci
 images I1, I2 and for each consecutive pair of images in the cube.
 In practice, we use the Fourier LCT algorithm (FLCT, Fisher & Welsch 2008) for computing vx and vy. FLCT
 requires the input sigma, which we set to 4 pix, that captures the extent of localization desired, and depends on the
+
 Imaging near-surface flows using mode-coupling analysis
 7
 Figure 3. Top: Inverted poloidal ﬂow power-spectrum for the three couplings f-f, p1-p1, and p2-p2 as a function of qxR⊙ and
@@ -393,6 +399,7 @@ We seek to show comparisons (see Figures 5, 6, and 7) for qR⊙ = 100, 150, 200 
 ﬂows at these length scales, we apply a Gaussian ﬁlter (see Figure 4) to ﬂows obtained from eqns 16 and 17. The
 Gaussian is centered at the desired wavenumber with a half-width of 25. We then perform a 2D Fourier transform to
 obtain a real-space steady-ﬂow map.
+
 8
 Mani et al.
 Figure 4. Left: Divergence-ﬂow power spectrum |div|2, from eqn 16, obtained from inversion using all the couplings. The
@@ -458,6 +465,7 @@ inferred ﬂow moves further away from that of supergranules (Figure 7), the dem
 An adequate number of modes (and coupling strength between higher radial-orders) thus becomes a necessity to
 comment substantively on the ﬂows at these scales.
 6.1. Amplitudes of mode-coupling ﬂows
+
 Imaging near-surface flows using mode-coupling analysis
 9
 (a) qR⊙ = 100, f-f + p1-p1 + p2-p2
@@ -483,6 +491,7 @@ Thus, the amplitudes of the mode-coupling ﬂows (and the correlation coeﬃcien
 Here, we report in Table 2 only the maximum correlation found from among the points in the radial grid close
 to the surface (within ±0.5 Mm from z=0). For a desired comparison length scale qR⊙, we ﬁrst ﬁx the coupling(s)
 and the regularization parameter to be used in the inversion. We then separately compute ﬁltered divergence and
+
 10
 Mani et al.
 (a) qR⊙ = 100, f-f
@@ -505,6 +514,7 @@ and LCT agree closely in amplitudes. But, to recapitulate, a host of factors des
 for divergence ﬂows owing to the multi-step process involved in obtaining them. For example, there has been a history
 (see, e.g., De Rosa et al. 2000; Sekii et al. 2007; Zhao et al. 2007; Langfellner et al. 2018; B¨oning et al. 2020; Korda
 & ˇSvanda 2021) of using travel-time diﬀerence as only a proxy for horizontal divergence. However, Langfellner et al.
+
 Imaging near-surface flows using mode-coupling analysis
 11
 Coupling
@@ -613,6 +623,7 @@ jq ∂z
 �
 .
 (A3)
+
 12
 Mani et al.
 Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
@@ -752,6 +763,7 @@ the real domain. Setting σ = 0 gives us the linear, invertible equation eq 6. S
 the noise model obtained in H21 and summing over ±ω establishes the symmetry Gσ
 k,q = G−σ
 −k,−q.
+
 Imaging near-surface flows using mode-coupling analysis
 13
 B. SOLA INVERSIONS
@@ -819,6 +831,7 @@ k
 (B17)
 As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
 and B14.
+
 14
 Mani et al.
 Figure 8. Left: Kernel Kk,q(z) (eq B14) shown vs depth z for the three radial order couplings f-f, p1-p1, and p2-p2. qR⊙ =
@@ -885,6 +898,7 @@ Christensen-Dalsgaard, J. 2002, Reviews of Modern
 Physics, 74, 1073, doi: 10.1103/RevModPhys.74.1073
 —. 2021, Living Reviews in Solar Physics, 18, 2,
 doi: 10.1007/s41116-020-00028-3
+
 Imaging near-surface flows using mode-coupling analysis
 15
 Figure 9. Left: Poloidal ﬂow power-spectrum for f-f as a function of qxR⊙ and qyR⊙. Right: Corresponding power-spectrum
@@ -934,6 +948,7 @@ Hanson, C. S., Hanasoge, S., & Sreenivasan, K. R. 2021,
 ApJ, 910, 156, doi: 10.3847/1538-4357/abe770
 Hathaway, D. H., Teil, T., Norton, A. A., & Kitiashvili, I.
 2015, ApJ, 811, 105, doi: 10.1088/0004-637X/811/2/105
+
 16
 Mani et al.
 Hathaway, D. H., Upton, L., & Colegrove, O. 2013, Science,
@@ -1009,3 +1024,4 @@ ApJ, 659, 848, doi: 10.1086/512009
 Zhao, J., Nagashima, K., Bogart, R. S., Kosovichev, A. G.,
 & Duvall, T. L., J. 2012, ApJL, 749, L5,
 doi: 10.1088/2041-8205/749/1/L5
+

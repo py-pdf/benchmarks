@@ -115,6 +115,7 @@ optimization technique called gradient descent. The gradient
 descent algorithm takes a function which has to be derivable,
 starts at any point of the surface of this error function and
 arXiv:1601.03642v1  [cs.CV]  12 Jan 2016
+
 2
 makes a step in the direction which goes downwards. Hence
 it tries to ﬁnd a minimum of this high-dimensional function.
@@ -186,6 +187,7 @@ choice of features it is possible to separate the general style of
 an image in terms of local image appearance from the content
 of an image. They support their claim by applying the style of
 different artists to an arbitrary image of their choice.
+
 3
 (a) Original Image
 (b) Style image
@@ -266,6 +268,7 @@ With that training data, the models can generate similar texts.
 New works which look like Shakespeare plays, new Wikipedia
 articles, new Linux code and new papers about algebraic
 geometry can thus automatically be generated. At a ﬁrst
+
 4
 glance, they do look authentic. The syntax was mostly used
 correctly, the formatting looks as expected, the sentences are
@@ -365,6 +368,7 @@ can be found at [Vit15].
 C. Audio Synthesization
 Audio synthesization is generating new audio ﬁles. This can
 either be music or speech. With the techniques described before,
+
 5
 neural networks can be trained to generate music note by note.
 However, it is desirable to allow multiple notes being played
@@ -547,6 +551,7 @@ W.H.Freeman & Co Ltd, 1976.
 M. D. Zeiler and R. Fergus, “Visualizing and understanding con-
 volutional networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.
+
 6
 APPENDIX A
 AUTOMATICALLY GENERATED TEXTS
@@ -592,6 +597,7 @@ was swear to advance to the resources for those Socialism’s rule,
 was starting to signing a major tripad of aid exile.]]
 C. Linux Code, 1
 /*
+
 7
 * Increment the size file of the new incorrect UI_FILTER group information
 * of the size generatively.
@@ -657,6 +663,7 @@ Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <linux/io.h>
 #include <linux/platform_device.h>
 #include <linux/multi.h>
+
 8
 #include <linux/ckevent.h>
 #include <asm/io.h>
@@ -689,3 +696,4 @@ PUT_PARAM_RAID(2, sel) = get_state_state();
 set_pid_sum((unsigned long)state, current_state_str(),
 (unsigned long)-1->lr_full; low;
 }
+

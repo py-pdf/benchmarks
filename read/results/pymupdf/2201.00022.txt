@@ -81,6 +81,7 @@ body interactions lead to the merger of stellar-mass BHs
 (e.g., O’Leary et al. 2006; G¨urkan et al. 2006; Blecha
 et al. 2006; Freitag et al. 2006; Umbreit et al. 2012; Ro-
 arXiv:2201.00022v1  [astro-ph.GA]  31 Dec 2021
+
 2
 Rose et al.
 driguez et al. 2018; Rodriguez et al. 2019; Fragione et al.
@@ -194,6 +195,7 @@ the eccentricity of the BH’s orbit about the SMBH on
 the collision rate, while n and σ are simply evaluated
 at the semimajor axis of the orbit (see below).
 Note
+
 IMBH Formation in Galactic Nuclei
 3
 Figure 1. We plot the relevant timescales, including col-
@@ -288,6 +290,7 @@ a factor of a few for steep density proﬁles. We include a safe-
 guard in our code which takes the ratio tcoll/∆t and rounds it
 to the nearest integer. We take this integer to be the number of
 collisions and increase the BH mass accordingly.
+
 4
 Rose et al.
 2.4. Mass Growth
@@ -393,6 +396,7 @@ star’s mass.
 Eq. 7 does not apply for other values of α. When the
 collision timescale is shorter, corresponding to a larger
 index α in the density proﬁle (see Figure 1), the growth
+
 IMBH Formation in Galactic Nuclei
 5
 is very eﬃcient and ∆m quickly approaches 1 M⊙. Con-
@@ -511,6 +515,7 @@ average than the surrounding objects, BHs are ex-
 pected to segregate inwards in the GN (e.g., Shapiro
 & Marchant 1978; Cohn & Kulsrud 1978; Morris 1993;
 Miralda-Escud´e & Gould 2000; Baumgardt et al. 2004).
+
 6
 Rose et al.
 Figure 3. On the right, we plot ﬁnal masses of 500 BHs using diﬀerent values of α in the density proﬁle, shallow (α = 1) to
@@ -587,6 +592,7 @@ cesses allow BHs that begin further from the SMBH
 to migrate inwards and grow more eﬃciently in mass.
 However, it also impedes the growth of BHs that are
 initially closer to the SMBH by allowing them to dif-
+
 IMBH Formation in Galactic Nuclei
 7
 Figure 4. Similar to Figure 3, we plot the initial masses versus initial distance (grey) and ﬁnal mass versus ﬁnal distance (red)
@@ -668,6 +674,7 @@ a single compact object (e.g., Stephan et al. 2016, 2019;
 Hoang et al. 2018). Additionally, to be susceptible to
 evaporation, BH binaries must have a wider conﬁgura-
 tion. Otherwise, they will be more tightly bound that
+
 8
 Rose et al.
 the average kinetic energy of the surrounding objects,
@@ -765,6 +772,7 @@ Blecha, L., Ivanova, N., Kalogera, V., et al. 2006, ApJ, 642,
 427, doi: 10.1086/500727
 Bondi, H. 1952, MNRAS, 112, 195,
 doi: 10.1093/mnras/112.2.195
+
 IMBH Formation in Galactic Nuclei
 9
 Bondi, H., & Hoyle, F. 1944, MNRAS, 104, 273,
@@ -867,6 +875,7 @@ doi: 10.3847/1538-4365/aacb24
 —. 2018b, ApJS, 237, 13, doi: 10.3847/1538-4365/aacb24
 Lu, C. X., & Naoz, S. 2019, MNRAS, 484, 1506,
 doi: 10.1093/mnras/stz036
+
 10
 Rose et al.
 Lu, J. R., Ghez, A. M., Hornstein, S. D., et al. 2009, ApJ,
@@ -967,6 +976,7 @@ Society, 457, 3356, doi: 10.1093/mnras/stw225
 Vink, J. S., Higgins, E. R., Sander, A. A. C., & Sabhahit,
 G. N. 2021, MNRAS, 504, 146,
 doi: 10.1093/mnras/stab842
+
 IMBH Formation in Galactic Nuclei
 11
 Wang, H., Stephan, A. P., Naoz, S., Hoang, B.-M., &
@@ -981,3 +991,4 @@ Zheng, X., Lin, D. N. C., & Mao, S. 2020, arXiv e-prints,
 arXiv:2011.04653. https://arxiv.org/abs/2011.04653
 Zhu, Z., Li, Z., & Morris, M. R. 2018, ApJS, 235, 26,
 doi: 10.3847/1538-4365/aab14f
+

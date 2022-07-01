@@ -41,6 +41,7 @@ Detections of coronal waves have a historical preview and have been reported for
 Berghmans & Clette (1999); De Moortel et al. (2000), Verwichte et al. (2004), De Moortel & Brady
 (2007), Ballai et al. (2011)). Coronal seismology and MHD waves have been reviewed widely by
 1
+
 De Moortel (2005), Nakariakov & Verwichte (2005), Aschwanden (2006), Banerjee et al. (2007) and
 De Moortel & Nakariakov (2012). Along with the development of the observations, transverse
 and longitudinal oscillations have also been studied theoretically (e.g., Gruszecki et al. (2006),
@@ -89,6 +90,7 @@ ter that, Aschwanden & Boerner (2011) criticized the method of background subtra
 Schmelz et al. had applied. They claimed that the background subtraction method caused their
 inferred result of a multithermal loop. Aschwanden & Boerner (2011) analyzed a set of hundred
 loops and understood that 66% of the loops could be ﬁtted with a narrowband single-Gaussian
+
 DEM model. In this regard, some attention was paid to the instrumental limitations and abil-
 ity of AIA and Guennou et al. (2012a,b) discussed on the accuracy of the differential emission
 measure diagnostics of solar plasmas in respect of the AIA instrument of SDO. The abovemen-
@@ -135,6 +137,7 @@ Finally, these loops are chosen:
 happening around the loops with the speciﬁcation we are looking for. So this selected LOS
 X-ﬂare, which occurs near the loops is of rare cases. We consider EUV images of NOAA
 AR 11283, in the time period of 22:10UT till 23:00UT of 2011 September 6 with the cadence
+
 of 12 sec. This period of time is selected since no other ﬂare is happening during it. A
 few distinct loops are visible and follow-able here during this period. Loop shapes in our
 active region change permanently; therefore, it is difﬁcult or impossible to follow a loop
@@ -187,6 +190,7 @@ empty area around each loop and the distance to the neighbor loop).
 The area around the
 loop is needed for calculations of background subtraction. The selected loop segment is cut in
 1Based on data on these WebSites: https://solarﬂare.njit.edu/webapp.html, and https://www.swpc.noaa.gov/
+
 all wavelengths and at the same considered box from the images set. These loop images are
 necessary entrances for our thermal analysis process. Then the loop is divided into different
 strips and its best division in terms of pixel intervals is considered. To do thermal analysis, we
@@ -243,6 +247,7 @@ the periods, we computed the probability values (p-values). In the Lomb-Scargle 
 signiﬁcance returned here is the false alarm probability of the null hypothesis, i.e., as the data
 is composed of independent Gaussian random variables. Accordingly, low probability values
 (p-value less than 0.05) indicate a high degree of signiﬁcance in the associated periodic signal.
+
 IV.
 Results
 i.
@@ -291,6 +296,7 @@ of (Max(log T)-Min(log T)) is 0.81 through this loop segment. The loops C1 and C
 12, and 6 strips, have the lengths of 22.08 and 11.06 (Mm), the mean temperatures of 6.25 ± 0.22,
 and 6.14 ± 0.25 (log), and the mean (Max(log T)-Min(log T)) of 1.48, 0.88, respectively.
 We observe that despite the temperature oscillations, the ﬂaring loops show a temperature
+
 rise at the end of the considered time interval (ﬁgure3). As their temperature maps also show,
 the oscillations follow with a relatively sensible rise in the ﬁnal temperature of the loop segments
 (Figures 4). Although in the case of the transverse oscillations, the loops oscillate as the ﬂare
@@ -341,6 +347,7 @@ this ﬂare is associated with could cause this increase in temperature. We can 
 source of this CME is AR 11283 (Romano et al. (2015)). This CME is in our ﬂare region, hence
 the loops receive energy even after the ﬂare occurrence and it is probably the reason why the
 expected cooling does not occur.
+
 The thermal oscillations periods obtained the Lomb-Scargle method, do not have the same
 signiﬁcance in all strips of the loops, but for most strips of the ﬂaring loops, the signiﬁcances are
 very near to one. To be assured about these oscillations, we probed the intensity time-series for
@@ -388,6 +395,7 @@ much increase in the temperatures of the strips, which was obvious in the loops 
 region toward the end times, is not observed here. The temperatures are also totally lower in the
 nonf-loops in comparison with the ﬂaring loops. Conversely, it seems that different strips of the
 non-ﬂaring loops have relatively more similar temperature ﬂuctuations.
+
 As ﬁgure 8 shows, the peaks of the observed temperature periods for the loops’ strips of the
 ﬂaring active region (blue ones), and non-ﬂaring active region (red ones), are around 18 minutes,
 and 30 minutes, respectively. The temperature periods’ diversity is higher in the loops’ strips of
@@ -436,6 +444,7 @@ the F-loopA, which has a distinct transverse oscillation in the ﬂaring time wi
 roughly 10 to 28.5 minutes in different segments of this loop. And as the transverse oscillation
 decays in this interval, no special deﬁnite decay is observed in its temperature oscillations.
 The temperature periods of the ﬂaring loops are rather shorter than the temperature periods
+
 of the non-ﬂaring loops. The loops of the ﬂaring region show some short temperature oscillations
 periods in which some are less than 10 minutes (Table1). These kind of short periods are more
 frequently observed for the loops of the ﬂaring active region and in the case of the non-ﬂaring
@@ -482,6 +491,7 @@ oscillatory manner. Compared with these non-ﬂaring loops, the ﬂaring loops s
 peratures on average and higher oscillation periods with higher peaks and deeper valleys. More
 accurate commentary in this respect requires more extensive statistical research and broader ob-
 servations.
+
 arcsec
 arcsec
 79
@@ -550,6 +560,7 @@ nonf−LoopC
 b
 Figure 2: (a) The NOAA AR12194 on 2014 October 26, at 08:00:00UT in 171 recorded by AIA/SDO. (b) Zoom-in
 view of the area, marked by a box in the left, the loops are distinguished in red.
+
 5.8
 6
 6.2
@@ -610,6 +621,7 @@ LogT
 Figure 3: From up to down: The time-series of the temperature oscillations for the ﬁrst 3 strips of Loop A (strip 1 to
 3 from top to down), and the ﬁrst 2 strips of LoopB1. Horizontal axis is the time and the vertical axis is the
 logarithm of the temperature. The red lines mark the initial and ﬁnal time of the ﬂare x2.1.
+
 22:10
 22:20
 22:30
@@ -729,6 +741,7 @@ Loop Length(Mm)
 Figure 4: Temperature map of the ﬂaring loops A, B1, B2, C1, and C2 (from top to down) as a time series. The vertical
 axis is the distance along the loop in Mm, and the horizontal axis is the time. The colorbar in the left shows
 the colors considered for the temperature range.
+
 Table 1: The properties observed for the loop segments of the ﬂaring AR.
 FLoopA
 (Strip Number)
@@ -939,6 +952,7 @@ FLoopB1
 11
 18.07
 1.6
+
 Table 2: The properties observed for the loop segments of the non ﬂaring AR.
 Nonf-LoopA
 (Strip Number)
@@ -1027,6 +1041,7 @@ Min(log(T))
 5
 30
 0.8
+
 22:10
 22:20
 22:30
@@ -1083,6 +1098,7 @@ acknowledgements
 The author Narges Fathalian wishes to also express her thanks for the technical support and
 comments which has received from Dr.Farhad Daii and Dr.Mohsen Javaherian regarding to this
 work.
+
  
  
  
@@ -1145,6 +1161,7 @@ time
 LogT
 Figure 6: from top to down: The time-series of the temperature for the ﬁrst 2 strips (from top to down) of the non-
 ﬂaring Loops A and B. Horizontal axis is the time and the vertical axis is the logarithm of the temperature.
+
 8:10
 8:20
 8:30
@@ -1214,6 +1231,7 @@ Loop Length(Mm)
 Figure 7: from top to down: Temperature map of the non-ﬂaring loops A, B and C as a time-series. The vertical axis
 is the distance along the loop in Mm, and the horizontal axis is the time. The color-bar in the left shows the
 colors considered for the temperature range.
+
 6
 7
 8
@@ -1279,6 +1297,7 @@ max(log(T))−min(log(T))
 Number
 Figure 9: Hisogram of the parameter of (max(log(T))-min(log(T))) for each strip of the loops of the ﬂaring (blue bars)
 and non-ﬂaring (red bars) ARs.
+
 References
 Abedini, A., Safari, H., & Nasiri, S. 2012, Solar Physics, 280
 Anﬁnogentov, S., Nakariakov, V. M., Mathioudakis, M., Van Doorsselaere, T., & Kowalski, A. F.
@@ -1310,6 +1329,7 @@ Habbal, S. R., & Rosner, R. 1979, ApJ, 234, 1113
 Hindman, B. W., & Jain, R. 2014, ApJ, 784, 103
 Jain, R., Maurya, R. A., & Hindman, B. W. 2015, ApJ, 804, L19
 Jess, D. B., Reznikova, V. E., Ryans, R. S. I., et al. 2016, Nature Physics, 12, 179
+
 Kolotkov, D. Y., Nakariakov, V. M., & Zavershinskii, D. I. 2019, A&A, 628, A133
 Krishna Prasad, S., Jess, D. B., & Van Doorsselaere, T. 2019, Frontiers in Astronomy and Space
 Sciences, 6, 57
@@ -1341,6 +1361,7 @@ Schmelz, J. T., Pathak, S., Jenkins, B. S., & Worley, B. T. 2013, ApJ, 764, 53
 Ugarte-Urra, I., & Warren, H. P. 2014, ApJ, 783, 12
 Van Doorsselaere, T., Kupriyanova, E. G., & Yuan, D. 2016, Solar Physics, 291, 3143
 Van Doorsselaere, T., Wardle, N., Del Zanna, G., et al. 2011, ApJ, 727, L32
+
 VanderPlas, J. T. 2018, ApJ, 236, 16
 Verwichte, E., Nakariakov, V. M., Ofman, L., & Deluca, E. E. 2004, Solar Physics, 223, 77
 Wang, T. 2011, Space Science Reviews, 158, 397–419
@@ -1352,3 +1373,4 @@ Wang, T., Ofman, L., Sun, X., Provornikova, E., & Davila, J. M. 2015, ApJ, 811, 
 Wang, T., Ofman, L., Yuan, D., et al. 2021, Space Science Reviews, 217
 Warren, H. P., Winebarger, A. R., & Brooks, D. H. 2012, ApJ, 759, 141
 Wills-Davey, M. J., & Thompson, B. J. 1999, Solar Physics, 190, 467
+

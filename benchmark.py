@@ -461,7 +461,7 @@ if __name__ == "__main__":
             version=PyPDF2.__version__,
             watermarking_function=pypdf2_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2022-06-14",
+            last_release_date="2022-06-30",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -490,7 +490,7 @@ if __name__ == "__main__":
             watermarking_function=None,
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
-            last_release_date="2022-05-05",
+            last_release_date="2022-06-27",
         ),
         "pdftotext": Library(
             "pdftotext",
