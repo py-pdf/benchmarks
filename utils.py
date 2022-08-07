@@ -1,7 +1,5 @@
 """
-U
-
-Credits to https://stackoverflow.com/a/15445930/562769 who genereated the core
+Credits to https://stackoverflow.com/a/15445930/562769 who generated the core
 of this.
 """
 
@@ -14,9 +12,9 @@ left_rule = {"<": ":", "^": ":", ">": "-"}
 right_rule = {"<": "-", "^": ":", ">": ":"}
 
 
-def evalute_field(record, field_spec):
+def evaluate_field(record, field_spec):
     """
-    Evalute a field of a record using the type of the field_spec as a guide.
+    Evaluate a field of a record using the type of the field_spec as a guide.
     """
     if type(field_spec) is int:
         return str(record[field_spec])
@@ -40,8 +38,8 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
         the record and its return value is taken as the value of the field.
     headings -- List of column headings.
     alignment - List of pairs alignment characters.  The first of the pair
-        specifies the alignment of the header, (Doxygen won't respect this, but
-        it might look good, the second specifies the alignment of the cells in
+        specifies the alignment of the header (Doxygen won't respect this, but
+        it might look good), the second specifies the alignment of the cells in
         the column.
 
         Possible alignment characters are:
@@ -58,10 +56,10 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
     assert len(headings) == num_columns
 
     # Compute the table cell data
-    columns = [[] for i in range(num_columns)]
+    columns = [[] for _ in range(num_columns)]
     for record in records:
         for i, field in enumerate(fields):
-            columns[i].append(evalute_field(record, field))
+            columns[i].append(evaluate_field(record, field))
 
     # Fill out any missing alignment characters.
     extended_align = alignment if alignment is not None else []

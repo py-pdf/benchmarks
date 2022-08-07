@@ -41,7 +41,7 @@ def get_processor_name():
     elif platform.system() == "Darwin":
         os.environ["PATH"] = os.environ["PATH"] + os.pathsep + "/usr/sbin"
         command = "sysctl -n machdep.cpu.brand_string"
-        return subprocess.check_output(command).strip()
+        return subprocess.check_output(command, shell=True).strip().decode("utf-8")
     elif platform.system() == "Linux":
         command = "cat /proc/cpuinfo"
         all_info = subprocess.check_output(command, shell=True).decode().strip()
@@ -105,8 +105,8 @@ class Cache(BaseModel):
     )
     read_quality: Dict[str, Dict[str, float]] = Field(default_factory=dict)
 
-    def has_doc(self, libary: Library, document: Document) -> bool:
-        lib = libary.pathname
+    def has_doc(self, library: Library, document: Document) -> bool:
+        lib = library.pathname
         doc = document.name
 
         if lib not in self.benchmark_times:
@@ -294,7 +294,7 @@ def write_benchmark_report(
     with open("README.md", "w") as f:
         f.write(f"# PDF Text Extraction Benchmark\n")
 
-        f.write("This benachmark is about reading pure PDF files - not")
+        f.write("This benchmark is about reading pure PDF files - not")
         f.write("scanned documents and not documents that applied OCR.\n\n")
 
         f.write(f"## Benchmarking machine\n")

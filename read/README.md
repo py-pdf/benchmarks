@@ -1,5 +1,5 @@
 # PDF Read Benchmark
-This benachmark is about reading pure PDF files - notscanned documents and not documents that applied OCR.
+This benchmark is about reading pure PDF files - not scanned documents and not documents that applied OCR.
 
 ## Benchmarking machine
  Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
