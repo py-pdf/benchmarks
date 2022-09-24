@@ -71,7 +71,7 @@ to dwarf galaxies in the Local Group (Menzies et al. 2002, 2008;
 Whitelock et al. 2009; Menzies et al. 2010, 2011; Sakamoto et al.
 2012; Battinelli & Demers 2012, 2013; Whitelock et al. 2013;
 Menzies et al. 2015).
-The Hipparcos mission provided the means to reﬁne the re-
+TheHipparcos mission provided the means to reﬁne the re-
 sults on the period-kinematics connection. This was done by
 Feast & Whitelock (2000b), who found evidence supporting the
 existence of a bar-like structure in the Bulge from the orbits of
@@ -134,7 +134,7 @@ increases with radius ( R) as a broken power law, whose exponent
 decreases as soon as the “bending radius” Rbis exceeded, it and
 becomes zero when the “saturation radius” Rs>Rbis reached
 (i.e., the period becomes independent of radius). The exact val-
-ues of Rband Rs, as well as of the exponents, depend on the
+ues of RbandRs, as well as of the exponents, depend on the
 current mass ( M). We assume that the FM is dominant if the
 stellar radius is larger than the critical value Rdom;0, which we
 computed from the current stellar mass using Eq. 4 of Trabucchi
@@ -186,7 +186,7 @@ consistent with the value =1:450:05 Gyr from Goudfrooij
 et al. (2014), while it is as young as '0:890:015 Gyr ac-
 cording to Perren et al. (2017). Since an accurate estimate is not
 necessary for our exploratory analysis, we took a rough average
-and assumed log( =yr) =9:10:1. NGC 419 and NGC 1846
+and assumed log( =yr)=9:10:1. NGC 419 and NGC 1846
 likely exhibit TP-AGB boosting (Girardi et al. 2013). We note
 that some clusters show multiple stellar populations, whose age
 spread has been estimated in some cases (e.g., Mackey & Broby
@@ -194,8 +194,8 @@ Nielsen 2007; Joo & Lee 2013; Villanova et al. 2014) and is con-
 sistent with the age uncertainties we adopted.
 Distances of Galactic clusters were also taken from
 Kharchenko et al. (2016), while for the Magellanic Clouds and
-their clusters we adopted the distance moduli LMC =18:49
-0:09 mag and SMC =18:960:02 mag from de Grijs et al.
+their clusters we adopted the distance moduli LMC=18:49
+0:09 mag and SMC=18:960:02 mag from de Grijs et al.
 (2017). We searched for data on interstellar extinction from sev-
 eral literature works (e.g., Nayak et al. 2016; Kharchenko et al.
 2016; Perren et al. 2017), all of which suggest that extinction
@@ -230,7 +230,7 @@ likely negligible compared with those associated with age.
 Panel (a) of Fig. 1 shows a comparison between model predic-
 tions and observations in the PFM–log(=yr) plane. The former
 are displayed by a density map showing the expected number
-NFM of LPVs pulsating in the FM in each period-age bin, nor-
+NFMof LPVs pulsating in the FM in each period-age bin, nor-
 malized to maximum. Model predictions are in good agreement
 with data derived from observations (i.e., individual LPVs in
 clusters, represented by symbols), and they show that the pe-
@@ -267,7 +267,7 @@ portunity to study the period distribution at these ages, and for
 a more detailed comparison between models and observations.On the basis of the average age of these two groups of clus-
 ters and the associated uncertainty, and taking the discrete age
 sampling of the isochrones into account, we considered the age
-ranges log( =yr) =9:150:10 and log( =yr) =10:100:20. Pe-
+ranges log(=yr)=9:150:10 and log(=yr)=10:100:20. Pe-
 riod distributions at those ages are displayed in panels (b) and (c)
 of Fig. 1, respectively, showing good agreement between model
 predictions and observations. We note that in both cases, the dis-
@@ -513,7 +513,7 @@ lateral Agreement. This research has made use of the following free /open source
 software and /or libraries: the Starlink Tables Infrastructure Library (STILTS and
 Topcat, Taylor 2006); IPython (Pérez & Granger 2007) and Jupyter (Kluyver
 et al. 2016) notebooks; the P ython libraries N umPy(Harris et al. 2020), S ciPy
-(Virtanen et al. 2020), matplotlib (a P ython library for publication quality graph-
+(Virtanen et al. 2020), matplotlib (a Python library for publication quality graph-
 ics, Hunter 2007), and A stropy (a community-developed core P ython package
 for Astronomy, Astropy Collaboration et al. 2018). This research has made use of
 NASA’s Astrophysics Data System Bibliographic Services, and of the following
@@ -646,7 +646,7 @@ cluster described in the legend, respectively, which also reports the num-
 ber of sources displayed (i.e., having both optical and NIR photometry).
 The dashed line marks the separation between O- and C-rich sources
 according to Lebzelter et al. (2018). An arrow marks the source MSX
-LMC 124 in NGC 1830 that, having W BP;RP W J;Ks=9:73 mag, lies out-
+LMC 124 in NGC 1830 that, having WBP;RP WJ;Ks=9:73 mag, lies out-
 side the plot area. Background dots are LPVs in the LMC from OGLE-
 III (light gray) and Mowlavi et al. (2018) (darker gray).
 Appendix A: Classiﬁcation of observed LPVs
@@ -722,12 +722,12 @@ tribution equals 25% of its maximum. We selected this arbitrary
 value upon visual inspection of the PA plane. We modeled the
 central trend of the PA relation, as well as its short- and long-
 period edges, with linear or quadratic functions in the form
-log(=yr) =a0+a1(P=˜P)+a2(P=˜P)2; (B.1)
+log(=yr)=a0+a1(P=˜P)+a2(P=˜P)2; (B.1)
 (where ˜P=350 days) and employed a Lenvenberg-Marquardt
 nonlinear regression algorithm3to derive the best-ﬁt coe cients,
 which are listed in Table B.1. We remark that these best-ﬁt ex-
 pressions are only valid in the intervals 8 :0log(=yr)10:3
-and 20 <P=days<700 for O-rich composition, and within
+and 20<P=days<700 for O-rich composition, and within
 3We made use of the Python library SciPy to perform Gaussian KDE
 modeling and best-ﬁt, respectively, by means of the gaussian_kde
 tool from the stats module and the curve_fit function from the
@@ -744,13 +744,13 @@ upper edge 10.54 -0.8187 -0.2335
 C-richcenter 9.755 -0.7532
 lower edge 9.982 -1.698
 upper edge 8.498 -1.827 -0.9959
-8:6log(=yr)9:3 and 140 <P=days<620 in the C-rich
+8:6log(=yr)9:3 and 140<P=days<620 in the C-rich
 case.
 Because of the connection between age and initial mass, the
 PA relation can be translated into a period-initial mass relation,
 which we derived using the same approach described above, and
 assuming the form
-log( Mi=M)=b0+b1(P=˜P)+b2(P=˜P)2: (B.2)
+log(Mi=M)=b0+b1(P=˜P)+b2(P=˜P)2: (B.2)
 The resulting best-ﬁt lines are displayed in Fig. B.1, and the co-
 ecients are given in Table B.2.
 We remark that both the PA and the period-initial mass rela-
@@ -758,7 +758,7 @@ tions depend on model assumptions, in particular mass loss and
 mixing, as well as on the properties of the population of LPVs,
 namely the star-formation history and age-metallicity relation.
 Appendix C: The shape of the period distribution
-As an example case, we consider an isochrone of age log( =yr) =
+As an example case, we consider an isochrone of age log( =yr)=
 8:3 and initial metallicity Zi=0:006. Stars on the TP-AGB have
 initial masses Mi'3:85 Mover a small range of 10 3M.
 The relation between period and initial mass is displayed in
@@ -790,17 +790,17 @@ radius and a longer period. The rate at which a period increases
 with radius is not ﬁxed, but rather decreases with evolution. Ac-
 cording to the prescription of Trabucchi et al. (2021b), a period
 grows with radius as a broken power-law with exponent '1:8
-ifR<Rb, and with '1:25 at larger radii.
+ifR<Rb, and with'1:25 at larger radii.
 This is equivalent to saying that the period grows more
 slowly after it exceeds a critical value Pb=P(Rb), marked by
 the gray dotted line in Fig. C.1. The isochrone reaches it at
 Article number, page 8 of 9
 Trabucchi et al.: The period-age relation of LPVs
 Fig. B.1. Similar to Fig. 2, but showing initial mass Miin place of age. The best-ﬁt lines to the most populated band and edges of the theoretical
-PFM –Mirelation are shown.
+PFM–Mirelation are shown.
 Fig. C.1. Period distribution at ﬁxed age and metallicity. Panel (a) shows
 period as a function of initial mass (current mass on the top axis) on the
-TP-AGB for a 200 Myr old isochrone with Zi=0:006. Red lines
+TP-AGB for a200 Myr old isochrone with Zi=0:006. Red lines
 show full thermal pulses, while blue lines ignore luminosity spikes and
 green lines show only the quiescent evolution. The same color code
 is used for the period distributions (normalized to their maximum) on

@@ -104,7 +104,7 @@ non-ﬂaring active regions, 11283 and 12194, respectively. The contents of this
 In section II, data, we introduce the considered ﬂaring and non-ﬂaring ac tive regions and describe
 the data employed and the time and properties of the ﬂare, occ urred in the active region. In
 section III, we explain the method we use to analyze the time-series of te mperatures in different
-strips of the loops. Section IV is speciﬁed to our results, obtained related to ﬂaring and no n-
+strips of the loops. Section IVis speciﬁed to our results, obtained related to ﬂaring and no n-
 ﬂaring regions. In section Vwe brieﬂy state a summary of this work.
 II. D ata
 We investigate the thermal structure and treatment of loops in a ﬂaring region to see if it follows
@@ -122,7 +122,7 @@ has ten different wavelength channels, three in white light and UV , and the oth
 channels. Between these seven, the 304 ﬁlter, which is mostl y sensitive to chromospheric temper-
 atures (in order of T=104.7K), not the corona, is not taken into account (Aschwanden et a l. 2015).
 Therefore, we consider the images of the events in the six wav elengths (94, 131, 171, 193, 211, 335
-). These are covering the coronal temperature range from T≈0.6 to T ≥16MK .
+). These are covering the coronal temperature range from T≈0.6 to T≥16MK.
 The two below data sets are ﬁnally selected to study thermal v ariations and coronal loops
 oscillations in ﬂaring or non-ﬂaring active regions. A few d istinct loops are visible in the regions.
 Finally, these loops are chosen:
@@ -139,7 +139,7 @@ analyzed before by Jain et al. (2015 ). We mark these loops by A and B in Figure
 detected fundamental mode oscillation with periods of roug hly 2 minutes and decay time
 of 5 minutes for these loops. We are curious to see the loops’ t hermal oscillations (if any)
 or thermal ﬂuctuations in this condition. Figure 1a (left) displays AR 11283 and the area,
-indicated by the white box is featured in a zoom-in view in Fig ure 1.b (right) and the ﬁve
+indicated by the white box is featured in a zoom-in view in Fig ure1.b (right) and the ﬁve
 selected parts of the center of the three chosen loops are sho wn by red lines (the movie of
 the region is available in this link). As it is clear in the mov ie, these three loops oscillate
 together and their oscillations decay simultaneously. The center of ﬁgure 1.a is coordinated
@@ -153,7 +153,7 @@ more details look at LASCO CME catalogue.)1
 – Three loops of non-ﬂaring active region 12194: As a blind te st, we select three loops of the
 non-ﬂaring (nonf hereafter) active region 12194 in the smoo th time period of 08:00:00UT till
 09:00:00UT of 2014 October 26. The center of ﬁgure 2.a is coordinated at (0, -264) arcsec
-and its width and height are 615′′×615′′/1025 ×1025 pixels. We consider the images of
+and its width and height are 615′′×615′′/1025×1025 pixels. We consider the images of
 the selected area with the cadence of 12 sec in the same six wav elengths mentioned above.
 These loops are relatively motionless and do not show any tra nsversal oscillation (see the
 region’s movie in the link). We select the loops in such a way t hat they do not have any
@@ -161,10 +161,10 @@ crossing over the neighbor loops (in our perspective) durin g this time. In ﬁg
 selected loops are distinguished in red in the mentioned act ive region. The size of the ﬁnal
 cut of non-ﬂaring region (represented in the right) is 351 ×401 pixels.
 The data set are primarily downloaded at level 1 with a pixel r esolution of 0.6 arcsec. We use
-the standard aia_prep .pro subroutine available in SDO package SolarSoftWare library to adjust
+the standard aia_prep .prosubroutine available in SDO package SolarSoftWare library to adjust
 the screen scale between the four arms of the AIA. This pre-pr ocessing step increases the data
 level from 1 to 1.5, so that ﬁnally no jump or sudden movement i s observed in the image series.
-We also used drot _map .pro subroutine to correct the differential rotation effect. Ac cording to the
+We also used drot_map.prosubroutine to correct the differential rotation effect. Ac cording to the
 movie made by pre-processed images, the most obvious loops ( marked in the abovementioned
 ﬁgures) are selected in each region (with obvious transvers al oscillations in the case of the ﬂaring
 active region).
@@ -200,7 +200,7 @@ F0λ=/integraldisplaydEM(T)
 dTRλ(T)dT=∑
 kEM(Tk)Rλ(Tk). (2)
 Here, Rλ(T)is the instrumental temperature response function of each w avelength ﬁlter λ, which
-is obtained by the code aia_get _response .pro in the SSW package. As time has passed, the AIA
+is obtained by the code aia_get_response .proin the SSW package. As time has passed, the AIA
 response functions calibration has partly changed. Here, w e use the updated calibration of the
 temperature response functions, for each of the AIA tempera ture ﬁlters, according to the CHI-
 ANTI Version 2019 code available in the Solar SoftWare (SSW) . After forward-ﬁtting the Gaussian
@@ -249,7 +249,7 @@ increases at the end of the oscillating mode (see Fig. 4, the temperature map of
 instance)
 We calculate the temperature oscillations periods, using L omb-Scargle method. We consider
 the thermal oscillations periods with the highest signiﬁca nces. As this method shows, the most
-powerful period in the range of data time-series (listed in T able 1) are from 7 to 28.4 minutes
+powerful period in the range of data time-series (listed in T able1) are from 7 to 28.4 minutes
 observed in the strips of the marked loops of this ﬂaring regi on. These loops of ﬂaring region
 also show some short periods in temperature oscillations wh ich some are less than 10 minutes
 (listed in Table 1). These short periods are more frequently observed in the lo ops of the ﬂaring
@@ -262,8 +262,8 @@ strip. The columns of Table 2are exactly the same as Table 1; the only differenc
 for the non-ﬂaring loops.
 The loop A, has the length of 42.3 (Mm) which is the length of th e selected part of the loop
 marked in Figure 1.b. The mean of the parameter (Max(log T)-Min(log T)) for the strips of loop A
-is 1.21. Mean of the temperature (log) of this loop over time i s 6.15 ±0.25. The loop B1, divided
-into 11 strips, has the length of 20.24 (Mm). The mean of (Max( log T)-Min(log T)) and the mean
+is 1.21. Mean of the temperature (log) of this loop over time i s 6.15±0.25. The loop B1, divided
+into 11 strips, has the length of 20.24 (Mm). The mean of (Max( logT)-Min(log T)) and the mean
 of the temperature for this loop are, 1.10, and 6.28 ±0.22 respectively. The loop B2, which has 8
 strips, with the length of 15.61 (Mm), has the mean temperatu re (log) of 6.21 ±0.21. The mean
 of (Max(log T)-Min(log T)) is 0.81 through this loop segment. The loops C1 and C2, divi ded into
@@ -371,7 +371,7 @@ the ﬂaring active region, and shorter temperature periods ( less than 10 minut
 transverse oscillations periods) are observed in the case o f the ﬂaring loops’ strips in comparison
 with the non-ﬂaring ones. And ﬁgure 9shows that the increasing and decreasing of temperature
 range, or the difference between maximum and minimum of the t emperature value (max(log (T))-
-min(log (T))), is much higher on average for the loops’ strips of the ﬂari ng AR in comparison with
+min(log(T))), is much higher on average for the loops’ strips of the ﬂari ng AR in comparison with
 the loops’ strips of the non-ﬂaring one.
 V . S ummery
 We reported the temperature oscillations of coronal loops o f a ﬂaring active region. We selected
@@ -457,7 +457,7 @@ peratures on average and higher oscillation periods with hi gher peaks and deepe
 accurate commentary in this respect requires more extensiv e statistical research and broader ob-
 servations.
 arcsecarcsec
-79 154 229 304 379 454−6825118211304397
+79154229304379454−6825118211304397
 a
 arcsecarcsec
   
@@ -627,7 +627,7 @@ colors considered for the temperature range.
 Temp. Period (min)Percentage of Temp. Periods
 Figure 8: Hisogram of the temperature periods percentages for the loo ps’ strips of the ﬂaring (blue bars) and non-
 ﬂaring (red bars) ARs. The horizontal axis shows the tempera ture periods in minute.
-0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7024681012
+0.20.30.40.50.60.70.80.911.11.21.31.41.51.61.7024681012
 max(log(T))−min(log(T))Number
 Figure 9: Hisogram of the parameter of (max(log(T))-min(log(T))) fo r each strip of the loops of the ﬂaring (blue bars)
 and non-ﬂaring (red bars) ARs.

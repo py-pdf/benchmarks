@@ -82,7 +82,7 @@ solar-wind mass loss (Zhang et al. 2019; Kunitomo & Guillot
 To reinvigorate the debate, Buldgen et al. (2019b) recently
 highlighted once again how the transition of the temperature gra-
 1arXiv:2201.00200v1  [astro-ph.SR]  1 Jan 2022
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
 dient just below the convective envelope can signiﬁcantly impact
 the disagreement between solar models and helioseismic con-
 straints. Their results, based on a method that combines multi-
@@ -105,7 +105,7 @@ traditional picture of a sharp transition as formalised by Zahn
 The present work is motivated by arguments inspired by hy-
 drodynamical simulations of convection and convective penetra-
 tion in solar-like models. Recent hydrodynamical simulations by
-Bara e et al. (2021, hereafter B21) highlight the process of local
+Barae et al. (2021, hereafter B21) highlight the process of local
 heating in the overshooting region due to penetrating convective
 motions across the convective boundary. In the following, we
 analyse the potential impact of this feature on one-dimensional
@@ -138,7 +138,7 @@ by penetrating ﬂows. The negative peak of the enthalpy ﬂux
 and the positive bump of the radiative ﬂux below the convective
 boundary are well-known features described in many numeri-
 cal works (Hurlburt et al. 1986; Muthsam et al. 1995; Brummell
-et al. 2002; Brun et al. 2011; Hotta 2017; K ¨apyl ¨a 2019; Cai
+et al. 2002; Brun et al. 2011; Hotta 2017; K ¨apyl¨a 2019; Cai
 2020). A few works (Rogers et al. 2006; Viallet et al. 2013; Korre
 et al. 2019; Higl et al. 2021) have also reported a modiﬁcation
 of the local thermal background in the overshooting region, but
@@ -176,11 +176,11 @@ The ﬁgure shows the local heating in the overshooting layer and
 its impact on the sub-adiabaticity ( r r ad), withr=d log T
 d log Pthe
 2
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
 temperature gradient and rad=d log T
 d log PjSthe adiabatic gradient.
 The initial stratiﬁcation below the convective boundary (located
-atr=0:6734Rstar for this speciﬁc stellar model) is set by
+atr=0:6734Rstarfor this speciﬁc stellar model) is set by
 the stable radiative gradient, rrad(see the dashed black line be-
 low the convective boundary in Fig. 1). B21 show that, as a re-
 sult of the local heating below the convective boundary charac-
@@ -207,7 +207,7 @@ A=1
  1dlnP
 dlnr dln
 dlnr; (1)
-with  1= (@lnP=@ln)ad. Starting from a reference evolu-
+with  1=(@lnP=@ln)ad. Starting from a reference evolu-
 tionary model, Buldgen et al. (2020) used an inversion pro-
 cedure to iteratively reconstruct a solar model. Successive in-
 versions of the Ledoux discriminant allowed them to obtain a
@@ -231,7 +231,7 @@ analysis in Sect. 3.2.
 The ﬁrst concerns the Ledoux discriminant. The major dis-
 crepancy between the Sun and the reference model occurs just
 below the convective boundary, with a large positive bump for
-the quantity ( ASun -Aref).
+the quantity ( ASun-Aref).
 The second concerns the speed of sound. The same positive
 bump at the same location as for the Ledoux discriminant, A, is
 observed for the quantity ( c2
@@ -249,7 +249,7 @@ larger peak deeper at 40% of the stellar radius. This discrep-
 ancy is negative in the convective zone. The corrections applied
 toAhelp reduce these entropy discrepancies in both regions.
 The fourth concerns the density. The quantity ( Sun 
-ref)= refhas a negative peak in the radiative region, at 35%
+ref)=refhas a negative peak in the radiative region, at 35%
 of the stellar radius, and is positive in the convective zone.
 Importantly, Buldgen et al. (2020) mention that their recon-
 struction procedure gives similar Ledoux discriminant proﬁles
@@ -294,9 +294,9 @@ quence.
 In the following, we adopt a modiﬁcation of the local temper-
 ature gradient in the overshooting layer that qualitatively repro-
 duces the behaviour displayed in Fig. 1. We deﬁne an overshoot-
-ing length dov=ovHP;CB, with HP;CB the pressure scale height
+ing length dov=ovHP;CB, with HP;CBthe pressure scale height
 at the convective boundary and ova free parameter. We also de-
-ﬁne two radial locations, rov=rCB dovand rmid =rCB dov=2,
+ﬁne two radial locations, rov=rCB dovandrmid=rCB dov=2,
 with rCBthe radial location of the convective boundary. The tem-
 perature gradient is modiﬁed as follows. For rmidr<rCB, we
 use
@@ -304,8 +304,8 @@ r=g(r)rad+(1 g(r))rrad; (2)
 with
 g(r)=sinf[(r rmid)=(rCB rmid)]a=2g: (3)
 3
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
-For rovr<rmid, we use
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
+Forrovr<rmid, we use
 r=rrad h(r)rad; (4)
 with
 h(r)=bsinf[(rmid r)=(rmid rov)]g: (5)
@@ -325,14 +325,14 @@ b.
 The details of the procedure for the ﬁrst method are the follow-
 ing. We calculate the evolution of a 1 Mmodel with an initial
 helium mass fraction of 0.28, metallicity Z=0:02;and a mix-
-ing length lmix =1:9HP. We use a reference model that is in
+ing length lmix=1:9HP. We use a reference model that is in
 thermal equilibrium2and has the luminosity and radius of the
 current Sun. Starting from this reference model, the tempera-
 ture gradient is modiﬁed over a prescribed depth to mimic the
 impact of overshooting according to the hydrodynamical sim-
 ulations described in Sect. 2. We adopt the prescription given
 by Eqs. (2)-(5) over a distance dovbelow the convective bound-
-ary. We show the results in Fig. 2 for ov=0.15 and ov=0.20.
+ary. We show the results in Fig. 2 for ov=0.15 andov=0.20.
 These overshooting widths are in good agreement with the maxi-
 mal depth reached by downﬂows below the convective boundary
 predicted by the hydrodynamical simulations for the solar-like
@@ -362,7 +362,7 @@ heating’. This procedure ensures that the model with a modiﬁed
 temperature gradient can be consistently compared to the refer-
 ence model. As shown in Fig. 2, the simple prescription given
 2Thermal equilibrium means that the total nuclear energy produced
-in the central regions balances the radiative losses at the surface, i.e. the
+in the central regions balances the radiative losses at the surface, i.e.the
 total nuclear luminosity, Lnuc, equals the total stellar luminosity, L.by Eqs. (2)-(5) yields similar qualitative changes in the temper-
 ature and the sub-adiabaticity close to the convective boundary
 that was found in the hydrodynamical simulations of B21.
@@ -392,7 +392,7 @@ in the ﬁrst of the trends outlined in Sect. 3.1. Unsurprisingly,
 such a modiﬁcation of the temperature gradient is expected to
 improve the agreement with helioseismic constraints and help
 4
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
 remove the sound speed anomaly below the convective bound-
 ary (second trend in Sect. 3.1), as suggested by the results of
 Christensen-Dalsgaard et al. (2011). But it is also interesting to
@@ -463,7 +463,7 @@ Fig. 3. Dierence of various structural quantities between a
 model with a modiﬁed temperature gradient in the overshoot-
 ing layer and a reference model calculated with the Lyon stellar
 evolution code. The temperature gradient in the modiﬁed model
-is changed over a distance dov=ovHP;CB below the convec-
+is changed over a distance dov=ovHP;CBbelow the convec-
 tive boundary (indicated by the vertical solid line). The lower
 panel shows the results for ov=0:15 and the upper panel for
 ov=0:20.
@@ -483,7 +483,7 @@ shooting region due to convective penetration provides the quali-
 tative e ects required to improve the speed of sound discrepancy
 below the convective boundary. This discrepancy is persistent in
 5
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
 Fig. 4. Dierence of various structural quantities between a
 modiﬁed model and a reference model calculated with the
 MONSTAR stellar evolution code. The reference model is
@@ -511,7 +511,7 @@ additionally show that such a local change in the temperature,
 despite being made over a very limited region below the convec-
 tive boundary, can also a ect the density, the entropy, and thespeed of sound in the convective envelope after thermal relax-
 ation or evolution on the main sequence. How these quantities
-are a ected in the convective envelope compared to a reference
+are aected in the convective envelope compared to a reference
 model with no local heating depends on the strategy for building
 solar models and on the treatment of overshooting mixing. This
 mixing is obviously linked to the local heating given that both
@@ -546,7 +546,7 @@ models. But a consistent approach should also require account-
 ing for a local change in the temperature gradient. The impact of
 this local heating goes in the right direction to improve not only
 the discrepancies of solar models below the convective bound-
-ary, but also in the convective envelope. This e ect o ers an in-
+ary, but also in the convective envelope. This e ect oers an in-
 teresting step forward for solving the solar modelling problem.
 In this exploratory work, we adopt a simple prescription for the
 local heating in the overshooting layer since the main goal is
@@ -571,14 +571,14 @@ grants ST /K000373 /1 and ST /R002363 /1 and STFC DiRAC
 Operations grant ST /R001014 /1. DiRAC is part of the National
 e-Infrastructure.
 6
-Bara e et al.: Local heating due to convective overshooting and the solar modelling problem
+Barae et al.: Local heating due to convective overshooting and the solar modelling problem
 References
 Anders, E. & Grevesse, N. 1989, Geochim. Cosmochim. Acta, 53, 197
 Asplund, M., Amarsi, A. M., & Grevesse, N. 2021, A&A, 653, A141
 Asplund, M., Grevesse, N., Sauval, A. J., & Scott, P. 2009, ARA&A, 47, 481
-Bara e, I., Chabrier, G., Allard, F., & Hauschildt, P. H. 1998, A&A, 337, 403
-Bara e, I., Pratt, J., Go rey, T., et al. 2017, ApJ, 845, L6
-Bara e, I., Pratt, J., Vlaykov, D. G., et al. 2021, A&A, 654, A126
+Barae, I., Chabrier, G., Allard, F., & Hauschildt, P. H. 1998, A&A, 337, 403
+Barae, I., Pratt, J., Go rey, T., et al. 2017, ApJ, 845, L6
+Barae, I., Pratt, J., Vlaykov, D. G., et al. 2021, A&A, 654, A126
 Brummell, N. H., Clune, T. L., & Toomre, J. 2002, ApJ, 570, 825
 Brun, A. S., Miesch, M. S., & Toomre, J. 2011, ApJ, 742, 79
 Buldgen, G., Eggenberger, P., Baturin, V . A., et al. 2020, A&A, 642, A36
@@ -604,7 +604,7 @@ N. Prantzos, E. Vangioni-Flam, & M. Casse, 15–25
 Higl, J., M ¨uller, E., & Weiss, A. 2021, A&A, 646, A133
 Hotta, H. 2017, ApJ, 843, 52
 Hurlburt, N. E., Toomre, J., & Massaguer, J. M. 1986, ApJ, 311, 563
-K¨apyl ¨a, P. J. 2019, A&A, 631, A122
+K¨apyl¨a, P. J. 2019, A&A, 631, A122
 Korre, L., Brummell, N., Garaud, P., & Guervilly, C. 2021, MNRAS, 503, 362
 Korre, L., Garaud, P., & Brummell, N. H. 2019, MNRAS, 484, 1220
 Kunitomo, M. & Guillot, T. 2021, arXiv e-prints, arXiv:2109.06492
