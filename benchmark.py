@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from io import BytesIO
 from itertools import product
 from pathlib import Path
-from typing import Callable, Dict, List, Literal, NamedTuple, Optional, Union
+from typing import Callable, Dict, List, Literal, NamedTuple, Optional, Tuple, Union
 
 import fitz as PyMuPDF
 import numpy as np
@@ -26,7 +26,7 @@ import tika
 from borb.pdf.pdf import PDF
 from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from Levenshtein import ratio  # python-Levenshtein
-from pdfminer.high_level import extract_text
+from pdfminer.high_level import extract_pages, extract_text
 from pydantic import BaseModel, Field
 from rich.progress import track
 from tika import parser
@@ -95,6 +95,9 @@ class Library(NamedTuple):
     dependencies: str = ""
     license: str = ""
     last_release_date: str = ""
+    image_extraction_function: Optional[
+        Callable[[bytes], List[Tuple[str, bytes]]]
+    ] = None
 
 
 class Cache(BaseModel):
@@ -154,10 +157,10 @@ def pdfium_get_text(data: bytes) -> str:
 
 
 def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
-    watermark_pdf = PyPDF2.PdfFileReader(BytesIO(watermark_data))
+    watermark_pdf = PyPDF2.PdfReader(BytesIO(watermark_data))
     watermark_page = watermark_pdf.pages[0]
-    reader = PyPDF2.PdfFileReader(BytesIO(data))
-    writer = PyPDF2.PdfFileWriter()
+    reader = PyPDF2.PdfReader(BytesIO(data))
+    writer = PyPDF2.PdfWriter()
     for page in reader.pages:
         page.merge_page(watermark_page)
         writer.add_page(page)
@@ -165,6 +168,50 @@ def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
         writer.write(bytes_stream)
         bytes_stream.seek(0)
         return bytes_stream.read()
+
+
+def pypdf2_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
+    images = []
+    try:
+        reader = PyPDF2.PdfReader(BytesIO(data))
+        for page in reader.pages:
+            for image in page.images:
+                images.append((image.name, image.data))
+    except Exception as exc:
+        print(f"PyPDF2 Image extraction failure: {exc}")
+    return images
+
+
+def pdfminer_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
+    from PIL import Image
+
+    def get_image(layout_object):
+        if isinstance(layout_object, pdfminer.layout.LTImage):
+            return layout_object
+        if isinstance(layout_object, pdfminer.layout.LTContainer):
+            for child in layout_object:
+                return get_image(child)
+        else:
+            return None
+
+    images = []
+    try:
+        pages = list(extract_pages(BytesIO(data)))
+        for page in pages:
+            ex_images = list(filter(bool, map(get_image, page)))
+            for image in ex_images:
+                image_pil = Image.frombytes(
+                    "1", image.srcsize, image.stream.get_data(), "raw"
+                )
+
+                img_byte_arr = BytesIO()
+                image_pil.save(img_byte_arr, format="PNG")
+                img_byte_arr = img_byte_arr.getvalue()
+
+                images.append((f"{image.name}.png", img_byte_arr))
+    except Exception as exc:
+        print(f"pdfminer Image extraction failure: {exc}")
+    return images
 
 
 def borb_get_text(data: bytes) -> str:
@@ -227,6 +274,7 @@ def main(
         data = doc.data
         lib = libraries[name]
         if cache.has_doc(lib, doc):
+            print(f"Skip {doc.name} for {lib.name}")
             continue
         print(f"{name} now parses {doc.name}...")
         t0 = time.time()
@@ -237,14 +285,21 @@ def main(
         cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
             doc, lib.pathname
         )
-        cache.write(cache_path)
-
         if lib.watermarking_function:
             t0 = time.time()
             watermarked = lib.watermarking_function(watermark_data, data)
             t1 = time.time()
             write_single_result("watermark", name, doc.name, watermarked, "pdf")
             cache.benchmark_times[lib.pathname][doc.name]["watermark"] = t1 - t0
+        if lib.image_extraction_function:
+            t0 = time.time()
+            extracted_images = lib.image_extraction_function(data)
+            t1 = time.time()
+            write_single_result(
+                "image_extraction", name, doc.name, extracted_images, "image-list"
+            )
+            cache.benchmark_times[lib.pathname][doc.name]["image_extraction"] = t1 - t0
+        cache.write(cache_path)
     write_benchmark_report(
         names,
         libraries,
@@ -254,21 +309,29 @@ def main(
 
 
 def write_single_result(
-    benchmark: Literal["read", "watermark"],
+    benchmark: Literal["read", "watermark", "image_extraction"],
     pdf_library_name: str,
     pdf_file_name: str,
-    data: Union[str, bytes],
-    extension: Literal["txt", "pdf"],
+    data: Union[str, bytes, List[Tuple[str, bytes]]],
+    extension: Literal["txt", "pdf", "image-list"],
 ) -> None:
     folder = f"{benchmark}/results/{pdf_library_name}"
     if not os.path.exists(folder):
         os.makedirs(folder)
-    mode = "wb" if extension == "pdf" or isinstance(data, bytes) else "w"
-    with open(f"{folder}/{pdf_file_name}.{extension}", mode) as f:
-        try:
-            f.write(data)
-        except Exception as exc:
-            print(exc)
+    if isinstance(data, list):
+        folder = f"{folder}/{pdf_file_name}"
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        for image_name, image_data in data:
+            with open(f"{folder}/{image_name}", "wb") as fp:
+                fp.write(image_data)
+    else:
+        mode = "wb" if extension == "pdf" or isinstance(data, bytes) else "w"
+        with open(f"{folder}/{pdf_file_name}.{extension}", mode) as f:
+            try:
+                f.write(data)
+            except Exception as exc:
+                print(exc)
 
 
 def get_times(
@@ -353,6 +416,30 @@ def write_benchmark_report(
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
             row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
+            table.append(row)
+        f.write(table_to_markdown(table, headings=headings))
+        f.write("\n")
+
+        f.write("\n")
+        f.write("## Image Extraction Speed\n\n")
+        table = []
+        headings = ["#", "Library", "Average"] + doc_headers
+        image_extraction_times = get_times(cache, docs, "image_extraction")
+        names = [
+            name
+            for name in image_extraction_times.keys()
+            if len([el for el in image_extraction_times[name] if el is not None]) > 0
+        ]
+        print(names)
+        print(image_extraction_times["pypdf2"])
+        averages = [np.mean(image_extraction_times[name]) for name in names]
+        sort_order = np.argsort([avg for avg in averages])
+        for place, index in enumerate(sort_order, start=1):
+            library_name = names[index]
+            lib = extract_functions[library_name]
+            avg = averages[index]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
+            row += [f"{t:0.1f}s" for t in image_extraction_times[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
@@ -461,7 +548,8 @@ if __name__ == "__main__":
             version=PyPDF2.__version__,
             watermarking_function=pypdf2_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2022-09-18",
+            last_release_date="2022-09-25",
+            image_extraction_function=pypdf2_image_extraction,
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -471,6 +559,7 @@ if __name__ == "__main__":
             version=pdfminer.__version__,
             license="MIT/X",
             last_release_date="2022-05-24",
+            image_extraction_function=pdfminer_image_extraction,
         ),
         "pdfplumber": Library(
             "pdfplumber",
@@ -479,7 +568,7 @@ if __name__ == "__main__":
             pdfplubmer_get_text,
             version=pdfplumber.__version__,
             license="MIT",
-            last_release_date="2022-05-31",
+            last_release_date="2022-07-21",
         ),
         "pymupdf": Library(
             "PyMuPDF",
@@ -490,7 +579,7 @@ if __name__ == "__main__":
             watermarking_function=None,
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
-            last_release_date="2022-06-27",
+            last_release_date="2022-08-31",
         ),
         "pdftotext": Library(
             "pdftotext",
@@ -508,20 +597,20 @@ if __name__ == "__main__":
             "borb",
             "https://pypi.org/project/borb/",
             borb_get_text,
-            "2.0.27",
+            "2.1.3",
             None,
             license="AGPL/Commercial",
-            last_release_date="2022-06-04",
+            last_release_date="2022-09-15",
         ),
         "pdfium": Library(
             "pypdfium2",
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
             pdfium_get_text,
-            "2.5.0",
+            "3.0.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-07-11",
+            last_release_date="2022-09-24",
             dependencies="PDFium (Foxit/Google)",
         ),
     }
