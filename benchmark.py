@@ -182,6 +182,22 @@ def pypdf2_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
     return images
 
 
+def pymupdf_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
+    images = []
+    with PyMuPDF.open(stream=data, filetype="pdf") as pdf_file:
+        for page_index in range(len(pdf_file)):
+            page = pdf_file[page_index]
+            for image_index, img in enumerate(page.get_images(), start=1):
+                xref = img[0]
+                base_image = pdf_file.extract_image(xref)
+                image_bytes = base_image["image"]
+                image_ext = base_image["ext"]
+                images.append(
+                    (f"image{page_index+1}_{image_index}.{image_ext}", image_bytes)
+                )
+    return images
+
+
 def pdfminer_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
     from PIL import Image
 
@@ -577,6 +593,7 @@ if __name__ == "__main__":
             lambda n: pymupdf_get_text(n),
             version=PyMuPDF.version[0],
             watermarking_function=None,
+            image_extraction_function=pymupdf_image_extraction,
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
             last_release_date="2022-08-31",
