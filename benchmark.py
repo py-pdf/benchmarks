@@ -149,10 +149,7 @@ def pdfium_get_text(data: bytes) -> str:
     for i in range(len(pdf)):
         page = pdf.get_page(i)
         textpage = page.get_textpage()
-        text += textpage.get_text()
-        text += "\n"
-        [g.close() for g in (textpage, page)]
-    pdf.close()
+        text += textpage.get_text_range() + "\n"
     return text
 
 
