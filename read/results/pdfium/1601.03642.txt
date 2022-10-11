@@ -42,7 +42,7 @@ a lot of data has become available. The idea of machine learning
 is to make use of this data.
 A formal definition of the field of Machine Learning is given
 by Tom Mitchel [Mit97]:
-A computer program is said to learn from experience E with respect to some class of tasks T and
+A computer program is said to learn from experi￾ence E with respect to some class of tasks T and
 performance measure P, if its performance at tasks
 in T, as measured by P, improves with experience E.
 Σ ϕ
@@ -64,8 +64,8 @@ xi are the input signals and wi are
 weights which have to get learned.
 Each input signal gets multiplied
 with its weight, everything gets
-summed up and the activation function ϕ is applied.
-(b) A visualization of a simple feedforward neural network. The 5 input nodes are red, the 2 bias nodes
+summed up and the activation func￾tion ϕ is applied.
+(b) A visualization of a simple feed￾forward neural network. The 5 in￾put nodes are red, the 2 bias nodes
 are gray, the 3 hidden units are
 green and the single output node
 is blue.
@@ -79,7 +79,7 @@ adjust them without having to re-program everything. Machine
 learning programs should generally improve when they are fed
 with more data.
 The field of machine learning is related to statistics. Some
-algorithms directly try to find models which are based on wellknown distribution assumptions of the developer, others are
+algorithms directly try to find models which are based on well￾known distribution assumptions of the developer, others are
 more general.
 A common misunderstanding of people who are not related
 in this field is that the developers don’t understand what their
@@ -97,7 +97,7 @@ basic building blocks is a time-intensive and difficult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artificial
 neural networks. Those networks are based on mathematical
-functions called artificial neurons which take n ∈ N numbers x1, . . . , xn ∈ R as input, multiply them with weights
+functions called artificial neurons which take n ∈ N num￾bers x1, . . . , xn ∈ R as input, multiply them with weights
 w1, . . . , wn ∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
 an activation function is the sigmoid function ϕ(x) = 1
@@ -235,7 +235,7 @@ a lower level. Using such a predictor, one can generate texts
 character by character. If the model is good, the text can have
 the correct punctuation. This would not be possible with a
 word predictor.
-Character predictors can be implemented with RNNs. In contrast to standard feed-forward neural networks like multilayer
+Character predictors can be implemented with RNNs. In con￾trast to standard feed-forward neural networks like multilayer
 Perceptrons (MLPs) which was shown in Figure 1(b), those
 networks are trained to take their output at some point as well as
 the normal input. This means they can keep some information
@@ -327,14 +327,14 @@ highly authentic replications and novel music compositions”.
 The reader might want to listen to [Cop12] to get an impression
 of the beauty of the created music.
 According to Cope, an essential part of music is “a set of
-instructions for creating different, but highly related selfreplications”. Emmy was programmed to find this set of
+instructions for creating different, but highly related self￾replications”. Emmy was programmed to find this set of
 instructions. It tries to find the “signature” of a composer,
 which Cope describes as “contiguous patterns that recur in two
 or more works of the composer”.
 The new feature of Emily Howell compared to Emmy is that
 Emily Howell does not necessarily remain in a single, already
 known style.
-Emily Howell makes use of association network. Cope emphasizes that this is not a form of a neural network. However, it
+Emily Howell makes use of association network. Cope empha￾sizes that this is not a form of a neural network. However, it
 is not clear from [Cop13] how exactly an association network
 is trained. Cope mentions that Emily Howell is explained in
 detail in [Cop05].
@@ -392,7 +392,7 @@ Available: https://www.youtube.com/watch?v=jLR- c uCwI
 composition,” XRDS: Crossroads, The ACM Magazine for
 Students, vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2460444
-[Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [Online]. Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
+[Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [On￾line]. Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
 78691781-c9b7-30a0-9a0a-3ff76e8bfe58
 [Gad06] A. Gadsby, Ed., Dictionary of Contemporary English. Pearson
 Education Limited, 2006.
@@ -413,7 +413,7 @@ for image recognition,” arXiv preprint arXiv:1512.03385, 2015.
 [Joh15a] D. Johnson, “Biaxial recurrent neural network for music
 composition,” GitHub, Aug. 2015. [Online]. Available: https:
 //github.com/hexahedria/biaxial-rnn-music-composition
-[Joh15b] ——, “Composing music with recurrent neural networks,” Personal Blog, Aug. 2015. [Online]. Available: http://www.hexahedria.com/2015/08/03/
+[Joh15b] ——, “Composing music with recurrent neu￾ral networks,” Personal Blog, Aug. 2015. [On￾line]. Available: http://www.hexahedria.com/2015/08/03/
 composing-music-with-recurrent-neural-networks/
 [Joh16] J. Johnson, “neural-style,” GitHub, Jan. 2016. [Online]. Available:
 https://github.com/jcjohnson/neural-style
@@ -432,7 +432,7 @@ computer science. McGraw-Hill, 1997.
 deeper into neural networks,” googleresearch.blogspot.co.uk,
 Jun. 2015. [Online]. Available: http://googleresearch.blogspot.de/
 2015/06/inceptionism-going-deeper-into-neural.html
-[Nie15] M. A. Nielsen, Neural Networks and Deep Learning. Determination Press, 2015. [Online]. Available: http://neuralnetworksanddeeplearning.com/chap6.html#
+[Nie15] M. A. Nielsen, Neural Networks and Deep Learn￾ing. Determination Press, 2015. [Online]. Avail￾able: http://neuralnetworksanddeeplearning.com/chap6.html#
 introducing convolutional networks
 [NV15] A. Nayebi and M. Vitelli, “GRUV: Algorithmic music generation
 using recurrent neural networks,” 2015. [Online]. Available:
@@ -463,7 +463,7 @@ http://arxiv.org/abs/1506.05869v2
 Available: https://github.com/MattVitelli/GRUV
 [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
 Judgement to Calculation. W.H.Freeman & Co Ltd, 1976.
-[ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding convolutional networks,” in Computer Vision–ECCV 2014. Springer,
+[ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding con￾volutional networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.
 6
 APPENDIX A

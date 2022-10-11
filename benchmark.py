@@ -621,10 +621,10 @@ if __name__ == "__main__":
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
             pdfium_get_text,
-            "3.0.0",
+            "3.3.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-09-24",
+            last_release_date="2022-10-11",
             dependencies="PDFium (Foxit/Google)",
         ),
     }
