@@ -4,67 +4,71 @@
 #
 #    pip-compile requirements/main.in
 #
-borb==2.0.25
+borb==2.1.7
     # via -r requirements/main.in
-certifi==2021.10.8
+certifi==2022.12.7
     # via requests
-cffi==1.15.0
+cffi==1.15.1
     # via cryptography
-chardet==4.0.0
-    # via pdfminer-six
-charset-normalizer==2.0.12
-    # via requests
+charset-normalizer==2.1.1
+    # via
+    #   pdfminer-six
+    #   requests
 commonmark==0.9.1
     # via rich
-cryptography==37.0.2
+cryptography==38.0.4
     # via pdfminer-six
-fonttools==4.33.3
+fonttools==4.38.0
     # via borb
-idna==3.3
+idna==3.4
     # via requests
-numpy==1.22.3
+levenshtein==0.20.9
+    # via python-levenshtein
+numpy==1.24.1
     # via -r requirements/main.in
-pdfminer-six==20220319
+pdfminer-six==20221105
     # via
     #   -r requirements/main.in
     #   pdfplumber
-pdfplumber==0.6.2
+pdfplumber==0.7.6
     # via -r requirements/main.in
 pdftotext==2.2.2
     # via -r requirements/main.in
-pillow==9.1.1
+pillow==9.3.0
     # via
     #   borb
     #   pdfplumber
     #   qrcode
 pycparser==2.21
     # via cffi
-pydantic==1.9.1
+pydantic==1.10.4
     # via -r requirements/main.in
-pygments==2.12.0
+pygments==2.13.0
     # via rich
-pypdf2==1.27.12
+pypdf==3.1.0
     # via -r requirements/main.in
 python-barcode==0.14.0
     # via borb
-python-levenshtein==0.12.2
+python-levenshtein==0.20.9
     # via -r requirements/main.in
 qrcode[pil]==7.3.1
     # via borb
-requests==2.27.1
+rapidfuzz==2.13.7
+    # via levenshtein
+requests==2.28.1
     # via
     #   -r requirements/main.in
     #   borb
     #   tika
-rich==12.4.1
+rich==13.0.0
     # via -r requirements/main.in
 tika==1.24
     # via -r requirements/main.in
-typing-extensions==4.2.0
+typing-extensions==4.4.0
     # via pydantic
-urllib3==1.26.9
+urllib3==1.26.13
     # via requests
-wand==0.6.7
+wand==0.6.10
     # via pdfplumber
 
 # The following packages are considered to be unsafe in a requirements file:

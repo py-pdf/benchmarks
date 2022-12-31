@@ -19,7 +19,7 @@ import fitz as PyMuPDF
 import numpy as np
 import pdfminer
 import pdfplumber
-import PyPDF2
+import pypdf
 import pypdfium2 as pdfium
 import requests
 import tika
@@ -135,9 +135,9 @@ def pymupdf_get_text(data: bytes) -> str:
     return text
 
 
-def pypdf2_get_text(data: bytes) -> str:
+def pypdf_get_text(data: bytes) -> str:
     text = ""
-    reader = PyPDF2.PdfFileReader(BytesIO(data))
+    reader = pypdf.PdfReader(BytesIO(data))
     for page in reader.pages:
         text += page.extract_text() + "\n"
     return text
@@ -153,11 +153,11 @@ def pdfium_get_text(data: bytes) -> str:
     return text
 
 
-def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
-    watermark_pdf = PyPDF2.PdfReader(BytesIO(watermark_data))
+def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
+    watermark_pdf = pypdf.PdfReader(BytesIO(watermark_data))
     watermark_page = watermark_pdf.pages[0]
-    reader = PyPDF2.PdfReader(BytesIO(data))
-    writer = PyPDF2.PdfWriter()
+    reader = pypdf.PdfReader(BytesIO(data))
+    writer = pypdf.PdfWriter()
     for page in reader.pages:
         page.merge_page(watermark_page)
         writer.add_page(page)
@@ -167,15 +167,15 @@ def pypdf2_watermarking(watermark_data: bytes, data: bytes) -> bytes:
         return bytes_stream.read()
 
 
-def pypdf2_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
+def pypdf_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
     images = []
     try:
-        reader = PyPDF2.PdfReader(BytesIO(data))
+        reader = pypdf.PdfReader(BytesIO(data))
         for page in reader.pages:
             for image in page.images:
                 images.append((image.name, image.data))
     except Exception as exc:
-        print(f"PyPDF2 Image extraction failure: {exc}")
+        print(f"pypdf Image extraction failure: {exc}")
     return images
 
 
@@ -444,7 +444,7 @@ def write_benchmark_report(
             if len([el for el in image_extraction_times[name] if el is not None]) > 0
         ]
         print(names)
-        print(image_extraction_times["pypdf2"])
+        print(image_extraction_times["pypdf"])
         averages = [np.mean(image_extraction_times[name]) for name in names]
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
@@ -553,16 +553,16 @@ if __name__ == "__main__":
             license="Apache v2",
             last_release_date="2020-03-21",
         ),
-        "pypdf2": Library(
-            "PyPDF2",
-            "pypdf2",
-            "https://pypi.org/project/PyPDF2/",
-            pypdf2_get_text,
-            version=PyPDF2.__version__,
-            watermarking_function=pypdf2_watermarking,
+        "pypdf": Library(
+            "pypdf",
+            "pypdf",
+            "https://pypi.org/project/pypdf/",
+            pypdf_get_text,
+            version=pypdf.__version__,
+            watermarking_function=pypdf_watermarking,
             license="BSD 3-Clause",
             last_release_date="2022-09-25",
-            image_extraction_function=pypdf2_image_extraction,
+            image_extraction_function=pypdf_image_extraction,
         ),
         "pdfminer": Library(
             "pdfminer.six",
