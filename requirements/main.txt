@@ -24,6 +24,8 @@ idna==3.4
     # via requests
 levenshtein==0.20.9
     # via python-levenshtein
+lxml==4.9.2
+    # via -r requirements/main.in
 numpy==1.24.1
     # via -r requirements/main.in
 pdfminer-six==20221105
@@ -45,7 +47,11 @@ pydantic==1.10.4
     # via -r requirements/main.in
 pygments==2.13.0
     # via rich
+pymupdf==1.21.1
+    # via -r requirements/main.in
 pypdf==3.1.0
+    # via -r requirements/main.in
+pypdfium2==3.15.0
     # via -r requirements/main.in
 python-barcode==0.14.0
     # via borb
