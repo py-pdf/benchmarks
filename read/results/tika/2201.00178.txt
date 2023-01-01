@@ -300,13 +300,7 @@ k+q thus
 
 to the flow coefficients Pqj and Tqj (see eq A7)
 
-〈φω∗k φ
-ω
-k+q〉 = H
-
-ω
-kk′nn′
-
+〈φω∗k φωk+q〉 = Hωkk′nn′
 ∑
 j
 
@@ -342,14 +336,7 @@ Bk,q =
 
 ∑
 ω
-Hω∗kk′nn′φ
-
-ω∗
-k φ
-
-ω
-k+q∑
-
+Hω∗kk′nn′φω∗k φωk+q∑
 ω
 |Hωkk′nn′ |2
 
@@ -370,14 +357,14 @@ Here, we sum over both ±ω within a few mode linewidths Γ. Denoting the resona
 
 |ω| ∈
 (
-ωnk − �Γnk/2, ωnk + �Γnk/2
+ωnk − εΓnk/2, ωnk + εΓnk/2
 
 )
 or
 
 |ω| ∈
 (
-ωn′k′ − �Γn′k′/2, ωn′k′ + �Γn′k′/2
+ωn′k′ − εΓn′k′/2, ωn′k′ + εΓn′k′/2
 
 )
 . (7)
@@ -473,9 +460,9 @@ Maximum signal can be extracted from the weighted summation of the cross correla
 profiles of the two modes [n, k] and [n′, k′] closely align in ω space. This implies that their mode frequencies should be
 
 sufficiently close (|ωnk − ωn′k′ | ≤ δ, the separation parameter). Since Lorentzians decay rapidly, the summation over
-±ω is significant only over a few linewidths (�, the summation parameter; see eq 7). We have empirically found and
+±ω is significant only over a few linewidths (ε, the summation parameter; see eq 7). We have empirically found and
 tabulated δ in Table 1 for the radial order couplings n-n′ ∈ f-f, p1-p1, and p2-p2 (the signal strength depends only
-weakly on �; we set it to 3 line widths).
+weakly on ε; we set it to 3 line widths).
 
 Figure 1 shows that for any two adjacent ridges (adjacent n and n′), mode frequencies ωnk and ωn′k become spaced
 
@@ -675,16 +662,7 @@ For mode-coupling, horizontal divergence (hereafter div) and radial vorticity (h
 substituting P and T from eq 3 into eq 2 as below -
 
 uuu(q, z) = −∇2Pez +∇(∂zP ) +∇hT×ez,
-= −(0, 0, ∂2xP + ∂
-
-2
-yP + ∂
-
-2
-zP ) + (∂x∂zP, ∂y∂zP, ∂
-
-2
-zP ) + (∂yT, −∂xT, 0). (15)
+= −(0, 0, ∂2xP + ∂2yP + ∂2zP ) + (∂x∂zP, ∂y∂zP, ∂2zP ) + (∂yT, −∂xT, 0). (15)
 
 Setting ∂2x + ∂
 2
@@ -972,10 +950,7 @@ q2 fjez + iq f
 j
 
 }
-Pσjq + iq×ez fjT
-
-σ
-jq. (A1)
+Pσjq + iq×ez fjTσjq. (A1)
 
 For flows in the anelastic limit (u � speed of sound), we can denote the flow perturbation operator as δLσ =
 −2iωρuσ ·∇ (see Hanasoge et al. 2017). Substituting Eq. A1 into the operator, we get,
@@ -987,17 +962,7 @@ For flows in the anelastic limit (u � speed of sound), we can denote the flow 
 j
 
 {
-−k · q f ′jP
-
-σ
-jq − k · (q×ez) fjT
-
-σ
-jq + q
-
-2 fjP
-σ
-jq ∂z
+−k · q f ′jPσjq − k · (q×ez) fjTσjq + q2 fjPσjq ∂z
 
 }
 . (A3)
@@ -1052,13 +1017,7 @@ k′)
 
 −
 [
-k · q f ′jP
-
-σ
-jq + k · (q×ez) fjT
-
-σ
-jq
+k · q f ′jPσjq + k · (q×ez) fjTσjq
 
 ]
 (k̂ · k̂
@@ -1128,10 +1087,7 @@ measurement between modes k and k + q From eq 8 of Woodard (2014), we write the 
 
 wavefield cross-correlation as
 
-〈φω∗k φ
-ω+σ
-k+q 〉 = H
-
+〈φω∗k φω+σk+q 〉 = H
 ω
 kk′σΛ
 
@@ -1140,11 +1096,7 @@ k′(σ), (A7)
 
 where the function H is given by
 
-Hωkk′σ = −2iω(Nk|R
-ω
-k |
-
-2Rω+σk′ +Nk′ |R
+Hωkk′σ = −2iω(Nk|Rωk |2Rω+σk′ +Nk′ |R
 ω+σ
 k′ |
 
@@ -1184,16 +1136,14 @@ k
 
 ∑
 ω
-|φωk |
+|φωk |2∑
 
-2∑
 ω
 Rωk
 
 , (A10)
 
-where the 1
-Q
+where the 1Q
 
 Q∑
 k
@@ -1287,11 +1237,9 @@ B.2. Obtaining the coefficients α
 Now, demand that the averaging kernel should resemble a unimodulus target Gaussian centered at zo
 
 T (z, zo) =
-1
+1√
 
-√
 2π∆2
-
 exp
 (z − zo
 
@@ -1333,9 +1281,7 @@ Figure 8. Left : Kernel Kk,q(z) (eq B14) shown vs depth z for the three radial o
 (eq B17) using SOLA, for qR� = [−112,−45] at depth z0 = −0.48 Mm, and the corresponding target Gaussian (eq B15).
 Integral of the averaging kernel over z is 0.89.
 
-Setting ∂X
-∂α
-→ 0 gives us the matrix problem to be solved
+Setting ∂X∂α → 0 gives us the matrix problem to be solved
 
 A{α} = v,
 

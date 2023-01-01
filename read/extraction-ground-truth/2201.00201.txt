@@ -827,8 +827,7 @@ value upon visual inspection of the PA plane. We modeled the
 central trend of the PA relation, as well as its short- and long-
 period edges, with linear or quadratic functions in the form
 
-log(τ/yr) = a0 + a1 (P/P̃) + a2 (P/P̃)
-2 , (B.1)
+log(τ/yr) = a0 + a1 (P/P̃) + a2 (P/P̃)2 , (B.1)
 
 (where P̃ = 350 days) and employed a Lenvenberg-Marquardt
 nonlinear regression algorithm3 to derive the best-fit coefficients,
@@ -868,8 +867,7 @@ PA relation can be translated into a period-initial mass relation,
 which we derived using the same approach described above, and
 assuming the form
 
-log(Mi/M�) = b0 + b1 (P/P̃) + b2 (P/P̃)
-2 . (B.2)
+log(Mi/M�) = b0 + b1 (P/P̃) + b2 (P/P̃)2 . (B.2)
 
 The resulting best-fit lines are displayed in Fig. B.1, and the co-
 efficients are given in Table B.2.

@@ -334,8 +334,7 @@ B = { U1 × U2 | Ui offen in Xi, i = 1, 2 } ist eine Basis von T.
 
 U
 
-x
-x2
+xx2
 
 x1
 
@@ -631,9 +630,7 @@ g◦f
 
 Y
 
-g
-��
-
+g��
 Z
 
 Beweis: Sei U ⊆ Z offen ⇒ (g ◦ f)−1(U) = f−1(g−1(U)). g−1(U) ist offen in Y weil g stetig
@@ -697,17 +694,13 @@ x2i = 1
 
 O. B. d. A. sei N =
 
-
-
-
+
 0
 ...
 0
 1
 
-
-. Die Gerade durch N und P schneidet die Ebene H in genau
-
+. Die Gerade durch N und P schneidet die Ebene H in genau
 einem Punkt P̂ . P wird auf P̂ abgebildet.
 
 f :Sn \ {N } → Rn
@@ -718,30 +711,22 @@ LP ∩H
 
 wobei Rn = H =
 
-
-
-
- x1...
+
+ x1...
 xn+1
 
-
- ∈ Rn+1
-
+ ∈ Rn+1
 ∣∣∣∣∣∣∣ xn+1 = 0
-
- und LP die Gerade in Rn+1 durch N
 
+ und LP die Gerade in Rn+1 durch N
 und P ist.
 
 Sei P =
 
-
- x1...
+ x1...
 xn+1
 
-
-, so ist xn+1 < 1, also ist LP nicht parallel zu H. Also schneiden sich LP
-
+, so ist xn+1 < 1, also ist LP nicht parallel zu H. Also schneiden sich LP
 und H in genau einem Punkt P̂ .
 
 Es gilt: f ist bijektiv und die Umkehrabbildung ist ebenfalls stetig.
@@ -993,16 +978,14 @@ Uij ∪ (X \A) = X
 
 ⇒
 
-
- n⋃
+ n⋃
 j=1
 
 Uij ∪ (X \A)
 
-
- ∩A = A
-
+ ∩A = A
 ⇒
+
 n⋃
 j=1
 
@@ -1034,8 +1017,7 @@ offene Teilmengen Ux,y von X und Vx,y von Y sowie ein i ∈ I, sodass Ux,y × Vx
 
 Wi
 
-x
-y
+xy
 
 x
 
@@ -1064,29 +1046,14 @@ i=1 Ux0,yi . Da X kompakt ist, gibt es x1, . . . , xn ∈ X mit
 ⋃n
 j=1 Uxj = X
 
-⇒
-⋃k
-j=1
-
-⋃m(xj)
-i=1
-
-(
-Uxj ,yi × Vxj ,yi
-
-)︸ ︷︷ ︸
+⇒ ⋃kj=1⋃m(xj)i=1 (Uxj ,yi × Vxj ,yi)︸ ︷︷ ︸
 Ein grün-oranges Kästchen
 
 ⊇ X × Y
 
-⇒
-⋃
-j
-
-⋃
-iWi(xj , yi) = X × Y �
-
+⇒ ⋃j ⋃iWi(xj , yi) = X × Y �
 Bemerkung 21
+
 Sei X ein Hausdorffraum und K ⊆ X kompakt. Dann ist K abgeschlossen.
 
 Beweis: z. Z.: Komplement ist offen
@@ -1264,10 +1231,7 @@ X
 
 Y
 
-{(x, sin( 1
-x
-)) ∈ X × Y }
-
+{(x, sin( 1x)) ∈ X × Y }
 (−1, 1) ⊆ Y
 
 (b) Sinus
@@ -1537,30 +1501,11 @@ Umgebung: B1(0, 1)→
 ∣∣ w2 + z2 < 1 } = V2
 V1 ∩ V2 = ∅?
 (a : b : c) ∈ V1 ∩ V2
-⇒ a 6= 0 und ( b
-
-a
-)2 + ( c
-
-a
-)2 < 1⇒ c
-
-a
-< 1
-
-⇒ c 6= 0 und (a
-c
-)2 + ( b
-
-c
-)2 < 1⇒ a
-
-c
-< 1
-
+⇒ a 6= 0 und ( ba)2 + ( ca)2 < 1⇒ ca < 1
+⇒ c 6= 0 und (ac )2 + ( bc)2 < 1⇒ ac < 1
 ⇒ Widerspruch
-4) Sn =
 
+4) Sn =
 {
 x ∈ Rn+1
 
@@ -1577,22 +1522,7 @@ Ci := {(x1, . . . , xn+1) ∈ Sn|xi < 0} → B1(0, . . . , 0)
 (x1, . . . , xn) 7→ (x1, . . . , xi−1,
 
 √
-1−
-
-∑n
-k=1 x
-
-2
-k, xi, . . . , xn), oder −
-
-√
-1−
-
-∑n
-k=1 x
-
-2
-k für Ci
+1−∑nk=1 x2k, xi, . . . , xn), oder −√1−∑nk=1 x2k für Ci
 
 Sn =
 ⋃n+1
@@ -1693,15 +1623,9 @@ b) Ist grad(F )(X) 6= 0 ∀x ∈ X, so ist X eine Mannigfaltigkeit der Dimension
 Beweis:
 
 a) Sei y ∈ Rn \ V (F ). Weil F stetig ist, gibt es δ > 0, sodass F (Bδ(y)) ⊆ Bε(F (y)) mit
-ε = 1
+ε = 12‖F (y)‖. Folgt Bδ(y) ∩ V (F ) = ∅ ⇒ Rn \ V (F ) ist offen.
 
-2
-‖F (y)‖. Folgt Bδ(y) ∩ V (F ) = ∅ ⇒ Rn \ V (F ) ist offen.
-
-b) Sei x ∈ X mit grad(F )(x) 6= 0, also o. B. d. A. ∂F
-∂X1
-
-(x) 6= 0, x = (x1, . . . , xn),
+b) Sei x ∈ X mit grad(F )(x) 6= 0, also o. B. d. A. ∂F∂X1 (x) 6= 0, x = (x1, . . . , xn),
 x′ := (x2, . . . , xn) ∈ Rn−1. Der Satz von der impliziten Funktion liefert nun: Es
 gibt Umgebungen U von x′ und differenzierbare Funktionen g : U → R, sodass
 G : U → Rn, u 7→ (g(u), u) eine stetige Abbildung auf eine offene Umgebung V von x
@@ -1716,15 +1640,13 @@ Sn ist n-dimensionale Mannigfaltigkeit in Rn+1
 
 2) F : R2 → R, (x, y) 7→ y2−x3 Es gilt: grad(F ) = (−3x2, 2y). Also: grad(0, 0) = (0, 0).
 
-−5−4−3−2−1
-0
-
+−5−4−3−2−10
 1
+
 2
-
 3
-4
 
+4
 5
 
 −4
@@ -1773,9 +1695,7 @@ x
 
 y
 
-a = 1
-3
-
+a = 13
 a = 1
 a = 2
 
@@ -1916,13 +1836,10 @@ Beweis: Seien (U ′, ϕ′) und (V ′, ψ′) Karten von X bzw. Y um x bzw. f(
 ist genau dann differenzierbar, wenn ψ ◦ f ◦ ϕ−1 differenzierbar ist.
 Beispiel 23
 
-f : R→ R, x 7→ x3 ist kein Diffeomorphismus, aber Homöomorphismus, da mit g(x) := 3
-√
-x
-
+f : R→ R, x 7→ x3 ist kein Diffeomorphismus, aber Homöomorphismus, da mit g(x) := 3√x
 gilt: f ◦ g = idR, g ◦ f = idR
-Bemerkung 30
 
+Bemerkung 30
 Sei X eine glatte Mannigfaltigkeit. Dann ist
 
 Diffeo(X) := { f : X → X | f ist Diffeomorphismus }
@@ -1938,44 +1855,33 @@ F (u, v) = (x(u, v), y(u, v), z(u, v))
 
 JF (u, v) =
 
-
-∂x∂u(p) ∂x∂v (p)∂y
-∂u
+∂x∂u(p) ∂x∂v (p)∂y
+∂u(p)
 
-(p)
 ∂y
-∂v
+∂v (p)
 
-(p)
 ∂z
-∂u
+∂u(p)
 
-(p) ∂z
-∂v
+∂z
+∂v (p)
 
-(p)
-
-
-
-
+
 Beispiel 24
-1) Rotationsflächen: Sei r : R→ R>0 eine differenzierbare Funktion.
 
+1) Rotationsflächen: Sei r : R→ R>0 eine differenzierbare Funktion.
 F : R2 → R3 (u, v) 7→ (r(u) cos(u), r(v) sin(u), v)
 
 JF (u, v) =
 
-
-−r(v) sinu r′(v) cosur(v) cosu r′(v) sinu
-
+−r(v) sinu r′(v) cosur(v) cosu r′(v) sinu
 0 1
 
-
-
-
+
 hat Rang 2 für alle (u, v) ∈ R2.
-2) Kugelkoordinaten: F : R2 → R3,
 
+2) Kugelkoordinaten: F : R2 → R3,
 (u, v) 7→ (R cos v cosu,R cos v sinu,R sin v)
 Es gilt: F (u, v) ∈ S2R, denn
 
@@ -2060,17 +1966,13 @@ Die Jacobi-Matrix
 
 JF (u, v) =
 
-
-−R cos v sinu −R sin v cosuR cos v cosu −R sin v sinu
-
+−R cos v sinu −R sin v cosuR cos v cosu −R sin v sinu
 0 R cos v
 
-
-
-
+
 hat Rang 2 für cos v 6= 0. In N und S ist cos v = 0.
-Bemerkung 31
 
+Bemerkung 31
 Jede reguläre Fläche S ⊆ R3 ist eine 2-dimensionale, differenzierbare Mannigfaltigkeit.
 
 Beweis:
@@ -2094,18 +1996,14 @@ Abbildung 2.5: Reguläre Fläche S zum Beweis von Bemerkung 31
 
 Idee: Finde differenzierbare Funktion F̃−1j in Umgebung W von s, sodass F̃
 −1
-j |S∩W = F
-
-−1
-j .
+j |S∩W = F−1j .
 
 Ausführung: Sei u0 ∈ Ui, v0 ∈ Uj mit Fi(u0) = s = Fj(v0).
 Da Rg(JFj (v0)) = 2 ist, ist o. B. d. A.
 
 det
 
-(
-∂x
+(∂x
 ∂u
 
 ∂x
@@ -2133,26 +2031,21 @@ F̃j
 
 =
 
-
-∂x∂u ∂x∂v 0∂y
+∂x∂u ∂x∂v 0∂y
 ∂u
 
 ∂y
-∂v
+∂v 0
 
-0
 ∂z
 ∂u
 
 ∂z
-∂v
+∂v 1
 
-1
-
-
-⇒ det J
-
+⇒ det J
 F̃j
+
 (v0, 0) 6= 0
 
 Analysis II
@@ -2166,8 +2059,7 @@ differenzierbar Inverse F−1j hat.
 Weiter gilt:
 
 F̃j
-−1
-|W∩S = F−1j |W∩S
+−1|W∩S = F−1j |W∩S
 
 ⇒ F−1j ◦ Fi|F−1i (W∩S) = F
 −1
@@ -2195,10 +2087,7 @@ Beispiel 25 (Lie-Gruppen)
 
 3) (R×, ·)
 4) (R>0, ·)
-5) (Rn,+), denn A ·B(i, j) =
-
-∑n
-k=1 aikbkj ist nach allen Variablen differenzierbar
+5) (Rn,+), denn A ·B(i, j) = ∑nk=1 aikbkj ist nach allen Variablen differenzierbar
 
 (A−1)(i, j) =
 det(Aij)
@@ -2207,12 +2096,10 @@ detA
 
 Aij =
 
-
-ai1 . . . ain... . . . ...
+ai1 . . . ain... . . . ...
 an1 . . . ann
 
-
- ∈ R(n−1)×(n−1)
+ ∈ R(n−1)×(n−1)
 
 ist differenzierbar.
 
@@ -2313,11 +2200,7 @@ wenn gilt:
 (i) Für ∆ ∈ K und S ⊆ ∆ Teilsimplex ist S ∈ K.
 (ii) Für ∆1,∆2 ∈ K ist ∆1 ∩∆2 leer oder ein Teilsimplex von ∆1 und von ∆2.
 
-b) |K| :=
-⋃
-
-∆∈K ∆ (mit Teilraumtopologie) heißt geometrische Realisierung von K.
-
+b) |K| := ⋃∆∈K ∆ (mit Teilraumtopologie) heißt geometrische Realisierung von K.
 c) Ist d = max { k ∈ N0 | K enthält k-Simplex }, so heißt d die Dimension von K.
 
 
@@ -2492,23 +2375,13 @@ k+1
 )
 , k = 0, . . . , n
 
-⇒ χ(∆n) =
-∑n
-
-k=0(−1)k
-(
-n+1
-k+1
-
-)
+⇒ χ(∆n) = ∑nk=0(−1)k(n+1k+1)
 f(x) = (x+ 1)n+1
 
 Binomischer
-Lehrsatz
+Lehrsatz=
 
-=
 ∑n+1
-
 k=0
 
 (
@@ -2518,21 +2391,10 @@ k
 )
 xk
 
-⇒ 0 =
-∑n+1
-
-k=0
-
-(
-n+1
-k
-
-)
-(−1)k = χ(∆n)− 1
-
+⇒ 0 = ∑n+1k=0 (n+1k )(−1)k = χ(∆n)− 1
 ⇒ χ(∆n) = 1 �
-Definition 39
 
+Definition 39
 a) Ein 1D-Simplizialkomplex heißt Graph.
 
 b) Ein Graph, der homöomorph zu S1 ist, heißt Kreis.
@@ -2678,16 +2540,13 @@ und Cn(K) der R-Vektorraum mit Basis An(K), d. h.
 
 Cn(K) =
 
-
- ∑
-
+ ∑
 σ∈An(K)
 
 cσ · σ
 
 ∣∣∣∣∣∣ cσ ∈ R
-
-
+
 
 Sei σ = ∆(x0, . . . , xn) ∈ An(K), sodass x0 < x1 < · · · < xn.
 Für i = 0, . . . , n sei ∂iσ := ∆(x0, . . . , x̂i, . . . , xn) die i-te Seite von σ und dσ = dnσ :=∑
@@ -2952,13 +2811,8 @@ Beweis:
 Dann sei H(t, s) :=
 
 {
-H ′(t, 2s) falls 0 ≤ s ≤ 1
-
-2
-
-H ′′(t, 2s− 1) falls 1
-2
-≤ s ≤ 1
+H ′(t, 2s) falls 0 ≤ s ≤ 12
+H ′′(t, 2s− 1) falls 12 ≤ s ≤ 1
 
 ⇒ H ist stetig und Homotopie von γ1 nach γ3.
 �
@@ -3042,27 +2896,11 @@ Verwende dazu
 
 ϕ(t) =
 
-
-
-
+
 1
-2
-t falls 0 ≤ t < 1
-
-2
-
-t− 1
-4
-
-falls 1
-2
-≤ t < 3
-
-4
-
-2t− 1 falls 3
-4
-≤ t ≤ 1
+2 t falls 0 ≤ t < 12
+t− 14 falls 12 ≤ t < 34
+2t− 1 falls 34 ≤ t ≤ 1
 
 Bemerkung 44
 Sei X ein topologischer Raum, a, b, c ∈ X, γ1, γ′1 Wege von a nach b und γ2, γ′2 Wege von b
@@ -3560,9 +3398,7 @@ a) Seien y1, y2 ∈ Y .
 
 55 3.3. ÜBERLAGERUNGEN
 
-Sei U Umgebung von x wie in Definition 48, Vj1 bzw. Vj2 die Komponente von p
-−1(U),
-
+Sei U Umgebung von x wie in Definition 48, Vj1 bzw. Vj2 die Komponente von p−1(U),
 die y1 bzw. y2 enthält.
 
 Dann ist Vj1 6= Vj2 , weil beide ein Element aus p−1(x) enthalten.
@@ -3652,11 +3488,7 @@ Sei z ∈ T, x = f(z), U Umgebung von x wie in Definition 48, V die Komponente v
 die y := f0(z) = f1(z) enthält.
 
 Sei q : U → V die Umkehrabbildung zu p|V .
-Sei W := f−1(U) ∩ f−10 (V ) ∩ f
-
-−1
-1 (V ). W ist offene Umgebung in Z von z.
-
+Sei W := f−1(U) ∩ f−10 (V ) ∩ f−11 (V ). W ist offene Umgebung in Z von z.
 Behauptung: W ⊆ T
 Denn für w ∈W ist q(f(w)) = q((p ◦ f0))(w) = ((q ◦ p) ◦ f0)(w) = f0(w) = q(f(w)) = f1(w)
 ⇒ T ist offen.
@@ -3800,10 +3632,7 @@ g : Ỹ → X̃ mit g(ỹ0) = x̃0 und p ◦ g = q
 Damit gilt: p ◦ q ◦ f = q ◦ f = p, q ◦ f ◦ g = p ◦ g = q. Also ist g ◦ f : X̃ → X̃ Lift von
 p : X̃ → X mit (g ◦ f)(x̃0) = x̃0.
 Da auch idx̃ diese Eigenschaft hat, folgt mit Bemerkung 53: g ◦ f = idX̃ .
-Analog gilt f ◦ g = id
-
-Ỹ
-. �
+Analog gilt f ◦ g = idỸ . �
 
 Die Frage, wann es eine universelle Überlagerung gibt, beantwortet der folgende Satz:
 Definition 53
@@ -3826,13 +3655,7 @@ sei U eine einfach zusammenhängende Umgebung von x und
 
 Ũ = Ũ(x, [γ]) := { (y, [γ ∗ α]) | y ∈ U,α Weg in U von x nach y }
 
-p ist Überlagerung: p|
-Ũ
-
-: Ũ → U bijektiv. p ist stetig und damit p|
-Ũ
-
-ein Homöomorphismus.
+p ist Überlagerung: p|Ũ : Ũ → U bijektiv. p ist stetig und damit p|Ũ ein Homöomorphismus.
 
 Sind γ1, γ2 Wege von x0 nach x und γ1 ∼ γ2, so ist Ũ(x, [γ1]) ∩ Ũ(x, [γ2]) = ∅, denn: Ist
 γ1 ∗ α ∼ γ2 ∗ α, so ist auch γ1 ∼ γ2. Also ist p eine Überlagerung.
@@ -3983,10 +3806,7 @@ Beispiel 41
 i) 1G ◦ h = 1G · h · 1−1G = h
 ii) (g1 · g2) ◦ h = (g1 · g2) · h · (g · g2)−1
 
-= g1 · (g2 · h · g−12 ) · g
-−1
-1
-
+= g1 · (g2 · h · g−12 ) · g−11
 = g1 ◦ (g2 ◦ h)
 
 Definition 56
@@ -4194,8 +4014,7 @@ a) „⊆“ folgt direkt aus der Definition von PR+ und PR−
 
 2⇒
 
-
-
+
 Q liegt zwischen P und R⇒ Q ∈ PR
 R liegt zwischen P und Q⇒ Q ∈ PR
 P liegt zwischen Q und R⇒ Q ∈ PR
@@ -4487,10 +4306,7 @@ Man schreibt: ∠R1PR2 bzw. ∠R2PR12
 b) Zwei Winkel sind gleich, wenn es eine Isometrie gibt, die den einen Winkel auf den
 anderen abbildet.
 
-c) ∠R′1P
-′R′2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P
-
-′) = P ,
+c) ∠R′1P ′R′2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P ′) = P ,
 ϕ(P ′R′+1 ) = PR
 
 +
@@ -4523,9 +4339,7 @@ R′2
 
 R2
 
-(a) ∠R′1P
-′R′2 ist kleiner als ∠R1PR2,
-
+(a) ∠R′1P ′R′2 ist kleiner als ∠R1PR2,
 vgl. Definition 61.c
 
 P
@@ -4651,15 +4465,10 @@ Abbildung 4.10: Situation aus Proposition 4.5
 
 Sei α ein Innenwinkel von 4.
 
-Beh.: Es gibt ein Dreieck 4′ mit IWS(4′) = IWS(4) und einem Innenwinkel α′ ≤ α
-2
-.
-
+Beh.: Es gibt ein Dreieck 4′ mit IWS(4′) = IWS(4) und einem Innenwinkel α′ ≤ α2 .
 Dann gibt es für jedes n ein 4n mit IWS(4n) = IWS(4) und Innenwinkel α′ ≤ α2n . Für
 α
-2n
-< ε ist dann die Summe der beiden Innenwinkel um 4n größer als π ⇒ Widerspruch
-
+2n < ε ist dann die Summe der beiden Innenwinkel um 4n größer als π ⇒ Widerspruch
 zu Folgerung 4.4.
 
 Beweis: Es seien A,B,C ∈ X und 4 das Dreieck mit den Eckpunkten A,B,C und α sei
@@ -4824,11 +4633,9 @@ LC
 Abbildung 4.16: 4ABLa und 4CLCB sind ähnlich, weil IWS = π
 
 Strahlensatz
-=======⇒ a
+=======⇒ ahc =
 
-hc
-= c
-
+c
 ha
 → a · ha = c · hc
 
@@ -4836,9 +4643,7 @@ Satz 4.7 (Satz des Pythagoras)
 Im rechtwinkligen Dreieck gilt a2 + b2 = c2, wobei c die Hypotenuse und a, b die beiden
 Katheten sind.
 
-Beweis: (a+ b) · (a+ b) = a2 + 2ab+ b2 = c2 + 4 · (1
-2
-· a · b)
+Beweis: (a+ b) · (a+ b) = a2 + 2ab+ b2 = c2 + 4 · (12 · a · b)
 
 
 
@@ -5315,14 +5120,12 @@ c′z + d′
 aa
 ′z+b′
 
-c′z+d′
-+ b
+c′z+d′ + b
 
 ca
 ′z+b′
 
-c′z+d′
-+ d
+c′z+d′ + d
 
 =
 
@@ -5393,16 +5196,12 @@ a(x1 − x0) = c(x1 − x∞)⇒ c = a x1−x0x1−x∞
 x1−x0
 x1−x∞ = 1
 
-⇒ a2 x1−x0
-x0−x∞ (x0 − x∞) = 1 ⇒ a
-
-2 = x1−x∞
-(x1−x∞)(x1−x0)
+⇒ a2 x1−x0x0−x∞ (x0 − x∞) = 1 ⇒ a
+2 = x1−x∞(x1−x∞)(x1−x0)
 
 d) Es gilt:
 
-A−1λ = A 1
-λ
+A−1λ = A 1λ
 
 B−1t = B−t
 
@@ -5469,9 +5268,7 @@ c d
 (
 
 1
-a
-
-0
+a 0
 0 a
 
 )
@@ -5480,9 +5277,7 @@ a
 (
 1 ab
 c
-a
-
-ad
+a ad
 
 )
 
@@ -5602,9 +5397,7 @@ Abbildung 4.22: Beweis von Proposition 4.9 (e) für eine Diagonalmatrix
 −1 0
 
 )
-, also σ(z) = −1
-
-z
+, also σ(z) = −1z
 
 Bemerkung 69
 Zu hyperbolischen Geraden g1, g2 gibt es σ ∈ PSL2(R) mit σ(g1) = g2.
@@ -5627,11 +5420,10 @@ y
 z = r · eiϕ
 
 1
-z
+z =
 
-= 1
-r
-· eiϕ
+1
+r · eiϕ
 
 Abbildung 4.23: Inversion am Kreis
 
@@ -5666,9 +5458,7 @@ f) Für σ ∈ PSL2(C) und z1, . . . , z4 ∈ C ∪ {∞ } ist
 
 DV(σ(z1), σ(z2), σ(z3), σ(z4)) = DV(z1, z2, z3, z4)
 
-und für σ(z) = 1
-z
-gilt
+und für σ(z) = 1z gilt
 
 DV(σ(z1), σ(z2), σ(z3), σ(z4)) = DV(z1, z2, z3, z4)
 
@@ -5698,16 +5488,16 @@ Alle zi sind paarweise verschieden ⇒ Widerspruch �
 b) DV(z1, z4, z3, z2) =
 
 (z1−z2)·(z3−z4)
-(z1−z4)·(z3−z2)
+(z1−z4)·(z3−z2) =
 
-= 1
+1
 DV(z1,z2,z3,z4)
 
 c) DV(z3, z2, z1, z4) =
 (z3−z4)·(z1−z2)
-(z3−z2)·(z1−z4)
+(z3−z2)·(z1−z4) =
 
-= 1
+1
 DV(z1,z2,z3,z4)
 
 d) Zwei der zi dürfen gleich sein, da:
@@ -5891,17 +5681,11 @@ a) Die Kurve γ heißt durch Bogenlänge parametrisiert, wenn gilt:
 
 ‖γ′(t)‖2 = 1 ∀t ∈ I
 
-Dabei ist γ′(t) = (γ′1(t), γ
-′
-2(t), . . . , γ
-
-′
-n(t)).
+Dabei ist γ′(t) = (γ′1(t), γ′2(t), . . . , γ′n(t)).
 
 b) l(γ) =
 ∫ b
-a
-‖γ′(t)‖dt heißt Länge von γ.
+a ‖γ′(t)‖dt heißt Länge von γ.
 
 Bemerkung 71 (Eigenschaften von Kurven I)
 Sei γ : I = [a, b]→ Rn eine C∞-Funktion.
@@ -5913,15 +5697,12 @@ Beweis:
 
 a) l(γ) =
 ∫ b
-a
-‖γ′(t)‖dt =
+a ‖γ′(t)‖dt =
 
 ∫ b
-a
+a 1dt = b− a.
 
-1dt = b− a.
 b) Im Folgenden wird die Aussage nur für γ : [a, b]→ R2 bewiesen. Allerdings funktioniert
-
 der Beweis im Rn analog. Es muss nur die Ableitung angepasst werden.
 
 1 = ‖γ′(t)‖ = ‖γ′(t)‖2 = 〈γ′(t), γ′(t)〉
@@ -6035,23 +5816,15 @@ da gilt:
 
 〈n(t), γ′(t)〉 =
 〈(
-− cos t
-
-r
-− sin t
-
-r
+− cos tr
+− sin tr
 
 )
 ,
 
 (
-− sin t
-
-r
-cos t
-
-r
+− sin tr
+cos tr
 
 )〉
 = (− cos t
@@ -6086,36 +5859,21 @@ r
 
 det(γ′1(t), n(t)) =
 
-∥∥∥∥
-(
-− sin t
-
-r
-− cos t
-
-r
-cos t
-
-r
-− sin t
-
-r
-
+∥∥∥∥(− sin tr − cos trcos tr − sin tr
 )∥∥∥∥
+
 = (− sin t
-
 r
+
 )2 − (− cos t
-
 r
+
 ) · cos t
-
 r
+
 = 1
 
-Die Krümmung ist für jedes t konstant 1
-r
-, da gilt:
+Die Krümmung ist für jedes t konstant 1r , da gilt:
 
 γ′′(t) =
 
@@ -6165,10 +5923,7 @@ Sei γ : I → R3 eine durch Bogenlänge parametrisierte Kurve.
 
 a) Für t ∈ I heißt κ(t) := ‖γ′′(t)‖ die Krümmung von γ in t.
 
-b) Ist für t ∈ I die Ableitung γ′′(t) 6= 0, so heißt γ
-′′(t)
-
-‖γ′′(t)‖ Normalenvektor an γ in t.
+b) Ist für t ∈ I die Ableitung γ′′(t) 6= 0, so heißt γ′′(t)‖γ′′(t)‖ Normalenvektor an γ in t.
 
 c) b(t) sei ein Vektor, der γ′(t), n(t) zu einer orientierten Orthonormalbasis von R3 ergänzt.
 Also gilt:
@@ -6210,26 +5965,19 @@ Für p = F−1(s) ∈ U sei
 
 JF (p) =
 
-
-∂x∂u(p) ∂x∂v (p)∂y
-∂u
+∂x∂u(p) ∂x∂v (p)∂y
+∂u(p)
 
-(p)
 ∂y
-∂v
+∂v (p)
 
-(p)
 ∂z
-∂u
+∂u(p)
 
-(p) ∂z
-∂v
+∂z
+∂v (p)
 
-(p)
-
-
-
-
+
 und DpF : R2 → R3 die durch JF (p) definierte lineare Abbildung.
 
 Dann heißt TsS := Bild(DpF ) die Tangentialebene an s ∈ S.
@@ -6343,9 +6091,7 @@ C = E ∩ S ist Kreislinie
 κNor(s, x) =
 
 1
-r
-
-= 1
+r = 1
 
 2) S = V (X2 + Z2 − 1) ⊆ R3 ist ein Zylinder (siehe Abbildung 5.2a). s = (1, 0, 0)
 x1 = (0, 1, 0)⇒ E1 = R · e1 + R · e2 (x, y-Ebene)
@@ -6405,13 +6151,12 @@ y
 z
 
 (a) S = V (X2 + Z2 − 1)
-−2 −1.5
+−2 −1.5 −1
 
-−1 −0.5
-0 0.5
+−0.5 0
+0.5 1
 
-1 1.5
-2
+1.5 2
 
 −2
 
@@ -6506,17 +6251,9 @@ Bemerkung 78
 
 Ersetzt man n durch −n, so gilt:
 
-κ−nNor(s, x) = −κ
-n
-Nor(x) ∀x ∈ T 1s S
-
-⇒ κ−n1 (s) = −κ
-n
-2 (s)
-
-κ−n2 (s) = −κ
-n
-1 (s)
+κ−nNor(s, x) = −κnNor(x) ∀x ∈ T 1s S
+⇒ κ−n1 (s) = −κn2 (s)
+κ−n2 (s) = −κn1 (s)
 
 und K−n(s) = Kn(s) =: K(s)
 
@@ -6605,43 +6342,27 @@ det(IS) =
 ∥∥∥∥ ∂F∂u1 (p)× ∂F∂u2 (p)
 ∥∥∥∥2
 
-Beweis: Sei ∂F
-∂u1
+Beweis: Sei ∂F∂u1 (p) =
 
-(p) =
-
-
-x1x2
+x1x2
 x3
 
-
- , ∂F
-
-∂u2
-(p) =
-
-
-y1y2
+ , ∂F∂u2 (p) =
+y1y2
 y3
 
-
-
+
+Dann ist ∂F∂u1 (p)×
 
-Dann ist ∂F
-∂u1
-
-(p)× ∂F
+∂F
 ∂u2
 
 (p) =
 
-
-z1z2
+z1z2
 z3
 
-
- mit
-
+ mit
 z1 = x2y3 − x3y2
 z2 = x3y1 − x1y3
 z3 = x1y2 − x2y1
@@ -6665,39 +6386,26 @@ det(IS) = g1,1g2,2 − g21,2
 〈x1x2
 x3
 
-
- ,
-
-x1x2
+ ,
+x1x2
 x3
 
-
-〉〈
-
-
-y1y2
+〉〈y1y2
 y3
 
-
- ,
-
-y1y2
+ ,
+y1y2
 y3
 
-
-〉−
-
-〈x1x2
+〉−〈
+x1x2
 x3
 
-
- ,
-
-y1y2
+ ,
+y1y2
 y3
 
-
-〉2
+〉2
 
 = (x21 + x
 2
@@ -6743,15 +6451,13 @@ der Wert des Integrals von f über V , falls das Integral rechts existiert.
 Bemerkung 82
 a)
 ∫
-V
-fdA ist unabhängig von der gewählten Parametrisierung.
+V fdA ist unabhängig von der gewählten Parametrisierung.
 
 b) Sei f : S → R eine Funktion, die im Sinne von Definition 77.b lokal integrierbar ist.
 Dann ist
 
 ∫
-S
-fdA wohldefiniert, falls (z. B.) S kompakt ist.
+S fdA wohldefiniert, falls (z. B.) S kompakt ist.
 
 Etwa: ∫
 S
@@ -6844,10 +6550,7 @@ Beh.: 〈xi, dsn(xj)〉 = 〈 ∂
 ∂ui∂uj
 (p), dsn(xi)〉
 
-⇒ 〈 ∂2F
-∂ui∂uj
-
-(p), dsn(xi)〉 = 〈xj , dsn(xi)〉
+⇒ 〈 ∂2F∂ui∂uj (p), dsn(xi)〉 = 〈xj , dsn(xi)〉
 
 Bew.: 0 = 〈∂F
 ∂u
@@ -7045,11 +6748,7 @@ Beh.: { −1, 1 } ist nicht offen
 Bew.: durch Widerspruch
 
 Annahme: { −1, 1 } ist offen.
-Dann gibt es T ⊆ B, sodass
-
-⋃
-M∈T M = { −1, 1 }. Aber alle U ∈ B haben unendlich viele
-
+Dann gibt es T ⊆ B, sodass ⋃M∈T M = { −1, 1 }. Aber alle U ∈ B haben unendlich viele
 Elemente. Auch endlich viele Schnitte von Elementen in B haben unendlich viele Elemente
 ⇒ keine endliche nicht-leere Menge kann in dieser Topologie offen sein ⇒ {−1, 1 } ist
 nicht offen. �
@@ -7139,10 +6838,7 @@ ist kompakt.
 
 102 Lösungen der Übungsaufgaben
 
-SLn(R) ⊆ GLn(R) lässt sich mit einer Teilmenge des Rn
-2
-identifizieren. Nach Satz 1.1
-
+SLn(R) ⊆ GLn(R) lässt sich mit einer Teilmenge des Rn2 identifizieren. Nach Satz 1.1
 sind diese genau dann kompakt, wenn sie beschränkt und abgeschlossen sind. Definiere
 nun für für n ∈ N≥2,m ∈ N:
 
@@ -7523,26 +7219,18 @@ Seien a, b ∈ R3 Vektoren.
 
 a× b :=
 
-
-a1b3
+a1b3
 a3
 
-
-×
-
-
-a1b3
+×
+a1b3
 a3
 
-
- =
-
-
-a2b3 − a3b2a3b1 − a1b3
+ =
+a2b3 − a3b2a3b1 − a1b3
 a1b2 − a2b1
 
-
-
+
 
 
 
@@ -7657,20 +7345,19 @@ Q = Z ∪
 
 {
 1
+2 ,
+
+1
+3 ,
+
 2
-, 1
-
-3
-, 2
-
 3
 
 }
 =
 {
 z
-n
-mit z ∈ Z und n ∈ Z \ { 0 }
+n mit z ∈ Z und n ∈ Z \ { 0 }
 
 }
 Rationale Zahlen

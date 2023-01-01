@@ -52,6 +52,9 @@
 
 
 
+
+
+
 ar
 X
 
@@ -438,9 +441,7 @@ dT
 
 [log (T)− log (Tp,i)
 
-2σ2
-T,i
-
+2σ2T,i
 ). (1)
 
 In which, Tp,i is the DEM peak temperature, EMp,i is the peak EM function, and σT,i is the
@@ -471,9 +472,7 @@ DEM to the background-subtracted observed fluxes in multiple wavelengths, the th
 
 rameters, temperature width (σT,i), peak of temperature (Tp,i), and peak emission measure (EMp,i)
 
-are found by minimizing χ2
-i
-.
+are found by minimizing χ2i .
 
 Our data sample is uneven because of omitting some damaged images in between. There-
 fore to analyze the temperature oscillations, we use the Lomb-Scargle method. This method is
@@ -891,13 +890,10 @@ servations.
 
 arcsec
 
-a
-rc
+ar
+cs
 
-s
-e
-
-c
+ec
 
 79 154 229 304 379 454
 −68
@@ -915,13 +911,10 @@ a
 
 arcsec
 
-a
-rc
+ar
+cs
 
-s
-e
-
-c
+ec
 
  
 
@@ -956,13 +949,10 @@ the same loops studied by Jain et al. (2015) (see Fig.3a in Jain et al. (2015)).
 
 arcsec
 
-a
-rc
+ar
+cs
 
-s
-e
-
-c
+ec
 
 −154 0 154 308
 −572
@@ -1126,14 +1116,13 @@ Time
 Lo
 op
 
- L
-en
+ Le
+ng
 
-gt
-h(
+th
+(M
 
-Mm
-)
+m)
 
 5.8
 
@@ -1218,14 +1207,13 @@ Time
 Lo
 op
 
- L
-en
+ Le
+ng
 
-gt
-h(
+th
+(M
 
-Mm
-)
+m)
 
 5.8
 
@@ -1258,14 +1246,13 @@ Time
 Lo
 op
 
- L
-en
+ Le
+ng
 
-gt
-h(
+th
+(M
 
-Mm
-)
+m)
 
 5.6
 
@@ -1515,14 +1502,11 @@ Time
 Lo
 op
 
- L
-en
+ Le
+ng
 
-gt
-h(
-
-M
-m
+th(
+Mm
 
 )
 
@@ -1577,22 +1561,20 @@ Time
 No
 rm
 
-al
-ize
+ali
+ze
 
-d 
-In
+d I
+nt
 
-te
-ns
+en
+sit
 
-ity
- F
+y F
+e X
 
-e 
-XV
-
-III
+VI
+II
 
 Figure 5: Normalized intensity map of the flaring loop A for the wavelength Fe XVII I, and mean intensity of Fe
 
@@ -1728,15 +1710,14 @@ o
 p
 
  L
-e
+en
 
-n
 g
-
 th
-(M
 
+(M
 m
+
 )
 
 5.8
@@ -1774,15 +1755,14 @@ o
 p
 
  L
-e
+en
 
-n
 g
-
 th
-(M
 
+(M
 m
+
 )
 
 5.8
@@ -1820,15 +1800,14 @@ o
 p
 
  L
-e
+en
 
-n
 g
-
 th
-(M
 
+(M
 m
+
 )
 
 5.8
@@ -1873,33 +1852,27 @@ colors considered for the temperature range.
 Temp. Period (min)
 
 P
-e
+er
 
-rc
-e
-
+ce
 n
+
 ta
-
 g
-e
 
- o
+e 
+o
+
 f 
-
 T
-e
 
-m
+em
 p
 
-. 
-P
+. P
+er
 
-e
-ri
-
-o
+io
 d
 
 s
@@ -1931,8 +1904,7 @@ u
 m
 b
 
-e
-r
+er
 
 Figure 9: Hisogram of the parameter of (max(log(T))-min(log(T))) for each strip of the loops of the flaring (blue bars)
 

@@ -186,11 +186,7 @@ functions called artificial neurons which take n ∈ N num-
 bers x1, . . . , xn ∈ R as input, multiply them with weights
 w1, . . . , wn ∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
-an activation function is the sigmoid function ϕ(x) = 1
-
-1+e−x
-.
-
+an activation function is the sigmoid function ϕ(x) = 11+e−x .
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
 visualized in Figure 1(b). The interesting question is how

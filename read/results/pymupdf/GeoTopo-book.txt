@@ -533,20 +533,20 @@ x2
 i = 1
 �
 O. B. d. A. sei N =
-�
-�
-�
-�
-�
+
+
+
+
+
 0
 ...
 0
 1
-�
-�
-�
-�
-�. Die Gerade durch N und P schneidet die Ebene H in genau
+
+
+
+
+. Die Gerade durch N und P schneidet die Ebene H in genau
 einem Punkt ˆP. P wird auf ˆP abgebildet.
 f :Sn \ { N } → Rn
 P �→
@@ -554,39 +554,39 @@ genau ein Punkt
 � �� �
 LP ∩ H
 wobei Rn = H =
-�
-�
-�
-�
-�
-�
-�
-�
+
+
+
+
+
+
+
+
 x1
 ...
 xn+1
-�
-�
-� ∈ Rn+1
+
+
+ ∈ Rn+1
 �������
 xn+1 = 0
-�
-�
-�
-�
-�
+
+
+
+
+
 und LP die Gerade in Rn+1 durch N
 und P ist.
 Sei P =
-�
-�
-�
+
+
+
 x1
 ...
 xn+1
-�
-�
-�, so ist xn+1 < 1, also ist LP nicht parallel zu H. Also schneiden sich LP
+
+
+, so ist xn+1 < 1, also ist LP nicht parallel zu H. Also schneiden sich LP
 und H in genau einem Punkt ˆP.
 Es gilt: f ist bijektiv und die Umkehrabbildung ist ebenfalls stetig.
 1.4 Zusammenhang
@@ -785,13 +785,13 @@ n�
 j=1
 Uij ∪ (X \ A) = X
 ⇒
-�
-�
+
+
 n�
 j=1
 Uij ∪ (X \ A)
-�
-� ∩ A = A
+
+ ∩ A = A
 ⇒
 n�
 j=1
@@ -1436,8 +1436,8 @@ S ⊆ R3 heißt reguläre Fläche :⇔ ∀s ∈ S ∃ Umgebung V (s) ⊆ R3 ∃U
 F heißt (lokale) reguläre Parametrisierung von S.
 F(u, v) = (x(u, v), y(u, v), z(u, v))
 JF (u, v) =
-�
-�
+
+
 ∂x
 ∂u(p)
 ∂x
@@ -1450,23 +1450,23 @@ JF (u, v) =
 ∂u(p)
 ∂z
 ∂v(p)
-�
-�
+
+
 Beispiel 24
 1) Rotationsﬂächen: Sei r : R → R>0 eine diﬀerenzierbare Funktion.
 F : R2 → R3
 (u, v) �→ (r(u) cos(u), r(v) sin(u), v)
 JF (u, v) =
-�
-�
+
+
 −r(v) sin u
 r′(v) cos u
 r(v) cos u
 r′(v) sin u
 0
 1
-�
-�
+
+
 hat Rang 2 für alle (u, v) ∈ R2.
 2) Kugelkoordinaten: F : R2 → R3,
 (u, v) �→ (R cos v cos u, R cos v sin u, R sin v)
@@ -1521,16 +1521,16 @@ cos x
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 Die Jacobi-Matrix
 JF (u, v) =
-�
-�
+
+
 −R cos v sin u
 −R sin v cos u
 R cos v cos u
 −R sin v sin u
 0
 R cos v
-�
-�
+
+
 hat Rang 2 für cos v ̸= 0. In N und S ist cos v = 0.
 Bemerkung 31
 Jede reguläre Fläche S ⊆ R3 ist eine 2-dimensionale, diﬀerenzierbare Mannigfaltigkeit.
@@ -1582,8 +1582,8 @@ Oﬀensichtlich: �
 Fj|Uj×{ 0 } = Fj
 J�
 Fj =
-�
-�
+
+
 ∂x
 ∂u
 ∂x
@@ -1599,8 +1599,8 @@ Fj =
 ∂z
 ∂v
 1
-�
-� ⇒ det J�
+
+ ⇒ det J�
 Fj(v0, 0) ̸= 0
 Analysis II
 ======⇒ Es gibt Umgebungen W von Fj von �
@@ -1646,9 +1646,9 @@ k=1 aikbkj ist nach allen Variablen diﬀerenzierbar
 (A−1)(i, j) = det(Aij)
 det A
 Aij =
-�
-�
-�
+
+
+
 ai1
 . . .
 ain
@@ -1658,9 +1658,9 @@ ain
 an1
 . . .
 ann
-�
-�
-� ∈ R(n−1)×(n−1)
+
+
+ ∈ R(n−1)×(n−1)
 ist diﬀerenzierbar.
 det Aij kann 0 werden, da:
 � 1
@@ -1972,17 +1972,17 @@ An(K) := { σ ∈ K | dim(σ) = n }
 für n = 0, . . . , d = dim(K)
 und Cn(K) der R-Vektorraum mit Basis An(K), d. h.
 Cn(K) =
-�
-�
-�
+
+
+
 �
 σ∈An(K)
 cσ · σ
 ������
 cσ ∈ R
-�
-�
-�
+
+
+
 Sei σ = ∆(x0, . . . , xn) ∈ An(K), sodass x0 < x1 < · · · < xn.
 Für i = 0, . . . , n sei ∂iσ := ∆(x0, . . . , ˆxi, . . . , xn) die i-te Seite von σ und dσ = dnσ :=
 �
@@ -2247,11 +2247,11 @@ Abbildung 3.4: Das Zusammensetzen von Wegen ist nicht assoziativ
 Beweis: Das Zusammensetzen von Wegen ist wegen Bemerkung 42 bis auf Homotopie assoziativ.
 Verwende dazu
 ϕ(t) =
-�
-�
-�
-�
-�
+
+
+
+
+
 1
 2t
 falls 0 ≤ t < 1
@@ -3067,11 +3067,11 @@ Beweis:
 a) „⊆“ folgt direkt aus der Deﬁnition von PR+ und PR−
 „⊇“: Sei Q ∈ PR ⇒ P, Q, R sind kollinear.
 2⇒
-�
-�
-�
-�
-�
+
+
+
+
+
 Q liegt zwischen P und R ⇒ Q ∈ PR
 R liegt zwischen P und Q ⇒ Q ∈ PR
 P liegt zwischen Q und R ⇒ Q ∈ PR
@@ -4428,8 +4428,8 @@ s ∈ V :
 (u, v) �→ (x(u, v), y(u, v), z(u, v))
 Für p = F −1(s) ∈ U sei
 JF (p) =
-�
-�
+
+
 ∂x
 ∂u(p)
 ∂x
@@ -4442,8 +4442,8 @@ JF (p) =
 ∂u(p)
 ∂z
 ∂v(p)
-�
-�
+
+
 und DpF : R2 → R3 die durch JF (p) deﬁnierte lineare Abbildung.
 Dann heißt TsS := Bild(DpF) die Tangentialebene an s ∈ S.
 Bemerkung 73 (Eigenschaften der Tangentialebene)
@@ -4721,32 +4721,32 @@ det(IS) =
 2
 Beweis: Sei ∂F
 ∂u1 (p) =
-�
-�
+
+
 x1
 x2
 x3
-�
-� ,
+
+ ,
 ∂F
 ∂u2 (p) =
-�
-�
+
+
 y1
 y2
 y3
-�
-�
+
+
 Dann ist ∂F
 ∂u1 (p) × ∂F
 ∂u2 (p) =
-�
-�
+
+
 z1
 z2
 z3
-�
-� mit
+
+ mit
 z1 = x2y3 − x3y2
 z2 = x3y1 − x1y3
 z3 = x1y2 − x2y1
@@ -4764,50 +4764,50 @@ z3 = x1y2 − x2y1
 det(IS) = g1,1g2,2 − g2
 1,2
 =
-��
-�
+�
+
 x1
 x2
 x3
-�
-� ,
-�
-�
+
+ ,
+
+
 x1
 x2
 x3
-�
-�
-� ��
-�
+
+
+� �
+
 y1
 y2
 y3
-�
-� ,
-�
-�
+
+ ,
+
+
 y1
 y2
 y3
-�
-�
+
+
 �
 −
-��
-�
+�
+
 x1
 x2
 x3
-�
-� ,
-�
-�
+
+ ,
+
+
 y1
 y2
 y3
-�
-�
+
+
 �2
 = (x2
 1 + x2
@@ -5279,7 +5279,7 @@ Abb. 1.11 Knoten von Jim.belk aus der „Blue knots“-Serie:
 Abb. 1.12 Reidemeister-Züge: YAMASHITA Makoto (1, 2, 3)
 Abb. 1.13 Kleeblattknoten, 3-Färbung: Jim.belk, commons.wikimedia.org/wiki/File:Tricoloring.
 png
-Abb. 2.1 Doppeltorus: Oleg Alexandrov, commons.wikimedia.org/wiki/File:Double\_torus\_illustration.
+Abb. 2.1 Doppeltorus: Oleg Alexandrov, commons.wikimedia.org/wiki/File:Double\_torus\_illustration
 png
 Abb. 2.8 Faltungsdiagramm: Jérôme Urhausen, Email vom 11.02.2014.
 Abb. 3.3b 3 Pfade auf Torus: Charles Staats, tex.stackexchange.com/a/149991/5645
@@ -5352,27 +5352,27 @@ xn−kyk
 Deﬁnition 85
 Seien a, b ∈ R3 Vektoren.
 a × b :=
-�
-�
+
+
 a1
 b3
 a3
-�
-� ×
-�
-�
+
+ ×
+
+
 a1
 b3
 a3
-�
-� =
-�
-�
+
+ =
+
+
 a2b3 − a3b2
 a3b1 − a1b3
 a1b2 − a2b1
-�
-�
+
+
 
 Symbolverzeichnis
 Mengenoperationen

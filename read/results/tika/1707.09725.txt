@@ -105,10 +105,10 @@ V
 1 
 Ju
 
-l 
-20
+l 2
+01
 
-17
+7
 
 
 
@@ -830,14 +830,14 @@ n feature maps
 n filters of
 size k × k × 3
 
-w
-id
-th
+wi
+dt
+h
 w
 
-w
-id
-th
+wi
+dt
+h
 w
 
 he
@@ -980,10 +980,7 @@ Figure 2.3.: 2× 2 max pooling applied to a feature map of size 6× 4 with strid
 
 Average pooling of p× p areas with stride s can be replaced by a convolutional layer. If
 the input of the pooling layer are d(i−1) feature maps, the convolutional layer has to have
-d(i−1) filters of size p× p and stride s. The ith filter has the values
-
-
-
+d(i−1) filters of size p× p and stride s. The ith filter has the values
 
 1
 p2
@@ -1001,11 +998,8 @@ p2
 . . . 1
 p2
 
-
-
-
-for the dimension i and the zero matrix
-
+
+for the dimension i and the zero matrix
 
 0 . . . 0
 ...
@@ -1015,9 +1009,7 @@ for the dimension i and the zero matrix
 
 0 . . . 0
 
-
-
-
+
 for all other dimensions i = 1, . . . , d(i−1).
 
 8
@@ -1046,9 +1038,7 @@ where � is the Hadamard product
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
 Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout prob-
 ability than later layers. In order to keep the expected output at the same value, the
-output of a dropout layer is multiplied with 1
-
-1−p when dropout is enabled [Las17, tf-16b].
+output of a dropout layer is multiplied with 11−p when dropout is enabled [Las17, tf-16b].
 At inference time, dropout is disabled.
 
 Dropout is usually only applied after fully connected layers, but not after convolutional
@@ -1086,25 +1076,20 @@ x̂(k) =
 x(k) − x̄(k)√
 s′[x(k)]2 + ε
 
-with x̄(k) = 1
-m
-
+with x̄(k) = 1m
 ∑m
-i=1 x
 
+i=1 x
 (k)
 i being the sample mean and s
 
-′[x(k)]2 = 1
-m
-
+′[x(k)]2 = 1m
 ∑m
+
 i=1(x
-
 (k)
-i − x̄
+i − x̄(k)) the
 
-(k)) the
 sample variance where m ∈ N≥1 is the number of training samples per mini-batch, ε > 0
 being a small constant to prevent division by zero and x(k)i is the activation of neuron k for
 training sample i.
@@ -1251,11 +1236,7 @@ aspect to using the group network without an aggregation block.
 Dense blocks are collections of convolutional layers which are introduced in [HLW16]. The
 idea is to connect each convolutional layer directly to subsequent convolutional layers.
 Traditional CNNs with L layers and one input layer have L connections between layers,
-but dense blocks have L(L+1)
-
-2
-connections between layers. The input feature maps are
-
+but dense blocks have L(L+1)2 connections between layers. The input feature maps are
 concatenated in depth. According to the authors, this prevents features from being re-
 learned and allows much fewer filters per convolutional layer. Where AlexNet and VGG-16
 have several hundred filters per convolutional layer (see Tables D.2 and D.3), the authors
@@ -1412,10 +1393,9 @@ techniques to deal with skewed classes might help.
 
 An automatic criterion to check for this problem is
 
-accuracy ≤
-max({ r(i) | i = 1, . . . , k })∑k
-
+accuracy ≤ max({ r(i) | i = 1, . . . , k })∑k
 i=1 r(i)
+
 + ε
 
 where ε is a small value to compensate the fact that some examples might be correct just
@@ -1510,13 +1490,7 @@ k=1
 
 [txk log(o
 x
-k) + (1− t
-
-x
-k) log(1− o
-
-x
-k)]︸ ︷︷ ︸
+k) + (1− txk) log(1− oxk)]︸ ︷︷ ︸
 
 cross-entropy data loss
 
@@ -1530,9 +1504,7 @@ w∈W
 `2︷ ︸︸ ︷∑
 w∈W
 
-w2
-
-︸ ︷︷ ︸
+w2︸ ︷︷ ︸
 model complexity loss
 
 where W are the weights, X is the training data set, K ∈ N≥0 is the number of classes and
@@ -2087,9 +2059,7 @@ A much simpler and computationally cheaper pruning criterion is the weight magni
 
 w ←
 
-
-w if w ≥ θ0 otherwise
-
+w if w ≥ θ0 otherwise
 3.3. Genetic approaches
 
 The general idea of genetic algorithms (GAs) is to encode the solution space as genes, which
@@ -2474,8 +2444,7 @@ Global avg Pooling 1× 1 0 k k @ 1× 1
 +892 512
 1032k
 
-+55 729 664
-103 424+2k
++55 729 664 103 424+2k
 
 Table 5.1.: Baseline architecture with 3 input channels of size 32 × 32. All convolutional layers
 use SAME padding, except for layer 11 which used VALID padding in order to decrease
@@ -2548,10 +2517,7 @@ of kernel size 3× 3 with stride 1.
 The results for the baseline model evaluated on eight datasets are given in Table 5.2. The
 speed for inference for different GPUs is given in Table 5.3.
 
-Dataset
-Single Model Accuracy Ensemble of 10
-
-Training Set Test Set Training Set Test Set
+Dataset Single Model Accuracy Ensemble of 10Training Set Test Set Training Set Test Set
 
 Asirra 94.22 % σ = 3.49 94.37 % σ = 3.47 97.07 % 97.37 %
 CIFAR-10 91.23 % σ = 1.10 85.84 % σ = 0.87 92.36 % 86.75 %
@@ -2568,10 +2534,7 @@ CIFAR-10, CIFAR-100 and STL-10 models use test-time transformations. None of the
 models uses unlabeled data or data from other datasets. For HASYv2 no test time
 transformations are used.
 
-Network GPU Tensorflow
-Inference per Training
-
-1 Image 128 images time / epoch
+Network GPU Tensorflow Inference per Training1 Image 128 images time / epoch
 
 Baseline Default Intel i7-4930K 3 ms 244 ms 231.0 s
 Baseline Optimized Intel i7-4930K 2 ms 143 ms 149.0 s
@@ -2700,9 +2663,7 @@ stays approximately the same, then it can be considered to run the first few epo
 times and only train the best models to the end. For 10 models, there can be 10
 
 2−10
-2
-
-= 45
+2 = 45
 
 pair-wise changes in the ordering at maximum if the relative order of validation accuracies
 is reversed. For the baseline model, 21.8 changes in the relative order of accuracies occurred
@@ -2710,53 +2671,19 @@ in average for each pair of epochs (i, i+ 1). This means if one knows only the r
 of the validation accuracy of two models m and m′ in epoch i, it is doubtful if one can
 make any statement about the ordering of m and m′ in epoch i+ 1.
 
+0 10 20 30 40 50 60 70 80 90 10
 0
 
-1
+11
 0
 
-2
+12
 0
 
-3
+13
 0
 
-4
-0
-
-5
-0
-
-6
-0
-
-7
-0
-
-8
-0
-
-9
-0
-
-1
-0
-0
-
-1
-1
-0
-
-1
-2
-0
-
-1
-3
-0
-
-1
-4
+14
 0
 
 0.2
@@ -2985,7 +2912,7 @@ A A, A, A 0 A, A, A , Å 1
 B B, B 0 B, B 0
 C C, c, ⊂ and C , ξ, E and C 4 C, c, ⊂, C and C 1
 D D, D, D , . 1 D, D, D 0
-E E and E , ε 2 E and E , ε, �, ∈ 4
+E E and E , ε 2 E and E , ε, ε, ∈ 4
 F F and F , F 1 F and F , F 1
 H H and H , κ and H 3 H and H, H 1
 K K, κ 0 K, κ 0
@@ -3078,10 +3005,7 @@ trained number of epochs. As more filters can lead to different results dependin
 layer where they are added, five models are trained. The details about those models are
 given in Table 5.7
 
-Name Layer
-Filter count Total
-
-Baseline New parameters
+Name Layer Filter count TotalBaseline New parameters
 
 m9 9 64 638 5 978 566
 m′9 9 64 974 8 925 622
@@ -3329,28 +3253,11 @@ Mean total Single model Ensemble
 
 time training time Accuracy std Accuracy
 
-8 118 s
-epoch
-
-81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
-16 62 s
-
-epoch
-103 – 173 8349 s 64.16% σ = 0.81 66.98%
-
-32 35 s
-epoch
-
-119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
-64 25 s
-
-epoch
-133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
-
-128 18 s
-epoch
-
-145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
+8 118 sepoch 81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
+16 62 sepoch 103 – 173 8349 s 64.16% σ = 0.81 66.98%
+32 35 sepoch 119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
+64 25 sepoch 133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
+128 18 sepoch 145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
 
 Table 5.9.: Training time per epoch and single model test set accuracy (mean and standard deviation)
 of baseline models trained with different mini-batch sizes m on GTX 970 GPUs on
@@ -3492,25 +3399,17 @@ S2ReLU(x) = ReLU(
 x
 
 2
-+ 1)−ReLU(−
-
-x
++ 1)−ReLU(−x
 
 2
 + 1) =
 
-
-
-−x
-
-2
-+ 1 if x ≤ −2
+
+−x2 + 1 if x ≤ −2
 
 x if − 2 ≤ x ≤ 2
 x
-2
-
-+ 1 if x > −2
+2 + 1 if x > −2
 
 This function is similar to SReLUs as introduced in [JXF+16]. The difference is that S2ReLU
 does not introduce learnable parameters. The S2ReLU was designed to be symmetric, be
@@ -3577,59 +3476,22 @@ Mean total
 
 1 Image 128 time training time
 
-Identity 8 ms 42 ms 31 s
-epoch
-
-108 – 148 3629 s
-Logistic 6 ms 31ms 24 s
-
-epoch
-101 – 167 2234 s
-
+Identity 8 ms 42 ms 31 sepoch 108 – 148 3629 s
+Logistic 6 ms 31ms 24 sepoch 101 – 167 2234 s
 Logistic− 6 ms 31ms 22 s
-epoch
 
+epoch
 133 – 255 3421 s
-Softmax 7 ms 37 ms 33 s
 
-epoch
-127 – 248 5250 s
-
-Tanh 6 ms 31ms 23 s
-epoch
-
-125 – 211 3141 s
-Softsign 6 ms 31ms 23 s
-
-epoch
-122 – 205 3505 s
-
-ReLU 6 ms 31ms 23 s
-epoch
-
-118 – 192 3449 s
-Softplus 6 ms 31ms 24 s
-
-epoch
-101 – 165 2718 s
-
-S2ReLU 5ms 32 ms 26 s
-epoch
-
-108 – 209 3231 s
-LReLU 7 ms 34 ms 25 s
-
-epoch
-109 – 198 3388 s
-
-PReLU 7 ms 34 ms 28 s
-epoch
-
-131 – 215 3970 s
-ELU 6 ms 31ms 23 s
-
-epoch
-146 – 232 3692 s
+Softmax 7 ms 37 ms 33 sepoch 127 – 248 5250 s
+Tanh 6 ms 31ms 23 sepoch 125 – 211 3141 s
+Softsign 6 ms 31ms 23 sepoch 122 – 205 3505 s
+ReLU 6 ms 31ms 23 sepoch 118 – 192 3449 s
+Softplus 6 ms 31ms 24 sepoch 101 – 165 2718 s
+S2ReLU 5ms 32 ms 26 sepoch 108 – 209 3231 s
+LReLU 7 ms 34 ms 25 sepoch 109 – 198 3388 s
+PReLU 7 ms 34 ms 28 sepoch 131 – 215 3970 s
+ELU 6 ms 31ms 23 sepoch 146 – 232 3692 s
 
 Table 5.12.: Training time and inference time of adjusted baseline models trained with different
 activation functions on GTX 970 GPUs on CIFAR-100. It was expected that the
@@ -3776,8 +3638,7 @@ Global avg Pooling 1× 1 0 k k @ 1× 1
 +947 654
 520k
 
-+87 870 996
-179 200+2k
++87 870 996 179 200+2k
 
 Table 5.14.: Optimized architecture with 3 input channels of size 32× 32. All convolutional layers
 use SAME padding, except for layer 11 which used VALID padding in order to decrease
@@ -3845,10 +3706,7 @@ BN + Softmax
 Figure 5.16.: Architecture of the optimized model. C 32@3 × 3/1 is a convolutional layer with
 32 filters of kernel size 3× 3 with stride 1. The * indicates that no bias is used.
 
-Dataset
-Single Model Accuracy Ensemble of 10
-
-Training Set Test Set Training Set Test Set
+Dataset Single Model Accuracy Ensemble of 10Training Set Test Set Training Set Test Set
 
 Asirra 95.83 % σ = 4.70 90.75 % σ = 4.73 98.78 % 93.09 %
 CIFAR-10 94.58 % σ = 0.70 87.92 % σ = 0.46 96.47 % 89.86 %
@@ -3865,10 +3723,7 @@ CIFAR-10, CIFAR-100 and STL-10 models use test-time transformations. None of the
 models uses unlabeled data or data from other datasets. For MNIST, GTSRB, SVHN
 and HASY, no test time transformations are used.
 
-Network GPU Tensorflow
-Inference per Training
-
-1 Image 128 images time / epoch
+Network GPU Tensorflow Inference per Training1 Image 128 images time / epoch
 
 Optimized Default Intel i7-4930K 5 ms 432 ms 386 s
 Optimized Optimized Intel i7-4930K 4 ms 307 ms 315 s
@@ -3941,10 +3796,7 @@ pattern, the number of epochs increases with lower model regularization (see Tab
 
 5.17. Regularization
 
-Dataset
-Early Stopping Fixed epochs
-
-val. acc train loss
+Dataset Early Stopping Fixed epochsval. acc train loss
 
 Asirra 93.09 % 96.01 %3 96.01 %
 CIFAR-10 89.86 % 91.75 % 88.88 %
@@ -4123,9 +3975,7 @@ A. Figures, Tables and Algorithms
 
 Figure A.1.: Examples of image filters. Best viewed in electronic form.
 
-Layer
-99-percentile interval
-filter bias
+Layer 99-percentile intervalfilter bias
 
 1 [-0.50, 0.48] [-0.06, 0.07]
 3 [-0.21, 0.19] [-0.07, 0.07]
@@ -4162,10 +4012,7 @@ j ← randomInteger(1, . . . , n) \ { i }
 p← randomUniform(0, 1)
 C ′ ← swap(C, i, j)
 s← accuracy(C ′)
-if p < exp( s−bestScore
-
-T
-) then
+if p < exp( s−bestScoreT ) then
 
 C ← C ′
 
@@ -4360,10 +4207,7 @@ Xavier/Glorot normal α = 0 β =
 )2
 γ = 0 [GB10]
 
-He α = 0 β = 2
-nin
-
-γ = 0 [HZRS15b]
+He α = 0 β = 2nin γ = 0 [HZRS15b]
 Orthogonal — — γ = 0 [SMG13]
 LSUV — — γ = 0 [MM15]
 
@@ -4387,13 +4231,7 @@ k=1
 
 [txk log(o
 x
-k) + (1− t
-
-x
-k) log(1− o
-
-x
-k)]
+k) + (1− txk) log(1− oxk)]
 
 is by far the most commonly used objective function (e.g., used by [ZF14]). In this equation,
 X is the set of training examples, K is the number of classes, txk ∈ { 0, 1 } indicates if the
@@ -4476,10 +4314,7 @@ t
 k where t ∈ N0 is the
 
 training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
-until the learning rate is decreased by 1
-
-10
-th.
+until the learning rate is decreased by 110th.
 
 • Newbob Scheduling [new00]: Start with Performance Scheduling, then use Exponential
 Decay Scheduling.
@@ -4537,56 +4372,42 @@ Name Function ϕ(x) Range of Values ϕ′(x) Used by
 
 Sign function†
 
-
-+1 if x ≥ 0−1 if x < 0 { −1, 1 } 0 [KS02]
-
++1 if x ≥ 0−1 if x < 0 { −1, 1 } 0 [KS02]
 Heaviside
 step function†
 
-
-+1 if x > 00 if x < 0 { 0, 1 } 0 [MP43]
-
++1 if x > 00 if x < 0 { 0, 1 } 0 [MP43]
 Logistic function 1
-1+e−x
 
-[0, 1] e
-x
+1+e−x [0, 1]
+ex
 
 (ex+1)2
 [DJ99]
 
 Tanh e
 x−e−x
-ex+e−x
+ex+e−x = tanh(x) [−1, 1] sech
 
-= tanh(x) [−1, 1] sech2(x) [LBBH98, Tho14a]
+2(x) [LBBH98, Tho14a]
 
 ReLU† max(0, x) [0,+∞)
 
-
-1 if x > 00 if x < 0 [KSH12]
-
+1 if x > 00 if x < 0 [KSH12]
 LReLU†2
 
 (PReLU)
 ϕ(x) = max(αx, x) (−∞,+∞)
 
-
-1 if x > 0α if x < 0 [MHN13, HZRS15b]
+1 if x > 0α if x < 0 [MHN13, HZRS15b]
+Softplus log(ex + 1) (0,+∞) exex+1 [DBB
 
-Softplus log(ex + 1) (0,+∞) e
-x
-
-ex+1
-[DBB+01, GBB11]
++01, GBB11]
 
 ELU
 
-
-x if x > 0α(ex − 1) if x ≤ 0 (−∞,+∞)
-
-
-1 if x > 0αex otherwise [CUH15]
+x if x > 0α(ex − 1) if x ≤ 0 (−∞,+∞)
+1 if x > 0αex otherwise [CUH15]
 
 Softmax‡ o(x)j = e
 xj∑K
@@ -4607,10 +4428,9 @@ xk
 
 Maxout‡ o(x) = maxx∈x x (−∞,+∞)
 
-
-1 if xi = maxx0 otherwise [GWFM+13]
-
+1 if xi = maxx0 otherwise [GWFM+13]
 Table B.3.: Overview of activation functions. Functions marked with † are not differentiable at 0
+
 and functions marked with ‡ operate on all elements of a layer simultaneously. The
 hyperparameters α ∈ (0, 1) of Leaky ReLU and ELU are typically α = 0.01. Other
 activation function like randomized leaky ReLUs exist [XWCL15], but are far less
@@ -4709,12 +4529,10 @@ n · (k ·m1 ·m2 + 1) parameters.
 32 · n2
 
 ∑L
-i=0(L− i) = L+ 9n+ 9n
+i=0(L− i) = L+ 9n+ 9n2
 
-2L2−L
-2
-
-parameters.
+L2−L
+2 parameters.
 
 According to [HPTD15], AlexNet has 60 million parameters which is roughly the number
 calculated in Table D.2.
@@ -4859,10 +4677,7 @@ D.2. AlexNet
 The first CNN which achieved major improvements on the ImageNet dataset was AlexNet [KSH12].
 Its architecture is shown in Figure D.2 and described in Table D.2. It has about 60·106 param-
 eters. A trained AlexNet can be downloaded at www.cs.toronto.edu/g̃uerzhoy/tf_alexnet.
-Note that the uncompressed size is at least 60 965 224 floats · 32 bit
-
-float
-≈ 244 MB.
+Note that the uncompressed size is at least 60 965 224 floats · 32 bitfloat ≈ 244 MB.
 
 Figure D.2.: Architecture of AlexNet as shown in [KSH12]: Convolutional Layers are followed
 by pooling layers multiple times. At the end, a fully connected network is applied.
@@ -4915,11 +4730,7 @@ filters and is much deeper. A visualization of the architecture is shown in Figu
 detailed textual description is given in Table D.3.
 
 A trained VGG-16 D for Tensorflow can be downloaded at https://github.com/machrisaa/
-tensorflow-vgg. Note that the uncompressed size is at least 138 357 544 floats · 32 bit
-
-float
-≈
-
+tensorflow-vgg. Note that the uncompressed size is at least 138 357 544 floats · 32 bitfloat ≈
 520 MB. The downloaded Numpy binary file npz needs 553 MB without compression and
 514 MB with compression.
 
@@ -5138,41 +4949,19 @@ CIFAR-10 32 px× 32 px 60 000 10 3 [Kri, KH09]
 CIFAR-100 32 px× 32 px 60 000 100 3 [Kri, KH09]
 STL-10 96 px× 96 px 13 000 10 3 [CLN11, CLN10]
 
-Caltech-101
-(80 px− 3481 px)
-×(92 px− 3999 px)
+Caltech-101 (80 px− 3481 px)×(92 px− 3999 px) 9144 102 3 [FFP03, FFFP06]
 
-9144 102 3 [FFP03, FFFP06]
+Caltech-256 (75 px− 7913 px)×(75 px− 7913 px) 30 607 257 3 [Gri06, GG07]
 
-Caltech-256
-(75 px− 7913 px)
-×(75 px− 7913 px)
+ILSVRC 20121 (8 px− 9331 px)×(10 px− 6530 px) 1.2 · 10
+6 1000 3 [Ima12, RDS+14]
 
-30 607 257 3 [Gri06, GG07]
+Places3652 (290px− 3158px)×(225px− 2630px) 1.8 · 10
+6 365 3 [Zho16, ZKL+16]
 
-ILSVRC 20121
-(8 px− 9331 px)
-×(10 px− 6530 px)
+GTSRB (25 px− 266 px)×(25 px− 232 px) 51 839 43 3 [SSSI, SSSI12]
 
-1.2 · 106 1000 3 [Ima12, RDS+14]
-
-Places3652
-(290px− 3158px)
-×(225px− 2630px)
-
-1.8 · 106 365 3 [Zho16, ZKL+16]
-
-GTSRB
-(25 px− 266 px)
-×(25 px− 232 px)
-
-51 839 43 3 [SSSI, SSSI12]
-
-Asirra3
-(4 px− 500 px)
-×(4 px− 500 px)
-
-25 000 2 3 [Asi17, EDHS07]
+Asirra3 (4 px− 500 px)×(4 px− 500 px) 25 000 2 3 [Asi17, EDHS07]
 
 Graz-02 480 px× 640 pxand 640 px× 480 px 1096 3 3 [Mar08, MS07]
 

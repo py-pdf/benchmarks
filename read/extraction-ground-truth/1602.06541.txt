@@ -217,8 +217,7 @@ as done in many publications [SWRC06], [CP08],
 fined as
 
 ∑k
-i=1 nii∑
-k
+i=1 nii∑k
 i=1 ti
 
 . Taking the pixel-wise classification
@@ -245,10 +244,8 @@ car”
 
 Three accuracy metrics which do not suffer from
 problem P1 are used in [LSD14]:
-• mean accuracy: 1
+• mean accuracy: 1k ·
 
-k
-·
 ∑k
 i=1
 
@@ -258,22 +255,20 @@ ti
 
 • mean intersection over union:
 1
-k
-·
+k ·
+
 ∑k
 i=1
 
 nii
 ti−nii+
 
-∑
-k
-j=1
+∑k
+j=1 nji
 
-nji
 ∈ [0, 1]
-
 • frequency weighted intersection over union:
+
 (
 ∑k
 i=1 ti)
@@ -284,13 +279,10 @@ i=1 ti ·
 nii
 ti−nii+
 
-∑
-k
-j=1
+∑k
+j=1 nji
 
-nji
 ∈ [0, 1]
-
 Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets

@@ -1050,10 +1050,9 @@ techniques to deal with skewed classes might help.
 
 An automatic criterion to check for this problem is
 
-accuracy ≤
-max({ r(i) | i = 1, . . . , k })∑k
-
+accuracy ≤ max({ r(i) | i = 1, . . . , k })∑k
 i=1 r(i)
+
 + ε
 
 where ε is a small value to compensate the fact that some examples might be correct just
@@ -1141,13 +1140,7 @@ k=1
 
 [txk log(o
 x
-k) + (1− t
-
-x
-k) log(1− o
-
-x
-k)]︸ ︷︷ ︸
+k) + (1− txk) log(1− oxk)]︸ ︷︷ ︸
 
 cross-entropy data loss
 
@@ -2568,7 +2561,7 @@ A A, A, A 0 A, A, A , Å 1
 B B, B 0 B, B 0
 C C, c, ⊂ and C , ξ, E and C 4 C, c, ⊂, C and C 1
 D D, D, D , . 1 D, D, D 0
-E E and E , ε 2 E and E , ε, �, ∈ 4
+E E and E , ε 2 E and E , ε, ε, ∈ 4
 F F and F , F 1 F and F , F 1
 H H and H , κ and H 3 H and H, H 1
 K K, κ 0 K, κ 0
@@ -2661,10 +2654,7 @@ trained number of epochs. As more filters can lead to different results dependin
 layer where they are added, five models are trained. The details about those models are
 given in Table 5.7
 
-Name Layer
-Filter count Total
-
-Baseline New parameters
+Name Layer Filter count TotalBaseline New parameters
 
 m9 9 64 638 5 978 566
 m′9 9 64 974 8 925 622
@@ -2912,28 +2902,11 @@ Mean total Single model Ensemble
 
 time training time Accuracy std Accuracy
 
-8 118 s
-epoch
-
-81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
-16 62 s
-
-epoch
-103 – 173 8349 s 64.16% σ = 0.81 66.98%
-
-32 35 s
-epoch
-
-119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
-64 25 s
-
-epoch
-133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
-
-128 18 s
-epoch
-
-145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
+8 118 s epoch 81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
+16 62 s epoch 103 – 173 8349 s 64.16% σ = 0.81 66.98%
+32 35 s epoch 119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
+64 25 s epoch 133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
+128 18 s epoch 145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
 
 Table 5.9.: Training time per epoch and single model test set accuracy (mean and standard deviation)
 of baseline models trained with different mini-batch sizes m on GTX 970 GPUs on
@@ -3075,25 +3048,17 @@ S2ReLU(x) = ReLU(
 x
 
 2
-+ 1)−ReLU(−
-
-x
++ 1)−ReLU(−x
 
 2
 + 1) =
 
-
-
-−x
-
-2
-+ 1 if x ≤ −2
+
+−x2 + 1 if x ≤ −2
 
 x if − 2 ≤ x ≤ 2
 x
-2
-
-+ 1 if x > −2
+2 + 1 if x > −2
 
 This function is similar to SReLUs as introduced in [JXF+16]. The difference is that S2ReLU
 does not introduce learnable parameters. The S2ReLU was designed to be symmetric, be
@@ -3160,59 +3125,22 @@ Mean total
 
 1 Image 128 time training time
 
-Identity 8 ms 42 ms 31 s
-epoch
-
-108 – 148 3629 s
-Logistic 6 ms 31ms 24 s
+Identity  8 ms 42 ms 31 s epoch 108 – 148 3629 s
+Logistic  6 ms 31ms  24 s epoch 101 – 167 2234 s
+Logistic− 6 ms 31ms  22 s
 
 epoch
-101 – 167 2234 s
-
-Logistic− 6 ms 31ms 22 s
-epoch
-
 133 – 255 3421 s
-Softmax 7 ms 37 ms 33 s
 
-epoch
-127 – 248 5250 s
-
-Tanh 6 ms 31ms 23 s
-epoch
-
-125 – 211 3141 s
-Softsign 6 ms 31ms 23 s
-
-epoch
-122 – 205 3505 s
-
-ReLU 6 ms 31ms 23 s
-epoch
-
-118 – 192 3449 s
-Softplus 6 ms 31ms 24 s
-
-epoch
-101 – 165 2718 s
-
-S2ReLU 5ms 32 ms 26 s
-epoch
-
-108 – 209 3231 s
-LReLU 7 ms 34 ms 25 s
-
-epoch
-109 – 198 3388 s
-
-PReLU 7 ms 34 ms 28 s
-epoch
-
-131 – 215 3970 s
-ELU 6 ms 31ms 23 s
-
-epoch
-146 – 232 3692 s
+Softmax  7 ms 37ms 33 s epoch 127 – 248 5250 s
+Tanh     6 ms 31ms 23 s epoch 125 – 211 3141 s
+Softsign 6 ms 31ms 23 s epoch 122 – 205 3505 s
+ReLU     6 ms 31ms 23 s epoch 118 – 192 3449 s
+Softplus 6 ms 31ms 24 s epoch 101 – 165 2718 s
+S2ReLU   5ms  32ms 26 s epoch 108 – 209 3231 s
+LReLU    7 ms 34ms 25 s epoch 109 – 198 3388 s
+PReLU    7 ms 34ms 28 s epoch 131 – 215 3970 s
+ELU      6 ms 31ms 23 s epoch 146 – 232 3692 s
 
 Table 5.12.: Training time and inference time of adjusted baseline models trained with different
 activation functions on GTX 970 GPUs on CIFAR-100. It was expected that the
@@ -3359,8 +3287,7 @@ Global avg Pooling 1× 1 0 k k @ 1× 1
 +947 654
 520k
 
-+87 870 996
-179 200+2k
++87 870 996 179 200+2k
 
 Table 5.14.: Optimized architecture with 3 input channels of size 32× 32. All convolutional layers
 use SAME padding, except for layer 11 which used VALID padding in order to decrease
@@ -3428,10 +3355,7 @@ BN + Softmax
 Figure 5.16.: Architecture of the optimized model. C 32@3 × 3/1 is a convolutional layer with
 32 filters of kernel size 3× 3 with stride 1. The * indicates that no bias is used.
 
-Dataset
-Single Model Accuracy Ensemble of 10
-
-Training Set Test Set Training Set Test Set
+Dataset Single Model Accuracy Ensemble of 10Training Set Test Set Training Set Test Set
 
 Asirra 95.83 % σ = 4.70 90.75 % σ = 4.73 98.78 % 93.09 %
 CIFAR-10 94.58 % σ = 0.70 87.92 % σ = 0.46 96.47 % 89.86 %
@@ -3448,10 +3372,7 @@ CIFAR-10, CIFAR-100 and STL-10 models use test-time transformations. None of the
 models uses unlabeled data or data from other datasets. For MNIST, GTSRB, SVHN
 and HASY, no test time transformations are used.
 
-Network GPU Tensorflow
-Inference per Training
-
-1 Image 128 images time / epoch
+Network GPU Tensorflow Inference per Training1 Image 128 images time / epoch
 
 Optimized Default Intel i7-4930K 5 ms 432 ms 386 s
 Optimized Optimized Intel i7-4930K 4 ms 307 ms 315 s
@@ -3524,10 +3445,7 @@ pattern, the number of epochs increases with lower model regularization (see Tab
 
 5.17. Regularization
 
-Dataset
-Early Stopping Fixed epochs
-
-val. acc train loss
+Dataset Early Stopping Fixed epochsval. acc train loss
 
 Asirra 93.09 % 96.01 %3 96.01 %
 CIFAR-10 89.86 % 91.75 % 88.88 %
@@ -3706,9 +3624,7 @@ A. Figures, Tables and Algorithms
 
 Figure A.1.: Examples of image filters. Best viewed in electronic form.
 
-Layer
-99-percentile interval
-filter bias
+Layer 99-percentile intervalfilter bias
 
 1 [-0.50, 0.48] [-0.06, 0.07]
 3 [-0.21, 0.19] [-0.07, 0.07]
@@ -3745,10 +3661,7 @@ j ← randomInteger(1, . . . , n) \ { i }
 p← randomUniform(0, 1)
 C ′ ← swap(C, i, j)
 s← accuracy(C ′)
-if p < exp( s−bestScore
-
-T
-) then
+if p < exp( s−bestScoreT ) then
 
 C ← C ′
 
@@ -4059,10 +3972,7 @@ t
 k where t ∈ N0 is the
 
 training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
-until the learning rate is decreased by 1
-
-10
-th.
+until the learning rate is decreased by 1/10th.
 
 • Newbob Scheduling [new00]: Start with Performance Scheduling, then use Exponential
 Decay Scheduling.
@@ -4721,41 +4631,19 @@ CIFAR-10 32 px× 32 px 60 000 10 3 [Kri, KH09]
 CIFAR-100 32 px× 32 px 60 000 100 3 [Kri, KH09]
 STL-10 96 px× 96 px 13 000 10 3 [CLN11, CLN10]
 
-Caltech-101
-(80 px− 3481 px)
-×(92 px− 3999 px)
+Caltech-101 (80 px− 3481 px)×(92 px− 3999 px) 9144 102 3 [FFP03, FFFP06]
 
-9144 102 3 [FFP03, FFFP06]
+Caltech-256 (75 px− 7913 px)×(75 px− 7913 px) 30 607 257 3 [Gri06, GG07]
 
-Caltech-256
-(75 px− 7913 px)
-×(75 px− 7913 px)
+ILSVRC 20121 (8 px− 9331 px)×(10 px− 6530 px) 1.2 · 10
+6 1000 3 [Ima12, RDS+14]
 
-30 607 257 3 [Gri06, GG07]
+Places3652 (290px− 3158px)×(225px− 2630px) 1.8 · 10
+6 365 3 [Zho16, ZKL+16]
 
-ILSVRC 20121
-(8 px− 9331 px)
-×(10 px− 6530 px)
+GTSRB (25 px− 266 px)×(25 px− 232 px) 51 839 43 3 [SSSI, SSSI12]
 
-1.2 · 106 1000 3 [Ima12, RDS+14]
-
-Places3652
-(290px− 3158px)
-×(225px− 2630px)
-
-1.8 · 106 365 3 [Zho16, ZKL+16]
-
-GTSRB
-(25 px− 266 px)
-×(25 px− 232 px)
-
-51 839 43 3 [SSSI, SSSI12]
-
-Asirra3
-(4 px− 500 px)
-×(4 px− 500 px)
-
-25 000 2 3 [Asi17, EDHS07]
+Asirra3 (4 px− 500 px)×(4 px− 500 px) 25 000 2 3 [Asi17, EDHS07]
 
 Graz-02 480 px× 640 pxand 640 px× 480 px 1096 3 3 [Mar08, MS07]
 

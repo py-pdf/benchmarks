@@ -262,9 +262,7 @@ dT
 
 [log (T)− log (Tp,i)
 
-2σ2
-T,i
-
+2σ2T,i
 ). (1)
 
 In which, Tp,i is the DEM peak temperature, EMp,i is the peak EM function, and σT,i is the
@@ -295,9 +293,7 @@ DEM to the background-subtracted observed fluxes in multiple wavelengths, the th
 
 rameters, temperature width (σT,i), peak of temperature (Tp,i), and peak emission measure (EMp,i)
 
-are found by minimizing χ2
-i
-.
+are found by minimizing χ2i .
 
 Our data sample is uneven because of omitting some damaged images in between. There-
 fore to analyze the temperature oscillations, we use the Lomb-Scargle method. This method is

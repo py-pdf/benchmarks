@@ -1427,30 +1427,11 @@ Umgebung: B1(0, 1)→
 ∣∣ w2 + z2 < 1 } = V2
 V1 ∩ V2 = ∅?
 (a : b : c) ∈ V1 ∩ V2
-⇒ a 6= 0 und ( b
-
-a
-)2 + ( c
-
-a
-)2 < 1⇒ c
-
-a
-< 1
-
-⇒ c 6= 0 und (a
-c
-)2 + ( b
-
-c
-)2 < 1⇒ a
-
-c
-< 1
-
+⇒ a 6= 0 und ( ba)2 + ( ca)2 < 1⇒ ca < 1
+⇒ c 6= 0 und (ac )2 + ( bc)2 < 1⇒ ac < 1
 ⇒ Widerspruch
-4) Sn =
 
+4) Sn =
 {
 x ∈ Rn+1
 
@@ -1467,22 +1448,7 @@ Ci := {(x1, . . . , xn+1) ∈ Sn|xi < 0} → B1(0, . . . , 0)
 (x1, . . . , xn) 7→ (x1, . . . , xi−1,
 
 √
-1−
-
-∑n
-k=1 x
-
-2
-k, xi, . . . , xn), oder −
-
-√
-1−
-
-∑n
-k=1 x
-
-2
-k für Ci
+1−∑nk=1 x2k, xi, . . . , xn), oder −√1−∑nk=1 x2k für Ci
 
 Sn =
 ⋃n+1
@@ -1659,9 +1625,7 @@ x
 
 y
 
-a = 1
-3
-
+a = 13
 a = 1
 a = 2
 
@@ -1990,8 +1954,7 @@ Da Rg(JFj (v0)) = 2 ist, ist o. B. d. A.
 
 det
 
-(
-∂x
+(∂x
 ∂u
 
 ∂x
@@ -2081,10 +2044,7 @@ Beispiel 25 (Lie-Gruppen)
 
 3) (R×, ·)
 4) (R>0, ·)
-5) (Rn,+), denn A ·B(i, j) =
-
-∑n
-k=1 aikbkj ist nach allen Variablen differenzierbar
+5) (Rn,+), denn A ·B(i, j) = ∑nk=1 aikbkj ist nach allen Variablen differenzierbar
 
 (A−1)(i, j) =
 det(Aij)
@@ -2199,11 +2159,7 @@ wenn gilt:
 (i) Für ∆ ∈ K und S ⊆ ∆ Teilsimplex ist S ∈ K.
 (ii) Für ∆1,∆2 ∈ K ist ∆1 ∩∆2 leer oder ein Teilsimplex von ∆1 und von ∆2.
 
-b) |K| :=
-⋃
-
-∆∈K ∆ (mit Teilraumtopologie) heißt geometrische Realisierung von K.
-
+b) |K| := ⋃∆∈K ∆ (mit Teilraumtopologie) heißt geometrische Realisierung von K.
 c) Ist d = max { k ∈ N0 | K enthält k-Simplex }, so heißt d die Dimension von K.
 
 
@@ -2378,15 +2334,7 @@ k+1
 )
 , k = 0, . . . , n
 
-⇒ χ(∆n) =
-∑n
-
-k=0(−1)k
-(
-n+1
-k+1
-
-)
+⇒ χ(∆n) = ∑nk=0(−1)k(n+1k+1)
 f(x) = (x+ 1)n+1
 
 Binomischer
@@ -2404,21 +2352,10 @@ k
 )
 xk
 
-⇒ 0 =
-∑n+1
-
-k=0
-
-(
-n+1
-k
-
-)
-(−1)k = χ(∆n)− 1
-
+⇒ 0 = ∑n+1k=0 (n+1k )(−1)k = χ(∆n)− 1
 ⇒ χ(∆n) = 1 �
-Definition 39
 
+Definition 39
 a) Ein 1D-Simplizialkomplex heißt Graph.
 
 b) Ein Graph, der homöomorph zu S1 ist, heißt Kreis.
@@ -2838,13 +2775,8 @@ Beweis:
 Dann sei H(t, s) :=
 
 {
-H ′(t, 2s) falls 0 ≤ s ≤ 1
-
-2
-
-H ′′(t, 2s− 1) falls 1
-2
-≤ s ≤ 1
+H ′(t, 2s) falls 0 ≤ s ≤ 12
+H ′′(t, 2s− 1) falls 12 ≤ s ≤ 1
 
 ⇒ H ist stetig und Homotopie von γ1 nach γ3.
 �
@@ -2932,23 +2864,9 @@ Verwende dazu
 
 
 1
-2
-t falls 0 ≤ t < 1
-
-2
-
-t− 1
-4
-
-falls 1
-2
-≤ t < 3
-
-4
-
-2t− 1 falls 3
-4
-≤ t ≤ 1
+2 t falls 0 ≤ t < 12
+t− 14 falls 12 ≤ t < 34
+2t− 1 falls 34 ≤ t ≤ 1
 
 Bemerkung 44
 Sei X ein topologischer Raum, a, b, c ∈ X, γ1, γ′1 Wege von a nach b und γ2, γ′2 Wege von b
@@ -4373,10 +4291,7 @@ Man schreibt: ∠R1PR2 bzw. ∠R2PR12
 b) Zwei Winkel sind gleich, wenn es eine Isometrie gibt, die den einen Winkel auf den
 anderen abbildet.
 
-c) ∠R′1P
-′R′2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P
-
-′) = P ,
+c) ∠R′1P ′R′2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P ′) = P ,
 ϕ(P ′R′+1 ) = PR
 
 +
@@ -4710,11 +4625,9 @@ LC
 Abbildung 4.16: 4ABLa und 4CLCB sind ähnlich, weil IWS = π
 
 Strahlensatz
-=======⇒ a
+=======⇒ ahc =
 
-hc
-= c
-
+c
 ha
 → a · ha = c · hc
 
@@ -4722,9 +4635,7 @@ Satz 4.7 (Satz des Pythagoras)
 Im rechtwinkligen Dreieck gilt a2 + b2 = c2, wobei c die Hypotenuse und a, b die beiden
 Katheten sind.
 
-Beweis: (a+ b) · (a+ b) = a2 + 2ab+ b2 = c2 + 4 · (1
-2
-· a · b)
+Beweis: (a+ b) · (a+ b) = a2 + 2ab+ b2 = c2 + 4 · (12 · a · b)
 
 
 
@@ -5199,14 +5110,12 @@ c′z + d′
 aa
 ′z+b′
 
-c′z+d′
-+ b
+c′z+d′ + b
 
 ca
 ′z+b′
 
-c′z+d′
-+ d
+c′z+d′ + d
 
 =
 
@@ -5277,16 +5186,12 @@ a(x1 − x0) = c(x1 − x∞)⇒ c = a x1−x0x1−x∞
 x1−x0
 x1−x∞ = 1
 
-⇒ a2 x1−x0
-x0−x∞ (x0 − x∞) = 1 ⇒ a
-
-2 = x1−x∞
-(x1−x∞)(x1−x0)
+⇒ a2 x1−x0x0−x∞ (x0 − x∞) = 1 ⇒ a
+2 = x1−x∞(x1−x∞)(x1−x0)
 
 d) Es gilt:
 
-A−1λ = A 1
-λ
+A−1λ = A 1λ
 
 B−1t = B−t
 
@@ -5353,9 +5258,7 @@ c d
 (
 
 1
-a
-
-0
+a 0
 0 a
 
 )
@@ -5364,9 +5267,7 @@ a
 (
 1 ab
 c
-a
-
-ad
+a ad
 
 )
 
@@ -5486,9 +5387,7 @@ Abbildung 4.22: Beweis von Proposition 4.9 (e) für eine Diagonalmatrix
 −1 0
 
 )
-, also σ(z) = −1
-
-z
+, also σ(z) = −1z
 
 Bemerkung 69
 Zu hyperbolischen Geraden g1, g2 gibt es σ ∈ PSL2(R) mit σ(g1) = g2.
@@ -5511,11 +5410,10 @@ y
 z = r · eiϕ
 
 1
-z
+z =
 
-= 1
-r
-· eiϕ
+1
+r · eiϕ
 
 Abbildung 4.23: Inversion am Kreis
 
@@ -5582,16 +5480,16 @@ Alle zi sind paarweise verschieden ⇒ Widerspruch �
 b) DV(z1, z4, z3, z2) =
 
 (z1−z2)·(z3−z4)
-(z1−z4)·(z3−z2)
+(z1−z4)·(z3−z2) =
 
-= 1
+1
 DV(z1,z2,z3,z4)
 
 c) DV(z3, z2, z1, z4) =
 (z3−z4)·(z1−z2)
-(z3−z2)·(z1−z4)
+(z3−z2)·(z1−z4) =
 
-= 1
+1
 DV(z1,z2,z3,z4)
 
 d) Zwei der zi dürfen gleich sein, da:
@@ -5775,17 +5673,11 @@ a) Die Kurve γ heißt durch Bogenlänge parametrisiert, wenn gilt:
 
 ‖γ′(t)‖2 = 1 ∀t ∈ I
 
-Dabei ist γ′(t) = (γ′1(t), γ
-′
-2(t), . . . , γ
-
-′
-n(t)).
+Dabei ist γ′(t) = (γ′1(t), γ′2(t), . . . , γ′n(t)).
 
 b) l(γ) =
 ∫ b
-a
-‖γ′(t)‖dt heißt Länge von γ.
+a ‖γ′(t)‖dt heißt Länge von γ.
 
 Bemerkung 71 (Eigenschaften von Kurven I)
 Sei γ : I = [a, b]→ Rn eine C∞-Funktion.
@@ -5797,15 +5689,12 @@ Beweis:
 
 a) l(γ) =
 ∫ b
-a
-‖γ′(t)‖dt =
+a ‖γ′(t)‖dt =
 
 ∫ b
-a
+a 1dt = b− a.
 
-1dt = b− a.
 b) Im Folgenden wird die Aussage nur für γ : [a, b]→ R2 bewiesen. Allerdings funktioniert
-
 der Beweis im Rn analog. Es muss nur die Ableitung angepasst werden.
 
 1 = ‖γ′(t)‖ = ‖γ′(t)‖2 = 〈γ′(t), γ′(t)〉
@@ -5919,23 +5808,15 @@ da gilt:
 
 〈n(t), γ′(t)〉 =
 〈(
-− cos t
-
-r
-− sin t
-
-r
+− cos tr
+− sin tr
 
 )
 ,
 
 (
-− sin t
-
-r
-cos t
-
-r
+− sin tr
+cos tr
 
 )〉
 = (− cos t
@@ -5997,9 +5878,7 @@ r
 r
 = 1
 
-Die Krümmung ist für jedes t konstant 1
-r
-, da gilt:
+Die Krümmung ist für jedes t konstant 1r , da gilt:
 
 γ′′(t) =
 
@@ -6227,9 +6106,7 @@ C = E ∩ S ist Kreislinie
 κNor(s, x) =
 
 1
-r
-
-= 1
+r = 1
 
 2) S = V (X2 + Z2 − 1) ⊆ R3 ist ein Zylinder (siehe Abbildung 5.2a). s = (1, 0, 0)
 x1 = (0, 1, 0)⇒ E1 = R · e1 + R · e2 (x, y-Ebene)
@@ -6387,17 +6264,9 @@ Bemerkung 78
 
 Ersetzt man n durch −n, so gilt:
 
-κ−nNor(s, x) = −κ
-n
-Nor(x) ∀x ∈ T 1s S
-
-⇒ κ−n1 (s) = −κ
-n
-2 (s)
-
-κ−n2 (s) = −κ
-n
-1 (s)
+κ−nNor(s, x) = −κnNor(x) ∀x ∈ T 1s S
+⇒ κ−n1 (s) = −κn2 (s)
+κ−n2 (s) = −κn1 (s)
 
 und K−n(s) = Kn(s) =: K(s)
 
@@ -6926,11 +6795,7 @@ Beh.: { −1, 1 } ist nicht offen
 Bew.: durch Widerspruch
 
 Annahme: { −1, 1 } ist offen.
-Dann gibt es T ⊆ B, sodass
-
-⋃
-M∈T M = { −1, 1 }. Aber alle U ∈ B haben unendlich viele
-
+Dann gibt es T ⊆ B, sodass ⋃M∈T M = { −1, 1 }. Aber alle U ∈ B haben unendlich viele
 Elemente. Auch endlich viele Schnitte von Elementen in B haben unendlich viele Elemente
 ⇒ keine endliche nicht-leere Menge kann in dieser Topologie offen sein ⇒ {−1, 1 } ist
 nicht offen. �
@@ -7020,10 +6885,7 @@ ist kompakt.
 
 102 Lösungen der Übungsaufgaben
 
-SLn(R) ⊆ GLn(R) lässt sich mit einer Teilmenge des Rn
-2
-identifizieren. Nach Satz 1.1
-
+SLn(R) ⊆ GLn(R) lässt sich mit einer Teilmenge des Rn2 identifizieren. Nach Satz 1.1
 sind diese genau dann kompakt, wenn sie beschränkt und abgeschlossen sind. Definiere
 nun für für n ∈ N≥2,m ∈ N:
 

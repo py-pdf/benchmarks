@@ -91,18 +91,16 @@ o-
 ph
 .E
 
-P
-] 
+P]
+  3
 
- 3
 1 
-
 D
+
 ec
-
  2
-02
 
+02
 1
 
 
@@ -215,9 +213,7 @@ node of orbit
 
 I
 
-ê3L
-εm
-
+ê3Lεm
 I ê3p
 
 ascending
@@ -235,8 +231,7 @@ direction
 
 S
 
-ê3Iê3
-L
+ê3Iê3L
 
 M
 
@@ -249,17 +244,9 @@ Figure 1. The orbit of Mercury (M) around Sun (S) with respect to the Laplace pl
 rectangle) and the Cassini state of Mercury. The normal to the orbital plane (êI3) is offset from the nor-
 
 mal to the Laplace plane (êL3 ) by an angle I = 8.5330
-◦. The symmetry axis of the mantle ê
+◦. The symmetry axis of the mantle êp3 is offset
 
-p
-3 is offset
-
-from êI3 by εm ≈ 2 arcmin. êI3 and ê
-p
-3 are coplanar with, and precess about, ê
-
-L
-3 in a retrograde direction
+from êI3 by εm ≈ 2 arcmin. êI3 and êp3 are coplanar with, and precess about, êL3 in a retrograde direction
 
 at frequency Ωp = 2π/325, 513 yr
 −1. The blue (orange) shaded region indicates the portion of the orbit
@@ -455,7 +442,7 @@ of the mantle and crust Cm.
 
 Each layer is triaxial in shape. We denote the polar flattening (or geometrical ellipticity)
 
-by �i, defined as the difference between the mean equatorial and polar radii, divided by the mean
+by εi, defined as the difference between the mean equatorial and polar radii, divided by the mean
 
 spherical radius. Likewise, we denote the equatorial flattening by the variable ξi, defined as the
 
@@ -492,15 +479,8 @@ MR2
 
 MR2
 [
-(ρs − ρf )r5s�s + (ρf − ρm)r
+(ρs − ρf )r5sεs + (ρf − ρm)r5f εf + (ρm − ρc)r5mεm + ρcR5εr
 
-5
-f �f + (ρm − ρc)r
-
-5
-m�m + ρcR
-
-5�r
 ]
 , (1a)
 
@@ -517,15 +497,8 @@ B −A
 
 4MR2
 [
-(ρs − ρf )r5sξs + (ρf − ρm)r
+(ρs − ρf )r5sξs + (ρf − ρm)r5fξf + (ρm − ρc)r5mξm + ρcR5ξr
 
-5
-fξf + (ρm − ρc)r
-
-5
-mξm + ρcR
-
-5ξr
 ]
 . (1b)
 
@@ -561,7 +534,7 @@ mean density, ρ̄ 5429.5 kg m−3
 
 J2 5.0291× 10−5 Genova et al. [2019]
 C22 8.0415× 10−6 Genova et al. [2019]
-polar surface flattening, �r 6.7436× 10−4 Perry et al. [2015]
+polar surface flattening, εr 6.7436× 10−4 Perry et al. [2015]
 equatorial surface flattening, ξr 5.1243× 10−4 Perry et al. [2015]
 
 Table 1. Reference parameters for Mercury. The mass M is computed from GM = 22031.8636 × 109
@@ -570,7 +543,7 @@ m3/s2 taken from Genova et al. [2019]. The mean density is calculated from 4π
 3
 ρ̄R3 = M . The numerical
 
-values of �r and ξr are calculated from �r = (ā− c)/R and ξr = (a− b)/R, where ā = 12 (a+ b) and where
+values of εr and ξr are calculated from εr = (ā− c)/R and ξr = (a− b)/R, where ā = 12 (a+ b) and where
 
 a = 2440.53 km, b = 2439.28 km and c = 2438.26 km are the semimajor, intermediate and semiminor
 
@@ -725,10 +698,7 @@ the mantle, fluid core and inner core, respectively; blue shaded parts show an e
 
 The black curved arrow in the equatorial plane in (a) indicates the direction of rotation of the equatorial
 
-mantle axes ê
-p
-1 and ê
-
+mantle axes êp1 and ê
 p
 2 with respect to the Cassini plane. Viewed in the frame attached to the rotating
 
@@ -794,9 +764,7 @@ fer to as the ‘mantle’ in the context of our rotational model. The rotation 
 
 of the mantle are expected to remain in close alignment, but they do not coincide exactly. We
 
-define the rotation rate vector of the mantle by Ω, and its misalignment from ê
-p
-3 by an angle
+define the rotation rate vector of the mantle by Ω, and its misalignment from êp3 by an angle
 
 θm. Note that θm � εm and it is often the spin axis of Mercury which is used to define the
 obliquity εm [e.g. Baland et al., 2017]. If Mercury were an entirely rigid planet, ê
@@ -856,10 +824,7 @@ as seen in the mantle frame is expressed as
 d
 
 dt
-êL3 + Ω× ê
-
-L
-3 = 0 , (6)
+êL3 + Ω× êL3 = 0 , (6)
 
 or equivalently, by Equation (19e) of Stys and Dumberry [2018],
 
@@ -1063,7 +1028,7 @@ on the inner core,
 8πG
 
 5Ω2o
-[ρc(�r − �m) + ρm(�m − �f ) + ρf �f ] , (13b)
+[ρc(εr − εm) + ρm(εm − εf ) + ρf εf ] , (13b)
 
 where G is the gravitational constant.
 
@@ -1156,9 +1121,7 @@ e5c . (16b)
 
 The gravitational torque by the Sun acting on the inner core alone, Γ̃ssun, is
 
-Γ̃ssun = −iΩ
-2
-oĀsα3φs(ε̃m + ñs) . (17)
+Γ̃ssun = −iΩ2oĀsα3φs(ε̃m + ñs) . (17)
 
 Γ̃cmb and Γ̃icb are the torques from tangential stresses by the fluid core on the mantle at the
 
@@ -1228,15 +1191,13 @@ and the elements of matrix M are
 
 M =
 
-
-
-
+
 ω − e (1 + ω) Āf
-Ā
 
+Ā
 (1 + ω) Ās
-Ā
 
+Ā
 Ās
 Ā
 α3
@@ -1261,9 +1222,7 @@ Āf
 
 1 0 0 0 (1 + ω)
 
-
- .
-
+ .
 (22d)
 
 Solutions of the homogeneous system (i.e. y = 0) represent free modes of precession. Three
@@ -1385,8 +1344,7 @@ CΩp sin I
 
 Upon using Equations (4), (15a), and Ωo =
 3
-2
-n, we can write
+2n, we can write
 
 ε̃m =
 CΩp sin I
@@ -1521,11 +1479,9 @@ ñs ≈
 sin I + cos I ε̃m
 
 )
-−
+− Ωoα3φs
 
-Ωoα3φs
 κλs
-
 ε̃m , (32a)
 
 m̃f ≈
@@ -1552,8 +1508,7 @@ ñs , (32b)
 
 where
 
-κ = 1−
-Ās
+κ = 1− Ās
 Āf
 
 Ω2o
@@ -1883,9 +1838,9 @@ CM
 B 
 
 ra
-di
+diu
 
-us
+s
 
 FICN
 
@@ -2222,8 +2177,7 @@ Ās
 (σ̄s − Ωp cos I)
 
 )
-−
-Ās
+− Ās
 Āc
 
 Ωoα3φs
@@ -2257,8 +2211,7 @@ misalignment of the fluid core. In Equation (41), σ̄s � σ̄f , so to a good
 
 Confidential manuscript submitted to JGR-Planets
 
-χ ≈
-Āf
+χ ≈ Āf
 Āc
 
 Ωo cos I
@@ -2718,9 +2671,7 @@ Bdr
 〉
 
 =
-2
-√
-
+2√
 3
 
 (
@@ -2794,10 +2745,7 @@ Kicb =
 5
 
 4
-(1− i)Ficb 〈Br〉
-
-2
-, (50)
+(1− i)Ficb 〈Br〉2 , (50)
 
 where
 
@@ -2845,9 +2793,7 @@ FEicb
 
 where FEicb is defined as in Equation (51) but using the parameters for Earth as defined in Dumb-
 erry and Koot [2012]. These are Ωo = 7.292 × 10−5 s−1, ρs = 12846 kg m−3, rs = 1221.5
-km, σ = 5× 105 S m−1, which gives FEicb = 90.36 T
-
-−2.
+km, σ = 5× 105 S m−1, which gives FEicb = 90.36 T−2.
 
 To compute Ficb, we assume an electrical conductivity of σ = 106 S m−1 in the core of
 Mercury [e.g. de Koker et al., 2012; Deng et al., 2013]. The transition between the weak and
@@ -3229,10 +3175,7 @@ s; these represent the obliquities with respect to the orbital plane and are con
 
 to our variables by: i′m = ε̃m, i
 ′
-f = ε̃m+m̃+m̃f ≈ ε̃m+m̃f and i
-
-′
-s = ε̃m+ ñs. To summarize
+f = ε̃m+m̃+m̃f ≈ ε̃m+m̃f and i′s = ε̃m+ ñs. To summarize
 
 their results, i′f and i
 ′

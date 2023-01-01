@@ -49,6 +49,8 @@
 
 
 
+
+
 beta.ps
 
 
@@ -265,12 +267,10 @@ ulation follows the formation and evolution of galaxies from the
 early Universe to the present by solving gravity and hydrody-
 namics, as well as modeling of star formation, galactic winds,
 
-S
-F
-
+SF
 R
- [
 
+ [
 M
 ⊙
 
@@ -298,8 +298,8 @@ the simulated galaxy from the Illustris project used to create mock data.
 The black and gray vertical arrows indicate the last mergers which the
 galaxy underwent, wet and dry, respectively.
 
-t 
-[G
+t [
+G
 
 yr
 ]
@@ -411,10 +411,10 @@ minor
 lo
 g(
 
-Σ
-) 
+Σ)
+ [
 
-[M
+M
 ⊙
 
 /k
@@ -494,10 +494,10 @@ POPULATION II
 
  90
 
-σ
- [
+σ 
+[k
 
-km
+m
 /s
 
 ]
@@ -542,10 +542,10 @@ minor
 lo
 g(
 
-Σ
-) 
+Σ)
+ [
 
-[M
+M
 ⊙
 
 /k
@@ -625,10 +625,10 @@ POPULATION II
 
  90
 
-σ
- [
+σ 
+[k
 
-km
+m
 /s
 
 ]
@@ -688,10 +688,10 @@ pop II
 
  1  10  100
 
-σ
-r(
+σ r
+(r
 
-r)
+)
 
 r [kpc]
 
@@ -707,10 +707,10 @@ r [kpc]
 
  0  10  20  30  40  50
 
-σ
-r(
+σ r
+(r
 
-r)
+)
 
 r [kpc]
 
@@ -726,10 +726,10 @@ r [kpc]
 
  1  10  100
 
-σ
-t(
+σ t
+(r
 
-r)
+)
 
 r [kpc]
 
@@ -745,10 +745,10 @@ r [kpc]
 
  0  10  20  30  40  50
 
-σ
-t(
+σ t
+(r
 
-r)
+)
 
 r [kpc]
 
@@ -863,9 +863,9 @@ The velocity anisotropy parameter β(r) = 1 − (σ2
 θ
 +
 
-σ2
-φ
-)/(2σ2r ), whereσi are velocity dispersions in spherical coordi-
+σ2φ)/(2σ
+2
+r ), whereσi are velocity dispersions in spherical coordi-
 
 nates (Binney & Tremaine 2008), describes the orbital structure
 of galaxies. It is one of the most important dynamical properties
@@ -876,10 +876,9 @@ and tangential σt = [(σ
 
 2
 θ
-+σ2
++σ2φ)/2]
 
-φ
-)/2]1/2 velocity dispersions for our
+1/2 velocity dispersions for our
 
 simulated galaxy are presented in the consecutive columns of
 
@@ -943,15 +942,13 @@ I(R) = I0
 1
 √
 
-1 + (R/Rc)
-2
+1 + (R/Rc)2
 −
 
 1
 √
 
-1 + (Rt/Rc)
-2
+1 + (Rt/Rc)2
 
 
 
@@ -1152,9 +1149,7 @@ where
 ρ0 =
 I0
 
-πRc[1 + (Rt/Rc)
-2]3/2
-
+πRc[1 + (Rt/Rc)2]3/2
 (3)
 
 and
@@ -1480,11 +1475,10 @@ ALL
 M
 to
 
-t(
-r)
+t(r
+) 
 
- [
-M
+[M
 ⊙
 
 ]
@@ -1626,11 +1620,10 @@ POPULATIONS
 M
 to
 
-t(
-r)
+t(r
+) 
 
- [
-M
+[M
 ⊙
 
 ]
@@ -1759,20 +1752,17 @@ A&A proofs: manuscript no. Populations4
 
  0  10  20  30  40
 
-P
-O
+PO
+P 
 
-P
- I
+I 
++
 
- +
  P
-
 O
-P
 
- I
-I
+P 
+II
 
 β(
 r)
@@ -1801,11 +1791,10 @@ minor
 
  0  10  20  30  40
 
-P
-O
+PO
+P 
 
-P
- I
+I
 
 β(
 r)
@@ -1827,13 +1816,10 @@ r [kpc]
 
  0  10  20  30  40
 
-P
-O
+PO
+P 
 
-P
- I
-
-I
+II
 
 β(
 r)
@@ -2413,11 +2399,10 @@ r [kpc]
 M
 to
 
-t(
-r)
+t(r
+) 
 
- [
-M
+[M
 ⊙
 
 ]
@@ -2488,20 +2473,17 @@ smaller data samples or using one stellar population) resulted
 
  0  0.4  0.8  1.2  1.6
 
-P
-O
+PO
+P 
 
-P
- I
+I 
++
 
- +
  P
-
 O
-P
 
- I
-I
+P 
+II
 
 β(
 r)
@@ -2518,11 +2500,10 @@ r [kpc]
 
  0  0.4  0.8  1.2  1.6
 
-P
-O
+PO
+P 
 
-P
- I
+I
 
 β(
 r)
@@ -2538,13 +2519,10 @@ r [kpc]
 1
 
  0  0.4  0.8  1.2  1.6
-P
+PO
 
-O
-P
-
- I
-I
+P 
+II
 
 β(
 r)

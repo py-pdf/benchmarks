@@ -786,10 +786,10 @@ Figure 2.3.: 2 × 2 max pooling applied to a feature map of size 6 × 4 with str
 Average pooling of p × p areas with stride s can be replaced by a convolutional layer. If
 the input of the pooling layer are d(i−1) feature maps, the convolutional layer has to have
 d(i−1) ﬁlters of size p × p and stride s. The ith ﬁlter has the values
-�
-�
-�
-�
+
+
+
+
 1
 p2
 . . .
@@ -803,15 +803,15 @@ p2
 . . .
 1
 p2
-�
-�
-�
-�
+
+
+
+
 for the dimension i and the zero matrix
-�
-�
-�
-�
+
+
+
+
 0
 . . .
 0
@@ -821,10 +821,10 @@ for the dimension i and the zero matrix
 0
 . . .
 0
-�
-�
-�
-�
+
+
+
+
 for all other dimensions i = 1, . . . , d(i−1).
 8
 
@@ -1566,9 +1566,9 @@ H−1 ∈ Rn×n where n ∈ N is typically n > 106.
 A much simpler and computationally cheaper pruning criterion is the weight magnitude.
 [HPTD15] prunes all weights w which are below a threshold θ:
 w ←
-�
-�
-�
+
+
+
 w
 if w ≥ θ
 0
@@ -3058,15 +3058,15 @@ S2ReLU activation function, deﬁned as
 S2ReLU(x) = ReLU(x
 2 + 1) − ReLU(−x
 2 + 1) =
-�
-�
-�
-�
-�
-�
-�
-�
-�
+
+
+
+
+
+
+
+
+
 − x
 2 + 1
 if x ≤ −2
@@ -4564,9 +4564,9 @@ Range of Values
 ϕ′(x)
 Used by
 Sign function†
-�
-�
-�
+
+
+
 +1
 if x ≥ 0
 −1
@@ -4576,9 +4576,9 @@ if x < 0
 [KS02]
 Heaviside
 step function†
-�
-�
-�
+
+
+
 +1
 if x > 0
 0
@@ -4602,9 +4602,9 @@ sech2(x)
 ReLU†
 max(0, x)
 [0, +∞)
-�
-�
-�
+
+
+
 1
 if x > 0
 0
@@ -4614,9 +4614,9 @@ LReLU†2
 (PReLU)
 ϕ(x) = max(αx, x)
 (−∞, +∞)
-�
-�
-�
+
+
+
 1
 if x > 0
 α
@@ -4629,17 +4629,17 @@ ex
 ex+1
 [DBB+01, GBB11]
 ELU
-�
-�
-�
+
+
+
 x
 if x > 0
 α(ex − 1)
 if x ≤ 0
 (−∞, +∞)
-�
-�
-�
+
+
+
 1
 if x > 0
 αex
@@ -4660,9 +4660,9 @@ k=1 exk
 Maxout‡
 o(x) = maxx∈x x
 (−∞, +∞)
-�
-�
-�
+
+
+
 1
 if xi = max x
 0
