@@ -33,6 +33,8 @@ from tika import parser
 
 from utils import sizeof_fmt, table_to_markdown
 
+tika.initVM()
+
 
 def get_processor_name():
     """Credits: https://stackoverflow.com/a/13078519/562769"""
