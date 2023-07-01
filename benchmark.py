@@ -109,6 +109,9 @@ class Cache(BaseModel):
         default_factory=dict
     )
     read_quality: Dict[str, Dict[str, float]] = Field(default_factory=dict)
+    watermarking_result_file_size: Dict[str, Dict[str, float]] = Field(
+        default_factory=dict
+    )
 
     def has_doc(self, library: Library, document: Document) -> bool:
         lib = library.pathname
@@ -121,6 +124,9 @@ class Cache(BaseModel):
 
         if lib not in self.read_quality:
             self.read_quality[lib] = {}
+
+        if lib not in self.watermarking_result_file_size:
+            self.watermarking_result_file_size[lib] = {}
 
         return doc in self.benchmark_times[lib] and doc in self.read_quality[lib]
 
@@ -197,6 +203,26 @@ def pymupdf_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
     return images
 
 
+def pymupdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
+    pdf_file = PyMuPDF.open(stream=data, filetype="pdf")
+    overlay = PyMuPDF.open(stream=watermark_data, filetype="pdf")
+    for i in range(pdf_file.page_count):
+        page = pdf_file.load_page(i)
+        page_front = PyMuPDF.open()
+        page_front.insert_pdf(overlay, from_page=i, to_page=i)
+        page.show_pdf_page(
+            page.rect,
+            page_front,
+            pno=0,
+            keep_proportion=True,
+            overlay=True,
+            oc=0,
+            rotate=0,
+            clip=None,
+        )
+    return pdf_file.write()
+
+
 def pdfminer_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
     from PIL import Image
 
@@ -269,7 +295,7 @@ def pdftotext_get_text(data: bytes) -> str:
 def main(
     docs: List[Document],
     libraries: Dict[str, Library],
-    add_text_extraction_quality=True,
+    add_text_extraction_quality: bool = True,
 ) -> None:
     cache_path = Path("cache.json")
     if cache_path.exists():
@@ -306,6 +332,9 @@ def main(
             t1 = time.time()
             write_single_result("watermark", name, doc.name, watermarked, "pdf")
             cache.benchmark_times[lib.pathname][doc.name]["watermark"] = t1 - t0
+            cache.watermarking_result_file_size[lib.pathname][doc.name] = len(
+                watermarked
+            )
         if lib.image_extraction_function:
             t0 = time.time()
             extracted_images = lib.image_extraction_function(data)
@@ -352,6 +381,7 @@ def write_single_result(
 def get_times(
     cache: Cache, docs: List[Document], benchmark_type: str
 ) -> Dict[str, List[Optional[float]]]:
+    """Create a dict pointing library names to the list of execution times."""
     times = {}  # library : [doc1, doc2, ...]
     for lib_name in cache.benchmark_times:
         times[lib_name] = []
@@ -363,7 +393,7 @@ def get_times(
 
 def write_benchmark_report(
     names: List[str],
-    extract_functions: Dict[str, Library],
+    libname2details: Dict[str, Library],
     docs: List[Document],
     cache: Cache,
 ) -> None:
@@ -397,7 +427,7 @@ def write_benchmark_report(
         table = []
         header = ["Name", "Last PyPI Release", "License", "Version", "Dependencies"]
         for name in names:
-            lib = extract_functions[name]
+            lib = libname2details[name]
             row = [
                 lib.name,
                 lib.last_release_date,
@@ -427,7 +457,7 @@ def write_benchmark_report(
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
-            lib = extract_functions[library_name]
+            lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
             row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
@@ -451,7 +481,7 @@ def write_benchmark_report(
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
-            lib = extract_functions[library_name]
+            lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
             row += [f"{t:0.1f}s" for t in image_extraction_times[library_name]]
@@ -478,10 +508,36 @@ def write_benchmark_report(
         sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
-            lib = extract_functions[library_name]
+            lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
             row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
+            table.append(row)
+        f.write(table_to_markdown(table, headings=headings))
+        f.write("\n")
+
+        # ---------------------------------------------------------------------
+        f.write("\n")
+        f.write("## Watermarking File Size\n\n")
+        # Get data
+        all_scores: Dict[str, List[float]] = {}
+        for library_name in names:
+            lib = libname2details[library_name]
+            all_scores[library_name] = []
+            for doc in track(docs):
+                all_scores[library_name].append(
+                    cache.watermarking_result_file_size[library_name][doc.name]
+                )
+        # Print table
+        table = []
+        averages = [np.mean(all_scores[name]) for name in names]
+        sort_order = np.argsort([-avg for avg in averages])
+        for place, index in enumerate(sort_order, start=1):
+            library_name = names[index]
+            lib = libname2details[library_name]
+            avg = averages[index]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg/10**6:1.1f}MB"]
+            row += [f"{score/10**6:1.1f}MB" for score in all_scores[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
@@ -492,7 +548,7 @@ def write_benchmark_report(
         # Get data
         all_scores: Dict[str, List[float]] = {}
         for library_name in names:
-            lib = extract_functions[library_name]
+            lib = libname2details[library_name]
             all_scores[library_name] = []
             for doc in track(docs):
                 all_scores[library_name].append(
@@ -505,7 +561,7 @@ def write_benchmark_report(
         sort_order = np.argsort([-avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
-            lib = extract_functions[library_name]
+            lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
             row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
@@ -591,7 +647,7 @@ if __name__ == "__main__":
             "https://pypi.org/project/PyMuPDF/",
             lambda n: pymupdf_get_text(n),
             version=PyMuPDF.version[0],
-            watermarking_function=None,
+            watermarking_function=pymupdf_watermarking,
             image_extraction_function=pymupdf_image_extraction,
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
