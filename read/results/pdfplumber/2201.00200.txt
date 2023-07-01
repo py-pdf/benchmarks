@@ -2,169 +2,163 @@ Astronomy&Astrophysicsmanuscriptno.solar˙model˙v10˙corrected ©ESO2022
 January4,2022
 Local heating due to convective overshooting and the solar
 modelling problem
-I.Baraﬀe1,2,T.Constantino1,J.Clarke1,A.LeSaux1,2,T.Goﬀrey4,T.Guillet1,J.Pratt3,D.G.Vlaykov1
+I.Baraffe1,2,T.Constantino1,J.Clarke1,A.LeSaux1,2,T.Goffrey4,T.Guillet1,J.Pratt3,D.G.Vlaykov1
 1 UniversityofExeter,PhysicsandAstronomy,EX44QLExeter,UK(e-mail:i.baraffe@ex.ac.uk)
 2 E´coleNormaleSupe´rieure,Lyon,CRAL(UMRCNRS5574),Universite´deLyon,France
 3 DepartmentofPhysicsandAstronomy,GeorgiaStateUniversity,AtlantaGA30303,USA
 4 CentreforFusion,SpaceandAstrophysics,DepartmentofPhysics,UniversityofWarwick,Coventry,CV47AL,UK
 ABSTRACT
-2
-2 Recent hydrodynamical simulations of convection in a solar-like model suggest that penetrative convective ﬂows at the boundary
-0 oftheconvectiveenvelopemodifythethermalbackgroundintheovershootinglayer.Basedontheseresults,weimplementinone-
-2 dimensional stellar evolution codes a simple prescription to modify the temperature gradient below the convective boundary of a
-  solar model. This simple prescription qualitatively reproduces the behaviour found in the hydrodynamical simulations, namely a
-n
+2202
+Recent hydrodynamical simulations of convection in a solar-like model suggest that penetrative convective flows at the boundary
+oftheconvectiveenvelopemodifythethermalbackgroundintheovershootinglayer.Basedontheseresults,weimplementinone-
+dimensional stellar evolution codes a simple prescription to modify the temperature gradient below the convective boundary of a
+solar model. This simple prescription qualitatively reproduces the behaviour found in the hydrodynamical simulations, namely a
+naJ
 localheatingandsmoothingofthetemperaturegradientbelowtheconvectiveboundary.Weshowthatintroducinglocalheatingin
-a
 theovershootinglayercanreducethesound-speeddiscrepancyusuallyreportedbetweensolarmodelsandthestructureoftheSun
-J
-  inferred from helioseismology. It also aﬀects key quantities in the convective envelope, such as the density, the entropy, and the
-1 speedofsound.Theseeﬀectscouldhelpreducethediscrepanciesbetweensolarmodelsandobservedconstraintsbasedonseismic
- 
-  inversions of the Ledoux discriminant. Since mixing due to overshooting and local heating are the result of the same convective
-]
+inferred from helioseismology. It also affects key quantities in the convective envelope, such as the density, the entropy, and the
+1 speedofsound.Theseeffectscouldhelpreducethediscrepanciesbetweensolarmodelsandobservedconstraintsbasedonseismic
+inversions of the Ledoux discriminant. Since mixing due to overshooting and local heating are the result of the same convective
+]RS.hp-ortsa[
 penetrationprocess,thegoalofthisworkistoinvitesolarmodellerstoconsiderbothprocessesforamoreconsistentapproach.
-R
-S Keywords.Convection–Hydrodynamics–Stars:evolution–Sun:evolution-helioseismology-interior
-.
-h
-p
-- 1. Introduction baseoftheconvectivezone,Christensen-Dalsgaardetal.(2011)
-o found that models that better ﬁt the helioseismic data have a
-r Modelling the internal structure of the Sun is still a challenge.
+Keywords.Convection–Hydrodynamics–Stars:evolution–Sun:evolution-helioseismology-interior
+1. Introduction baseoftheconvectivezone,Christensen-Dalsgaardetal.(2011)
+found that models that better fit the helioseismic data have a
+Modelling the internal structure of the Sun is still a challenge.
 weakly sub-adiabatic temperature gradient in the lower part of
-t
-s A recent review by Christensen-Dalsgaard (2021) describes in theconvectivezoneandasmoothtransitiontotheradiativegra-
-a detailthelong-standingeﬀortstoimprovesolarmodels.Theso-
+A recent review by Christensen-Dalsgaard (2021) describes in
+theconvectivezoneandasmoothtransitiontotheradiativegra-
+detailthelong-standingeffortstoimprovesolarmodels.Theso-
 dientintheovershootinglayer.ButChristensen-Dalsgaardetal.
-[
-  lar modelling problem refers to the discrepancy between helio- (2011)notedthattherequiredtemperaturestratiﬁcationisdiﬃ-
-1  seismology and solar interior models that adopt low metallici- culttoreconcilewithexistingovershootingmodelsandnumer-
-v tiespredictedbythethree-dimensional(3D)atmospheremodels ical simulations. They concluded that only non-local turbulent
-0 of,forexample,Asplundetal.(2009)andCaﬀauetal.(2011),
+lar modelling problem refers to the discrepancy between helio- (2011)notedthattherequiredtemperaturestratificationisdiffi-
+1v00200.1022:viXra seismology and solar interior models that adopt low metallici- culttoreconcilewithexistingovershootingmodelsandnumer-
+tiespredictedbythethree-dimensional(3D)atmospheremodels
+ical simulations. They concluded that only non-local turbulent
+of,forexample,Asplundetal.(2009)andCaffauetal.(2011),
 convectionmodelscouldproducethedesireddegreeofsmooth-
-0 in contrast to the high metallicities based on previous litera-
+in contrast to the high metallicities based on previous litera-
 nessinthetransition(seeforexampleZhang&Li2012;Zhang
-2 ture compilations by, for example, Anders & Grevesse (1989)
+ture compilations by, for example, Anders & Grevesse (1989)
 et al. 2012). But these non-local models remain uncertain, and
-0 and Grevesse & Noels (1993). Asplund et al. (2021) have re-
+and Grevesse & Noels (1993). Asplund et al. (2021) have re-
 their description of overshooting under the conditions found at
-0
-cently conﬁrmed with state-of-the-art 3D simulations the rela-
-. the base of the solar convective zone is yet to be validated.
-1 tively low metal abundances for the Sun. Asplund et al. (2021)
+cently confirmed with state-of-the-art 3D simulations the rela-
+the base of the solar convective zone is yet to be validated.
+tively low metal abundances for the Sun. Asplund et al. (2021)
 Zhang et al. (2019) explored the impact of overshooting by
-0 consider that their study yields the most reliable solar abun-
-introducing a parametrised turbulent kinetic energy ﬂux based
-2 dancesavailabletoday,suggestingthatthesolarmodellingprob-
+consider that their study yields the most reliable solar abun-
+introducing a parametrised turbulent kinetic energy flux based
+dancesavailabletoday,suggestingthatthesolarmodellingprob-
 on a model with parameters that are adjusted to improve the
-2 lemisnolongeraproblemofabundancesbutratheraproblem
+lemisnolongeraproblemofabundancesbutratheraproblem
 helioseismic properties. They suggest that amelioration can be
-:
-v ofstellarphysics.Thetreatmentofmixingbelowtheconvective obtained speciﬁcally below the convective envelope. However,
-Xi zoneisoneofthekeyprocessesthatcouldimprovesolarmod- Zhangetal.(2019)ﬁndthatthismodelcannotsolvethewhole
+ofstellarphysics.Thetreatmentofmixingbelowtheconvective
+obtained specifically below the convective envelope. However,
+zoneisoneofthekeyprocessesthatcouldimprovesolarmod-
+Zhangetal.(2019)findthatthismodelcannotsolvethewhole
 els.Severalstudiesindeedrevealthattheprocessofconvective
-solarproblembecausesuchaﬂuxworsensthesound-speedpro-
-r penetration, also called overshooting, at the bottom of the con-
-a ﬁleinthedeepradiativeinterioroftheirsolarmodel.Giventhe
+solarproblembecausesuchafluxworsensthesound-speedpro-
+penetration, also called overshooting, at the bottom of the con-
+fileinthedeepradiativeinterioroftheirsolarmodel.Giventhe
 vectiveenvelopecouldplayanimportantroleinimprovingthe
-uncertaintiesregardingthetemperaturestratiﬁcationoftheover-
-agreement between solar models and helioseismic constraints shootingregion,solarmodellershaveconsideredtheseeﬀectsas
-(seeforexampleChristensen-Dalsgaardetal.2011;Zhangetal. secondaryandhavefocusedtheireﬀortsonexploringtheimpact
+uncertaintiesregardingthetemperaturestratificationoftheover-
+agreement between solar models and helioseismic constraints shootingregion,solarmodellershaveconsideredtheseeffectsas
+(seeforexampleChristensen-Dalsgaardetal.2011;Zhangetal. secondaryandhavefocusedtheireffortsonexploringtheimpact
 2012; Buldgen et al. 2019b). Overshooting in solar models has
 ofsolarabundances,microphysics(opacities,equationsofstate,
-mostoftenbeentreatedusingdiﬀusiveorinstantaneouschemi- nuclear reaction rates), and chemical mixing and diﬀusion (see
+mostoftenbeentreatedusingdiffusiveorinstantaneouschemi-
+nuclear reaction rates), and chemical mixing and diffusion (see
 calmixing.Atemperaturegradientthatsharplytransitionsfrom
 details and references in the review of Buldgen et al. 2019a).
-a nearly adiabatic form to a radiative form is usually assumed, Additional, more exotic eﬀects such as early disk accretion or
+a nearly adiabatic form to a radiative form is usually assumed, Additional, more exotic effects such as early disk accretion or
 as suggested by the theoretical work of Zahn (1991). Models
 solar-wind mass loss (Zhang et al. 2019; Kunitomo & Guillot
 with a smoother transition have also been investigated. Based
 2021)arealsoattractingincreasingattention.
-on the analysis of models with diﬀerent stratiﬁcations near the
+on the analysis of models with different stratifications near the
 To reinvigorate the debate, Buldgen et al. (2019b) recently
-Sendoﬀprintrequeststo:I.Baraﬀe highlightedonceagainhowthetransitionofthetemperaturegra-
+Sendoffprintrequeststo:I.Baraffe highlightedonceagainhowthetransitionofthetemperaturegra-
 1
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
-dientjustbelowtheconvectiveenvelopecansigniﬁcantlyimpact tionprocesstothelocalheatingandtotheradiativebumpinthe
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+dientjustbelowtheconvectiveenvelopecansignificantlyimpact tionprocesstothelocalheatingandtotheradiativebumpinthe
 the disagreement between solar models and helioseismic con- overshootinglayer.Thesolar-likestarsimulatedinB21isbased
 straints. Their results, based on a method that combines multi- on a model that is not thermally relaxed. It is reasonable to as-
 ple structural inversions, suggest that the transition in temper- sumethatthelocalheatingseeninB21ispresentinstarsbecause
-ature gradient is improperly reproduced by adopting either an thenegativeheatﬂuxintheovershootinglayerandthebumpin
-adiabatic or a radiative temperature gradient in the overshoot- theradiativeﬂuxthatcompensatesforthisfeaturearepersistent.
+ature gradient is improperly reproduced by adopting either an thenegativeheatfluxintheovershootinglayerandthebumpin
+adiabatic or a radiative temperature gradient in the overshoot- theradiativefluxthatcompensatesforthisfeaturearepersistent.
 ing layer. The solution should be somewhere in between these Thesetwofeaturesarealsocommonlyobservedinotherhydro-
 twoextremes.Christensen-Dalsgaardetal.(2018)alsonotethat dynamical simulations, as mentioned above. An exploration of
 an increase in the temperature at the transition would remove theimpactofthisheatingonstellarevolutionmodelsmayreveal
 aremainingsmallsharpdipinthespeedofsoundimmediately thatheatingisanecessaryaspectofmodelsforovershooting.
-beneaththeconvectivezoneofthemodel.Amajordiﬃcultyis
-todisentangletheeﬀectsofovershootfromtheeﬀectsofopaci-
+beneaththeconvectivezoneofthemodel.Amajordifficultyis
+todisentangletheeffectsofovershootfromtheeffectsofopaci-
 ties,whichcanalsoalterthetemperaturegradientintheselayers.
 Giventhelargenumberofparameterstodealwithinordertoim-
 prove solar models and the current lack of strong arguments in
-favour of modifying the thermal stratiﬁcation in the overshoot-
+favour of modifying the thermal stratification in the overshoot-
 inglayer,therehasbeennorealmotivationtodeviatefromthe
 traditional picture of a sharp transition as formalised by Zahn
 (1991).
 Thepresentworkismotivatedbyargumentsinspiredbyhy-
 drodynamicalsimulationsofconvectionandconvectivepenetra-
 tioninsolar-likemodels.Recenthydrodynamicalsimulationsby
-Baraﬀeetal.(2021,hereafterB21)highlighttheprocessoflocal
+Baraffeetal.(2021,hereafterB21)highlighttheprocessoflocal
 heatingintheovershootingregionduetopenetratingconvective
 motions across the convective boundary. In the following, we
 analyse thepotential impact ofthis feature on one-dimensional
 (1D) stellar evolution structures in the context of solar models.
-The hydrodynamical results of B21 are brieﬂy summarised in
+The hydrodynamical results of B21 are briefly summarised in
 Sect. 2, and their impact on 1D models are analysed in Sect. 3
 anddiscussedinSect.4.
-2. Modiﬁcationofthethermalbackgroundinthe
+2. Modificationofthethermalbackgroundinthe
 overshootinglayer:Resultsfrom
 two-dimensionalhydrodynamicalsimulations
 B21 performed two-dimensional (2D) fully compressible time-
 implicitsimulationsofconvectionandconvectivepenetrationin
 a solar-like model with the MUlti-dimensional Stellar Implicit
-Code MUSIC (Viallet et al. 2011, 2016; Goﬀrey et al. 2017).
-The main motivation was to explore the impact of an artiﬁcial
-increaseinthestellarluminosityonthepropertiesofconvection Fig.1. Radial proﬁle of the temperature departure ∆T/T0 from
-and convective penetration. This procedure is a common tactic theinitialproﬁleT0andofthesub-adiabaticity(∇−∇ad)closeto
+Code MUSIC (Viallet et al. 2011, 2016; Goffrey et al. 2017).
+The main motivation was to explore the impact of an artificial
+increaseinthestellarluminosityonthepropertiesofconvection Fig.1. Radial profile of the temperature departure ∆T/T 0 from
+and convective penetration. This procedure is a common tactic theinitialprofileT 0andofthesub-adiabaticity(∇−∇ ad)closeto
 adopted in hydrodynamical simulations of convection (Rogers theconvectiveboundarypredictedby2Dhydrodynamicalsimu-
 etal.2006;Meakin&Arnett2007;Brunetal.2011;Hotta2017; lations(B21)ofsolar-likemodels.Thelowerpanelcorresponds
 Edelmannetal.2019).TheexperimentsofB21highlighttheim- to the model with a realistic stellar luminosity and the upper
-pactofpenetrativedownﬂowsonthelocalthermalbackground panel to a model with luminosity enhanced by a factor of ten.
-intheovershootinglayer.Theyillustratehowconvectivedown- The dash-dotted red lines show ∆T/T0 (in %), the relative dif-
-ﬂows,whenpenetratingtheregionbelowtheconvectivebound- ferencebetweenthetimeandspaceaveragesofthetemperature,
-aryoftheenvelope,caninducealocalheatingandamodiﬁcation T,andtheinitialtemperature,T0.Thesolidbluelinesshowthe
-ofthetemperaturegradientasaresultofcompressionandshear time and space averages of the sub-adiabaticity (∇−∇ad). The
-in the overshooting layer. This modiﬁcation of the local back- dashedblacklinesshowtheinitialproﬁleofthesub-adiabaticity,
-ground is connected to a local increase in the radiative ﬂux to (∇−∇ad)init.Theconvectiveboundaryisindicatedbythevertical
-counterbalancethenegativeenthalpyﬂux(orheatﬂux)produced solidline(seedetailsinB21)
-by penetrating ﬂows. The negative peak of the enthalpy ﬂux
-andthepositivebumpoftheradiativeﬂuxbelowtheconvective
-boundary are well-known features described in many numeri- The behaviour of the thermal proﬁle below the convective
+pactofpenetrativedownflowsonthelocalthermalbackground panel to a model with luminosity enhanced by a factor of ten.
+intheovershootinglayer.Theyillustratehowconvectivedown- The dash-dotted red lines show ∆T/T 0 (in %), the relative dif-
+flows,whenpenetratingtheregionbelowtheconvectivebound- ferencebetweenthetimeandspaceaveragesofthetemperature,
+aryoftheenvelope,caninducealocalheatingandamodification T,andtheinitialtemperature,T 0.Thesolidbluelinesshowthe
+ofthetemperaturegradientasaresultofcompressionandshear time and space averages of the sub-adiabaticity (∇−∇ ad). The
+in the overshooting layer. This modification of the local back- dashedblacklinesshowtheinitialprofileofthesub-adiabaticity,
+ground is connected to a local increase in the radiative flux to (∇−∇ ad) init.Theconvectiveboundaryisindicatedbythevertical
+counterbalancethenegativeenthalpyflux(orheatflux)produced solidline(seedetailsinB21)
+by penetrating flows. The negative peak of the enthalpy flux
+andthepositivebumpoftheradiativefluxbelowtheconvective
+boundary are well-known features described in many numeri- The behaviour of the thermal profile below the convective
 calworks(Hurlburtetal.1986;Muthsametal.1995;Brummell boundary found in the simulations of B21 is illustrated in Fig.
 et al. 2002; Brun et al. 2011; Hotta 2017; Ka¨pyla¨ 2019; Cai 1.Itisdisplayedforthemodelwitharealisticstellarluminosity
-2020).Afewworks(Rogersetal.2006;Vialletetal.2013;Korre (lowerpanel).Wealsoshowtheresultsforamodelwithanartiﬁ-
-et al. 2019; Higl et al. 2021) have also reported a modiﬁcation cialenhancementintheluminositybyafactoroftenbecausethe
-ofthelocalthermalbackgroundintheovershootingregion,but featuresareintensiﬁedinthese‘boosted’models(upperpanel).
-withoutprovidingadetaileddescription.ThesimulationsofB21 Theﬁgureshowsthelocalheatingintheovershootinglayerand
+2020).Afewworks(Rogersetal.2006;Vialletetal.2013;Korre (lowerpanel).Wealsoshowtheresultsforamodelwithanartifi-
+et al. 2019; Higl et al. 2021) have also reported a modification cialenhancementintheluminositybyafactoroftenbecausethe
+ofthelocalthermalbackgroundintheovershootingregion,but featuresareintensifiedinthese‘boosted’models(upperpanel).
+withoutprovidingadetaileddescription.ThesimulationsofB21 Thefigureshowsthelocalheatingintheovershootinglayerand
 provideaphysicalexplanationthatlinkstheconvectivepenetra- itsimpactonthesub-adiabaticity(∇−∇ ),with∇ = dlogT the
 ad dlogP
 2
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
 temperature gradient and ∇ = dlogT| the adiabatic gradient. entropydiscrepancy(S −S )/S hastwopositivepeaksin
 ad dlogP S Sun ref ref
-Theinitialstratiﬁcationbelowtheconvectiveboundary(located theradiativezone,onejustbelowtheovershootingregionanda
-at r = 0.6734 × R for this speciﬁc stellar model) is set by larger peak deeper at ∼ 40% of the stellar radius. This discrep-
+Theinitialstratificationbelowtheconvectiveboundary(located theradiativezone,onejustbelowtheovershootingregionanda
+at r = 0.6734 × R for this specific stellar model) is set by larger peak deeper at ∼ 40% of the stellar radius. This discrep-
 star
 thestableradiativegradient,∇ (seethedashedblacklinebe- ancyisnegativeintheconvectivezone.Thecorrectionsapplied
 rad
 lowtheconvectiveboundaryinFig.1).B21showthat,asare- toAhelpreducetheseentropydiscrepanciesinbothregions.
-sultofthelocalheatingbelowtheconvectiveboundarycharac- The fourth concerns the density. The quantity (ρSun −
-terisedbythebumpintemperaturediﬀerence∆T/T0 displayed ρref)/ρref has a negative peak in the radiative region, at ∼ 35%
+sultofthelocalheatingbelowtheconvectiveboundarycharac- The fourth concerns the density. The quantity (ρ Sun −
+terisedbythebumpintemperaturedifference∆T/T 0 displayed ρ ref)/ρ ref has a negative peak in the radiative region, at ∼ 35%
 in Fig. 1, the temperature gradient becomes less sub-adiabatic ofthestellarradius,andispositiveintheconvectivezone.
 immediately below the convective boundary1. The net result is Importantly,Buldgenetal.(2020)mentionthattheirrecon-
-a smoother transition just below the convective boundary with struction procedure gives similar Ledoux discriminant proﬁles
+a smoother transition just below the convective boundary with struction procedure gives similar Ledoux discriminant profiles
 a temperature gradient that has an intermediate value between for a wide range of initial reference models. We used these re-
-the radiative temperature gradient and the adiabatic one. In the sults to gauge whether the modiﬁcations of the thermal proﬁle
+the radiative temperature gradient and the adiabatic one. In the sults to gauge whether the modifications of the thermal profile
 next section we analyse the impact of this local heating on 1D predicted by B21 can help in qualitatively improving all the
 solar structures by adopting a simple prescription that mimics structuralquantitiesusedbyBuldgenetal.(2020).
 the behaviour of the temperature gradient suggested by hydro-
@@ -173,20 +167,21 @@ dynamicalsimulations.
 Ourmainmotivationistoshowthepotentialimpactofthelocal
 3. Impactonone-dimensionalsolarstructure
 heating described in Sect. 2 on stellar models. We are not aim-
-models inginthisshortworkatconstructingthebestsolarmodeltoﬁt
+models inginthisshortworkatconstructingthebestsolarmodeltofit
 helioseismicconstraints.Usingstellarevolutioncodes,wehave
 3.1. Helioseismicconstraints
-adopted two diﬀerent methods that can be found in the litera-
+adopted two different methods that can be found in the litera-
 Ourprimarygoalinthisshortpaperistoillustratethepotential, turetoconstructsolarmodels(e.g.Zhangetal.2012;Vinyoles
-qualitative impact of the local heating produced by overshoot- et al. 2017). Our ﬁrst method relies on the thermal relaxation
+qualitative impact of the local heating produced by overshoot- et al. 2017). Our first method relies on the thermal relaxation
 ing. We adopted a strategy inspired by the analysis of Buldgen of a reference model with solar radius and luminosity that is
-et al. (2020), who constructed a static structure of the Sun in modiﬁedtoreproducethetemperaturegradientintheovershoot-
+et al. (2020), who constructed a static structure of the Sun in modifiedtoreproducethetemperaturegradientintheovershoot-
 agreement with seismic inversions of the Ledoux discriminant inglayersuggestedbyhydrodynamicalsimulations.Inthiscase,
-deﬁnedby thechemicalabundancesarenotmodiﬁedbynuclearreactions,
-mixing, or microscopic diﬀusion during the relaxation process.
+definedby thechemicalabundancesarenotmodifiedbynuclearreactions,
+mixing, or microscopic diffusion during the relaxation process.
 1 dlnP dlnρ
 A= − , (1) For these tests, we used the 1D Lyon stellar evolution code
-Γ1 dlnr dlnr (Baraﬀeetal.1998).Werepeatedthisexperimentbasedonther-
+Γ dlnr dlnr (Baraffeetal.1998).Werepeatedthisexperimentbasedonther-
+1
 with Γ = (∂lnP/∂lnρ) . Starting from a reference evolu- mal relaxation with the stellar evolution code MONSTAR (e.g.
 1 ad
 Constantino et al. 2014) and obtained the same qualitative re-
@@ -195,48 +190,49 @@ sults.
 cedure to iteratively reconstruct a solar model. Successive in-
 The second method considers models that account for the
 versions of the Ledoux discriminant allowed them to obtain a
-modiﬁcation of the temperature gradient in the overshooting
-model-independentproﬁleforthisquantity.Theirreconstruction
+modification of the temperature gradient in the overshooting
+model-independentprofileforthisquantity.Theirreconstruction
 layer from the zero age main sequence (ZAMS). The models
 method also gives solar structures that are in excellent agree-
 arethenevolveduntiltheyreachthesolarradiusandluminosity.
 mentwithotherstructuralinversions,namelytheentropy,S,the
 squareofthespeedofsound,c2,andthedensity,ρ.Toillustrate With this approach, changes in the chemical abundances from
-s nuclearreactions,microscopicdiﬀusion,andovershootingmix-
+s nuclearreactions,microscopicdiffusion,andovershootingmix-
 the convergence of their reconstruction procedure, they show
-ing are also consistent with any modiﬁcation of the structure
+ing are also consistent with any modification of the structure
 (rightpanelsoftheirFigs.3-6)thesuccessiveiterationsthatcon-
 induced by the forced local heating in the overshooting layer.
 verge to an excellent level of agreement for the four structural
 inversions(A,S,c2,ρ)startingfromtheinitialreferencemodel These tests were performed with MONSTAR as it includes the
-adoptedintheirwosrk.Thediﬀerencesfoundbetweentherecon- treatmentofmicroscopicdiﬀusion.
-The ﬁrst method allows the impact of local heating in
+adoptedintheirwos treatmentofmicroscopicdiffusion.
+rk.Thedifferencesfoundbetweentherecon-
+The first method allows the impact of local heating in
 structedmodelandthereferencemodelareusefulastheyindi-
 the overshooting layer after thermal relaxation to be isolated.
-catethemodiﬁcationsofthereferencemodelthatarerequiredto
+catethemodificationsofthereferencemodelthatarerequiredto
 The second method provides evolutionary models that are self-
 convergetowardsasolarmodelinagreementwithhelioseismic
-consistentsincetheeﬀectofthemodiﬁcationofthetemperature
+consistentsincetheeffectofthemodificationofthetemperature
 data. We recall here the major trends found by Buldgen et al.
 gradientisaccountedforduringtheirevolutiononthemainse-
 (2020)forthefourstructuralquantities,whichareusedforour
 quence.
 analysisinSect.3.2.
-Inthefollowing,weadoptamodiﬁcationofthelocaltemper-
-The ﬁrst concerns the Ledoux discriminant. The major dis-
+Inthefollowing,weadoptamodificationofthelocaltemper-
+The first concerns the Ledoux discriminant. The major dis-
 aturegradientintheovershootinglayerthatqualitativelyrepro-
 crepancy between the Sun and the reference model occurs just
-ducesthebehaviourdisplayedinFig.1.Wedeﬁneanovershoot-
+ducesthebehaviourdisplayedinFig.1.Wedefineanovershoot-
 below the convective boundary, with a large positive bump for
 inglengthd = α H ,with H thepressurescaleheight
 thequantity(A -A ). ov ov P,CB P,CB
 Sun ref
 attheconvectiveboundaryandα afreeparameter.Wealsode-
 Thesecondconcernsthespeedofsound.Thesamepositive ov
-ﬁnetworadiallocations,r =r −d andr =r −d /2,
+finetworadiallocations,r =r −d andr =r −d /2,
 bumpatthesamelocationasfortheLedouxdiscriminant,A,is ov CB ov mid CB ov
-observed for the quantity (c2 − c2 )/c2 . The corrections withrCBtheradiallocationoftheconvectiveboundary.Thetem-
-s,Sun s,ref s,ref peraturegradientismodiﬁedasfollows.Forr ≤ r < r ,we
+observed for the quantity (c2 − c2 )/c2 . The corrections withr CBtheradiallocationoftheconvectiveboundary.Thetem-
+s,Sun s,ref s,ref peraturegradientismodifiedasfollows.Forr ≤ r < r ,we
 appliedtoAduringthereconstructionprocedurealsoreducethe mid CB
 use
 discrepancyinthespeedofsoundintheradiativeregion.
@@ -246,10 +242,10 @@ servedinboththeradiativeregionandtheconvectivezone.The
 with
 1 Lesssub-adiabaticmeansthat|∇−∇ |decreasescomparedtothe
 ad
-initialproﬁle. g(r)= sin{[(r−r )/(r −r )]a×π/2}. (3)
+initialprofile. g(r)= sin{[(r−r )/(r −r )]a×π/2}. (3)
 mid CB mid
 3
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
 Forr ≤r<r ,weuse byEqs.(2)-(5)yieldssimilarqualitativechangesinthetemper-
 ov mid
 ature and the sub-adiabaticity close to the convective boundary
@@ -261,9 +257,9 @@ mid mid ov
 Sine functions are used in Eqs. (3) and (5) to reproduce the
 smoothvariationsinthetemperaturegradientbelowtheconvec-
 tiveboundaryproducedbythehydrodynamicalsimulations.We
-haveveriﬁedthattheresultsareinsensitivetothesmoothnessof
+haveverifiedthattheresultsareinsensitivetothesmoothnessof
 these variations and to the exact shape of the temperature gra-
-dientradialproﬁle.Weadopteda=0.3inEq.(3)asitprovidesa
+dientradialprofile.Weadopteda=0.3inEq.(3)asitprovidesa
 behaviourforthetemperaturegradientveryclosetotheonedis-
 playedinFig.1.Resultsareratherinsensitivetovariationsinthe
 valuesofabetween0.2and0.4.Weadoptedb=0.03inEq.(5),
@@ -271,7 +267,7 @@ whichalsoprovidesaclosevisualmatchtothehydrodynamical
 results,butwenotethattheresultsareinsensitivetothevalueof
 b.
 3.2.1. Thermalequilibriummodels
-Thedetailsoftheprocedurefortheﬁrstmethodarethefollow-
+Thedetailsoftheprocedureforthefirstmethodarethefollow-
 ing.Wecalculatetheevolutionofa1 M modelwithaninitial
 (cid:12)
 helium mass fraction of 0.28, metallicity Z = 0.02, and a mix-
@@ -279,7 +275,7 @@ ing length l = 1.9H . We use a reference model that is in
 mix P
 thermal equilibrium2 and has the luminosity and radius of the
 current Sun. Starting from this reference model, the tempera-
-ture gradient is modiﬁed over a prescribed depth to mimic the
+ture gradient is modified over a prescribed depth to mimic the
 impact of overshooting according to the hydrodynamical sim-
 ulations described in Sect. 2. We adopt the prescription given
 byEqs.(2)-(5)overadistanced belowtheconvectivebound-
@@ -287,24 +283,24 @@ ov
 ary.WeshowtheresultsinFig.2forα =0.15andα =0.20.
 ov ov
 Theseovershootingwidthsareingoodagreementwiththemaxi-
-maldepthreachedbydownﬂowsbelowtheconvectiveboundary
+maldepthreachedbydownflowsbelowtheconvectiveboundary
 predicted by the hydrodynamical simulations for the solar-like
 model investigated in B21. We note that the stellar model used
 inB21isslightlyunder-luminouscomparedtotheSun(seeB21
 fordetails).B21alsomentionthatoneshouldbecautiouswhen
 directlyapplyingtheovershootingdepthspredictedbytheirsim-
-Fig.2. Radial proﬁle of the temperature diﬀerence and of the
-ulationstorealstarssincetheﬁnalrelaxedstateforthesesimula-
-tions may have diﬀerent properties from non-thermally relaxed sub-adiabaticityofa1Dsolar-likestructurewithamodiﬁedtem-
+Fig.2. Radial profile of the temperature difference and of the
+ulationstorealstarssincethefinalrelaxedstateforthesesimula-
+tions may have different properties from non-thermally relaxed sub-adiabaticityofa1Dsolar-likestructurewithamodifiedtem-
 perature gradient in the overshooting layer according to Eqs.
-states. We varied α between 0.15 and 0.35 and ﬁnd that the
-ov (2)-(5). The temperature gradient is modiﬁed over a distance
+states. We varied α between 0.15 and 0.35 and find that the
+ov (2)-(5). The temperature gradient is modified over a distance
 results do not change qualitatively. However, the amplitude of
 d = α H ,withα =0.15inthelowerpanelandα =0.20
 the variations in the model properties depends on d (see be- ov ov P,CB ov ov
 ov intheupperpanel.Thedash-dottedredlinesshowthepercent-
 low).Asshownbelow,thissimpleprescriptionimplementedin
-agerelativetemperaturediﬀerence,∆T/T ,with∆T =T−T .
+agerelativetemperaturedifference,∆T/T ,with∆T =T−T .
 a stellar evolution code yields a local increase in the tempera- ref ref
 Thesolidbluelinescorrespondtothesub-adiabaticity(∇−∇ ).
 ture below the convective boundary, similar to that observed in ad
@@ -313,57 +309,57 @@ thehydrodynamicalsimulations.WestressthatEqs.(2)-(5)have
 encemodel.Theconvectiveboundaryisindicatedbythevertical
 beenchosenforsimplicity.Theyareonlyaroughapproximation
 solidline.Theverticaldashedlineineachpanelislocatedata
-thatcanmimicthethermalproﬁlebehavioursuggestedinthe2D
+thatcanmimicthethermalprofilebehavioursuggestedinthe2D
 distanced belowtheconvectiveboundary.
 simulations. ov
-Themodelwithamodiﬁedtemperaturegradientisthenther-
+Themodelwithamodifiedtemperaturegradientisthenther-
 mally relaxed, that is to say, it is evolved over many thermal
-Theimpactonthewholestellarstructurewasquantiﬁedby
-timescaleswithoutanymodiﬁcationoftheabundancesfromnu-
+Theimpactonthewholestellarstructurewasquantifiedby
+timescaleswithoutanymodificationoftheabundancesfromnu-
 comparingthefourstructuralquantities(A,S,c2,ρ)betweenthe
 clearreactionsuntilthermalequilibriumisreached.Thetemper- s
-modiﬁed and the reference model. The results are displayed in
-ature gradient is modiﬁed in the overshooting layer during the
-Fig.3,with∆Xdeﬁnedas(X−X )foranystructuralquantityX.
+modified and the reference model. The results are displayed in
+ature gradient is modified in the overshooting layer during the
+Fig.3,with∆Xdefinedas(X−X )foranystructuralquantityX.
 wholerelaxationprocess,andthisisreferredtoasa‘forcedlocal ref
 Theforcedlocalheatingintheovershootinglayerproducessim-
-heating’.Thisprocedureensuresthatthemodelwithamodiﬁed
+heating’.Thisprocedureensuresthatthemodelwithamodified
 ilarpositivepeaksfor∆A,∆S,and∆c2,asfoundforthetemper-
 temperaturegradientcanbeconsistentlycomparedtotherefer- s
-ature.Themodiﬁcationthusprovidesthecorrectionrequiredto
+ature.Themodificationthusprovidesthecorrectionrequiredto
 ence model. As shown in Fig. 2, the simple prescription given
 improvethediscrepancyfortheLedouxdiscriminantdescribed
-2 Thermalequilibriummeansthatthetotalnuclearenergyproduced in the ﬁrst of the trends outlined in Sect. 3.1. Unsurprisingly,
-inthecentralregionsbalancestheradiativelossesatthesurface,i.e.the such a modiﬁcation of the temperature gradient is expected to
+2 Thermalequilibriummeansthatthetotalnuclearenergyproduced in the first of the trends outlined in Sect. 3.1. Unsurprisingly,
+inthecentralregionsbalancestheradiativelossesatthesurface,i.e.the such a modification of the temperature gradient is expected to
 totalnuclearluminosity,L ,equalsthetotalstellarluminosity,L. improve the agreement with helioseismic constraints and help
 nuc
 4
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
 remove the sound speed anomaly below the convective bound-
 ary (second trend in Sect. 3.1), as suggested by the results of
 Christensen-Dalsgaardetal.(2011).Butitisalsointerestingto
-notethatsuchamodiﬁcationyieldsaslightcoolingofthecon-
-vective zone (see Fig. 2) and thus a negative diﬀerence for the
-entropy(seeFig.3).Anegativediﬀerenceintheconvectiveen-
+notethatsuchamodificationyieldsaslightcoolingofthecon-
+vective zone (see Fig. 2) and thus a negative difference for the
+entropy(seeFig.3).Anegativedifferenceintheconvectiveen-
 velope is in agreement with the correction required for the ref-
 erence model of Buldgen et al. (2020) to better match the Sun
-(seethirdtrendinSect.3.1).Regardingthedensity,themodiﬁ-
+(seethirdtrendinSect.3.1).Regardingthedensity,themodifi-
 cation of the temperature gradient has an interesting impact in
 theradiativezone,withalargedecreaseinthedensitycompared
 tothereferencemodeloverabroadregionbelowtheconvective
 boundary.Theimpactonthedensityintheconvectiveregionfor
-thisspeciﬁcmodelispartlyinagreementwiththecorrectionre-
+thisspecificmodelispartlyinagreementwiththecorrectionre-
 quiredforthisquantityintheBuldgenetal.(2020)study,witha
-positivediﬀerencefoundonlyintheupperpartoftheconvective
+positivedifferencefoundonlyintheupperpartoftheconvective
 envelope(seethefourthtrendinSect.3.1).
 Thesetrendsareinsensitivetothedepthoverwhichthetem-
-peraturegradientismodiﬁed.Increasingthedepthincreasesthe
-magnitudeofthediﬀerencesbuthasnoimpactontheirsign. We
-ﬁndthatthemaximumvariationinthemodelproperties,suchas
+peraturegradientismodified.Increasingthedepthincreasesthe
+magnitudeofthedifferencesbuthasnoimpactontheirsign. We
+findthatthemaximumvariationinthemodelproperties,suchas
 thespeedofsound,∆c2/c2 ,roughlyscaleswithd2 .Thisscal-
 s s,ref ov
-ingislinkedtotheintegratedareabetweenthemodiﬁedtemper-
-aturegradientcurveandtheoneforthereference(non-modiﬁed)
+ingislinkedtotheintegratedareabetweenthemodifiedtemper-
+aturegradientcurveandtheoneforthereference(non-modified)
 temperature gradient, which roughly decreases linearly with r.
 Thisareaisproportionaltothesquareoftheovershootingdepth,
 and consequently, the maximum variation in the model proper-
@@ -371,71 +367,71 @@ tiesisalsoproportionaltod2 .Thequalitativetrendsalsoremain
 ov
 the same whether overshooting mixing in the reference model
 isignoredorincludedusingastepfunction(withinstantaneous
-mixing)oranexponentialdecayforthediﬀusioncoeﬃcient(e.g.
+mixing)oranexponentialdecayforthediffusioncoefficient(e.g.
 Freytagetal.1996).
 3.2.2. Self-consistentevolutionarymodels
-For the tests based on the second method, we ran diﬀerent sets
-ofmodelswithdiﬀerentcombinationsofassumptions,including Fig.3. Diﬀerence of various structural quantities between a
-or not microscopic diﬀusion and with or without overshooting model with a modiﬁed temperature gradient in the overshoot-
+For the tests based on the second method, we ran different sets
+ofmodelswithdifferentcombinationsofassumptions,including Fig.3. Difference of various structural quantities between a
+or not microscopic diffusion and with or without overshooting model with a modified temperature gradient in the overshoot-
 inglayerandareferencemodelcalculatedwiththeLyonstellar
 mixing. When overshooting mixing was included in the over-
-evolutioncode.Thetemperaturegradientinthemodiﬁedmodel
+evolutioncode.Thetemperaturegradientinthemodifiedmodel
 shooting layer, it was based either on a step function or on an
-exponentialdecayforthediﬀusioncoeﬃcient.Microscopicdif- is changed over a distance dov = αovHP,CB below the convec-
+exponentialdecayforthediffusioncoefficient.Microscopicdif- is changed over a distance d ov = α ovH P,CB below the convec-
 tive boundary (indicated by the vertical solid line). The lower
 fusionforHandHewasimplementedaccordingtoThouletal.
 panel shows the results for α = 0.15 and the upper panel for
-(1994). For these tests, the temperature gradient was modiﬁed ov
+(1994). For these tests, the temperature gradient was modified ov
 α =0.20.
 accordingto Eqs.(2)-(5).AllmodelsstartfromtheZAMSand ov
 areevolveduntiltheyreachthesolarradiusandluminosityatthe
 sameage.Thiswasachievedbymakingsmalladjustmentstothe
 totheassumptionsregardingwhetherovershootingmixingisin-
 mixinglength,l .Themodelswithtemperaturegradientmod-
-mix cludedornot.Butatleastweﬁndsolutionsthatarecompatible
-iﬁcationswerecomparedtotherelevantreferencemodel,which
+mix cludedornot.Butatleastwefindsolutionsthatarecompatible
+ificationswerecomparedtotherelevantreferencemodel,which
 withthefourtrendsfoundbyBuldgenetal.(2020)forthefour
-has no modiﬁcation of the temperature gradient but everything
+has no modification of the temperature gradient but everything
 structural quantities. This is illustrated in Fig. 4 with a model
-else is the same (i.e. the same treatment of microscopic diﬀu-
+else is the same (i.e. the same treatment of microscopic diffu-
 that accounts for step function overshooting mixing over a dis-
 sionandofovershootingmixing).Theevolutionarymodelswith
 tanced =0.15H (lowerpanel)andd =0.20H (upper
-temperaturegradientmodiﬁcationsarethusself-consistent.The ov P,CB ov P,CB
+temperaturegradientmodificationsarethusself-consistent.The ov P,CB ov P,CB
 panel).
-maindiﬀerencebetweenthisapproachandtheoneintheprevi-
-oussectionisthatthesemodelsaccumulatesmalldiﬀerencesin,
+maindifferencebetweenthisapproachandtheoneintheprevi-
+oussectionisthatthesemodelsaccumulatesmalldifferencesin,
 for example, central H abundance when compared to their ref-
 4. Conclusion
 erence model. These tests produce the same trends in the over-
-shooting layer as found for the tests based on the ﬁrst method The tests performed in Sect. 3 are based on diﬀerent methods
+shooting layer as found for the tests based on the first method The tests performed in Sect. 3 are based on different methods
 (Sect. 3.2.1), independently of the treatment of overshooting (relaxedmodelsversusconsistentevolution)thatcanbeusedto
-mixing and whether microscopic diﬀusion is included or not. construct solar models. Independently of the method used, the
-Intheconvectivezone,allmodelsgiveapositivediﬀerencefor tests show that a local increase in the temperature in the over-
-thedensitybetweenthemodelwithamodiﬁedtemperaturegra- shootingregionduetoconvectivepenetrationprovidesthequali-
-dient and the relevant reference model. For the other quantities tativeeﬀectsrequiredtoimprovethespeedofsounddiscrepancy
-(S,c2),thediﬀerencesintheconvectivezoneareverysensitive belowtheconvectiveboundary.Thisdiscrepancyispersistentin
+mixing and whether microscopic diffusion is included or not. construct solar models. Independently of the method used, the
+Intheconvectivezone,allmodelsgiveapositivedifferencefor tests show that a local increase in the temperature in the over-
+thedensitybetweenthemodelwithamodifiedtemperaturegra- shootingregionduetoconvectivepenetrationprovidesthequali-
+dient and the relevant reference model. For the other quantities tativeeffectsrequiredtoimprovethespeedofsounddiscrepancy
+(S,c2),thedifferencesintheconvectivezoneareverysensitive belowtheconvectiveboundary.Thisdiscrepancyispersistentin
 s
 5
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
 speed of sound in the convective envelope after thermal relax-
 ation or evolution on the main sequence. How these quantities
-areaﬀectedintheconvectiveenvelopecomparedtoareference
+areaffectedintheconvectiveenvelopecomparedtoareference
 modelwithnolocalheatingdependsonthestrategyforbuilding
 solarmodelsandonthetreatmentofovershootingmixing.This
 mixing is obviously linked to the local heating given that both
 resultfromthesamedynamicalprocess.Acombinedtestingof
-botheﬀectsinstellarmodelscouldprovidemoreconstraintson
+botheffectsinstellarmodelscouldprovidemoreconstraintson
 thegeneralprocessofovershooting.
-Increasingly, eﬀorts are now devoted to characterising the
+Increasingly, efforts are now devoted to characterising the
 process of convective boundary mixing in stellar models based
 on multi-dimensional hydrodynamical simulations. More work
 isrequiredtoobtainreliabledeterminationsofanovershooting
 depth and to describe quantitatively the mixing and impact on
-the temperature gradient. Understanding the eﬀects of rotation
-andmagneticﬁeldsonovershootingisasigniﬁcantlymoredif-
-ﬁcult theoretical and numerical problem to address; however,
-eﬀorts to study these combined non-linear eﬀects are ongoing
+the temperature gradient. Understanding the effects of rotation
+andmagneticfieldsonovershootingisasignificantlymoredif-
+ficult theoretical and numerical problem to address; however,
+efforts to study these combined non-linear effects are ongoing
 (Hotta 2017; Korre et al. 2021). Despite the limitations of ex-
 isting hydrodynamical simulations, they are already providing
 constraints on physical processes usually treated with several
@@ -448,63 +444,63 @@ thatproducealocalchangeinthetemperaturegradientarealso
 responsibleforthemixinginthisregion.Becausemuchobserva-
 tionalevidencepointstowardstheneedforextramixingatcon-
 vective boundaries, for example lithium depletion in solar-like
-stars (Baraﬀe et al. 2017), the size of convective cores (Claret
+stars (Baraffe et al. 2017), the size of convective cores (Claret
 & Torres 2016), and colour-magnitude diagrams (Castro et al.
 2014), solar modellers often include this extra mixing in their
 models.Butaconsistentapproachshouldalsorequireaccount-
 ingforalocalchangeinthetemperaturegradient.Theimpactof
 thislocalheatinggoesintherightdirectiontoimprovenotonly
 the discrepancies of solar models below the convective bound-
-Fig.4. Diﬀerence of various structural quantities between a ary,butalsointheconvectiveenvelope.Thiseﬀectoﬀersanin-
-modiﬁed model and a reference model calculated with the
+Fig.4. Difference of various structural quantities between a ary,butalsointheconvectiveenvelope.Thiseffectoffersanin-
+modified model and a reference model calculated with the
 teresting step forward for solving the solar modelling problem.
 MONSTAR stellar evolution code. The reference model is
 Inthisexploratorywork,weadoptasimpleprescriptionforthe
-evolved from the ZAMS with microscopic diﬀusion and step
+evolved from the ZAMS with microscopic diffusion and step
 local heating in the overshooting layer since the main goal is
 functionovershootingmixingoveradistanced =α H be-
 ov ov P,CB to highlight its qualitative impact on stellar models. However,
-lowtheconvectiveboundary.Thelowerpanelshowstheresults thiseﬀectshouldnotbeconsideredasanotherfreeparameterin
+lowtheconvectiveboundary.Thelowerpanelshowstheresults thiseffectshouldnotbeconsideredasanotherfreeparameterin
 forα = 0.15andtheupperpanelforα = 0.20.Themodels
 ov ov the solar modelling problem. Future multi-dimensional hydro-
-with a modiﬁed temperature gradient in the overshooting layer
+with a modified temperature gradient in the overshooting layer
 dynamicalsimulationswillenablethisprocess,anditstreatment
-(samemicroscopicdiﬀusionandovershootingmixingtreatment
+(samemicroscopicdiffusionandovershootingmixingtreatment
 in1Dstellarevolutioncodes,tobebetterconstrained.
 as the reference model) are evolved similarly from the ZAMS.
 Theconvectiveboundaryisindicatedbytheverticalsolidline.
 5. Acknowledgements
 solar models that use low solar metal abundances. This is not Wethankouranonymousrefereeforvaluablecommentswhich
 surprising because an increase in the temperature in this spe- helpedimprovingthemanuscript.Thisworkissupportedbythe
-ciﬁcregionhaspreviouslybeeninvokedintheliteraturetosolve ERC grant No. 787361-COBOM and the consolidated STFC
+cificregionhaspreviouslybeeninvokedintheliteraturetosolve ERC grant No. 787361-COBOM and the consolidated STFC
 this problem, as mentioned in Sect. 1. However, the details of grant ST/R000395/1. IB thanks the Max Planck Institut fu¨r
 thephysicalprocessresponsibleforthislocalheatinghavebeen Astrophysics(Garching)forwarmhospitalityduringcompletion
 lacking, whereas we can now suggest an explanation based on ofpartofthiswork.Theauthorswouldliketoacknowledgethe
-the B21 results. The trends that we ﬁnd for the four structural use of the University of Exeter High-Performance Computing
+the B21 results. The trends that we find for the four structural use of the University of Exeter High-Performance Computing
 quantities (A, S, c2, ρ) are robust below the convective bound- (HPC) facility ISCA and of the DiRAC Data Intensive service
 s
 aryandinalargefractionoftheradiativecore,independentlyof atLeicester,operatedbytheUniversityofLeicesterITServices,
-thetreatmentofmixinganddiﬀusionandofthemethodforcon- whichformspartoftheSTFCDiRACHPCFacility.Theequip-
+thetreatmentofmixinganddiffusionandofthemethodforcon- whichformspartoftheSTFCDiRACHPCFacility.Theequip-
 structingthemodelsinSects.3.2.1and3.2.2.Ourexperiments ment was funded by BEIS capital funding via STFC capital
 additionally show that such a local change in the temperature, grants ST/K000373/1 and ST/R002363/1 and STFC DiRAC
 despitebeingmadeoveraverylimitedregionbelowtheconvec- OperationsgrantST/R001014/1.DiRACispartoftheNational
-tive boundary, can also aﬀect the density, the entropy, and the e-Infrastructure.
+tive boundary, can also affect the density, the entropy, and the e-Infrastructure.
 6
-Baraﬀeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
+Baraffeetal.:Localheatingduetoconvectiveovershootingandthesolarmodellingproblem
 References
 Anders,E.&Grevesse,N.1989,Geochim.Cosmochim.Acta,53,197
 Asplund,M.,Amarsi,A.M.,&Grevesse,N.2021,A&A,653,A141
 Asplund,M.,Grevesse,N.,Sauval,A.J.,&Scott,P.2009,ARA&A,47,481
-Baraﬀe,I.,Chabrier,G.,Allard,F.,&Hauschildt,P.H.1998,A&A,337,403
-Baraﬀe,I.,Pratt,J.,Goﬀrey,T.,etal.2017,ApJ,845,L6
-Baraﬀe,I.,Pratt,J.,Vlaykov,D.G.,etal.2021,A&A,654,A126
+Baraffe,I.,Chabrier,G.,Allard,F.,&Hauschildt,P.H.1998,A&A,337,403
+Baraffe,I.,Pratt,J.,Goffrey,T.,etal.2017,ApJ,845,L6
+Baraffe,I.,Pratt,J.,Vlaykov,D.G.,etal.2021,A&A,654,A126
 Brummell,N.H.,Clune,T.L.,&Toomre,J.2002,ApJ,570,825
 Brun,A.S.,Miesch,M.S.,&Toomre,J.2011,ApJ,742,79
 Buldgen,G.,Eggenberger,P.,Baturin,V.A.,etal.2020,A&A,642,A36
 Buldgen,G.,Salmon,S.,&Noels,A.2019a,FrontiersinAstronomyandSpace
 Sciences,6,42
 Buldgen,G.,Salmon,S.J.A.J.,Noels,A.,etal.2019b,A&A,621,A33
-Caﬀau, E., Ludwig, H. G., Steﬀen, M., Freytag, B., & Bonifacio, P. 2011,
+Caffau, E., Ludwig, H. G., Steffen, M., Freytag, B., & Bonifacio, P. 2011,
 Sol.Phys.,268,255
 Cai,T.2020,ApJ,888,46
 Castro,N.,Fossati,L.,Langer,N.,etal.2014,A&A,570,L13
@@ -516,8 +512,8 @@ M.J.2011,MNRAS,414,1158
 Claret,A.&Torres,G.2016,A&A,592,A15
 Constantino,T.,Campbell,S.,Gil-Pons,P.,&Lattanzio,J.2014,ApJ,784,56
 Edelmann,P.V.F.,Ratnasingam,R.P.,Pedersen,M.G.,etal.2019,ApJ,876,4
-Freytag,B.,Ludwig,H.G.,&Steﬀen,M.1996,A&A,313,497
-Goﬀrey,T.,Pratt,J.,Viallet,M.,etal.2017,A&A,600,A7
+Freytag,B.,Ludwig,H.G.,&Steffen,M.1996,A&A,313,497
+Goffrey,T.,Pratt,J.,Viallet,M.,etal.2017,A&A,600,A7
 Grevesse,N.&Noels,A.1993,inOriginandEvolutionoftheElements,ed.
 N.Prantzos,E.Vangioni-Flam,&M.Casse,15–25
 Higl,J.,Mu¨ller,E.,&Weiss,A.2021,A&A,646,A133
@@ -532,8 +528,8 @@ Muthsam,H.J.,Goeb,W.,Kupka,F.,Liebich,W.,&Zoechling,J.1995,A&A,
 293,127
 Rogers,T.M.,Glatzmaier,G.A.,&Jones,C.A.2006,ApJ,653,765
 Thoul,A.A.,Bahcall,J.N.,&Loeb,A.1994,ApJ,421,828
-Viallet,M.,Baraﬀe,I.,&Walder,R.2011,A&A,531,A86
-Viallet,M.,Goﬀrey,T.,Baraﬀe,I.,etal.2016,A&A,586,A153
+Viallet,M.,Baraffe,I.,&Walder,R.2011,A&A,531,A86
+Viallet,M.,Goffrey,T.,Baraffe,I.,etal.2016,A&A,586,A153
 Viallet,M.,Meakin,C.,Arnett,D.,&Moca´k,M.2013,ApJ,769,1
 Vinyoles,N.,Serenelli,A.M.,Villante,F.L.,etal.2017,ApJ,835,202
 Zahn,J.P.1991,A&A,252,179

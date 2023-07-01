@@ -1521,13 +1521,11 @@ The key idea of Meiosis networks is to allow neurons to perform Meiosis, which i
 division. A node j is splitted, when the random part dominates the value of the sampled
 weights:
 �
-i σij
-�
+�i σij
 i µij
 > 1 and
 �
-k σjk
-�
+�k σjk
 k µjk
 > 1
 The mean of the new nodes is sampled around the old mean, half the variance is assigned

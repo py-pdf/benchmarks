@@ -6,14 +6,14 @@ w
 x 1
 1
 w
-Martin Thoma x2 2 Σ ϕ
+Martin Thoma x 2 2 Σ ϕ
 w
 E-Mail: info@martin-thoma.de x 3
 .3
-.. wn
+. . wn
 x
 n
-Abstract—Recent machine learning techniques can be modiﬁed (a) Exampleofanartiﬁcialneuronunit.(b) Avisualizationofasimplefeed-
+Abstract—Recent machine learning techniques can be modified (a) Exampleofanartificialneuronunit.(b) Avisualizationofasimplefeed-
 to produce creative results. Those results did not exist before; it xiaretheinputsignalsandwiare forwardneuralnetwork.The5in-
 is not a trivial combination of the data which was fed into the weightswhichhavetogetlearned. putnodesarered,the2biasnodes
 machine learning system. The obtained results come in multiple Each input signal gets multiplied are gray, the 3 hidden units are
@@ -23,52 +23,45 @@ This paper gives a high level overview of how they are created tionϕisapplied.
 and gives some examples. It is meant to be a summary of the
 current work and give people who are new to machine learning Fig. 1: Neural networks are based on simple units which get
 some starting points. combined to complex networks.
-6 I. INTRODUCTION This means that machine learning programs adjust internal
-1 parameters to ﬁt the data they are given. Those computer
-0 According to [Gad06] creativity is “the ability to use your programs are still developed by software developers, but the
-2 imagination to produce new ideas, make things etc.” and developer writes them in a way which makes it possible to
- 
-n imagination is “the ability to form pictures or ideas in your adjust them without having to re-program everything. Machine
-a mind”. learning programs should generally improve when they are fed
-J
+6102 I. INTRODUCTION This means that machine learning programs adjust internal
+parameters to fit the data they are given. Those computer
+According to [Gad06] creativity is “the ability to use your programs are still developed by software developers, but the
+imagination to produce new ideas, make things etc.” and developer writes them in a way which makes it possible to
+naJ imagination is “the ability to form pictures or ideas in your adjust them without having to re-program everything. Machine
+mind”. learning programs should generally improve when they are fed
 with more data.
-2  Recentadvancesinmachinelearningproduceresultswhichthe
-1 author would intuitively call creative. A high-level overview The ﬁeld of machine learning is related to statistics. Some
-   over several of those algorithms are described in the following. algorithms directly try to ﬁnd models which are based on well-
-]
-V known distribution assumptions of the developer, others are
+21 Recentadvancesinmachinelearningproduceresultswhichthe
+author would intuitively call creative. A high-level overview The field of machine learning is related to statistics. Some
+over several of those algorithms are described in the following. algorithms directly try to find models which are based on well-
+]VC.sc[
+known distribution assumptions of the developer, others are
 This paper is structured as follows: Section II introduces the
 more general.
-C reader on a very simple and superﬁcial level to machine
-. learning, Section III gives examples of creativity with images, A common misunderstanding of people who are not related
-s
-c Section IV gives examples of machines producing textual in this ﬁeld is that the developers don’t understand what their
- [ content, and Section V gives examples of machine learning machine learning program is doing. It is understood very well
-1  and music. A discussion follows in Section VI. in the sense that the developer, given only a pen, lots of paper
-v and a calculator could calculate the same result as the machine
-2
+reader on a very simple and superficial level to machine
+learning, Section III gives examples of creativity with images, A common misunderstanding of people who are not related
+Section IV gives examples of machines producing textual in this field is that the developers don’t understand what their
+content, and Section V gives examples of machine learning machine learning program is doing. It is understood very well
+1v24630.1061:viXra and music. A discussion follows in Section VI. in the sense that the developer, given only a pen, lots of paper
+and a calculator could calculate the same result as the machine
 doeswhenhegetsthesamedata.Andlotsoftime,ofcourse.It
-4 II. BASICSOFMACHINELEARNING isnotunderstoodinthesensethatitishardtomakepredictions
-6
-3 how the algorithm behaves without actually trying it. However,
+II. BASICSOFMACHINELEARNING
+isnotunderstoodinthesensethatitishardtomakepredictions
+how the algorithm behaves without actually trying it. However,
 The traditional approach of solving problems with software
-0 this is similar to expecting from an electrical engineer to
+this is similar to expecting from an electrical engineer to
 is to program machines to do so. The task is divided in as
-. explain how a computer works. The electrical engineer could
-1 simple sub-tasks as possible, the subtasks are analyzed and the
-0 probably get the knowledge he needs to do so, but the amount
+explain how a computer works. The electrical engineer could
+simple sub-tasks as possible, the subtasks are analyzed and the
+probably get the knowledge he needs to do so, but the amount
 machineisinstructedtoprocesstheinputwithhuman-designed
-6 of time required to understand such a complex system from
+of time required to understand such a complex system from
 algorithms to produce the desired output. However, for some
-1 basic building blocks is a time-intensive and difﬁcult task.
-: taskslikeobjectrecognitionthisapproachisnotfeasible.There
-v
+basic building blocks is a time-intensive and difficult task.
+taskslikeobjectrecognitionthisapproachisnotfeasible.There
 are way to many different objects, different lighting situations, An important group of machine learning algorithms was
-i
-X variations in rotation and the arrangement of a scene for a inspired by biological neurons and are thus called artiﬁcial
-r human to think of all of them and model them. But with the neural networks. Those networks are based on mathematical
-a
-internet, cheap computers, cameras, crowd-sourcing platforms functions called artiﬁcial neurons which take n ∈ N num-
+variations in rotation and the arrangement of a scene for a inspired by biological neurons and are thus called artificial
+human to think of all of them and model them. But with the neural networks. Those networks are based on mathematical
+internet, cheap computers, cameras, crowd-sourcing platforms functions called artificial neurons which take n ∈ N num-
 like Wikipedia and lots of Websites, services like Amazon bers x ,...,x ∈ R as input, multiply them with weights
 1 n
 Mechanical Turk and several other changes in the past decades w ,...,w ∈ R, add them and apply a so called activation
@@ -77,7 +70,7 @@ alotofdatahasbecomeavailable.Theideaofmachinelearning function ϕ as visualized 
 is to make use of this data. an activation function is the sigmoid function ϕ(x)= 1 .
 1+e−x
 Those functions act as building blocks for more complex
-A formal deﬁnition of the ﬁeld of Machine Learning is given
+A formal definition of the field of Machine Learning is given
 systems as they can be chained and grouped in layers as
 by Tom Mitchel [Mit97]:
 visualized in Figure 1(b). The interesting question is how
@@ -88,7 +81,7 @@ performance measure P, if its performance at tasks descent algorithm takes a fun
 inT,asmeasuredbyP,improveswithexperienceE. starts at any point of the surface of this error function and
 2
 makes a step in the direction which goes downwards. Hence
-it tries to ﬁnd a minimum of this high-dimensional function.
+it tries to find a minimum of this high-dimensional function.
 There is, of course, a lot more to say about machine learning.
 Theinterestedreadermightwanttoreadtheintroductiongiven
 by Mitchell [Mit97].
@@ -99,17 +92,17 @@ One would take one neuron per pixel and channel. This means
 for 500px×500px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
-the full connection between the input layer and the ﬁrst Fig. 2: Aurelia aurita
+the full connection between the input layer and the first Fig. 2: Aurelia aurita
 hidden layer, those networks make use of convolution layers.
 Convolution layers learn a convolution; this means they learn
-the weights of an image ﬁlter. An additional advantage is that
+the weights of an image filter. An additional advantage is that
 CNNs make use of spacial relationships of the pixels instead
-of ﬂattening the image to a stream of single numbers.
+of flattening the image to a stream of single numbers.
 An excellent introduction into CNNs is given by [Nie15].
 A. Google DeepDream
 The gradient descent algorithm which optimizes most of the
 parametersinneuralnetworksiswell-understood.However,the
-effect it has on the recognition system is difﬁcult to estimate.
+effect it has on the recognition system is difficult to estimate.
 [MOT15] proposes a technique to analyze the weights learned
 by such a network. A similar idea was applied by [VKMT13].
 For example, consider a neural network which was trained to
@@ -131,11 +124,11 @@ looks a little bit like a bird, the network will make
 it look more like a bird. This in turn will make the A key idea of neural networks is that they learn different
 network recognize the bird even more strongly on representations of the data in each layer. In the case of
 the next pass and so forth, until a highly detailed CNNs, this can easily be visualized as it was done in various
-bird appears, seemingly out of nowhere. papers [ZF14]. Usually, one ﬁnds that the network learned
-to build edge detectors in the ﬁrst layer and more complex
+bird appears, seemingly out of nowhere. papers [ZF14]. Usually, one finds that the network learned
+to build edge detectors in the first layer and more complex
 The name “Inceptionism” in the title of [MOT15] comes from
 structures in the upper layers.
-the science-ﬁction movie “Inception” (2010). One reason it
+the science-fiction movie “Inception” (2010). One reason it
 might be chosen is because neural networks are structured Gatys,EckerandBethgeshowedin[GEB15]thatwithaclever
 in layers. Recent publications tend to have more and more choice of features it is possible to separate the general style of
 layers [HZRS15]. The used jargon is to say they get “deeper”. an image in terms of local image appearance from the content
@@ -143,9 +136,9 @@ As this technique as published by Google engineers, the of an image. They suppor
 technique is called Google DeepDream. different artists to an arbitrary image of their choice.
 3
 IV. TEXTDATA
-Digital text is the ﬁrst form of natural communication which
+Digital text is the first form of natural communication which
 involved computers. It is used in the form of chats, websites,
-on collaborative projects like Wikipedia, in scientiﬁc literature.
+on collaborative projects like Wikipedia, in scientific literature.
 Of course, it was used in pre-digital times, too: In newspaper,
 in novels, in dramas, in religious texts like the bible, in books
 for education, in notes from conversations.
@@ -156,8 +149,8 @@ The most simple language model which is of use is an n-gram
 model. This model makes use of sequences of the length n to
 model language. It can be used to get the probability of a third
 word, given the previous two words. This way, a complete text
-can be generated word by word. Reﬁnements and extensions
-to this model are discussed in the ﬁeld of Natural Language
+can be generated word by word. Refinements and extensions
+to this model are discussed in the field of Natural Language
 Processing (NLP).
 However, there are much more sophisticated models. One
 of those are character predictors based on Recurrent Neural
@@ -180,8 +173,8 @@ Something similar was done by [SPB+14], where the style of RNNs is by using so c
 a portrait photograph was transferred to another photograph. cells [HS97].
 A demo can be seen on [Shi14].
 Recurrentnetworksapplytwomainideasinordertolearn:The
-ﬁrst is called unrolling and means that an recurrent network
-is imagined to be an inﬁnite network over time. At each time
+first is called unrolling and means that an recurrent network
+is imagined to be an infinite network over time. At each time
 C. Drawing Robots
 step the recurrent neurons get duplicated. The second idea is
 weight sharing which means that those unrolled neurons share
@@ -197,14 +190,14 @@ segment regions of the photograph with similar color which, and gave an excellen
 in turn, will get a similar shading. Paul Graham’s essays, all the works of Shakespeare, the Hutter
 Prize [hut] 100MB dataset of raw Wikipedia articles, the raw
 Such a drawing robot could apply machine learning techniques
-LATEXsourceﬁleofabookaboutalgebraicstacksandgeometry
+LATEXsourcefileofabookaboutalgebraicstacksandgeometry
 known from computer vision for detecting the human. It
 and Linux C code.
 could apply self-learning techniques to draw results most
 similar to the artists impression of the image. However, the With that training data, the models can generate similar texts.
 system described in [TL05] seems not to be a machine New works which look like Shakespeare plays, new Wikipedia
-learning computer program according to the deﬁnition by Tom articles, new Linux code and new papers about algebraic
-Mitchell [Mit97]. geometry can thus automatically be generated. At a ﬁrst
+learning computer program according to the definition by Tom articles, new Linux code and new papers about algebraic
+Mitchell [Mit97]. geometry can thus automatically be generated. At a first
 4
 glance, they do look authentic. The syntax was mostly used we will now investigate the work which was done in audio
 correctly, the formatting looks as expected, the sentences are synthesization.
@@ -236,8 +229,8 @@ of the beauty of the created music.
 Chatbots are computer programs which participate in chat
 rooms as autonomous agents. This means they have similar According to Cope, an essential part of music is “a set of
 permissions and possibilities as usual human users have, but instructions for creating different, but highly related self-
-users can trigger a set of commands to make the bot give them replications”. Emmy was programmed to ﬁnd this set of
-valuable information or features. instructions. It tries to ﬁnd the “signature” of a composer,
+users can trigger a set of commands to make the bot give them replications”. Emmy was programmed to find this set of
+valuable information or features. instructions. It tries to find the “signature” of a composer,
 which Cope describes as “contiguous patterns that recur in two
 A special category of chatbots are such bots which actively
 or more works of the composer”.
@@ -266,7 +259,7 @@ of the vast amount of data which is available by millions of
 Wikipediaarticles,chatprotocols,websites,helpdeskprotocols,
 (GRU) to build a network which can be trained to generate
 subtitles of movies as well as the astonishing increase in
-music. Instead of taking notes directly or MIDI ﬁles, Nayebi
+music. Instead of taking notes directly or MIDI files, Nayebi
 computing power to train RNNs and language models similar
 and Vitelli took raw audio waveforms as input. Those audio
 to the ones described before.
@@ -283,11 +276,12 @@ Transformation (DFT) was used on chunks of length N of the
 Machine: to live forever .
 music to obtain features in the frequency domain.
 Animplementationcanbefoundat[VN15]andademonstration
-V. AUDIODATA can be found at [Vit15].
+V. AUDIODATA
+can be found at [Vit15].
 Common machine learning tasks which involve audio data
-are speech recognition, speaker identiﬁcation, identiﬁcation of C. Audio Synthesization
+are speech recognition, speaker identification, identification of C. Audio Synthesization
 songs. This leads to some less-common, but interesting topics:
-The composition of music, the synthesizing of audio as art. Audio synthesization is generating new audio ﬁles. This can
+The composition of music, the synthesizing of audio as art. Audio synthesization is generating new audio files. This can
 While the composition might be considered in Section IV, eitherbemusicorspeech.Withthetechniquesdescribedbefore,
 5
 neural networks can be trained to generate music note by note. [Joh15a] D. Johnson, “Biaxial recurrent neural network for music
@@ -304,11 +298,12 @@ https://github.com/jcjohnson/neural-style
 hisBiaxialRecurrentNeuralNetworkavailableunder[Joh15a].
 [Kar15a] A.Karpathy,“char-rnn,”GitHub,Nov.2015.[Online].Available:
 https://github.com/karpathy/char-rnn
-VI. DISCUSSION [Kar15b] ——, “The unreasonable effectiveness of recurrent neural
+VI. DISCUSSION
+[Kar15b] ——, “The unreasonable effectiveness of recurrent neural
 networks,” Personal Blog, May 2015. [Online]. Available:
 What does these examples mean for our understanding of http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-creativity? Does it inﬂuence how much we value art? Could [KMN+02] T.Kanungo,D.Mount,N.Netanyahu,C.Piatko,R.Silverman,
-wedeﬁneartandcreativitybetterafterhavingthoseandsimilar andA.Wu,“Anefﬁcientk-meansclusteringalgorithm:analysis
+creativity? Does it influence how much we value art? Could [KMN+02] T.Kanungo,D.Mount,N.Netanyahu,C.Piatko,R.Silverman,
+wedefineartandcreativitybetterafterhavingthoseandsimilar andA.Wu,“Anefficientk-meansclusteringalgorithm:analysis
 andimplementation,”PatternAnalysisandMachineIntelligence,
 results?
 IEEETransactionson,vol.24,no.7,pp.881–892,Jul2002.

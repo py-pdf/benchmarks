@@ -3283,8 +3283,7 @@ b) Zwei Winkel sind gleich, wenn es eine Isometrie gibt, die den einen Winkel au
 anderen abbildet.
 c) ∠R′
 1P ′R′
-2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P ′) = P,
-ϕ(P ′R′+
+ϕ(P ′R′+2 heißt kleiner als ∠R1PR2, wenn es eine Isometrie ϕ gibt, mit ϕ(P ′) = P,
 1 ) = PR+
 1 und ϕ(R′
 2) liegt in der gleichen Halbebene bzgl. PR1 wie R2 und in
@@ -3374,8 +3373,7 @@ Innenwinkel ≤ π.
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 Sei im Folgenden „IWS“ die „Innenwinkelsumme“.
 Beweis: Sei △ ein Dreieck mit IWS(△) = π + ε
-α
-β
+β α
 γ
 P
 (a) Summe der Winkel α, β und γ
@@ -4484,8 +4482,7 @@ c) S ist genau dann orientierbar, wenn es einen diﬀerenzierbaren Atlas von S a
 Parametrisierungen Fi : Ui → Vi, i ∈ I gibt, sodass für alle i, j ∈ F und alle
 s ∈ Vi ∩ Vj ∩ S gilt:
 det(Ds
-Vi→Vj
-�
+� Vi→Vj
 ��
 �
 Fj ◦ F −1

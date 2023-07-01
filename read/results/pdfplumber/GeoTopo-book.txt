@@ -1,6 +1,6 @@
 Einführung in die
 Geometrie und Topologie
-0. Auﬂage, 31. Dezember 2016 Martin Thoma
+0. Auflage, 31. Dezember 2016 Martin Thoma
 Vorwort
 Dieses Skript wurde im Wintersemester 2013/2014 von Martin Thoma geschrieben. Es beinhaltet
 die Mitschriften aus der Vorlesung von Prof. Dr. Herrlich sowie die Mitschriften einiger Übungen
@@ -19,9 +19,9 @@ Jérôme Urhausen hat durch viele Verbesserungsvorschläge und Beweise zu einer 
 Qualitätssteigerung am Skript beigetragen und meine Tutorin Sarah hat mir viele Fragen per
 E-Mail und nach dem Tutorium beantwortet. Danke!
 Was ist Topologie?
-Die Kugeloberﬂäche S2 lässt sich durch strecken, stauchen und umformen zur Würfeloberﬂäche
-oder der Oberﬂäche einer Pyramide verformen, aber nicht zum R2 oder zu einem Torus T2. Für
-den R2 müsste man die Oberﬂäche unendlich ausdehnen und für einen Torus müsste man ein
+Die Kugeloberfläche S2 lässt sich durch strecken, stauchen und umformen zur Würfeloberfläche
+oder der Oberfläche einer Pyramide verformen, aber nicht zum R2 oder zu einem Torus T2. Für
+den R2 müsste man die Oberfläche unendlich ausdehnen und für einen Torus müsste man ein
 Loch machen.
 Erforderliche Vorkenntnisse
 EswirdeinsichererUmgangmitdenQuantoren( , ),Mengenschreibweisen( , , , ,R, (M))
@@ -30,10 +30,10 @@ und ganz allgemein formaler Schreibweise vorausgesetzt. Auch die Beweisführung 
 spruchsbeweisen sollte bekannt sein und der Umgang mit komplexen Zahlen C, deren Betrag,
 Folgen und Häufungspunkten nicht weiter schwer fallen. Diese Vorkenntnisse werden vor allem
 in „Analysis I“ vermittelt.
-Außerdem wird vorausgesetzt, dass (aﬃne) Vektorräume, Faktorräume, lineare Unabhängigkeit,
+Außerdem wird vorausgesetzt, dass (affine) Vektorräume, Faktorräume, lineare Unabhängigkeit,
 derSpektralsatzundderprojektiveRaum (R)aus„LineareAlgebraI“ bekanntsind.In„Lineare
 P
-Algebra II“ wird der Begriﬀ der Orthonormalbasis eingeführt.
+Algebra II“ wird der Begriff der Orthonormalbasis eingeführt.
 iii
 (a) S2 (b) Würfel (c) Pyramide
 y
@@ -43,7 +43,7 @@ Abbildung 0.1: Beispiele für verschiedene Formen
 Obwohl es nicht vorausgesetzt wird, könnte es von Vorteil sein „Einführung in die Algebra und
 Zahlentheorie“ gehört zu haben.
 Inhaltsverzeichnis
-1 Topologische Grundbegriﬀe 2
+1 Topologische Grundbegriffe 2
 1.1 Topologische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
 1.2 Metrische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
 1.3 Stetigkeit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
@@ -53,7 +53,7 @@ Inhaltsverzeichnis
 Übungsaufgaben . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
 2 Mannigfaltigkeiten und Simplizialkomplexe 24
 2.1 Topologische Mannigfaltigkeiten . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
-2.2 Diﬀerenzierbare Mannigfaltigkeiten . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+2.2 Differenzierbare Mannigfaltigkeiten . . . . . . . . . . . . . . . . . . . . . . . . . . 29
 2.3 Simplizialkomplex . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
 Übungsaufgaben . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
 3 Fundamentalgruppe und Überlagerungen 44
@@ -75,13 +75,13 @@ Inhaltsverzeichnis
 Lösungen der Übungsaufgaben 99
 Bildquellen 105
 Abkürzungsverzeichnis 106
-Ergänzende Deﬁnitionen und Sätze 107
+Ergänzende Definitionen und Sätze 107
 Symbolverzeichnis 108
 2 Inhaltsverzeichnis
 Stichwortverzeichnis 111
-1 Topologische Grundbegriﬀe
+1 Topologische Grundbegriffe
 1.1 Topologische Räume
-Deﬁnition 1
+Definition 1
 Ein topologischer Raum ist ein Paar (X,T) bestehend aus einer Menge X und T (X)
 ⊆ P
 mit folgenden Eigenschaften
@@ -95,30 +95,30 @@ mit folgenden Eigenschaften
 i i
 ∈ ∈ ∈
 i∈I
-Die Elemente von T heißen oﬀene Teilmengen von X.
-A X heißt abgeschlossen, wenn X A oﬀen ist.
+Die Elemente von T heißen offene Teilmengen von X.
+A X heißt abgeschlossen, wenn X A offen ist.
 ⊆ \
-Es gibt auch Mengen, die weder abgeschlossen, noch oﬀen sind wie z. B. [0,1). Auch gibt es
-Mengen, die sowohl abgeschlossen als auch oﬀen sind.
-Bemerkung 1 (Mengen, die oﬀen & abgeschlossen sind, ex.)
+Es gibt auch Mengen, die weder abgeschlossen, noch offen sind wie z. B. [0,1). Auch gibt es
+Mengen, die sowohl abgeschlossen als auch offen sind.
+Bemerkung 1 (Mengen, die offen & abgeschlossen sind, ex.)
 Betrachte und X mit der trivialen Topologie T = ,X .
 triv
 ∅ {∅ }
-Es gilt: X T und T, d. h. X und sind oﬀen. Außerdem XC = X X = T und
+Es gilt: X T und T, d. h. X und sind offen. Außerdem XC = X X = T und
 ∈ ∅ ∈ ∅ \ ∅ ∈
-X = X T, d. h. X und sind als Komplement oﬀener Mengen abgeschlossen. (cid:4)
+X = X T, d. h. X und sind als Komplement offener Mengen abgeschlossen. (cid:4)
 \∅ ∈ ∅
 Beispiel 1 (Topologien)
 1) X = Rn mit der von der euklidischen Metrik erzeugten Topologie T :
 Euklid
-U Rn oﬀen für jedes x U gibt es r > 0,
+U Rn offen für jedes x U gibt es r > 0,
 ⊆ ⇔ ∈
 sodass B (x) = y Rn d(x,y) < r U
 r
 { ∈ | } ⊆
 Diese Topologie wird auch „Standardtopologie des Rn“ genannt. Sie beinhaltet unter
-anderem alle oﬀenen Kugeln, aber z. B. auch Schnitte zweier Kugeln mit unterschiedli-
-chem Mittelpunkt (vgl. Deﬁnition 1.ii).
+anderem alle offenen Kugeln, aber z. B. auch Schnitte zweier Kugeln mit unterschiedli-
+chem Mittelpunkt (vgl. Definition 1.ii).
 2) Jeder metrische Raum (X,d) ist auch ein topologischer Raum.
 3) Für eine Menge X heißt T = (X) diskrete Topologie.
 Diskret
@@ -130,7 +130,7 @@ Beobachtungen:
 U T f R[X], sodass R U = V(f) = x R f(x) = 0
 Z
 • ∈ ⇔ ∃ ∈ \ { ∈ | }
-Es gibt keine disjunkten oﬀenen Mengen in T .
+Es gibt keine disjunkten offenen Mengen in T .
 Z
 •
 4 1.1.TOPOLOGISCHERÄUME
@@ -144,7 +144,7 @@ Rn U = V(f ,...,f )
 { } {∅ { } { }}
 , 0,1 , 1 sind dort alle abgeschlossenen Mengen.
 ∅ { } { }
-Deﬁnition 2
+Definition 2
 Sei (X,T) ein topologischer Raum und x X.
 ∈
 Eine Teilmenge U X heißt Umgebung von x, wenn es ein U T gibt mit x U und
@@ -154,11 +154,11 @@ U U.
 0
 ⊆
 Gilt eine Eigenschaft in einer Umgebung, so sagt man, dass die Eigenschaft lokal gilt.
-Deﬁnition 3
+Definition 3
 Sei (X,T) ein topologischer Raum und M X eine Teilmenge.
 ⊆
 (cid:91)
-a) M◦ := x M M ist Umgebung von x = U heißt Inneres oder oﬀener
+a) M◦ := x M M ist Umgebung von x = U heißt Inneres oder offener
 { ∈ | }
 U⊆M
 U∈T
@@ -176,7 +176,7 @@ Beispiel 2
 2) Sei X = R und M = (a,b). Dann gilt: M = [a,b]
 3) Sei X = R,T = T und M = (a,b). Dann gilt: M = R
 Z
-Deﬁnition 4
+Definition 4
 Sei (X,T) ein topologischer Raum.
 a) B T heißt Basis der Topologie T, wenn jedes U T Vereinigung von Elementen
 ⊆ ∈
@@ -216,7 +216,7 @@ Bemerkung 2
 Sei X eine Menge und (X). Dann gibt es genau eine Topologie T auf X, für die
 S ⊆ P S
 Subbasis ist.
-Deﬁnition 5
+Definition 5
 Sei (X,T) ein topologischer Raum und Y X.
 ⊆
 T := U Y U T ist eine Topologie auf Y.
@@ -225,19 +225,19 @@ Y
 T heißt Teilraumtopologie und (Y,T ) heißt ein Teilraum von (X,T).
 Y Y
 Die Teilraumtopologie wird auch Spurtopologie oder Unterraumtopologie genannt.
-Deﬁnition 6
+Definition 6
 Seien X ,X topologische Räume.
 1 2
-U X X sei oﬀen, wenn es zu jedem x = (x ,x ) U Umgebungen U um x mit
+U X X sei offen, wenn es zu jedem x = (x ,x ) U Umgebungen U um x mit
 1 2 1 2 i i
 ⊆ × ∈
 i = 1,2 gibt, sodass U U U gilt.
 1 2
 × ⊆
-T = U X X U oﬀen isteineTopologieaufX X .SieheißtProdukttopologie.
+T = U X X U offen isteineTopologieaufX X .SieheißtProdukttopologie.
 1 2 1 2
 { ⊆ × | } ×
-B = U U U oﬀen in X ,i = 1,2 ist eine Basis von T.
+B = U U U offen in X ,i = 1,2 ist eine Basis von T.
 1 2 i i
 { × | }
 X
@@ -266,30 +266,27 @@ R2 überein.
 ×
 (Siehe Abbildung 1.2)
 6 1.1.TOPOLOGISCHERÄUME
-U
-2
-=
-R
+U2=RN
 \
-N
 U = R N
 1
 \
 Abbildung 1.2: Zariski-Topologie auf R2
-Deﬁnition 7
+Definition 7
 Sei X ein topologischer Raum, eine Äquivalenzrelation auf X, X = X/ sei die Menge
 ∼
 ∼
 der Äquivalenzklassen, π : X X, x [x] .
 ∼
 → (cid:55)→
-TX := (cid:8)U ⊆ X (cid:12)(cid:12) π−1(U) ∈ TX (cid:9)
+T X := (cid:8) U ⊆ X (cid:12) (cid:12) π−1(U) ∈ T X (cid:9)
 (X,T ) heißt Quotiententopologie.
 X
 Beispiel 5
 X = R,a b : a b Z
 ∼ ⇔ − ∈
-π−1(u) a
+π−1(u)
+a
 R
 -1 0 1 2 3 4 5
 a
@@ -320,10 +317,10 @@ Also für n = 1:
 4
 −
 1.2 Metrische Räume
-Deﬁnition 8
+Definition 8
 Sei X eine Menge. Eine Abbildung d : X X R+ heißt Metrik, wenn gilt:
 × → 0
-(i) Deﬁnitheit: d(x,y) = 0 x = y x,y X
+(i) Definitheit: d(x,y) = 0 x = y x,y X
 ⇔ ∀ ∈
 (ii) Symmetrie: d(x,y) = d(y,x) x,y X
 ∀ ∈
@@ -338,7 +335,7 @@ r
 B = B (x) (X) x X,r R+ ist Basis einer Topologie auf X.
 r
 { ⊆ P | ∈ ∈ }
-Deﬁnition 9
+Definition 9
 Seien (X,d ) und (Y,d ) metrische Räume und ϕ : X Y eine Abbildung mit
 X Y
 →
@@ -383,31 +380,31 @@ X = R2
 −
 4
 −
-Deﬁnition 10
-Ein topologischer Raum X heißt hausdorﬀsch, wenn es für je zwei Punkte x = y in X
+Definition 10
+Ein topologischer Raum X heißt hausdorffsch, wenn es für je zwei Punkte x = y in X
 (cid:54)
 Umgebungen U um x und U um y gibt, sodass U U = .
 x y x y
 ∩ ∅
 Bemerkung 4 (Trennungseigenschaft)
-Metrische Räume sind hausdorﬀsch, wegen
+Metrische Räume sind hausdorffsch, wegen
 d(x,y) > 0 ε > 0 : B (x) B (y) =
 ε ε
 ⇒ ∃ ∩ ∅
-Beispiel 12 (Topologische Räume und Hausdorﬀ-Räume)
-1) (R,T ) ist ein topologischer Raum, der nicht hausdorﬀsch ist.
+Beispiel 12 (Topologische Räume und Hausdorff-Räume)
+1) (R,T ) ist ein topologischer Raum, der nicht hausdorffsch ist.
 Z
-2) (R,T ) ist ein topologischer Hausdorﬀ-Raum.
+2) (R,T ) ist ein topologischer Hausdorff-Raum.
 Euklid
-Bemerkung 5 (Eigenschaften von Hausdorﬀ-Räumen)
-Seien X,X ,X Hausdorﬀ-Räume.
+Bemerkung 5 (Eigenschaften von Hausdorff-Räumen)
+Seien X,X ,X Hausdorff-Räume.
 1 2
-a) Jeder Teilraum von X ist hausdorﬀsch.
-b) X X ist hausdorﬀsch (vgl. Abbildung 1.4).
+a) Jeder Teilraum von X ist hausdorffsch.
+b) X X ist hausdorffsch (vgl. Abbildung 1.4).
 1 2
 ×
-Deﬁnition 11
-Sei X ein topologischer Raum und (x)n∈N eine Folge in X. x X heißt Grenzwert oder
+Definition 11
+Sei X ein topologischer Raum und (x) n∈N eine Folge in X. x X heißt Grenzwert oder
 ∈
 Limes von (x ), wenn es für jede Umgebung U von x ein n gibt, sodass x U für alle
 n 0 n
@@ -416,10 +413,10 @@ n n .
 0
 ≥
 Bemerkung 6
-Ist X hausdorﬀsch, so hat jede Folge in X höchstens einen Grenzwert.
+Ist X hausdorffsch, so hat jede Folge in X höchstens einen Grenzwert.
 Beweis: Sei (x ) eine konvergierende Folge und x und y Grenzwerte der Folge.
 n
-Da X hausdorﬀsch ist, gibt es Umgebungen U von x und U von y mit U U = falls
+Da X hausdorffsch ist, gibt es Umgebungen U von x und U von y mit U U = falls
 x y x y
 ∩ ∅
 x = y. Da (x ) gegen x und y konvergiert, existiert ein n mit x U U für alle n n
@@ -440,11 +437,11 @@ x x
 U X U X
 1 2 2 2
 × ×
-Abbildung 1.4: Wenn X ,X hausdorﬀsch sind, dann auch X X
+Abbildung 1.4: Wenn X ,X hausdorffsch sind, dann auch X X
 1 2 1 2
 ×
 1.3 Stetigkeit
-Deﬁnition 12
+Definition 12
 Seien (X,T ),(Y,T ) topologische Räume und f : X Y eine Abbildung.
 X Y
 →
@@ -466,8 +463,8 @@ Y
 Beweis: „ “: Sei x X,ε > 0 gegeben und U := B (f(x)).
 ε
 ⇒ ∈
-Dann ist U oﬀen in Y.
-=D=e=f.=1=2.a f−1(U) ist oﬀen in X. Dann ist x f−1(U).
+Dann ist U offen in Y.
+=D =e =f. =1 =2.a f−1(U) ist offen in X. Dann ist x f−1(U).
 ⇒ ∈
 δ > 0, sodass B (x) f−1(U)
 δ
@@ -478,7 +475,7 @@ f(B (x)) U
 y X d (x,y) < δ Beh.
 X
 ⇒ { ∈ | } ⇒
-„ “: Sei U Y oﬀen, X f−1(U).
+„ “: Sei U Y offen, X f−1(U).
 ⇐ ⊆ ∈
 Dann gibt es ε > 0, sodass B (f(x)) U
 ε
@@ -517,7 +514,7 @@ R
 0 1
 g
 Abbildung 1.5: Beispiel einer stetigen Funktion f, deren Umkehrabbildung g nicht stetig ist.
-Die Umkehrabbildung g ist nicht stetig, da g−1(U) nicht oﬀen ist (vgl. Abbildung 1.5).
+Die Umkehrabbildung g ist nicht stetig, da g−1(U) nicht offen ist (vgl. Abbildung 1.5).
 Bemerkung 9 (Verkettungen stetiger Abbildungen sind stetig)
 Seien X,Y,Z topologische Räume, f : X Y und g : Y Z stetige Abbildungen.
 → →
@@ -527,9 +524,9 @@ f (cid:47)(cid:47)
 X Y
 g◦f (cid:32)(cid:32) (cid:127)(cid:127) g
 Z
-Beweis: Sei U Z oﬀen (g f)−1(U) = f−1(g−1(U)). g−1(U) ist oﬀen in Y weil g stetig
+Beweis: Sei U Z offen (g f)−1(U) = f−1(g−1(U)). g−1(U) ist offen in Y weil g stetig
 ⊆ ⇒ ◦
-ist, f−1(g−1(U)) ist oﬀen in X, weil f stetig ist. (cid:4)
+ist, f−1(g−1(U)) ist offen in X, weil f stetig ist. (cid:4)
 Bemerkung 10
 a) Für jeden topologischen Raum X ist
 Homöo(X) := f : X X f ist Homöomorphismus
@@ -550,8 +547,8 @@ X Y
 Wird X Y mit der Produkttopologie versehen, so sind π und π stetig.
 X Y
 ×
-Beweis: Sei U X oﬀen
-π−1(U) =⊆U Y ist oﬀen in X Y. (cid:4)
+Beweis: Sei U X offen
+π−1(U) =⊆ U Y ist offen in X Y. (cid:4)
 ⇒ X × ×
 Bemerkung 12
 Sei X ein topologischer Raum, eine Äquivalenzrelation auf X, X = X/ der Bahnenraum
@@ -562,15 +559,15 @@ versehen mit der Quotiententopologie, π : X X, x [x] .
 → (cid:55)→
 Dann ist π stetig.
 12 1.4.ZUSAMMENHANG
-Beweis: Nach Deﬁnition ist U X oﬀen π−1(U) X oﬀen. (cid:4)
+Beweis: Nach Definition ist U X offen π−1(U) X offen. (cid:4)
 ⊆ ⇔ ⊆
 Beobachtung: Die Quotiententopologie ist die feinste Topologie, sodass π stetig wird.
 Beispiel 14 (Stereographische Projektion)
 Rn und Sn N sind homöomorph für beliebiges N Sn. Es gilt:
 \{ } ∈
-Sn = (cid:8)x Rn+1 (cid:12)(cid:12) x = 1(cid:9)
+Sn = (cid:8) x Rn+1 (cid:12) (cid:12) x = 1(cid:9)
 ∈ (cid:107) (cid:107)
-(cid:40) (cid:12)(cid:12) n(cid:88)+1 (cid:41)
+(cid:40) (cid:12) (cid:12) n (cid:88)+1 (cid:41)
 = x Rn+1 (cid:12) x2 = 1
 (cid:12) i
 ∈
@@ -580,7 +577,8 @@ i=1
 0
 .
 .
-O. B. d. A. sei N = .. Die Gerade durch N und P schneidet die Ebene H in genau
+..
+O. B. d. A. sei N = Die Gerade durch N und P schneidet die Ebene H in genau
  
 0
 1
@@ -593,24 +591,24 @@ P L H
 P
 (cid:55)→ ∩
   (cid:12) 
- x1 (cid:12) 
+ x 1 (cid:12) 
  . (cid:12) 
-wobei Rn = H =  ..  ∈ Rn+1 (cid:12)(cid:12) xn+1 = 0 und LP die Gerade in Rn+1 durch N
+wobei Rn = H =   . .   ∈ Rn+1 (cid:12) (cid:12) x n+1 = 0 und L P die Gerade in Rn+1 durch N
  (cid:12) 
- xn+1 (cid:12) 
+ x n+1 (cid:12) 
 und P ist.
  
 x
 1
 .
-Sei P =  .. , so ist xn+1 < 1, also ist LP nicht parallel zu H. Also schneiden sich LP
+Sei P =   . .  , so ist x n+1 < 1, also ist L P nicht parallel zu H. Also schneiden sich L P
 x
 n+1
 und H in genau einem Punkt Pˆ.
 Es gilt: f ist bijektiv und die Umkehrabbildung ist ebenfalls stetig.
 1.4 Zusammenhang
-Deﬁnition 13
-a) EinRaumX heißtzusammenhängend,wenneskeineoﬀenen,nichtleerenTeilmengen
+Definition 13
+a) EinRaumX heißtzusammenhängend,wenneskeineoffenen,nichtleerenTeilmengen
 U ,U von X gibt mit U U = und U U = X.
 1 2 1 2 1 2
 ∩ ∅ ∪
@@ -644,13 +642,13 @@ Sei x U ,y U und [x,y] die Strecke zwischen x und y. Sei V = [x,y]. Nun
 ∈ ∈
 betrachten wir V (cid:40) Rn als (metrischen) Teilraum mit der Teilraumtopologie T .
 V
-Somit gilt U [x,y] T wegen der Deﬁnition der Teilraumtopologie.
+Somit gilt U [x,y] T wegen der Definition der Teilraumtopologie.
 1 V
 ∩ ∈
 Dann gibt es z [x,y] mit z ∂(U [x,y]), aber z / U z U . In jeder
 1 1 2
 ∈ ∈ ∩ ∈ ⇒ ∈
-Umgebung von z liegt ein Punkt von U Widerspruch zu U oﬀen.
+Umgebung von z liegt ein Punkt von U Widerspruch zu U offen.
 1 2
 ⇒
 2) R 0 ist nicht zusammenhängend, denn R 0 = R R
@@ -704,11 +702,11 @@ Sei X ein topologischer Raum und A,B X zusammenhängend.
 ⊆
 Ist A B = , dann ist A B zusammenhängend.
 ∩ (cid:54) ∅ ∪
-Beweis: Sei A B = U ˙ U ,U = oﬀen
+Beweis: Sei A B = U ˙ U ,U = offen
 1 2 i
 ∪ ∪ (cid:54) ∅
 o.B.d.A.
-====== A = (A U ) ˙ (A U ) oﬀen
+====== A = (A U ) ˙ (A U ) offen
 1 2
 ⇒ ∩ ∪ ∩
 Azhgd.
@@ -725,9 +723,9 @@ B = (B U ) (B U ) ist unerlaubte Zerlegung.
 (cid:124) (cid:123)(cid:122) (cid:125) (cid:124) (cid:123)(cid:122) (cid:125)
 =U1 =∅
 (cid:4)
-Deﬁnition 14
+Definition 14
 Sei X ein topologischer Raum.
-Für x X sei Z(x) X deﬁniert durch
+Für x X sei Z(x) X definiert durch
 ∈ ⊆
 (cid:91)
 Z(x) := A
@@ -765,7 +763,7 @@ Z(y) Z(x) Z(y)
 Bemerkung 17
 Sei f : X Y stetig. Ist A X zusammenhängend, so ist f(A) Y zusammenhängend.
 → ⊆ ⊆
-Beweis: Sei f(A) = U U ,U = , oﬀen, disjunkt.
+Beweis: Sei f(A) = U U ,U = , offen, disjunkt.
 1 2 i
 ∪ (cid:54) ∅
 f−1(f(A)) = f−1(U ) f−1(U )
@@ -777,16 +775,16 @@ A = (A f−1(U )) (A f−1(U )) (cid:4)
 (cid:124) (cid:123)(cid:122) (cid:125) (cid:124) (cid:123)(cid:122) (cid:125)
 (cid:54)=∅ (cid:54)=∅
 1.5 Kompaktheit
-Deﬁnition 15
+Definition 15
 Sei X eine Menge und U (X).
 ⊆ P
 U heißt eine Überdeckung von X, wenn gilt:
 x X : M U : x M
 ∀ ∈ ∃ ∈ ∈
-Deﬁnition 16
-Ein topologischer Raum X heißt kompakt, wenn jede oﬀene Überdeckung von X
-U = U mit U oﬀen in X
-{ i}i∈I i
+Definition 16
+Ein topologischer Raum X heißt kompakt, wenn jede offene Überdeckung von X
+U = U mit U offen in X
+{ i }i∈I i
 eine endliche Teilüberdeckung
 (cid:91)
 U = X mit J N
@@ -796,7 +794,7 @@ i∈J⊆I
 besitzt.
 Bemerkung 18
 Das Einheitsintervall I := [0,1] ist kompakt bezüglich der euklidischen Topologie.
-Beweis: Sei (U ) eine oﬀene Überdeckung von I.
+Beweis: Sei (U ) eine offene Überdeckung von I.
 i i∈J
 Es genügt zu zeigen, dass es ein δ > 0 gibt, sodass jedes Teilintervall der Länge δ von I in
 einem der U enthalten ist. Wenn es ein solches δ gibt, kann man I in endlich viele Intervalle
@@ -808,15 +806,17 @@ enthalten.
 Angenommen, es gibt kein solches δ. Dann gibt es für jedes n N ein Intervall I [0,1]
 n
 ∈ ⊆
-der Länge 1/n sodass In (cid:40) Ui für alle i J.
+der Länge 1/n sodass I (cid:40) U für alle i J.
+n i
 ∈
 Sei x der Mittelpunkt von I . Die Folge (x ) hat einen Häufungspunkt x [0,1]. Dann
 n n n
 ∈
-gibt es i J mit x U . Da U oﬀen ist, gibt es ein ε > 0, sodass (x ε,x+ε) U .
+gibt es i J mit x U . Da U offen ist, gibt es ein ε > 0, sodass (x ε,x+ε) U .
 i i i
 ∈ ∈ − ⊆
-Dann gibt es n0, sodass gilt: 1/n0 < ε/2 und für unendlich viele3 n n0 : x xn < ε/2, also
+Dann gibt es n 0, sodass gilt: 1/n0 < ε/2 und für unendlich viele3 n n : x x < ε/2, also
+0 n
 ≥ | − |
 I (x ε,x+ε) U für mindestens ein n N.4
 n i
@@ -828,19 +828,22 @@ Dann überdecke [0,1] mit endlich vielen Intervallen I ,...,I der Länge δ. Jed
 U enthalten.
 ij
 U ,...,U ist endliche Teilüberdeckung von U. (cid:4)
-⇒ j1 jd
+j1 j
+⇒ d
 Beispiel 16 (Kompakte Räume)
 1) R ist nicht kompakt.
 2) (0,1) ist nicht kompakt.
 (cid:83)
-Un = (1/n,1−1/n) ⇒ n∈NUn = (0,1)
+U = (1/n,1 −1/n) n∈NU = (0,1)
+n n
+⇒
 3) R mit der Zariski-Topologie ist kompakt und jede Teilmenge von R ist es auch.
 Bemerkung 19
 Sei X kompakter Raum, A X abgeschlossen. Dann ist A kompakt.
 ⊆
-Beweis: Sei (V ) oﬀene Überdeckung von A.
+Beweis: Sei (V ) offene Überdeckung von A.
 i i∈I
-Dann gibt es für jedes i I eine oﬀene Teilmenge U X mit V = U A.
+Dann gibt es für jedes i I eine offene Teilmenge U X mit V = U A.
 i i i
 ∈ ⊆ ∩
 (cid:91)
@@ -848,36 +851,40 @@ A U
 i
 ⇒ ⊆
 i∈I
-U = U i I X A ist oﬀene Überdeckung von X
+U = U i I X A ist offene Überdeckung von X
 i
 ⇒ { | ∈ }∪{ \ }
 n
 X kompakt (cid:91)
 ======= es gibt i ,...,i I, sodass U (X A) = X
-⇒ 1 n ∈ ij ∪ \
+1 n ij
+⇒ ∈ ∪ \
 j=1
  
 n
 (cid:91)
-⇒  Uij ∪(X \A)∩A = A
+ U ij ∪(X \A) ∩A = A
+⇒
 j=1
 n
 (cid:91)
 (U A) ((X A) A) = A
-⇒ ij ∩ ∪ \ ∩
+ij
+⇒ ∩ ∪ \ ∩
 j=1(cid:124) (cid:123)(cid:122) (cid:125) (cid:124) (cid:123)(cid:122) (cid:125)
 =Vij =∅
 V ,...,V überdecken A.
-⇒ i1 in
+i1 in
+⇒
 (cid:4)
 Bemerkung 20
 Seien X,Y kompakte topologische Räume. Dann ist X Y mit der Produkttopologie
 ×
 kompakt.
-Beweis: Sei (W ) eine oﬀene Überdeckung von X Y. Für jedes (x,y) X Y gibt es
+Beweis: Sei (W ) eine offene Überdeckung von X Y. Für jedes (x,y) X Y gibt es
 i i∈I
 × ∈ ×
-oﬀene Teilmengen U von X und V von Y sowie ein i I, sodass U V W .
+offene Teilmengen U von X und V von Y sowie ein i I, sodass U V W .
 x,y x,y x,y x,y i
 ∈ × ⊆
 3Dies gilt nicht für alle n≥n , da ein Häufungspunkt nur eine konvergente Teilfolge impliziert.
@@ -895,24 +902,29 @@ x
 U
 x,y
 Abbildung 1.7: Die blaue Umgebung ist Schnitt vieler Umgebungen
-Die oﬀenen Mengen U V für festes x und alle y Y überdecken x y. Da Y
-x0,y × x0,y 0 ∈ { 0}×
-kompakt ist, ist auch x Y kompakt. Also gibt es y ,...,y mit (cid:83)m(x0)U
-{ 0}× 1 m(x0) i=1 x0,yi ×
+Die offenen Mengen U V für festes x und alle y Y überdecken x y. Da Y
+x0,y x0,y 0 0
+× ∈ { }×
+(cid:83)m(x0)
+kompakt ist, ist auch x Y kompakt. Also gibt es y ,...,y mit U
+{ 0 }× 1 m(x0) i=1 x0,yi ×
 V x Y.
-x0,yi ⊇ { 0}×
-Sei U := (cid:84)m(x)U . Da X kompakt ist, gibt es x ,...,x X mit (cid:83)n U = X
+x0,yi 0
+⊇ { }×
+(cid:84)m(x) (cid:83)n
+Sei U := U . Da X kompakt ist, gibt es x ,...,x X mit U = X
 x0 i=1 x0,yi 1 n ∈ j=1 xj
-(cid:83)k (cid:83)m(xj)(cid:0)U V (cid:1) X Y
+(cid:83)k (cid:83)m(xj)(cid:0) (cid:1)
+U V X Y
 ⇒ j=1 i=1 xj,yi × xj,yi ⊇ ×
 (cid:124) (cid:123)(cid:122) (cid:125)
 Eingrün-orangesKästchen
 (cid:83) (cid:83) W (x ,y ) = X Y (cid:4)
 ⇒ j i i j i ×
 Bemerkung 21
-Sei X ein Hausdorﬀraum und K X kompakt. Dann ist K abgeschlossen.
+Sei X ein Hausdorffraum und K X kompakt. Dann ist K abgeschlossen.
 ⊆
-Beweis: z. Z.: Komplement ist oﬀen
+Beweis: z. Z.: Komplement ist offen
 Ist X = K, so ist K abgeschlossen in X. Andernfalls sei y X K. Für jedes x K seien
 ∈ \ ∈
 U bzw. V Umgebungen von x bzw. von y, sodass U V = .
@@ -923,7 +935,8 @@ i
 x
 K
 y
-Da K kompakt ist, gibt es endlich viele x ,...,x K, sodass (cid:83)m U K.
+(cid:83)m
+Da K kompakt ist, gibt es endlich viele x ,...,x K, sodass U K.
 1 n ∈ i=1 xi ⊇
 n
 (cid:92)
@@ -934,13 +947,14 @@ i=1
 (cid:32) n (cid:33)
 (cid:91)
 V U =
-⇒ ∩ xi ∅
+xi
+⇒ ∩ ∅
 i=1
 V K =
 ⇒ ∩ ∅
 V ist Überdeckung von y, die ganz in X K enthalten ist.
 ⇒ \
-X K ist oﬀen
+X K ist offen
 ⇒ \
 Damit ist K abgeschlossen. (cid:4)
 Bemerkung 22
@@ -948,15 +962,17 @@ Seien X,Y topologische Räume, f : X Y stetig.
 →
 Ist K X kompakt, so ist f(K) Y kompakt.
 ⊆ ⊆
-Beweis: Sei (V ) oﬀene Überdeckung von f(K)
+Beweis: Sei (V ) offene Überdeckung von f(K)
 i i∈I
-=f=s=te=tig (f−1(V )) ist oﬀene Überdeckung von K
+=f =s =te =tig (f−1(V )) ist offene Überdeckung von K
 i i∈I
 ⇒
-=K=o=m=p=akt es gibt i ,...,i , sodass f−1(V ),...,f−1(V ) Überdeckung von K ist.
-⇒ 1 n i1 in
+=K =o =m =p =akt es gibt i ,...,i , sodass f−1(V ),...,f−1(V ) Überdeckung von K ist.
+1 n i1 in
+⇒
 f(f−1(V )),...,f(f−1(V )) überdecken f(K).
-⇒ i1 in
+i1 in
+⇒
 Es gilt: f(f−1(V)) = V f(X) (cid:4)
 ∩
 Satz 1.1 (Heine-Borel)
@@ -964,8 +980,8 @@ Eine Teilmenge von Rn oder Cn ist genau dann kompakt, wenn sie beschränkt und
 abgeschlossen ist.
 Beweis: „ “: Sei K Rn (oder Cn) kompakt.
 ⇒ ⊆
-Da Rn und Cn hausdorﬀsch sind, ist K nach Bemerkung 21 abgeschlossen. Nach Vorausset-
-zung kann K mit endlich vielen oﬀenen Kugeln von Radien 1 überdeckt werden K ist
+Da Rn und Cn hausdorffsch sind, ist K nach Bemerkung 21 abgeschlossen. Nach Vorausset-
+zung kann K mit endlich vielen offenen Kugeln von Radien 1 überdeckt werden K ist
 ⇒
 beschränkt.
 „ “ Sei A Rn (oder Cn) beschränkt und abgeschlossen.
@@ -982,11 +998,11 @@ kompakt. Genauso ist Z kompakt, weil
 z C z 1
 { ∈ (cid:107) | ≤ }
 homöomorph zu
-(cid:8)(x,y) R2 (cid:12)(cid:12) (x,y) 1(cid:9)
+(cid:8) (x,y) R2 (cid:12) (cid:12) (x,y) 1(cid:9)
 ∈ (cid:107) (cid:107) ≤
 ist. (cid:4)
 1.6 Wege und Knoten
-Deﬁnition 17
+Definition 17
 Sei X ein topologischer Raum.
 19 1.6.WEGEUNDKNOTEN
 a) Ein Weg in X ist eine stetige Abbildung γ : [0,1] X.
@@ -1000,7 +1016,7 @@ Ist X diskret, so ist jeder Weg konstant, d. h. von der Form
 x [0,1] : γ(x) = c, c X
 ∀ ∈ ∈
 Denn γ([0,1]) ist zusammenhängend für jeden Weg γ.
-Deﬁnition 18
+Definition 18
 Ein topologischer Raum X heißt wegzusammenhängend, wenn es zu je zwei Punkten
 x,y X einen Weg γ : [0,1] X gibt mit γ(0) = x und γ(1) = y.
 ∈ →
@@ -1027,10 +1043,11 @@ C = (C A ) (C A )
 ist Zerlegung in nichtleere, disjunkte, abgeschlossene Teilmengen Widerspruch
 ⇒
 (cid:110) (cid:12) (cid:111)
-b) Sei X = (x,y) R2 (cid:12)(cid:12) x2+y2 = 1 y = 1+2 e−110x .
+b) Sei X = (x,y) R2 (cid:12) x2+y2 = 1 y = 1+2 e− 11 0x .
+(cid:12)
 ∈ ∨ ·
 Abbildung 1.8a veranschaulicht diesen Raum.
-Sei U U = X,U = U = ,U oﬀen. X = C S. Dann ist C U oder C U ,
+Sei U U = X,U = U = ,U offen. X = C S. Dann ist C U oder C U ,
 1 2 1 2 i 1 2
 ∪ (cid:54) ∅ ∪ ⊆ ⊆
 weil C und S zusammenhängend sind.
@@ -1047,7 +1064,7 @@ Beispiel 18 (Hilbert-Kurve)
 Es gibt stetige, surjektive Abbildungen [0,1] [0,1] [0,1]. Ein Beispiel ist die in Abbil-
 → ×
 dung 1.9 dargestellte Hilbert-Kurve.
-Deﬁnition 19
+Definition 19
 Sei X ein topologischer Raum. Eine Jordankurve in X ist ein Homöomorphismus γ :
 [0,1] C X bzw. γ : S1 C X, wobei C := Bildγ.
 → ⊆ → ⊆
@@ -1075,20 +1092,20 @@ Zusammenhangskomponenten, von denen eine beschränkt ist und eine unbeschränkt.
 außen
 innen
 Jordankurve
-Abbildung 1.10: Die unbeschränkte Zusammenhangskomponente wird häuﬁg inneres, die be-
+Abbildung 1.10: Die unbeschränkte Zusammenhangskomponente wird häufig inneres, die be-
 schränkte äußeres genannt.
 Beweis: ist technisch mühsam und wird hier nicht geführt. Er kann in „Algebraische Topologie:
 Eine Einführung“ von R. Stöcker und H. Zieschang auf S. 301f (ISBN 978-3519122265)
 nachgelesen werden.
 Idee: Ersetze Weg C durch Polygonzug.
 21 1.6.WEGEUNDKNOTEN
-Deﬁnition 20
+Definition 20
 Eine geschlossene Jordankurve in R3 heißt Knoten.
 Beispiel 19 (Knoten)
 (a) Trivialer Knoten (b) Kleeblattknoten (c) Achterknoten (d) 6 -Knoten
 2
 Abbildung 1.11: Beispiele für verschiedene Knoten
-Deﬁnition 21
+Definition 21
 Zwei Knoten γ ,γ : S1 R3 heißen äquivalent, wenn es eine stetige Abbildung
 1 2
 →
@@ -1108,11 +1125,12 @@ z
 → (cid:55)→
 ein Knoten. Die Abbildung H heißt Isotopie zwischen γ und γ .
 1 2
-Deﬁnition 22
+Definition 22
 Sei γ : [0,1] R3 ein Knoten, E eine Ebene und π : R3 E eine Projektion auf E.
 → →
 π heißt Knotendiagramm von γ, wenn gilt:
-(cid:12)(cid:12)π−1(x)(cid:12)(cid:12) 2 x π(γ)
+(cid:12) (cid:12)π−1(x)(cid:12)
+(cid:12) 2 x π(γ)
 ≤ ∀ ∈
 Ist (π )−1(x) = y ,y , so liegt y über y , wenn gilt:
 γ([0,1]) 1 2 1 2
@@ -1130,7 +1148,7 @@ durch endlich viele „Reidemeister-Züge“ ineinander überführt werden könn
 3
 Abbildung 1.12: Reidemeister-Züge
 Beweis: Durch sorgfältige Fallunterscheidung.5
-Deﬁnition 23
+Definition 23
 Ein Knotendiagramm heißt 3-färbbar, wenn jeder Bogen von D so mit einer Farbe gefärbt
 werden kann, dass an jeder Kreuzung eine oder 3 Farben auftreten und alle 3 Farben
 auftreten.
@@ -1144,7 +1162,7 @@ X
 { } {∅ { } }
 (a) Beweisen Sie, dass (X,T ) ein topologischer Raum ist.
 X
-(b) Ist (X,T ) hausdorﬀsch?
+(b) Ist (X,T ) hausdorffsch?
 X
 (c) Ist T von einer Metrik erzeugt?
 X
@@ -1156,13 +1174,14 @@ versehen.
 Zeigen Sie:
 (a) Jedes U und jede einelementige Teilmenge von Z ist abgeschlossen.
 a,b
-(b) 1,1 ist nicht oﬀen.
+(b) 1,1 ist nicht offen.
 {− }
 (c) Es gibt unendlich viele Primzahlen.
 Aufgabe 3 (Cantorsches Diskontinuum)
 Für jedes i N sei P := 0,1 mit der diskreten Topologie. Weiter Sei P := (cid:81) P .
-∈ i { } i∈N i
-(a) Wie sehen die oﬀenen Mengen von P aus?
+i i∈N i
+∈ { }
+(a) Wie sehen die offenen Mengen von P aus?
 (b) Was können Sie über den Zusammenhang von P sagen?
 Aufgabe 4 (Kompaktheit)
 (a) Ist GL (R) = A Rn×n det(A) = 0 kompakt?
@@ -1173,32 +1192,32 @@ n
 { ∈ | }
 (c) Ist (R) kompakt?
 P
-Aufgabe 5 (Begriﬀe)
-Deﬁnieren Sie die Begriﬀe „Homomorphismus“ und „Homöomorphismus“.
+Aufgabe 5 (Begriffe)
+Definieren Sie die Begriffe „Homomorphismus“ und „Homöomorphismus“.
 Geben Sie, falls möglich, ein Beispiel für folgende Fälle an. Falls es nicht möglich ist,
 begründen Sie warum.
 1) Ein Homomorphismus, der zugleich ein Homöomorphismus ist,
 2) ein Homomorphismus, der kein Homöomorphismus ist,
 24 1.6.WEGEUNDKNOTEN
 3) ein Homöomorphismus, der kein Homomorphismus ist
-Aufgabe 6 (Begriﬀe)
-Deﬁnieren Sie die Begriﬀe „Isomorphismus“, „Isotopie“ und „Isometrie“.
+Aufgabe 6 (Begriffe)
+Definieren Sie die Begriffe „Isomorphismus“, „Isotopie“ und „Isometrie“.
 2 Mannigfaltigkeiten und
 Simplizialkomplexe
 2.1 Topologische Mannigfaltigkeiten
-Deﬁnition 24
+Definition 24
 Sei (X,T) ein topologischer Raum und n N.
 ∈
 a) Eine n-dimensionale Karte auf X ist ein Paar (U,ϕ), wobei U T und ϕ : U V
 ∈ →
-Homöomorphismus von U auf eine oﬀene Teilmenge V Rn.
+Homöomorphismus von U auf eine offene Teilmenge V Rn.
 ⊆
 b) Ein n-dimensionaler Atlas auf X ist eine Familie (U ,ϕ ) von Karten auf X,
 i i i∈I
 (cid:83) A
 sodass U = X.
 i∈I i
-c) X heißt (topologische) n-dimensionale Mannigfaltigkeit, wenn X hausdorﬀsch ist,
+c) X heißt (topologische) n-dimensionale Mannigfaltigkeit, wenn X hausdorffsch ist,
 eine abzählbare Basis der Topologie hat und einen n-dimensionalen Atlas besitzt.
 Anschaulich ist also ein n-dimensionale Mannigfaltigkeit lokal dem Rn ähnlich.
 Bemerkung 24 (Mächtigkeit von Mannigfaltigkeiten)
@@ -1206,8 +1225,8 @@ Jede n-dimensionale Mannigfaltigkeit mit n 1 ist mindestens so mächtig wie R.
 ≥
 Beweis: Sei (X,T) ein topologischer Raum und (U,ϕ) mit U T und ϕ : U V Rn, wobei
 ∈ → ⊆
-V oﬀen und ϕ ein Homöomorphismus ist, eine Karte auf X.
-Da jede oﬀene Teilmenge des Rn genauso mächtig ist wie der Rn, ϕ als Homöomorphismus
+V offen und ϕ ein Homöomorphismus ist, eine Karte auf X.
+Da jede offene Teilmenge des Rn genauso mächtig ist wie der Rn, ϕ als Homöomorphismus
 insbesondere bijektiv ist und Mengen, zwischen denen eine Bijektion existiert, gleich mächtig
 sind, ist U genauso mächtig wie der Rn. Da jede Mannigfaltigkeit mindestens eine Karte
 hat, muss jede Mannigfaltigkeit X mindestens so mächtig sein wie der Rn. (cid:4)
@@ -1219,17 +1238,17 @@ a) Es gibt surjektive, stetige Abbildungen [0,1] [0,1] [0,1]
 b) Für n = m sind Rn und Rm nicht homöomorph. Zum Beweis benutzt man den „Satz
 (cid:54)
 von der Gebietstreue“ (Brouwer):
-Ist U Rn oﬀen und f : U Rn stetig und injektiv, so ist f(U) oﬀen.
+Ist U Rn offen und f : U Rn stetig und injektiv, so ist f(U) offen.
 ⊆ →
 Ist n < m und Rm homöomorph zu Rn, so wäre
 f : Rn Rm Rn, (x ,...,x ) (x ,x ,...,x ,0,...,0)
 1 n 1 2 n
 → → (cid:55)→
-eine stetige injektive Abbildung. Also müsste f(Rn) oﬀen sein Widerspruch
+eine stetige injektive Abbildung. Also müsste f(Rn) offen sein Widerspruch
 ⇒
 26 2.1.TOPOLOGISCHEMANNIGFALTIGKEITEN
 Beispiel 20 (Mannigfaltigkeiten)
-1) Jede oﬀene Teilmenge U Rn ist eine n-dimensionale Mannigfaltigkeit mit einem
+1) Jede offene Teilmenge U Rn ist eine n-dimensionale Mannigfaltigkeit mit einem
 ⊆
 Atlas aus einer Karte.
 2) Cn ist eine 2n-dimensionale Mannigfaltigkeit mit einem Atlas aus einer Karte:
@@ -1247,9 +1266,11 @@ U Rn
 i
 →
 (cid:18) (cid:19)
-(x : : x ) x0,..., x(cid:1)(cid:1)i,..., xn
+x 0 x (cid:1)(cid:1)i x n
+(x : : x ) ,..., ,...,
 0 n
-··· (cid:55)→ xi (cid:1)xi xi
+··· (cid:55)→ x (cid:1)x x
+i i i
 (y : : y : 1 : y : : y ) (y ,...,y )
 1 i−1 i n 1 n
 ··· ··· →(cid:55)
@@ -1265,7 +1286,7 @@ y = (0 : 1 : 1) U R2 y (0,1)
 Umgebung: B (0,1) (1 : u : v) (u,v) < 1 = V
 1 1
 → (cid:8){ |(cid:12)(cid:107) (cid:107) }(cid:9)
-Umgebung: B1(0,1) (w : z : 1) (cid:12) w2+z2 < 1 = V2
+Umgebung: B 1(0,1) (w : z : 1) (cid:12) w2+z2 < 1 = V 2
 →
 V V = ?
 1 2
@@ -1279,7 +1300,7 @@ c = 0 und (a)2+(b)2 < 1 a < 1
 ⇒ (cid:54) c c ⇒ c
 Widerspruch
 ⇒
-4) Sn = (cid:8)x Rn+1 (cid:12)(cid:12) x = 1(cid:9) ist n-dimensionale Mannigfaltigkeit.
+4) Sn = (cid:8) x Rn+1 (cid:12) (cid:12) x = 1(cid:9) ist n-dimensionale Mannigfaltigkeit.
 ∈ (cid:107) (cid:107)
 Karten:
 D := (x ,...,x ) Sn x > 0 B (0,...,0)
@@ -1289,49 +1310,49 @@ i 1 n+1 i 1
 C := (x ,...,x ) Sn x < 0 B (0,...,0)
 i 1 n+1 i 1
 { ∈ | } →
-(x1,...,xn+1) (x1,...,(cid:26)x(cid:26)i,...,xn+1)1
+(x 1,...,x n+1) (x 1,...,(cid:26)x(cid:26) i,...,x n+1)1
 (cid:55)→ (cid:113) (cid:113)
 (x ,...,x ) (x ,...,x , 1 (cid:80)n x2,x ,...,x ), oder 1 (cid:80)n x2 für C
 1 n (cid:55)→ 1 i−1 − k=1 k i n − − k=1 k i
 Sn = (cid:83)n+1(C D )
-i=1 i∪ i
+i=1 i ∪ i
 Als kompakte Mannigfaltigkeit wird Sn auch „geschlossene Mannigfaltigkeit“ genannt.
 5) [0,1] ist keine Mannigfaltigkeit, denn:
-Es gibt keine Umgebung von 0 in [0,1], die homöomorph zu einem oﬀenem Intervall
+Es gibt keine Umgebung von 0 in [0,1], die homöomorph zu einem offenem Intervall
 ist.
 1x wird rausgenommen
 i
 27 2.1.TOPOLOGISCHEMANNIGFALTIGKEITEN
-6) V1 = (cid:8)(x,y) R2 (cid:12)(cid:12) x y = 0(cid:9) ist keine Mannigfaltigkeit.
+6) V 1 = (cid:8) (x,y) R2 (cid:12) (cid:12) x y = 0(cid:9) ist keine Mannigfaltigkeit.
 ∈ ·
 Das Problem ist (0,0). Wenn man diesen Punkt entfernt, zerfällt der Raum in 4
 Zusammenhangskomponenten. Jeder Rn zerfällt jedoch in höchstens zwei Zusammen-
 hangskomponenten, wenn man einen Punkt entfernt.
-7) V2 = (cid:8)(x,y) R2 (cid:12)(cid:12) x3 = y2(cid:9) ist eine Mannigfaltigkeit.
+7) V 2 = (cid:8) (x,y) R2 (cid:12) (cid:12) x3 = y2(cid:9) ist eine Mannigfaltigkeit.
 ∈
 8) X = (R 0 ) (0 ,0 )
 1 2
 \{ } ∪
 (cid:40)
-U oﬀen in R 0 , falls 0 / U,0 U
+U offen in R 0 , falls 0 / U,0 U
 1 2
-U X oﬀen \{ } ∈ ∈
+U X offen \{ } ∈ ∈
 ⊆ ⇔ ε > 0 : ( ε,ε) U falls 0 U,0 U
 1 2
 ∃ − ⊆ ∈ ∈
-Insbesondere sind (R 0 ) 0 und (R 0 ) 0 oﬀen und homöomorph
+Insbesondere sind (R 0 ) 0 und (R 0 ) 0 offen und homöomorph
 1 2
 \{ } ∪{ } \{ } ∪{ }
 zu R.
-Aber: X ist nicht hausdorﬀsch! Denn es gibt keine disjunkten Umgebungen von 0
+Aber: X ist nicht hausdorffsch! Denn es gibt keine disjunkten Umgebungen von 0
 1
 und 0 .
 2
-9) GL (R) ist eine Mannigfaltigkeit der Dimension n2, weil oﬀene Teilmengen von Rn2
+9) GL (R) ist eine Mannigfaltigkeit der Dimension n2, weil offene Teilmengen von Rn2
 n
 eine Mannigfaltigkeit bilden.
-Deﬁnition 25
-Seien X,Y n-dimensionale Mannigfaltigkeiten, U X und V Y oﬀen, Φ : U V ein Ho-
+Definition 25
+Seien X,Y n-dimensionale Mannigfaltigkeiten, U X und V Y offen, Φ : U V ein Ho-
 ⊆ ⊆ →
 möomorphismus Z = (X ˙ Y)/ mit der von u Φ(u) u U erzeugten Äquivalenzrelation
 ∼
@@ -1339,7 +1360,7 @@ möomorphismus Z = (X ˙ Y)/ mit der von u Φ(u) u U erzeugten Äquivalenzrelati
 und der von induzierten Quotiententopologie.
 ∼
 Z heißtVerklebungvonX undY längsU undV.Z besitzteinenAtlasausn-dimensionalen
-Karten. Falls Z hausdorﬀsch ist, ist Z eine n-dimensionale Mannigfaltigkeit.
+Karten. Falls Z hausdorffsch ist, ist Z eine n-dimensionale Mannigfaltigkeit.
 Bemerkung 26
 Sind X,Y Mannigfaltigkeiten der Dimension n bzw. m, so ist X Y eine Mannigfaltigkeit
 ×
@@ -1347,7 +1368,7 @@ der Dimension n+m.
 Beweis: Produkte von Karten sind Karten. (cid:4)
 Beispiel 21
 Mannigfaltigkeiten mit Dimension 1:
-1) Oﬀene Intervalle, R, (0,1) sind alle homöomorph
+1) Offene Intervalle, R, (0,1) sind alle homöomorph
 2) S1
 Mannigfaltigkeiten mit Dimension 2:
 1) R2
@@ -1355,7 +1376,7 @@ Mannigfaltigkeiten mit Dimension 2:
 3) T2 (1 Henkel)
 4) oder mehr Henkel, wie z.B. der Zweifachtorus in Abbildung 2.1
 Bemerkung 27
-Sei n N,F : Rn R stetig diﬀerenzierbar und X = V(F) := x Rn F(x) = 0 das
+Sei n N,F : Rn R stetig differenzierbar und X = V(F) := x Rn F(x) = 0 das
 ∈ → { ∈ | }
 „vanishing set“.
 Dann gilt:
@@ -1368,21 +1389,21 @@ Beweis:
 a) Sei y Rn V(F). Weil F stetig ist, gibt es δ > 0, sodass F(B (y)) B (F(y)) mit
 δ ε
 ∈ \ ⊆
-ε = 1 F(y) . Folgt B (y) V(F) = Rn V(F) ist oﬀen.
+ε = 1 F(y) . Folgt B (y) V(F) = Rn V(F) ist offen.
 2(cid:107) (cid:107) δ ∩ ∅ ⇒ \
 b) Sei x X mit grad(F)(x) = 0, also o. B. d. A. ∂F (x) = 0, x = (x ,...,x ),
 ∈ (cid:54) ∂X1 (cid:54) 1 n
 x(cid:48) := (x ,...,x ) Rn−1. Der Satz von der impliziten Funktion liefert nun: Es
 2 n
 ∈
-gibt Umgebungen U von x(cid:48) und diﬀerenzierbare Funktionen g : U R, sodass
+gibt Umgebungen U von x(cid:48) und differenzierbare Funktionen g : U R, sodass
 →
-G : U Rn, u (g(u),u) eine stetige Abbildung auf eine oﬀene Umgebung V von x
+G : U Rn, u (g(u),u) eine stetige Abbildung auf eine offene Umgebung V von x
 → (cid:55)→
 in X ist.
 (cid:4)
 Beispiel 22
-1) F : R3 R, (x,y,z) x2+y2+z2 1,V(F) = S2,grad(F) = (2x,2y,2z) =B=e=m=.=2=7.b
+1) F : R3 R, (x,y,z) x2+y2+z2 1,V(F) = S2,grad(F) = (2x,2y,2z) =B =e =m =. =2 =7.b
 → (cid:55)→ − ⇒
 Sn ist n-dimensionale Mannigfaltigkeit in Rn+1
 2) F : R2 R, (x,y) y2 x3 Es gilt: grad(F) = ( 3x2,2y). Also: grad(0,0) = (0,0).
@@ -1395,22 +1416,24 @@ z
 x
 −100 2 4 6 8 10 12
 f(x,y) −4 5
-100 −2 − a= 31
-−0100 y 0 2 4 5 4 3 2 1 0x −1 −2 −3 −4 −5 −10 aa==12
+−2 − a= 31
+100
+−0 100 y 0 2 4 5 4 3 2 1 0 x −1 −2 −3 −4 −5 −10 a a= =1 2
 (a) F(x,y)=y2−x3 (b) y2−ax3 =0
 Abbildung 2.2: Rechts ist die Neilsche Parabel für verschiedene Parameter a.
 DaheristBemerkung27.bnichtanwendbar,aberV(F)isttrotzdemeine1-dimensionale
 topologische Mannigfaltigkeit.
 29 2.1.TOPOLOGISCHEMANNIGFALTIGKEITEN
-Deﬁnition 26
-Sei X ein Hausdorﬀraum mit abzählbarer Basis der Topologie. X heißt n-dimensionale
-Mannigfaltigkeit mit Rand, wenn es einen Atlas (U ,ϕ ) gibt, wobei U X oﬀen und
+Definition 26
+Sei X ein Hausdorffraum mit abzählbarer Basis der Topologie. X heißt n-dimensionale
+Mannigfaltigkeit mit Rand, wenn es einen Atlas (U ,ϕ ) gibt, wobei U X offen und
 i i i i
 ⊆
-ϕ ein Homöomorphismus auf eine oﬀene Teilmenge von
+ϕ ein Homöomorphismus auf eine offene Teilmenge von
 i
 Rn := (x ,...,x ) Rn x 0
-+,0 { 1 n ∈ | n ≥ }
++,0 1 n n
+{ ∈ | ≥ }
 ist.
 Rn ist ein „Halbraum“.
 +,0
@@ -1424,7 +1447,7 @@ Hinweis: Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 =
 (b) Pair of pants (c) Sphäre mit einem Loch
 Abbildung 2.3: Beispiele für Mannigfaltigkeiten mit Rand
-Deﬁnition 27
+Definition 27
 Sei X eine n-dimensionale Mannigfaltigkeit mit Rand und Atlas . Dann heißt
 A
 (cid:91)
@@ -1434,7 +1457,7 @@ A
 Rand von X.
 ∂X ist eine Mannigfaltigkeit der Dimension n 1.
 −
-Deﬁnition 28
+Definition 28
 Sei X eine n-dimensionale Mannigfaltigkeit mit Atlas (U ,ϕ )
 i i i∈I
 Für i,j I mit U U = heißt
@@ -1448,55 +1471,55 @@ i i j j i j
 Kartenwechsel oder Übergangsfunktion.
 30 2.2.DIFFERENZIERBAREMANNIGFALTIGKEITEN
 X
-Ui Uj
+U i U j
 ϕ ϕ
 i j
-Vi Vj
+V i V j
 Rn Rn
 Abbildung 2.4: Kartenwechsel
-2.2 Diﬀerenzierbare Mannigfaltigkeiten
-Deﬁnition 29
+2.2 Differenzierbare Mannigfaltigkeiten
+Definition 29
 Sei X eine n-dimensionale Mannigfaltigkeit mit Atlas (U ,ϕ ) .
 i i i∈I
-a) X heißt diﬀerenzierbare Mannigfaltigkeit der Klasse Ck, wenn jede Karten-
-wechselabbildung ϕ , i,j I k-mal stetig diﬀerenzierbar ist.
+a) X heißt differenzierbare Mannigfaltigkeit der Klasse Ck, wenn jede Karten-
+wechselabbildung ϕ , i,j I k-mal stetig differenzierbar ist.
 ij
 ∈
-b) X heißt diﬀerenzierbare Mannigfaltigkeit, wenn X eine diﬀerenzierbare Mannig-
+b) X heißt differenzierbare Mannigfaltigkeit, wenn X eine differenzierbare Mannig-
 faltigkeit der Klasse C∞ ist.
-Diﬀerenzierbare Mannigfaltigkeiten der Klasse C∞ werden auch glatt genannt.
-Deﬁnition 30
-Sei X eine diﬀerenzierbare Mannigfaltigkeit der Klasse Ck (k N ) mit Atlas
+Differenzierbare Mannigfaltigkeiten der Klasse C∞ werden auch glatt genannt.
+Definition 30
+Sei X eine differenzierbare Mannigfaltigkeit der Klasse Ck (k N ) mit Atlas
 ∈ ∪ {∞}
 = (U ,ϕ ) .
 i i i∈I
 A
 a) Eine Karte (U,ϕ) auf X heißt verträglich mit , wenn alle Kartenwechsel ϕ ϕ−1
 A ◦ i
-und ϕ ϕ−1 (i I mit U U = ) diﬀerenzierbar von Klasse Ck sind.
+und ϕ ϕ−1 (i I mit U U = ) differenzierbar von Klasse Ck sind.
 i i
 ◦ ∈ ∩ (cid:54) ∅
 b) Die Menge aller mit verträglichen Karten auf X bildet einen maximalen Atlas der
 A
 Klasse Ck. Er heißt Ck-Struktur auf X.
-Eine C∞-Struktur heißt auch diﬀerenzierbare Struktur auf X.
+Eine C∞-Struktur heißt auch differenzierbare Struktur auf X.
 Bemerkung 28
-Für n 4 gibt es auf Sn mehrere verschiedene diﬀerenzierbare Strukturen, die sogenannten
+Für n 4 gibt es auf Sn mehrere verschiedene differenzierbare Strukturen, die sogenannten
 ≥
 „exotische Sphären“.
-Deﬁnition 31
-Seien X,Y diﬀerenzierbare Mannigfaltigkeiten der Dimension n bzw. m, x X.
+Definition 31
+Seien X,Y differenzierbare Mannigfaltigkeiten der Dimension n bzw. m, x X.
 ∈
-a) Eine stetige Abbildung f : X Y heißt diﬀerenzierbar in x (von Klasse Ck), wenn
+a) Eine stetige Abbildung f : X Y heißt differenzierbar in x (von Klasse Ck), wenn
 →
 es Karten (U,ϕ) von X mit x U und (V,ψ) von Y mit f(U) V gibt, sodass
 ∈ ⊆
-ψ f ϕ−1 stetig diﬀerenzierbar von Klasse Ck in ϕ(x) ist.
+ψ f ϕ−1 stetig differenzierbar von Klasse Ck in ϕ(x) ist.
 ◦ ◦
-b) f heißt diﬀerenzierbar (von Klasse Ck), wenn f in jedem x X diﬀerenzierbar ist.
+b) f heißt differenzierbar (von Klasse Ck), wenn f in jedem x X differenzierbar ist.
 ∈
-c) f heißt Diﬀeomorphismus, wenn f diﬀerenzierbar von Klasse C∞ ist und es eine
-diﬀerenzierbare Abbildung g : Y X von Klasse C∞ gibt mit g f = id und
+c) f heißt Diffeomorphismus, wenn f differenzierbar von Klasse C∞ ist und es eine
+differenzierbare Abbildung g : Y X von Klasse C∞ gibt mit g f = id und
 X
 → ◦
 f g = id .
@@ -1504,47 +1527,48 @@ Y
 ◦
 31 2.2.DIFFERENZIERBAREMANNIGFALTIGKEITEN
 Bemerkung 29
-Die Bedingung in Deﬁnition 31.a hängt nicht von den gewählten Karten ab.
+Die Bedingung in Definition 31.a hängt nicht von den gewählten Karten ab.
 Beweis: Seien (U(cid:48),ϕ(cid:48)) und (V(cid:48),ψ(cid:48)) Karten von X bzw. Y um x bzw. f(x) mit f(U(cid:48)) V(cid:48).
 ⊆
 ψ(cid:48) f (ϕ(cid:48))−1
 ⇒ ◦ ◦
 = ψ(cid:48) (ψ−1 ψ) f (ϕ−1 ϕ) (ϕ(cid:48))−1
 ◦ ◦ ◦ ◦ ◦ ◦
-ist genau dann diﬀerenzierbar, wenn ψ f ϕ−1 diﬀerenzierbar ist.
+ist genau dann differenzierbar, wenn ψ f ϕ−1 differenzierbar ist.
 ◦ ◦
 Beispiel 23
-f : R R, x x3 istkeinDiﬀeomorphismus,aberHomöomorphismus,damitg(x) := √3 x
+f : R R, x x3 istkeinDiffeomorphismus,aberHomöomorphismus,damitg(x) := √3 x
 → (cid:55)→
 gilt: f g = idR, g f = idR
 ◦ ◦
 Bemerkung 30
 Sei X eine glatte Mannigfaltigkeit. Dann ist
-Diﬀeo(X) := f : X X f ist Diﬀeomorphismus
+Diffeo(X) := f : X X f ist Diffeomorphismus
 { → | }
 eine Untergruppe von Homöo(X).
-Deﬁnition 32
-S R3 heißt reguläre Fläche : s S Umgebung V(s) R3 U R2 oﬀen:
+Definition 32
+S R3 heißt reguläre Fläche : s S Umgebung V(s) R3 U R2 offen:
 ⊆ ⇔ ∀ ∈ ∃ ⊆ ∃ ⊆
-diﬀerenzierbare Abbildung F : U V S: Rg(J (u)) = 2 u U.
+differenzierbare Abbildung F : U V S: Rg(J (u)) = 2 u U.
 F
 ∃ → ∩ ∀ ∈
 F heißt (lokale) reguläre Parametrisierung von S.
 F(u,v) = (x(u,v),y(u,v),z(u,v))
 ∂x(p) ∂x(p)
 ∂u ∂v
-JF(u,v) = ∂∂uy(p) ∂∂yv(p)
+J F(u,v) =  ∂∂ uy (p) ∂ ∂y v(p)
 ∂z(p) ∂z(p)
 ∂u ∂v
 Beispiel 24
-1) Rotationsﬂächen: Sei r : R R eine diﬀerenzierbare Funktion.
+1) Rotationsflächen: Sei r : R R eine differenzierbare Funktion.
 >0
 →
 F : R2 R3 (u,v) (r(u)cos(u),r(v)sin(u),v)
 → (cid:55)→
- r(v)sinu r(cid:48)(v)cosu
+ r(cid:48)(v)cosu
+r(v)sinu
 −
-JF(u,v) =  r(v)cosu r(cid:48)(v)sinu
+J F(u,v) =  r(v)cosu r(cid:48)(v)sinu
 0 1
 hat Rang 2 für alle (u,v) R2.
 ∈
@@ -1556,8 +1580,8 @@ Es gilt: F(u,v) S2, denn
 ∈ R
 R2cos2(v)cos2(u)+R2cos2(v)sin2(u)+R2sin2(v)
 =R2(cos2(v)cos2(u)+cos2(v)sin2(u)+sin2(v))
-=R2(cid:0)cos2(v)(cos2(u)+sin2(u))+sin2(v)(cid:1)
-=R2(cid:0)cos2(v)+sin2(v)(cid:1)
+=R2(cid:0) cos2(v)(cos2(u)+sin2(u))+sin2(v)(cid:1)
+=R2(cid:0) cos2(v)+sin2(v)(cid:1)
 =R2
 32 2.2.DIFFERENZIERBAREMANNIGFALTIGKEITEN
 N
@@ -1590,33 +1614,33 @@ Die Jacobi-Matrix
  
 Rcosvsinu Rsinvcosu
 − −
-JF(u,v) =  Rcosvcosu Rsinvsinu
+J F(u,v) =  Rcosvcosu Rsinvsinu
 −
 0 Rcosv
 hat Rang 2 für cosv = 0. In N und S ist cosv = 0.
 (cid:54)
 Bemerkung 31
-Jede reguläre Fläche S R3 ist eine 2-dimensionale, diﬀerenzierbare Mannigfaltigkeit.
+Jede reguläre Fläche S R3 ist eine 2-dimensionale, differenzierbare Mannigfaltigkeit.
 ⊆
 Beweis:
-S R3 ist als reguläre Fläche eine 2-dimensionale Mannigfaltigkeit. Aus der Deﬁnition von
+S R3 ist als reguläre Fläche eine 2-dimensionale Mannigfaltigkeit. Aus der Definition von
 ⊆
 regulären Flächen folgt direkt, dass Karten (U ,F ) und (U R2,F : R2 R3) von S mit
 i i j j
 ⊆ →
-U U = existieren, wobei F und F nach Deﬁnition diﬀerenzierbare Abbildungen sind.
+U U = existieren, wobei F und F nach Definition differenzierbare Abbildungen sind.
 i j i j
 ∩ (cid:54) ∅
-z.Z.: F−1 F ist ein Diﬀeomorphismus.
+z.Z.: F−1 F ist ein Diffeomorphismus.
 j ◦ i
 S
 s
 F F
 i j
-Ui Uj
-Fj−1◦Fi
+U i U j
+F j−1◦Fi
 Abbildung 2.5: Reguläre Fläche S zum Beweis von Bemerkung 31
-Idee: Finde diﬀerenzierbare Funktion F(cid:103)−1 in Umgebung W von s, sodass F(cid:103)−1 = F−1.
+Idee: Finde differenzierbare Funktion F(cid:103)−1 in Umgebung W von s, sodass F(cid:103)−1 = F−1.
 j j |S∩W j
 Ausführung: Sei u U , v U mit F (u ) = s = F (v ).
 0 i 0 j i 0 j 0
@@ -1630,37 +1654,43 @@ det ∂u ∂v (v ) = 0
 ∂u ∂v
 und F (u,v) = (x(u,v),y(u,v),z(u,v)).
 j
-Deﬁniere F(cid:102)j : Uj R R3 durch
+Definiere F(cid:102)j : U R R3 durch
+j
 × →
 F(cid:102)j(u,v,t) := (x(u,v),y(u,v),z(u,v)+t)
-Oﬀensichtlich: F(cid:102)j|Uj×{0} = Fj
+Offensichtlich: F(cid:102)j = F
+|Uj×{0} j
 ∂x ∂x 0
 ∂u ∂v
-JF(cid:102)j = ∂∂uy ∂∂yv 0 ⇒ detJF(cid:102)j(v0,0) (cid:54)= 0
+J =  ∂∂ uy ∂ ∂y 0 detJ F(cid:102)j(v 0,0) (cid:54)= 0
+F(cid:102)j v ⇒
 ∂z ∂z 1
 ∂u ∂v
 AnalysisII
-====== Es gibt Umgebungen W von Fj von F(cid:102)j(v0,0) = Fj(v0) = s, sodass F(cid:102)j auf W eine
-diﬀeren⇒zierbar Inverse F−1 hat.
+====== Es gibt Umgebungen W von F von F(cid:102)j(v 0,0) = F j(v 0) = s, sodass F(cid:102)j auf W eine
+j
+differen⇒ zierbar Inverse F−1 hat.
 j
 34 2.2.DIFFERENZIERBAREMANNIGFALTIGKEITEN
 Weiter gilt:
-F(cid:102)j−1|W∩S = Fj−1|W∩S
+F(cid:102)j−1
+= F j−1
+|W∩S |W∩S
 F−1 F = F−1 F
-⇒ j ◦ i|Fi−1(W∩S) j ◦ i|Fi−1(W∩S)
-ist diﬀerenzierbar.
-Deﬁnition 33
+⇒ j ◦ i |F i−1(W∩S) j ◦ i |F i−1(W∩S)
+ist differenzierbar.
+Definition 33
 Sei G eine Mannigfaltigkeit und (G, ) eine Gruppe.
 ◦
 a) G heißt topologische Gruppe, wenn die Abbildungen : G G G und ι : G G
 ◦ × → →
-deﬁniert durch
+definiert durch
 g h := g h und ι(g) := g−1
 ◦ ·
 stetig sind.
-b) Ist G eine diﬀerenzierbare Mannigfaltigkeit, so heißt G Lie-Gruppe, wenn (G, ) und
+b) Ist G eine differenzierbare Mannigfaltigkeit, so heißt G Lie-Gruppe, wenn (G, ) und
 ◦
-(G,ι) diﬀerenzierbar sind.
+(G,ι) differenzierbar sind.
 Beispiel 25 (Lie-Gruppen)
 1) Alle endlichen Gruppen sind 0-dimensionale Lie-Gruppen.
 2) GL (R)
@@ -1670,17 +1700,17 @@ n
 4) (R , )
 >0
 ·
-5) (Rn,+), denn A B(i,j) = (cid:80)n a b ist nach allen Variablen diﬀerenzierbar
+5) (Rn,+), denn A B(i,j) = (cid:80)n a b ist nach allen Variablen differenzierbar
 · k=1 ik kj
 (A−1)(i,j) = det(Aij)
 detA
  
 a ... a
 i1 in
-Aij =  ... ... ...  ∈ R(n−1)×(n−1)
+A ij =   . . . ... . . .   ∈ R(n−1)×(n−1)
 a ... a
 n1 nn
-ist diﬀerenzierbar.
+ist differenzierbar.
 detA kann 0 werden, da:
 ij
 (cid:18) (cid:19)
@@ -1698,16 +1728,16 @@ g
 →
 h g h
 (cid:55)→ ·
-ein Diﬀeomorphismus.
+ein Diffeomorphismus.
 35 2.3.SIMPLIZIALKOMPLEX
 2.3 Simplizialkomplex
-Deﬁnition 34
+Definition 34
 Seien v ,...,v Rn Punkte.
 0 k
 ∈
 a) v ,...,v sind in allgemeiner Lage
 0 k
-esgibtkeinen(k 1)-dimensionalenaﬃnenUntervektorraum,derv ,...,v enthält
+esgibtkeinen(k 1)-dimensionalenaffinenUntervektorraum,derv ,...,v enthält
 0 k
 ⇔ −
 v v ,...,v v sind linear unabhängig.
@@ -1718,7 +1748,7 @@ b) conv(v ,...,v ) := (cid:80)k λ v (cid:12) λ 0,(cid:80)k λ = 1 heißt die k
 0 k i=0 i i (cid:12) i ≥ i=0 i
 v ,...,v .
 0 k
-Deﬁnition 35
+Definition 35
 a) Sei ∆n = conv(e ,...,e ) Rn+1 die konvexe Hülle der Standard-Basisvektoren
 0 n
 ⊆
@@ -1729,7 +1759,8 @@ b) FürPunktev ,...,v imRn inallgemeinerLageheißt∆(v ,...,v ) = conv(v ,...,v
 0 k 0 k 0 k
 ein k-Simplex in Rn.
 c) Ist ∆(v ,...,v ) ein k-Simplex und I = i ,...,i 0,...,k , so ist s :=
-0 k { 0 r } ⊆ { } i0,...,ir
+0 k 0 r i0,...,ir
+{ } ⊆ { }
 conv(v ,...,v ) ein r-Simplex und heißt Teilsimplex oder Seite von ∆.
 i0 ir
 (a) 0-Simplex ∆0
@@ -1738,15 +1769,15 @@ e
 1
 e
 1
-2 2 e2
+2 2 e 2
 e
 2
 1 1
-e0 e0 e3
-1 2 3 1 2 3 e0 e1
+e 0 e 0 e 3
+1 2 3 1 2 3 e 0 e 1
 (b) 1-Simplex ∆1 (c) 2-Simplex ∆2 (d) 3-Simplex ∆3
 Abbildung 2.6: Beispiele für k-Simplexe
-Deﬁnition 36
+Definition 36
 a) Eine endliche Menge K von Simplizes im Rn heißt (endlicher) Simplizialkomplex,
 wenn gilt:
 (i) Für ∆ K und S ∆ Teilsimplex ist S K.
@@ -1768,7 +1799,7 @@ P P
 (f) P ist kein Teilsimplex, da Eigen- (g) Simplizialkomplex
 schaft Punkt b.ii verletzt ist
 Abbildung 2.7: Beispiele für Simplizialkomplexe
-Deﬁnition 37
+Definition 37
 Seien K,L Simplizialkomplexe. Eine stetige Abbildung
 f : K L
 | | → | |
@@ -1776,7 +1807,7 @@ heißt simplizial, wenn für jedes ∆ K gilt:
 ∈
 a) f(∆) L
 ∈
-b) f : ∆ f(∆) ist eine aﬃne Abbildung.
+b) f : ∆ f(∆) ist eine affine Abbildung.
 ∆
 | →
 Beispiel 26 (Simpliziale Abbildungen)
@@ -1789,7 +1820,7 @@ b
 e
 1
 ϕ
-0 e2 0 b1
+0 e 2 0 b 1
 2) Folgende Abbildung ϕ : ∆n ∆n−1 ist simplizial:
 →
 ϕ
@@ -1804,7 +1835,7 @@ b b b b
 a
 b b b b b b b b
 Abbildung 2.8: Abbildung eines Torus auf eine Sphäre
-Deﬁnition 38
+Definition 38
 Sei K ein endlicher Simplizialkomplex. Für n 0 sei a (K) die Anzahl der n-Simplizes in
 n
 ≥
@@ -1824,14 +1855,14 @@ Beispiel 27
 −
 χ(∆3) = 4 6+4 1 = 1
 − −
-2) χ(Oktaeder-Oberﬂäche) = 6 12+8 = 2
+2) χ(Oktaeder-Oberfläche) = 6 12+8 = 2
 −
 χ(Rand des Tetraeders) = 2
 χ(Ikosaeder) = 12 30+20 = 2
 −
 3) χ(Würfel) = 8 12+6 = 2
 −
-χ(Würfel, unterteilt in Dreiecksﬂächen) = 8 (12+6)+(6 2) = 2
+χ(Würfel, unterteilt in Dreiecksflächen) = 8 (12+6)+(6 2) = 2
 − ·
 Bemerkung 33
 χ(∆n) = 1 für jedes n N
@@ -1840,23 +1871,23 @@ Bemerkung 33
 38 2.3.SIMPLIZIALKOMPLEX
 Beweis: ∆n ist die konvexe Hülle von (e ,...,e ) in Rn+1. Jede (k+1)-elementige Teilmenge
 0 n
-von e ,...,e deﬁniert ein k-Simplex.
+von e ,...,e definiert ein k-Simplex.
 0 n
-a{(∆n) = (cid:0)n+}1(cid:1), k = 0,...,n
-⇒ χk(∆n) = (cid:80)kn+1( 1)k(cid:0)n+1(cid:1)
+a{ (∆n) = (cid:0)n+} 1(cid:1) , k = 0,...,n
+⇒ χk (∆n) = (cid:80)k n+1 ( 1)k(cid:0)n+1(cid:1)
 ⇒ k=0 − k+1
 Binomischer
-f(x) = (x+1)n+1 Leh=rsatz (cid:80)n+1(cid:0)n+1(cid:1)xk
+f(x) = (x+1)n+1 Leh=rsatz (cid:80)n+1(cid:0)n+1(cid:1) xk
 k=0 k
-0 = (cid:80)n+1(cid:0)n+1(cid:1)( 1)k = χ(∆n) 1
+0 = (cid:80)n+1(cid:0)n+1(cid:1) ( 1)k = χ(∆n) 1
 ⇒ k=0 k − −
 χ(∆n) = 1 (cid:4)
 ⇒
-Deﬁnition 39
+Definition 39
 a) Ein 1D-Simplizialkomplex heißt Graph.
 b) Ein Graph, der homöomorph zu S1 ist, heißt Kreis.
 c) Ein zusammenhängender Graph heißt Baum, wenn er keinen Kreis enthält.
-(a) Dies wird häuﬁg auch als(b) PlanareEinbettungdesTe-
+(a) Dies wird häufig auch als(b) PlanareEinbettungdesTe-
 Multigraph bezeichnet. traeders
 (c) K (d) K
 5 3,3
@@ -1903,7 +1934,7 @@ k=0
 n-Simplex
 (cid:124) (cid:123)(cid:122) (cid:125)
 (1+(−1))n+1
-Deﬁnition 40
+Definition 40
 Sei X ein topologischer Raum, K ein Simplizialkomplex und
 h : K X
 | | →
@@ -1960,7 +1991,8 @@ und C (K) der R-Vektorraum mit Basis A (K), d. h.
 n n
  (cid:12) 
 (cid:12)
-Cn(K) =  (cid:88) cσ σ (cid:12)(cid:12) cσ R
+ (cid:88) (cid:12) R
+C n(K) = c σ σ (cid:12) c σ
 · (cid:12) ∈
  
 σ∈An(K) (cid:12)
@@ -1969,7 +2001,7 @@ Sei σ = ∆(x ,...,x ) A (K), sodass x < x < < x .
 ∈ ···
 Für i = 0,...,n sei ∂ σ := ∆(x ,...,xˆ,...,x ) die i-te Seite von σ und d = d σ :=
 i 0 i n σ n
-(cid:80) ( 1)i∂ σ C (K) und d : C (K) C (K) die dadurch deﬁnierte lineare
+(cid:80) ( 1)i∂ σ C (K) und d : C (K) C (K) die dadurch definierte lineare
 i=0 − i ∈ n−1 n n → n−1
 Abbildung.
 Dann gilt: d d = 0
@@ -2041,13 +2073,14 @@ j i i−1 j
 = 0
 weil jeder Summand aus der ersten Summe auch in der zweiten Summe vorkommt, aber mit
 umgekehrten Vorzeichen. (cid:4)
-Deﬁnition 41
+Definition 41
 Sei K ein Simplizialkomplex, Z := Kern(d ) C und B := Bild(d ) C .
 n n n n n+1 n
 ⊆ ⊆
 a) H = H (K,R) := Z /B heißt n-te Homologiegruppe von K.
 n n n n
-b) bn(K) := dimRHn heißt n-te Betti-Zahl von K.
+b) b n(K) := dimRH heißt n-te Betti-Zahl von K.
+n
 Bemerkung 38
 Nach Bemerkung 37 ist B Z , denn d (C) Kern(d ) für C C .
 n n n+1 n n+1
@@ -2101,7 +2134,8 @@ d−1
 = a + ( 1)kb +( 1)ddimZ dimB
 0 k d 0
 − − (cid:124) (cid:123)(cid:122) (cid:125)−
-k=1 =bd
+k=1 =b
+d
 d−1
 (cid:88)
 = b + ( 1)kb +( 1)db
@@ -2122,7 +2156,7 @@ gend ist, wenn sie zusammenhängend ist
 (b) BetrachtenSienunwieinBeispiel20.8denRaumX := (R 0 ) 0 ,0 versehen
 1 2
 \{ } ∪{ }
-mit der dort deﬁnierten Topologie. Ist X wegzusammenhängend?
+mit der dort definierten Topologie. Ist X wegzusammenhängend?
 3 Fundamentalgruppe und Überlagerungen
 3.1 Homotopie von Wegen
 γ γ
@@ -2136,7 +2170,7 @@ da man sie „zueinander ver- Hindernis nicht homotop.
 schieben“ kann.
 Abbildung 3.1: Beispiele für Wege γ und γ
 1 2
-Deﬁnition 42
+Definition 42
 Sei X ein topologischer Raum, a,b X, γ ,γ : I X Wege von a nach b, d. h. γ (0) =
 1 2 1
 ∈ →
@@ -2176,10 +2210,10 @@ nach b für jedes s I. (cid:4)
 ∈
 Bemerkung 41
 Durch Homotopie wird eine Äquivalenzrelation auf der Menge aller Wege in X von a nach b
-deﬁniert.
+definiert.
 Beweis:
 46 3.1.HOMOTOPIEVONWEGEN
-reﬂexiv: H(t,s) = γ(t) für alle (t,s) I I
+reflexiv: H(t,s) = γ(t) für alle (t,s) I I
 • ∈ ×
 symmetrisch: H(cid:48)(t,s) = H(t,1 s) für alle (t,s) I I
 • − ∈ ×
@@ -2228,7 +2262,7 @@ b a
 a
 (a) Kreis mit zwei Wegen (b) Torus mit drei Wegen
 Abbildung 3.3: Beispiele für (nicht)-Homotopie von Wegen
-Deﬁnition 43
+Definition 43
 Seien γ ,γ Wege in X mit γ (1) = γ (0). Dann ist
 1 2 1 2
 (cid:40)
@@ -2264,7 +2298,7 @@ Beweis: DasZusammensetzenvonWegenistwegenBemerkung 42bisaufHomotopieassoziativ.
 Verwende dazu
 
 1t falls 0 t < 1
-2 ≤ 2
+ 2 ≤ 2
 ϕ(t) = t 1 falls 1 t < 3
  − 4 2 ≤ 4
 2t 1 falls 3 t 1
@@ -2274,9 +2308,10 @@ Sei X ein topologischer Raum, a,b,c X, γ ,γ(cid:48) Wege von a nach b und γ ,
 ∈ 1 1 2 2
 nach c.
 Sind γ γ(cid:48) und γ γ(cid:48), so ist γ γ γ(cid:48) γ(cid:48).
-1 ∼ 1 2 ∼ 2 1∗ 2 ∼ 1∗ 2
+1 ∼ 1 2 ∼ 2 1 ∗ 2 ∼ 1∗ 2
 48 3.2.FUNDAMENTALGRUPPE
-γ1(cid:48) γ1 γ2
+γ 1(cid:48) γ 1 γ
+2
 a c
 b
 γ(cid:48)
@@ -2292,9 +2327,9 @@ H(t,s) := 1 ≤ ≤ 2 ∀ ∈
 H (2t 1,s) falls 1 t 1
 2 − 2 ≤ ≤
 eine Homotopie zwischen γ γ und γ(cid:48) γ(cid:48).
-1∗ 2 1∗ 2
+1 ∗ 2 1∗ 2
 Eine spezielle Homotopieäquivalenz sind sog. Deformationsretraktionen:
-Deﬁnition 44
+Definition 44
 Sei X ein topologischer Raum, A X, r : X A eine stetige Abbildung und ι = (id ) .
 X A
 ⊆ → |
@@ -2314,7 +2349,7 @@ r : S1 R S1 0 = S1
 × → ×{ }
 mit
 r(x,y) := (x,0)
-eine Abbildung. r ist eine Retraktion, da r|S1 ∼= idS1.
+eine Abbildung. r ist eine Retraktion, da r |S1 ∼= id S1.
 ι r : S1 R S1 R
 ◦ × → ×
 (x,y) (x,0)
@@ -2325,7 +2360,7 @@ H : (S1 R) I S1 R
 (cid:55)→
 3.2 Fundamentalgruppe
 Für einen Weg γ sei [γ] seine Homotopieklasse.
-Deﬁnition 45
+Definition 45
 Sei X ein topologischer Raum und x X. Sei außerdem
 ∈
 π (X,x) := [γ] γ ist Weg in X mit γ(0) = γ(1) = x
@@ -2339,7 +2374,7 @@ mentalgruppe von X im Basispunkt x.
 Bemerkung 45
 Im R2 gibt es nur eine Homotopieklasse.
 Beweis: (Fundamentalgruppe ist eine Gruppe)
-a) Abgeschlossenheit folgt direkt aus der Deﬁnition von
+a) Abgeschlossenheit folgt direkt aus der Definition von
 G
 ∗
 b) Assoziativität folgt aus Bemerkung 43
@@ -2350,9 +2385,9 @@ d) Inverses Element [γ]−1 = [γ] = [γ(1 t)], denn γ γ γ γ γ
 0
 − ∗ ∼ ∼ ∗
 Beispiel 32
-1) S1 = z C z = 1 = (cid:8)(cosϕ,sinϕ) R2 (cid:12)(cid:12) 0 ϕ 2π(cid:9)
+1) S1 = z C z = 1 = (cid:8) (cosϕ,sinϕ) R2 (cid:12) (cid:12) 0 ϕ 2π(cid:9)
 { ∈ | | | } ∈ ≤ ≤
-π1(S1,1) = (cid:8)[γk] (cid:12)(cid:12) k Z(cid:9) ∼= Z. Dabei ist γ(t) = e2πit = cos(2πt)+isin(2πt) und
+π 1(S1,1) = (cid:8) [γk] (cid:12) (cid:12) k Z(cid:9) ∼= Z. Dabei ist γ(t) = e2πit = cos(2πt)+isin(2πt) und
 ∈
 γk := γ γ
 (cid:124) ∗·(cid:123)·(cid:122)·∗ (cid:125)
@@ -2379,7 +2414,7 @@ Abbildung 3.6: Sternförmiges Gebiet
 1 0
 { } { }
 phischen Projektion kann von S2 auf den R2 abgebildet werden.
-Dieses Argument funktioniert nicht mehr bei ﬂächenfüllenden Wegen, d. h. wenn
+Dieses Argument funktioniert nicht mehr bei flächenfüllenden Wegen, d. h. wenn
 γ : I S2 surjektiv ist.
 →
 Bemerkung 46
@@ -2409,7 +2444,7 @@ Beweis:
 = α([γ ]) α([γ ])
 1 2
 ∗
-Deﬁnition 46
+Definition 46
 Ein wegzusammenhängender topologischer Raum X heißt einfach zusammenhängend,
 wenn π (X,x) = e für ein x X.
 1
@@ -2430,7 +2465,7 @@ Dann ist (g f) = g f : π (X,x) π (Z,z)
 ∗ ∗ ∗ 1 1
 ◦ ◦ →
 Beweis:
-a) f ist wohldeﬁniert: Seien γ ,γ homotope Wege von x. z.Z.: f γ f γ : Nach
+a) f ist wohldefiniert: Seien γ ,γ homotope Wege von x. z.Z.: f γ f γ : Nach
 ∗ 1 2 1 2
 ◦ ∼ ◦
 Voraussetzung gibt es stetige Abbildungen H : I I X mit
@@ -2453,9 +2488,9 @@ b) (g f) ([γ]) = [(g f) γ] = [g (f γ)] = g ([f γ]) = g (f ([γ])) = (g f )([
 ∗ ∗ ∗ ∗ ∗ ∗
 ◦ ◦ ◦ ◦ ◦ ◦ ◦
 Beispiel 33
-1) f : S1 (cid:44) R2 ist injektiv, aber f∗ : π1(S1,1) ∼= Z π1(R2,1) = e ist nicht injektiv.
+1) f : S1 (cid:44) R2 ist injektiv, aber f ∗ : π 1(S1,1) ∼= Z π 1(R2,1) = e ist nicht injektiv.
 → → { }
-2) f : R S1,t (cos2πt,sin2πt)istsurjektiv,aberf∗ : π1(R,0) = e π1(S1,1) ∼=
+2) f : R S1,t (cos2πt,sin2πt)istsurjektiv,aberf ∗ : π 1(R,0) = e π 1(S1,1) ∼=
 → (cid:55)→ { } →
 Z ist nicht surjektiv.
 51 3.2.FUNDAMENTALGRUPPE
@@ -2471,8 +2506,9 @@ Beweis: Sei g : Y X die Umkehrabbildung, d. h. g ist stetig und f g = id , g f =
 Y X
 → ◦ ◦
 f g = (f g) = (id ) = id und g f = id .
-⇒ ∗◦ ∗ ◦ ∗ Y ∗ π1(Y,f(X) ∗◦ ∗ π1(X,x)
-Deﬁnition 47
+∗ ∗ ∗ Y ∗ π1(Y,f(X) ∗ ∗ π1(X,x)
+⇒ ◦ ◦ ◦
+Definition 47
 Seien X,Y topologische Räume, x X,y Y,f,g : X Y stetig mit f(x ) = y = g(x ).
 0 0 0 0 0
 ∈ ∈ →
@@ -2517,12 +2553,12 @@ f ist Isomorphismus. Konkret: f : R2 0 , g : 0 R2
 f g = id , g f : R2 R2, x 0 für alle x.
 {0}
 ⇒ ◦ ◦ → (cid:55)→
-g f idR2 mit Homotopie: H : R2 I R2,H(x,s) = (1 s)x (stetig!)
+g f id R2 mit Homotopie: H : R2 I R2,H(x,s) = (1 s)x (stetig!)
 ◦ ∼ × → −
-H(x,0) = x = idR2(x), H(x,1) = 0, H(0,s) = 0 s I.
+H(x,0) = x = id R2(x), H(x,1) = 0, H(0,s) = 0 s I.
 ⇒ ∀ ∈
 Satz 3.1 (Satz von Seifert und van Kampen „light“)
-Sei X ein topologischer Raum, U,V X oﬀen mit U V = X und U V wegzusam-
+Sei X ein topologischer Raum, U,V X offen mit U V = X und U V wegzusam-
 ⊆ ∪ ∩
 menhängend.
 Dann wird π (X,x) für x U V erzeugt von geschlossenen Wegen um x, die ganz in
@@ -2530,7 +2566,7 @@ Dann wird π (X,x) für x U V erzeugt von geschlossenen Wegen um x, die ganz in
 ∈ ∩
 U oder ganz in V verlaufen.
 52 3.3.ÜBERLAGERUNGEN
-Beweis: Sei γ : I X ein geschlossener Weg um x. Überdecke I mit endlich vielen oﬀenen
+Beweis: Sei γ : I X ein geschlossener Weg um x. Überdecke I mit endlich vielen offenen
 →
 Intervallen I ,I ,...,I , die ganz in γ−1(U) oder ganz in γ−1(V) liegen.
 1 2 n
@@ -2542,7 +2578,8 @@ i i i+1 i i 0 i
 ∈ ∩ ∈ ∩ ∩ ⇒
 homotop zu
 γ σ σ γ σ σ γ mit γ := γ
-(cid:124)1(cid:123)∗(cid:122) (cid:125)1∗(cid:124)1∗(cid:123)(cid:122)2∗ (cid:125)2∗···∗ n−1∗ 2 i |Ii
+(cid:124)1 (cid:125)1 ∗(cid:124)1 ∗(cid:123)(cid:122)2 (cid:125)2 n−1 2 i |Ii
+(cid:123)∗(cid:122) ∗ ∗···∗ ∗
 inU inV
 a b
 x
@@ -2563,17 +2600,18 @@ V
 Abbildung 3.9: a b = b a a b a b e
 ∗ ∗ ⇔ ∗ ∗ ∗ ∼
 3.3 Überlagerungen
-Deﬁnition 48
+Definition 48
 Es seien X,Y zusammenhängende topologische Räume und p : Y X eine stetige Abbil-
 →
 dung.
-p heißt Überlagerung, wenn jedes x X eine oﬀene Umgebung U = U(x) X besitzt,
+p heißt Überlagerung, wenn jedes x X eine offene Umgebung U = U(x) X besitzt,
 ∈ ⊆
-sodass p−1(U) disjunkte Vereinigung von oﬀenen Teilmengen V Y ist (j I) und
+sodass p−1(U) disjunkte Vereinigung von offenen Teilmengen V Y ist (j I) und
 j
 ⊆ ∈
 p : V U ein Homöomorphismus ist.
-|Vj j →
+|Vj j
+→
 I heißt Grad der Überlagerung p und man schreibt:
 | |
 degp := I
@@ -2611,12 +2649,14 @@ Abbildung 3.11: R2 T2 = R2/Z2
 →
 Bemerkung 50
 Überlagerungen sind surjektiv.
-Beweis: Sei p : Y X eine Überlagerung und x X beliebig. Dann existiert eine oﬀene
-Umgebung U(x)→ X und oﬀene Teilmengen V ∈X mit p−1(U) = (cid:83)˙ V und p : V U
-⊆ j ⊆ j |Vj j →
+Beweis: Sei p : Y X eine Überlagerung und x X beliebig. Dann existiert eine offene
+Umgebung U(x)→ X und offene Teilmengen V ∈ X mit p−1(U) = (cid:83)˙ V und p : V U
+j j |Vj j
+⊆ ⊆ →
 ist Homöomorphismus.
 D. h. es existiert ein y V , so dass p (y) = x. Da x X beliebig war und ein y Y
-∈ j |Vj ∈ ∈
+j |Vj
+∈ ∈ ∈
 existiert, mit p(y) = x, ist p surjektiv. (cid:4)
 54 3.3.ÜBERLAGERUNGEN
 z2
@@ -2628,55 +2668,56 @@ z2
 1
 Abbildung 3.12: t (cos4πt,sin4πt)
 (cid:55)→
-Deﬁnition 49
+Definition 49
 Seien (X,T ),(Y,T ) topologische Räume und f : X Y eine Abbildung.
 X Y
 →
-f heißt oﬀen : U T : f(U) T .
+f heißt offen : U T : f(U) T .
 X Y
 ⇔ ∀ ∈ ∈
-Beispiel 37 (Oﬀene und stetige Abbildungen)
+Beispiel 37 (Offene und stetige Abbildungen)
 Sei X ein topologischer Raum und seien f : R R mit i 1,2,3 und g : R S1 =
 i
 → ∈ { } →
 z C z = 1 Abbildungen.
 { ∈ | (cid:107) (cid:107) }
-1) f1 := idR ist eine oﬀene und stetige Abbildung.
-2) g(x) := e2πix ist eine oﬀene, aber keine stetige Abbildung (vgl. Abbildung 1.5).
-3) f (x) := 42 ist eine stetige, aber keine oﬀene Abbildung.
+1) f := idR ist eine offene und stetige Abbildung.
+1
+2) g(x) := e2πix ist eine offene, aber keine stetige Abbildung (vgl. Abbildung 1.5).
+3) f (x) := 42 ist eine stetige, aber keine offene Abbildung.
 2
 (cid:40)
 0 falls x Q
 4) f (x) := ∈
 3 42 falls x R Q
 ∈ \
-ist weder stetig noch oﬀen.
+ist weder stetig noch offen.
 Bemerkung 51
-Überlagerungen sind oﬀene Abbildungen.
-Beweis: Sei y V und x p(V), sodass x = p(y) gilt. Sei weiter U = U eine oﬀene Umgebung
+Überlagerungen sind offene Abbildungen.
+Beweis: Sei y V und x p(V), sodass x = p(y) gilt. Sei weiter U = U eine offene Umgebung
 x
 ∈ ∈
-von x wie in Deﬁnition 48 und V die Komponente von p−1(U), die y enthält.
+von x wie in Definition 48 und V die Komponente von p−1(U), die y enthält.
 j
-Dann ist V V oﬀene Umgebung von y.
+Dann ist V V offene Umgebung von y.
 j
 ∩
-p(V V ) ist oﬀen in p(V ), also auch oﬀen in X. Außerdem ist p(y) = x p(V V ) und
+p(V V ) ist offen in p(V ), also auch offen in X. Außerdem ist p(y) = x p(V V ) und
 j j j
 ⇒ ∩ ∈ ∩
 p(V V ) p(V).
 j
 ∩ ⊆
-p(V) ist oﬀen.
+p(V) ist offen.
 ⇒
-Deﬁnition 50
+Definition 50
 Sei X ein topologischer Raum und M X.
 ⊆
 M heißt diskret in X, wenn M in X keinen Häufungspunkt hat.
 Bemerkung 52
 Sei p : Y X Überlagerung, x X.
 → ∈
-a) X hausdorﬀsch Y hausdorﬀsch
+a) X hausdorffsch Y hausdorffsch
 ⇒
 b) p−1(x) ist diskret in Y für jedes x X.
 ∈
@@ -2687,14 +2728,16 @@ a) Seien y ,y Y.
 1. Fall: p(y ) = p(y ) = x.
 1 2
 55 3.3.ÜBERLAGERUNGEN
-Sei U Umgebung von x wie in Deﬁnition 48, V bzw. V die Komponente von p−1(U),
+Sei U Umgebung von x wie in Definition 48, V bzw. V die Komponente von p−1(U),
 j1 j2
 die y bzw. y enthält.
 1 2
 Dann ist V = V , weil beide ein Element aus p−1(x) enthalten.
-j1 (cid:54) j2
+j1 j2
+(cid:54)
 V V = nach Voraussetzung.
-⇒ j1 ∩ j2 ∅
+j1 j2
+⇒ ∩ ∅
 2. Fall: p(y ) = p(y ).
 1 2
 (cid:54)
@@ -2708,12 +2751,13 @@ b) Sei x X beliebig, aber fest.
 Zu zeigen: y p−1(x) : V T mit y V , sodass gilt:i = j V V = .
 i i Y i i i j
 ∀ ∈ ∃ ∈ ∈ (cid:54) ⇒ ∩ ∅
-Die V existieren wegen der Deﬁnition einer Überlagerung: p heißt Überlagerung
+Die V existieren wegen der Definition einer Überlagerung: p heißt Überlagerung
 i
 : x X U = U(x) T : p−1(U) = (cid:83)˙ V und p ist Homöomorphismus.
 ⇔ ∀ ∈ ∃ ∈ X Vi∈TY i |Vi
 (p )−1(x) = y
-⇒ |Vi { i}
+|Vi i
+⇒ { }
 Alle y liegen diskret in Y, da Häufungspunkte unendlich viele Elemente in jeder
 i
 ⇒
@@ -2727,15 +2771,15 @@ x ,x X : p−1(x ) = p−1(x )
 Hinweis: p−1(x ) = ist erlaubt!
 1
 | | ∞
-Beweis: Sei U Umgebung von x wie in Deﬁnition 48, x U. Dann enthält jedes V mit j I
+Beweis: Sei U Umgebung von x wie in Definition 48, x U. Dann enthält jedes V mit j I
 1 j
 ∈ ∈
 genau ein Element von p−1(x).
 p−1(x) ist konstant für x U
 ⇒ | | ∈
-=X==zh=gd. p−1(x) ist konstant für x X.
+=X ==zh =gd. p−1(x) ist konstant für x X.
 ⇒ | | ∈
-Deﬁnition 51
+Definition 51
 Es seien X,Y,Z topologische Räume, p : Y X eine Überlagerung und f : Z X stetig.
 → →
 Eine stetige Abbildung f˜: Z Y heißt Liftung von f, wenn p f˜= f ist.
@@ -2755,7 +2799,7 @@ z Z : f (z ) = f (z ) f = f
 Beweis: Sei T = z Z f (z) = f (z) .
 0 1
 { ∈ | }
-Z. z.: T ist oﬀen und Z T ist auch oﬀen.
+Z. z.: T ist offen und Z T ist auch offen.
 \
 56 3.3.ÜBERLAGERUNGEN
 6
@@ -2770,23 +2814,23 @@ T Liften R2/Z2
 −−−→
 Abbildung 3.13: Beim Liften eines Weges bleiben geschlossene Wege im allgemeinen nicht ge-
 schlossen
-Sei z T,x = f(z),U Umgebung von x wie in Deﬁnition 48, V die Komponente von p−1(U),
+Sei z T,x = f(z),U Umgebung von x wie in Definition 48, V die Komponente von p−1(U),
 ∈
 die y := f (z) = f (z) enthält.
 0 1
 Sei q : U V die Umkehrabbildung zu p .
 V
 → |
-Sei W := f−1(U) f−1(V) f−1(V). W ist oﬀene Umgebung in Z von z.
+Sei W := f−1(U) f−1(V) f−1(V). W ist offene Umgebung in Z von z.
 ∩ 0 ∩ 1
 Behauptung: W T
 ⊆
 Denn für w W ist q(f(w)) = q((p f ))(w) = ((q p) f )(w) = f (w) = q(f(w)) = f (w)
 0 0 0 1
 ∈ ◦ ◦ ◦
-T ist oﬀen.
+T ist offen.
 ⇒
-Analog: Z T ist oﬀen.
+Analog: Z T ist offen.
 \
 Satz 3.2
 Sei p : Y X Überlagerung, γ : I X ein Weg, y Y mit p(y) = γ(0) =: x.
@@ -2794,10 +2838,11 @@ Sei p : Y X Überlagerung, γ : I X ein Weg, y Y mit p(y) = γ(0) =: x.
 Dann gibt es genau einen Weg γ˜ : I Y mit γ˜(0) = y und p γ˜ = γ.
 → ◦
 p : Y X Überlagerung, X,Y wegzusammenhängend. p stetig und surjektiv, zu x X
-Umgeb→ung U, so dass p−1(U) = (cid:83)V ∈ ∃
+Umgeb→ ung U, so dass p−1(U) = (cid:83) V ∈ ∃
 j
 p : V U Homöomorphismus.
-|Vj j →
+|Vj j
+→
 Bemerkung 55
 Wege in X lassen sich zu Wegen in Y liften.
 Zu jedem y p−1(γ(0)) gibt es genau einen Lift von γ.
@@ -2835,7 +2880,7 @@ s
 Da p−1(b) diskrete Teilmenge von Y ist
 b˜ = H˜(1,s) = H˜(1,0) s I
 s
-⇒ b˜ = b˜ und H˜ ist Hom∀oto∈pie zwischen γ˜ und γ˜. (cid:4)
+⇒ b˜ = b˜ und H˜ ist Hom∀ oto∈ pie zwischen γ˜ und γ˜. (cid:4)
 0 1 0 1
 ⇒
 Folgerung 3.4
@@ -2849,11 +2894,13 @@ b) [π (X,x ) : p (π (Y,y ))] = deg(p)
 1 0 ∗ 1 0
 Beweis:
 a) Sei γ˜ ein Weg in Y um y und p ([γ˜]) = e, also p γ˜ γ
-0 ∗ ◦ ∼ x0
+0 ∗ x0
+◦ ∼
 Nach Proposition 3.3 ist dann γ˜ homotop zum Lift des konstanten Wegs γ mit
 x0
 Anfangspunkt y , also zu γ [γ˜] = e
-0 y0 ⇒
+0 y0
+⇒
 b) Sei d = degp und p−1(x ) = y ,y ,...,y . Für einen geschlossenen Weg γ in X
 0 0 1 d−1
 { }
@@ -2870,7 +2917,7 @@ Für geschlossene Wege γ ,γ um x gilt:
 0 1 1 0
 ⇔ ∗ ∈
 [γ γ−1] p (π (Y,y ))
-⇔ 0∗ 1 ∈ ∗ 1 0
+⇔ 0 ∗ 1 ∈ ∗ 1 0
 [γ ] und [γ ]liegen in der selben Nebenklasse bzgl. p (π (Y,y ))
 0 1 ∗ 1 0
 ⇔
@@ -2890,9 +2937,9 @@ Sei p : Y X Überlagerung und X einfach zusammenhängend.
 Dann ist p ein Homöomorphismus.
 Beweis: Wegen Bemerkung 55.a ist auch Y einfach zusammenhängend und wegen Bemer-
 kung 55.b ist deg(p) = 1, p ist also bijektiv.
-Nach Bemerkung 51 ist p oﬀen p−1 ist stetig. p ist Homöomorphismus. (cid:4)
+Nach Bemerkung 51 ist p offen p−1 ist stetig. p ist Homöomorphismus. (cid:4)
 ⇒ ⇒
-Deﬁnition 52
+Definition 52
 Eine Überlagerung p : X˜ X heißt universell, wenn X˜ einfach zusammenhängend ist.
 →
 Beispiel 38 (Universelle Überlagerungen)
@@ -2921,15 +2968,15 @@ Setze p˜(z) = δ (1).
 z
 Da X˜ einfach zusammenhängend ist, hängt p˜(z) nicht vom gewählten Weg γ ab.
 z
-Oﬀensichtlich ist q(p˜(z)) = p(z).
+Offensichtlich ist q(p˜(z)) = p(z).
 Zu zeigen: p˜ist stetig in z X˜:
 ∈
-Sei W Y oﬀene Umgebung von p˜(z).
+Sei W Y offene Umgebung von p˜(z).
 ⊆
-q oﬀen
-==== q(W) ist oﬀene Umgebung von p(z) d(p˜(z)).
+q offen
+==== q(W) ist offene Umgebung von p(z) d(p˜(z)).
 ⇒ ·
-Sei U q(W) oﬀen wie in Deﬁnition 48 und V q−1(U) die Komponente, die p˜(z) enthält.
+Sei U q(W) offen wie in Definition 48 und V q−1(U) die Komponente, die p˜(z) enthält.
 ⊆ ⊆
 O. B. d. A. sei V W.
 ⊆
@@ -2940,7 +2987,8 @@ z 0
 ⇒ ∗
 p˜(u) V
 ⇒ ∈
-Z p−˜1(W)
+p−˜1(W)
+Z
 ⇒ ⊆
 p˜ist stetig
 ⇒
@@ -2965,14 +3013,16 @@ p : X˜ X mit (g f)(x˜) = x˜.
 0 0
 → ◦
 Da auch id diese Eigenschaft hat, folgt mit Bemerkung 53: g f = id .
-x˜ ◦ X˜
+x˜ X˜
+◦
 Analog gilt f g = id . (cid:4)
-◦ Y˜
+Y˜
+◦
 Die Frage, wann es eine universelle Überlagerung gibt, beantwortet der folgende Satz:
-Deﬁnition 53
+Definition 53
 Sei (X,T) ein topologischer Raum und x X.
 ∈
-U TheißteineUmgebungsbasisvonx,wennjedeoﬀeneUmgebungvonxeineTeilmenge
+U TheißteineUmgebungsbasisvonx,wennjedeoffeneUmgebungvonxeineTeilmenge
 ⊆
 von U enthält.
 Satz 3.7
@@ -2983,12 +3033,13 @@ Beweis: Seix X undX˜ := (x,[γ]) x X,γ Weg von x nach x undp : X˜ X,(x,[γ])
 0 o
 ∈ { | ∈ } → (cid:55)→
 x.
-Die Topologie auf X˜ ist folgende: Deﬁniere eine Umgebungsbasis von (x,[γ]) wie folgt: Es
+Die Topologie auf X˜ ist folgende: Definiere eine Umgebungsbasis von (x,[γ]) wie folgt: Es
 sei U eine einfach zusammenhängende Umgebung von x und
 U˜ = U˜(x,[γ]) := (y,[γ α]) y U,α Weg in U von x nach y
 { ∗ | ∈ }
 p ist Überlagerung: p : U˜ U bijektiv. p ist stetig und damit p ein Homöomorphismus.
-|U˜ → |U˜
+|U˜ |U˜
+→
 Sind γ ,γ Wege von x nach x und γ γ , so ist U˜(x,[γ ]) U˜(x,[γ ]) = , denn: Ist
 1 2 0 1 2 1 2
 ∼ ∩ ∅
@@ -3009,7 +3060,7 @@ Dann ist der Lift von γ nach x˜ mit Anfangspunkt x˜ ein Weg von x˜ nach (x ,
 0 0 0
 spruch.
 60 3.3.ÜBERLAGERUNGEN
-Deﬁnition 54
+Definition 54
 Es sei p : Y X eine Überlagerung und f : Y Y ein Homöomorphismus.
 → →
 a) f heißt Decktransformation von p : p f = p.
@@ -3047,11 +3098,11 @@ Fix(f) = y Y f(y) = y
 { ∈ | }
 ist abgeschlossen als Urbild der Diagonale ∆ Y Y unter der stetigen Abbildung
 ⊆ ×
-y (f(y),y). Außerdem ist Fix(f) oﬀen, denn ist y Fix(f), so sei U eine Umgebung
+y (f(y),y). Außerdem ist Fix(f) offen, denn ist y Fix(f), so sei U eine Umgebung
 (cid:55)→ ∈
-von p(y) X wie in Deﬁnition 48 und U p−1(U) die Komponente, die y enthält;
+von p(y) X wie in Definition 48 und U p−1(U) die Komponente, die y enthält;
 ∈ ⊆
-also p : V U ein Homöomorphismus. Dann ist W := f−1(V) V oﬀene Umgebung
+also p : V U ein Homöomorphismus. Dann ist W := f−1(V) V offene Umgebung
 → ∩
 von y.
 Für z W ist f(z) V und p(f(z)) = p(z). Da p injektiv auf V ist, folgt f(z) = z,
@@ -3098,7 +3149,7 @@ Beweis: Wählex˜ p−1(x ).Esseiρ : Deck(x˜/x) π (X,x )dieAbbildung,dief auf
 ∈ →
 abbildet, wobei γ ein Weg von x˜ nach f(x˜) sei. Da x˜ einfach zusammenhängend ist, ist
 f 0 0
-γ bis auf Homotopie eindeutig bestimmt und damit auch ρ wohldeﬁniert.
+γ bis auf Homotopie eindeutig bestimmt und damit auch ρ wohldefiniert.
 f
 ρ ist Gruppenhomomorphismus: Seien f,g Deck(X˜/X) γ = γ g(γ )
 g◦f g f
@@ -3110,7 +3161,8 @@ g◦f g f
 =p
 Satz 3.2 Bem. 57.c
 ρ ist injektiv: ρ(f) = e p(γ ) γ ==== γ γ f(x ) = x˜ ====== f =
-• ⇒ f ∼ x0 ⇒ f ∼ x˜0 ⇒ 0 0 ⇒
+f x0 f x˜0 0 0
+• ⇒ ∼ ⇒ ∼ ⇒ ⇒
 id .
 x˜
 ρ ist surjektiv: Sei [γ] π (X,x ), γ˜ Lift von γ nach x˜ mit Anfangspunkt x˜. Der
@@ -3128,7 +3180,7 @@ Decktransformation und damit p eine reguläre Überlagerung.
 Da p reguläre Überlagerung ist, gibt es ein f Deck(X˜/X) mit f(x˜) = x˜.
 0 1
 ∈
-Aus der Deﬁnition von ρ folgt: ρ(f) = p(γ ) = γ
+Aus der Definition von ρ folgt: ρ(f) = p(γ ) = γ
 f
 (cid:4)
 Beispiel 40 (Bestimmung von π (S1))
@@ -3149,13 +3201,13 @@ n
 ∈
 g = f . Damit folgt:
 n
-Deck(R/S1) = fn n Z ∼= Z
+Deck(R/S1) = f n n Z ∼= Z
 { | ∈ }
 Nach Satz 3.8 also π (S1) = Deck(R/S1) = Z
 1 ∼ ∼
 62 3.4.GRUPPENOPERATIONEN
 3.4 Gruppenoperationen
-Deﬁnition 55
+Definition 55
 Sei (G, ) eine Gruppe und X eine Menge.
 ·
 Eine Gruppenoperation von G auf X ist eine Abbildung : G X X für die gilt:
@@ -3173,16 +3225,16 @@ Beispiel 41
 3) G operiert auf X = G durch g h := g h g−1, denn
 ◦ · ·
 i) 1 h = 1 h 1−1 = h
-G◦ G· · G
+G ◦ G · · G
 ii) (g g ) h = (g g ) h (g g )−1
 1 2 1 2 2
 · ◦ · · · ·
 = g (g h g−1) g−1
-1· 2· · 2 · 1
+1 · 2 · · 2 · 1
 = g (g h)
 1 2
 ◦ ◦
-Deﬁnition 56
+Definition 56
 Sei G eine Gruppe, X ein topologischer Raum und : G X X eine Gruppenoperation.
 ◦ × →
 a) G operiert durch Homöomorphismen, wenn für jedes g G die Abbildung
@@ -3212,7 +3264,8 @@ g−1
 ◦
 = g−1 (g x)
 ◦ ◦
-Def.=55(.gb−1 g) x
+Def. =55 (. gb−1
+g) x
 · ◦
 = 1 x
 G
@@ -3233,19 +3286,20 @@ Homöomorphismus den Gruppenhomomorphismen G Homöo(X)
 Beweis:
 Sei : G X X eine Gruppenoperation von G auf X. Dann sei (cid:37) : G Perm(X)
 ◦ × → →
-deﬁniert durch (cid:37)(g)(X) = g x g G,x X, also (cid:37)(g) = m .
+definiert durch (cid:37)(g)(X) = g x g G,x X, also (cid:37)(g) = m .
 g
 · ∀ ∈ ∈
 (cid:37) ist Homomorphismus: (cid:37)(g g ) = m = m m = (cid:37)(g ) (cid:37)(g ), denn für x X :
-1 · 2 g1·g2 g1 ◦ g2 1 ◦ 2 ∈
+1 2 g1·g2 g1 g2 1 2
+· ◦ ◦ ∈
 (cid:37)(g g )(x) = (g g ) x = g (g x) = (cid:37)(g )((cid:37)(g )(x)) = ((cid:37)(g ) (cid:37)(g ))(x)
 1 2 1 2 1 2 1 2 1 2
 · · ◦ ◦ ◦ ◦
-Umgekehrt: Sei (cid:37) : G Perm(X) Gruppenhomomorphismus. Deﬁniere : G X X
+Umgekehrt: Sei (cid:37) : G Perm(X) Gruppenhomomorphismus. Definiere : G X X
 → ◦ × →
 durch g x = (cid:37)(g)(x).
 ◦
-z. z. Deﬁnition 55.b:
+z. z. Definition 55.b:
 g (g x) = (cid:37)(g )(g x)
 1 2 1 2
 ◦ ◦ ◦
@@ -3261,7 +3315,7 @@ g (g x) = (cid:37)(g )(g x)
 = (g g ) x
 1 2
 · ◦
-z. z. Deﬁnition 55.a: 1 x = (cid:37)(1 )(x) = id (x) = x, weil (cid:37) ein Homomorphismus ist.
+z. z. Definition 55.a: 1 x = (cid:37)(1 )(x) = id (x) = x, weil (cid:37) ein Homomorphismus ist.
 G G X
 ·
 Beispiel 43
@@ -3274,7 +3328,7 @@ Dann operiert π (X,x ) auf X˜ durch Homöomorphismen wie folgt:
 1 0
 Für [γ] π (X,x ) und x˜ X˜ sei [γ] x˜ = γ˜(cid:37)(1) wobei γ˜ ein Weg von x˜ nach x˜ in X˜
 1 0 0
-sei, (cid:37) :=∈p(δ˜) = p δ. ∈ ◦ ∗
+sei, (cid:37) :=∈ p(δ˜) = p δ. ∈ ◦ ∗
 ◦
 (cid:93)
 Also: δ ist ein Weg in X von x nach x = p(x˜) und γ δ die Liftung von γ δ mit
@@ -3284,7 +3338,7 @@ Anfangspunkt x˜.
 0
 [γ] x˜ hängt nicht von der Wahl von γ˜ ab; ist γ˜(cid:48) ein anderer Weg von x˜ nach x˜, so sind δ˜
 0
-und· δ˜(cid:48) homotop, also auch γ(cid:93)δ und γ(cid:93)δ(cid:48) homotop.
+und· δ˜(cid:48) homotop, also auch γ(cid:93) δ und γ(cid:93) δ(cid:48) homotop.
 ∗ ∗
 Gruppenoperation, denn:
 i) [e] x˜ = e(cid:103)δ = x˜
@@ -3292,7 +3346,8 @@ i) [e] x˜ = e(cid:103)δ = x˜
 (cid:94)
 ii) γ γ δ(1) = [γ γ ] x˜ = ([γ ] [γ ]) x˜
 1 2 1 2 1 2
-γ ∗γ ∗δ(1) = [γ ]∗ (γ ˜◦ δ)(1) = [γ∗ ] ([γ◦ ] x˜)
+∗ ∗ ]∗ ˜◦ [γ∗ ([γ◦
+γ γ δ(1) = [γ (γ δ)(1) = ] ] x˜)
 1 2 1 2 1 2
 ∗ ∗ ◦ ∗ ◦ ◦
 Erinnerung:Die Konstruktion aus Bemerkung 59 induziert zu der Gruppenoperation π (X,x )
@@ -3315,13 +3370,13 @@ g = τ = id,τ operiert auf S2 durch Homöomorphismen.
 Frage: Was ist S2/G? Ist S2/G eine Mannigfaltigkeit?
 4 Euklidische und nichteuklidische
 Geometrie
-Deﬁnition 57
+Definition 57
 Das Tripel (X,d,G) heißt genau dann eine Geometrie, wenn (X,d) ein metrischer Raum
 und = G (X) gilt. Dann heißt G die Menge aller Geraden.
 ∅ (cid:54) ⊆ P
 4.1 Axiome für die euklidische Ebene
 Axiome bilden die Grundbausteine jeder mathematischen Theorie. Eine Sammlung aus Axiomen
-nennt man Axiomensystem. Da der Begriﬀ des Axiomensystems so grundlegend ist, hat man
+nennt man Axiomensystem. Da der Begriff des Axiomensystems so grundlegend ist, hat man
 auch ein paar sehr grundlegende Forderungen an ihn: Axiomensysteme sollen widerspruchsfrei
 sein, die Axiome sollen möglichst unabhängig sein und Vollständigkeit wäre auch toll. Mit
 Unabhängigkeit ist gemeint, dass kein Axiom sich aus einem anderem herleiten lässt. Dies scheint
@@ -3329,7 +3384,7 @@ auf den ersten Blick eine einfache Eigenschaft zu sein. Auf den zweiten Blick mu
 einsehen, dass das Parallelenproblem, also die Frage ob das Parallelenaxiom unabhängig von
 den restlichen Axiomen ist, über 2000 Jahre nicht gelöst wurde. Ein ganz anderes Kaliber ist
 die Frage nach der Vollständigkeit. Ein Axiomensystem gilt als Vollständig, wenn jede Aussage
-innerhalb des Systems veriﬁzierbar oder falsiﬁzierbar ist. Interessant ist hierbei der Gödelsche
+innerhalb des Systems verifizierbar oder falsifizierbar ist. Interessant ist hierbei der Gödelsche
 Unvollständigkeitssatz, der z. B. für die Arithmetik beweist, dass nicht alle Aussagen formal
 bewiesen oder widerlegt werden können.
 Kehren wir nun jedoch zurück zur Geometrie. Euklid hat in seiner Abhandlung „Die Elemente“
@@ -3349,7 +3404,7 @@ Wird eine Gerade so von zwei Geraden geschnitten, dass die Summe der Innenwinkel
 kleiner als zwei Rechte ist, dann schneiden sich diese Geraden auf der Seite dieser Winkel.
 Man mache sich klar, dass das nur dann nicht der Fall ist, wenn beide Geraden par-
 allel sind und senkrecht auf die erste stehen.
-Deﬁnition 58
+Definition 58
 Eine euklidische Ebene ist eine Geometrie (X,d,G), die Axiome §1 - §5 erfüllt:
 §1) Inzidenzaxiome:
 66 4.1.AXIOMEFÜRDIEEUKLIDISCHEEBENE
@@ -3368,7 +3423,7 @@ d(P,Q) = d(P,R)+d(R,Q) oder
 •
 d(Q,R) = d(Q,P)+d(P,R)
 •
-Deﬁnition 59
+Definition 59
 Sei (X,d,G) eine Geometrie und seien P,Q,R X.
 ∈
 a) P,Q,R liegen kollinear, wenn es g G gibt mit P,Q,R g.
@@ -3384,7 +3439,8 @@ R liegt zwischen P und Q
 PR− := Q X P liegt zwischen Q und R
 { ∈ | }
 P R
-PR− PR
+PR−
+PR
 PR+
 Abbildung 4.1: Halbgeraden
 Bemerkung 60
@@ -3393,7 +3449,7 @@ a) PR+ PR− = PR
 b) PR+ PR− = P
 ∩ { }
 Beweis:
-a) „ “ folgt direkt aus der Deﬁnition von PR+ und PR−
+a) „ “ folgt direkt aus der Definition von PR+ und PR−
 ⊆
 „ “: Sei Q PR P,Q,R sind kollinear.
 ⊇ ∈ ⇒
@@ -3405,7 +3461,7 @@ R liegt zwischen P und Q Q PR
 ⇒  ⇒ ∈
 P liegt zwischen Q und R Q PR
 ⇒ ∈
-b) „ “ ist oﬀensichtlich
+b) „ “ ist offensichtlich
 ⊇
 „ “: Sei PR+ PR−. Dann ist d(Q,R) = d(P,Q)+d(P,R) weil Q PR− und
 ⊆ ∩ ∈
@@ -3424,7 +3480,7 @@ P = R
 ⇒
 Widerspruch
 ⇒
-Deﬁnition 60
+Definition 60
 §3) Anordnungsaxiome
 (i) Zu jeder Halbgerade H mit Anfangspunkt P X und jedem r R gibt es
 ≥0
@@ -3471,7 +3527,7 @@ Dann gilt: PB+ AQ =
 ∩ (cid:54) ∅
 Auch Bemerkung 61 lässt sich umgangssprachlich sehr viel einfacher ausdrücken: Die Diagonalen
 eines konvexen Vierecks schneiden sich.
-Beweis: Sei P(cid:48) PQ−,P(cid:48) = P =S=at=z=4.1 PB schneidet AP(cid:48) AQ
+Beweis: Sei P(cid:48) PQ−,P(cid:48) = P =S =at =z =4.1 PB schneidet AP(cid:48) AQ
 ∈ (cid:54) ⇒ ∪
 Sei C der Schnittpunkt. Dann gilt:
 1Die„Verschiebung“ vonP(cid:48)Q(cid:48) nachPQunddieIsometrie,diezusätzlichanderGeradedurchP undQspiegelt.
@@ -3507,7 +3563,7 @@ Annahme: A = B
 Dann ist B / (PA QA) wegen §2.
 ∈ ∪
 1. Fall: Q und B liegen in derselben Halbebene bzgl. PA
-=B=e=m=.=61 PB+ AQ = .
+=B =e =m =. =61 PB+ AQ = .
 ⇒ ∩ (cid:54) ∅
 Sei C der Schnittpunkt vom PB und AQ.
 Dann gilt:
@@ -3629,9 +3685,9 @@ Beweis: Sei ϕ die Isometrie mit ϕ(A(cid:48)) = A, ϕ(A(cid:48)C(cid:48)+) = AC
 Isometrie existiert wegen Punkt §4.
 C ϕ(A(cid:48)C(cid:48)+) und B ϕ(A(cid:48)B(cid:48)+).
 ⇒ ∈ ∈
-d(A(cid:48),C(cid:48)) = d(ϕ(A(cid:48)),ϕ(C(cid:48))) = d(A,ϕ(C(cid:48))) =3=(i) ϕ(C(cid:48)) = C
+d(A(cid:48),C(cid:48)) = d(ϕ(A(cid:48)),ϕ(C(cid:48))) = d(A,ϕ(C(cid:48))) =3 =(i) ϕ(C(cid:48)) = C
 ⇒
-d(A(cid:48),B(cid:48)) = d(ϕ(A(cid:48)),ϕ(B(cid:48))) = d(A,ϕ(B(cid:48))) =3=(i) ϕ(B(cid:48)) = B
+d(A(cid:48),B(cid:48)) = d(ϕ(A(cid:48)),ϕ(B(cid:48))) = d(A,ϕ(B(cid:48))) =3 =(i) ϕ(B(cid:48)) = B
 ⇒
 Also gilt insbesondere ϕ( A(cid:48)B(cid:48)C(cid:48)) = ABC. (cid:4)
 (cid:52) (cid:52)
@@ -3657,7 +3713,7 @@ Dann gilt ϕ(C(cid:48)) AC BC = C ϕ(C(cid:48)) = C.
 ∈ ∩ { } ⇒
 Es gilt also ϕ( A(cid:48)B(cid:48)C(cid:48)) = ABC. (cid:4)
 (cid:52) (cid:52)
-Deﬁnition 61
+Definition 61
 a) Ein Winkel ist ein Punkt P X zusammen mit 2 Halbgeraden mit Anfangspunkt P.
 ∈
 Man schreibt: ∠R PR bzw. ∠R PR 2
@@ -3687,12 +3743,12 @@ R
 R(cid:48)
 2
 Q R
-P R1(cid:48) R1
+P R 1(cid:48) R 1
 (a) ∠R(cid:48)P(cid:48)R(cid:48) istkleinerals∠R PR ,(b) Innenwinkel und Außenwin-
 1 2 1 2
-vgl. Deﬁnition 61.c kel in (cid:52)PQR, vgl. Deﬁniti-
+vgl. Definition 61.c kel in (cid:52)PQR, vgl. Definiti-
 on 61.d
-Abbildung 4.6: Situation aus Deﬁnition 61
+Abbildung 4.6: Situation aus Definition 61
 P
 R
 R
@@ -3760,7 +3816,7 @@ M
 γ α
 α
 1
-P α α2 β
+P α α 2 β
 A B
 (a) Summe der Winkel α, β und γ (b) Situation aus Proposition 4.5
 Abbildung 4.10: Situation aus Proposition 4.5
@@ -3790,7 +3846,7 @@ Die Situation ist in Abbildung 4.10b skizziert.
 1 ≤ 2
 Bemerkung 67
 In einer euklidischen Ebene ist in jedem Dreieck die Innenwinkelsumme gleich π.
-β(cid:48)Cα(cid:48)
+β(cid:48)C α(cid:48)
 α(cid:48)(cid:48) g
 γ
 α β
@@ -3831,8 +3887,8 @@ A c B c(cid:48) B(cid:48)
 Abbildung 4.13: Die Dreiecke ABC und AB(cid:48)C(cid:48) sind ähnlich.
 (cid:52) (cid:52)
 4.2.1 Flächeninhalt
-Deﬁnition 62
-„Simplizialkomplexe“ in euklidischer Ebene (X,d) heißen ﬂächengleich, wenn sie sich in
+Definition 62
+„Simplizialkomplexe“ in euklidischer Ebene (X,d) heißen flächengleich, wenn sie sich in
 kongruente Dreiecke zerlegen lassen.
 76 4.2.WEITEREEIGENSCHAFTENEINEREUKLIDISCHENEBENE
 (a) Zwei kongruente Dreiecke (b) ZweiweiterekongruenteDrei-
@@ -3850,13 +3906,13 @@ c
 h
 a
 c
-LC A B A B
-(a) 1/2·|AB|·|hc| (b) 1/2·|BC|·|ha|
+L C A B A B
+(a) 1/2·|AB|·|h c| (b) 1/2·|BC|·|h a|
 Abbildung 4.15: Flächenberechnung im Dreieck
 Zu zeigen: Unabhängigkeit von der gewählten Grundseite.
 C
 α
-γ LA
+γ L A
 γ
 α
 A L B
@@ -3864,7 +3920,7 @@ C
 Abbildung 4.16: ABL und CL B sind ähnlich, weil IWS = π
 a C
 (cid:52) (cid:52)
-=S=tr=a=hl=en=s=atz a = c a h = c h
+=S =tr =a =hl =en =s =atz a = c a h = c h
 ⇒ hc ha → · a · c
 Satz 4.7 (Satz des Pythagoras)
 Im rechtwinkligen Dreieck gilt a2+b2 = c2, wobei c die Hypotenuse und a,b die beiden
@@ -3889,7 +3945,7 @@ Satz 4.8
 Bis auf Isometrie gibt es genau eine euklidische Ebene (X,d,G), nämlich X = R2,
 d = euklidischer Abstand, G = Menge der üblichen Geraden.
 Beweis:
-(i) (R2,d ) ist oﬀensichtlich eine euklidische Ebene.
+(i) (R2,d ) ist offensichtlich eine euklidische Ebene.
 Euklid
 (ii) Sei (X,d) eine euklidische Ebene und g ,g Geraden in X, die sich in einem Punkt 0
 1 2
@@ -3905,7 +3961,7 @@ In Abbildung 4.19 wurde die Situation skizziert.
 Sei h : X R2 eine Abbildung mit h(P) := (x ,y ) Dadurch wird h auf dem
 P P
 →
-Quadranten deﬁniert, in dem P liegt, d. h.
+Quadranten definiert, in dem P liegt, d. h.
 Q X mit PQ g = = PQ g
 1 2
 ∀ ∈ ∩ ∅ ∩
@@ -3925,7 +3981,7 @@ Y
 P
 y
 P
-· g1 0 · xP PX g1
+· g 1 0 · x P P X g 1
 (a) Schritt 1 (b) Schritt 2
 Abbildung 4.18: Beweis zu Satz 4.8
 (i) Sei (x,y) R2, z. B. x 0,y 0. Sei P(cid:48) g mit d(0,P(cid:48)) = x und P(cid:48) auf der
@@ -3940,7 +3996,7 @@ X
 P
 y
 P
-0 xP g1
+0 x P g 1
 Abbildung 4.19: Beweis zu Satz 4.8
 (ii) Zu Zeigen: d(P,Q) = d(h(P),h(Q))
 Pythagoras
@@ -3950,9 +4006,9 @@ Q P Q P
 h(Q) = (x ,y )
 Q Q
 4.3 Hyperbolische Geometrie
-Deﬁnition 63
+Definition 63
 Sei
-H := z C (z) > 0 = (cid:8)(x,y) R2 (cid:12)(cid:12) y > 0(cid:9)
+H := z C (z) > 0 = (cid:8) (x,y) R2 (cid:12) (cid:12) y > 0(cid:9)
 { ∈ | (cid:61) } ∈
 79 4.3.HYPERBOLISCHEGEOMETRIE
 die obere Halbebene bzw. Poincaré-Halbebene und G = G G mit
@@ -3971,7 +4027,7 @@ a) ...die Inzidenzaxiome §1
 b) ...das Anordnungsaxiom §3 (ii)
 c) ...nicht das Parallelenaxiom §5
 Beweis:
-a) Oﬀensichtlich sind §1 (iii) und §1 (ii) erfüllt. Für §1 (i) gilt:
+a) Offensichtlich sind §1 (iii) und §1 (ii) erfüllt. Für §1 (i) gilt:
 Gegeben z ,z H
 1 2
 ∈
@@ -4003,9 +4059,9 @@ y y
 2 Z 2
 1 Z
 2
-1 1 Z1
+1 1 Z 1
 (Z )
-1 0 0 1 2(cid:60) 13 4 5 x 1 0 0 1 2 3 4 5 x
+1 0 0 1 2(cid:60) 1 3 4 5 x 1 0 0 1 2 3 4 5 x
 − −
 (a) Fall 1 (b) Fall 2
 Abbildung 4.20: Zwei Punkte liegen in der hyperbolischen Geometrie immer auf genau einer
@@ -4041,11 +4097,12 @@ i j
 „ “: A H ,B H : AB g =
 1 2
 ⇐ ∈ ∈ ∩ (cid:54) ∅
-Da dH stetig ist, folgt diese Richtung direkt. Alle Punkte in H1 haben einen Abstand
+Da dH stetig ist, folgt diese Richtung direkt. Alle Punkte in H haben einen Abstand
+1
 von m der kleiner ist als r und alle Punkte in H haben einen Abstand von m der
 2
 größer ist als r. Da man jede Strecke von A nach B insbesondere auch als stetige
-Abbildung f : R R auﬀassen kann, greift der Zwischenwertsatz AB g =
+Abbildung f : R R auffassen kann, greift der Zwischenwertsatz AB g =
 >0
 → ⇒ ∩ (cid:54) ∅
 „ “: A H ,B H mit i,j 1,2 : AB g = i = j
@@ -4072,8 +4129,8 @@ x
 − − − − −
 Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 81 4.3.HYPERBOLISCHEGEOMETRIE
-Deﬁnition 64
-Es seien a,b,c,d R mit ad bc = 0 und σ : C C eine Abbildung deﬁniert durch
+Definition 64
+Es seien a,b,c,d R mit ad bc = 0 und σ : C C eine Abbildung definiert durch
 ∈ − (cid:54) →
 az+b
 σ(z) :=
@@ -4105,7 +4162,8 @@ d) SL (R) wird von den Matrizen
 0 λ−1 0 1 1 0 ∈
 −
 (cid:124) (cid:123)(cid:122) (cid:125) (cid:124) (cid:123)(cid:122) (cid:125) (cid:124) (cid:123)(cid:122) (cid:125)
-=:Aλ =:Bt =:C
+=:A =:Bt =:C
+λ
 erzeugt.
 e) PSL (R) operiert auf G.
 2
@@ -4127,7 +4185,8 @@ a(x+iy)+b
 axcx+axd+bcx+bd+aycy (ad bc)y
 = +i −
 (cx+d)2+(cy)2 (cx+d)2+(cy)2
-SL=2(R) ac(x2+y2)+adx+bcx+bd +i y
+SL =2(R) ac(x2+y2)+adx+bcx+bd y
++i
 (cx+d)2+(cy)2 (cx+d)2+(cy)2
 y
 (σ(z)) = > 0
@@ -4139,15 +4198,19 @@ z = = x+iy = z
 0 1 ◦ 1
 82 4.3.HYPERBOLISCHEGEOMETRIE
 und
-(cid:18)a b(cid:19) (cid:18)(cid:18)a(cid:48) b(cid:48)(cid:19) (cid:19) (cid:18)a b(cid:19) a(cid:48)z+b(cid:48)
+(cid:18) a b(cid:19) (cid:18)(cid:18) a(cid:48) b(cid:48)(cid:19) (cid:19) (cid:18) a b(cid:19) a(cid:48)z+b(cid:48)
 z =
 c d ◦ c(cid:48) d(cid:48) ◦ c d ◦ c(cid:48)z+d(cid:48)
-aa(cid:48)z+b(cid:48) +b
-= c(cid:48)z+d(cid:48)
-ca(cid:48)z+b(cid:48) +d
+aa(cid:48)z+b(cid:48)
++b
+c(cid:48)z+d(cid:48)
+=
+ca(cid:48)z+b(cid:48)
++d
 c(cid:48)z+d(cid:48)
 a(a(cid:48)z+b(cid:48))+b(c(cid:48)z+d(cid:48))
-= c(cid:48)z+d(cid:48)
+c(cid:48)z+d(cid:48)
+=
 c(a(cid:48)z+b(cid:48))+d(c(cid:48)z+d(cid:48))
 c(cid:48)z+d(cid:48)
 a(a(cid:48)z+b(cid:48))+b(c(cid:48)z+d(cid:48))
@@ -4156,10 +4219,11 @@ c(a(cid:48)z+b(cid:48))+d(c(cid:48)z+d(cid:48))
 (aa(cid:48)+bc(cid:48))z+ab(cid:48)+bd(cid:48)
 =
 (ca(cid:48)+db(cid:48))z+cb(cid:48)+dd(cid:48)
-(cid:18)aa(cid:48)+bc(cid:48) ab(cid:48)+bd(cid:48)(cid:19)
+(cid:18) aa(cid:48)+bc(cid:48) ab(cid:48)+bd(cid:48)(cid:19)
 = z
-ca(cid:48)+db(cid:48) cb(cid:48)+dd(cid:48) ◦
-(cid:18)(cid:18)a b(cid:19) (cid:18)a(cid:48) b(cid:48)(cid:19)(cid:19)
+ca(cid:48)+db(cid:48) cb(cid:48)+dd(cid:48)
+◦
+(cid:18)(cid:18) a b(cid:19) (cid:18) a(cid:48) b(cid:48)(cid:19)(cid:19)
 = z
 c d · c(cid:48) d(cid:48) ◦
 b) Es gilt σ(z) = ( σ)(z) für alle σ SL (R) und z H.
@@ -4175,11 +4239,12 @@ c d 0 cx0+d ⇒ 0 ⇒ − 0
 1 1 1
 ⇒
 a(x x ) = c(x x ) c = a x1−x0
-1− 0 1− ∞ ⇒ x1−x∞
+1 − 0 1 − ∞ ⇒ x1−x∞
 a2 x x1−x0 +a2x x1−x0 = 1
-⇒ − · ∞x1−x∞ 0x1−x∞
+∞x1−x∞ 0x1−x∞
+⇒ − ·
 a2 x1−x0 (x x ) = 1 a2 = x1−x∞
-⇒ x0−x∞ 0− ∞ ⇒ (x1−x∞)(x1−x0)
+⇒ x0−x∞ 0 − ∞ ⇒ (x1−x∞)(x1−x0)
 d) Es gilt:
 A−1 = A
 λ 1
@@ -4215,7 +4280,8 @@ Fall 2: a = 0
 Nun wird in M durch M A an der Stelle von a eine 1 erzeugt:
 1
 · a
-(cid:18)a b(cid:19) (cid:18)1 0(cid:19) (cid:18)1 ab(cid:19)
+(cid:18) b(cid:19) (cid:18)1 0(cid:19) (cid:18) ab(cid:19)
+a 1
 a =
 c d · 0 a c ad
 a
@@ -4234,7 +4300,8 @@ Fall 4: a = 1, b = 0, d = 1
 (cid:18) (cid:19) (cid:18) (cid:19)
 1 0 1 0
 A CB C =
-−1 c c 1 0 1
+−1 c
+c 1 0 1
 Daher erzeugen Matrizen der Form A , B und C die Gruppe SL R. (cid:4)
 λ t 2
 e) Es genügt die Aussage für Matrizen aus Proposition 4.9 (d) zu zeigen.
@@ -4255,13 +4322,13 @@ m+ir
 0
 m λ2m x
 0 1 0 1 2 3 4
-1 0 1 2 3m+14 5 6 7 x −
+1 0 1 2 3m+1 4 5 6 7 x −
 −
 (a) Fall 1 (b) Fall 2 (Strahlensatz)
 Abbildung 4.22: Beweis von Proposition 4.9 (e) für eine Diagonalmatrix
 (cid:18) (cid:19)
 1 a
-Oﬀensichtlich gilt die Aussage für σ =
+Offensichtlich gilt die Aussage für σ =
 • 0 1
 (cid:18) (cid:19)
 0 1
@@ -4287,15 +4354,17 @@ Beweis: Nach Proposition 4.9 (c) gibt es σ mit σ(a ) = b und σ(a ) = b . Dann
 1 1 2 2
 σ(g ) := g wegen dem Inzidenzaxiom §1 und ist eindeutig bestimmt.
 1 2
-Deﬁnition 65
+Definition 65
 Seien z ,z ,z ,z C paarweise verschieden.
 1 2 3 4
 ∈
 Dann heißt
-z1−z4 (z z ) (z z )
-DV(z ,z ,z ,z ) := z1−z2 = 1− 4 · 3− 2
+z1−z4
+(z z ) (z z )
+z1−z2 1 4 3 2
+DV(z ,z ,z ,z ) := = − · −
 1 2 3 4 z3−z4 (z z ) (z z )
-z3−z2 1− 2 · 3− 4
+z3−z2 1 − 2 · 3 − 4
 Doppelverhältnis von z ,...,z .
 1 4
 Bemerkung 70 (Eigenschaften des Doppelverhältnisses)
@@ -4306,7 +4375,7 @@ b) DV(z ,z ,z ,z ) = 1
 1 4 3 2 DV(z1,z2,z3,z4)
 c) DV(z ,z ,z ,z ) = 1
 3 2 1 4 DV(z1,z2,z3,z4)
-d) DV ist auch wohldeﬁniert, wenn eines der z = oder wenn zwei der z gleich sind.
+d) DV ist auch wohldefiniert, wenn eines der z = oder wenn zwei der z gleich sind.
 i i
 ∞
 e) DV(0,1, ,z ) = z (Der Fall z 0,1, ist zugelassen).
@@ -4377,7 +4446,8 @@ Durch Einsetzen ergibt sich DV(z ,...,z ) = 1.
 Im Fall, dass ein z = ist, ist entweder DV(0,1, ,z ) = 0 oder DV(0,1, ,z )
 i 4 4
 ∞ ∞ ∞ ±∞
-e) DV(0,1, ,z ) = (0−z4)·(∞−1) = z4·(∞−1) = z
+(0−z4)·(∞−1) z4·(∞−1)
+e) DV(0,1, ,z ) = = = z
 ∞ 4 (0−1)·(∞−z4) ∞−z4 4
 f) Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
 g) Sei σ PSL (C) mit σ(z ) = 0, σ(z ) = 1, σ(z ) = . Ein solches σ existiert, da man
@@ -4396,16 +4466,21 @@ DV(z ,...,z ) R
 ⇔ ∈ ∪{∞}
 Behauptung folgt, weil σ−1(R ) ein Kreis oder eine Gerade in C ist.
 ∪∞
-Deﬁnition 66
+Definition 66
 Für z ,z H sei g die eindeutige hyperbolische Gerade durch z und z und a ,a die
-1 2 ∈ z1,z2 1 2 1 2
+1 2 z1,z2 1 2 1 2
+∈
 „Schnittpunkte“ von g mit R .
-z1,z2 ∪{∞}
-Dann sei dH(z1,z2) := 21|lnDV(a1,z1,a2,z2)| und heiße hyperbolische Metrik.
+z1,z2
+∪{∞}
+Dann sei dH(z 1,z 2) := 21 |lnDV(a 1,z 1,a 2,z 2) und heiße hyperbolische Metrik.
+|
 Beh.: Für z ,z H sei g die eindeutige hyperbolische Gerade durch z und z und a ,a
-1 2 ∈ z1,z2 1 2 1 2
+1 2 z1,z2 1 2 1 2
+∈
 die „Schnittpunkte“ von g mit R .
-z1,z2 ∪{∞}
+z1,z2
+∪{∞}
 Dann gilt:
 1 1
 lnDV(a ,z ,a ,z ) = lnDV(a ,z ,a ,z )
@@ -4488,7 +4563,7 @@ Zeigen Sie:
 Aufgabe 9
 Sei (X,d) eine absolute Ebene. Der Abstand eines Punktes P zu einer Menge Y X von
 ⊆
-Punkten ist deﬁniert durch d(P,Y) := infd(P,y) y Y.
+Punkten ist definiert durch d(P,Y) := infd(P,y) y Y.
 | ∈
 Zeigen Sie:
 (a) Ist ABC ein Dreieck, in dem die Seiten AB und AC kongruent sind, so sind die
@@ -4510,11 +4585,11 @@ Zeigen Sie: f g g h f h
 Aufgabe 11
 Beweise den Kongruenzsatz SSS.
 5 Krümmung
-Deﬁnition 67
+Definition 67
 Sei f : [a,b] Rn eine eine Funktion aus C∞. Dann heißt f Kurve.
 →
 5.1 Krümmung von Kurven
-Deﬁnition 68
+Definition 68
 Sei γ : I = [a,b] Rn eine Kurve.
 →
 a) Die Kurve γ heißt durch Bogenlänge parametrisiert, wenn gilt:
@@ -4533,7 +4608,7 @@ a) Ist γ durch Bogenlänge parametrisiert, so ist l(γ) = b a.
 b) Ist γ durch Bogenlänge parametrisiert, so ist γ(cid:48)(t) orthogonal zu γ(cid:48)(cid:48)(t) für alle t I.
 ∈
 Beweis:
-a) l(γ) = (cid:82)b γ(cid:48)(t) dt = (cid:82)b1dt = b a.
+a) l(γ) = (cid:82)b γ(cid:48)(t) dt = (cid:82)b 1dt = b a.
 a (cid:107) (cid:107) a −
 b) ImFolgendenwirddieAussagenurfürγ : [a,b] R2 bewiesen.Allerdingsfunktioniert
 →
@@ -4550,7 +4625,7 @@ dt 1 1 2 2
 · 1 · 1 2 · 2
 = 2 γ(cid:48)(cid:48)(t),γ(cid:48)(t)
 ·(cid:104) (cid:105)
-Deﬁnition 69
+Definition 69
 Sei γ : I R2 eine durch Bogenlänge parametrisierte Kurve.
 →
 a) Für t I sei n(t) Normalenvektor an γ in t wenn gilt:
@@ -4585,7 +4660,8 @@ t t
 n(t) = cos , sin
 − r − r
 da gilt:
-(cid:28)(cid:18) cos t(cid:19) (cid:18) sin t(cid:19)(cid:29)
+(cid:28)(cid:18) t(cid:19) (cid:18) t(cid:19)(cid:29)
+cos sin
 n(t),γ(cid:48)(t) = − r , − r
 (cid:104) (cid:105) sin t cos t
 − r r
@@ -4601,7 +4677,7 @@ t t
 = ( cos )2+( sin )2
 − r − r
 = 1
-det(γ(cid:48)(t),n(t)) = (cid:13)(cid:13)(cid:13)(cid:18)−sin rt −cos rt(cid:19)(cid:13)(cid:13)(cid:13)
+det(γ(cid:48)(t),n(t)) = (cid:13) (cid:13) (cid:13)(cid:18) −sin rt −cos rt(cid:19)(cid:13) (cid:13) (cid:13)
 1 (cid:13) cos t sin t (cid:13)
 r − r
 t t t
@@ -4622,7 +4698,7 @@ r · − r − r
 κ(t) =
 ⇒ r
 90 5.2.TANGENTIALEBENE
-Deﬁnition 70
+Definition 70
 Sei γ : I R3 eine durch Bogenlänge parametrisierte Kurve.
 →
 a) Für t I heißt κ(t) := γ(cid:48)(cid:48)(t) die Krümmung von γ in t.
@@ -4633,21 +4709,21 @@ c) b(t)seieinVektor,derγ(cid:48)(t),n(t)zueinerorientiertenOrthonormalbasisvonR
 Also gilt:
 det(γ(cid:48)(t),n(t),b(t)) = 1
 b(t) heißt Binormalenvektor, die Orthonormalbasis
-(cid:8)γ(cid:48)(t),n(t),b(t)(cid:9)
+(cid:8) γ(cid:48)(t),n(t),b(t)(cid:9)
 heißt begleitendes Dreibein.
 Bemerkung 72 (Eigenschaften von Kurven II)
 Sei γ : I R3 durch Bogenlänge parametrisierte Kurve.
 →
 a) n(t) ist orthogonal zu γ(cid:48)(t).
-b) b(t) aus Deﬁnition 70.c ist eindeutig.
+b) b(t) aus Definition 70.c ist eindeutig.
 5.2 Tangentialebene
-Erinnerung Sie sich an Deﬁnition 32 „reguläre Fläche“.
+Erinnerung Sie sich an Definition 32 „reguläre Fläche“.
 Äquivalent dazu ist: S ist lokal von der Form
-V(f) = (cid:8)x R3 (cid:12)(cid:12) f(x) = 0(cid:9)
+V(f) = (cid:8) x R3 (cid:12) (cid:12) f(x) = 0(cid:9)
 ∈
 für eine C∞-Funktion f : R3 R.
 →
-Deﬁnition 71
+Definition 71
 Sei S R3 eine reguläre Fläche, s S, F : U V S eine lokale Parametrisierung um
 ⊆ ∈ → ∩
 s V:
@@ -4657,10 +4733,10 @@ s V:
 Für p = F−1(s) U sei
 ∈ ∂x(p) ∂x(p)
 ∂u ∂v
-JF(p) = ∂∂uy(p) ∂∂yv(p)
+J F(p) =  ∂∂ uy (p) ∂ ∂y v(p)
 ∂z(p) ∂z(p)
 ∂u ∂v
-und D F : R2 R3 die durch J (p) deﬁnierte lineare Abbildung.
+und D F : R2 R3 die durch J (p) definierte lineare Abbildung.
 p F
 →
 Dann heißt T S := Bild(D F) die Tangentialebene an s S.
@@ -4677,7 +4753,7 @@ s
 91 5.2.TANGENTIALEBENE
 d) Sei S = V(f) eine reguläre Fläche in R3, also f : V R eine C∞-Funktion, V R3
 → ⊆
-oﬀen, grad(f)(x) = 0 für alle x S.
+offen, grad(f)(x) = 0 für alle x S.
 (cid:54) ∈
 Dann ist T S = (grad(f)(s))⊥ für jedes s S.
 s
@@ -4706,10 +4782,10 @@ sodass γ(cid:48)(0) = x gilt. Da γ(t) S für alle t [ ε,ε], ist f γ = 0
 T S grad(f)(s)⊥
 s
 ⇒ ⊆
-=d=i=m==2 T S = (grad(f)(s))⊥
+=d =i =m ==2 T S = (grad(f)(s))⊥
 s
 ⇒
-Deﬁnition 72
+Definition 72
 a) Ein Normalenfeld auf der regulären Fläche S R3 ist eine Abbildung n : S S2
 ⊆ → ⊆
 R3 mit n(s) T S⊥ für jedes s S.
@@ -4717,14 +4793,14 @@ s
 ∈ ∈
 b) S heißt orientierbar, wenn es ein stetiges Normalenfeld auf S gibt.
 Manchmal wird zwischen einem Normalenfeld und einem Einheitsnormalenfeld unterschieden.
-Im Folgenden werden diese Begriﬀe jedoch synonym benutzt.
+Im Folgenden werden diese Begriffe jedoch synonym benutzt.
 Bemerkung 74 (Eigenschaften von Normalenfeldern)
 a) Ein Normalenfeld auf S ist genau dann stetig, wenn es glatt ist (also C∞).
 b) Zu jedem s S gibt es eine Umgebung V R3 von s und eine lokale Parametrisierung
 ∈ ⊆
 F : U V von S um s, sodass auf F(U) = V S ein stetiges Normalenfeld existiert.
 → ∩
-c) S ist genau dann orientierbar, wenn es einen diﬀerenzierbaren Atlas von S aus lokalen
+c) S ist genau dann orientierbar, wenn es einen differenzierbaren Atlas von S aus lokalen
 Parametrisierungen F : U V , i I gibt, sodass für alle i,j F und alle
 i i i
 → ∈ ∈
@@ -4762,7 +4838,7 @@ das Bild einer durch Bogenlänge parametrisierten Kurve γ : [ ε,ε] S enthält
 − →
 und γ(cid:48)(0) = x.
 Beweis: „Satz über implizite Funktionen“1
-Deﬁnition 73
+Definition 73
 In der Situation aus Bemerkung 75 heißt die Krümmung κ (0) der Kurve γ in der Ebene
 γ
 (s+E) im Punkt s die Normalkrümmung von S in s in Richtung x = γ(cid:48)(0).
@@ -4795,7 +4871,7 @@ x = (0,0,1),E = R e +R e (x,z-Ebene)
 · ·
 1Siehe z. B. https://github.com/MartinThoma/LaTeX-examples/tree/master/documents/Analysis%20II
 93 5.3.GAUSS-KRÜMMUNG
-V E2 S = (cid:8)(1,0,z) R3 (cid:12)(cid:12) z R(cid:9) ist eine Gerade
+V E 2 S = (cid:8) (1,0,z) R3 (cid:12) (cid:12) z R(cid:9) ist eine Gerade
 ∩ ∩ ∈ ∈
 κ (s,x ) = 0
 Nor 2
@@ -4815,7 +4891,8 @@ Nor 2
 4
 2
 3
-z z 0
+zz
+0
 2
 1 −2
 0 f(x,y)
@@ -4823,17 +4900,18 @@ z z 0
 1
 2 1
 0 0 0
-y −1 −1.5 −1 −0.5 0x 0.5 1 1.5 −−42 y −1 −2−2 −1.5 −1 −0.5 0x 0.5 1 1.5 2
+y −1 −1.5 −1 −0.5 0 x 0.5 1 1.5 −− 42 y −1 −2−2 −1.5 −1 −0.5 0 x 0.5 1 1.5 2
 (a) S =V(X2+Z2−1) (b) S =V(X2−Y2−Z)
 Abbildung 5.2: Beispiele für reguläre Flächen
-Deﬁnition 74
+Definition 74
 Sei S R3 eine reguläre Fläche, s S und n ein stetiges Normalenfeld auf S.
 ⊆ ∈
 γ : [ ε,ε] S eine nach Bogenlänge parametrisierte Kurve (ε > 0) mit γ(0) = s und
 − →
 γ(cid:48)(cid:48)(0) = 0.
 (cid:54)
-Sei n(0) := γ(cid:48)(cid:48)(0) . Zerlege
+γ(cid:48)(cid:48)(0)
+Sei n(0) := . Zerlege
 (cid:107)γ(cid:48)(cid:48)(0)(cid:107)
 n(0) = n(0)t+n(0)⊥ mit n(0)t T S und n(0)⊥ (T S)⊥
 s s
@@ -4854,19 +4932,19 @@ Nor Nor
 | |
 Bemerkung 77
 Sei S eine reguläre Fläche und n = n(s) ein Normalenvektor an S in s.
-Sei Ts1S = x TsS x = 1 ∼= S1. Dann ist
+Sei T s1S = x T sS x = 1 ∼= S1. Dann ist
 { ∈ | (cid:107) (cid:107) }
 κn (s) : T1S R, x κ (s,x)
 Nor s Nor
 → (cid:55)→
 eine glatte Funktion und Bildκn (s) ist ein abgeschlossenes Intervall.
 Nor
-Deﬁnition 75
+Definition 75
 Sei S eine reguläre Fläche und n = n(s) ein Normalenvektor an S in s.
 94 5.3.GAUSS-KRÜMMUNG
-a) κn(s) : = min(cid:8)κn (s,x) (cid:12)(cid:12) x T1S (cid:9) und heißen Hauptkrümmungen von S in s.
+a) κn(s) : = min(cid:8) κn (s,x) (cid:12) (cid:12) x T1S (cid:9) und heißen Hauptkrümmungen von S in s.
 1 Nor ∈ s
-κn(s) : = max(cid:8)κn (s,x) (cid:12)(cid:12) x T1S (cid:9)
+κn(s) : = max(cid:8) κn (s,x) (cid:12) (cid:12) x T1S (cid:9)
 2 Nor ∈ s
 b) K(s) := κn(s) κn(s) heißt Gauß-Krümmung von S in s.
 1 · 2
@@ -4914,13 +4992,14 @@ Sei S R3 eine reguläre Fläche, s S, T S die Tangentialebene an S in s und F : 
 s
 ⊆ ∈ →
 lokale Parametrisierung von S um s. Weiter sei p := F−1(s).
-Deﬁnition 76
-Sei I R2×2 deﬁniert als
+Definition 76
+Sei I R2×2 definiert als
 S
 ∈
 (cid:18) (cid:19) (cid:18) (cid:19)
 g (s) g (s) E(s) F(s)
-I : = 1,1 1,2 =
+1,1 1,2
+I : = =
 S
 g (s) g (s) F(s) G(s)
 1,2 2,2
@@ -4944,24 +5023,25 @@ p 1 p 2
 { }
 kung 80.a die Darstellungsmatrix I .
 S
-d) g (s) ist eine diﬀerenzierbare Funktion von s.
+d) g (s) ist eine differenzierbare Funktion von s.
 i,j
 Bemerkung 81
 (cid:13) (cid:13)2
 (cid:13)∂F ∂F (cid:13)
-det(IS) = (cid:13) (p) (p)(cid:13)
+det(I S) = (cid:13) (p) (p)(cid:13)
 (cid:13)∂u × ∂u (cid:13)
 1 2
    
 x y
 1 1
-Beweis: Sei ∂∂uF1(p) = x2, ∂∂uF2(p) = y2
+Beweis: Sei ∂∂ uF 1(p) = x 2, ∂∂ uF 2(p) = y 2
 x y3
 3
  
 z
 1
-Dann ist ∂∂uF1(p)× ∂∂uF2(p) = z2 mit
+Dann ist ∂∂ uF 1(p) ∂∂ uF 2(p) = z 2 mit
+×
 z
 3
 z = x y x y
@@ -4979,18 +5059,19 @@ z = x y x y
 1 2
 96 5.4.ERSTEUNDZWEITEFUNDAMENTALFORM
 det(I ) = g g g2
-S 1,1 2,2− 1,2
-(cid:42)x  x (cid:43)(cid:42)y  y (cid:43) (cid:42)x  y (cid:43)2
+S 1,1 2,2 1,2
+−
+(cid:42) x   x  (cid:43)(cid:42) y   y  (cid:43) (cid:42) x   y  (cid:43)2
 1 1 1 1 1 1
-= x2,x2 y2,y2 x2,y2
+= x 2,x 2 y 2,y 2 x 2,y 2
 −
 x x y y x y
 3 3 3 3 3 3
 = (x2+x2+x2)(y2+y2+y2) (x y +x y +x y )2
 1 2 3 1 2 3 − 1 1 2 2 3 3
-Deﬁnition 77
+Definition 77
 (cid:112)
-a) Das Diﬀerential dA = det(I)du du heißt Flächenelement von S bzgl. der Para-
+a) Das Differential dA = det(I)du du heißt Flächenelement von S bzgl. der Para-
 1 2
 metrisierung F.
 b) Für eine Funktion f : V R heißt
@@ -5006,25 +5087,28 @@ Bemerkung 82
 (cid:82)
 a) fdA ist unabhängig von der gewählten Parametrisierung.
 V
-b) Sei f : S R eine Funktion, die im Sinne von Deﬁnition 77.b lokal integrierbar ist.
+b) Sei f : S R eine Funktion, die im Sinne von Definition 77.b lokal integrierbar ist.
 →
 (cid:82)
-Dann ist fdA wohldeﬁniert, falls (z. B.) S kompakt ist.
+Dann ist fdA wohldefiniert, falls (z. B.) S kompakt ist.
 S
 Etwa:
 (cid:90) n (cid:90)
 (cid:88)
 fdA = fdA
-S i=1 Vi
+S Vi
+i=1
 (cid:90)
 (cid:88)
 fdA
 −
-i(cid:54)=j Vi∩Vj
+Vi∩Vj
+i(cid:54)=j
 (cid:90)
 (cid:88)
 + fdA
-i,j,k Vi∩Vj∩Vk
+Vi∩Vj∩V
+i,j,k k
 ...
 −
 Beweis:
@@ -5067,27 +5151,31 @@ Aufgrund der Bilinearität des Skalarproduktes genügt es diese Eigenschaft für
 Basisvektoren zu zeigen.
 Sei x = D F(e ) = ∂F (p) i = 1,2
 i p i ∂ui
-Beh.: x ,d n(x ) = ∂2F (p),d n(x )
+∂2F
+Beh.: x ,d n(x ) = (p),d n(x )
 (cid:104) i s j (cid:105) (cid:104)∂ui∂uj s i (cid:105)
-∂2F (p),d n(x ) = x ,d n(x )
+∂2F
+(p),d n(x ) = x ,d n(x )
 ⇒ (cid:104)∂ui∂uj s i (cid:105) (cid:104) j s i (cid:105)
 ∂F
 Bew.: 0 = (p+te ),n(p+te )
 j j
 (cid:104)∂u (cid:105)
-d (cid:18) ∂F (cid:19)(cid:12)
+(cid:18) (cid:19)(cid:12)
+d ∂F
 0 = (p+te ),n(p+te ) (cid:12)
 j j (cid:12)
 ⇒ dt (cid:104)∂u (cid:105) t=0
 d ∂F (cid:12)
 = (p+te )(cid:12) ,n(s) + x ,d nD F(e )
 j (cid:12) i s p j
-(cid:104)dt∂ui t=0 (cid:105) (cid:104) (cid:124) (cid:123)(cid:122) (cid:125)(cid:105)
+(cid:104)dt∂u i t=0 (cid:105) (cid:104) (cid:124) (cid:123)(cid:122) (cid:125)(cid:105)
 (cid:124) (cid:123)(cid:122) (cid:125) xj
-∂2F (p)
+∂2F
+(p)
 ∂uj∂ui
-Deﬁnition 78
-Die durch d n deﬁnierte symmetrische Bilinearform auf T S heißt zweite Fundamental-
+Definition 78
+Die durch d n definierte symmetrische Bilinearform auf T S heißt zweite Fundamental-
 s s
 −
 form von S in s bzgl. F.
@@ -5099,7 +5187,8 @@ Bezüglich der Basis x ,x von T S hat II die Darstellungsmatrix
 1 2 s s
 { }
 ∂2F
-(h(s)) mit h (s) = (p),n(s)
+(h(s)
+) mit h (s) = (p),n(s)
 i,j i,j=1,2 i,j (cid:104)∂u ∂u (cid:105)
 i j
 Proposition 5.2
@@ -5107,7 +5196,7 @@ Sei γ : [ ε,ε] S eine nach Bogenlänge parametrisierte Kurve mit γ(0) = s. D
 − →
 κ (s,γ) = II (γ(cid:48)(0),γ(cid:48)(0))
 Nor s
-Beweis: Nach Deﬁnition 74 ist κ (s,γ) = γ(cid:48)(cid:48)(0),n(s) . Nach Voraussetzung gilt
+Beweis: Nach Definition 74 ist κ (s,γ) = γ(cid:48)(cid:48)(0),n(s) . Nach Voraussetzung gilt
 Nor
 (cid:104) (cid:105)
 n(γ(t)) γ(cid:48)(t) γ(cid:48)(cid:48)(0),n(s) = 0
@@ -5128,7 +5217,7 @@ s Nor
 s Nor
 −
 Folgerung 5.3
-Die beiden Deﬁnitionen von Normalkrümmung in Abschnitt 5.1 stimmen überein:
+Die beiden Definitionen von Normalkrümmung in Abschnitt 5.1 stimmen überein:
 κ (s,γ) = κ (s,γ(cid:48)(0))
 Nor Nor
 Satz 5.4
@@ -5160,9 +5249,9 @@ s 1 2
 = λ cos2ϕ(λ λ ) λ
 2 2 1 2
 − − ≤
-=P=r=op=.=5.2 λ1 = min(cid:8)κNor(s,x) (cid:12)(cid:12) x Ts1S (cid:9)
+=P =r =op =. =5.2 λ 1 = min(cid:8) κ Nor(s,x) (cid:12) (cid:12) x T s1S (cid:9)
 ⇒ ∈
-λ2 = max(cid:8)κNor(s,x) (cid:12)(cid:12) x Ts1S (cid:9)
+λ 2 = max(cid:8) κ Nor(s,x) (cid:12) (cid:12) x T s1S (cid:9)
 ∈
 Satz 5.5 (Satz von Gauß-Bonnet)
 Sei S R3 eine kompakte orientierbare reguläre Fläche. Dann gilt:
@@ -5171,15 +5260,15 @@ Sei S R3 eine kompakte orientierbare reguläre Fläche. Dann gilt:
 K(s)dA = 2πχ(S)
 S
 Dabei ist χ(S) die Euler-Charakteristik von S.
-Beweis: Der Beweis wird hier nicht geführt. Er kann in „Elementare Diﬀerentialgeometrie“ von
-Christian Bär (2. Auﬂage), ISBN 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
+Beweis: Der Beweis wird hier nicht geführt. Er kann in „Elementare Differentialgeometrie“ von
+Christian Bär (2. Auflage), ISBN 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
 Lösungen der Übungsaufgaben
 Lösung zu Aufgabe 1
 Teilaufgabe a) Es gilt:
 (i) ,X T .
 X
 ∅ ∈
-(ii) T ist oﬀensichtlich unter Durchschnitten abgeschlossen, d. h. es gilt für alle U ,U
+(ii) T ist offensichtlich unter Durchschnitten abgeschlossen, d. h. es gilt für alle U ,U
 X 1 2
 ∈
 T : U U T .
@@ -5194,13 +5283,13 @@ Also ist (X,T ) ein topologischer Raum.
 X
 Teilaufgabe b) Wähle x = 1,y = 0. Dann gilt x = y und die einzige Umgebung von x
 (cid:54)
-ist X. Da y = 0 X können also x und y nicht durch oﬀene Mengen getrennt werden.
+ist X. Da y = 0 X können also x und y nicht durch offene Mengen getrennt werden.
 ∈
-(X,T ) ist also nicht hausdorﬀsch.
+(X,T ) ist also nicht hausdorffsch.
 X
-Teilaufgabe c) Nach Bemerkung 4 sind metrische Räume hausdorﬀsch. Da (X,T ) nach
+Teilaufgabe c) Nach Bemerkung 4 sind metrische Räume hausdorffsch. Da (X,T ) nach
 X
-(b)nichthausdorﬀschist, liefertdieKontrapositionder Trennungseigenschaft, dass(X,T )
+(b)nichthausdorffschist, liefertdieKontrapositionder Trennungseigenschaft, dass(X,T )
 X
 kein metrischer Raum sein kann.
 Lösung zu Aufgabe 2
@@ -5212,18 +5301,18 @@ Sei a Z beliebig. Dann gilt:
 Wenn jemand diese Aufgabe gemacht hat, bitte die Lösung an info@martin-thoma.de
 schicken.
 Teilaufgabe b)
-Beh.: 1,1 ist nicht oﬀen
+Beh.: 1,1 ist nicht offen
 {− }
 Bew.: durch Widerspruch
-Annahme: 1,1 ist oﬀen.
+Annahme: 1,1 ist offen.
 {− }
 (cid:83)
 Dann gibt es T B, sodass M = 1,1 . Aber alle U B haben unendlich viele
 ⊆ M∈T {− } ∈
 Elemente. Auch endlich viele Schnitte von Elementen in B haben unendlich viele Elemente
-keine endliche nicht-leere Menge kann in dieser Topologie oﬀen sein 1,1 ist
+keine endliche nicht-leere Menge kann in dieser Topologie offen sein 1,1 ist
 ⇒ ⇒ {− }
-nicht oﬀen. (cid:4)
+nicht offen. (cid:4)
 Teilaufgabe c)
 Beh.: Es gibt unendlich viele Primzahlen.
 101 LösungenderÜbungsaufgaben
@@ -5231,32 +5320,32 @@ Bew.: durch Widerspruch
 Annahme: Es gibt nur endlich viele Primzahlen p P
 ∈
 Dann ist
-Z 1,+1 FSd.A=rithmetik (cid:91) U
+Z 1,+1 FSd.A =rithmetik (cid:91) U
 0,p
 \{− }
 p∈P
 endlich. Das ist ein Widerspruch zu Z ist unendlich und 1,1 ist endlich. (cid:4)
 | | |{− }|
 Lösung zu Aufgabe 3
-(a) Beh.: Die oﬀenen Mengen von P sind Vereinigungen von Mengen der Form
+(a) Beh.: Die offenen Mengen von P sind Vereinigungen von Mengen der Form
 (cid:89) (cid:89)
 U P
 j i
 ×
 j∈J i∈N,i(cid:54)=j
-wobei J N endlich und U P oﬀen ist.
+wobei J N endlich und U P offen ist.
 j j
 ⊆ ⊆
-Beweis: Nach Deﬁnition der Produkttopologie bilden Mengen der Form
+Beweis: Nach Definition der Produkttopologie bilden Mengen der Form
 (cid:89) (cid:89)
 U P
 j i
 ×
 i∈J i∈N\J
-wobei J N endlich und U P oﬀen j J eine Basis der Topologie.
+wobei J N endlich und U P offen j J eine Basis der Topologie.
 j j
 ⊆ ⊆ ∀ ∈
-Damit sind die oﬀenen Mengen von P Vereinigungen von Mengen der obigen
+Damit sind die offenen Mengen von P Vereinigungen von Mengen der obigen
 Form. (cid:4)
 (b) Beh.: Die Zusammenhangskomponenten von P sind alle einpunktig.
 Beweis: Es seinen x,y P und x sowie y liegen in der gleichen Zusammenhangs-
@@ -5292,14 +5381,14 @@ n
 ⇒
 (b) Beh.: SL (R) ist nicht kompakt, für n > 1 ist SL (R) kompakt.
 1 n
-Bew.: Für SL1(R) gilt: SL1(R) = (cid:8)A R1×1 (cid:12)(cid:12) detA = 1(cid:9) = (cid:0)1(cid:1) ∼= 1 . 22 SL1(R)
+Bew.: Für SL 1(R) gilt: SL 1(R) = (cid:8) A R1×1 (cid:12) (cid:12) detA = 1(cid:9) = (cid:0) 1(cid:1) ∼= 1 . 22 SL 1(R)
 ∈ { } ⇒
 ist kompakt.
 102 LösungenderÜbungsaufgaben
-SL (R) GL (R) lässt sich mit einer Teilmenge des Rn2 identiﬁzieren. Nach Satz 1.1
+SL (R) GL (R) lässt sich mit einer Teilmenge des Rn2 identifizieren. Nach Satz 1.1
 n n
 ⊆
-sinddiesegenaudannkompakt,wennsiebeschränktundabgeschlossensind.Deﬁniere
+sinddiesegenaudannkompakt,wennsiebeschränktundabgeschlossensind.Definiere
 nun für für n N ,m N:
 ≥2
 ∈ ∈
@@ -5314,14 +5403,14 @@ m . (cid:4)
 −m−−→−∞→ ∞
 (c) Beh.: (R) ist kompakt.
 P
-Bew.: (R) ∼= Sn/x∼−x. Per Deﬁnition der Quotiententopologie ist die Klassenabbil-
+Bew.: (R) ∼= Sn/ x∼−x. Per Definition der Quotiententopologie ist die Klassenabbil-
 P
 dung stetig. Da Sn als abgeschlossene und beschränkte Teilmenge des Rn+1 kompakt
 ist 22 (R) ist kompakt. (cid:4)
 ⇒ P
 Lösung zu Aufgabe 5
-Die Deﬁnition von Homöomorphismus kann auf Seite 9 nachgelesen werden.
-Deﬁnition 79
+Die Definition von Homöomorphismus kann auf Seite 9 nachgelesen werden.
+Definition 79
 Seien (G, ) und (H, ) Gruppen und ϕ : G H eine Abbildung.
 ∗ ◦ →
 ϕ heißt Homomorphismus, wenn
@@ -5330,7 +5419,8 @@ g ,g G : ϕ(g g ) = ϕ(g ) ϕ(g )
 ∀ ∈ ∗ ◦
 gilt.
 Es folgt direkt:
-1) Sei X = R mit der Standarttopologie und ϕ1 : idR und R = (R,+). Dann ist ϕ1 ein
+1) Sei X = R mit der Standarttopologie und ϕ : idR und R = (R,+). Dann ist ϕ ein
+1 1
 Gruppenhomomorphismus und ein Homöomorphismus.
 2) Sei G = (Z,+) und H = (Z/3Z,+). Dann ist ϕ : G H,x x mod 3 ein
 2
@@ -5340,18 +5430,18 @@ Gruppenhomomorphismus. Jedoch ist ϕ nicht injektiv, also sicher kein Homöomor-
 phismus.
 3) Sei X ein topologischer Raum. Dann ist id ein Homöomorphismus. Da keine
 X
-Verknüpfung auf X deﬁniert wurde, ist X keine Gruppe und daher auch kein Grup-
+Verknüpfung auf X definiert wurde, ist X keine Gruppe und daher auch kein Grup-
 penhomomorphismus.
-Also: Obwohl die Begriﬀe ähnlich klingen, werden sie in ganz unterschiedlichen Kontexten
+Also: Obwohl die Begriffe ähnlich klingen, werden sie in ganz unterschiedlichen Kontexten
 verwendet.
 Lösung zu Aufgabe 6
-Die Deﬁnition einer Isotopie kann auf Seite 20 nachgelesen werden, die einer Isometrie auf
+Die Definition einer Isotopie kann auf Seite 20 nachgelesen werden, die einer Isometrie auf
 Seite 6.
-Deﬁnition 80
+Definition 80
 Seien (G, ) und (H, ) Gruppen und ϕ : G H eine Abbildung.
 ∗ ◦ →
 ϕ heißt Isomorphismus, wenn ϕ ein bijektiver Homomorphismus ist.
-Eine Isotopie ist also für Knoten deﬁniert, Isometrien machen nur in metrischen Räumen
+Eine Isotopie ist also für Knoten definiert, Isometrien machen nur in metrischen Räumen
 Sinn und ein Isomorphismus benötigt eine Gruppenstruktur.
 103 LösungenderÜbungsaufgaben
 Lösung zu Aufgabe 7
@@ -5368,10 +5458,10 @@ Z := z M Weg von x nach z
 Es gilt:
 (i) Z = , da M lokal wegzusammenhängend ist
 (cid:54) ∅
-(ii) Z ist oﬀen, da M lokal wegzusammenhängend ist
-(iii) ZC := z˜ M (cid:64)Weg von x nach z˜ ist oﬀen
+(ii) Z ist offen, da M lokal wegzusammenhängend ist
+(iii) ZC := z˜ M (cid:64)Weg von x nach z˜ ist offen
 { ∈ | }
-Da M eine Mannigfaltigkeit ist, existiert zu jedem z˜ ZC eine oﬀene und
+Da M eine Mannigfaltigkeit ist, existiert zu jedem z˜ ZC eine offene und
 ∈
 wegzusammenhängende Umgebung U M.
 z˜
@@ -5394,7 +5484,7 @@ ein stetiger Weg von z˜ nach x Widerspruch.
 ⇒
 DaM zusammenhängendistundM = Z ZC ,sowieZ = folgtZC = .
 (cid:124)(cid:123)(cid:122)(cid:125)∪(cid:124)(cid:123)(cid:122)(cid:125) (cid:54) ∅ ∅
-oﬀen oﬀen
+offen offen
 Also ist M = Z wegzusammenhängend. (cid:4)
 (b) Beh.: X ist wegzusammenhängend.
 Beweis: X := (R 0 ) 0 ,0 und (R 0 ) 0 sind homöomorph zu R.
@@ -5428,7 +5518,8 @@ Isometrie ϕ mit ϕ(B) = C und ϕ(C) = B und ϕ(A) = A.
 ⇒ ∃
 ϕ(∠ABC) = ∠ACB
 ⇒
-∠ABC = ∠ACB (cid:4)
+∠ABC ∠ACB (cid:4)
+=
 ∼
 ⇒
 (b) Beh.: Der längeren Seite von ABC liegt der größere Winkel gegenüber und umge-
@@ -5439,7 +5530,7 @@ Bew.: Sei d(A,C) > d(A,B). Nach §3 (i) gibt es C(cid:48) AC+ mit d(A,C(cid:48))
 C(cid:48) liegt zwischen A und C.
 ⇒
 Es gilt (cid:93)ABC(cid:48) < (cid:93)ABC und aus Aufgabe 9 (a) folgt: (cid:93)ABC(cid:48) = (cid:93)AC(cid:48)B.
-∠BC(cid:48)A ist ein nicht anliegender Außenwinkel zu ∠BCA =B=e=m=.=66 (cid:93)BC(cid:48)A > (cid:93)BCA
+∠BC(cid:48)A ist ein nicht anliegender Außenwinkel zu ∠BCA =B =e =m =. =66 (cid:93)BC(cid:48)A > (cid:93)BCA
 ⇒
 (cid:93)BCA < (cid:93)BC(cid:48)A = (cid:93)ABC(cid:48) < (cid:93)ABC Sei umgekehrt (cid:93)ABC > (cid:93)BCA, kann
 ⇒
@@ -5502,7 +5593,7 @@ Es gilt also ϕ( A(cid:48)B(cid:48)C(cid:48)) = ABC. (cid:4)
 (cid:52) (cid:52)
 Bildquellen
 Alle Bilder, die hier nicht aufgeführt sind, wurden von Martin Thoma erstellt.
-Teilweise wurden die im folgenden aufgelisteten Bilder noch leicht modiﬁziert.
+Teilweise wurden die im folgenden aufgelisteten Bilder noch leicht modifiziert.
 Abb. 0.1a S2: Tom Bombadil, tex.stackexchange.com/a/42865
 Abb. 0.1b Würfel: Jan Hlavacek, tex.stackexchange.com/a/12069
 Abb. 0.1e T2: Jake, tex.stackexchange.com/a/70979/5645
@@ -5532,7 +5623,7 @@ bzgl. bezüglich
 bzw. beziehungsweise
 ca. circa
 d. h. das heißt
-Def. Deﬁnition
+Def. Definition
 etc. et cetera
 ex. existieren
 Hom. Homomorphismus
@@ -5544,27 +5635,27 @@ vgl. vergleiche
 z. B. zum Beispiel
 zhgd. zusammenhängend
 z. z. zu zeigen
-Ergänzende Deﬁnitionen und Sätze
+Ergänzende Definitionen und Sätze
 Da dieses Skript in die Geometrie und Topologie einführen soll, sollten soweit wie möglich alle
-benötigten Begriﬀe deﬁniert und erklärt werden. Die folgenden Begriﬀe wurden zwar verwendet,
+benötigten Begriffe definiert und erklärt werden. Die folgenden Begriffe wurden zwar verwendet,
 aber nicht erklärt, da sie Bestandteil der Vorlesungen „Analysis I und II“ sowie „Lineare Algebra
-und analytische Geometrie I und II“ sind. Jedoch will ich zumindest die Deﬁnitionen bereitstellen.
-Deﬁnition 81
+und analytische Geometrie I und II“ sind. Jedoch will ich zumindest die Definitionen bereitstellen.
+Definition 81
 Sei D R und x R. x heißt ein Häufungspunkt von D : Folge x in D x
 0 0 n 0
 ⊆ ∈ ⇔ ∃ \{ }
 mit x x .
 n 0
 →
-Folgende Deﬁnition wurde dem Skript von Herrn Prof. Dr. Leuzinger für Lineare Algebra
+Folgende Definition wurde dem Skript von Herrn Prof. Dr. Leuzinger für Lineare Algebra
 entnommen:
-Deﬁnition 82
-Es seien V und W K-Vektorräume und A(V) und A(W) die zugehörigen aﬃnen Räume.
-Eine Abbildung f : V W heißt aﬃn, falls für alle a,b V und alle λ,µ K mit λ+µ = 1
+Definition 82
+Es seien V und W K-Vektorräume und A(V) und A(W) die zugehörigen affinen Räume.
+Eine Abbildung f : V W heißt affin, falls für alle a,b V und alle λ,µ K mit λ+µ = 1
 → ∈ ∈
 gilt:
 f(λa+µb) = λf(a)+µf(b)
-Deﬁnition 83
+Definition 83
 Sei V ein Vektorraum und S V eine Teilmenge.
 ⊆
 S heißt eine Orthonormalbasis von V, wenn gilt:
@@ -5581,7 +5672,7 @@ Sei a < b und f C[a,b] := C([a,b]), weiter sei y R und f(a) < y < f(b) oder
 f(b) < y < f(a). Dann existiert ein x [a,b] mit f(x ) = y .
 0 0 0 0
 ∈
-Deﬁnition 84
+Definition 84
 Sei V ein Vektorraum über einem Körper K und f : V V eine lineare Abbildung.
 →
 v V 0 heißt Eigenvektor : λ K : f(v) = λv.
@@ -5597,14 +5688,14 @@ n (cid:18) (cid:19)
 0
 k ∀ ∈
 k=0
-Deﬁnition 85
+Definition 85
 Seien a,b R3 Vektoren.
 ∈
      
 a a a b a b
 1 1 2 3 3 2
 −
-a b := b3 b3 = a3b1 a1b3
+a b := b 3 b 3 = a 3b 1 a 1b 3
 × × −
 a a a b a b
 3 3 1 2 2 1
@@ -5625,10 +5716,10 @@ A B Kreuzprodukt 1 2
 × γ γ Homotopie von Wegen
 A B Teilmengenbeziehung 1 2
 ∼
-A ⊆(cid:40) B echte Teilmengenbeziehung γ(x) Inverser Weg, also γ(x) := γ(1 x)
+A ⊆ (cid:40) B echte Teilmengenbeziehung γ(x) Inverser Weg, also γ(x) := γ(1 x)
 −
 C Bild eines Weges γ, also C :=
-A B Diﬀerenzmenge
+A B Differenzmenge
 \ γ([0,1])
 A B Vereinigung
 ∪
@@ -5648,11 +5739,11 @@ B
 AB Strecke mit Endpunkten A und B Atlas
 ABC Dreieck mit Eckpunkten A,B,C A Projektiver Raum
 (cid:52)
-AB ∼= CD Die Strecken AB und CD sind P, Skalarprodukt
+AB ∼= CD Die Strecken AB und CD sind P , Skalarprodukt
 isometrisch (cid:104)· ·(cid:105)
 X/ X modulo
 ∼
-K Geometrische Realisierung des [x] Äquivalenzk∼lassen von x bzgl.
+K Geometrische Realisierung des [x] Äquivalenzk∼ lassen von x bzgl.
 | | ∼
 Simplizialkomplexes K x Norm von x ∼
 (cid:107) (cid:107)
@@ -5696,13 +5787,14 @@ Zahlenmengen
 N = 1,2,3,... Natürliche Zahlen
 { }
 Z = N 0, 1, 2,... Ganze Zahlen
-Q = Z∪{(cid:8) 1,−1, 2−(cid:9) = (cid:8)}z mit z Z und n Z 0 (cid:9) Rationale Zahlen
-R = Q∪ (cid:8)√2 23, 3√3 3,...n(cid:9) Reel∈e Zahlen ∈ \{ }
+Q = Z∪{(cid:8) 1,− 1, 2−(cid:9) = (cid:8)} z mit z Z und n Z 0 (cid:9) Rationale Zahlen
+R = Q∪ (cid:8) √2 23 , 3 √3 3,...n (cid:9) Reel∈ e Zahlen ∈ \{ }
 ∪ −
 R Echt positive reele Zahlen
 +
 Rn := (x ,...,x ) Rn x 0 Halbraum
-+,0 { 1 n ∈ | n ≥ }
++,0 1 n n
+{ ∈ | ≥ }
 R× = R 0 Einheitengruppe von R
 \{ }
 C = a+ib a,b R Komplexe Zahlen
@@ -5737,10 +5829,10 @@ s
 2von Vanishing Set
 Stichwortverzeichnis
 Abbildung einfach zusammenhängend, 49
-aﬃne, 107 Einheitsnormalenfeld, 90
-diﬀerenzierbare, 29 Euler-Charakteristik, siehe Eulerzahl
+affine, 107 Einheitsnormalenfeld, 90
+differenzierbare, 29 Euler-Charakteristik, siehe Eulerzahl
 homotope, 50 Eulersche Polyederformel, 38
-oﬀene, 53 Eulerzahl, 36
+offene, 53 Eulerzahl, 36
 simpliziale, 35
 Färbbarkeit, 21
 stetige, 9
@@ -5782,7 +5874,7 @@ Decktransformation, 59 topologische, 33
 Decktransformationsgruppe, 59 Gruppe operiert durch Homöomorphismen,
 Deformationsretrakt, 47 61
 dicht, 3 Gruppenaktion, siehe Gruppenoperation
-Diﬀeomorphismus, 29 Gruppenoperation, 60, 60–63
+Diffeomorphismus, 29 Gruppenoperation, 60, 60–63
 Dimension, 34 stetige, 61
 diskret, 53
 Doppelverhältnis, 83 Häufungspunkt, 107
@@ -5803,13 +5895,13 @@ Homotopie, 44
 Möbiustransformation, 80
 Homotopieklasse, 47
 Mannigfaltigkeit, 24
-Inklusionsabbildung, 47 diﬀerenzierbare, 29
+Inklusionsabbildung, 47 differenzierbare, 29
 Innenwinkel, 70 geschlossene, 25
 Inneres, 3 glatte, 29
 Inzidenzaxiome, 64 mit Rand, 28
 Isometrie, 6, 10 Menge
 Isometriegruppe, 10 abgeschlossene, 2
-Isomorphismus, 101 oﬀene, 2
+Isomorphismus, 101 offene, 2
 Isotopie, 20 zusammenhängende, 11
 Metrik, 6
 Jordankurve, 19
@@ -5822,7 +5914,7 @@ Kartenwechsel, 28
 Nebenwinkel, 86
 Kern
 Neilsche Parabel, 27
-oﬀener, 3
+offener, 3
 Normalenfeld, 90
 Kleeblattknoten, 20
 Normalenvektor, 87, 89
@@ -5865,7 +5957,7 @@ Rand, 3, 28
 Lehrsatz
 Raum
 Binomischer, 107
-hausdorﬀscher, 8
+hausdorffscher, 8
 Lie-Gruppe, 33
 kompakter, 14
 liegt zwischen, 65
@@ -5893,7 +5985,7 @@ Simplizialkomplex, 34
 Zusammenhang, 11–14
 Simplizialkomplexe
 Zusammenhangskomponente, 13
-ﬂächengleiche, 74
+flächengleiche, 74
 Zwischenwertsatz, 107
 Sphäre
 exotische, 29
@@ -5903,7 +5995,7 @@ sternförmig, 48
 Stetigkeit, 9–11
 Strecke, 65
 Struktur
-diﬀerenzierbare, 29
+differenzierbare, 29
 Subbasis, 3
 Tangentialebene, 89, 89–90
 Teilraum, 4
