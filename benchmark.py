@@ -637,6 +637,7 @@ if __name__ == "__main__":
             version=pdfplumber.__version__,
             license="MIT",
             last_release_date="2023-04-13",
+            dependencies="pdfminer.six",
         ),
         "pymupdf": Library(
             "PyMuPDF",

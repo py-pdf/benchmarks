@@ -28,7 +28,7 @@ This benchmark is about reading pure PDF files - notscanned documents and not do
 |         Borb | 2023-06-23        |                 AGPL/Commercial |   2.1.15 |                                                           |
 |    pypdfium2 | 2023-06-27        |      Apache-2.0 or BSD-3-Clause |   4.17.0 | PDFium (Foxit/Google)                                     |
 | pdfminer.six | 2022-11-05        |                           MIT/X | 20221105 |                                                           |
-|   pdfplumber | 2023-04-13        |                             MIT |    0.9.0 |                                                           |
+|   pdfplumber | 2023-04-13        |                             MIT |    0.9.0 | pdfminer.six                                              |
 |    pdftotext | -                 |                             GPL |   0.86.1 | build-essential libpoppler-cpp-dev pkg-config python3-dev |
 |      PyMuPDF | 2023-06-21        | GNU AFFERO GPL 3.0 / Commerical |   1.22.5 | MuPDF                                                     |
 |        pypdf | 2023-06-27        |                    BSD 3-Clause |   3.11.1 |                                                           |
