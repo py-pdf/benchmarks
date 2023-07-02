@@ -2,9 +2,9 @@ import json
 import os
 import ssl
 import urllib.request
+from collections.abc import Callable
 from io import BytesIO
 from pathlib import Path
-from typing import Callable, Dict, List, Tuple
 
 from pydantic import BaseModel
 from pypdf import PdfReader
@@ -23,7 +23,7 @@ class Table(BaseModel):
     description: str = ""
     columns: int  # just for convenience, could be derived from "cells"
     rows: int  # just for convenience, could be derived from "cells"
-    cells: List[Cell]
+    cells: list[Cell]
 
 
 def structural_similarity(table1: Table, table2: Table) -> float:
@@ -58,7 +58,7 @@ def structural_similarity(table1: Table, table2: Table) -> float:
     return f1_score
 
 
-files: List[Tuple[str, str]] = [
+files: list[tuple[str, str]] = [
     (
         "https://www.msvracing.com/media/9982/51-british-gt-warm-up-classification.pdf",
         "51-british-gt-warm-up-classification.pdf",
@@ -95,13 +95,13 @@ def get_pdf_from_url(url: str, name: str) -> bytes:
     return data
 
 
-def extract_tables_with_tabula(data: bytes) -> Dict[int, List[Table]]:
+def extract_tables_with_tabula(data: bytes) -> dict[int, list[Table]]:
     from tabula import read_pdf  # pip install tabula-py
 
     stream = BytesIO(data)
 
     # Convert raw tables to Table objects, grouped by page index
-    tables_by_page: Dict[int, List[Table]] = {}
+    tables_by_page: dict[int, list[Table]] = {}
     reader = PdfReader(stream)
     for page_index in range(len(reader.pages)):
         raw_tables = read_pdf(
@@ -158,7 +158,7 @@ def derive_table_from_layouted_text(layouted_text: str):
         whitespace_rows = whitespace_rows & set(row)
 
 
-def get_truth(sink: str) -> Dict[int, List[Table]]:
+def get_truth(sink: str) -> dict[int, list[Table]]:
     with open(Path("ground_truth") / sink) as fp:
         data = json.load(fp)
     gt = {}
@@ -170,7 +170,7 @@ def get_truth(sink: str) -> Dict[int, List[Table]]:
     return gt
 
 
-def write_extracted_tables(data: Dict[int, List[Table]], target: Path):
+def write_extracted_tables(data: dict[int, list[Table]], target: Path):
     with open(target, "w") as fp:
         fp.write(
             json.dumps(
@@ -183,7 +183,7 @@ def write_extracted_tables(data: Dict[int, List[Table]], target: Path):
         )
 
 
-algorithms: List[Tuple[str, Callable[[bytes], Dict[int, List[Table]]]]] = [
+algorithms: list[tuple[str, Callable[[bytes], dict[int, list[Table]]]]] = [
     ("tabula", extract_tables_with_tabula)
 ]
 

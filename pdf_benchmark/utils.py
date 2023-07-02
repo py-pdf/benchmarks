@@ -68,7 +68,7 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
     elif len(extended_align) < num_columns:
         extended_align += [("^", "<") for i in range(num_columns - len(extended_align))]
 
-    heading_align, cell_align = [x for x in zip(*extended_align)]
+    heading_align, cell_align = (x for x in zip(*extended_align))
 
     field_widths = [
         len(max(column, key=len)) if len(column) > 0 else 0 for column in columns

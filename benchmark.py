@@ -4,299 +4,48 @@ Compare text extraction performance of different PDF parsers.
 
 import json
 import os
-import platform
-import re
-import subprocess
-import tempfile
 import time
-from dataclasses import dataclass
 from io import BytesIO
 from itertools import product
 from pathlib import Path
-from typing import Callable, Dict, List, Literal, NamedTuple, Optional, Tuple, Union
+from typing import Literal
 
 import fitz as PyMuPDF
-import numpy as np
 import pdfminer
 import pdfplumber
 import pypdf
-import pypdfium2 as pdfium
-import requests
 import tika
-from borb.pdf.pdf import PDF
-from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
-from Levenshtein import ratio  # python-Levenshtein
-from pdfminer.high_level import extract_pages, extract_text
-from pydantic import BaseModel, Field
+from pdfminer.high_level import extract_text as pdfminder_extract_text
 from rich.progress import track
 from tika import parser
 
-from utils import sizeof_fmt, table_to_markdown
+from pdf_benchmark.data_structures import Cache, Document, Library
+from pdf_benchmark.library_code import (
+    borb_get_text,
+    pdfium_get_text,
+    pdfminer_image_extraction,
+    pdfplubmer_get_text,
+    pdftotext_get_text,
+    pymupdf_get_text,
+    pymupdf_image_extraction,
+    pymupdf_watermarking,
+    pypdf_get_text,
+    pypdf_image_extraction,
+    pypdf_watermarking,
+)
+from pdf_benchmark.output import write_benchmark_report
+from pdf_benchmark.score import get_text_extraction_score
 
 tika.initVM()
 
 
-def get_processor_name():
-    """Credits: https://stackoverflow.com/a/13078519/562769"""
-    if platform.system() == "Windows":
-        return platform.processor()
-    elif platform.system() == "Darwin":
-        os.environ["PATH"] = os.environ["PATH"] + os.pathsep + "/usr/sbin"
-        command = "sysctl -n machdep.cpu.brand_string"
-        return subprocess.check_output(command, shell=True).strip().decode("utf-8")
-    elif platform.system() == "Linux":
-        command = "cat /proc/cpuinfo"
-        all_info = subprocess.check_output(command, shell=True).decode().strip()
-        for line in all_info.split("\n"):
-            if "model name" in line:
-                return re.sub(".*model name.*:", "", line, 1)
-    return ""
-
-
-@dataclass(frozen=True)
-class Document:
-    name: str
-    url: str
-    layout: str = ""
-
-    def __post_init__(self):
-        if not os.path.exists(self.path):
-            self.download()
-
-    def download(self):
-        response = requests.get(self.url)
-        with open(self.path, "wb") as f:
-            f.write(response.content)
-
-    @property
-    def data(self):
-        with open(self.path, "rb") as f:
-            return f.read()
-
-    @property
-    def path(self):
-        return os.path.join(os.path.dirname(__file__), "pdfs", f"{self.name}.pdf")
-
-    @property
-    def filesize(self):
-        return os.path.getsize(self.path)
-
-    @property
-    def nb_pages(self):
-        doc = PyMuPDF.open(self.path)
-        return doc.page_count
-
-
-class Library(NamedTuple):
-    name: str
-    pathname: str
-    url: str
-    text_extraction_function: Callable[[bytes], str]
-    version: str
-    watermarking_function: Optional[Callable[[bytes, bytes], bytes]] = None
-    dependencies: str = ""
-    license: str = ""
-    last_release_date: str = ""
-    image_extraction_function: Optional[
-        Callable[[bytes], List[Tuple[str, bytes]]]
-    ] = None
-
-
-class Cache(BaseModel):
-    # First str: lib
-    # Second str: doc
-    benchmark_times: Dict[str, Dict[str, Dict[str, float]]] = Field(
-        default_factory=dict
-    )
-    read_quality: Dict[str, Dict[str, float]] = Field(default_factory=dict)
-    watermarking_result_file_size: Dict[str, Dict[str, float]] = Field(
-        default_factory=dict
-    )
-
-    def has_doc(self, library: Library, document: Document) -> bool:
-        lib = library.pathname
-        doc = document.name
-
-        if lib not in self.benchmark_times:
-            self.benchmark_times[lib] = {}
-        if doc not in self.benchmark_times[lib]:
-            self.benchmark_times[lib][doc] = {}
-
-        if lib not in self.read_quality:
-            self.read_quality[lib] = {}
-
-        if lib not in self.watermarking_result_file_size:
-            self.watermarking_result_file_size[lib] = {}
-
-        return doc in self.benchmark_times[lib] and doc in self.read_quality[lib]
-
-    def write(self, path: Path):
-        with open(path, "w") as f:
-            f.write(self.json(indent=4, sort_keys=True))
-
-
-def pymupdf_get_text(data: bytes) -> str:
-    with PyMuPDF.open(stream=data, filetype="pdf") as doc:
-        text = ""
-        for page in doc:
-            text += page.get_text() + "\n"
-    return text
-
-
-def pypdf_get_text(data: bytes) -> str:
-    text = ""
-    reader = pypdf.PdfReader(BytesIO(data))
-    for page in reader.pages:
-        text += page.extract_text() + "\n"
-    return text
-
-
-def pdfium_get_text(data: bytes) -> str:
-    text = ""
-    pdf = pdfium.PdfDocument(data)
-    for i in range(len(pdf)):
-        page = pdf.get_page(i)
-        textpage = page.get_textpage()
-        text += textpage.get_text_range() + "\n"
-    return text
-
-
-def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
-    watermark_pdf = pypdf.PdfReader(BytesIO(watermark_data))
-    watermark_page = watermark_pdf.pages[0]
-    reader = pypdf.PdfReader(BytesIO(data))
-    writer = pypdf.PdfWriter()
-    for page in reader.pages:
-        page.merge_page(watermark_page)
-        writer.add_page(page)
-    with BytesIO() as bytes_stream:
-        writer.write(bytes_stream)
-        bytes_stream.seek(0)
-        return bytes_stream.read()
-
-
-def pypdf_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
-    images = []
-    try:
-        reader = pypdf.PdfReader(BytesIO(data))
-        for page in reader.pages:
-            for image in page.images:
-                images.append((image.name, image.data))
-    except Exception as exc:
-        print(f"pypdf Image extraction failure: {exc}")
-    return images
-
-
-def pymupdf_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
-    images = []
-    with PyMuPDF.open(stream=data, filetype="pdf") as pdf_file:
-        for page_index in range(len(pdf_file)):
-            page = pdf_file[page_index]
-            for image_index, img in enumerate(page.get_images(), start=1):
-                xref = img[0]
-                base_image = pdf_file.extract_image(xref)
-                image_bytes = base_image["image"]
-                image_ext = base_image["ext"]
-                images.append(
-                    (f"image{page_index+1}_{image_index}.{image_ext}", image_bytes)
-                )
-    return images
-
-
-def pymupdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
-    pdf_file = PyMuPDF.open(stream=data, filetype="pdf")
-    overlay = PyMuPDF.open(stream=watermark_data, filetype="pdf")
-    for i in range(pdf_file.page_count):
-        page = pdf_file.load_page(i)
-        page_front = PyMuPDF.open()
-        page_front.insert_pdf(overlay, from_page=i, to_page=i)
-        page.show_pdf_page(
-            page.rect,
-            page_front,
-            pno=0,
-            keep_proportion=True,
-            overlay=True,
-            oc=0,
-            rotate=0,
-            clip=None,
-        )
-    return pdf_file.write()
-
-
-def pdfminer_image_extraction(data: bytes) -> List[Tuple[str, bytes]]:
-    from PIL import Image
-
-    def get_image(layout_object):
-        if isinstance(layout_object, pdfminer.layout.LTImage):
-            return layout_object
-        if isinstance(layout_object, pdfminer.layout.LTContainer):
-            for child in layout_object:
-                return get_image(child)
-        else:
-            return None
-
-    images = []
-    try:
-        pages = list(extract_pages(BytesIO(data)))
-        for page in pages:
-            ex_images = list(filter(bool, map(get_image, page)))
-            for image in ex_images:
-                image_pil = Image.frombytes(
-                    "1", image.srcsize, image.stream.get_data(), "raw"
-                )
-
-                img_byte_arr = BytesIO()
-                image_pil.save(img_byte_arr, format="PNG")
-                img_byte_arr = img_byte_arr.getvalue()
-
-                images.append((f"{image.name}.png", img_byte_arr))
-    except Exception as exc:
-        print(f"pdfminer Image extraction failure: {exc}")
-    return images
-
-
-def borb_get_text(data: bytes) -> str:
-    text = ""
-    try:
-        l = SimpleTextExtraction()
-        PDF.loads(BytesIO(data), [l])
-        obj = l.get_text()
-        for page_index in range(len(obj)):
-            text += obj[page_index]
-    except Exception as exc:
-        print(exc)
-    return text
-
-
-def pdfplubmer_get_text(data: bytes) -> str:
-    text = ""
-    with pdfplumber.open(BytesIO(data)) as pdf:
-        for page in pdf.pages:
-            text += page.extract_text()
-            text += "\n"
-    return text
-
-
-def pdftotext_get_text(data: bytes) -> str:
-    new_file, filename = tempfile.mkstemp()
-    with open(filename, "wb") as fp:
-        fp.write(data)
-    args = ["/usr/bin/pdftotext", "-enc", "UTF-8", filename, "-"]
-    res = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output = res.stdout.decode("utf-8")
-    os.close(new_file)
-    os.remove(filename)
-    return output
-
-
 def main(
-    docs: List[Document],
-    libraries: Dict[str, Library],
-    add_text_extraction_quality: bool = True,
+    docs: list[Document],
+    libraries: dict[str, Library],
 ) -> None:
     cache_path = Path("cache.json")
     if cache_path.exists():
-        with open(cache_path, "r") as f:
+        with open(cache_path) as f:
             cache = Cache.parse_obj(json.load(f))
     else:
         cache = Cache()
@@ -353,7 +102,7 @@ def write_single_result(
     benchmark: Literal["read", "watermark", "image_extraction"],
     pdf_library_name: str,
     pdf_file_name: str,
-    data: Union[str, bytes, List[Tuple[str, bytes]]],
+    data: str | bytes | list[tuple[str, bytes]],
     extension: Literal["txt", "pdf", "image-list"],
 ) -> None:
     folder = f"{benchmark}/results/{pdf_library_name}"
@@ -373,208 +122,6 @@ def write_single_result(
                 f.write(data)
             except Exception as exc:
                 print(exc)
-
-
-def get_times(
-    cache: Cache, docs: List[Document], benchmark_type: str
-) -> Dict[str, List[Optional[float]]]:
-    """Create a dict pointing library names to the list of execution times."""
-    times = {}  # library : [doc1, doc2, ...]
-    for lib_name in cache.benchmark_times:
-        times[lib_name] = []
-        tmp = cache.benchmark_times[lib_name]  # doc:
-        doc2read_time = {doc: tmp[doc].get(benchmark_type) for doc in tmp}
-        times[lib_name] = [doc2read_time[doc.name] for doc in docs]
-    return times
-
-
-def write_benchmark_report(
-    names: List[str],
-    libname2details: Dict[str, Library],
-    docs: List[Document],
-    cache: Cache,
-) -> None:
-    """Create a benchmark report from all timing results."""
-    # avg_times = {name: np.mean(times_all[name]) for name in names}
-    with open("README.md", "w") as f:
-        f.write(f"# PDF Library Benchmarks\n")
-
-        f.write("This benchmark is about reading pure PDF files - not")
-        f.write("scanned documents and not documents that applied OCR.\n\n")
-
-        f.write(f"## Benchmarking machine\n")
-        f.write(f"{get_processor_name()}\n\n")
-
-        f.write("## Input Documents\n")
-        table = []
-        header = ["#", "Name", "File Size", "Pages"]
-        alignment = ["^>", "^<", "^>", "^>"]
-        for i, doc in enumerate(docs, start=1):
-            row = [
-                i,
-                f"[{doc.name}]({doc.url})",
-                sizeof_fmt(doc.filesize),
-                doc.nb_pages,
-            ]
-            table.append(row)
-        f.write(table_to_markdown(table, header, alignment=alignment))
-        f.write("\n")
-
-        f.write("## Libraries\n")
-        table = []
-        header = ["Name", "Last PyPI Release", "License", "Version", "Dependencies"]
-        for name in names:
-            lib = libname2details[name]
-            row = [
-                lib.name,
-                lib.last_release_date,
-                lib.license,
-                lib.version,
-                lib.dependencies,
-            ]
-            table.append(row)
-
-        f.write(table_to_markdown(table, header, alignment=alignment))
-        f.write("\n")
-
-        doc_headers = [f"[{i:^7}]({doc.url})" for i, doc in enumerate(docs, start=1)]
-        # ---------------------------------------------------------------------
-
-        f.write("\n")
-        f.write("## Text Extraction Speed\n\n")
-        table = []
-        headings = ["#", "Library", "Average"] + doc_headers
-        text_extraction_times = get_times(cache, docs, "read")
-        names = [
-            name
-            for name in text_extraction_times.keys()
-            if len(text_extraction_times[name]) > 0
-        ]
-        averages = [np.mean(text_extraction_times[name]) for name in names]
-        sort_order = np.argsort([avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
-
-        f.write("\n")
-        f.write("## Image Extraction Speed\n\n")
-        table = []
-        headings = ["#", "Library", "Average"] + doc_headers
-        image_extraction_times = get_times(cache, docs, "image_extraction")
-        names = [
-            name
-            for name in image_extraction_times.keys()
-            if len([el for el in image_extraction_times[name] if el is not None]) > 0
-        ]
-        print(names)
-        print(image_extraction_times["pypdf"])
-        averages = [np.mean(image_extraction_times[name]) for name in names]
-        sort_order = np.argsort([avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in image_extraction_times[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
-
-        f.write("\n")
-        f.write("## Watermarking Speed\n\n")
-        table = []
-        headings = ["#", "Library", "Average"] + doc_headers
-        watermarking_times = get_times(cache, docs, "watermark")
-        names = list(watermarking_times.keys())
-        names = [
-            name
-            for name in names
-            if len([el for el in watermarking_times[name] if el is not None]) > 0
-        ]
-        averages = [
-            np.mean([el for el in watermarking_times[name] if el is not None])
-            for name in names
-            if name in watermarking_times
-        ]
-        sort_order = np.argsort([avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
-
-        # ---------------------------------------------------------------------
-        f.write("\n")
-        f.write("## Watermarking File Size\n\n")
-        # Get data
-        all_scores: Dict[str, List[float]] = {}
-        for library_name in names:
-            lib = libname2details[library_name]
-            all_scores[library_name] = []
-            for doc in track(docs):
-                all_scores[library_name].append(
-                    cache.watermarking_result_file_size[library_name][doc.name]
-                )
-        # Print table
-        table = []
-        averages = [np.mean(all_scores[name]) for name in names]
-        sort_order = np.argsort([-avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg/10**6:1.1f}MB"]
-            row += [f"{score/10**6:1.1f}MB" for score in all_scores[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
-
-        # ---------------------------------------------------------------------
-        names = list(text_extraction_times.keys())
-        f.write("## Text Extraction Quality\n\n")
-        # Get data
-        all_scores: Dict[str, List[float]] = {}
-        for library_name in names:
-            lib = libname2details[library_name]
-            all_scores[library_name] = []
-            for doc in track(docs):
-                all_scores[library_name].append(
-                    cache.read_quality[library_name][doc.name]
-                )
-
-        # Print table
-        table = []
-        averages = [np.mean(all_scores[name]) for name in names]
-        sort_order = np.argsort([-avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
-            row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-
-
-def load_extracted_data(path: str) -> str:
-    with open(path) as fp:
-        return fp.read()
-
-
-def get_text_extraction_score(doc: Document, library_name: str):
-    gt_data = load_extracted_data(f"read/extraction-ground-truth/{doc.name}.txt")
-    extracted_data = load_extracted_data(f"read/results/{library_name}/{doc.name}.txt")
-    return ratio(gt_data, extracted_data)
 
 
 if __name__ == "__main__":
@@ -623,7 +170,7 @@ if __name__ == "__main__":
             "pdfminer.six",
             "pdfminer",
             "https://pypi.org/project/pdfminer.six/",
-            lambda n: extract_text(BytesIO(n)),
+            lambda n: pdfminder_extract_text(BytesIO(n)),
             version=pdfminer.__version__,
             license="MIT/X",
             last_release_date="2022-11-05",
@@ -684,4 +231,4 @@ if __name__ == "__main__":
             dependencies="PDFium (Foxit/Google)",
         ),
     }
-    main(docs, libraries, add_text_extraction_quality=True)
+    main(docs, libraries)
