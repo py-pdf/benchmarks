@@ -397,7 +397,7 @@ def write_benchmark_report(
     """Create a benchmark report from all timing results."""
     # avg_times = {name: np.mean(times_all[name]) for name in names}
     with open("README.md", "w") as f:
-        f.write(f"# PDF Text Extraction Benchmark\n")
+        f.write(f"# PDF Library Benchmarks\n")
 
         f.write("This benchmark is about reading pure PDF files - not")
         f.write("scanned documents and not documents that applied OCR.\n\n")

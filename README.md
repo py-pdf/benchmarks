@@ -1,4 +1,4 @@
-# PDF Text Extraction Benchmark
+# PDF Library Benchmarks
 This benchmark is about reading pure PDF files - notscanned documents and not documents that applied OCR.
 
 ## Benchmarking machine
