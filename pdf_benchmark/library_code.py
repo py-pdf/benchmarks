@@ -44,9 +44,17 @@ def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     watermark_page = watermark_pdf.pages[0]
     reader = pypdf.PdfReader(BytesIO(data))
     writer = pypdf.PdfWriter()
+
+    # Add the watermarks
     for page in reader.pages:
         page.merge_page(watermark_page)
         writer.add_page(page)
+
+    # Compress the data
+    for page in writer.pages:
+        page.compress_content_streams()  # This is CPU intensive!
+
+    # Write it back
     with BytesIO() as bytes_stream:
         writer.write(bytes_stream)
         bytes_stream.seek(0)

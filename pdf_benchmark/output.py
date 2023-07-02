@@ -159,7 +159,7 @@ def write_benchmark_report(
         # Print table
         table = []
         averages = [np.mean(all_scores[name]) for name in names]
-        sort_order = np.argsort([-avg for avg in averages])
+        sort_order = np.argsort([avg for avg in averages])
         for place, index in enumerate(sort_order, start=1):
             library_name = names[index]
             lib = libname2details[library_name]
