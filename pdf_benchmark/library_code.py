@@ -173,3 +173,18 @@ def pdftotext_get_text(data: bytes) -> str:
     os.close(new_file)
     os.remove(filename)
     return output
+
+
+def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
+    from pdfrw import PageMerge, PdfReader, PdfWriter
+
+    out_buffer = BytesIO()
+
+    wmark = PageMerge().add(PdfReader(fdata=watermark_data).pages[0])[0]
+    trailer = PdfReader(fdata=data)
+    for page in trailer.pages:
+        PageMerge(page).add(wmark, prepend=False).render()
+    PdfWriter(out_buffer, trailer=trailer).write()
+
+    out_buffer.seek(0)
+    return out_buffer.read()

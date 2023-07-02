@@ -13,7 +13,9 @@ from typing import Literal
 import fitz as PyMuPDF
 import pdfminer
 import pdfplumber
+import pdfrw
 import pypdf
+import pypdfium2
 import tika
 from pdfminer.high_level import extract_text as pdfminder_extract_text
 from rich.progress import track
@@ -25,6 +27,7 @@ from pdf_benchmark.library_code import (
     pdfium_get_text,
     pdfminer_image_extraction,
     pdfplubmer_get_text,
+    pdfrw_watermarking,
     pdftotext_get_text,
     pymupdf_get_text,
     pymupdf_image_extraction,
@@ -57,21 +60,23 @@ def main(
     with open(watermark_file, "rb") as f:
         watermark_data = f.read()
 
+    # Run the benchmarks
     for doc, name in track(list(product(docs, names))):
         data = doc.data
         lib = libraries[name]
         if cache.has_doc(lib, doc):
             print(f"Skip {doc.name} for {lib.name}")
             continue
-        print(f"{name} now parses {doc.name}...")
-        t0 = time.time()
-        text = lib.text_extraction_function(data)
-        t1 = time.time()
-        write_single_result("read", name, doc.name, text, "txt")
-        cache.benchmark_times[lib.pathname][doc.name]["read"] = t1 - t0
-        cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
-            doc, lib.pathname
-        )
+        if lib.text_extraction_function:
+            print(f"{name} now parses {doc.name}...")
+            t0 = time.time()
+            text = lib.text_extraction_function(data)
+            t1 = time.time()
+            write_single_result("read", name, doc.name, text, "txt")
+            cache.benchmark_times[lib.pathname][doc.name]["read"] = t1 - t0
+            cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
+                doc, lib.pathname
+            )
         if lib.watermarking_function:
             t0 = time.time()
             watermarked = lib.watermarking_function(watermark_data, data)
@@ -149,8 +154,10 @@ if __name__ == "__main__":
             "Tika",
             "tika",
             "https://pypi.org/project/tika/",
-            lambda n: parser.from_buffer(BytesIO(n))["content"],
-            tika.__version__,
+            text_extraction_function=lambda n: parser.from_buffer(BytesIO(n))[
+                "content"
+            ],
+            version=tika.__version__,
             dependencies="Apache Tika",
             license="Apache v2",
             last_release_date="2023-01-01",
@@ -159,7 +166,7 @@ if __name__ == "__main__":
             "pypdf",
             "pypdf",
             "https://pypi.org/project/pypdf/",
-            pypdf_get_text,
+            text_extraction_function=pypdf_get_text,
             version=pypdf.__version__,
             watermarking_function=pypdf_watermarking,
             license="BSD 3-Clause",
@@ -170,7 +177,7 @@ if __name__ == "__main__":
             "pdfminer.six",
             "pdfminer",
             "https://pypi.org/project/pdfminer.six/",
-            lambda n: pdfminder_extract_text(BytesIO(n)),
+            text_extraction_function=lambda n: pdfminder_extract_text(BytesIO(n)),
             version=pdfminer.__version__,
             license="MIT/X",
             last_release_date="2022-11-05",
@@ -180,7 +187,7 @@ if __name__ == "__main__":
             "pdfplumber",
             "pdfplumber",
             "https://pypi.org/project/pdfplumber/",
-            pdfplubmer_get_text,
+            text_extraction_function=pdfplubmer_get_text,
             version=pdfplumber.__version__,
             license="MIT",
             last_release_date="2023-04-13",
@@ -190,7 +197,7 @@ if __name__ == "__main__":
             "PyMuPDF",
             "pymupdf",
             "https://pypi.org/project/PyMuPDF/",
-            lambda n: pymupdf_get_text(n),
+            text_extraction_function=lambda n: pymupdf_get_text(n),
             version=PyMuPDF.version[0],
             watermarking_function=pymupdf_watermarking,
             image_extraction_function=pymupdf_image_extraction,
@@ -202,10 +209,10 @@ if __name__ == "__main__":
             "pdftotext",
             "pdftotext",
             "https://poppler.freedesktop.org/",
-            pdftotext_get_text,
-            "0.86.1",
-            None,
-            "build-essential libpoppler-cpp-dev pkg-config python3-dev",
+            text_extraction_function=pdftotext_get_text,
+            version="0.86.1",
+            watermarking_function=None,
+            dependencies="build-essential libpoppler-cpp-dev pkg-config python3-dev",
             last_release_date="-",
             license="GPL",
         ),
@@ -213,9 +220,9 @@ if __name__ == "__main__":
             "Borb",
             "borb",
             "https://pypi.org/project/borb/",
-            borb_get_text,
-            "2.1.15",
-            None,
+            text_extraction_function=borb_get_text,
+            version="2.1.15",
+            watermarking_function=None,
             license="AGPL/Commercial",
             last_release_date="2023-06-23",
         ),
@@ -223,12 +230,23 @@ if __name__ == "__main__":
             "pypdfium2",
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
-            pdfium_get_text,
-            "4.17.0",
-            None,
+            text_extraction_function=pdfium_get_text,
+            version=pypdfium2.V_PYPDFIUM2,
+            watermarking_function=None,
             license="Apache-2.0 or BSD-3-Clause",
             last_release_date="2023-06-27",
             dependencies="PDFium (Foxit/Google)",
+        ),
+        "pdfrw": Library(
+            "pdfrw",
+            "pdfrw",
+            "https://pypi.org/project/pdfrw/",
+            text_extraction_function=None,
+            version=pdfrw.__version__,
+            watermarking_function=pdfrw_watermarking,
+            license="MIT",
+            last_release_date="2017-09-18",
+            dependencies="",
         ),
     }
     main(docs, libraries)

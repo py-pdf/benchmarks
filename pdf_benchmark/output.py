@@ -1,9 +1,44 @@
+from typing import Literal
+
 import numpy as np
 from rich.progress import track
 
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.environment_info import get_processor_name
 from pdf_benchmark.utils import sizeof_fmt, table_to_markdown
+
+
+def speed_section(
+    title: str,
+    benchmark_type: Literal["read", "image_extraction"],
+    f,
+    doc_headers,
+    cache,
+    docs,
+    libname2details,
+) -> dict[str, list[float | None]]:
+    f.write(f"## {title}\n\n")
+    table = []
+    headings = ["#", "Library", "Average"] + doc_headers
+    text_extraction_times = get_times(cache, docs, benchmark_type)
+    names = [
+        name
+        for name in text_extraction_times.keys()
+        if len([el for el in text_extraction_times[name] if el is not None]) > 0
+    ]
+    averages = [np.mean(text_extraction_times[name]) for name in names]
+    sort_order = np.argsort([avg for avg in averages])
+    for place, index in enumerate(sort_order, start=1):
+        library_name = names[index]
+        lib = libname2details[library_name]
+        avg = averages[index]
+        row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
+        row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
+        table.append(row)
+    f.write(table_to_markdown(table, headings=headings))
+    f.write("\n")
+    f.write("\n")
+    return text_extraction_times
 
 
 def get_times(
@@ -72,52 +107,25 @@ def write_benchmark_report(
         # ---------------------------------------------------------------------
 
         f.write("\n")
-        f.write("## Text Extraction Speed\n\n")
-        table = []
-        headings = ["#", "Library", "Average"] + doc_headers
-        text_extraction_times = get_times(cache, docs, "read")
-        names = [
-            name
-            for name in text_extraction_times.keys()
-            if len(text_extraction_times[name]) > 0
-        ]
-        averages = [np.mean(text_extraction_times[name]) for name in names]
-        sort_order = np.argsort([avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
+        text_extraction_times = speed_section(
+            "Text Extraction Speed",
+            "read",
+            f,
+            doc_headers,
+            cache,
+            docs,
+            libname2details,
+        )
+        speed_section(
+            "Image Extraction Speed",
+            "image_extraction",
+            f,
+            doc_headers,
+            cache,
+            docs,
+            libname2details,
+        )
 
-        f.write("\n")
-        f.write("## Image Extraction Speed\n\n")
-        table = []
-        headings = ["#", "Library", "Average"] + doc_headers
-        image_extraction_times = get_times(cache, docs, "image_extraction")
-        names = [
-            name
-            for name in image_extraction_times.keys()
-            if len([el for el in image_extraction_times[name] if el is not None]) > 0
-        ]
-        print(names)
-        print(image_extraction_times["pypdf"])
-        averages = [np.mean(image_extraction_times[name]) for name in names]
-        sort_order = np.argsort([avg for avg in averages])
-        for place, index in enumerate(sort_order, start=1):
-            library_name = names[index]
-            lib = libname2details[library_name]
-            avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in image_extraction_times[library_name]]
-            table.append(row)
-        f.write(table_to_markdown(table, headings=headings))
-        f.write("\n")
-
-        f.write("\n")
         f.write("## Watermarking Speed\n\n")
         table = []
         headings = ["#", "Library", "Average"] + doc_headers
@@ -139,7 +147,7 @@ def write_benchmark_report(
             lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in text_extraction_times[library_name]]
+            row += [f"{t:0.1f}s" for t in watermarking_times[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
@@ -179,9 +187,12 @@ def write_benchmark_report(
             lib = libname2details[library_name]
             all_scores[library_name] = []
             for doc in track(docs):
-                all_scores[library_name].append(
-                    cache.read_quality[library_name][doc.name]
-                )
+                if doc.name not in cache.read_quality[library_name]:
+                    all_scores[library_name].append(0)
+                else:
+                    all_scores[library_name].append(
+                        cache.read_quality[library_name][doc.name]
+                    )
 
         # Print table
         table = []
@@ -191,6 +202,8 @@ def write_benchmark_report(
             library_name = names[index]
             lib = libname2details[library_name]
             avg = averages[index]
+            if avg == 0:
+                continue
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
             row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
             table.append(row)

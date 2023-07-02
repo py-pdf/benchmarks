@@ -47,8 +47,8 @@ class Library(NamedTuple):
     name: str
     pathname: str
     url: str
-    text_extraction_function: Callable[[bytes], str]
     version: str
+    text_extraction_function: Callable[[bytes], str] | None = None
     watermarking_function: Callable[[bytes, bytes], bytes] | None = None
     dependencies: str = ""
     license: str = ""
