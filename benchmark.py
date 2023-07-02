@@ -259,13 +259,10 @@ def borb_get_text(data: bytes) -> str:
     text = ""
     try:
         l = SimpleTextExtraction()
-        d = PDF.loads(BytesIO(data), [l])
-        page_nb = 0
-        extr = l.get_text_for_page(page_nb)
-        while extr != "":
-            text += extr
-            extr = l.get_text_for_page(page_nb)
-            page_nb += 1
+        PDF.loads(BytesIO(data), [l])
+        obj = l.get_text()
+        for page_index in range(len(obj)):
+            text += obj[page_index]
     except Exception as exc:
         print(exc)
     return text
@@ -619,7 +616,7 @@ if __name__ == "__main__":
             version=pypdf.__version__,
             watermarking_function=pypdf_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2022-12-31",
+            last_release_date="2023-06-27",
             image_extraction_function=pypdf_image_extraction,
         ),
         "pdfminer": Library(
@@ -639,7 +636,7 @@ if __name__ == "__main__":
             pdfplubmer_get_text,
             version=pdfplumber.__version__,
             license="MIT",
-            last_release_date="2022-11-22",
+            last_release_date="2023-04-13",
         ),
         "pymupdf": Library(
             "PyMuPDF",
@@ -651,7 +648,7 @@ if __name__ == "__main__":
             image_extraction_function=pymupdf_image_extraction,
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
-            last_release_date="2022-12-13",
+            last_release_date="2023-06-21",
         ),
         "pdftotext": Library(
             "pdftotext",
@@ -672,7 +669,7 @@ if __name__ == "__main__":
             "2.1.15",
             None,
             license="AGPL/Commercial",
-            last_release_date="2022-12-06",
+            last_release_date="2023-06-23",
         ),
         "pdfium": Library(
             "pypdfium2",
@@ -682,7 +679,7 @@ if __name__ == "__main__":
             "4.17.0",
             None,
             license="Apache-2.0 or BSD-3-Clause",
-            last_release_date="2022-12-26",
+            last_release_date="2023-06-27",
             dependencies="PDFium (Foxit/Google)",
         ),
     }
