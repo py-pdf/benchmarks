@@ -170,7 +170,7 @@ if __name__ == "__main__":
             version=pypdf.__version__,
             watermarking_function=pypdf_watermarking,
             license="BSD 3-Clause",
-            last_release_date="2023-06-27",
+            last_release_date="2023-07-09",
             image_extraction_function=pypdf_image_extraction,
         ),
         "pdfminer": Library(
