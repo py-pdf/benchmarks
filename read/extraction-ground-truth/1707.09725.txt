@@ -76,13 +76,9 @@ evaluated. Additionally, some results are confirmed and quantified for CIFAR-100
 example, the positive impact of smaller batch sizes, averaging ensembles, data augmentation
 and test-time transformations on the accuracy. Other results, such as the positive impact of
 learned color transformation on the test accuracy could not be confirmed. A model which
-has only one million learned parameters for an input size of 32× 32× 3 and 100 classes and
+has only one million learned parameters for an input size of 32×32×3 and 100 classes and
 which beats the state of the art on the benchmark dataset Asirra, GTSRB, HASYv2 and
 STL-10 was developed.
-
-vii
-
-
 
 Zusammenfassung
 
@@ -350,7 +346,7 @@ e
 d∑
 ic=1
 
-I(x+ ix, y + iy, ic) · F (ix, iy, ic)
+I(x+ ix, y + iy, ic) · F(ix, iy, ic)
 
 This procedure is explained by Figure 2.1. It is essentially a discrete convolution.
 
@@ -403,9 +399,6 @@ this is by learning image filters in so called convolutional layers.
 
 While MLPs vectorize the input, the input of a layer in a CNN are feature maps. A feature
 map is a matrix m ∈ Rw×h, but typically the width equals the height (w = h). For an RGB
-
-4
-
 
 
 2.2. CNN Layer Types
@@ -699,11 +692,11 @@ the same shape D ∈ { 0, 1 }s is sampled, where each element di is sampled inde
 from a Bernoulli distribution. The results are element-wise multiplied to calculate the
 output out of the Dropout layer:
 
-out = D � in with di ∼ B(1, p)
+out = D ⊙ in with di ∼ B(1, p)
 
-where � is the Hadamard product
+where ⊙ is the Hadamard product
 
-(A�B)i,j := (A)i,j(B)i,j
+(A⊙B)i,j := (A)i,j(B)i,j
 
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
 Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout prob-
@@ -793,17 +786,17 @@ The question where Batch Normalization layers (BN) should be applied and for whi
 reasons is still open. For Dropout, it doesn’t matter if it is applied before or after the
 activation function. Considering this, the possible options for the order are:
 
-1. CONV / FC → BN → activation function → Dropout → . . .
-2. CONV / FC → activation function → BN → Dropout → . . .
-3. CONV / FC → activation function → Dropout → BN → . . .
-4. CONV / FC → Dropout → BN → activation function → . . .
+1. CONV / FC → BN → activation function → Dropout → ...
+2. CONV / FC → activation function → BN → Dropout → ...
+3. CONV / FC → activation function → Dropout → BN → ...
+4. CONV / FC → Dropout → BN → activation function → ...
 
 The authors of [IS15] suggest to use Batch Normalization before the activation function
 as in Items 1 and 4. Batch Normalization after the activation lead to better results in
 https://github.com/ducha-aiki/caffenet-benchmark/blob/master/batchnorm.md
 
 Another normalization layer is Local Response Normalization as described in [KSH12],
-which includes `2 normalization as described in [WWQ13]. Those two normalization layers,
+which includes ℓ2 normalization as described in [WWQ13]. Those two normalization layers,
 however, are superseded by Batch Normalization.
 
 3also called inference time
@@ -873,21 +866,21 @@ concatenate
 
 total 32
 groups
-. . .
+...
 
 128-d out
 
-4 @ 1× 1× 256
+4 @ 1×1×256
 
-4 @ 3× 3× 4
+4 @ 3×3×4
 
-4 @ 1× 1× 256
+4 @ 1×1×256
 
-4 @ 3× 3× 4
+4 @ 3×3×4
 
-4 @ 1× 1× 256
+4 @ 1×1×256
 
-4 @ 3× 3× 4
+4 @ 3×3×4
 
 Figure 2.5.: Aggregation block with a cardinality of C = 32. Each of the 32 groups is a 2-layer
 convolutional network. The first layer receives 256 feature maps and applies four 1× 1
@@ -900,10 +893,6 @@ The hyperparameters of an aggregation block are:
 • The topology of the group members.
 • The cardinality C ∈ N≥1. Note that a cardinality of C = 1 is equivalent in every
 aspect to using the group network without an aggregation block.
-
-12
-
-
 
 2.3. CNN Blocks
 
@@ -971,7 +960,7 @@ In order to reduce the dimensionality (width and height) of the feature maps, on
 applies pooling.
 
 Global pooling is another type of transition layer. It applies pooling over the complete
-feature map size to shrink the input to a constant 1× 1 feature map and hence allows one
+feature map size to shrink the input to a constant 1×1 feature map and hence allows one
 network to have different input sizes.
 
 
@@ -1050,10 +1039,8 @@ techniques to deal with skewed classes might help.
 
 An automatic criterion to check for this problem is
 
-accuracy ≤ max({ r(i) | i = 1, . . . , k })∑k
-i=1 r(i)
-
-+ ε
+accuracy ≤ max({ r(i) | i = 1, ..., k })∑k
+i=1 r(i)+ ε
 
 where ε is a small value to compensate the fact that some examples might be correct just
 by chance.
@@ -1087,7 +1074,7 @@ improve the overall system.
 2.5.3. Validation Curves: Accuracy, loss and other metrics
 
 Validation curves display a hyperparameter (e.g., the training epoch) on the horizontal
-axis and a quality metric on the vertical axis. Accuracy, error = (1− accuracy) or loss are
+axis and a quality metric on the vertical axis. Accuracy, error = (1−accuracy) or loss are
 typical quality metrics. Other quality metrics can be found in [OHIL16].
 
 In case that the number of training epochs are used as the examined hyperparameter,
@@ -1129,7 +1116,7 @@ Loss functions
 The loss function (also called error function or cost function) is a function which assigns a
 real value to a complex event like the predicted class of a feature vector. It is used to define
 the objective function. For classification problems the loss function is typically cross-entropy
-with `1 or `2 regularization, as it was described in [NH92]:
+with ℓ1 or ℓ2 regularization, as it was described in [NH92]:
 
 ECE(W ) = −
 ∑
@@ -1463,11 +1450,8 @@ There are techniques which can almost always be applied to improve accuracy of C
 classifiers:
 
 • Ensembles [CMS12]
-
 • Training-time augmentation (see Appendix B.2)
-
 • Test-time transformations [DDFK16, How13, HZRS15b]
-
 • Pre-training and fine-tuning [ZDGD14, GDDM14]
 
 One of the most simple ensemble techniques which was introduced in [CMS12] is averaging
@@ -3431,7 +3415,7 @@ when the training loss was used as the early stopping criterion.
 5.17. Regularization
 
 Stronger regularization might even improve the results when using the training loss as an
-early stopping criterion. `2 regularization with a weighting factor of λ = 0.0001 is used in
+early stopping criterion. ℓ2 regularization with a weighting factor of λ = 0.0001 is used in
 all other experiments. While the accuracy as shown in Table 5.19 does not show a clear
 pattern, the number of epochs increases with lower model regularization (see Table 5.20).
 
@@ -3469,7 +3453,7 @@ Training Set Test Set Training Set Test Set
 λ = 0.001 82.86 % σ = 0.89 63.03 % σ = 0.67 91.86 % 71.02 %
 λ = 0.0001 77.96 % σ = 2.18 64.42 % σ = 0.73 81.44 % 67.03 %
 
-Table 5.19.: Different choices of `2 model regularization applied to the optimized model.
+Table 5.19.: Different choices of ℓ2 model regularization applied to the optimized model.
 
 λ min max mean std
 
@@ -3478,7 +3462,7 @@ Table 5.19.: Different choices of `2 model regularization applied to the optimiz
 λ = 0.0001 579 833 696.1 79.1
 
 Table 5.20.: Training time in epochs of models with early stopping on training loss by different
-choices of `2 model regularization applied to the optimized model.
+choices of ℓ2 model regularization applied to the optimized model.
 
 69
 
@@ -3898,10 +3882,8 @@ and class k.
 
 However, regularization terms weighted with a constant λ ∈ (0,+∞) are sometimes added:
 
-• LASSO: `1 (e.g., used in [HPTD15])
-
-• Weight decay: `2 (e.g., λ = 0.0005 as in [MSM16])
-
+• LASSO: ℓ1 (e.g., used in [HPTD15])
+• Weight decay: ℓ2 (e.g., λ = 0.0005 as in [MSM16])
 • Orthogonality regularization (|(W T ·W − I)|, see [VTKP17])
 
 81
@@ -3933,42 +3915,24 @@ Nine variations which adjust the learning rate during training are:
 
 • Momentum:
 
-w
-(t+1)
-ji ← w
-
-(t)
-ji + ∆w
-
-(t+1)
-ji with ∆w
-
-(t+1)
-ji = −η
-
-∂EB
-∂wji
-
-+ α∆w
-(t)
+w(t+1)
+ji ← w(t)
+ji + ∆w(t+1)
+ji with ∆w(t+1)
+ji = −η∂EB
+∂wji+ α∆w(t)
 ji
 
 with α ∈ [0, 1], typically 0.9 (e.g., [ZF14, MSM16])
 
 • Adagrad [DHS11]
-
 • RProp and the mini-batch version RMSProp [TH12]
-
 • Adadelta [Zei12]
-
 • Power Scheduling [Xu11]: η(t) = η(0)(1 + a · t)−c, where t ∈ N0 is the training step,
 a, c are constants.
-
 • Performance Scheduling [SHY+13]: Measure the error on the cross validation set and
 decrease the learning rate when the algorithms improvement is below a threshold.
-
-• Exponential Decay Learning Rate [SHY+13]: η(t) = η(0) · 10−
-t
+• Exponential Decay Learning Rate [SHY+13]: η(t) = η(0) · 10−t
 k where t ∈ N0 is the
 
 training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
@@ -3976,7 +3940,6 @@ until the learning rate is decreased by 1/10th.
 
 • Newbob Scheduling [new00]: Start with Performance Scheduling, then use Exponential
 Decay Scheduling.
-
 • Adam and AdaMax [KB14]
 
 82
@@ -3990,9 +3953,7 @@ Some of those are explained in [Rud16].
 Other first-order gradient optimization methods are:
 
 • Quickprop [Fah88]
-
 • Nesterov Accellerated Momentum (NAG) [Nes83]
-
 • Conjugate Gradient method [Cha92]: Combines a line search for the step size with
 the gradients direction.
 
@@ -4002,9 +3963,7 @@ and L-BFGS need the inverse of the Hessian matrix which is intractable for today
 However, there are alternatives which do not use gradient information:
 
 • Genetic algorithms such as NeuroEvolution of Augmenting Topologies (NEAT) [SM02]
-
 • Simulated Annealing [vLA87]
-
 • Twiddle: A local hill-climbing algorithm explained by Sebastian Thrun and described
 on [Tho14b]
 
@@ -4160,21 +4119,15 @@ B.7. Regularization
 Regularization techniques aim to make the fitted function smoother and reduce overfitting.
 Regularization techniques are:
 
-• `1, `2, and Orthogonality regularization: See Appendix B.4
-
+• ℓ1, ℓ2, and Orthogonality regularization: See Appendix B.4
 • Max-norm regularization (e.g. used ins [SHK+14])
-
 • Dropout (introduced in [SHK+14]), DropConnect (see [WZZ+13]), Stochastic Depth
 (see [HSL+16])
 
 • Feature scale clipping (see [ZF14])
-
 • Data augmentation (according to [ZBH+16])
-
 • Global average pooling (according to [ZKL+15])
-
 • Dense-Sparse-Dense training (see [HPN+16])
-
 • Soft targets (see [HVD15])
 
 85
@@ -4366,19 +4319,19 @@ Patch size / stride
 
 Parameters FLOPs Output size
 
-Input 3 @ 224× 224
-1 Convolution 96 @ 11× 11× 3 / 4 34 944 211 M 96@ 55× 55
+Input 3 @ 224×224
+1 Convolution 96 @ 11×11×3 / 4 34 944 211 M 96@ 55×55
 
-LCN 12 M 96@ 55× 55
-2 Max pooling 3× 3 / 2 0 301 k 96 @ 27× 27
-3 Convolution 256 @ 5× 5× 48 / 1 307 456 448M 256 @ 13× 13
+LCN 12 M 96@ 55×55
+2 Max pooling 3×3 / 2 0 301 k 96 @ 27×27
+3 Convolution 256 @ 5× 5× 48 / 1 307 456 448M 256 @ 13×13
 
-LCN 3 M 256 @ 13× 13
-4 Max pooling 3× 3 / 2 0 50 k 256 @ 13× 13
-5 Convolution 384 @ 3× 3× 256 / 1 885 120 299 M 384 @ 13× 13
-7 Convolution 384 @ 3× 3× 192 / 1 663 936 224 M 384 @ 13× 13
-9 Convolution 256 @ 3× 3× 192 / 1 442 624 150 M 256 @ 13× 13
-10 Max pooling 3× 3 / 2 0 50 k 256 @ 6× 6
+LCN 3 M 256 @ 13×13
+4 Max pooling 3×3 / 2 0 50 k 256 @ 13× 13
+5 Convolution 384 @ 3×3×256 / 1 885 120 299 M 384 @ 13×13
+7 Convolution 384 @ 3×3×192 / 1 663 936 224 M 384 @ 13×13
+9 Convolution 256 @ 3×3×192 / 1 442 624 150 M 256 @ 13×13
+10 Max pooling 3×3 / 2 0 50 k 256 @ 6×6
 11 FC 4096 neurons 37 752 832 75 M 4096
 12 FC 4096 neurons 16 781 312 34 M 4096
 13 FC 1000 neurons 4 097 000 8 M 1000∑
@@ -4420,17 +4373,17 @@ float
 
 Input
 
-C 64@3× 3/1
+C 64@3×3/1
 
-C 64@3× 3/1
+C 64@3×3/1
 
-112× 112
+112×112
 
-max pooling 2× 2/1
+max pooling 2×2/1
 
-C 128@3× 3/1
+C 128@3×3/1
 
-C 128@3× 3/1
+C 128@3×3/1
 
 56× 56
 
@@ -4440,31 +4393,31 @@ C 256@3× 3/1
 
 C 256@3× 3/1
 
-C 256@3× 3/1
+C 256@3×3/1
 
-28× 28
+28×28
 
-max pooling 2× 2/1
+max pooling 2×2/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-14× 14
+14×14
 
-max pooling 2× 2/1
+max pooling 2×2/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-C 512@3× 3/1
+C 512@3×3/1
 
-7× 7
+7×7
 
-max pooling 2× 2/1
+max pooling 2×2/1
 
 Fully Connected 4096
 
@@ -4476,8 +4429,8 @@ Dropout, p = 0.5
 
 Fully Connected 1000
 
-Figure D.3.: Architecture of VGG-16 D. C 512@3× 3/1 is a convolutional layer with 512 filters of
-kernel size 3× 3 with stride 1. All convolutional layers use SAME padding.
+Figure D.3.: Architecture of VGG-16 D. C 512@3×3/1 is a convolutional layer with 512 filters of
+kernel size 3×3 with stride 1. All convolutional layers use SAME padding.
 
 92
 
@@ -4490,30 +4443,30 @@ Patch size / stride
 
 Parameters FLOPs Output size
 
-Input 3 @ 224× 224
-1 Convolution 64 @ 3× 3× 3 / 1 1 792 186 M 64@ 224× 224
-2 Convolution 64 @ 3× 3× 64 / 1 36 928 3712M 64@ 224× 224
+Input 3 @ 224×224
+1 Convolution 64 @ 3×3×3 / 1 1 792 186 M 64@ 224×224
+2 Convolution 64 @ 3×3×64 / 1 36 928 3712M 64@ 224×224
 
-Max pooling 2× 2 / 2 0 2 M 64 @ 112× 112
-3 Convolution 128 @ 3× 3× 64 / 1 73 856 1856 M 128 @ 112× 112
-4 Convolution 128 @ 3× 3× 128 / 1 147 584 3705 M 128 @ 112× 112
+Max pooling 2×2 / 2 0 2 M 64 @ 112×112
+3 Convolution 128 @ 3×3×64 / 1 73 856 1856 M 128 @ 112×112
+4 Convolution 128 @ 3×3×128 / 1 147 584 3705 M 128 @ 112×112
 
-Max pooling 2× 2 / 2 0 1 M 128 @ 56× 56
-5 Convolution 256 @ 3× 3× 128 / 1 295 168 1853 M 256 @ 56× 56
-6 Convolution 256 @ 3× 3× 256 / 1 590 080 3703 M 256 @ 56× 56
-7 Convolution 256 @ 3× 3× 256 / 1 590 080 3703 M 256 @ 56× 56
+Max pooling 2×2 / 2 0 1 M 128 @ 56×56
+5 Convolution 256 @ 3×3×128 / 1 295 168 1853 M 256 @ 56×56
+6 Convolution 256 @ 3×3×256 / 1 590 080 3703 M 256 @ 56×56
+7 Convolution 256 @ 3×3×256 / 1 590 080 3703 M 256 @ 56×56
 
-Max pooling 2× 2 / 2 0 <1 M 256 @ 28× 28
-8 Convolution 512 @ 3× 3× 256 / 1 1 180 160 1851 M 512 @ 28× 28
-9 Convolution 512 @ 3× 3× 512 / 1 2 359 808 3701 M 512 @ 28× 28
-10 Convolution 512 @ 3× 3× 512 / 1 2 359 808 3701 M 512 @ 28× 28
+Max pooling 2×2 / 2 0 <1 M 256 @ 28×28
+8 Convolution 512 @ 3×3×256 / 1 1 180 160 1851 M 512 @ 28×28
+9 Convolution 512 @ 3×3×512 / 1 2 359 808 3701 M 512 @ 28×28
+10 Convolution 512 @ 3×3×512 / 1 2 359 808 3701 M 512 @ 28×28
 
-Max pooling 2× 2 / 2 0 <1 M 512 @ 14× 14
-11 Convolution 512 @ 3× 3× 512 / 1 2 359 808 925 M 512 @ 14× 14
-12 Convolution 512 @ 3× 3× 512 / 1 2 359 808 925 M 512 @ 14× 14
-13 Convolution 512 @ 3× 3× 512 / 1 2 359 808 925 M 512 @ 14× 14
+Max pooling 2×2 / 2 0 <1 M 512 @ 14×14
+11 Convolution 512 @ 3×3×512 / 1 2 359 808 925 M 512 @ 14×14
+12 Convolution 512 @ 3×3×512 / 1 2 359 808 925 M 512 @ 14×14
+13 Convolution 512 @ 3×3×512 / 1 2 359 808 925 M 512 @ 14×14
 
-Max pooling 2× 2 / 2 0 <1 M 512 @ 7× 7
+Max pooling 2×2 / 2 0 <1 M 512 @ 7×7
 14 FC 4096 neurons 102 764 544 206 M 4096
 
 Dropout 0 0 4096
@@ -4541,15 +4494,15 @@ D.4. GoogleNet, Inception v2 and v3
 The large number of parameters and operations is a problem when such models should get
 applied in practice to thousands of images. In order to reduce the computational cost while
 maintaining the classification quality, GoogleNet [SLJ+15] and the Inception module were
-developed. The Inception module essentially only computes 1× 1 filters, 3× 3 filters and
-5× 5 filters in parallel, but applied bottleneck 1× 1 filters before to reduce the number of
+developed. The Inception module essentially only computes 1×1 filters, 3×3 filters and
+5×5 filters in parallel, but applied bottleneck 1×1 filters before to reduce the number of
 parameters. It is shown in Figure D.4.
 
 Figure D.4.: Inception module
 Image source: [SLJ+15]
 
-Compared to GoogleNet, Inception v2 [SVI+15] removed the 5 × 5 filters and replaced
-them by two successive layers of 3× 3 filters. A visualization of an Inception v2 module
+Compared to GoogleNet, Inception v2 [SVI+15] removed the 5×5 filters and replaced
+them by two successive layers of 3×3 filters. A visualization of an Inception v2 module
 is given in Figure D.5. Additionally, Inception v2 applies successive asymmetric filters to
 approximate symmetric filters with fewer parameters. The authors call this approach filter
 factorization.
@@ -4573,16 +4526,16 @@ average pooling. The stem, module B and module C use separable convolutions.
 
 # × Type Parameters Output size
 
-Input 3 @ 299× 299
-1 Stem 605 728 384 @ 35× 35
-2 4× Inception A 317 632 384 @ 35× 35
-3 Reduction A 2 306 112 1024 @ 17× 17
-4 7× Inception B 2 936 256 1024 @ 17× 17
-5 Reduction B 2 747 392 1536 @ 8× 8
-6 3× Inception C 4 553 088 1536 @ 8× 8
+Input 3 @ 299×299
+1 Stem 605 728 384 @ 35×35
+2 4×Inception A 317 632 384 @ 35×35
+3 Reduction A 2 306 112 1024 @ 17×17
+4 7× Inception B 2 936 256 1024 @ 17×17
+5 Reduction B 2 747 392 1536 @ 8×8
+6 3× Inception C 4 553 088 1536 @ 8×8
 
-Global Average Pooling 0 1536 @ 1× 1
-Dropout (p=0.8) 0 1536 @ 1× 1
+Global Average Pooling 0 1536 @ 1×1
+Dropout (p=0.8) 0 1536 @ 1×1
 
 7 Softmax 1 537 000 1000∑
 42 679 816

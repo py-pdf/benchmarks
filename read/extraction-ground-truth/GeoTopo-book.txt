@@ -138,7 +138,7 @@ Mengen, die sowohl abgeschlossen als auch offen sind.
 Bemerkung 1 (Mengen, die offen & abgeschlossen sind, ex.)
 Betrachte ∅ und X mit der trivialen Topologie Ttriv = { ∅, X }.
 Es gilt: X ∈ T und ∅ ∈ T, d. h. X und ∅ sind offen. Außerdem XC = X \X = ∅ ∈ T und
-X \ ∅ = X ∈ T, d. h. X und ∅ sind als Komplement offener Mengen abgeschlossen. �
+X \ ∅ = X ∈ T, d. h. X und ∅ sind als Komplement offener Mengen abgeschlossen. ■
 
 Beispiel 1 (Topologien)
 1) X = Rn mit der von der euklidischen Metrik erzeugten Topologie TEuklid:
@@ -432,7 +432,7 @@ Beweis: Sei (xn) eine konvergierende Folge und x und y Grenzwerte der Folge.
 
 Da X hausdorffsch ist, gibt es Umgebungen Ux von x und Uy von y mit Ux ∩ Uy = ∅ falls
 x 6= y. Da (xn) gegen x und y konvergiert, existiert ein n0 mit xn ∈ Ux ∩ Uy für alle n ≥ n0
-⇒ x = y �
+⇒ x = y ■
 
 1Diese Metrik wird auch „französische Eisenbahnmetrik“ genannt.
 
@@ -476,7 +476,7 @@ Def. 12.a
 Dann gibt es ε > 0, sodass Bε(f(x)) ⊆ U
 Vor.
 ==⇒ Es gibt δ > 0, sodass f(Bδ(x)) ⊆ Bε(f(x)))
-⇒ Bδ(x) ⊆ f−1(Bε(f(x))) ⊆ f−1(U) �
+⇒ Bδ(x) ⊆ f−1(Bε(f(x))) ⊆ f−1(U) ■
 
 Bemerkung 8
 Seien X,Y topologische Räume und f : X → Y eine Abbildung. Dann gilt:
@@ -522,13 +522,11 @@ g◦f
 
 Y
 
-g
-��
-
+g↙↙
 Z
 
 Beweis: Sei U ⊆ Z offen ⇒ (g ◦ f)−1(U) = f−1(g−1(U)). g−1(U) ist offen in Y weil g stetig
-ist, f−1(g−1(U)) ist offen in X, weil f stetig ist. �
+ist, f−1(g−1(U)) ist offen in X, weil f stetig ist. ■
 
 Bemerkung 10
 a) Für jeden topologischen Raum X ist
@@ -550,7 +548,7 @@ Seien X,Y topologische Räume. πX : X × Y → X und πY : X × Y → Y die Pro
 Wird X × Y mit der Produkttopologie versehen, so sind πX und πY stetig.
 
 Beweis: Sei U ⊆ X offen
-⇒ π−1X (U) = U × Y ist offen in X × Y . �
+⇒ π−1X (U) = U × Y ist offen in X × Y . ■
 
 Bemerkung 12
 Sei X ein topologischer Raum, ∼ eine Äquivalenzrelation auf X, X = X/∼ der Bahnenraum
@@ -561,7 +559,7 @@ Dann ist π stetig.
 
 12 1.4. ZUSAMMENHANG
 
-Beweis: Nach Definition ist U ⊆ X offen ⇔ π−1(U) ⊆ X offen. �
+Beweis: Nach Definition ist U ⊆ X offen ⇔ π−1(U) ⊆ X offen. ■
 
 Beobachtung: Die Quotiententopologie ist die feinste Topologie, sodass π stetig wird.
 
@@ -713,7 +711,7 @@ Wäre A ∩A1 = ∅
 ⇒ A1 = ∅
 ⇒ Widerspruch zu A1 6= ∅
 ⇒ A ∩A1 6= ∅ und analog A ∩A2 6= ∅
-⇒ Widerspruch zu A ist zusammenhängend. �
+⇒ Widerspruch zu A ist zusammenhängend. ■
 
 Bemerkung 15
 Sei X ein topologischer Raum und A,B ⊆ X zusammenhängend.
@@ -735,7 +733,7 @@ B = (B ∩ U1)︸ ︷︷ ︸
 
 ist unerlaubte Zerlegung.
 
-�
+■
 
 Definition 14
 Sei X ein topologischer Raum.
@@ -785,7 +783,7 @@ c) Ist Z(y) ∩ Z(x) 6= ∅ Bem. 15=====⇒ Z(y) ∪ Z(x) ist zusammenhängend.
 ⇒ Z(x) ∪ Z(y) ⊆ Z(x)⇒ Z(y) ⊆ Z(x)
 ⊆ Z(y)⇒ Z(x) ⊆ Z(y)
 
-�
+■
 
 Bemerkung 17
 Sei f : X → Y stetig. Ist A ⊆ X zusammenhängend, so ist f(A) ⊆ Y zusammenhängend.
@@ -799,7 +797,7 @@ Beweis: Sei f(A) = U1 ∪ U2, Ui 6= ∅, offen, disjunkt.
 ∪ (A ∩ f−1(U2))︸ ︷︷ ︸
 6=∅
 
-�
+■
 
 1.5 Kompaktheit
 
@@ -848,7 +846,7 @@ In ⊆ (x− ε, x+ ε) ⊆ Ui für mindestens ein n ∈ N.4
 Dann überdecke [0, 1] mit endlich vielen Intervallen I1, . . . , Id der Länge δ. Jedes Ij ist in
 Uij enthalten.
 
-⇒ Uj1 , . . . , Ujd ist endliche Teilüberdeckung von U . �
+⇒ Uj1 , . . . , Ujd ist endliche Teilüberdeckung von U . ■
 Beispiel 16 (Kompakte Räume)
 
 1) R ist nicht kompakt.
@@ -907,7 +905,7 @@ j=1
 
 ⇒ Vi1 , . . . , Vin überdecken A.
 
-�
+■
 
 Bemerkung 20
 Seien X,Y kompakte topologische Räume. Dann ist X × Y mit der Produkttopologie
@@ -975,7 +973,7 @@ Ein grün-oranges Kästchen
 j
 
 ⋃
-iWi(xj , yi) = X × Y �
+iWi(xj , yi) = X × Y ■
 
 Bemerkung 21
 Sei X ein Hausdorffraum und K ⊆ X kompakt. Dann ist K abgeschlossen.
@@ -1022,7 +1020,7 @@ Uxi
 ⇒ V ist Überdeckung von y, die ganz in X \K enthalten ist.
 ⇒ X \K ist offen
 
-Damit ist K abgeschlossen. �
+Damit ist K abgeschlossen. ■
 
 Bemerkung 22
 Seien X,Y topologische Räume, f : X → Y stetig.
@@ -1034,7 +1032,7 @@ f stetig
 Kompakt
 =====⇒ es gibt i1, . . . , in, sodass f−1(Vi1), . . . , f−1(Vin) Überdeckung von K ist.
 ⇒ f(f−1(Vi1)), . . . , f(f−1(Vin)) überdecken f(K).
-Es gilt: f(f−1(V )) = V ∩ f(X) �
+Es gilt: f(f−1(V )) = V ∩ f(X) ■
 
 Satz 1.1 (Heine-Borel)
 Eine Teilmenge von Rn oder Cn ist genau dann kompakt, wenn sie beschränkt und
@@ -1063,7 +1061,7 @@ homöomorph zu {
 (x, y) ∈ R2
 
 ∣∣ ‖(x, y)‖ ≤ 1 }
-ist. �
+ist. ■
 
 1.6 Wege und Knoten
 
@@ -1127,7 +1125,7 @@ Also ist C = U1 und S = U2 (oder umgekehrt).
 
 Sei y ∈ C = U1, ε > 0 und Bε(y) ⊆ U1 eine Umgebung von y, die in U1 enthalten ist.
 Aber: Bε(y) ∩ S 6= ∅ ⇒ Widerspruch ⇒ X ∪ S ist zusammenhängend, aber nicht
-wegzusammenhängend. �
+wegzusammenhängend. ■
 
 Beispiel 18 (Hilbert-Kurve)
 Es gibt stetige, surjektive Abbildungen [0, 1]→ [0, 1]× [0, 1]. Ein Beispiel ist die in Abbil-
@@ -1351,7 +1349,7 @@ V offen und ϕ ein Homöomorphismus ist, eine Karte auf X.
 Da jede offene Teilmenge des Rn genauso mächtig ist wie der Rn, ϕ als Homöomorphismus
 insbesondere bijektiv ist und Mengen, zwischen denen eine Bijektion existiert, gleich mächtig
 sind, ist U genauso mächtig wie der Rn. Da jede Mannigfaltigkeit mindestens eine Karte
-hat, muss jede Mannigfaltigkeit X mindestens so mächtig sein wie der Rn. �
+hat, muss jede Mannigfaltigkeit X mindestens so mächtig sein wie der Rn. ■
 
 Hinweis: Es gibt auch noch 0-dimensionale Mannigfaltigkeiten. Diese Mannigfaltigkeiten können
 beliebig viele Elemente haben.
@@ -1394,10 +1392,7 @@ und die Abbildung
 Ui → Rn
 
 (x0 : · · · : xn) 7→
-(
-x0
-xi
-, . . . ,
+(x0 xi, . . . ,
 
 �
 ��
@@ -1511,7 +1506,7 @@ Bemerkung 26
 Sind X,Y Mannigfaltigkeiten der Dimension n bzw. m, so ist X × Y eine Mannigfaltigkeit
 der Dimension n+m.
 
-Beweis: Produkte von Karten sind Karten. �
+Beweis: Produkte von Karten sind Karten. ■
 
 Beispiel 21
 Mannigfaltigkeiten mit Dimension 1:
@@ -1527,7 +1522,7 @@ Mannigfaltigkeiten mit Dimension 2:
 4) oder mehr Henkel, wie z.B. der Zweifachtorus in Abbildung 2.1
 
 Bemerkung 27
-Sei n ∈ N, F : Rn → R stetig differenzierbar und X = V (F ) := { x ∈ Rn | F (x) = 0 } das
+Sei n ∈ N, F : Rn → R stetig differenzierbar und X = V (F) := {x ∈ Rn | F (x) = 0} das
 „vanishing set“.
 
 Dann gilt:
@@ -1559,7 +1554,7 @@ gibt Umgebungen U von x′ und differenzierbare Funktionen g : U → R, sodass
 G : U → Rn, u 7→ (g(u), u) eine stetige Abbildung auf eine offene Umgebung V von x
 in X ist.
 
-�
+■
 
 Beispiel 22
 
@@ -1653,18 +1648,15 @@ Rn+,0 ist ein „Halbraum“.
 
 Hinweis: Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 
-∼
-=
+∼=
 
 (a) Halbraum
 
-∼
-=
+∼=
 
 (b) Pair of pants
 
-∼
-=
+∼=
 
 (c) Sphäre mit einem Loch
 
@@ -1673,16 +1665,11 @@ Abbildung 2.3: Beispiele für Mannigfaltigkeiten mit Rand
 Definition 27
 Sei X eine n-dimensionale Mannigfaltigkeit mit Rand und Atlas A. Dann heißt
 
-∂X :=
-⋃
-
-(U,ϕ)∈A
-
-{ x ∈ U | ϕ(x) = 0 }
+∂X :=⋃(U,ϕ)∈A { x ∈ U | ϕ(x) = 0 }
 
 Rand von X.
 
-∂X ist eine Mannigfaltigkeit der Dimension n− 1.
+∂X ist eine Mannigfaltigkeit der Dimension n−1.
 Definition 28
 
 Sei X eine n-dimensionale Mannigfaltigkeit mit Atlas (Ui, ϕi)i∈I
@@ -2353,7 +2340,7 @@ k
 xk
 
 ⇒ 0 = ∑n+1k=0 (n+1k )(−1)k = χ(∆n)− 1
-⇒ χ(∆n) = 1 �
+⇒ χ(∆n) = 1 ■
 
 Definition 39
 a) Ein 1D-Simplizialkomplex heißt Graph.
@@ -2427,7 +2414,7 @@ k
 
 (1+(−1))n+1
 
-= χ(∆) �
+= χ(∆) ■
 
 Definition 40
 Sei X ein topologischer Raum, K ein Simplizialkomplex und
@@ -2595,7 +2582,7 @@ j=0
 = 0
 
 weil jeder Summand aus der ersten Summe auch in der zweiten Summe vorkommt, aber mit
-umgekehrten Vorzeichen. �
+umgekehrten Vorzeichen. ■
 
 Definition 41
 Sei K ein Simplizialkomplex, Zn := Kern(dn) ⊆ Cn und Bn := Bild(dn+1) ⊆ Cn.
@@ -2756,7 +2743,7 @@ ist Weg in X von a nach b für jedes s ∈ I.
 
 Beweis: H ist stetig, also ist H(t, s) insbesondere für jedes feste s stetig. Da H(0, s) = a und
 H(1, s) = b für alle s ∈ I und γs eine Abbildung von I auf X ist, ist γs ein Weg in X von a
-nach b für jedes s ∈ I. �
+nach b für jedes s ∈ I. ■
 
 Bemerkung 41
 Durch Homotopie wird eine Äquivalenzrelation auf der Menge aller Wege in X von a nach b
@@ -2779,7 +2766,7 @@ H ′(t, 2s) falls 0 ≤ s ≤ 12
 H ′′(t, 2s− 1) falls 12 ≤ s ≤ 1
 
 ⇒ H ist stetig und Homotopie von γ1 nach γ3.
-�
+■
 
 Beispiel 30
 1) Sei X = S1. γ1 und γ2 aus Abbildung 3.3a nicht homotop.
@@ -2802,7 +2789,7 @@ Sei X ein topologischer Raum, γ : I → X ein Weg und ϕ : I → I stetig mit �
 Beweis: Sei H(t, s) = γ((1− s)t+ s · ϕ(t)).
 Dann ist H stetig, H(t, 0) = γ(t), H(t, 1) = γ(ϕ(t)), H(0, s) = γ(0) und H(1, s) =
 γ(1− s+ s) = γ(1)
-⇒ H ist Homotopie. �
+⇒ H ist Homotopie. ■
 
 
 
@@ -3292,7 +3279,7 @@ Vj und p|Vj : Vj → U
 ist Homöomorphismus.
 
 D. h. es existiert ein y ∈ Vj , so dass p|Vj (y) = x. Da x ∈ X beliebig war und ein y ∈ Y
-existiert, mit p(y) = x, ist p surjektiv. �
+existiert, mit p(y) = x, ist p surjektiv. ■
 
 
 
@@ -3387,7 +3374,7 @@ Vi∈TY Vi und p|Vi ist Homöomorphismus.
 
 ⇒ (p|Vi)−1(x) = { yi }
 ⇒ Alle yi liegen diskret in Y , da Häufungspunkte unendlich viele Elemente in jeder
-Umgebung benötigen. �
+Umgebung benötigen. ■
 
 Bemerkung 53 (Eindeutigkeit des Überlagerungsgrades)
 Sei p : Y → X Überlagerung. Dann gilt:
@@ -3508,7 +3495,7 @@ Dann gilt:
 (iv) H̃(1, s) ∈ p−1(b)
 Da p−1(b) diskrete Teilmenge von Y ist
 ⇒ b̃s = H̃(1, s) = H̃(1, 0) ∀s ∈ I
-⇒ b̃0 = b̃1 und H̃ ist Homotopie zwischen γ̃0 und γ̃1. �
+⇒ b̃0 = b̃1 und H̃ ist Homotopie zwischen γ̃0 und γ̃1. ■
 
 Folgerung 3.4
 Sei p : Y → X eine Überlagerung, x0 ∈ X, y0 ∈ p−1(x0)
@@ -3549,7 +3536,7 @@ Dann ist p ein Homöomorphismus.
 Beweis: Wegen Bemerkung 55.a ist auch Y einfach zusammenhängend und wegen Bemer-
 kung 55.b ist deg(p) = 1, p ist also bijektiv.
 
-Nach Bemerkung 51 ist p offen ⇒ p−1 ist stetig. ⇒ p ist Homöomorphismus. �
+Nach Bemerkung 51 ist p offen ⇒ p−1 ist stetig. ⇒ p ist Homöomorphismus. ■
 Definition 52
 
 Eine Überlagerung p : X̃ → X heißt universell, wenn X̃ einfach zusammenhängend ist.
@@ -3607,7 +3594,7 @@ Da auch idx̃ diese Eigenschaft hat, folgt mit Bemerkung 53: g ◦ f = idX̃ .
 Analog gilt f ◦ g = id
 
 Ỹ
-. �
+. ■
 
 Die Frage, wann es eine universelle Überlagerung gibt, beantwortet der folgende Satz:
 Definition 53
@@ -3750,7 +3737,7 @@ Decktransformation und damit p eine reguläre Überlagerung.
 Da p reguläre Überlagerung ist, gibt es ein f ∈ Deck(X̃/X) mit f(x̃0) = x̃1.
 Aus der Definition von ρ folgt: ρ(f) = p(γf ) = γ
 
-�
+■
 
 Beispiel 40 (Bestimmung von π1(S1))
 p : R→ S1, t 7→ (cos 2πt, sin 2πt) ist universelle Überlagerung, da R zusammenhängend ist.
@@ -4088,7 +4075,7 @@ AP ′ und AQ.
 (ii) C liegt in derselben Halbebene bzgl. PA wie B, weil das für Q gilt.
 
 AP ′ liegt in der anderen Halbebene bzgl. PA⇒ C /∈ P ′A⇒ C ∈ AQ
-Da C ∈ PB+ und C ∈ AQ folgt nun direkt: ∅ 6= { C } ⊆ PB+ ∩AQ �
+Da C ∈ PB+ und C ∈ AQ folgt nun direkt: ∅ 6= { C } ⊆ PB+ ∩AQ ■
 
 Bemerkung 62
 Seien P,Q ∈ X mit P 6= Q und A,B ∈ X \PQ in der selben Halbebene bzgl. PQ. Außerdem
@@ -4158,7 +4145,7 @@ d(P,C) + d(C,A) > d(P,A) = d(P,B) = d(P,C) + d(C,B)
 
 Dann liegen A und Q in derselben Halbebene bzgl. PB.
 
-Tausche A und B ⇒ Fall 1 �
+Tausche A und B ⇒ Fall 1 ■
 Bemerkung 63
 
 Sei (X, d,G) eine Geometrie, die §1 - §3 erfüllt, P,Q ∈ X mit P 6= Q und ϕ eine Isometrie
@@ -4174,7 +4161,7 @@ P,Q∈Fix(ϕ)⇒ d(P,Q) = d(P,ϕ(S)) + d(ϕ(S), Q)
 ⇒ d(P, S) = d(ϕ(P ), ϕ(S)) = d(P,ϕ(S))
 3(i)⇒ ϕ(S) = S
 
-�
+■
 
 Proposition 4.2
 In einer Geometrie, die §1 - §3 erfüllt, gibt es zu P, P ′, Q,Q′ mit d(P,Q) = d(P ′, Q′)
@@ -4259,7 +4246,7 @@ d(A′, B′) = d(ϕ(A′), ϕ(B′)) = d(A,ϕ(B′))
 3(i)
 ==⇒ ϕ(B′) = B
 
-Also gilt insbesondere ϕ(4A′B′C ′) = 4ABC. �
+Also gilt insbesondere ϕ(4A′B′C ′) = 4ABC. ■
 Bemerkung 65 (WSW-Kongruenzsatz)
 
 Sei (X, d,G) eine Geometrie, die §1 - §4 erfüllt. Seien außerdem 4ABC und 4A′B′C ′
@@ -4281,7 +4268,7 @@ Analog folgt aus ∠ABC = ∠A′B′C ′ = ∠ϕ(A′)ϕ(B′)ϕ(C ′) = ∠A
 BC+.
 
 Dann gilt ϕ(C ′) ∈ AC ∩BC = { C } ⇒ ϕ(C ′) = C.
-Es gilt also ϕ(4A′B′C ′) = 4ABC. �
+Es gilt also ϕ(4A′B′C ′) = 4ABC. ■
 
 Definition 61
 a) Ein Winkel ist ein Punkt P ∈ X zusammen mit 2 Halbgeraden mit Anfangspunkt P .
@@ -4399,7 +4386,7 @@ Annahme: ϕ(g) ∩ g 6= ∅
 Dann ist ∠RQP = ∠RQP ′ < ∠RPP ′ nach Bemerkung 66 und ∠RQP = ∠RPP ′, weil
 ϕ(∠RQP ) = ∠RPP ′.
 ⇒ Widerspruch
-⇒ ϕ(g) ∩ g = ∅ �
+⇒ ϕ(g) ∩ g = ∅ ■
 
 Folgerung 4.4
 Die Summe zweier Innenwinkel in einem Dreieck ist kleiner als π.
@@ -5311,7 +5298,7 @@ c 1
 0 1
 
 )
-Daher erzeugen Matrizen der Form Aλ, Bt und C die Gruppe SL2R. �
+Daher erzeugen Matrizen der Form Aλ, Bt und C die Gruppe SL2R. ■
 
 e) Es genügt die Aussage für Matrizen aus Proposition 4.9 (d) zu zeigen.
 
@@ -5476,7 +5463,7 @@ Annahme: DV(z1, . . . , z4) = 1
 
 ⇔ z3 = z1 oder z2 = z4
 
-Alle zi sind paarweise verschieden ⇒ Widerspruch �
+Alle zi sind paarweise verschieden ⇒ Widerspruch ■
 b) DV(z1, z4, z3, z2) =
 
 (z1−z2)·(z3−z4)
@@ -5570,7 +5557,7 @@ Da der ln im Betrag steht, folgt direkt:
 | ln DV(a2, z1, a1, z2)|
 
 Es ist also egal in welcher Reihenfolge die „Schnittpunkte“ mit der x-Achse im Doppelver-
-hältnis genutzt werden. �
+hältnis genutzt werden. ■
 
 Beh.: Die hyperbolische Metrik ist eine Metrik auf H.
 
@@ -6798,7 +6785,7 @@ Annahme: { −1, 1 } ist offen.
 Dann gibt es T ⊆ B, sodass ⋃M∈T M = { −1, 1 }. Aber alle U ∈ B haben unendlich viele
 Elemente. Auch endlich viele Schnitte von Elementen in B haben unendlich viele Elemente
 ⇒ keine endliche nicht-leere Menge kann in dieser Topologie offen sein ⇒ {−1, 1 } ist
-nicht offen. �
+nicht offen. ■
 
 Teilaufgabe c)
 
@@ -6819,7 +6806,7 @@ p∈P
 
 U0,p
 
-endlich. Das ist ein Widerspruch zu |Z| ist unendlich und | { −1, 1 } | ist endlich. �
+endlich. Das ist ein Widerspruch zu |Z| ist unendlich und | { −1, 1 } | ist endlich. ■
 
 Lösung zu Aufgabe 3
 
@@ -6845,7 +6832,7 @@ Pi
 
 wobei J ⊆ N endlich und Uj ⊆ Pj offen ∀j ∈ J eine Basis der Topologie.
 Damit sind die offenen Mengen von P Vereinigungen von Mengen der obigen
-Form. �
+Form. ■
 
 (b) Beh.: Die Zusammenhangskomponenten von P sind alle einpunktig.
 
@@ -6864,13 +6851,13 @@ pi(x)︸ ︷︷ ︸
 
 ∀i ∈ N
 
-Somit folgt: x = y �
+Somit folgt: x = y ■
 
 Lösung zu Aufgabe 4
 
 (a) Beh.: GLn(R) ist nicht kompakt.
 Bew.: det : GLn(R) → R \ { 0 } ist stetig. Außerdem ist det(GLn(R)) = R \ { 0 }
-nicht kompakt. 22⇒ GLn(R) ist nicht kompakt. �
+nicht kompakt. 22⇒ GLn(R) ist nicht kompakt. ■
 
 (b) Beh.: SL1(R) ist nicht kompakt, für n > 1 ist SLn(R) kompakt.
 Bew.: Für SL1(R) gilt: SL1(R) =
@@ -6899,12 +6886,12 @@ Dann gilt: detAm = 1, d. h. Am ∈ SLn(R), und Am ist unbeschränkt, da ‖Am‖
 m −−−−→
 
 m→∞
-∞. �
+∞. ■
 
 (c) Beh.: P(R) ist kompakt.
 Bew.: P(R) ∼= Sn/x∼−x. Per Definition der Quotiententopologie ist die Klassenabbil-
 dung stetig. Da Sn als abgeschlossene und beschränkte Teilmenge des Rn+1 kompakt
-ist 22⇒ P(R) ist kompakt. �
+ist 22⇒ P(R) ist kompakt. ■
 
 Lösung zu Aufgabe 5
 
@@ -6990,7 +6977,7 @@ offen
 
 , sowie Z 6= ∅ folgt ZC = ∅.
 
-Also ist M = Z wegzusammenhängend. �
+Also ist M = Z wegzusammenhängend. ■
 
 (b) Beh.: X ist wegzusammenhängend.
 
@@ -7002,7 +6989,7 @@ Da (R\{ 0 })∪{ 01 } homöomorph zu R ist, exisitert ein Weg γ1 von 01 zu eine
 beliebigen Punkt a ∈ R \ { 0 }.
 Da (R \ { 0 }) ∪ { 02 } ebenfalls homöomorph zu R ist, existiert außerdem ein
 Weg γ2 von a nach 02. Damit existiert ein (nicht einfacher) Weg γ von 01 nach
-02. �
+02. ■
 
 Lösung zu Aufgabe 9
 
@@ -7016,7 +7003,7 @@ Vor.: Sei (X, d) eine absolute Ebene, A,B,C ∈ X und 4ABC ein Dreieck.
 Bew.: Sei AB ∼= AC.
 ⇒ ∃ Isometrie ϕ mit ϕ(B) = C und ϕ(C) = B und ϕ(A) = A.
 ⇒ ϕ(∠ABC) = ∠ACB
-⇒ ∠ABC ∼= ∠ACB �
+⇒ ∠ABC ∼= ∠ACB ■
 
 (b) Beh.: Der längeren Seite von 4ABC liegt der größere Winkel gegenüber und umge-
 kehrt.
@@ -7027,7 +7014,7 @@ Es gilt ]ABC ′ < ]ABC und aus Aufgabe 9 (a) folgt: ]ABC ′ = ]AC ′B.
 ⇒ ]BCA < ]BC ′A = ]ABC ′ < ]ABC Sei umgekehrt ]ABC > ]BCA, kann
 wegen 1. Teil von Aufgabe 9 (b) nicht d(A,B) > d(A,C) gelten.
 Wegen Aufgabe 9 (a) kann nicht d(A,B) = d(A,C) gelten.
-⇒ d(A,B) < d(A,C) �
+⇒ d(A,B) < d(A,C) ■
 
 (c) Vor.: Sei g eine Gerade, P ∈ X und P /∈ g
 Beh.: ∃! Lot
@@ -7056,7 +7043,7 @@ g
 Abbildung 5.4: Zwei Lote zu einer Geraden g durch einen Punkt P
 
 Nach Folgerung 4.4 ist die Summe von zwei Innenwinkeln immer < π
-⇒ G gibt es nicht. �
+⇒ G gibt es nicht. ■
 
 Lösung zu Aufgabe 10
 
@@ -7068,7 +7055,7 @@ zu g durch x, da x /∈ g. Diese ist f , da x ∈ f und f ‖ g. Da aber x ∈ h
 
 105 Lösungen der Übungsaufgaben
 
-parallel zu g sein, denn ansonsten gäbe es zwei Parallelen zu g durch x (f 6= h).⇒ g ∦ h �
+parallel zu g sein, denn ansonsten gäbe es zwei Parallelen zu g durch x (f 6= h).⇒ g ∦ h ■
 
 Lösung zu Aufgabe 11
 
@@ -7088,7 +7075,7 @@ Es gilt d(A,C) = d(A′, C ′) = d(ϕ(A′), ϕ(C ′)) = d(A,ϕ(C ′)) und d(
 d(ϕ(B′), ϕ(C ′)) = d(B,ϕ(C ′)).
 Bem. 62
 =====⇒ C = ϕ(C).
-Es gilt also ϕ(4A′B′C ′) = 4ABC. �
+Es gilt also ϕ(4A′B′C ′) = 4ABC. ■
 
 
 

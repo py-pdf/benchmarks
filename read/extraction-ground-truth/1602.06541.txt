@@ -231,10 +231,6 @@ For example, a system might learn that a certain
 position of the image is most of the time “sky”
 while another position is most of the time “road”.
 
-
-
-3
-
 P2 The manually labeled images could have a more
 coarse labeling. For example, a human classifier
 could have labeled a region as “car” and the
@@ -392,9 +388,6 @@ an EU network of excellence
 2Visual Object Classes
 
 
-
-4
-
 Beginning with 2007, a segmentation challenge was
 added [EVGW+a].
 
@@ -519,9 +512,6 @@ an holistic approach.
 
 http://host.robots.ox.ac.uk:8080/
 
-
-5
-
 V. TRADITIONAL APPROACHES
 
 Image segmentation algorithms which use traditional
@@ -641,11 +631,6 @@ image to a low-resolution variant. Another way of
 doing dimensionality reduction is principal component
 analysis (PCA), which is applied by [COWR11]. The
 idea behind PCA is to find a hyperplane on which all
-
-
-
-6
-
 feature vectors can be projected with a minimal loss
 of information. A detailed description of PCA is given
 by [Smi02].
@@ -765,10 +750,6 @@ segment white blood cells. As the authors describe,
 the segmentation by watershed transform has two
 flaws: Over-segmentation due to local minima and thick
 watersheds due to plateaus.
-
-
-
-7
 
 C. Random Decision Forests
 
@@ -928,10 +909,6 @@ i=1
 
 αiyi = 0
 
-
-
-8
-
 4) Not every dataset is linearly separable. This prob-
 lem is approached by transforming the feature
 vectors x with a non-linear mapping Φ into
@@ -1063,17 +1040,11 @@ typically live on 0, . . . , 255 or [0, 1].
 
 The probability of x,y can be expressed as
 
-P (x,y) =
-1
+P(x,y) = 1
 
-Z
-e−E(x,y)
+Ze−E(x,y)
 
-where Z =
-∑
-
-x,y e
-−E(x,y) is a normalization term
+where Z = ∑x,y e −E(x,y) is a normalization term
 
 called the partition function and E is called the energy
 function. A common choice for the energy function is
@@ -1671,8 +1642,7 @@ processing systems, 2012, pp. 1097–1105.
 [KWT88] M. Kass, A. Witkin, and D. Terzopoulos,
 “Snakes: Active contour models,” International
 journal of computer vision, vol. 1, no. 4, pp.
-321–331, Jan. 1988. [Online]. Available: http:
-//link.springer.com/article/10.1007/BF00133570
+321–331, Jan. 1988. [Online]. Available: http://link.springer.com/article/10.1007/BF00133570
 
 [LKJ15] F.-F. Li, A. Karpathy, and J. Johnson,
 “CS231n: Convolutional neural networks for

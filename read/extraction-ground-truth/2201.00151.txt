@@ -199,16 +199,9 @@ the simulated galaxy from the Illustris project used to create mock data.
 The black and gray vertical arrows indicate the last mergers which the
 galaxy underwent, wet and dry, respectively.
 
-t
-[G
+t[Gyr]
 
-yr
-]
-
-Z [Z
-⊙
-
-]
+Z [Z⊙]
 
  0
 
@@ -231,11 +224,7 @@ Z [Z
 
  6
 
-N
- [
-
-10
-2 ]
+N[10²]
 
 Fig. 2. Number of stars as a function of their metallicity and time of
 formation (the age of the Universe) in the simulated galaxy. The vertical
@@ -604,26 +593,7 @@ ples. The sum of stars in the populations is lower than in the
 sample of all stars since only stars with reliable measurements
 of metallicity could be included.
 
-N
-
-[Fe/H]
-
-pop I
-pop II
-
- 0
-
- 20
-
- 40
-
- 60
-
- 80
-
- 100
-
--2.5 -2 -1.5 -1 -0.5  0
+[DIAGRAM]
 
 Fig. 10. Metallicity histogram of the final spectroscopic sample used in
 the modeling of two stellar populations in the Fornax dSph. Each bin is
@@ -635,45 +605,15 @@ Fornax dSph can be well reproduced with the three-parameter
 
 Table 2. Properties of the data samples for the Fornax dSph.
 
-Property ALL POP I POP II
-Number of stars (Nphot) 65 797 14 882 49 205
-Number of stars (Nspec) 3286 1136 1151
-Stars within 1.8 kpc 3268 1134 1130
+Property                         ALL    POP I  POP II
+Number of stars (Nphot)          65797  14882  49205
+Number of stars (Nspec)          3286   1136   1151
+Stars within 1.8 kpc             3268   1134   1130
+Fitted normalization (N0) [×104] 6.95   1.81   5.45
+Sérsic radius (RS) [kpc]         0.454  0.429  0.420
+Sérsic parameter (m)             0.808  0.807  0.898
 
-Fitted normalization (N0) [×10
-4] 6.95 1.81 5.45
-
-Sérsic radius (RS) [kpc] 0.454 0.429 0.420
-Sérsic parameter (m) 0.808 0.807 0.898
-
-102
-
-103
-
-104
-
-105
-
- 0.2  0.5  2 0.1  1
-
-n ⋆
-(R
-
-)
-[k
-
-pc
--2
-
-]
-
-R [kpc]
-
-all stars
-popI
-
-popII
-
+[DIAGRAM]
 Fig. 11. Surface number density profiles of the photometric data sam-
 ples for the Fornax dSph: all available stars (in red), the metal-rich pop-
 ulation I (in orange), and the metal-poor population II (in blue). Thin
@@ -714,120 +654,7 @@ mass, and velocity anisotropy resulting from the χ2 distributions
 are presented in the consecutive rows of Fig. 14. The anisotropy
 profile for the populations is based on the fit of all stars but using
 
- 0
-
- 0.05
-
- 0.1
-
- 0.15
-
- 0.2
-
- 0.25
-
- 0  0.4  0.8  1.2  1.6
-
-M
-(R
-
-)
-
-R [kpc]
-
-all stars
-pop I
-
-pop II
-
-0
-40
-80
-
-120
-160
-200
-
- 0  0.4  0.8  1.2  1.6
-
-m
-2(
-
-R
-)[
-
-(k
-m
-
- s
--1
-
-)2
-]
-
-R [kpc]
-
--16
-
--8
-
-0
-
-8
-
-16
-
- 0  0.4  0.8  1.2  1.6
-
-m
-3(
-
-R
-)[
-
-10
-2 (
-
-km
- s
-
--1
-)3
-
-]
-
-R [kpc]
-
-0
-
-4
-
-8
-
-12
-
-16
-
- 0  0.4  0.8  1.2  1.6
-
-m
-4(
-
-R
-)[
-
-10
-4 (
-
-km
- s
-
--1
-)4
-
-]
-
-R [kpc]
+[DIAGRAM]
 
 Fig. 12. Observables of the Fornax dSph used in our Schwarzschild
 modeling scheme. In rows: the fraction of the total number of stars, the
@@ -983,86 +810,12 @@ accurate outcome. However, in both studies the apparent dete-
 rioration of the reliability is a consequence of modeling of a
 nonspherical object. In both cases, a simpler approach (much
 smaller data samples or using one stellar population) resulted
+in larger final uncertainties, usually containing the true values
+within 1σ confidence region. On the other hand, the improved
+methods exhibit substantially reduced uncertainties, highlighting
+the underlying bias.
 
--2
-
--1
-
-0
-
-1
-
- 0  0.4  0.8  1.2  1.6
-
-P
-O
-
-P
- I
-
- +
- P
-
-O
-P
-
- I
-I
-
-β(
-r)
-
-r [kpc]
-
--2
-
--1
-
-0
-
-1
-
- 0  0.4  0.8  1.2  1.6
-
-P
-O
-
-P
- I
-
-β(
-r)
-
-r [kpc]
-
--2
-
--1
-
-0
-
-1
-
- 0  0.4  0.8  1.2  1.6
-P
-
-O
-P
-
- I
-I
-
-β(
-r)
-
-r [kpc]
-
-best model
-1σ
-2σ
-
-3σ
-K19
+[DIAGRAM]
 
 Fig. 15. Profiles of the anisotropy parameter obtained with the
 Schwarzschild modeling of two stellar populations for the Fornax dSph.
@@ -1071,11 +824,6 @@ ulations), population I, and population II. Color lines indicate values
 for the best-fit models whereas the colored areas of decreasing intensity
 show the 1, 2, and 3σ confidence regions. The dashed black line shows
 the result from Kowalczyk et al. (2019) for comparison.
-
-in larger final uncertainties, usually containing the true values
-within 1σ confidence region. On the other hand, the improved
-methods exhibit substantially reduced uncertainties, highlighting
-the underlying bias.
 
 Our method parametrizes the total mass content with the
 mass-to-light ratio varying with radius as a power-law in the log-
