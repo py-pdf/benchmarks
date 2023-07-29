@@ -196,7 +196,7 @@ T,i). (1)
 In which, Tp,iis the DEM peak temperature, EM p,iis the peak EM function, and σT,iis the
 logarithmic width of the temperature for that strip. To calc ulate the background-subtracted ﬂuxes
 (for each strip) we use Eq.6 of Aschwanden & Boerner (2011 ) (in below):
-F0λ=/integraldisplaydEM(T)
+F0λ=∫dEM(T)
 dTRλ(T)dT=∑
 kEM(Tk)Rλ(Tk). (2)
 Here, Rλ(T)is the instrumental temperature response function of each w avelength ﬁlter λ, which

@@ -339,8 +339,8 @@ sity proﬁle of the tracer with the Sérsic formula, we found th at it
 does not provide a good approximation of the data for the simu -
 lated galaxy considered here. We therefore ﬁt the projected den-
 sity proﬁle with the King formula (King 1962)
-I(R)=I01/radicalbig
-1+(R/Rc)2−1/radicalbig
+I(R)=I01√
+1+(R/Rc)2−1√
 1+(Rt/Rc)22
 , (1)
 Article number, page 4 of 12
@@ -376,15 +376,15 @@ indicate only the error bars for one of the data sets.
 where I0,Rc, and Rtare the model parameters. The proﬁle can
 be analytically deprojected to obtain the 3D density
 ρ(r)=ρ0
-z2/bracketleftBigg1
-zarccos( z)−/radicalbig
-1−z2/bracketrightBigg
+z2[1
+zarccos( z)−√
+1−z2]
 , (2)
 where
 ρ0=I0
 πRc[1+(Rt/Rc)2]3/2(3)
 and
-z=/radicalBigg
+z=√
 r2+R2c
 R2c+R2
 t. (4)3. Schwarzschild modeling
@@ -397,7 +397,7 @@ anisotropy.
 We follow the approach introduced in Kowalczyk et al. (2018) ,
 namely we model the total mass proﬁle with the mass-to-light
 ratioΥvarying with radius:
-logΥ(r)=/braceleftBigg
+logΥ(r)={
 log(Υ0) r≤r0
 a(logr−logr0)c+log(Υ0)r>r0(5)
 Article number, page 5 of 12

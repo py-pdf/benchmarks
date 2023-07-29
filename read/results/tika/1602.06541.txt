@@ -39,19 +39,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 A Survey of Semantic Segmentation
 
 
@@ -337,8 +324,9 @@ car”
 
 Three accuracy metrics which do not suffer from
 problem P1 are used in [LSD14]:
-• mean accuracy: 1k ·
+• mean accuracy: 1
 
+k ·
 ∑k
 i=1
 
@@ -360,8 +348,8 @@ ti−nii+
 j=1 nji
 
 ∈ [0, 1]
-• frequency weighted intersection over union:
 
+• frequency weighted intersection over union:
 (
 ∑k
 i=1 ti)
@@ -376,8 +364,8 @@ ti−nii+
 j=1 nji
 
 ∈ [0, 1]
-Another problem might be pixels which cannot be
 
+Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets
 completely ignored for all quality measures. Hence the
@@ -395,10 +383,11 @@ benchmark [FKG13] or crypt segmentation as done
 by [CRSS14]. It is calculated as “the harmonic mean
 of the precision and recall” [PH05]:
 
-Fβ = (1 + β)
-2 tp
+Fβ = (1 + β)2
+tp
 
 (1 + β2) · tp + β2 · fn + fp
+
 where β = 1 is chosen in most cases and tp means
 true positive, fn means false negative and fp means
 false positive.
@@ -949,7 +938,9 @@ duction of slack variables to relax the requirement
 of linear separability solves this problem. The
 trade-off between accepting some errors and a
 more complex model is weighted by a parameter
-C ∈ R+0 . The bigger C, the more errors are
+C ∈ R+
+
+0 . The bigger C, the more errors are
 accepted. The new optimization problem is:
 
 minimize
@@ -1067,11 +1058,9 @@ binary classifiers to multi-class classification is
 the one-vs-all and the one-vs-one strategy. In the
 one-vs-all strategy n classifiers have to be trained
 which can distinguish one of the n classes against
-all other classes. In the one-vs-one strategy n
+all other classes. In the one-vs-one strategy n2−n
 
-2−n
 2
-
 classifiers are trained; one classifier for each pair
 of classes.
 
@@ -1185,6 +1174,7 @@ cliques of size two x,y = (x1, x2) is [KP06]
 
 {
 +w if x1 6= x2
+
 −w if x1 = x2
 
 According to [Mur12], the most common way of
@@ -1221,7 +1211,9 @@ P (x,y)
 
 and joint probability distribution
 
-P (y|x) = 1
+P (y|x) =
+1
+
 Z(x)
 
 ∏

@@ -34,27 +34,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Astronomy & Astrophysics manuscript no. solar˙model˙v10˙corrected © ESO 2022
 January 4, 2022
 
@@ -353,11 +332,15 @@ versions of the Ledoux discriminant allowed them to obtain a
 model-independent profile for this quantity. Their reconstruction
 method also gives solar structures that are in excellent agree-
 ment with other structural inversions, namely the entropy, S , the
-square of the speed of sound, c2s , and the density, ρ. To illustrate
+square of the speed of sound, c2
+
+s , and the density, ρ. To illustrate
 the convergence of their reconstruction procedure, they show
 (right panels of their Figs. 3-6) the successive iterations that con-
 verge to an excellent level of agreement for the four structural
-inversions (A, S , c2s , ρ) starting from the initial reference model
+inversions (A, S , c2
+
+s , ρ) starting from the initial reference model
 adopted in their work. The differences found between the recon-
 structed model and the reference model are useful as they indi-
 cate the modifications of the reference model that are required to
@@ -373,9 +356,9 @@ the quantity (ASun - Aref).
 
 The second concerns the speed of sound. The same positive
 bump at the same location as for the Ledoux discriminant, A, is
-observed for the quantity (c2s,Sun − c
+observed for the quantity (c2
 
-2
+s,Sun − c2
 s,ref)/c
 
 2
@@ -397,6 +380,7 @@ ancy is negative in the convective zone. The corrections applied
 to A help reduce these entropy discrepancies in both regions.
 
 The fourth concerns the density. The quantity (ρSun −
+
 ρref)/ρref has a negative peak in the radiative region, at ∼ 35%
 of the stellar radius, and is positive in the convective zone.
 
@@ -553,11 +537,15 @@ solid line. The vertical dashed line in each panel is located at a
 distance dov below the convective boundary.
 
 The impact on the whole stellar structure was quantified by
-comparing the four structural quantities (A, S , c2s , ρ) between the
+comparing the four structural quantities (A, S , c2
+
+s , ρ) between the
 modified and the reference model. The results are displayed in
 Fig. 3, with ∆X defined as (X−Xref) for any structural quantity X.
 The forced local heating in the overshooting layer produces sim-
-ilar positive peaks for ∆A, ∆S , and ∆c2s , as found for the temper-
+ilar positive peaks for ∆A, ∆S , and ∆c2
+
+s , as found for the temper-
 ature. The modification thus provides the correction required to
 improve the discrepancy for the Ledoux discriminant described
 in the first of the trends outlined in Sect. 3.1. Unsurprisingly,
@@ -592,20 +580,21 @@ These trends are insensitive to the depth over which the tem-
 perature gradient is modified. Increasing the depth increases the
 magnitude of the differences but has no impact on their sign. We
 find that the maximum variation in the model properties, such as
-the speed of sound, ∆c2s/c
+the speed of sound, ∆c2
 
+s/c
 2
-s,ref , roughly scales with d
+s,ref , roughly scales with d2
 
-2
 ov. This scal-
-
 ing is linked to the integrated area between the modified temper-
 ature gradient curve and the one for the reference (non-modified)
 temperature gradient, which roughly decreases linearly with r.
 This area is proportional to the square of the overshooting depth,
 and consequently, the maximum variation in the model proper-
-ties is also proportional to d2ov. The qualitative trends also remain
+ties is also proportional to d2
+
+ov. The qualitative trends also remain
 the same whether overshooting mixing in the reference model
 is ignored or included using a step function (with instantaneous
 mixing) or an exponential decay for the diffusion coefficient (e.g.
@@ -640,7 +629,9 @@ mixing and whether microscopic diffusion is included or not.
 In the convective zone, all models give a positive difference for
 the density between the model with a modified temperature gra-
 dient and the relevant reference model. For the other quantities
-(S , c2s ), the differences in the convective zone are very sensitive
+(S , c2
+
+s ), the differences in the convective zone are very sensitive
 
 Fig. 3. Difference of various structural quantities between a
 model with a modified temperature gradient in the overshoot-
@@ -694,7 +685,9 @@ this problem, as mentioned in Sect. 1. However, the details of
 the physical process responsible for this local heating have been
 lacking, whereas we can now suggest an explanation based on
 the B21 results. The trends that we find for the four structural
-quantities (A, S , c2s , ρ) are robust below the convective bound-
+quantities (A, S , c2
+
+s , ρ) are robust below the convective bound-
 ary and in a large fraction of the radiative core, independently of
 the treatment of mixing and diffusion and of the method for con-
 structing the models in Sects. 3.2.1 and 3.2.2. Our experiments

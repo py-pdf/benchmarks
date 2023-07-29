@@ -39,19 +39,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Analysis and Optimization of Convolutional Neural Network Architectures
 
 
@@ -456,14 +443,15 @@ b kw
 2
 c∑
 
-ix=1−d kw2 e
+ix=1−d kw
+2
+e
 
 b kh
 2
 c∑
 
-iy=1−d
-kh
+iy=1−d kh
 2
 e
 
@@ -696,7 +684,9 @@ smoothing, sharpening, median filtering, box filtering. See Figure A.1 for five 
 
 Please note that the result of a filtering operation is again an image. This means filters
 can be applied successively. While each pixel after one filtering operation with a 3 × 3
+
 filter got influenced by 3 · 3 = 9 pixels of the original image, two successively applied 3× 3
+
 filters increase the area of the original image which influenced the output. The output is
 then influenced by 25 pixel. This is called the receptive field. The kind of pattern which is
 detected by a filter is called a feature. The bigger the receptive field is, the more complex
@@ -795,14 +785,15 @@ b kw
 2
 c∑
 
-ix=1−d kw2 e
+ix=1−d kw
+2
+e
 
 b kh
 2
 c∑
 
-iy=1−d
-kh
+iy=1−d kh
 2
 e
 
@@ -926,12 +917,12 @@ functions as introduced in [LGT16].
 Name Definition Used by
 
 Max pooling max { a ∈ A } [BPL10, KSH12]
-Average / mean pooling 1|A|
+Average / mean pooling 1
 
+|A|
 ∑
-a∈A a LeNet-5 [LBBH98] and [KSlB
 
-+10]
+a∈A a LeNet-5 [LBBH98] and [KSlB+10]
 
 `2 pooling
 √∑
@@ -945,8 +936,7 @@ Table 2.1.: Pooling types for a set A of activations a ∈ R.
 (*) For stochastic pooling, each of the p×p activation values ai in the pooling region gets
 picked with probability pi = ai∑
 
-aj∈A
-aj
+aj∈A aj
 . This assumes the activations ai are non-negative.
 
 Pooling is applied for three reasons: To get local translational invariance, to get invariance
@@ -1038,7 +1028,9 @@ where � is the Hadamard product
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
 Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout prob-
 ability than later layers. In order to keep the expected output at the same value, the
-output of a dropout layer is multiplied with 11−p when dropout is enabled [Las17, tf-16b].
+output of a dropout layer is multiplied with 1
+
+1−p when dropout is enabled [Las17, tf-16b].
 At inference time, dropout is disabled.
 
 Dropout is usually only applied after fully connected layers, but not after convolutional
@@ -1076,22 +1068,28 @@ x̂(k) =
 x(k) − x̄(k)√
 s′[x(k)]2 + ε
 
-with x̄(k) = 1m
-∑m
+with x̄(k) = 1
+m
 
+∑m
 i=1 x
+
 (k)
-i being the sample mean and s
+i being the sample mean and s′[x(k)]2 = 1
 
-′[x(k)]2 = 1m
+m
+
 ∑m
-
 i=1(x
+
 (k)
 i − x̄(k)) the
 
 sample variance where m ∈ N≥1 is the number of training samples per mini-batch, ε > 0
-being a small constant to prevent division by zero and x(k)i is the activation of neuron k for
+
+being a small constant to prevent division by zero and x(k)
+i is the activation of neuron k for
+
 training sample i.
 
 Additionally, for each activation x(k) two parameters γ(k), β(k) are introduced which scale
@@ -1236,7 +1234,9 @@ aspect to using the group network without an aggregation block.
 Dense blocks are collections of convolutional layers which are introduced in [HLW16]. The
 idea is to connect each convolutional layer directly to subsequent convolutional layers.
 Traditional CNNs with L layers and one input layer have L connections between layers,
-but dense blocks have L(L+1)2 connections between layers. The input feature maps are
+but dense blocks have L(L+1)
+
+2 connections between layers. The input feature maps are
 concatenated in depth. According to the authors, this prevents features from being re-
 learned and allows much fewer filters per convolutional layer. Where AlexNet and VGG-16
 have several hundred filters per convolutional layer (see Tables D.2 and D.3), the authors
@@ -1488,10 +1488,7 @@ x∈X
 K∑
 k=1
 
-[txk log(o
-x
-k) + (1− txk) log(1− oxk)]︸ ︷︷ ︸
-
+[txk log(oxk) + (1− txk) log(1− oxk)]︸ ︷︷ ︸
 cross-entropy data loss
 
 +λ1 ·
@@ -1504,15 +1501,13 @@ w∈W
 `2︷ ︸︸ ︷∑
 w∈W
 
-w2︸ ︷︷ ︸
+w2
+
+︸ ︷︷ ︸
 model complexity loss
 
 where W are the weights, X is the training data set, K ∈ N≥0 is the number of classes and
-txk indicates if the training example x is of class k. o
-
-x
-k is the output of the classification
-
+txk indicates if the training example x is of class k. oxk is the output of the classification
 algorithm which depends on the weights. λ1, λ2 ∈ [0,∞) weights the regularization and is
 typically smaller than 0.1.
 
@@ -1568,8 +1563,8 @@ j=1 cij be the number of training samples for class i. The most
 common quality criterion is accuracy:
 
 accuracy(c) =
-∑k
 
+∑k
 i=1 cii∑k
 i=1 ti
 
@@ -1980,7 +1975,9 @@ Meiosis Networks are introduced in [Han89]. In contrast to most MLPs and CNNs, w
 weights are deterministic and fixed at prediction time, each weight wij in Meiosis networks
 follows a normal distribution:
 
-wij ∼ N (µij , σ2ij)
+wij ∼ N (µij , σ
+2
+ij)
 
 28
 
@@ -1988,7 +1985,8 @@ wij ∼ N (µij , σ2ij)
 
 3.2. Pruning approaches
 
-Hence every connection has two learned parameters: µij and σ2ij .
+Hence every connection has two learned parameters: µij and σ2
+ij .
 
 The key idea of Meiosis networks is to allow neurons to perform Meiosis, which is cell
 division. A node j is splitted, when the random part dominates the value of the sampled
@@ -2015,6 +2013,7 @@ layers or add skip connections.
 
 Automatic Structure Optimization (ASO) was introduced in [BM93] for the task of on-
 line handwriting recognition. It makes use of the confusion matrix C = (cij) ∈ Nk×k≥0
+
 (see Section 2.5.2) to guide the topology learning. They define a confusion-symmetry matrix
 S with sij = sji = cij · cji. The maximum of S defines where the ASO algorithm adds
 more parameters. The details how the resources are added are not transferable to CNNs.
@@ -2059,7 +2058,10 @@ A much simpler and computationally cheaper pruning criterion is the weight magni
 
 w ←
 
-w if w ≥ θ0 otherwise
+w if w ≥ θ
+
+0 otherwise
+
 3.3. Genetic approaches
 
 The general idea of genetic algorithms (GAs) is to encode the solution space as genes, which
@@ -2152,6 +2154,7 @@ Figure 4.1.: Example for a hierarchy of classifiers. Each classifier is visualiz
 The root classifier C0 has to distinguish six coarse classes (pedestrian, four+-wheelers,
 traffic signs, two-wheelers, street, other) or 17 fine-grained classes. If C0 predicts a
 pedestrian, another classifier has to predict if it is an adult or a child. Similar, if C0
+
 predicts traffic sign, then another classifier has to predict if it is a speed limit, a
 sign indicating danger or something else. If C0, however, predicts road, then no other
 classifier will become active.
@@ -2261,6 +2264,7 @@ but besides that it is also chosen uniformly random.
 
 Simple row-swapping can exploit local improvements. For example, in the context of
 ImageNet, it can swap the dog-class Silky Terrier to the dog-class Yorkshire terrier
+
 and both dog classes Dalmatian and Greyhound next to each other. Both the two clusters
 of dog breeds could be separated by car and bus due to random chance. Moving any single
 class increases the score, but moving either one of the dog breed clusters or the vehicle
@@ -2284,11 +2288,7 @@ Those will be moved to the corners of the confusion matrix by optimizing Equatio
 Once a permutation of the classes is found which has a low score Equation (4.1), the clusters
 can either be made by hand by deciding why classes should not be in one clusters. With
 such a permutation, only n− 1 binary decisions have to be made and hence only the list of
-classes has to be read. Alternatively, one can calculate the confusions C ′i,i+1 + C
-
-′
-i+1,i for
-
+classes has to be read. Alternatively, one can calculate the confusions C ′i,i+1 + C ′i+1,i for
 each pair of classes which are neighbors in the confusion matrix. The higher this value, the
 more similar are the classes according to the classifier. Hence a threshold θ can be applied.
 θ can either be set automatically (e.g., such that 10 % of all pairs are above the threshold)
@@ -2453,6 +2453,7 @@ each power of two there are two Convolution + BN + ELU blocks and one Max poolin
 block added. This is the framed part in the table.
 
 32× 32
+
 Input
 
 C 32@3× 3/1
@@ -2464,6 +2465,7 @@ C 32@3× 3/1
 BN + ELU
 
 16× 16
+
 max pooling 2× 2/2
 
 C 64@3× 3/1
@@ -2475,6 +2477,7 @@ C 64@3× 3/1
 BN + ELU
 
 8× 8
+
 max pooling 2× 2/2
 
 C 64@3× 3/1
@@ -2482,6 +2485,7 @@ C 64@3× 3/1
 BN + ELU
 
 4× 4
+
 max pooling 2× 2/2
 
 C 512@4× 4/1 (V)
@@ -2491,6 +2495,7 @@ BN + ELU
 Dropout, p = 0.5
 
 1× 1
+
 C 512@1× 1/1
 
 BN + ELU
@@ -2517,7 +2522,8 @@ of kernel size 3× 3 with stride 1.
 The results for the baseline model evaluated on eight datasets are given in Table 5.2. The
 speed for inference for different GPUs is given in Table 5.3.
 
-Dataset Single Model Accuracy Ensemble of 10Training Set Test Set Training Set Test Set
+Dataset Single Model Accuracy Ensemble of 10
+Training Set Test Set Training Set Test Set
 
 Asirra 94.22 % σ = 3.49 94.37 % σ = 3.47 97.07 % 97.37 %
 CIFAR-10 91.23 % σ = 1.10 85.84 % σ = 0.87 92.36 % 86.75 %
@@ -2534,7 +2540,8 @@ CIFAR-10, CIFAR-100 and STL-10 models use test-time transformations. None of the
 models uses unlabeled data or data from other datasets. For HASYv2 no test time
 transformations are used.
 
-Network GPU Tensorflow Inference per Training1 Image 128 images time / epoch
+Network GPU Tensorflow Inference per Training
+1 Image 128 images time / epoch
 
 Baseline Default Intel i7-4930K 3 ms 244 ms 231.0 s
 Baseline Optimized Intel i7-4930K 2 ms 143 ms 149.0 s
@@ -2660,9 +2667,8 @@ training. The image might lead to the wrong conclusion that models which are bet
 the start are also better at the end. In order to check this hypothesis, the relative order of
 validation accuracies for the 10 CIFAR-100 models was examined. If the relative ordering
 stays approximately the same, then it can be considered to run the first few epochs many
-times and only train the best models to the end. For 10 models, there can be 10
+times and only train the best models to the end. For 10 models, there can be 102−10
 
-2−10
 2 = 45
 
 pair-wise changes in the ordering at maximum if the relative order of validation accuracies
@@ -2968,19 +2974,31 @@ root classifier leaf classifier
 cluster identified class identified | cluster class identified | cluster
 
 1 3 69.67 % 84.27 % 72.98 %
+
 2 5 46.60 % 58.54 % 43.47 %
+
 3 2 58.50 % 92.13 % 83.46 %
+
 4 2 50.50 % 87.83 % 81.74 %
+
 5 3 44.67 % 79.29 % 71.01 %
+
 6 2 29.50 % 78.67 % 72.00 %
+
 7 2 52.50 % 92.11 % 87.72 %
+
 8 2 59.50 % 86.23 % 81.88 %
+
 9 2 59.00 % 90.08 % 87.79 %
 
 10 2 62.00 % 85.52 % 73.10 %
+
 11 2 67.00 % 87.01 % 75.32 %
+
 12 2 72.50 % 94.77 % 76.77 %
+
 13 2 64.00 % 82.58 % 86.27 %
+
 14 2 79.67 % 89.85 % 89.10 %
 
 Table 5.6.: Accuracies of the root classifier trained on the full set of 100 classes evaluated on
@@ -3005,7 +3023,8 @@ trained number of epochs. As more filters can lead to different results dependin
 layer where they are added, five models are trained. The details about those models are
 given in Table 5.7
 
-Name Layer Filter count TotalBaseline New parameters
+Name Layer Filter count Total
+Baseline New parameters
 
 m9 9 64 638 5 978 566
 m′9 9 64 974 8 925 622
@@ -3034,13 +3053,19 @@ Single Model Ensemble Mean Epochs Mean Time
 Mean std
 
 baseline 944 012 63.38 % 0.55 64.70 % 154.7 3856 s
+
 m9 5 978 566 65.53 % 0.37 66.72 % 105.7 4472 s
+
 m′9 8 925 622 65.10 % 1.09 66.54 % 95.6 5261 s
+
 m11 5 982 698 65.73% 0.77 67.38% 149.2 5450 s
+
 m′11 1 731 980 62.12 % 0.48 62.89 % 143.6 3665 s
+
 m13 5 982 092 62.39 % 0.66 63.77 % 147.8 4485 s
 
 Table 5.8.: Training time in epochs and wall-clock time for the baseline and models m9, m11, m13
+
 as well as their accuracies.
 
 54
@@ -3166,10 +3191,12 @@ removed. The first convolutional layer was increased from 32 filters to 59 filte
 convolutional layer was increased from 32 filter s to 58 filters in order to keep the amount of
 parameters of the model constant. The adjusted model achieved 62.72 % (-0.66) mean test
 accuracy with a standard deviation of σ = 0.84 (+0.29). The ensemble achieved 63.88 %
+
 test accuracy (-0.66).
 
 Even more extreme, if both convolutional layers are removed from the 16× 16 feature map
 scale, the mean test accuracy drops to 61.21 % (-2.17) with a standard deviation of σ = 0.51
+
 (-0.04). The ensemble achieves a test accuracy of 63.07 % (-1.63). Thus it is very important
 to have at least one convolutional layer at this feature map scale.
 
@@ -3187,6 +3214,7 @@ Hence the effect of removing Batch Normalization from the baseline is investigat
 experiment.
 
 As before, 10 models are trained on CIFAR-100. The training setup and the model mno-bn
+
 are identical to the baseline model m, except that in mno-bn the Batch Normalization layers
 are removed.
 
@@ -3253,11 +3281,20 @@ Mean total Single model Ensemble
 
 time training time Accuracy std Accuracy
 
-8 118 sepoch 81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
-16 62 sepoch 103 – 173 8349 s 64.16% σ = 0.81 66.98%
-32 35 sepoch 119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
-64 25 sepoch 133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
-128 18 sepoch 145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
+8 118 s
+epoch 81 – 153 14 131 s 61.93 % σ = 1.03 65.68 %
+
+16 62 s
+epoch 103 – 173 8349 s 64.16% σ = 0.81 66.98%
+
+32 35 s
+epoch 119 – 179 5171 s 64.11 % σ = 0.75 65.89 %
+
+64 25 s
+epoch 133 – 195 2892 s 63.38 % σ = 0.55 64.70 %
+
+128 18 s
+epoch 145 – 239 3126 s 62.23 % σ = 0.73 63.55 %
 
 Table 5.9.: Training time per epoch and single model test set accuracy (mean and standard deviation)
 of baseline models trained with different mini-batch sizes m on GTX 970 GPUs on
@@ -3271,6 +3308,7 @@ layers 11, 13 and 15 is removed.
 
 The mean test accuracy of 10 trained mno-bias is 63.74 % which is an improvement of
 0.36 percentage points over the baseline. The ensemble achieves a test accuracy of 65.13 %
+
 which is 0.43 percentage points better than the baseline. Hence the bias can safely be
 removed.
 
@@ -3287,6 +3325,7 @@ of the Batch Normalization layers did not noticeably change.
 5.11. Learned Color Space Transformation
 
 In [MSM16] it is described that placing one convolutional layer with 10 filters of size 1× 1
+
 directly after the input and then another convolutional layer with 3 filters of size 1× 1 acts
 as a learned transformation in another color space and boosts the accuracy.
 
@@ -3310,6 +3349,7 @@ stride 2.
 
 This approach was evaluated on CIFAR-100 by replacing all max pooling layers with the
 3× 3 kernel max pooling (and SAME padding). The mean accuracy of 10 models was 63.32 %
+
 (−0.06) and the standard deviation was 0.57 (+0.02). The ensemble achieved 65.15 % test
 accuracy (+0.45).
 
@@ -3405,9 +3445,12 @@ x
 + 1) =
 
 
-−x2 + 1 if x ≤ −2
+−x
+
+2 + 1 if x ≤ −2
 
 x if − 2 ≤ x ≤ 2
+
 x
 2 + 1 if x > −2
 
@@ -3452,17 +3495,29 @@ Single model Ensemble of 10
 Training set Test set Training set Test set
 
 Identity 66.25 % σ = 0.77 56.74 % σ = 0.51 68.77 % 58.78 %
+
 Logistic 51.87 % σ = 3.64 46.54 % σ = 3.22 61.19 % 54.58 %
+
 Logistic− 66.49 % σ = 1.99 57.84 % σ = 1.15 69.04 % 60.10 %
+
 Softmax 75.22 % σ = 2.41 59.49 % σ = 1.25 78.87 % 63.06 %
+
 Tanh 67.27 % σ = 2.38 55.70 % σ = 1.44 70.21 % 58.10 %
+
 Softsign 66.43 % σ = 1.74 55.75 % σ = 0.93 69.78 % 58.40 %
+
 ReLU 78.62 % σ = 2.15 62.18 % σ = 0.99 81.81 % 64.57 %
+
 ReLU− 76.01 % σ = 2.31 62.87 % σ = 1.08 78.18 % 64.81 %
+
 Softplus 66.75 % σ = 2.45 56.68 % σ = 1.32 71.27 % 60.26 %
+
 S2ReLU 63.32 % σ = 1.69 56.99 % σ = 1.14 65.80 % 59.20 %
+
 LReLU 74.92 % σ = 2.49 61.86 % σ = 1.23 77.67 % 64.01 %
+
 PReLU 80.01% σ = 2.03 62.16 % σ = 0.73 83.50% 64.79%
+
 ELU 76.64 % σ = 1.48 63.38% σ = 0.55 78.30 % 64.70 %
 
 Table 5.11.: Training and test accuracy of adjusted baseline models trained with different activation
@@ -3476,22 +3531,43 @@ Mean total
 
 1 Image 128 time training time
 
-Identity 8 ms 42 ms 31 sepoch 108 – 148 3629 s
-Logistic 6 ms 31ms 24 sepoch 101 – 167 2234 s
-Logistic− 6 ms 31ms 22 s
+Identity 8 ms 42 ms 31 s
+epoch 108 – 148 3629 s
 
+Logistic 6 ms 31ms 24 s
+epoch 101 – 167 2234 s
+
+Logistic− 6 ms 31ms 22 s
 epoch
+
 133 – 255 3421 s
 
-Softmax 7 ms 37 ms 33 sepoch 127 – 248 5250 s
-Tanh 6 ms 31ms 23 sepoch 125 – 211 3141 s
-Softsign 6 ms 31ms 23 sepoch 122 – 205 3505 s
-ReLU 6 ms 31ms 23 sepoch 118 – 192 3449 s
-Softplus 6 ms 31ms 24 sepoch 101 – 165 2718 s
-S2ReLU 5ms 32 ms 26 sepoch 108 – 209 3231 s
-LReLU 7 ms 34 ms 25 sepoch 109 – 198 3388 s
-PReLU 7 ms 34 ms 28 sepoch 131 – 215 3970 s
-ELU 6 ms 31ms 23 sepoch 146 – 232 3692 s
+Softmax 7 ms 37 ms 33 s
+epoch 127 – 248 5250 s
+
+Tanh 6 ms 31ms 23 s
+epoch 125 – 211 3141 s
+
+Softsign 6 ms 31ms 23 s
+epoch 122 – 205 3505 s
+
+ReLU 6 ms 31ms 23 s
+epoch 118 – 192 3449 s
+
+Softplus 6 ms 31ms 24 s
+epoch 101 – 165 2718 s
+
+S2ReLU 5ms 32 ms 26 s
+epoch 108 – 209 3231 s
+
+LReLU 7 ms 34 ms 25 s
+epoch 109 – 198 3388 s
+
+PReLU 7 ms 34 ms 28 s
+epoch 131 – 215 3970 s
+
+ELU 6 ms 31ms 23 s
+epoch 146 – 232 3692 s
 
 Table 5.12.: Training time and inference time of adjusted baseline models trained with different
 activation functions on GTX 970 GPUs on CIFAR-100. It was expected that the
@@ -3566,6 +3642,7 @@ could be relaxed.
 10 models msmooth are trained with the α = 0.5 smoothed labels from the prediction
 of an ensemble of 10 baseline models. The mean accuracy of the models trained on the
 smoothed training set labels was 63.61 % (+0.23 %) and the standard deviation was σ = 0.72
+
 (+0.17 %). The ensemble of 10 msmooth models achieved 64.79 % accuracy (+0.09 %). Hence
 the effect of this kind of label smoothing on the final accuracy is questionable.
 
@@ -3653,6 +3730,7 @@ block added. This is the framed part in the table.
 5.15. Optimized Classifier
 
 32× 32
+
 Input
 
 C 69@3× 3/1
@@ -3664,6 +3742,7 @@ C 69@3× 3/1
 BN + ELU
 
 16× 16
+
 max pooling 3× 3/2
 
 C 64@3× 3/1
@@ -3675,6 +3754,7 @@ C 64@3× 3/1
 BN + ELU
 
 8× 8
+
 max pooling 3× 3/2
 
 C 64@3× 3/1
@@ -3682,6 +3762,7 @@ C 64@3× 3/1
 BN + ELU
 
 4× 4
+
 max pooling 3× 3/2
 
 C* 512@4× 4/1 (V)
@@ -3691,6 +3772,7 @@ BN + ELU
 Dropout, p = 0.5
 
 1× 1
+
 C* 512@1× 1/1
 
 BN + ELU
@@ -3706,7 +3788,8 @@ BN + Softmax
 Figure 5.16.: Architecture of the optimized model. C 32@3 × 3/1 is a convolutional layer with
 32 filters of kernel size 3× 3 with stride 1. The * indicates that no bias is used.
 
-Dataset Single Model Accuracy Ensemble of 10Training Set Test Set Training Set Test Set
+Dataset Single Model Accuracy Ensemble of 10
+Training Set Test Set Training Set Test Set
 
 Asirra 95.83 % σ = 4.70 90.75 % σ = 4.73 98.78 % 93.09 %
 CIFAR-10 94.58 % σ = 0.70 87.92 % σ = 0.46 96.47 % 89.86 %
@@ -3723,7 +3806,8 @@ CIFAR-10, CIFAR-100 and STL-10 models use test-time transformations. None of the
 models uses unlabeled data or data from other datasets. For MNIST, GTSRB, SVHN
 and HASY, no test time transformations are used.
 
-Network GPU Tensorflow Inference per Training1 Image 128 images time / epoch
+Network GPU Tensorflow Inference per Training
+1 Image 128 images time / epoch
 
 Optimized Default Intel i7-4930K 5 ms 432 ms 386 s
 Optimized Optimized Intel i7-4930K 4 ms 307 ms 315 s
@@ -3796,7 +3880,8 @@ pattern, the number of epochs increases with lower model regularization (see Tab
 
 5.17. Regularization
 
-Dataset Early Stopping Fixed epochsval. acc train loss
+Dataset Early Stopping Fixed epochs
+val. acc train loss
 
 Asirra 93.09 % 96.01 %3 96.01 %
 CIFAR-10 89.86 % 91.75 % 88.88 %
@@ -3926,6 +4011,7 @@ from 81.00 % [Tho17a] to 85.92 %, for GTSRB the state of the art was improved fr
 This was mainly achieved by the combination of ELU, Dropout, ensembles, training data
 augmentation and test-time transformations. The removal of the bias of layers close to the
 output and re-usage of those parameters in layers close to the input as well as using 3× 3
+
 pooling instead of 2× 2 pooling improved the baseline.
 
 While writing this masters thesis, several related questions could not be answered:
@@ -3975,7 +4061,8 @@ A. Figures, Tables and Algorithms
 
 Figure A.1.: Examples of image filters. Best viewed in electronic form.
 
-Layer 99-percentile intervalfilter bias
+Layer 99-percentile interval
+filter bias
 
 1 [-0.50, 0.48] [-0.06, 0.07]
 3 [-0.21, 0.19] [-0.07, 0.07]
@@ -3998,26 +4085,33 @@ CIFAR-100.
 
 Algorithm 1 Simulated Annealing for minimizing Equation (4.1).
 Require: C ∈ Nn×n, steps ∈ N, T ∈ R+, c ∈ (0, 1)
+
 procedure SimulatedAnnealing(C, steps, T , c)
-
 bestScore← accuracy(C)
+
 bestC← C
+
 for i = 0; i < steps; i← i+ 1 do
-
 p← randomFloat(0, 1)
-if p < 0.5 then . Swap rows
 
+if p < 0.5 then . Swap rows
 i← randomInteger(1, . . . , n)
+
 j ← randomInteger(1, . . . , n) \ { i }
 p← randomUniform(0, 1)
+
 C ′ ← swap(C, i, j)
+
 s← accuracy(C ′)
-if p < exp( s−bestScoreT ) then
+
+if p < exp( s−bestScore
+T ) then
 
 C ← C ′
 
 if s > bestScore then
 bestScore← s
+
 bestC← C
 
 T ← T · c
@@ -4190,12 +4284,13 @@ same idea, that unit-variance is desired for each layer as the training converge
 Name α β γ Reference
 
 Constant α = 0 β = 0 γ ≥ 0 used by [ZF14]
+
 Xavier/Glorot uniform α =
-
 √
-6
 
+6
 nin+nout
+
 β = 0 γ = 0 [GB10]
 
 Xavier/Glorot normal α = 0 β =
@@ -4207,7 +4302,10 @@ Xavier/Glorot normal α = 0 β =
 )2
 γ = 0 [GB10]
 
-He α = 0 β = 2nin γ = 0 [HZRS15b]
+He α = 0 β = 2
+nin
+
+γ = 0 [HZRS15b]
 Orthogonal — — γ = 0 [SMG13]
 LSUV — — γ = 0 [MM15]
 
@@ -4229,9 +4327,7 @@ x∈X
 K∑
 k=1
 
-[txk log(o
-x
-k) + (1− txk) log(1− oxk)]
+[txk log(oxk) + (1− txk) log(1− oxk)]
 
 is by far the most commonly used objective function (e.g., used by [ZF14]). In this equation,
 X is the set of training examples, K is the number of classes, txk ∈ { 0, 1 } indicates if the
@@ -4255,8 +4351,7 @@ B.5. Optimization Techniques
 Most relevant optimization techniques for CNNs are based on SGD, which updates the
 weights according to the rule
 
-wji ← wji + ∆wji with ∆wji = −η
-∂Ex
+wji ← wji + ∆wji with ∆wji = −η ∂Ex
 ∂wji
 
 where η ∈ (0, 1), typically 0.01 (e.g., [MSM16]), is called the learning rate.
@@ -4267,8 +4362,7 @@ lead to sharp minima and thus poor generalization [KMN+16]. Smaller mini-batch s
 lead to longer training times due to computational overhead and to more training steps due
 to gradient noise.
 
-wji ← wji + ∆wji with ∆wji = −η
-∂EB
+wji ← wji + ∆wji with ∆wji = −η∂EB
 ∂wji
 
 Nine variations which adjust the learning rate during training are:
@@ -4286,12 +4380,11 @@ ji + ∆w
 ji with ∆w
 
 (t+1)
-ji = −η
+ji = −η∂EB
 
-∂EB
 ∂wji
-
 + α∆w
+
 (t)
 ji
 
@@ -4314,7 +4407,9 @@ t
 k where t ∈ N0 is the
 
 training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
-until the learning rate is decreased by 110th.
+until the learning rate is decreased by 1
+
+10th.
 
 • Newbob Scheduling [new00]: Start with Performance Scheduling, then use Exponential
 Decay Scheduling.
@@ -4372,65 +4467,85 @@ Name Function ϕ(x) Range of Values ϕ′(x) Used by
 
 Sign function†
 
-+1 if x ≥ 0−1 if x < 0 { −1, 1 } 0 [KS02]
++1 if x ≥ 0
+
+−1 if x < 0
+{ −1, 1 } 0 [KS02]
+
 Heaviside
 step function†
 
-+1 if x > 00 if x < 0 { 0, 1 } 0 [MP43]
-Logistic function 1
++1 if x > 0
 
-1+e−x [0, 1]
-ex
+0 if x < 0
+{ 0, 1 } 0 [MP43]
+
+Logistic function 1
+1+e−x [0, 1] ex
 
 (ex+1)2
 [DJ99]
 
-Tanh e
-x−e−x
-ex+e−x = tanh(x) [−1, 1] sech
+Tanh ex−e−x
 
-2(x) [LBBH98, Tho14a]
+ex+e−x = tanh(x) [−1, 1] sech2(x) [LBBH98, Tho14a]
 
 ReLU† max(0, x) [0,+∞)
 
-1 if x > 00 if x < 0 [KSH12]
+1 if x > 0
+
+0 if x < 0
+[KSH12]
+
 LReLU†2
 
 (PReLU)
 ϕ(x) = max(αx, x) (−∞,+∞)
 
-1 if x > 0α if x < 0 [MHN13, HZRS15b]
-Softplus log(ex + 1) (0,+∞) exex+1 [DBB
+1 if x > 0
 
-+01, GBB11]
+α if x < 0
+[MHN13, HZRS15b]
+
+Softplus log(ex + 1) (0,+∞) ex
+
+ex+1 [DBB+01, GBB11]
 
 ELU
 
-x if x > 0α(ex − 1) if x ≤ 0 (−∞,+∞)
-1 if x > 0αex otherwise [CUH15]
+x if x > 0
 
-Softmax‡ o(x)j = e
-xj∑K
+α(ex − 1) if x ≤ 0
+(−∞,+∞)
 
+1 if x > 0
+
+αex otherwise
+[CUH15]
+
+Softmax‡ o(x)j = exj∑K
 k=1 e
-xk
 
+xk
 [0, 1]K o(x)j ·
+
 ∑K
-
 k=1 e
+
 xk−exj∑K
-
 k=1 e
-xk
 
+xk
 [KSH12, Tho14a]
 
 Maxout‡ o(x) = maxx∈x x (−∞,+∞)
 
-1 if xi = maxx0 otherwise [GWFM+13]
-Table B.3.: Overview of activation functions. Functions marked with † are not differentiable at 0
+1 if xi = maxx
 
+0 otherwise
+[GWFM+13]
+
+Table B.3.: Overview of activation functions. Functions marked with † are not differentiable at 0
 and functions marked with ‡ operate on all elements of a layer simultaneously. The
 hyperparameters α ∈ (0, 1) of Leaky ReLU and ELU are typically α = 0.01. Other
 activation function like randomized leaky ReLUs exist [XWCL15], but are far less
@@ -4463,20 +4578,17 @@ as it produces a probability distribution. See Figure B.1 for a plot of some of 
 x
 
 y
-ϕ1(x) =
+ϕ1(x) = 1
 
-1
 1+e−x
 
 ϕ2(x) = tanh(x)
 
 ϕ3(x) = max(0, x)
 
-ϕ4(x) = log(e
-x + 1)
+ϕ4(x) = log(ex + 1)
 
-ϕ5(x) = max(x, e
-x − 1)
+ϕ5(x) = max(x, ex − 1)
 
 Figure B.1.: Activation functions plotted in [−2,+2]. tanh and ELU are able to produce negative
 numbers. The image of ELU, ReLU and Softplus is not bound on the positive side,
@@ -4526,12 +4638,11 @@ has ki · ki−1(n ·m+ 1) parameters. The +1 is due to the bias.
 n · (k ·m1 ·m2 + 1) parameters.
 
 • A dense block with a depth of L, a growth rate of n and 3× 3 filters has L+ n · 32 +
+
 32 · n2
-
 ∑L
-i=0(L− i) = L+ 9n+ 9n2
 
-L2−L
+i=0(L− i) = L+ 9n+ 9n2L2−L
 2 parameters.
 
 According to [HPTD15], AlexNet has 60 million parameters which is roughly the number
@@ -4547,6 +4658,7 @@ simplicity, nϕ = 5 was chosen.
 
 • A fully connected layer with n nodes and k inputs has to calculate ϕ(W · x+ b) with
 W ∈ Rn×k, x ∈ Rk×1, b ∈ Rn×1. It hence needs about n · (k + (k − 1) + 1) = 2nk
+
 additions / multiplications before the non-linearity ϕ is calculated. The total number
 of FLOPs is 2 · n · k + n · nϕ.
 
@@ -4554,6 +4666,7 @@ of FLOPs is 2 · n · k + n · nϕ.
 being applied to ki−1 filter maps of size w× h results in ki filter maps of size w× h if
 padding is applied. For each element of each filter map, n ·m ·ki−1 multiplications and
 (n ·m · ki−1 − 1) additions have to be made. This results in (2nmki−1 − 1) · (ki ·w · h)
+
 operations. The total number of FLOPs is (2 ·n ·m ·ki−1−1) · (ki ·w ·h)+ki ·w ·h ·nϕ.
 This is, of course, a naive way of calculating a convolution. There are other ways of
 calculating convolutions [LG16].
@@ -4563,8 +4676,8 @@ calculating convolutions [LG16].
 
 
 • A fully connected layer with n nodes after k feature maps of size w×h needs 2n(k ·w ·h)
-FLOPs. The total number of FLOPs is 2n · (k · w · h) + n · nϕ.
 
+FLOPs. The total number of FLOPs is 2n · (k · w · h) + n · nϕ.
 • As Dropout is only calculated during training, the number of FLOPs was set to 0.
 • The number of FLOPs for max pooling is dominated by the number of positions to
 which the pooling kernel is applied. For a feature map of size w × h a max pooling
@@ -4677,7 +4790,9 @@ D.2. AlexNet
 The first CNN which achieved major improvements on the ImageNet dataset was AlexNet [KSH12].
 Its architecture is shown in Figure D.2 and described in Table D.2. It has about 60·106 param-
 eters. A trained AlexNet can be downloaded at www.cs.toronto.edu/g̃uerzhoy/tf_alexnet.
-Note that the uncompressed size is at least 60 965 224 floats · 32 bitfloat ≈ 244 MB.
+Note that the uncompressed size is at least 60 965 224 floats · 32 bit
+
+float ≈ 244 MB.
 
 Figure D.2.: Architecture of AlexNet as shown in [KSH12]: Convolutional Layers are followed
 by pooling layers multiple times. At the end, a fully connected network is applied.
@@ -4726,11 +4841,14 @@ D.3. VGG-16 D
 Another widespread architecture is the VGG-16 (D) [SZ14]. VGG comes from the Visual
 Geometry Group in Oxford which developed this architecture. It has 16 layers which can
 learn parameters. A major difference compared to AlexNet is that VGG-16 uses only 3× 3
+
 filters and is much deeper. A visualization of the architecture is shown in Figure D.3 and a
 detailed textual description is given in Table D.3.
 
 A trained VGG-16 D for Tensorflow can be downloaded at https://github.com/machrisaa/
-tensorflow-vgg. Note that the uncompressed size is at least 138 357 544 floats · 32 bitfloat ≈
+tensorflow-vgg. Note that the uncompressed size is at least 138 357 544 floats · 32 bit
+
+float ≈
 520 MB. The downloaded Numpy binary file npz needs 553 MB without compression and
 514 MB with compression.
 
@@ -4949,21 +5067,38 @@ CIFAR-10 32 px× 32 px 60 000 10 3 [Kri, KH09]
 CIFAR-100 32 px× 32 px 60 000 100 3 [Kri, KH09]
 STL-10 96 px× 96 px 13 000 10 3 [CLN11, CLN10]
 
-Caltech-101 (80 px− 3481 px)×(92 px− 3999 px) 9144 102 3 [FFP03, FFFP06]
+Caltech-101 (80 px− 3481 px)
+×(92 px− 3999 px)
 
-Caltech-256 (75 px− 7913 px)×(75 px− 7913 px) 30 607 257 3 [Gri06, GG07]
+9144 102 3 [FFP03, FFFP06]
 
-ILSVRC 20121 (8 px− 9331 px)×(10 px− 6530 px) 1.2 · 10
-6 1000 3 [Ima12, RDS+14]
+Caltech-256 (75 px− 7913 px)
+×(75 px− 7913 px)
 
-Places3652 (290px− 3158px)×(225px− 2630px) 1.8 · 10
-6 365 3 [Zho16, ZKL+16]
+30 607 257 3 [Gri06, GG07]
 
-GTSRB (25 px− 266 px)×(25 px− 232 px) 51 839 43 3 [SSSI, SSSI12]
+ILSVRC 20121 (8 px− 9331 px)
+×(10 px− 6530 px)
 
-Asirra3 (4 px− 500 px)×(4 px− 500 px) 25 000 2 3 [Asi17, EDHS07]
+1.2 · 106 1000 3 [Ima12, RDS+14]
 
-Graz-02 480 px× 640 pxand 640 px× 480 px 1096 3 3 [Mar08, MS07]
+Places3652 (290px− 3158px)
+×(225px− 2630px)
+
+1.8 · 106 365 3 [Zho16, ZKL+16]
+
+GTSRB (25 px− 266 px)
+×(25 px− 232 px)
+
+51 839 43 3 [SSSI, SSSI12]
+
+Asirra3 (4 px− 500 px)
+×(4 px− 500 px)
+
+25 000 2 3 [Asi17, EDHS07]
+
+Graz-02 480 px× 640 px
+and 640 px× 480 px 1096 3 3 [Mar08, MS07]
 
 Table E.1.: An overview over publicly available image databases for classification. The number
 of images row gives the sum of the training and the test images. Some datasets, like
@@ -5001,16 +5136,20 @@ Require: Semantic segmentation dataset (DS)
 procedure CreateDataset(Annotated dataset DS)
 
 DC ← List
+
 w ← desired image width
 h← desired image height
 for Image and associated label (x, y) in DS do
 
 i← randint(0, L.width− w)
-j ← randint(0, L.height− h)
-cL ← crop(y, (i, j), (i+ w, j + h))
-if at least 50% of s are of one class then
 
+j ← randint(0, L.height− h)
+
+cL ← crop(y, (i, j), (i+ w, j + h))
+
+if at least 50% of s are of one class then
 cI ← crop(x, (i, j), (i+ w, j + h))
+
 D.append((cI , cL))
 
 return (DC)

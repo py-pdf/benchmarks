@@ -39,19 +39,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Art in Machine Learning
 
 
@@ -119,14 +106,19 @@ in T , as measured by P , improves with experience E.
 Σ ϕ
 
 x0
+
 x1
+
 x2
+
 x3
 
 xn
 
 w0
+
 w1
+
 w2
 
 w3
@@ -186,7 +178,9 @@ functions called artificial neurons which take n ∈ N num-
 bers x1, . . . , xn ∈ R as input, multiply them with weights
 w1, . . . , wn ∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
-an activation function is the sigmoid function ϕ(x) = 11+e−x .
+an activation function is the sigmoid function ϕ(x) = 1
+
+1+e−x .
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
 visualized in Figure 1(b). The interesting question is how
@@ -529,6 +523,7 @@ music. Instead of taking notes directly or MIDI files, Nayebi
 and Vitelli took raw audio waveforms as input. Those audio
 waveforms are feature vectors given for time steps 0, 1, . . . , t−
 1, t. The network is given those feature vectors X1, . . . , Xt
+
 and has to predict the following feature vector Xt+1. This
 means it continues the music. As the input is continuous, the
 problem was modeled as a regression task. Discrete Fourier

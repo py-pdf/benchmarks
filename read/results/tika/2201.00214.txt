@@ -37,24 +37,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ar
 X
 
@@ -97,10 +79,17 @@ Temperature Analysis of Flaring
 
 Coronal Loops
 
-N. Fathalian1, S. S. Hosseini Rad2, N. Alipour2, H. Safari2
-1Department of Physics, Payame Noor University (PNU), 19395-3697, Tehran, Iran.
+N. Fathalian
+1, S. S. Hosseini Rad
 
+2, N. Alipour
+2, H. Safari
+
+2
+
+1Department of Physics, Payame Noor University (PNU), 19395-3697, Tehran, Iran.
 2Department of Physics, Faculty of Science, University of Zanjan, 45195-313, Zanjan, Iran.
+
 e-mail: narges_fathalian@alum.sharif.edu
 
 January 4, 2022
@@ -304,6 +293,7 @@ has ten different wavelength channels, three in white light and UV, and the othe
 
 channels. Between these seven, the 304 filter, which is mostly sensitive to chromospheric temper-
 atures (in order of T = 104.7K), not the corona, is not taken into account (Aschwanden et al. 2015).
+
 Therefore, we consider the images of the events in the six wavelengths (94, 131, 171, 193, 211, 335
 
 ). These are covering the coronal temperature range from T ≈ 0.6 to T ≥ 16MK.
@@ -441,7 +431,9 @@ dT
 
 [log (T)− log (Tp,i)
 
-2σ2T,i
+2σ2
+T,i
+
 ). (1)
 
 In which, Tp,i is the DEM peak temperature, EMp,i is the peak EM function, and σT,i is the
@@ -462,6 +454,7 @@ k
 EM(Tk)Rλ(Tk). (2)
 
 Here, Rλ(T) is the instrumental temperature response function of each wavelength filter λ, which
+
 is obtained by the code aia_get_response.pro in the SSW package. As time has passed, the AIA
 
 response functions calibration has partly changed. Here, we use the updated calibration of the
@@ -472,7 +465,8 @@ DEM to the background-subtracted observed fluxes in multiple wavelengths, the th
 
 rameters, temperature width (σT,i), peak of temperature (Tp,i), and peak emission measure (EMp,i)
 
-are found by minimizing χ2i .
+are found by minimizing χ2
+i .
 
 Our data sample is uneven because of omitting some damaged images in between. There-
 fore to analyze the temperature oscillations, we use the Lomb-Scargle method. This method is
@@ -748,6 +742,7 @@ with the non-flaring ones. And figure 9 shows that the increasing and decreasing
 
 range, or the difference between maximum and minimum of the temperature value (max(log(T))-
 min(log(T))), is much higher on average for the loops’ strips of the flaring AR in comparison with
+
 the loops’ strips of the non-flaring one.
 
 V. Summery
@@ -854,6 +849,7 @@ region are also hot loops with the mean temperature above this range. They also 
 
 oscillations. Hence we think the above evidence confirms the slow-mode oscillations for flaring
 loops. The temperature of the non-flaring loops are lower (log(T) < 6) and as discussed above,
+
 we believe that the observed oscillation-like periods in non-flaring loops should be more probably
 related to the high amplitude fluctuations.
 

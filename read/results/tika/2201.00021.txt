@@ -34,27 +34,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Astronomy & Astrophysics manuscript no. mainArxiv ©ESO 2022
 April 12, 2022
 
@@ -254,6 +233,7 @@ position switching mode, and the off position was 10′ in azimuth
 away from the source. For observations made before 2021 Au-
 gust, we used a spectrometer that covered 2 GHz wide backends
 with a channel width of 38.1 kHz, corresponding to ∼0.62 km s−1
+
 at the line’s rest frequency, 18.49939 GHz (Poynter & Kakar
 1975). A high spectral resolution backend with 65536 channels
 and a bandwidth of 300 MHz was employed in 2021 August,
@@ -560,6 +540,7 @@ NH3 column density of ∼5×1015 cm−2 was estimated for a region
 of 3′′ around HW2 (Torrelles et al. 1999). This high NH3 abun-
 dance could provide a suitable environment for maser species.
 Large line widths (∆V1/2 '7.0 km s−1) with VLSR ∼ −10 km s−1
+
 in both (1,1) and (2,2) lines were found toward HW2 (Torrelles
 et al. 1993). The velocity is similar to the cloud’s systemic lo-
 cal standard of rest (LSR) velocity of −11.2 km s−1, which
@@ -581,6 +562,7 @@ lines with the kinetic temperature reveals the size of the hot,
 ammonia-emitting core to be only ∼2.5′′. All those measured
 NH3 lines were quasi-thermal and had LSR velocities of
 ∼ 58.5 km s−1, close to the systemic velocity of ∼ 58.1 km s−1
+
 obtained from C17O observations (Wyrowski et al. 2012).
 Their line widths (∆V1/2 ≥3.6 km s−1) are larger than what
 we find (0.35 km s−1 ≤ ∆V1/2 ≤ 0.94 km s−1) for each (9,6)
@@ -639,6 +621,7 @@ is powered by continuum source C or by an outflow. Near com-
 ponent B, there are some OH and CH3OH masers but no H2O
 or NH3 masers. A group of H2O masers, well-known tracers
 of outflows, with a large velocity distribution of 43 km s−1 ≤
+
 VLSR ≤54 km s−1, was found to the west of the centimeter-
 continuum source A and close to the peak of the millimeter-
 continuum emission (see details in our Fig. A.2 and also in Fig. 5
@@ -948,9 +931,10 @@ detected NH3 (9,6) emissions.
 Table A.2. 1.36 cm JVLA flux densities of individual continuum sources.
 
 Source R.A. Dec. Size P.A. S ν
-(h m s) (◦ ′ ′′) (arcsec) (deg) (mJy)
 
+(h m s) (◦ ′ ′′) (arcsec) (deg) (mJy)
 Cep A HW2 22 56 17.972 ± 0.003 +62 01 49.587 ± 0.015 (0.45 ± 0.19) × (0.22 ± 0.10) 50.0 20.2 ± 1.4
+
 HW3a 22 56 17.420 ± 0.022 +62 01 44.576 ± 0.076 (2.35 ± 0.45) × (0.55 ± 0.14) 66.6 4.75 ± 0.74
 HW3b 22 56 17.578 ± 0.009 +62 01 45.041 ± 0.043 (1.43 ± 0.24) × (0.45 ± 0.10) 59.9 3.19 ± 0.36
 HW3c 22 56 17.956 ± 0.016 +62 01 46.224 ± 0.038 (1.44 ± 0.37) × (0.36 ± 0.19) 86.0 9.90 ± 1.7

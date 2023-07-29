@@ -35,22 +35,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 beta.ps
 
 
@@ -202,12 +186,8 @@ Subhalo ID 16960
 Number of stellar particles (N⋆) 70446
 Number of dark matter particles (NDM) 78448
 
-Stellar mass (M⋆) 5.74 × 10
-10 M⊙
-
-Dark matter mass (MDM) 4.91 × 10
-11 M⊙
-
+Stellar mass (M⋆) 5.74 × 1010 M⊙
+Dark matter mass (MDM) 4.91 × 1011 M⊙
 Mean mass of stellar particles 815808 M⊙
 Stellar half-mass radius 9.99 kpc
 Stellar half-number radius (r1/2) 9.6 kpc
@@ -275,9 +255,9 @@ M
 ⊙
 
  y
-r-
+r-1
 
-1 ]
+]
 
 t [Gyr]
 
@@ -762,7 +742,11 @@ All the relevant properties of the galaxy are given in Table 1,
 including numbers of particles and total masses for both compo-
 nents, and details on the shape of the stellar component: the axis
 ratios minor to major (shortest to longest) c/a, intermediate to
-major b/a, and the triaxiality parameter T = (a2 − b2)/(a2 − c2).
+major b/a, and the triaxiality parameter T = (a2
+
+− b2)/(a2
+− c2).
+
 We distinguish between the half-mass radius provided in the Il-
 lustris database and the half-number radius r1/2, which we use
 
@@ -863,7 +847,9 @@ The velocity anisotropy parameter β(r) = 1 − (σ2
 θ
 +
 
-σ2φ)/(2σ
+σ2
+φ)/(2σ
+
 2
 r ), whereσi are velocity dispersions in spherical coordi-
 
@@ -872,13 +858,12 @@ of galaxies. It is one of the most important dynamical properties
 of bound systems which cannot be inferred directly from ob-
 servations and has to be recovered by dynamical modeling. The
 profiles of the anisotropy parameter β as well as the radial σr
-and tangential σt = [(σ
 
-2
+and tangential σt = [(σ2
 θ
-+σ2φ)/2]
++σ2
 
-1/2 velocity dispersions for our
+φ)/2]1/2 velocity dispersions for our
 
 simulated galaxy are presented in the consecutive columns of
 
@@ -1020,15 +1005,13 @@ R
 )[
 
 10
-3 (
+3 (k
 
-km
+m
  s
 
 -1
-)2
-
-]
+)2 ]
 
 R [kpc]
  0  10  20  30  40
@@ -1057,15 +1040,13 @@ R
 )[
 
 10
-4 (
+4 (k
 
-km
+m
  s
 
 -1
-)3
-
-]
+)3 ]
 
 R [kpc]
  0  10  20  30  40
@@ -1094,15 +1075,13 @@ R
 )[
 
 10
-8 (
+8 (k
 
-km
+m
  s
 
 -1
-)4
-
-]
+)4 ]
 
 R [kpc]
  0  10  20  30  40
@@ -1140,6 +1119,7 @@ arccos(z) −
 √
 
 1 − z2
+
 ]
 
 , (2)
@@ -1158,10 +1138,12 @@ z =
 
 √
 
-r2 + R2c
+r2 + R2
+c
 
-R2c + R
-2
+R2
+c + R2
+
 t
 
 . (4)
@@ -1185,9 +1167,8 @@ logΥ(r) =
 {
 
 log(Υ0) r ≤ r0
-a(log r − log r0)
 
-c + log(Υ0) r > r0
+a(log r − log r0)c + log(Υ0) r > r0
 (5)
 
 Article number, page 5 of 12
@@ -1350,6 +1331,7 @@ der to smooth out the numerical artifacts, the three-dimensional
 
 imums (identified as the best-fitting models) and 1, 2, 3σ con-
 fidence levels which for three parameters correspond to ∆χ2 =
+
 3.53, 8.02, 14.2 (Press et al. 1992).
 
 3.2. Application to mock data
@@ -1465,7 +1447,9 @@ ALL
 r [kpc]
 
 1010
+
 1011
+
 1012
 
  10  100
@@ -1610,7 +1594,9 @@ POPULATIONS
 r [kpc]
 
 1010
+
 1011
+
 1012
 
  10  100
@@ -1921,9 +1907,7 @@ Number of stars (Nphot) 65 797 14 882 49 205
 Number of stars (Nspec) 3286 1136 1151
 Stars within 1.8 kpc 3268 1134 1130
 
-Fitted normalization (N0) [×10
-4] 6.95 1.81 5.45
-
+Fitted normalization (N0) [×104] 6.95 1.81 5.45
 Sérsic radius (RS) [kpc] 0.454 0.429 0.420
 Sérsic parameter (m) 0.808 0.807 0.898
 
@@ -2043,9 +2027,7 @@ m
  s
 -1
 
-)2
-]
-
+)2 ]
 R [kpc]
 
 -16
@@ -2067,15 +2049,13 @@ R
 )[
 
 10
-2 (
+2 (k
 
-km
+m
  s
 
 -1
-)3
-
-]
+)3 ]
 
 R [kpc]
 
@@ -2098,15 +2078,13 @@ R
 )[
 
 10
-4 (
+4 (k
 
-km
+m
  s
 
 -1
-)4
-
-]
+)4 ]
 
 R [kpc]
 
@@ -2207,10 +2185,9 @@ c
 
  12
 
-χ2
--χ
-
+χ2 -χ
 2 m
+
 in
 
 Fig. 13. Values of χ2 relative to the fitted minimum within the range of 3σ confidence level for all stars (left panel) and for the populations (right
@@ -2218,21 +2195,18 @@ panel) for the Fornax dSph.
 
 (Kowalczyk et al. 2019), we obtained higher estimates of the en-
 closed total mass at larger radii. In particular, for the mass en-
-closed within 1.8 kpc we get Mall(< 1.8 kpc) = 3.87
+closed within 1.8 kpc we get Mall(< 1.8 kpc) = 3.87+1.48
 
-+1.48
 −1.56
 × 108
 
-M⊙ from the fit for all stars and Mpops(< 1.8 kpc) = 4.71
-+0.87
+M⊙ from the fit for all stars and Mpops(< 1.8 kpc) = 4.71+0.87
 −1.13
 ×
 
 108 M⊙ from the fit of populations, while previously we had
-Mold(< 1.8 kpc) = 3.7
+Mold(< 1.8 kpc) = 3.7+1.4
 
-+1.4
 −1.3
 × 108 M⊙.
 

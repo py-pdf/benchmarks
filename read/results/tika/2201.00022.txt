@@ -34,27 +34,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Draft version January 4, 2022
 Typeset using LATEX twocolumn style in AASTeX631
 
@@ -72,6 +51,7 @@ ABSTRACT
 Most stellar evolution models predict that black holes (BHs) should not exist above approximately
 
 50−70 M�. However, recent LIGO/Virgo detections indicate the existence of BHs with masses at and
+
 above this threshold. We suggest that massive BHs, including intermediate mass black holes (IMBHs),
 
 can form in galactic nuclei through collisions between stellar-mass black holes and the surrounding
@@ -107,6 +87,7 @@ approximately 142 M�. This event may have also had a
 mass gap that limits stellar black holes (BHs) to no
 
 more than ∼< 50 M� (e.g., Heger et al. 2003; Woosley
+
 2017)1. Similarly, the merger products of GW150914,
 
 GW170104, and GW170814 fall within the mass gap
@@ -273,6 +254,7 @@ back towards the cluster center over a dynamical fric-
 tion timescale. Using this approach, they showed that
 
 103 − 104 M� IMBHs can form efficiently over the life-
+
 time of a cluster.
 
 However, as discussed in Section 2.2, direct star-BH
@@ -350,6 +332,7 @@ sume that the BH mass distribution follows that of the
 stars from which they originate, a Kroupa initial mass
 
 function dN/dm ∝ m−2.35. While this choice represents
+
 a gross oversimplification, it has very little bearing on
 
 our final results. Future work may address the particu-
@@ -401,7 +384,8 @@ BHs in the GN can undergo direct collisions with other
 
 objects. The timescale for this process, tcoll, can be es-
 
-timated using a simple rate calculation: t−1coll = nσA,
+timated using a simple rate calculation: t−1
+coll = nσA,
 
 where n is the number density of objects, σ is the ve-
 
@@ -409,15 +393,14 @@ locity dispersion, and A is the cross-section. We use the
 
 collision timescale from Rose et al. (2020):
 
-t−1coll =πn(a•)σ(a•)
+t−1
+coll =πn(a•)σ(a•)
 
 ×
 (
-f1(e•)r
+f1(e•)r2
 
-2
 c + f2(e•)rc
-
 2G(mBH +m?)
 
 σ(a•)2
@@ -478,16 +461,19 @@ r•
 r0
 
 )−α
+
 , (2)
 
 where r• denotes the distance from the SMBH. We adopt
 
 a SMBH mass of 4× 106 M� such that our fiducial GN
+
 matches our own galactic center (e.g., Ghez et al. 2005;
 
 Genzel et al. 2003). In this case, the normalization in
 
 Eq. (2) is ρ0 = 1.35× 106M�/pc3 at r0 = 0.25 pc (Gen-
+
 zel et al. 2010). Additionally, in Eq. (2), α gives the
 
 slope of the power law. We assume that a uniform pop-
@@ -532,6 +518,7 @@ and a star, and the former has a much smaller physi-
 cal cross-section. For example, the Schwarzschild radius
 
 of a 10M� BH is only 30 km, or 4.31 × 10−5R�. For
+
 this reason, direct collisions between compact objects
 
 are very rare and not included in our model.
@@ -629,6 +616,7 @@ maximum impact parameter 1 R�. Qualitatively, one
 might expect that the BH could accrete the entire star
 
 (i.e., ∆m ∼ 1 M�) if the relative velocity is smaller than
+
 the escape velocity from the BH at this point. However,
 
 in the vicinity of the SMBH, the dispersion velocity of
@@ -648,12 +636,13 @@ To estimate ∆m, we begin with the Bondi-Hoyle ac-
 cretion rate, ṁ, given by:
 
 ṁ =
-4πG2m2BHρstar
+4πG2m2
 
-(c2s + σ
-2)
+BHρstar
 
+(c2s + σ2)
 3/2
+
 , (5)
 
 where cs is the speed of sound in the star and ρstar is its
@@ -666,8 +655,7 @@ approximate the density as 1M�/(4πR
 3
 �/3) and take
 
-the conservative value of cs = 500 km s
-−1, which is
+the conservative value of cs = 500 km s−1, which is
 
 consistent with the sound speed inside a 1 M� star
 
@@ -678,8 +666,11 @@ a lower limit on ∆m. To find ∆m, at each collision, we
 have:
 
 ∆m = min(ṁ× t?,cross, 1 M�) , (6)
+
 where t?,cross ∼ R�/σ is the crossing time of the BH in
+
 the star. We take the minimum between ṁ× t?,cross and
+
 1 M� because the BH cannot accrete more mass than
 
 one star at each collision.
@@ -822,9 +813,10 @@ characteristic timescale to merge a BH with an SMBH
 is given by:
 
 tGW ≈2.9× 1012 yr
-(
 
+(
 M•
+
 106 M�
 
 )−1(
@@ -833,9 +825,11 @@ mBH
 106 M�
 
 )−1
+
 ×
 (
 M• +mBH
+
 2× 106 M�
 
 )−1(
@@ -844,13 +838,16 @@ a•
 10−4 pc
 
 )4
-× f(e•)(1− e2•)7/2 , (9)
+
+× f(e•)(1− e2
+•)7/2 , (9)
 
 where f(e•) is a function of e•. For all values of e•,
 
 f(e•) is between 0.979 and 1.81 (Blaes et al. 2002). We
 
 plot this timescale for a 1 × 105M� BH in Figure 1 in
+
 blue.
 
 In our simulations, we assume a BH has merged with
@@ -950,6 +947,7 @@ G2ρ〈M∗〉 ln Λrlx
 , (10)
 
 where ln Λrlx is the Coulomb logarithm and 〈M∗〉 is the
+
 average mass of the surrounding objects, here assumed
 
 to be 1M� (Spitzer 1987; Binney & Tremaine 2008,
@@ -998,6 +996,7 @@ merger times of these BHs.
 They sink toward the SMBH on the mass segregation
 
 timescale, tseg ≈ 〈M∗〉/mBH × trelax (e.g., Spitzer 1987;
+
 Fregeau et al. 2002; Merritt 2006), which is typically an
 
 order of magnitude smaller than the relaxation timescale
@@ -1059,6 +1058,7 @@ BHs will then settle onto a Bahcall-Wolf profile, while
 the stars may follow a shallower profile, with approx-
 
 imately n? ∝ r−1.5, inwards of the transition radius
+
 (Linial & Sari in prep.).
 
 Therefore, after the initial mass segregation, we allow
@@ -1163,6 +1163,7 @@ distributions were drawn from the same sample for the
 IMF with an average of 10 M� leads to a final distri-
 
 bution with an average of ∼ 200 M� and a median of
+
 ∼ 45 M�, which lies within the mass gap.
 
 3. DISCUSSION AND PREDICTIONS
@@ -1229,6 +1230,7 @@ profile by allowing BHs to diffuse into regions of more
 or less efficient growth. As a result, more BHs grow in
 
 mass, but their maximum mass is smaller (∼ 104 M�).
+
 Additionally, the final masses have no apparent depen-
 
 dence on distance from the SMBH (see Figure 4).
