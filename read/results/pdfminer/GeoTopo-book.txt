@@ -51,10 +51,10 @@ in „Analysis I“ vermittelt.
 ), Mengenschreibweisen (
 
 ,
-∪
+∩
 
 ,
-∩
+∪
 
 P
 
@@ -447,9 +447,9 @@ sind dort alle abgeschlossenen Mengen.
 
 {
 
-}
-
 {
+
+}
 
 ,
 
@@ -2125,9 +2125,9 @@ R>0
 
 \ {
 
-0
-
 }
+
+0
 
 ist nicht zusammenhängend, denn R
 
@@ -2183,9 +2183,9 @@ R
 ∩
 X, wobei X ein topologischer Raum ist.
 
-∪
-
 ∩
+
+∪
 
 6) R mit Zariski-Topologie ist zusammenhängend.
 
@@ -4245,9 +4245,9 @@ Umgebung: B1(0, 1)
 (cid:12)
 (cid:12) w2 + z2 < 1 (cid:9) = V2
 
-(cid:107)
-
 }
+
+(cid:107)
 
 ?
 
@@ -7537,9 +7537,9 @@ R)
 
 →
 
-(cid:55)→
-
 →
+
+(cid:55)→
 
 ×
 
@@ -8855,9 +8855,9 @@ z
 
 Abbildungen.
 
-}
-
 (cid:107)
+
+}
 
 ∈
 1) f1 := idR ist eine oﬀene und stetige Abbildung.
@@ -9034,9 +9034,9 @@ Vi
 
 Vj =
 
-∃
-
 ∀
+
+∃
 
 ∈
 
@@ -10188,9 +10188,9 @@ von y.
 
 ⊆
 
-Y
-
 U ein Homöomorphismus. Dann ist W := f −1(V )
+
+Y
 
 ×
 ∈
@@ -10234,9 +10234,9 @@ f (y0) = g(y0), so ist (g−1
 
 −
 
-1
-
 }
+
+1
 
 schon Fix(f ) = Y , also f = idY .
 
@@ -11440,6 +11440,8 @@ Diese Teilmengen Hi heißen Halbebenen bzgl. g.
 
 für alle A
 
+gilt: AB
+
 Hi, B
 
 ∈ {
@@ -11452,8 +11454,6 @@ Hi, B
 
 H2 in zwei nichtleere Teilmengen H1, H2, sodass
 =
-
-gilt: AB
 
 = j.
 
@@ -13660,6 +13660,8 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 1
 −
 
+5
+
 3
 
 1
@@ -13667,8 +13669,6 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 2
 
 0
-
-5
 
 4
 
@@ -16703,9 +16703,9 @@ y3
 
 (cid:43)
 
-
-
 
+
+
 
 
 
@@ -17590,9 +17590,9 @@ zi
 
 }
 
-0
-
 }
+
+0
 
 {
 
@@ -18229,9 +18229,9 @@ g. Da aber x
 
 f und f
 
-∈
-
 ∩
+
+∈
 
 ∈
 

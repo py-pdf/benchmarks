@@ -12,6 +12,8 @@ from borb.pdf.pdf import PDF
 from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from pdfminer.high_level import extract_pages
 
+from .text_extraction_post_processing import postprocess
+
 
 def pymupdf_get_text(data: bytes) -> str:
     with PyMuPDF.open(stream=data, filetype="pdf") as doc:
@@ -22,10 +24,11 @@ def pymupdf_get_text(data: bytes) -> str:
 
 
 def pypdf_get_text(data: bytes) -> str:
-    text = ""
+    texts = []
     reader = pypdf.PdfReader(BytesIO(data))
     for page in reader.pages:
-        text += page.extract_text() + "\n"
+        texts.append(page.extract_text())
+    text = postprocess(texts)
     return text
 
 

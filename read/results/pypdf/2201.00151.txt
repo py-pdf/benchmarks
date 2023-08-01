@@ -8,57 +8,57 @@ e-mail:klaudia.kowalczyk@gmail.com, lokas@camk.edu.pl
 January 4, 2022
 ABSTRACT
 Dwarf spheroidal (dSph) galaxies are believed to be strongl y dark matter dominated and thus are considered perfect obje cts to study
-dark matter distribution and test theories of structure for mation. They possess resolved, multiple stellar populatio ns that oﬀer new
+dark matter distribution and test theories of structure for mation. They possess resolved, multiple stellar populatio ns that offer new
 possibilities for modeling. A promising tool for the dynami cal modeling of these objects is the Schwarzschild orbit sup erposition
 method. In this work we extend our previous implementation o f the scheme to include more than one population of stars and a more
 general form of the mass-to-light ratio function. We tested the improved approach on a nearly spherical, gas-free galax y formed in
 the cosmological context from the Illustris simulation. We modeled the binned velocity moments for stars split into two populations
-by metallicity and demonstrate that in spite of larger sampl ing errors the increased number of constraints leads to sign iﬁcantly tighter
-conﬁdence regions on the recovered density and velocity ani sotropy proﬁles. We then applied the method to the Fornax dSp h galaxy
-with stars similarly divided into two populations. In compa rison with our earlier work, we ﬁnd the anisotropy parameter to be slightly
+by metallicity and demonstrate that in spite of larger sampl ing errors the increased number of constraints leads to sign ificantly tighter
+confidence regions on the recovered density and velocity ani sotropy profiles. We then applied the method to the Fornax dSp h galaxy
+with stars similarly divided into two populations. In compa rison with our earlier work, we find the anisotropy parameter to be slightly
 increasing, rather than decreasing, with radius and more st rongly constrained. We are also able to infer anisotropy for each stellar
-population separately and ﬁnd them to be signiﬁcantly di ﬀerent.
+population separately and find them to be significantly di fferent.
 Key words. galaxies: kinematics and dynamics – galaxies: structure – g alaxies: fundamental parameters – galaxies: dwarf – galaxi es:
 star clusters: individual: Fornax
 1. Introduction
 Dwarf spheroidal (dSph) galaxies of the Local Group (Mateo
 1998; Tolstoy et al. 2009) are considered to be a perfect tool to
 test our current theories of structure formation involving dark
-matter in the context of near-ﬁeld cosmology. The objects ar e
+matter in the context of near-field cosmology. The objects ar e
 believed to be strongly dark matter dominated with mass-to- light
 ratios even on the order of a few hundred solar units. Due to th eir
-proximity they are also the only extragalactic systems wher e in-
-dividual stars can be resolved and their velocities measure d of-
-fering the possibility to create interesting dynamical mod eling
+proximity they are also the only extragalactic systems wher e individual
+ stars can be resolved and their velocities measure d offering
+ the possibility to create interesting dynamical mod eling
 techniques.
-The ﬁrst estimates of dark matter content in dSph galaxies
+The first estimates of dark matter content in dSph galaxies
 were based on a single measurement of the line-of-sight velo city
 dispersion of the stars and the application of the virial the orem.
 As the samples of the stars with kinematic measurements grew ,
-it became possible to estimate the proﬁle of the velocity dis per-
-sion and model it using the Jeans equation (Binney & Tremaine
+it became possible to estimate the profile of the velocity dis persion
+ and model it using the Jeans equation (Binney & Tremaine
 2008). Since the stars in the galaxy can move on a variety
 of orbits, from circular to radial, the degeneracy between t he
 anisotropy of the orbits and the mass distribution is inhere nt in
 this type of modeling. The reason for this lies in the fact tha t
-diﬀerent combinations of these quantities can reproduce the ve -
-locity dispersion proﬁle equally well.
+different combinations of these quantities can reproduce the ve locity
+ dispersion profile equally well.
 A way to overcome this issue, at least partially, is to resort to
-higher order line-of-sight velocity moments, such as the ku rto-
-sis, and use the corresponding Jeans equations. Since the ku rto-
-sis is more sensitive to the velocity anisotropy than to the m ass
+higher order line-of-sight velocity moments, such as the ku rtosis,
+ and use the corresponding Jeans equations. Since the ku rtosis
+ is more sensitive to the velocity anisotropy than to the m ass
 distribution, useful constraints can be obtained on both. S till, the
 method requires large kinematic samples to estimate the vel ocitymoments reliably and some assumption on the functional form
 of the anisotropy (Łokas 2002; Łokas et al. 2005).
 The Schwarzschild modeling technique (Schwarzschild
-1979) oﬀers a diﬀerent approach to estimate the properties of
+1979) offers a different approach to estimate the properties of
 dSph galaxies without prior assumptions on the type of orbit s.
-It relies on building a galaxy model out of a set of best-ﬁttin g
+It relies on building a galaxy model out of a set of best-fittin g
 orbits probed in the range of energy and angular momenta. In
 this method, the anisotropy of the stellar orbits comes out a s a
-result of the modeling in the same way as the density proﬁle. A l-
-though it has been originally developed for large elliptica l galax-
-ies (van der Marel et al. 1998; Valluri et al. 2004; Gebhardt e t al.
+result of the modeling in the same way as the density profile. A lthough
+ it has been originally developed for large elliptica l galaxies
+ (van der Marel et al. 1998; Valluri et al. 2004; Gebhardt e t al.
 2015), it has recently been adopted for use on discrete data
 characteristic of dSph galaxies and applied to a number of
 dwarfs, including Carina, Draco, Fornax, Sculptor, and Sex tans
@@ -67,18 +67,18 @@ dwarfs, including Carina, Draco, Fornax, Sculptor, and Sex tans
 Many dSph galaxies show signs of the presence of multiple
 stellar populations resulting from a few star formation epi sodes
 (Bellazzini et al. 2001; del Pino et al. 2015; Fabrizio et al. 2016;
-Pace et al. 2020). This observation o ﬀers a way to improve the
+Pace et al. 2020). This observation o ffers a way to improve the
 modeling methods since, assuming dynamical equilibrium, a ll
-populations are supposed to be inﬂuenced by the same under-
-lying gravitational potential of the galaxy, but they have d if-
-ferent distributions so more constraints can be imposed dur ing
-the modeling. This approach was ﬁrst used by Battaglia et al.
+populations are supposed to be influenced by the same underlying
+ gravitational potential of the galaxy, but they have d ifferent
+ distributions so more constraints can be imposed dur ing
+the modeling. This approach was first used by Battaglia et al.
 (2008) to model the mass distribution in the Sculptor dSph
 galaxy. A few attempts have also been made to constrain the
-inner slope of the dark matter proﬁle in dSph galaxies using
+inner slope of the dark matter profile in dSph galaxies using
 this technique (Walker & Peñarrubia 2011; Amorisco & Evans
-2012; Hayashi et al. 2018) in order to resolve the so-called c usp-
-core problem. It has been shown to be di ﬃcult, however, due
+2012; Hayashi et al. 2018) in order to resolve the so-called c uspcore
+ problem. It has been shown to be di fficult, however, due
 Article number, page 1 of 12
 A&A proofs: manuscript no. Populations4
 Table 1. Properties of the Illustris galaxy used to create mock data.
@@ -98,47 +98,47 @@ to the nonsphericity of the dwarfs that introduces biases in such
 measurements (Kowalczyk et al. 2013; Genina et al. 2018).
 In our recent papers (Kowalczyk et al. 2017, 2018, 2019) we
 developed the Schwarzschild technique in the form applicab le to
-binned velocity moments of a single tracer and veriﬁed its ab il-
-ity to reproduce the mass distribution and velocity anisotr opy of
+binned velocity moments of a single tracer and verified its ab ility
+ to reproduce the mass distribution and velocity anisotr opy of
 simulated galaxies. We have also studied biases resulting f rom
 the nonsphericity of the modeled objects. Later, we applied the
-method to model the kinematics of the Fornax dSph galaxy esti -
-mating its mass and anisotropy proﬁles with unprecedented p re-
-cision.
-In this paper we extend our Schwarzschild modeling tech-
-nique to include multiple stellar populations with the aim t o
+method to model the kinematics of the Fornax dSph galaxy esti mating
+ its mass and anisotropy profiles with unprecedented p recision.
+
+In this paper we extend our Schwarzschild modeling technique
+ to include multiple stellar populations with the aim t o
 constrain the properties of dSph galaxies even more strongl y.
 We test our approach on a realistic simulated galaxy formed i n
 the cosmological context, originating from the Illustris p roject
 (V ogelsberger et al. 2014a). Although no precise analogues of
-dSph galaxies are available in this simulation because of th e res-
-olution, we use a more massive galaxy but with properties oth -
-erwise similar to dSphs. The reliability of the modeling doe s not
+dSph galaxies are available in this simulation because of th e resolution,
+ we use a more massive galaxy but with properties oth erwise
+ similar to dSphs. The reliability of the modeling doe s not
 depend on the particular value of the mass so we believe these
 tests to be viable. We do not attempt to constrain the inner da rk
-matter density proﬁle (which is poorly resolved anyway) but try
+matter density profile (which is poorly resolved anyway) but try
 to put tighter limits on the estimates of the mass and anisotr opy
-proﬁles. Finally, we apply the improved method to the availa ble
+profiles. Finally, we apply the improved method to the availa ble
 kinematic data for the distinct stellar populations of the F ornax
 dSph.
 This paper is organized as follows. In Section 2 we present
 the data for the simulated galaxy as well as their splitting i nto
 stellar populations and mock observations along the main ax es.
-Section 3 contains an overview of our modeling method, the ap -
-plication of the method to all stars and to two populations, a nd
+Section 3 contains an overview of our modeling method, the ap plication
+ of the method to all stars and to two populations, a nd
 a comparison of the results obtained with these two approach es.
 The results of the application of the method to the Fornax dSp h
-galaxy are presented in Section 4. We discuss our ﬁndings and
+galaxy are presented in Section 4. We discuss our findings and
 summarize the paper in Section 5.
 2. Mock data
 2.1. Selection of the simulated galaxy
 In order to test our modeling method on realistic simulated
 data, we decided to use a galaxy from the Illustris project
 (V ogelsberger et al. 2014a,b; Genel et al. 2014; Nelson et al .
-2015), namely the Illustris-1 cosmological simulation. Th is sim-
-ulation follows the formation and evolution of galaxies fro m the
-early Universe to the present by solving gravity and hydrody -
-namics, as well as modeling of star formation, galactic wind s,
+2015), namely the Illustris-1 cosmological simulation. Th is simulation
+ follows the formation and evolution of galaxies fro m the
+early Universe to the present by solving gravity and hydrody namics,
+ as well as modeling of star formation, galactic wind s,
 SFR [M⊙ yr-1]
 t [Gyr] 0 4 8 12 16
  0 2 4 6 8 10 12
@@ -153,29 +153,29 @@ N [102]
 Fig. 2. Number of stars as a function of their metallicity and time of
 formation (the age of the Universe) in the simulated galaxy. The vertical
 line indicates the applied split into stellar populations.
-magnetic ﬁelds, and the feedback from black holes. Although
+magnetic fields, and the feedback from black holes. Although
 dwarf galaxies that are of our interest here are not resolved in the
 suite, this can be easily overcome with the appropriate choi ce of
 the object and the treatment of data.
-As the key properties of dSph galaxy equivalents we iden-
-tiﬁed: the lack of gas, the lack of a black hole, a low spin,
+As the key properties of dSph galaxy equivalents we identified:
+ the lack of gas, the lack of a black hole, a low spin,
 the stellar mass much smaller than the dark matter mass and a
-nearly spherical shape. The last condition was adopted in an at-
-tempt to avoid any strong bias introduced by the spherical mo d-
-eling of a nonspherical object. Moreover, we required the ga laxy
-to possess a signiﬁcant number of both stellar and dark mat-
-ter particles (over 105), and a well resolved center. Due to the
+nearly spherical shape. The last condition was adopted in an attempt
+ to avoid any strong bias introduced by the spherical mo deling
+ of a nonspherical object. Moreover, we required the ga laxy
+to possess a significant number of both stellar and dark matter
+ particles (over 105), and a well resolved center. Due to the
 large softening scale for dark matter particles in the simul ation
 (ǫDM=1.42 kpc), we looked for an object in which even the
 more concentrated stellar population (see Section 2.2) ext ended
-over 43 kpc so that the region a ﬀected by the numerical artifacts
+over 43 kpc so that the region a ffected by the numerical artifacts
 was enclosed within 2-3 innermost data bins (we used 20 linea rly
 spaced spatial bins, see Section 3.1).
-Out of 27345 galaxies listed in the catalog of stellar circu-
-larities, angular momenta, and axis ratios published by the Illus-
-tris team (Genel et al. 2015) containing subhalos with the st ellar
-mass larger than 109M⊙, only a few met our restrictive require-
-Article number, page 2 of 12
+Out of 27345 galaxies listed in the catalog of stellar circularities,
+ angular momenta, and axis ratios published by the Illustris
+ team (Genel et al. 2015) containing subhalos with the st ellar
+mass larger than 109M⊙, only a few met our restrictive requireArticle
+ number, page 2 of 12
 K. Kowalczyk & E. L. Łokas: Multiple stellar populations in S chwarzschild modeling
 -80-4004080POPULATION I[kpc]majorPOPULATION I
 intermediatePOPULATION I
@@ -204,8 +204,8 @@ V [km/s]
 [kpc]-80-4004080POPULATION II
 [kpc] 0 30 60 90
 σ [km/s]
-Fig. 3. Maps of the projected stellar density, mean stellar velocit y, and stellar velocity dispersion (in rows) for two stellar populations: the metal-
-rich population I (left-hand side panels) and the metal-poo r population II (right-hand side), and observations along t he principal axes determined
+Fig. 3. Maps of the projected stellar density, mean stellar velocit y, and stellar velocity dispersion (in rows) for two stellar populations: the metalrich
+ population I (left-hand side panels) and the metal-poo r population II (right-hand side), and observations along t he principal axes determined
 for all stars (in columns, along the major, the intermediate , and the minor axis, respectively).
 -1-0.5 0 0.5 1
  1  10  100β(r)
@@ -225,24 +225,24 @@ r [kpc]
  40 60 80 100 120
  0 10 20 30 40 50σt(r)
 r [kpc]
-Fig. 4. Proﬁles of the velocity anisotropy parameter, radial veloc ity dispersion, and tangential velocity dispersion (in con secutive columns) calcu-
-lated from all stars (in red), including only population I (i n orange), and only population II (in blue). The upper row sho ws the proﬁles using the
+Fig. 4. Profiles of the velocity anisotropy parameter, radial veloc ity dispersion, and tangential velocity dispersion (in con secutive columns) calculated
+ from all stars (in red), including only population I (i n orange), and only population II (in blue). The upper row sho ws the profiles using the
 logarithmic distance scale and reaching the outskirts of th e galaxy whereas the bottom row presents in the linear scale o nly the radial range used
 in the modeling.
 ments. We decided to use a galaxy labeled as subhalo 16960.
 All the relevant properties of the galaxy are given in Table 1 ,
-including numbers of particles and total masses for both com po-
-nents, and details on the shape of the stellar component: the axis
+including numbers of particles and total masses for both com ponents,
+ and details on the shape of the stellar component: the axis
 ratios minor to major (shortest to longest) c/a, intermediate to
 major b/a, and the triaxiality parameter T=(a2−b2)/(a2−c2).
-We distinguish between the half-mass radius provided in the Il-
-lustris database and the half-number radius r1/2, which we usefor further calculations in this paper. The di ﬀerence between the
+We distinguish between the half-mass radius provided in the Illustris
+ database and the half-number radius r1/2, which we usefor further calculations in this paper. The di fference between the
 two comes from a small gradient in the stellar mass-to-light ratio
 with the distance from the galactic center. Since in our appr oach
-we treat stars as equal-mass particles and refer to number de n-
-sities (multiplied by the mean mass of a stellar particle whe n
-needed), the application of the half-number radius is more s elf-
-consistent.
+we treat stars as equal-mass particles and refer to number de nsities
+ (multiplied by the mean mass of a stellar particle whe n
+needed), the application of the half-number radius is more s elfconsistent.
+
 Article number, page 3 of 12
 A&A proofs: manuscript no. Populations4
 10-310-1101103
@@ -255,22 +255,22 @@ R [kpc]minor
 all stars
 pop I
 pop II
-Fig. 5. Surface number density proﬁles of the stellar data samples f or the simulated galaxy observed along di ﬀerent lines of sight (from the left to
-the right). Diﬀerent lines show proﬁles for all available stars (in red), th e metal-rich population I (in orange), and the metal-poor po pulation II (in
+Fig. 5. Surface number density profiles of the stellar data samples f or the simulated galaxy observed along di fferent lines of sight (from the left to
+the right). Different lines show profiles for all available stars (in red), th e metal-rich population I (in orange), and the metal-poor po pulation II (in
 blue). Thin vertical lines indicate r0(see text) and the outer boundary of the spectroscopic data.
 2.2. Splitting the stars into populations
-Our chosen galaxy shows a complex formation history under-
-going multiple mergers which result in extended star format ion
+Our chosen galaxy shows a complex formation history undergoing
+ multiple mergers which result in extended star format ion
 with a few star formation bursts. The last wet merger, that is a
 merger with an object containing gas, happens at 6.9 Gyr from
 the beginning of the simulation, whereas the last dry merger (no
 gas transfer) at 12.1 Gyr, giving the galaxy enough time to re gain
 dynamical equilibrium. We present the star formation rate ( SFR)
 as a function of time (the age of the Universe) in Fig. 1, where
-these last mergers are indicated with black and gray vertica l ar-
-rows. In Fig. 2 we show the distribution of stars as a function of
-their metallicity (in solar units) and the time of formation . In or-
-der to divide the stellar sample into two populations we cut i t in
+these last mergers are indicated with black and gray vertica l arrows.
+ In Fig. 2 we show the distribution of stars as a function of
+their metallicity (in solar units) and the time of formation . In order
+ to divide the stellar sample into two populations we cut i t in
 half based on the metallicity index of each stellar particle . This
 split is indicated in Fig. 2 with the vertical line. With sati sfying
 accuracy it separates the stars born before and after 4 Gyr si nce
@@ -279,42 +279,42 @@ time before and after the end of the second major star burst, a s
 shown in Fig. 1. We refer to the metal-rich stars as populatio n I
 and to the metal-poor as population II, following the common ly
 used nomenclature in astronomy.
-In Fig. 3 we present maps of the projected stellar mass den-
-sity, line-of-sight velocity, and line-of-sight velocity dispersion
+In Fig. 3 we present maps of the projected stellar mass density,
+ line-of-sight velocity, and line-of-sight velocity dispersion
 for both populations obtained by projecting the galaxy alon g its
-principal axes. The orientation was determined from the ine r-
-tia tensor calculated from all stars within the half-number radius
-r1/2and therefore is the same in both panels. The two popula-
-tions diﬀer signiﬁcantly in the spatial distribution and kinemat-
-ics with the metal-rich (considered to be younger) populati on I
-being more concentrated but having lower central velocity d is-
-persion. Both populations show a weak rotation signal at lar ge
+principal axes. The orientation was determined from the ine rtia
+ tensor calculated from all stars within the half-number radius
+r1/2and therefore is the same in both panels. The two populations
+ differ significantly in the spatial distribution and kinematics
+ with the metal-rich (considered to be younger) populati on I
+being more concentrated but having lower central velocity d ispersion.
+ Both populations show a weak rotation signal at lar ge
 distances from the center.
 The velocity anisotropy parameter β(r)=1−(σ2
 θ+
 σ2
 φ)/(2σ2
-r), whereσiare velocity dispersions in spherical coordi-
-nates (Binney & Tremaine 2008), describes the orbital struc ture
+r), whereσiare velocity dispersions in spherical coordinates
+ (Binney & Tremaine 2008), describes the orbital struc ture
 of galaxies. It is one of the most important dynamical proper ties
-of bound systems which cannot be inferred directly from ob-
-servations and has to be recovered by dynamical modeling. Th e
-proﬁles of the anisotropy parameter βas well as the radial σr
+of bound systems which cannot be inferred directly from observations
+ and has to be recovered by dynamical modeling. Th e
+profiles of the anisotropy parameter βas well as the radial σr
 and tangentialσt=[(σ2
 θ+σ2
 φ)/2]1/2velocity dispersions for our
 simulated galaxy are presented in the consecutive columns o fFig. 4. Throughout the paper we use red, orange, and blue colo rs
-to indicate values calculated or recovered for all stars, po pula-
-tion I, and population II, respectively. The two rows of the ﬁ gure
-show the behavior of the parameters at di ﬀerent scales. The top
-row plots the proﬁles with the distance from the center of the
+to indicate values calculated or recovered for all stars, po pulation
+ I, and population II, respectively. The two rows of the fi gure
+show the behavior of the parameters at di fferent scales. The top
+row plots the profiles with the distance from the center of the
 galaxy in the logarithmic scale and shows the drop of anisotr opy
 at the outer edges of the object. The bottom row uses the linea r
 distance scale and focuses on the main body of the galaxy.
-Figure 5 shows the surface number density proﬁles of the
-stars as measured in di ﬀerent directions. We can see that while
-the diﬀerent subsamples have quite distinguishable proﬁles, the
-diﬀerence between the lines of sight is small because the galaxy
+Figure 5 shows the surface number density profiles of the
+stars as measured in di fferent directions. We can see that while
+the different subsamples have quite distinguishable profiles, the
+difference between the lines of sight is small because the galaxy
 is close to spherical.
 2.3. Observables
 We generated nine sets of mock data by observing all stars and
@@ -323,22 +323,22 @@ from all stars. For the observables to be used in the modeling we
 divided the stars into 20 bins spaced linearly in distance fr om
 the center of the galaxy up to 50 kpc, measuring the fraction
 of the total number of stars and the 2nd, 3rd, and 4th proper
-moments of the line-of-sight velocity deﬁned in Eq. 8 and 9
-of Kowalczyk et al. (2018). The proﬁles of these quantities a re
-shown in consecutive rows in Fig. 6. Columns correspond to di f-
-ferent lines of sight, from the left to the right: along the ma jor,
-intermediate, and minor axis of the galaxy. For clarity of th e ﬁg-
-ure, in each panel we indicate only the error bars for one of th e
+moments of the line-of-sight velocity defined in Eq. 8 and 9
+of Kowalczyk et al. (2018). The profiles of these quantities a re
+shown in consecutive rows in Fig. 6. Columns correspond to di fferent
+ lines of sight, from the left to the right: along the ma jor,
+intermediate, and minor axis of the galaxy. For clarity of th e figure,
+ in each panel we indicate only the error bars for one of th e
 data sets. However, as the number of stars in a sample remains
 roughly constant between the lines of sight, the error bars a re
 very similar among the panels in a given row.
 Although in our previous studies of the reliability of
 the Schwarzschild modeling and its applications to real dat a
-(Kowalczyk et al. 2017, 2018, 2019) we approximated the den-
-sity proﬁle of the tracer with the Sérsic formula, we found th at it
-does not provide a good approximation of the data for the simu -
-lated galaxy considered here. We therefore ﬁt the projected den-
-sity proﬁle with the King formula (King 1962)
+(Kowalczyk et al. 2017, 2018, 2019) we approximated the density
+ profile of the tracer with the Sérsic formula, we found th at it
+does not provide a good approximation of the data for the simu lated
+ galaxy considered here. We therefore fit the projected density
+ profile with the King formula (King 1962)
 I(R)=I01√
 1+(R/Rc)2−1√
 1+(Rt/Rc)22
@@ -371,9 +371,9 @@ pop I
 pop II
 Fig. 6. Observables used in our Schwarzschild modeling scheme of th e simulated galaxy. In rows: the fraction of the total number of stars, 2nd,
 3rd, and 4th velocity moment. In columns: mock data from the simulated galaxy along the major, interme diate, and minor axis. In red we present
-the values obtained for all stars whereas in orange and blue t hose for populations I and II, respectively. For clarity of t he ﬁgure, in each panel we
+the values obtained for all stars whereas in orange and blue t hose for populations I and II, respectively. For clarity of t he figure, in each panel we
 indicate only the error bars for one of the data sets.
-where I0,Rc, and Rtare the model parameters. The proﬁle can
+where I0,Rc, and Rtare the model parameters. The profile can
 be analytically deprojected to obtain the 3D density
 ρ(r)=ρ0
 z2[1
@@ -388,14 +388,14 @@ z=√
 r2+R2c
 R2c+R2
 t. (4)3. Schwarzschild modeling
-In this section we brieﬂy present our modeling method and its
-application to the data sets derived for all stars and the two pop-
-ulations of the simulated galaxy separately. In both cases o ur
-aim was to recover the proﬁles of the total mass and the veloci ty
+In this section we briefly present our modeling method and its
+application to the data sets derived for all stars and the two populations
+ of the simulated galaxy separately. In both cases o ur
+aim was to recover the profiles of the total mass and the veloci ty
 anisotropy.
 3.1. Overview of the method
 We follow the approach introduced in Kowalczyk et al. (2018) ,
-namely we model the total mass proﬁle with the mass-to-light
+namely we model the total mass profile with the mass-to-light
 ratioΥvarying with radius:
 logΥ(r)={
 log(Υ0) r≤r0
@@ -418,50 +418,50 @@ A&A proofs: manuscript no. Populations4
 Υ0ac
  10 100
 χ2
-Fig. 7. Absolute values of χ2obtained from the ﬁts of three data sets: all stars (top left p anel), population I (bottom left), and population II (botto m
+Fig. 7. Absolute values of χ2obtained from the fits of three data sets: all stars (top left p anel), population I (bottom left), and population II (botto m
 right) for the observations along the major axis of the simul ated galaxy. The results for the modeling of two populations (top right) were obtained
-as an algebraic sum of values for populations I and II. To avoi d large numbers in the ﬁgure, Υ0was divided by the mean mass of a stellar particle.
+as an algebraic sum of values for populations I and II. To avoi d large numbers in the figure, Υ0was divided by the mean mass of a stellar particle.
 where ris the distance from the center of the galaxy, r0is a
 constant, whileΥ0,a, and care the parameters of a model. We
 have assumed log r0=0.33 which corresponds to three softening
 scales for stellar particles in the Illustris simulation.
 We probed the parameter a∈[0 : 1.3] with a step∆a=0.04
-andc∈[1.1 : 2.9] with a step∆c=0.2, imposing the require-
-ment on the total density proﬁle to be monotonically decreas ing
+andc∈[1.1 : 2.9] with a step∆c=0.2, imposing the requirement
+ on the total density profile to be monotonically decreas ing
 with radius. For each set of parameters and for each line of si ght
 we generated 1200 orbits using 100 values of energy (express ed
 with the radius of a circular orbit) spaced logarithmically and
 12 values of the relative angular momentum spaced linearly. The
 outer radius of the orbit library, that is the apocenter of th e most
 extended orbit, was set to rout=165 kpc in order to cover over
-0.999 of the total stellar mass based on the ﬁtted King proﬁle
+0.999 of the total stellar mass based on the fitted King profile
 parameters.
-We ﬁt the kinematics weighted with the fraction of mass with
-the constrained least squares algorithm where di ﬀerent values
+We fit the kinematics weighted with the fraction of mass with
+the constrained least squares algorithm where di fferent values
 ofΥ0were obtained with a simple transformation of velocities
-given by Eq. 12, 13, and 15 in Kowalczyk et al. (2018). In or-
-der to smooth out the numerical artifacts, the three-dimens ional
+given by Eq. 12, 13, and 15 in Kowalczyk et al. (2018). In order
+ to smooth out the numerical artifacts, the three-dimens ional
 χ2spaces were then interpolated with 12-order polynomials(∼a4c4Υ4
-0) that were further used to determine the global min-
-imums (identiﬁed as the best-ﬁtting models) and 1, 2, 3 σcon-
-ﬁdence levels which for three parameters correspond to ∆χ2=
+0) that were further used to determine the global minimums
+ (identified as the best-fitting models) and 1, 2, 3 σconfidence
+ levels which for three parameters correspond to ∆χ2=
 3.53,8.02,14.2 (Press et al. 1992).
 3.2. Application to mock data
 In the following we present the direct and inferred results o f
-the Schwarzschild modeling of the data sets described in Sec -
-tion 2.3.
+the Schwarzschild modeling of the data sets described in Sec tion
+ 2.3.
 First, Fig. 7 shows the distribution of the absolute values o f
-theχ2as a function of three parameters of the mass-to-light ra-
-tio. In order to avoid unnecessary repetitions, we include o nly
+theχ2as a function of three parameters of the mass-to-light ratio.
+ In order to avoid unnecessary repetitions, we include o nly
 the plot for the mock data obtained by observing the Illustri s
 galaxy along its major axis as the others are qualitatively s imilar.
-The four panels refer to ﬁts for all stars (top left), the meta l-rich
+The four panels refer to fits for all stars (top left), the meta l-rich
 population I (bottom left), the metal-poor population II (b ottom
 right), and the one named "populations" (top right) which is the
 algebraic sum of values for both populations.
-As our parametrization of the mass-to-light ratio is not int u-
-itive we present its proﬁles explicitly in the ﬁrst rows of th e left-
-Article number, page 6 of 12
+As our parametrization of the mass-to-light ratio is not int uitive
+ we present its profiles explicitly in the first rows of th e leftArticle
+ number, page 6 of 12
 K. Kowalczyk & E. L. Łokas: Multiple stellar populations in S chwarzschild modeling
 1061071081091010
  10  100ALLΥ(r) [M⊙/L⊙]
@@ -517,68 +517,68 @@ r [kpc] 0 10 20 30 40POPULATIONS
 r [kpc] 0 10 20 30 40 50POPULATIONS
 r [kpc]
 Fig. 8. Left-hand side: results of Schwarzschild modeling of three mock data sets obtained by observing the simulated galaxy al ong the principal
-axes. In rows: derived mass-to-light ratio, total density, total mass, an d anisotropy parameter. In columns: observations along the major, interme-
-diate, and minor axis, respectively. Green lines indicate v alues for the best-ﬁt models whereas the colored areas of dec reasing intensity show the
-1, 2, and 3σconﬁdence levels. The true values are presented as black lin es. Thin vertical lines mark the values of r0and the outer range of the
-data sets, from left to right. Right-hand side: same as left b ut for the ﬁt of two stellar populations.
+axes. In rows: derived mass-to-light ratio, total density, total mass, an d anisotropy parameter. In columns: observations along the major, intermediate,
+ and minor axis, respectively. Green lines indicate v alues for the best-fit models whereas the colored areas of dec reasing intensity show the
+1, 2, and 3σconfidence levels. The true values are presented as black lin es. Thin vertical lines mark the values of r0and the outer range of the
+data sets, from left to right. Right-hand side: same as left b ut for the fit of two stellar populations.
 and right-hand side panels of Fig. 8 for the results obtained for
 all stars and the populations, respectively. We further cal culate
 the total density (second rows) and the total mass content (t hird
-rows). We include the obtained orbit anisotropy within the m od-
-eled range in the bottom rows. The consecutive columns prese nt
+rows). We include the obtained orbit anisotropy within the m odeled
+ range in the bottom rows. The consecutive columns prese nt
 the results for the observations along the major, intermedi ate,
-and minor axis. Green lines indicate values for the best-ﬁt m od-
-els whereas the colored areas of decreasing intensity corre spond
-to 1, 2, and 3σconﬁdence regions obtained as extreme values al-
-lowed by the models with χ2within a given region. In each panel
+and minor axis. Green lines indicate values for the best-fit m odels
+ whereas the colored areas of decreasing intensity corre spond
+to 1, 2, and 3σconfidence regions obtained as extreme values allowed
+ by the models with χ2within a given region. In each panel
 the true values from the simulation are presented with black lines
 while thin vertical lines mark the values of r0and the outer range
-of the data sets beyond which the reliability of results drop s sig-
-niﬁcantly. The true mass-to-light ratio proﬁle was obtaine d by
-dividing the total mass by the ﬁtted King proﬁles, therefore the
+of the data sets beyond which the reliability of results drop s significantly.
+ The true mass-to-light ratio profile was obtaine d by
+dividing the total mass by the fitted King profiles, therefore the
 drop at 100 kpc is the numerical artifact occurring at the ver y
 outskirts of the galaxy.
 Whereas in the right-hand side panels of Fig. 8 the resulting
-anisotropy is obtained from the ﬁt of all stars and uses only t he
-location of global minimum and conﬁdence levels from two pop -
-ulations (as in the top right panel of Fig. 7), in Fig. 9 we pres ent
+anisotropy is obtained from the fit of all stars and uses only t he
+location of global minimum and confidence levels from two pop ulations
+ (as in the top right panel of Fig. 7), in Fig. 9 we pres ent
 another method of calculating the anisotropy. In the second and
-third row we show the derived proﬁles for population I and II
+third row we show the derived profiles for population I and II
 separately and combine them as stellar mass weighted averag e
-in the top row. As in previous ﬁgures, three columns refer to t he
-diﬀerent lines of sight whereas the narrow fourth one shows the
-behavior of the true proﬁles outside the modeled range which , as
-we noticed in our previous studies, in a limited way inﬂuence s
+in the top row. As in previous figures, three columns refer to t he
+different lines of sight whereas the narrow fourth one shows the
+behavior of the true profiles outside the modeled range which , as
+we noticed in our previous studies, in a limited way influence s
 the results. Such an impact is understandable since the star s at
-larger distances from the center are still included in the li ne-of-
-sight measurements.3.3. Comparison of ﬁtting results
+larger distances from the center are still included in the li ne-ofsight
+ measurements.3.3. Comparison of fitting results
 The main strength of the two populations method comes from
-tracing the underlying gravitational potential at di ﬀerent scales.
+tracing the underlying gravitational potential at di fferent scales.
 As can be seen in the bottom panels of Fig. 7, population I, whi ch
 is more concentrated, is also more sensitive to Υ0, but gives
 weaker constraints on aorc. On the other hand, population II
 attempts to reproduce the total mass content at larger dista nces
-as well, therefore showing stronger coupling between the pa ram-
-eters.
-The global minimums of the χ2distributions for both ap-
-proaches, that is modeling one and two populations, which we
-identify as the best-ﬁtting models, closely coincide showi ng that
-there is no internal bias in the improved method. However, si g-
-niﬁcant diﬀerences can be observed when comparing the conﬁ-
-dence levels, mainly at 1 and 3 σ. Namely, we ﬁnd that using
+as well, therefore showing stronger coupling between the pa rameters.
+
+The global minimums of the χ2distributions for both approaches,
+ that is modeling one and two populations, which we
+identify as the best-fitting models, closely coincide showi ng that
+there is no internal bias in the improved method. However, si gnificant
+ differences can be observed when comparing the confidence
+ levels, mainly at 1 and 3 σ. Namely, we find that using
 two populations, the constraints we obtain on the density an d
-anisotropy proﬁle are much stronger.
+anisotropy profile are much stronger.
 Additionally, the more accurate method allows us to study
-other eﬀects and biases, for example the consequences of the
-nonsphericity of the modeled object. Whereas for the ﬁt of al l
-stars the true values of the density, mass, and anisotropy pr oﬁles
-are contained within 1 σconﬁdence regions, the results for the
+other effects and biases, for example the consequences of the
+nonsphericity of the modeled object. Whereas for the fit of al l
+stars the true values of the density, mass, and anisotropy pr ofiles
+are contained within 1 σconfidence regions, the results for the
 populations are more or less biased depending on the axis. Th ey
 are well reproduced for the observation along the intermedi ate
-axis, for which the e ﬀects of nonsphericity seem to cancel out,
+axis, for which the e ffects of nonsphericity seem to cancel out,
 and more biased for the remaining lines of sight. We notice a
-trend from under- to overestimation of the anisotropy when g o-
-ing from the major to the minor axis.
+trend from under- to overestimation of the anisotropy when g oing
+ from the major to the minor axis.
 Article number, page 7 of 12
 A&A proofs: manuscript no. Populations4
 -101
@@ -607,47 +607,47 @@ best model
  1σ
 2σ
 3σ
-Fig. 9. Proﬁles of the anisotropy parameter obtained with the Schwa rzschild modeling of two stellar populations of the simulat ed galaxy. In rows:
+Fig. 9. Profiles of the anisotropy parameter obtained with the Schwa rzschild modeling of two stellar populations of the simulat ed galaxy. In rows:
 results for all stars (calculated as the superposition of tw o populations), population I, and population II. Colors fol low the convention used in
-previous ﬁgures. In columns: observations along the major, intermediate, and minor axis . The last narrower column shows the data (black lines)
-outside the modeled radial range. Color lines indicate valu es for the best-ﬁt models whereas the colored areas of decrea sing intensity show the 1,
-2, and 3σconﬁdence regions.
+previous figures. In columns: observations along the major, intermediate, and minor axis . The last narrower column shows the data (black lines)
+outside the modeled radial range. Color lines indicate valu es for the best-fit models whereas the colored areas of decrea sing intensity show the 1,
+2, and 3σconfidence regions.
 4. Modeling Fornax dSph
 In this section we present the application of our Schwarzsch ild
 modeling scheme to the observational data for the Fornax dSp h
 galaxy obtained by del Pino et al. (2015) and del Pino et al.
 (2017). This study is a follow-up of the work of Kowalczyk et a l.
 (2019) and can be directly compared to the results presented
-there. Moreover, we refer the reader to these previous publi ca-
-tions for details on the origin of data and our procedures use d
+there. Moreover, we refer the reader to these previous publi cations
+ for details on the origin of data and our procedures use d
 for cleaning the spectroscopic sample.
-Similarly to the approach introduced in Section 2.2, we di-
-vided all available stars into two equal-size populations b ased on
+Similarly to the approach introduced in Section 2.2, we divided
+ all available stars into two equal-size populations b ased on
 their metallicity and then cross-correlated the samples wi th the
 data used in Kowalczyk et al. (2019). The metallicity histog ram
-of the ﬁnal spectroscopic sample is shown in Fig. 10. Additio n-
-ally, we color-coded each bin with the population it has been
-assigned to, namely orange or blue for population I or II. Int er-
-estingly, the case of Fornax is similar to our simulated gala xy
+of the final spectroscopic sample is shown in Fig. 10. Additio nally,
+ we color-coded each bin with the population it has been
+assigned to, namely orange or blue for population I or II. Int erestingly,
+ the case of Fornax is similar to our simulated gala xy
 as the split at [Fe/H]=−1 also captures an important feature
-of the object’s star formation history, separating stars in to sub-
-samples older and younger than 6 Gyr, as shown in Fig. 12 of
+of the object’s star formation history, separating stars in to subsamples
+ older and younger than 6 Gyr, as shown in Fig. 12 of
 del Pino et al. (2015) and Fig. 8 of del Pino et al. (2017). The
-numbers of stars contained in the samples of all stars, popul a-
-tion I, and population II are given in Table 2, where the indic es
-"phot" and "spec" refer to the photometric and kinematic sam -
-ples. The sum of stars in the populations is lower than in thesample of all stars since only stars with reliable measureme nts
+numbers of stars contained in the samples of all stars, popul ation
+ I, and population II are given in Table 2, where the indic es
+"phot" and "spec" refer to the photometric and kinematic sam ples.
+ The sum of stars in the populations is lower than in thesample of all stars since only stars with reliable measureme nts
 of metallicity could be included.
 N
 [Fe/H]pop I
 pop II
  0 20 40 60 80 100
 -2.5-2-1.5-1-0.5 0
-Fig. 10. Metallicity histogram of the ﬁnal spectroscopic sample use d in
+Fig. 10. Metallicity histogram of the final spectroscopic sample use d in
 the modeling of two stellar populations in the Fornax dSph. E ach bin is
 color-coded according to the population it has been assigne d to, orange
 or blue for population I and II, respectively.
-As we have shown in our earlier work, the light proﬁle of the
+As we have shown in our earlier work, the light profile of the
 Fornax dSph can be well reproduced with the three-parameter
 Article number, page 8 of 12
 K. Kowalczyk & E. L. Łokas: Multiple stellar populations in S chwarzschild modeling
@@ -664,41 +664,41 @@ Sérsic parameter ( m) 0.808 0.807 0.898
 R [kpc]all stars
 popI
 popII
-Fig. 11. Surface number density proﬁles of the photometric data sam-
-ples for the Fornax dSph: all available stars (in red), the me tal-rich pop-
-ulation I (in orange), and the metal-poor population II (in b lue). Thin
-vertical lines indicate r0(see text) and the outer boundary of the spec-
-troscopic data.
-Sérsic formula (Sérsic 1968). The proﬁles of number density for
-all stars and both populations together with the best-ﬁttin g Sérsic
-proﬁles are presented in Fig. 11. The colors follow the conve n-
-tion introduced in previous sections. Thin vertical lines i ndicate
-the innermost data point for the light proﬁle for all stars an d
+Fig. 11. Surface number density profiles of the photometric data samples
+ for the Fornax dSph: all available stars (in red), the me tal-rich population
+ I (in orange), and the metal-poor population II (in b lue). Thin
+vertical lines indicate r0(see text) and the outer boundary of the spectroscopic
+ data.
+Sérsic formula (Sérsic 1968). The profiles of number density for
+all stars and both populations together with the best-fittin g Sérsic
+profiles are presented in Fig. 11. The colors follow the conve ntion
+ introduced in previous sections. Thin vertical lines i ndicate
+the innermost data point for the light profile for all stars an d
 the outer boundary of the kinematic sample. The former, set a t
 logr=−0.16, is also used as the minimum of the mass-to-light
-ratio proﬁle ( r0in Eq. 5). The ﬁtted parameters of the proﬁles,
+ratio profile ( r0in Eq. 5). The fitted parameters of the profiles,
 that is the normalization N0, the Sérsic radius RS, and the Sérsic
 parameter m, are included in the second part of Table 2.
-Figure 12 presents the proﬁles of the observables used in the
+Figure 12 presents the profiles of the observables used in the
 Schwarzschild modeling: the fraction of stars and the 2nd, 3 rd,
-and 4th velocity moments (top to bottom) for the three data sa m-
-ples: all stars, population I, and population II (in red, ora nge, and
+and 4th velocity moments (top to bottom) for the three data sa mples:
+ all stars, population I, and population II (in red, ora nge, and
 blue, respectively). The error bars indicate 1 σsampling errors.
 The parameter space for Υ(r) has been probed as follows:
 a∈[0 : 1.85] with a step∆a=0.05 and c∈[1.2 : 6] with a
 step∆c=0.2. We point out that in Kowalczyk et al. (2019) the
-parameter cwas ﬁxed at c=3 and now we ﬁt it as a free pa-
-rameter. As for the mock data in Section 3.2, di ﬀerent values of
+parameter cwas fixed at c=3 and now we fit it as a free parameter.
+ As for the mock data in Section 3.2, di fferent values of
 Υ0were obtained with the transformation of velocity moments
-within theχ2ﬁtting routine. The values of ∆χ2for all stars and
+within theχ2fitting routine. The values of ∆χ2for all stars and
 the populations are shown in the two panels of Fig. 13 (left an d
 right-hand side, respectively). Due to the dense coverage o f the
 grid, we decided to include only the values within 3 σfrom the
-ﬁtted minimums (see Section 3.1).
-The proﬁles of the mass-to-light ratio, total density, tota l
+fitted minimums (see Section 3.1).
+The profiles of the mass-to-light ratio, total density, tota l
 mass, and velocity anisotropy resulting from the χ2distributions
 are presented in the consecutive rows of Fig. 14. The anisotr opy
-proﬁle for the populations is based on the ﬁt of all stars but u sing 0 0.05 0.1 0.15 0.2 0.25
+profile for the populations is based on the fit of all stars but u sing 0 0.05 0.1 0.15 0.2 0.25
  0 0.4  0.8  1.2  1.6M(R)
 R [kpc]all stars
 pop I
@@ -717,13 +717,13 @@ modeling scheme. In rows: the fraction of the total number of stars, the
 2nd, 3rd, and 4th velocity moment. In red we present the value s obtained
 for all stars whereas in orange and blue those for population s I and II,
 respectively.
-the conﬁdence levels on Υfrom the ﬁt of two populations. Green
-lines indicate the values for the best-ﬁtting models wherea s the
-colored areas of decreasing intensity show the 1, 2, and 3 σcon-
-ﬁdence regions. Additionally, with black dashed lines we in clude
+the confidence levels on Υfrom the fit of two populations. Green
+lines indicate the values for the best-fitting models wherea s the
+colored areas of decreasing intensity show the 1, 2, and 3 σconfidence
+ regions. Additionally, with black dashed lines we in clude
 the results from Kowalczyk et al. (2019) for comparison.
 As a result of freeing the steepness of the mass-to-light
-ratio proﬁle (parameter c) with respect to the previous study
+ratio profile (parameter c) with respect to the previous study
 Article number, page 9 of 12
 A&A proofs: manuscript no. Populations4
  0 0.5 1 1.5
@@ -743,64 +743,64 @@ ac
  0 3 6 9 12
 χ2-χ2
 min
-Fig. 13. Values ofχ2relative to the ﬁtted minimum within the range of 3 σconﬁdence level for all stars (left panel) and for the popula tions (right
+Fig. 13. Values ofχ2relative to the fitted minimum within the range of 3 σconfidence level for all stars (left panel) and for the popula tions (right
 panel) for the Fornax dSph.
-(Kowalczyk et al. 2019), we obtained higher estimates of the en-
-closed total mass at larger radii. In particular, for the mas s en-
-closed within 1.8 kpc we get Mall(<1.8 kpc)=3.87+1.48
+(Kowalczyk et al. 2019), we obtained higher estimates of the enclosed
+ total mass at larger radii. In particular, for the mas s enclosed
+ within 1.8 kpc we get Mall(<1.8 kpc)=3.87+1.48
 −1.56×108
-M⊙from the ﬁt for all stars and Mpops(<1.8 kpc)=4.71+0.87
+M⊙from the fit for all stars and Mpops(<1.8 kpc)=4.71+0.87
 −1.13×
-108M⊙from the ﬁt of populations, while previously we had
+108M⊙from the fit of populations, while previously we had
 Mold(<1.8 kpc)=3.7+1.4
 −1.3×108M⊙.
-Interestingly, despite the signiﬁcant shift of the positio n of
+Interestingly, despite the significant shift of the positio n of
 χ2
-min(toc=4.2 for all stars and 3.6 for populations), the ob-
-tained proﬁle of the anisotropy parameter remains decreasi ng or
-ﬂat for all stars but changes to increasing from 0 to 0.5 for th e
+min(toc=4.2 for all stars and 3.6 for populations), the obtained
+ profile of the anisotropy parameter remains decreasi ng or
+flat for all stars but changes to increasing from 0 to 0.5 for th e
 populations. Nevertheless, even in the latter case the prev ious
-result agrees with the new ﬁnding within 1 σ.
+result agrees with the new finding within 1 σ.
 The detailed analysis of the anisotropy is shown in Fig. 15
-where the middle and bottom panels present the proﬁles ob-
-tained for each population separately. We notice that the pr oﬁle
+where the middle and bottom panels present the profiles obtained
+ for each population separately. We notice that the pr ofile
 for population I is decreasing or has a local minimum whereas
-for population II is increasing (from −0.25 to 0.5 for the best-
-ﬁtting model). Since population I is more concentrated, the last
+for population II is increasing (from −0.25 to 0.5 for the bestfitting
+ model). Since population I is more concentrated, the last
 bins contain very few stars, which limits their credibility . The
-top panel of Fig. 15 presents the anisotropy of all stars calc u-
-lated as a weighted superposition of two populations. With s uch
-approach we still obtain the increasing proﬁle (from 0 to 0.5 ) but
+top panel of Fig. 15 presents the anisotropy of all stars calc ulated
+ as a weighted superposition of two populations. With s uch
+approach we still obtain the increasing profile (from 0 to 0.5 ) but
 the previous result agrees with it only within 2 σ.
-Since Fornax dSph is signiﬁcantly elongated with the pro-
-jected ellipticity of ǫ=0.30±0.01 (Irwin & Hatzidimitriou
+Since Fornax dSph is significantly elongated with the projected
+ ellipticity of ǫ=0.30±0.01 (Irwin & Hatzidimitriou
 1995), we anticipate some bias in the obtained results cause d
 by the spherically symmetric modeling. Kowalczyk et al. (20 18)
-studied such bias in an axisymmetric simulated object quali ta-
-tively similar to Fornax and identiﬁed di ﬀerences in the system-
-atic errors depending on whether the galaxy was observed alo ng
+studied such bias in an axisymmetric simulated object quali tatively
+ similar to Fornax and identified di fferences in the systematic
+ errors depending on whether the galaxy was observed alo ng
 its major or minor axis. Assuming that Fornax is observed alo ng
 the line of sight in between these extremes, we expect the tot al
-mass proﬁle to be slightly overestimated and the anisotropy to be
+mass profile to be slightly overestimated and the anisotropy to be
 underestimated, further strengthening the likelihood of t he real
-anisotropy to be radial and its proﬁle to be growing with radi us
+anisotropy to be radial and its profile to be growing with radi us
 with respect to the results of Kowalczyk et al. (2019).
-Both constant (like for our population I) and growing (pop-
-ulation II) anisotropy proﬁles can arise from biased modeli ngof the real growing proﬁle by observing an object along the
+Both constant (like for our population I) and growing (population
+ II) anisotropy profiles can arise from biased modeli ngof the real growing profile by observing an object along the
 minor and major axis, respectively. However, for the bias to
-occur in two populations presented here, their inner orient a-
-tions would need to be opposite. Since such morphological fe a-
-tures are not supported by the photometric studies of Fornax
-(del Pino et al. 2015; Wang et al. 2019) which rather ﬁnd a good
+occur in two populations presented here, their inner orient ations
+ would need to be opposite. Since such morphological fe atures
+ are not supported by the photometric studies of Fornax
+(del Pino et al. 2015; Wang et al. 2019) which rather find a good
 spatial alignment between the stellar populations, we conc lude
-that the anisotropy proﬁles of the two populations modeled i n
-this work are indeed signiﬁcantly distinct.
-Finally, it is worth noticing that the so-called mass-follo ws-
-light model, that is the one following from the assumption th at
-the total density traces the stellar distribution, is no lon ger sup-
-ported by the ﬁt of the populations. With our parametrizatio n,
+that the anisotropy profiles of the two populations modeled i n
+this work are indeed significantly distinct.
+Finally, it is worth noticing that the so-called mass-follo wslight
+ model, that is the one following from the assumption th at
+the total density traces the stellar distribution, is no lon ger supported
+ by the fit of the populations. With our parametrizatio n,
 the mass-follows-light model corresponds to a=0 and whereas
-it is enclosed within 3 σfor the ﬁt of all stars, as was the case
+it is enclosed within 3 σfor the fit of all stars, as was the case
 in Kowalczyk et al. (2019), the allowed values for the improv ed
 method are much larger, as demonstrated by the right panel of
 Fig. 13.
@@ -808,21 +808,21 @@ Fig. 13.
 Building on the previously created implementation of the
 Schwarzschild orbit superposition method focused on model ing
 dSph galaxies of the Local Group (Kowalczyk et al. 2017, 2018 ,
-2019), we improved our tool by introducing multiple stellar pop-
-ulations. Such an improvement is desirable and justiﬁed sin ce
+2019), we improved our tool by introducing multiple stellar populations.
+ Such an improvement is desirable and justified sin ce
 many of the dwarfs show signs of multiple star formation burs ts
-or extended star formation episodes. As the di ﬀerent populations
+or extended star formation episodes. As the di fferent populations
 trace the common underlying gravitational potential, one m ay
-expect a signiﬁcant improvement in the estimates of not only the
+expect a significant improvement in the estimates of not only the
 total mass content but also the orbit anisotropy since this r obust
 modeling technique reproduces the anisotropy as a by-produ ct
 of the modeling rather than taking it as an assumption.
-We have tested our hypothesis by modeling mock data gener-
-ated from a galaxy formed in the Illustris simulation. Due to the
-limitations of the resolution, we chose a galaxy of mass a few or-
-ders of magnitude larger than the estimated masses of classi cal
-dwarfs. Still, the galaxy possessed appropriate qualitati ve char-
-acteristics, such as the lack of gas and an almost spherical s hape,
+We have tested our hypothesis by modeling mock data generated
+ from a galaxy formed in the Illustris simulation. Due to the
+limitations of the resolution, we chose a galaxy of mass a few orders
+ of magnitude larger than the estimated masses of classi cal
+dwarfs. Still, the galaxy possessed appropriate qualitati ve characteristics,
+ such as the lack of gas and an almost spherical s hape,
 Article number, page 10 of 12
 K. Kowalczyk & E. L. Łokas: Multiple stellar populations in S chwarzschild modeling
 101103105
@@ -848,30 +848,30 @@ r [kpc] 0 0.4 0.8 1.2 1.6
 r [kpc]
 Fig. 14. Results of Schwarzschild modeling of the Fornax dSph.
 In rows: derived mass-to-light ratio, total density, total mass, an d
-anisotropy parameter. In columns: results for all stars and the popula-
-tions, respectively. Green lines indicate the values for th e best-ﬁt models
+anisotropy parameter. In columns: results for all stars and the populations,
+ respectively. Green lines indicate the values for th e best-fit models
 whereas the colored areas of decreasing intensity show the 1 , 2, and 3σ
-conﬁdence regions. The best-ﬁtting values obtained by Kowa lczyk et al.
+confidence regions. The best-fitting values obtained by Kowa lczyk et al.
 (2019) are shown with black dashed lines.
-that made it a good test bed for modeling techniques applica-
-ble to dSph galaxies. We applied our approach to all data and
+that made it a good test bed for modeling techniques applicable
+ to dSph galaxies. We applied our approach to all data and
 to two stellar populations separately, comparing the accur acy of
 the obtained results. Although the addition of the second tr acer
-seemingly increases the number of constraints twice, the in cre-
-ment is somewhat compromised by the sampling errors since th e
+seemingly increases the number of constraints twice, the in crement
+ is somewhat compromised by the sampling errors since th e
 number of stars in each sample is then reduced. Still, we foun d
-strong improvements in the accuracy of the method when us-
-ing two populations. The results of the modeling show that th e
-density and velocity anisotropy proﬁles are more strongly c on-
-strained, most importantly at the 3 σlevel, that is the range of
+strong improvements in the accuracy of the method when using
+ two populations. The results of the modeling show that th e
+density and velocity anisotropy profiles are more strongly c onstrained,
+ most importantly at the 3 σlevel, that is the range of
 allowed values is much narrower.
 Similarly to the conclusions of Kowalczyk et al. (2018) who
-explored the eﬀects of nonsphericity using large and small
-data samples, the comparison of results presented in the lef t-
-and right-hand side panels of Fig. 8 suggests that the improv ed
+explored the effects of nonsphericity using large and small
+data samples, the comparison of results presented in the lef tand
+ right-hand side panels of Fig. 8 suggests that the improv ed
 method using two stellar populations gives more precise but less
-accurate outcome. However, in both studies the apparent det e-
-rioration of the reliability is a consequence of modeling of a
+accurate outcome. However, in both studies the apparent det erioration
+ of the reliability is a consequence of modeling of a
 nonspherical object. In both cases, a simpler approach (muc h
 smaller data samples or using one stellar population) resul ted-2-101
  0 0.4 0.8 1.2 1.6POP I + POP II
@@ -889,87 +889,87 @@ best model
 1σ
 2σ3σ
 K19
-Fig. 15. Proﬁles of the anisotropy parameter obtained with the
+Fig. 15. Profiles of the anisotropy parameter obtained with the
 Schwarzschild modeling of two stellar populations for the F ornax dSph.
-In rows: results for all stars (calculated as the superposition of tw o pop-
-ulations), population I, and population II. Color lines ind icate values
-for the best-ﬁt models whereas the colored areas of decreasi ng intensity
-show the 1, 2, and 3 σconﬁdence regions. The dashed black line shows
+In rows: results for all stars (calculated as the superposition of tw o populations),
+ population I, and population II. Color lines ind icate values
+for the best-fit models whereas the colored areas of decreasi ng intensity
+show the 1, 2, and 3 σconfidence regions. The dashed black line shows
 the result from Kowalczyk et al. (2019) for comparison.
-in larger ﬁnal uncertainties, usually containing the true v alues
-within 1σconﬁdence region. On the other hand, the improved
+in larger final uncertainties, usually containing the true v alues
+within 1σconfidence region. On the other hand, the improved
 methods exhibit substantially reduced uncertainties, hig hlighting
 the underlying bias.
 Our method parametrizes the total mass content with the
-mass-to-light ratio varying with radius as a power-law in th e log-
-log scale. We made two main changes with respect to our previ-
-ous work: we added a third parameter ccontrolling the steepness
-of the mass-to-light ratio proﬁle (previously ﬁxed at the va lue of
-3) and allowed for di ﬀerent stellar density proﬁles (previously
-only Sérsic, now also King). These changes are of course cou-
-pled since diﬀerent density proﬁles require di ﬀerent exponents to
-reproduce the same mass proﬁle. It is visible also in our resu lts
-since the King proﬁle applied in the simulated galaxy gave us
-values of clower than 3. Nevertheless, we decided to use di ﬀer-
-ent density proﬁles to make our method more general and appli -
-cable to objects, such as our Illustris galaxy, for which the Sérsic
+mass-to-light ratio varying with radius as a power-law in th e loglog
+ scale. We made two main changes with respect to our previous
+ work: we added a third parameter ccontrolling the steepness
+of the mass-to-light ratio profile (previously fixed at the va lue of
+3) and allowed for di fferent stellar density profiles (previously
+only Sérsic, now also King). These changes are of course coupled
+ since different density profiles require di fferent exponents to
+reproduce the same mass profile. It is visible also in our resu lts
+since the King profile applied in the simulated galaxy gave us
+values of clower than 3. Nevertheless, we decided to use di fferent
+ density profiles to make our method more general and appli cable
+ to objects, such as our Illustris galaxy, for which the Sérsic
 formula does not provide a good approximation of the density
 distribution.
 Finally, we applied the improved method to the data for the
-Fornax dSph galaxy. Due to the addition of another free param -
-eter in our functional form for the mass-to-light ratio, our re-
-sults for modeling all stars are slightly di ﬀerent from the ones
+Fornax dSph galaxy. Due to the addition of another free param eter
+ in our functional form for the mass-to-light ratio, our results
+ for modeling all stars are slightly di fferent from the ones
 Article number, page 11 of 12
 A&A proofs: manuscript no. Populations4
 obtained in Kowalczyk et al. (2019). However, in terms of the
 total density and mass distribution the estimates obtained here
 agree very well with those earlier results in the range cover ed
-by the data. Therefore, the detailed comparison with other e sti-
-mates from the literature presented in Kowalczyk et al. (201 9) is
+by the data. Therefore, the detailed comparison with other e stimates
+ from the literature presented in Kowalczyk et al. (201 9) is
 still valid and we do not repeat it here.
-A more signiﬁcant di ﬀerence with respect to these previous
+A more significant di fference with respect to these previous
 estimates is seen in the results of modeling two populations in
-Fornax. In this case we ﬁnd the anisotropy to be slightly incr eas-
-ing rather than decreasing with radius and, most importantl y, the
-conﬁdence regions for this parameter, as well as for the den-
-sity, are much narrower. We were thus able to obtain tighter c on-
-straints on the properties of Fornax, which means that the im -
-proved method is successful. For the ﬁrst time, we were also a ble
-to deduce the velocity anisotropy proﬁles for each of the pop ula-
-tions separately. We found that the more concentrated, meta l-rich
-population I has a decreasing anisotropy proﬁle while the mo re
+Fornax. In this case we find the anisotropy to be slightly incr easing
+ rather than decreasing with radius and, most importantl y, the
+confidence regions for this parameter, as well as for the density,
+ are much narrower. We were thus able to obtain tighter c onstraints
+ on the properties of Fornax, which means that the im proved
+ method is successful. For the first time, we were also a ble
+to deduce the velocity anisotropy profiles for each of the pop ulations
+ separately. We found that the more concentrated, meta l-rich
+population I has a decreasing anisotropy profile while the mo re
 extended, metal-poor population II has the anisotropy incr easing
-with radius. This ﬁnding may partially explain the large spr ead
-of the anisotropy values obtained in the literature and summ a-
-rized in Table 2 and 3 of Kowalczyk et al. (2019), which were
+with radius. This finding may partially explain the large spr ead
+of the anisotropy values obtained in the literature and summ arized
+ in Table 2 and 3 of Kowalczyk et al. (2019), which were
 often based on modeling subsamples of our spectroscopic dat a
 set.
-For both studied objects we split the stars into two popula-
-tions by dividing them in half based on their metallicity, Z(in
+For both studied objects we split the stars into two populations
+ by dividing them in half based on their metallicity, Z(in
 solar units), for the Illustris galaxy and [Fe /H] for Fornax. Such
-a method is approximate but justiﬁed. Both galaxies have com -
-plex star formation history with multiple star formation bu rsts, as
+a method is approximate but justified. Both galaxies have com plex
+ star formation history with multiple star formation bu rsts, as
 demonstrated by Fig. 1 in this work and Fig. 7 in del Pino et al.
 (2013), producing multiple stellar populations which cann ot be
 easily tracked as the metallicity is a good but not perfect pr oxy
 for the stellar age. Moreover, the metallicity histograms f or both
-objects are approximately unimodal not allowing for a conve -
-nient separation. More reﬁned methods of division have been
-suggested in the literature, for example in the form of the li keli-
-hood function based on the position, velocity, and metallic ity in-
-dex (Walker & Peñarrubia 2011). However, the likelihood fun c-
-tion requires many assumptions which introduce additional un-
-certainties into the treatment of the data. On the other hand , our
-approach ensures the maximization of each sample (and there -
-fore minimization of sampling errors) while capturing the i m-
-portant features of the star formation history.
+objects are approximately unimodal not allowing for a conve nient
+ separation. More refined methods of division have been
+suggested in the literature, for example in the form of the li kelihood
+ function based on the position, velocity, and metallic ity index
+ (Walker & Peñarrubia 2011). However, the likelihood fun ction
+ requires many assumptions which introduce additional uncertainties
+ into the treatment of the data. On the other hand , our
+approach ensures the maximization of each sample (and there fore
+ minimization of sampling errors) while capturing the i mportant
+ features of the star formation history.
 Further improvements to the Schwarzschild modeling
 method are certainly possible. One way to proceed would be to
 include the modeling of the proper motions of the stars. For n ow,
 measurements of transverse velocities are available only f or the
 brightest stars in dSph galaxies, but even small samples of t his
-type could provide further constraints on the models, as dem on-
-strated by Strigari et al. (2007) and Massari et al. (2020).
+type could provide further constraints on the models, as dem onstrated
+ by Strigari et al. (2007) and Massari et al. (2020).
 Acknowledgements. We are grateful to Andrés del Pino for providing the data for
 the Fornax dSph and to the Illustris team for making their sim ulations publicly
 available. Useful comments from the anonymous referee are k indly appreciated.
@@ -979,8 +979,8 @@ References
 Amorisco, N. C., & Evans, N. W. 2012, MNRAS, 419, 184
 Battaglia, G., Helmi, A., Tolstoy, E., et al. 2008, ApJ, 681, L13
 Bellazzini, M., Ferraro, F. R., & Pancino, E. 2001, MNRAS, 32 7, L15
-Binney, J., & Tremaine, S. 2008, Galactic Dynamics, 2nd edn. (Princeton Uni-
-versity Press, Princeton)
+Binney, J., & Tremaine, S. 2008, Galactic Dynamics, 2nd edn. (Princeton University
+ Press, Princeton)
 Breddels, M. A., & Helmi, A. 2013, A&A, 558, A35
 Breddels, M. A., Helmi, A., van den Bosch, R. C. E., van de Ven, G., & Battaglia,
 G. 2013, MNRAS, 433, 3173del Pino, A., Hidalgo, S. L., Aparicio, A., et al. 2013, MNRAS , 433, 1505
@@ -1011,11 +1011,11 @@ Mateo, M. 1998, ARA&A, 36, 435
 Nelson, D., Pillepich, A., Genel, S., et al. 2015, Astronomy and Computing, 13,
 12
 Pace, A. B., Kaplinghat, M., Kirby, E., et al. 2020, MNRAS, 49 5, 3022
-Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery , B. P. 1992, Numer-
-ical Recipes in C, 2nd edn. (Cambridge University Press, Cam bridge)
+Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery , B. P. 1992, Numerical
+ Recipes in C, 2nd edn. (Cambridge University Press, Cam bridge)
 Schwarzschild, M. 1979, ApJ, 232, 236
-Sérsic, J. L. 1968, Atlas de Galaxias Australes (Observator io Astronomico, Cor-
-doba, Argentina)
+Sérsic, J. L. 1968, Atlas de Galaxias Australes (Observator io Astronomico, Cordoba,
+ Argentina)
 Strigari, L. E., Bullock, J. S., & Kaplinghat, M. 2007, ApJ, 6 57, L1
 Tolstoy, E., Hill, V ., & Tosi, M. 2009, ARA&A, 47, 371
 Valluri, M., Merritt, D., & Emsellem, E. 2004, ApJ, 602, 66
