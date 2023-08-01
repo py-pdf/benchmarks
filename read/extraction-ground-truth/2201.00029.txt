@@ -11,8 +11,8 @@ Abstract
 
 
 As is common with the collection of astronomical data, signals are frequently dominated
-by noise. However, when performing FTs of light curves, re-binning data can improve the signal-
-to-noise ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope,
+by noise. However, when performing FTs of light curves, re-binning data can improve the signal-to-noise
+ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope,
 we sequentially re-binned data three times to investigate the SNR improvement of lower frequency
 (< 17 µHz) variability in white dwarf KIC 8626021. We found that the SNR at approximately 5.8
 µHz greatly improved through this process, and we postulate that this frequency is linked to the
@@ -51,8 +51,8 @@ astrophysics.
 
 Utilizing Kepler’s ability to maintain three-dimensional control, NASA proceeded to use
 the telescope to collect photometry data of certain sections of our galaxy, although the number of
-targets was significantly reduced. In addition, the K2 mission was designed to be community-
-oriented, with the scientific community having an influence on the fields observed and serving as
+targets was significantly reduced. In addition, the K2 mission was designed to be community-oriented,
+with the scientific community having an influence on the fields observed and serving as
 the analysts of the vast amounts of data being received (Howell et al., 2014). Although Kepler was
 deactivated in 2018, the data used in this paper came from observations during 2010 and 2012 of
 white dwarf KIC 8626021 and was obtained from the Kepler Asteroseismic Science Operations
@@ -117,8 +117,8 @@ between points. Q7 had forty-three interpolated points, and Q13 had sixty-six.
 FIG. 2: The graphs show the initial FTs of Q7, and then the FTs of the three successive re-bins of
 the light curve data. The significant frequencies of 5.886 µHz and 5.889 µHz are circled. The
 disappearance of the frequency in the last FT is most likely a byproduct of the method, and the
-spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the re-
-binning process.
+spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the re-binning
+process.
 
 
 
@@ -236,8 +236,8 @@ First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µ
    16.894
 
 TABLE III: The table displays all frequencies of Q7 that had a corrected flux magnitude (ppm)
-above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-
-product of the method, and we calculated for such errors when finding our average.
+above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-product
+of the method, and we calculated for such errors when finding our average.
 
 
 
@@ -264,8 +264,8 @@ First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µ
    16.823
 
 TABLE IV: The table displays all frequencies of Q13 that had a corrected flux magnitude (ppm)
-above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-
-product of the method, and we calculated for such errors when finding our average.
+above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-product
+of the method, and we calculated for such errors when finding our average.
 
 
 
@@ -350,8 +350,8 @@ Johnson, M. (Ed.). (2018, October 30). Mission overview. National Aeronautics an
 Administration. Retrieved September 2, 2021, from
 https://www.nasa.gov/mission_pages/kepler/overview/index.html
 
-Koch, D. G., Borucki, W. J., Basri, G., Batalha, N. M., Brown, T. M., Caldwell, D., Christensen-
-dalsgaard, J., Cochran, W. D., Devore, E., Dunham, E. W., Gautier, T. N., Geary, J. C.,
+Koch, D. G., Borucki, W. J., Basri, G., Batalha, N. M., Brown, T. M., Caldwell, D., Christensen-dalsgaard,
+J., Cochran, W. D., Devore, E., Dunham, E. W., Gautier, T. N., Geary, J. C.,
 Gilliland, R. L., Gould, A., Jenkins, J., Kondo, Y., Latham, D. W., Lissauer, J. J., Marcy,
 G., . . . Morrison, D. (2010). KEPLER MISSION design, REALIZED PHOTOMETRIC
 performance, AND EARLY SCIENCE. The Astrophysical Journal, 713(2), L79-L86.

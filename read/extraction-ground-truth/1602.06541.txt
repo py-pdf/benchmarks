@@ -303,15 +303,15 @@ estimate how difficult it might be to adjust the algorithm
 to work in the required time-constraints.
 
 Besides the latency, the throughput is another
-relevant characteristic of algorithms and implementa-
-tions for semantic segmentation. For example, for the
+relevant characteristic of algorithms and implementations
+ for semantic segmentation. For example, for the
 automatic description of images in order to enable text
 search the throughput is of much higher importance
 than latency.
 
 3) Stability: A reasonable requirement on semantic
-segmentation algorithms is the stability of a segmen-
-tation over slight changes in the input image. When
+segmentation algorithms is the stability of a segmentation
+ over slight changes in the input image. When
 the image data is sightly blurred by smoke such as
 in Figure 4(c), the segmentation should not change.
 Also, two images which show a slight change in
@@ -588,8 +588,8 @@ of them is given by [vdMPvdH09].
 B. Unsupervised Segmentation
 
 Unsupervised segmentation algorithms can be used
-in supervised segmentation as another source of infor-
-mation or to refine a segmentation. While unsupervised
+in supervised segmentation as another source of information
+ or to refine a segmentation. While unsupervised
 segmentation algorithms can never be semantic, they are
 well-studied and deserve at least a very brief overview.
 
@@ -670,8 +670,8 @@ described in [KWT88]. ACMs can be used to segment
 an image or to refine segmentation as it was done
 in [AM98] for brain MR images.
 
-5) Watershed Segmentation: The watershed algo-
-rithm takes a grayscale image and interprets it as a
+5) Watershed Segmentation: The watershed algorithm
+ takes a grayscale image and interprets it as a
 height map. Low values are catchment basins and
 the higher values between two neighboring catchment
 basins is the watershed. The catchment basins should
@@ -925,8 +925,8 @@ output
 
 = 200 704
 
-random variables. Those random variables are condi-
-tionally independent, given their local neighborhood.
+random variables. Those random variables are conditionally
+ independent, given their local neighborhood.
 These (in)dependencies can be expressed with a graph.
 
 Let G = (V, E) be the associated undirected graph
@@ -1056,8 +1056,8 @@ this weight-space. Minimizing the error function in the
 weight space adapts the neural network to the problem.
 
 There are lots of ideas around neural networks like
-regularization, better optimization algorithms, automat-
-ically building up architectures, design choices for
+regularization, better optimization algorithms, automatically
+ building up architectures, design choices for
 activation functions. This is not explained in detail here,
 but some of the mayor breakthroughs are outlined.
 
@@ -1085,8 +1085,8 @@ in the ImageNet Large-Scale Visual Recognition
 Challenge (ILSVRC). The best other system, which
 used SIFT features and Fisher Vectors, had a performanceof about 25.7% while the network by Alex
 Krizhevsky et al. got 17.0% error rate on the ILSVRC-2010
-dataset. As a preprocessing step, they downsam-
-pled all images to a fixed size of 256 px×256 px before
+dataset. As a preprocessing step, they downsampled
+all images to a fixed size of 256 px×256 px before
 they fed the features into their network. This network
 is commonly known as AlexNet.
 
@@ -1414,13 +1414,13 @@ classes challenge 2012 (voc2012),” 2012. [Online].
 Available: http://host.robots.ox.ac.uk:8080/pascal/
 VOC/voc2012/index.html
 
-[Fel] P. F. Felzenszwalb, “Graph based im-
-age segmentation.” [Online]. Available: http:
+[Fel] P. F. Felzenszwalb, “Graph based image
+ segmentation.” [Online]. Available: http:
 //cs.brown.edu/~pff/segment/
 
 [FGMR10] P. F. Felzenszwalb, R. B. Girshick, D. McAllester,
-and D. Ramanan, “Object detection with discrimina-
-tively trained part-based models,” Pattern Analysis
+and D. Ramanan, “Object detection with discriminatively
+ trained part-based models,” Pattern Analysis
 and Machine Intelligence, IEEE Transactions on,
 vol. 32, no. 9, pp. 1627–1645, 2010.
 
@@ -1434,13 +1434,13 @@ B:VISI.0000022288.19776.77
 [FKG13] J. Fritsch, T. Kuehnl, and A. Geiger, “A
 new performance measure and evaluation
 benchmark for road detection algorithms,” in
-International Conference on Intelligent Transporta-
-tion Systems (ITSC), 2013. [Online]. Available:
+International Conference on Intelligent Transportation
+ Systems (ITSC), 2013. [Online]. Available:
 http://www.cvlibs.net/datasets/kitti/eval_road.php
 
 [GBVdW+10] J. M. Gonfaus, X. Boix, J. Van de Weijer, A. D.
-Bagdanov, J. Serrat, and J. Gonzalez, “Harmony po-
-tentials for joint classification and segmentation,” in
+Bagdanov, J. Serrat, and J. Gonzalez, “Harmony potentials
+ for joint classification and segmentation,” in
 Computer Vision and Pattern Recognition (CVPR),
 2010 IEEE Conference on. IEEE, 2010, pp. 3280–
 3287.
@@ -1450,8 +1450,8 @@ D. Koller, “Multi-class segmentation with relative
 location prior,” International Journal of Computer
 Vision, vol. 80, no. 3, pp. 300–316, Apr. 2008.
 
-[GVSY13] S. Giannarou, M. Visentini-Scarzanella, and G.-
-Z. Yang, “Probabilistic tracking of affine-invariant
+[GVSY13] S. Giannarou, M. Visentini-Scarzanella, and G.-Z.
+ Yang, “Probabilistic tracking of affine-invariant
 anisotropic regions,” Pattern Analysis and Machine
 Intelligence, IEEE Transactions on, vol. 35, no. 1,
 pp. 130–143, 2013.
@@ -1488,8 +1488,8 @@ on, vol. 1. IEEE, 1995, pp. 278–282.
 [Online]. Available: http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf
 
 [Hus07] Hustvedt, “File:cctv lens flare.jpg,” Wikipedia
-Commons, Nov. 2007. [Online]. Avail-
-able: https://commons.wikimedia.org/wiki/File:
+Commons, Nov. 2007. [Online]. Available:
+ https://commons.wikimedia.org/wiki/File:
 CCTV_Lens_flare.jpg
 
 [HZCP04] X. He, R. Zemel, and M. Carreira-Perpindn,
@@ -1545,8 +1545,8 @@ journal of computer vision, vol. 1, no. 4, pp.
 visual recognition,” 2015. [Online]. Available:
 http://cs231n.stanford.edu/
 
-[Low04] D. Lowe, “Distinctive image features from scale-
-invariant keypoints,” International Journal of
+[Low04] D. Lowe, “Distinctive image features from scale-invariant
+ keypoints,” International Journal of
 Computer Vision, vol. 60, no. 2, pp. 91–110, 2004.
 [Online]. Available: http://dx.doi.org/10.1023/B%
 3AVISI.0000029664.99615.94
@@ -1584,8 +1584,8 @@ Dec. 2012. [Online]. Available:
 https://commons.wikimedia.org/wiki/File:
 Randabschattung_Mikroskop_Kamera_6.JPG
 
-[MBLAGJ+07] S. Maldonado-Bascon, S. Lafuente-Arroyo, P. Gil-
-Jimenez, H. Gomez-Moreno, and F. Lopez-Ferreras,
+[MBLAGJ+07] S. Maldonado-Bascon, S. Lafuente-Arroyo, P. Gil-Jimenez,
+ H. Gomez-Moreno, and F. Lopez-Ferreras,
 “Road-sign detection and recognition
 based on support vector machines,” Intelligent
 Transportation Systems, IEEE Transactions on,
@@ -1594,9 +1594,9 @@ vol. 8, no. 2, pp. 264–278, Jun. 2007.
 abs_all.jsp?arnumber=4220659
 
 [MBVLG02] N. Moon, E. Bullitt, K. Van Leemput, and G. Gerig,
-“Automatic brain and tumor segmentation,” in Med-
-ical Image Computing and Computer-Assisted In-
-tervention—MICCAI 2002. Springer, 2002, pp.
+“Automatic brain and tumor segmentation,” in Medical
+ Image Computing and Computer-Assisted Intervention—MICCAI
+ 2002. Springer, 2002, pp.
 372–379.
 
 [MFTM01] D. Martin, C. Fowlkes, D. Tal, and J. Malik,
@@ -1640,16 +1640,16 @@ xpl/login.jsp?tp=&arnumber=6381135
 vision/cambridge/recognition/
 
 [MSR] “Image understanding - research data,”
-Microsoft Research. [Online]. Avail-
-able: http://research.microsoft.com/en-us/projects/
+Microsoft Research. [Online]. Available:
+ http://research.microsoft.com/en-us/projects/
 objectclassrecognition/
 
 [Mur12] K. P. Murphy, Machine learning: a probabilistic
 perspective. MIT press, 2012.
 
 [OKS78] Y.-i. Ohta, T. Kanade, and T. Sakai, “An analysis
-system for scenes containing objects with substruc-
-tures,” in Proceedings of the Fourth International
+system for scenes containing objects with substructures,”
+in Proceedings of the Fourth International
 Joint Conference on Pattern Recognitions, 1978, pp.
 752–754.
 
@@ -1710,9 +1710,8 @@ Available: http://delivery.acm.org/10.1145/1020000/
 1015720/p309-rother.pdf
 
 [RM00] J. B. Roerdink and A. Meijster, “The watershed
-transform: Definitions, algorithms and paralleliza-
-
-tion strategies,” Fundam. Inform., vol. 41, no. 1-2,
+transform: Definitions, algorithms and parallelization
+strategies,” Fundam. Inform., vol. 41, no. 1-2,
 pp. 187–228, 2000.
 
 [RM07] J. Reynolds and K. Murphy, “Figure-ground
@@ -1741,8 +1740,8 @@ http://www.isi.uu.nl/Research/Databases/DRIVE/
 
 [SCZ08] F. Schroff, A. Criminisi, and A. Zisserman,
 “Object class segmentation using random
-forests.” in BMVC, 2008, pp. 1–10. [On-
-line]. Available: http://research.microsoft.com/pubs/
+forests.” in BMVC, 2008, pp. 1–10. [Online].
+Available: http://research.microsoft.com/pubs/
 72423/Criminisi_bmvc2008.pdf
 
 [SJC08] J. Shotton, M. Johnson, and R. Cipolla,
@@ -1764,14 +1763,14 @@ analysis,” Cornell University, USA, vol. 51, p. 52,
 2002.
 
 [Smi04] B. T. Smith, “Lagrange multipliers tutorial in the
-context of support vector machines,” Memorial Uni-
-versity of Newfoundland St. John’s, Newfoundland,
+context of support vector machines,” Memorial University
+of Newfoundland St. John’s, Newfoundland,
 Canada, Jun. 2004.
 
 [SSA12] D. Schiebener, J. Schill, and T. Asfour, “Discovery,
 segmentation and reactive grasping of unknown
-objects.” in Humanoids, 2012, pp. 71–77. [On-
-line]. Available: http://h2t.anthropomatik.kit.edu/
+objects.” in Humanoids, 2012, pp. 71–77. [Online].
+Available: http://h2t.anthropomatik.kit.edu/
 pdf/Schiebener2012.pdf
 
 [SUM+11] D. Schiebener, A. Ude, J. Morimotot,
@@ -1842,8 +1841,8 @@ abs_all.jsp?arnumber=6042883
 
 [ZBS01] Y. Zhang, M. Brady, and S. Smith, “Segmentation
 of brain MR images through a hidden Markov
-random field model and the expectation-
-maximization algorithm,” Medical Imaging, IEEE
+random field model and the expectation-maximization
+algorithm,” Medical Imaging, IEEE
 Transactions on, vol. 20, no. 1, pp. 45–57, 2001.
 [Online]. Available: http://ieeexplore.ieee.org/xpls/
 abs_all.jsp?arnumber=906424
@@ -1896,15 +1895,9 @@ APPENDIX A
 TABLES
 
 Database Image Resolution (width × height)
-Number
+Number of Images
 
-of
-Images
-
-Number
-of
-
-Classes
+Number of Classes
 Channels Data source
 
 Colon Crypt DB (302 px − 1116 px)× (349 px − 875 px) 389 2 3 [CRSS]
