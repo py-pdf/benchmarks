@@ -279,8 +279,8 @@ character by character. If the model is good, the text can have
 the correct punctuation. This would not be possible with a
 word predictor.
 
-Character predictors can be implemented with RNNs. In con-
-trast to standard feed-forward neural networks like multilayer
+Character predictors can be implemented with RNNs. In contrast
+to standard feed-forward neural networks like multilayer
 Perceptrons (MLPs) which was shown in Figure 1(b), those
 networks are trained to take their output at some point as well as
 the normal input. This means they can keep some information
@@ -398,8 +398,8 @@ The new feature of Emily Howell compared to Emmy is that
 Emily Howell does not necessarily remain in a single, already
 known style.
 
-Emily Howell makes use of association network. Cope empha-
-sizes that this is not a form of a neural network. However, it
+Emily Howell makes use of association network. Cope emphasizes
+that this is not a form of a neural network. However, it
 is not clear from [Cop13] how exactly an association network
 is trained. Cope mentions that Emily Howell is explained in
 detail in [Cop05].

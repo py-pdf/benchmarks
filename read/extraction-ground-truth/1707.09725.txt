@@ -49,8 +49,8 @@ FZI Research Center for Information Technology
 
 Affirmation
 
-Ich versichere wahrheitsgemäß, die Arbeit selbstständig angefertigt, alle benutzten Hilfs-
-mittel vollständig und genau angegeben und alles kenntlich gemacht zu haben, was aus
+Ich versichere wahrheitsgemäß, die Arbeit selbstständig angefertigt, alle benutzten Hilfsmittel
+vollständig und genau angegeben und alles kenntlich gemacht zu haben, was aus
 Arbeiten anderer unverändert oder mit Abänderungen entnommen wurde.
 
 Karlsruhe, Martin Thoma
@@ -66,7 +66,7 @@ Abstract
 
 Convolutional Neural Networks (CNNs) dominate various computer vision tasks since
 Alex Krizhevsky showed that they can be trained effectively and reduced the top-5 error
-from 26.2 % to 15.3 % on the ImageNet large scale visual recognition challenge. Many
+from 26.2% to 15.3% on the ImageNet large scale visual recognition challenge. Many
 aspects of CNNs are examined in various publications, but literature about the analysis
 and construction of neural network architectures is rare. This work is one step to close this
 gap. A comprehensive overview over existing techniques for CNN analysis and topology
@@ -86,16 +86,16 @@ Modelle welche auf Convolutional Neural Networks (CNNs) basieren sind in verschi
 Aufgaben der Computer Vision dominant seit Alex Krizhevsky gezeigt hat dass diese
 effektiv trainiert werden können und er den Top-5 Fehler in dem ImageNet large scale visual
 recognition challenge Benchmark von 26.2 % auf 15.3 % drücken konnte. Viele Aspekte
-von CNNs wurden in verschiedenen Publikationen untersucht, aber es wurden vergleich-
-sweise wenige Arbeiten über die Analyse und die Konstruktion von Neuronalen Netzen
+von CNNs wurden in verschiedenen Publikationen untersucht, aber es wurden vergleichsweise
+wenige Arbeiten über die Analyse und die Konstruktion von Neuronalen Netzen
 geschrieben. Diese Masterarbeit stellt einen Schritt dar um diese Lücke zu schließen. Eine
 umfassende Überblick über Analyseverfahren und Topologielernverfahren wird gegeben. Ein
 neues Verfahren zur Visualisierung der Klassifikationsfehler mit Konfusionsmatrizen wurde
 entwickelt. Basierend auf diesem Verfahren wurden hierarchische Klassifizierer eingeführt
-und evaluiert. Zusätzlich wurden einige bereits in der Literatur beschriebene Beobachtun-
-gen wie z.B. der positive Einfluss von kleinen Batch-Größen, Ensembles, Erhöhung der
-Trainingsdatenmenge durch künstliche Transformationen (Data Augmentation) und die In-
-varianzbildung durch künstliche Transformationen zur Test-Zeit (Test-time transformations)
+und evaluiert. Zusätzlich wurden einige bereits in der Literatur beschriebene Beobachtungen
+wie z.B. der positive Einfluss von kleinen Batch-Größen, Ensembles, Erhöhung der
+Trainingsdatenmenge durch künstliche Transformationen (Data Augmentation) und die Invarianzbildung
+durch künstliche Transformationen zur Test-Zeit (Test-time transformations)
 experimentell bestätigt. Andere Beobachtungen, wie beispielsweise der positive Einfluss
 gelernter Farbraumtransformationen konnten nicht bestätigt werden. Ein Modell welches
 weniger als eine Millionen Parameter nutzt und auf den Benchmark-Datensätzen Asirra,
@@ -257,10 +257,9 @@ Computer vision is the academic field which aims to gain a high-level understand
 low-level information given by raw pixels from digital images.
 
 Robots, search engines, self-driving cars, surveillance agencies and many others have
-applications which include one of the following six problems in computer vision as sub-
-problems:
+applications which include one of the following six problems in computer vision as subproblems:
 
-• Classification:1 The algorithm is given an image and k possible classes. The task is
+• Classification: 1 The algorithm is given an image and k possible classes. The task is
 to decide which of the k classes the image belongs to. For example, an image from
 a self-driving cars on-board camera contains either paved road, unpaved road or
 no road: Which of those given three classes is in the image?
@@ -321,7 +320,7 @@ transition layers in Section 2.4 and nine ways to analyze CNNs are described in 
 
 A linear image filter (also called a filter bank or a kernel) is an element F ∈ Rkw×kh×d,
 where kw represents the filter’s width, kh the filter’s height and d the number of input
-channels. The filter F is convolved with the image I ∈ Rw×h×d to produce a new image I ′.
+channels. The filter F is convolved with the image I ∈ Rw×h×d to produce a new image I′.
 The output image I ′ has only one channel. Each pixel I ′(x, y) of the output image gets
 calculated by point-wise multiplication of one filter element with one element of the original
 image I:
@@ -361,7 +360,7 @@ output image, k2 multiplications and k2 additions of the products have to be cal
 One important detail is how boundaries are treated. There are four common ways of
 boundary treatment:
 
-• don’t compute: The image I ′ will be smaller than the original image. I ′ ∈
+• don’t compute: The image I′ will be smaller than the original image. I′ ∈
 R(w−kw+1)×(h−kh+1)×d3 , to be exact.
 • zero padding: The image I is padded by zeros where the filter would access elements
 which do not exist. This will result in edges being detected at the border if the border
@@ -699,8 +698,8 @@ where ⊙ is the Hadamard product
 (A⊙B)i,j := (A)i,j(B)i,j
 
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
-Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout prob-
-ability than later layers. In order to keep the expected output at the same value, the
+Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout probability
+than later layers. In order to keep the expected output at the same value, the
 output of a dropout layer is multiplied with 1
 
 1−p when dropout is enabled [Las17, tf-16b].
@@ -712,8 +711,8 @@ layers as it usually increases the test error as pointed out in [GG16].
 Models which use Dropout can be interpreted as an ensemble of models with different
 numbers of neurons in each layer, but also with weight sharing.
 
-Conceptually similar are DropConnect and networks with stochastic depth. DropCon-
-nect [WZZ+13] is a generalization of Dropout, which sets weights to zero in contrast to
+Conceptually similar are DropConnect and networks with stochastic depth. DropConnect
+[WZZ+13] is a generalization of Dropout, which sets weights to zero in contrast to
 setting the output of a neuron to zero. Networks with stochastic depth as introduced
 in [HSL+16] dropout only complete layers. This can be done by having Residual networks
 which have one identity connection and one residual feature connection. Hence the residual
@@ -906,8 +905,8 @@ but dense blocks have L(L+1)
 2
 connections between layers. The input feature maps are
 
-concatenated in depth. According to the authors, this prevents features from being re-
-learned and allows much fewer filters per convolutional layer. Where AlexNet and VGG-16
+concatenated in depth. According to the authors, this prevents features from being re-learned
+and allows much fewer filters per convolutional layer. Where AlexNet and VGG-16
 have several hundred filters per convolutional layer (see Tables D.2 and D.3), the authors
 used only on the order of 12 feature maps per layer.
 
@@ -1106,8 +1105,8 @@ training data and loses its capability to generalize. At this point the quality 
 the training set and the validation set diverge. While the classifier is still improving on
 the training set, it gets worse on the validation and the test set.
 
-When the epoch-loss validation curve has plateaus as in Figure 2.8, this means the opti-
-mization process did not improve for several epochs. Three possible ways to reduce the
+When the epoch-loss validation curve has plateaus as in Figure 2.8, this means the optimization
+process did not improve for several epochs. Three possible ways to reduce the
 problem of plateaus are (i) to change weight initialization if the plateau was at the beginning,
 (ii) regularizing the model or (iii) changing the optimization algorithm.
 
@@ -1180,8 +1179,8 @@ The optimization process might also be stuck in a local minimum.
 • Loss being NAN might be due to too high learning rates. Another reason is division
 by zero or taking the logarithm of zero. In both cases, adding a small constant like
 10−7 fixes the problem.
-• If the loss-epoch validation curve has a plateau at the beginning, the weight initializa-
-tion might be bad.
+• If the loss-epoch validation curve has a plateau at the beginning, the weight initialization
+might be bad.
 
 18
 
@@ -1500,8 +1499,8 @@ the necessary number of input nodes and the number of output nodes which are det
 by the application and the features of the input. They then apply a criterion to insert new
 layers / neurons into the network.
 
-In the following, Cascade-Correlation, Meiosis Networks and Automatic Structure Opti-
-mization are introduced.
+In the following, Cascade-Correlation, Meiosis Networks and Automatic Structure Optimization
+are introduced.
 
 3.1.1. Cascade-Correlation
 
@@ -1515,13 +1514,9 @@ defined by the problem. Create a minimal, fully connected network for those.
 
 2. Training: Train the network until the error no longer decreases.
 
-3. Candidate Generation: Generate candidate nodes. Each candidate node is con-
-nected to all inputs. They are not connected to other candidate nodes and not
+3. Candidate Generation: Generate candidate nodes. Each candidate node is connected
+to all inputs. They are not connected to other candidate nodes and not
 connected to the output nodes.
-
-27
-
-
 
 3. Topology Learning
 
@@ -1601,8 +1596,8 @@ layers or add skip connections.
 
 3.1.3. Automatic Structure Optimization
 
-Automatic Structure Optimization (ASO) was introduced in [BM93] for the task of on-
-line handwriting recognition. It makes use of the confusion matrix C = (cij) ∈ Nk×k≥0
+Automatic Structure Optimization (ASO) was introduced in [BM93] for the task of online
+handwriting recognition. It makes use of the confusion matrix C = (cij) ∈ Nk×k≥0
 (see Section 2.5.2) to guide the topology learning. They define a confusion-symmetry matrix
 S with sij = sji = cij · cji. The maximum of S defines where the ASO algorithm adds
 more parameters. The details how the resources are added are not transferable to CNNs.
@@ -1666,13 +1661,13 @@ algorithm achieves only 23.9 % accuracy [VH13].
 
 Kocmánek shows in [Koc15] that HyperNEAT approaches can achieve 96.47 % accuracy
 on MNIST. Kocmánek mentions that HyperNEAT becomes slower with each hidden layer
-so that not more than three hidden layers could be trained. At the same time, VGG-
-19 [SZ14] already has 19 hidden layers and ResNets are successfully trained with 1202 layers
+so that not more than three hidden layers could be trained. At the same time, VGG-19
+[SZ14] already has 19 hidden layers and ResNets are successfully trained with 1202 layers
 in [HZRS15a].
 
 [LX17] shows that Genetic algorithms can achieve competitive results on MNIST and
-SVHN, but the best results on CIFAR-10 were 7.10 % error whereas the state of the art is
-at 3.74 % [HLW16]. Similarly, the Genetic algorithm achieves 29.03 % error on CIFAR-100,
+SVHN, but the best results on CIFAR-10 were 7.10% error whereas the state of the art is
+at 3.74 % [HLW16]. Similarly, the Genetic algorithm achieves 29.03% error on CIFAR-100,
 but the state of the art is 17.18 % [HLW16].
 
 3.4. Reinforcement Learning
@@ -2203,9 +2198,9 @@ values are, the less information is lost if the filters are replaced by smaller 
 
 5. Experimental Evaluation
 
-Figure 5.2.: Violin plots of the distribution of filter weights of a baseline model trained on CIFAR-
-100. The weights of the first layer are relatively evenly spread in the interval [−0.4,+0.4].
-With every layer the interval which contains 95 % of the weights and is centered around
+Figure 5.2.: Violin plots of the distribution of filter weights of a baseline model trained on CIFAR-100.
+The weights of the first layer are relatively evenly spread in the interval [−0.4,+0.4].
+With every layer the interval which contains 95% of the weights and is centered around
 the mean becomes smaller, especially with layer 11 where the feature maps are of
 size 1× 1. In contrast to the other layers, the last convolutional layer has a bimodal
 distribution.
@@ -2524,8 +2519,8 @@ wardrobe + dinosaur + lizard
 + snake, worm + turtle
 
 9 crocodile, lizard, lobster, cater-
-pillar + dinosaur + snake + tur-
-tle, crab
+pillar + dinosaur + snake + turtle,
+crab
 
 6
 
@@ -2585,9 +2580,9 @@ be due to limited training data, overfitting or the small size of 32 px× 32 px 
 The experiment also shows that most of the errors are due to not identifying the correct
 cluster. Hence, in this case, more work in improving the root classifier is necessary rather
 than improving the discrimination of classes within a cluster.
-Although the classes within a cluster capture most of the classifications, many misclassifica-
-tions happen outside of the clusters. For example, in cluster 3, a perfect leaf classifier would
-push the accuracy in the full column only to 63.50 % due to errors of the root classifier
+Although the classes within a cluster capture most of the classifications, many misclassifications
+happen outside of the clusters. For example, in cluster 3, a perfect leaf classifier would
+push the accuracy in the full column only to 63.50% due to errors of the root classifier
 where the root classifier does not predict the correct cluster.
 The leaf classifiers use the same topology as the root classifier. By initializing them with
 the root classifiers weights their performance can be pushed at about the inner accuracy.
@@ -2919,12 +2914,12 @@ of the Batch Normalization layers did not noticeably change.
 
 5.11. Learned Color Space Transformation
 
-In [MSM16] it is described that placing one convolutional layer with 10 filters of size 1× 1
-directly after the input and then another convolutional layer with 3 filters of size 1× 1 acts
+In [MSM16] it is described that placing one convolutional layer with 10 filters of size 1×1
+directly after the input and then another convolutional layer with 3 filters of size 1×1 acts
 as a learned transformation in another color space and boosts the accuracy.
 
-This approach was evaluated on CIFAR-100 by adding a convolutional layer with ELU ac-
-tivation and 10 filters followed by another convolutional layer with ELU activation and
+This approach was evaluated on CIFAR-100 by adding a convolutional layer with ELU activation
+and 10 filters followed by another convolutional layer with ELU activation and
 3 filters. The mean accuracy of 10 models was 63.31 % with a standard deviation of 1.37.
 The standard deviation is noticeable higher than the standard deviation of the baseline
 model (0.55) and the accuracy also decreased by 0.07 percentage points. The accuracy of
@@ -2938,11 +2933,11 @@ Hence it is not advisable to use the learned color space transformation.
 
 5.12. Pooling
 
-An alternative to max pooling with stride 2 with a 2× 2 kernel is using a 3× 3 kernel with
+An alternative to max pooling with stride 2 with a 2×2 kernel is using a 3×3 kernel with
 stride 2.
 
 This approach was evaluated on CIFAR-100 by replacing all max pooling layers with the
-3× 3 kernel max pooling (and SAME padding). The mean accuracy of 10 models was 63.32 %
+3×3 kernel max pooling (and SAME padding). The mean accuracy of 10 models was 63.32 %
 (−0.06) and the standard deviation was 0.57 (+0.02). The ensemble achieved 65.15 % test
 accuracy (+0.45).
 
@@ -2970,8 +2965,8 @@ other comparisons of eleven activation functions are given in Table B.3.
 Theoretical explanations why one activation function is preferable to another in some
 scenarios are the following:
 
-• Vanishing Gradient: Activation functions like tanh and the logistic function sat-
-urate outside of the interval [−5, 5]. This means weight updates are very small for
+• Vanishing Gradient: Activation functions like tanh and the logistic function saturate
+outside of the interval [−5, 5]. This means weight updates are very small for
 preceding neurons, which is especially a problem for very deep or recurrent networks as
 described in [BSF94]. Even if the neurons learn eventually, learning is slower [KSH12].
 
@@ -2995,7 +2990,7 @@ As expected, PReLU and ELU performed best. Unexpected was that the logistic func
 tanh and softplus performed worse than the identity and it is unclear why the pure-softmax
 network performed so much better than the logistic function. One hypothesis why the
 logistic function performs so bad is that it cannot produce negative outputs. Hence the
-logistic− function was developed:
+logistic−function was developed:
 
 logistic−(x) =
 1
@@ -3487,10 +3482,10 @@ algorithm in Chapter 4 and evaluated in Sections 4.2 and 5.4. The important insi
 • Ordering the classes in the confusion matrix allows to display the relevant parts even
 for several hundred classes.
 
-• A hierarchy of classifiers based on the classes does not improve the results on CIFAR-
-100. There are three possible reasons for this:
+• A hierarchy of classifiers based on the classes does not improve the results on CIFAR-100.
+ There are three possible reasons for this:
 
-– 32 px× 32 px is too low dimensional
+– 32 px × 32 px is too low dimensional
 
 – 100 classes are not enough for this approach
 
@@ -4247,8 +4242,8 @@ used.
 
 D. Common Architectures
 
-In the following, some of the most important CNN architectures are explained. Understand-
-ing the development of these architectures helps understanding critical insights the machine
+In the following, some of the most important CNN architectures are explained. Understanding
+the development of these architectures helps understanding critical insights the machine
 learning community got in the past years for convolutional networks for image recognition.
 
 It starts with LeNet-5 from 1998, continues with AlexNet from 2012, VGG-16 D from
@@ -4303,8 +4298,8 @@ than fully connected layers.
 D.2. AlexNet
 
 The first CNN which achieved major improvements on the ImageNet dataset was AlexNet [KSH12].
-Its architecture is shown in Figure D.2 and described in Table D.2. It has about 60·106 param-
-eters. A trained AlexNet can be downloaded at www.cs.toronto.edu/g̃uerzhoy/tf_alexnet.
+Its architecture is shown in Figure D.2 and described in Table D.2. It has about 60·106 parameters.
+A trained AlexNet can be downloaded at www.cs.toronto.edu/g̃uerzhoy/tf_alexnet.
 Note that the uncompressed size is at least 60 965 224 floats · 32 bit
 
 float
@@ -4777,9 +4772,8 @@ gradient descent,” in Advances in Neural Information Processing Systems 29
 learning-to-learn-by-gradient-descent-by-gradient-descent.pdf
 
 [AM15] M. T. Alexander Mordvintsev, Christopher Olah, “Inceptionism:
-Going deeper into neural networks,” Jun. 2015. [Online]. Avail-
-able: https://research.googleblog.com/2015/06/inceptionism-going-deeper-
-into-neural.html
+Going deeper into neural networks,” Jun. 2015. [Online]. Available:
+https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html
 
 [Asi17] “Kaggle cats and dogs dataset,” Oct. 2017. [Online]. Available: https:
 //www.microsoft.com/en-us/download/details.aspx?id=54765
@@ -4800,21 +4794,6 @@ Université de Montréal, Tech. Rep. 1337, 2009.
 [BGNR16] B. Baker, O. Gupta et al., “Designing neural network architectures using
 reinforcement learning,” arXiv preprint arXiv:1611.02167, Nov. 2016. [Online].
 Available: https://arxiv.org/abs/1611.02167
-
-103
-
-https://arxiv.org/abs/1603.04467
-http://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf
-http://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf
-https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html
-https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html
-https://www.microsoft.com/en-us/download/details.aspx?id=54765
-https://www.microsoft.com/en-us/download/details.aspx?id=54765
-http://jmlr.csail.mit.edu/papers/volume13/bergstra12a/bergstra12a.pdf
-http://jmlr.csail.mit.edu/papers/volume13/bergstra12a/bergstra12a.pdf
-https://arxiv.org/abs/1703.10155
-https://arxiv.org/abs/1611.02167
-
 
 [BM93] U. Bodenhausen and S. Manke, Automatically Structured Neural
 Networks For Handwritten Character And Word Recognition. London:
@@ -4863,28 +4842,11 @@ preprint arXiv:1511.07289, Nov. 2015. [Online]. Available: https:
 learning,” arXiv preprint arXiv:1410.0759, Oct. 2014. [Online]. Available:
 https://arxiv.org/abs/1410.0759
 
-104
-
-http://dx.doi.org/10.1007/978-1-4471-2063-6_283
-http://dx.doi.org/10.1007/978-1-4471-2063-6_283
-http://yann.lecun.com/exdb/publis/pdf/boureau-icml-10.pdf
-http://ieeexplore.ieee.org/document/143326/
-https://github.com/fchollet/keras
-http://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
-http://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
-http://cs.stanford.edu/~acoates/stl10
-https://arxiv.org/abs/1202.2745v1
-https://arxiv.org/abs/1511.07289
-https://arxiv.org/abs/1511.07289
-https://arxiv.org/abs/1410.0759
-
-
 [DBB+01] C. Dugas, Y. Bengio et al., “Incorporating second-order functional
-knowledge for better option pricing,” in Advances in Neural Infor-
-mation Processing Systems 13 (NIPS), T. K. Leen, T. G. Dietterich,
+knowledge for better option pricing,” in Advances in Neural Information
+Processing Systems 13 (NIPS), T. K. Leen, T. G. Dietterich,
 and V. Tresp, Eds. MIT Press, 2001, pp. 472–478. [Online].
-Available: http://papers.nips.cc/paper/1920-incorporating-second-order-
-functional-knowledge-for-better-option-pricing.pdf
+Available: http://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf
 
 [DDFK16] S. Dieleman, J. De Fauw, and K. Kavukcuoglu, “Exploiting cyclic symmetry
 in convolutional neural networks,” arXiv preprint arXiv:1602.02660, Feb.
@@ -4923,23 +4885,7 @@ royal astronomical society, vol. 450, no. 2, pp. 1441–1459, 2015.
 exploits interest-aligned manual image categorization,” in ACM Con-
 ference on Computer and Communications Security (CCS), no. 14.
 Association for Computing Machinery, Inc., Oct. 2007. [Online].
-
-105
-
-http://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf
-http://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf
-https://arxiv.org/abs/1602.02660
-http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf
-https://arxiv.org/abs/1512.04412
-ftp://ftp.icsi.berkeley.edu/pub/ai/jagota/vol2_6.pdf
-http://cs229.stanford.edu/proj2015/054_report.pdf
-http://cs229.stanford.edu/proj2015/054_report.pdf
-http://papers.nips.cc/paper/5548-discriminative-unsupervised-feature-learning-with-convolutional-neural-networks.pdf
-http://papers.nips.cc/paper/5548-discriminative-unsupervised-feature-learning-with-convolutional-neural-networks.pdf
-
-
-Available: https://www.microsoft.com/en-us/research/publication/asirra-a-
-captcha-that-exploits-interest-aligned-manual-image-categorization/
+Available: https://www.microsoft.com/en-us/research/publication/asirra-a-captcha-that-exploits-interest-aligned-manual-image-categorization/
 
 [EKS+96] M. Ester, H.-P. Kriegel et al., “A density-based algorithm for discovering
 clusters in large spatial databases with noise.” in Kdd, vol. 96, no. 34, 1996,
@@ -4961,8 +4907,8 @@ vol. 28, no. 4, pp. 594–611, Apr. 2006. [Online]. Available: http:
 [FFP03] R. F. Fei-Fei and P. Perona, “Caltech 101,” 2003. [Online]. Available: http:
 //www.vision.caltech.edu/Image_Datasets/Caltech101/Caltech101.html
 
-[FGMR10] P. F. Felzenszwalb, R. B. Girshick et al., “Object detection with discrimina-
-tively trained part-based models,” IEEE transactions on pattern analysis and
+[FGMR10] P. F. Felzenszwalb, R. B. Girshick et al., “Object detection with discriminatively
+trained part-based models,” IEEE transactions on pattern analysis and
 machine intelligence, vol. 32, no. 9, pp. 1627–1645, 2010.
 
 [FL89] S. E. Fahlman and C. Lebiere, “The cascade-correlation learning architecture,”
@@ -5050,22 +4996,6 @@ preprint arXiv:1611.04231, Nov. 2016. [Online]. Available: https:
 based image classification,” arXiv preprint arXiv:1312.5402, Dec. 2013.
 [Online]. Available: https://arxiv.org/abs/1312.5402
 
-107
-
-https://arxiv.org/abs/1506.02158v6
-https://arxiv.org/abs/1412.6071
-http://www.vision.caltech.edu/Image_Datasets/Caltech256/
-http://www.jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-http://www.jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-https://arxiv.org/abs/1608.08614
-http://papers.nips.cc/paper/227-meiosis-networks.pdf
-https://devblogs.nvidia.com/parallelforall/new-features-cuda-7-5/
-https://arxiv.org/abs/1608.06993v1
-https://arxiv.org/abs/1611.04231
-https://arxiv.org/abs/1611.04231
-https://arxiv.org/abs/1312.5402
-
-
 [HPK11] J. Han, J. Pei, and M. Kamber, Data mining: concepts and techniques.
 Elsevier, 2011.
 
@@ -5111,23 +5041,6 @@ Computer Vision (ICCV), Feb. 2015, pp. 1026–1034. [Online]. Available:
 https://arxiv.org/abs/1502.01852
 
 [Ima12] “Imagenet large scale visual recognition challenge 2012 (ILSVRC2012),”
-
-108
-
-https://arxiv.org/abs/1607.04381
-http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network.pdf
-http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network.pdf
-https://arxiv.org/abs/1207.0580
-https://arxiv.org/abs/1603.09382
-https://arxiv.org/abs/1603.09382
-http://ee.caltech.edu/Babak/pubs/conferences/00298572.pdf
-http://ee.caltech.edu/Babak/pubs/conferences/00298572.pdf
-https://arxiv.org/abs/1503.02531
-https://arxiv.org/abs/1406.4729
-https://arxiv.org/abs/1512.03385v1
-https://arxiv.org/abs/1512.03385v1
-https://arxiv.org/abs/1502.01852
-
 
 2012. [Online]. Available: http://www.image-net.org/challenges/LSVRC/
 2012/nonpub-downloads
@@ -5175,26 +5088,6 @@ and neural network approximation,” IEEE Transactions on Information
 Theory, vol. 48, no. 1, pp. 264–275, Jan. 2002. [Online]. Available:
 http://ieeexplore.ieee.org/abstract/document/971754/
 
-109
-
-http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads
-http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads
-https://arxiv.org/abs/1502.03167
-https://arxiv.org/abs/1512.07030
-http://karpathy.github.io/2011/04/27/manually-classifying-cifar10/
-http://karpathy.github.io/2011/04/27/manually-classifying-cifar10/
-https://arxiv.org/abs/1412.6980
-https://arxiv.org/abs/1412.6980
-https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf
-https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf
-https://arxiv.org/abs/1609.04836
-http://kocmi.tk/photos/DiplomaThesis.pdf
-https://arxiv.org/abs/1511.06530
-https://www.cs.toronto.edu/~kriz/cifar.html
-https://www.cs.toronto.edu/~kriz/cifar.html
-http://ieeexplore.ieee.org/abstract/document/971754/
-
-
 [KSH12] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification
 with deep convolutional neural networks,” in Advances in Neural
 Information Processing Systems 25 (NIPS), F. Pereira, C. J. C. Burges
@@ -5239,25 +5132,6 @@ processing. IEEE, 2013, pp. 8595–8598. [Online]. Available: http:
 //ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6639343
 
 [LG16] A. Lavin and S. Gray, “Fast algorithms for convolutional neural networks,” in
-
-110
-
-http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
-http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
-http://papers.nips.cc/paper/4133-learning-convolutional-feature-hierarchies-for-visual-recognition.pdf
-http://papers.nips.cc/paper/4133-learning-convolutional-feature-hierarchies-for-visual-recognition.pdf
-https://arxiv.org/abs/1512.02325
-http://lasagne.readthedocs.io/en/latest/modules/layers/noise.html#lasagne.layers.DropoutLayer
-http://lasagne.readthedocs.io/en/latest/modules/layers/noise.html#lasagne.layers.DropoutLayer
-http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf
-http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf
-http://www.nature.com/nature/journal/v521/n7553/abs/nature14539.html
-http://dx.doi.org/10.1007/3-540-49430-8
-http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf
-http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf
-http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6639343
-http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6639343
-
 
 Conference on Computer Vision and Pattern Recognition (CVPR). IEEE, Sep.
 2016, pp. 4013–4021. [Online]. Available: https://arxiv.org/abs/1509.09308
@@ -5306,22 +5180,6 @@ relu_hybrid_icml2013_final.pdf
 
 [MM15] D. Mishkin and J. Matas, “All you need is a good init,” arXiv
 
-111
-
-https://arxiv.org/abs/1509.09308
-https://arxiv.org/abs/1509.08985v2
-https://arxiv.org/abs/1608.03983
-https://arxiv.org/abs/1608.03983
-https://arxiv.org/abs/1603.06560
-https://arxiv.org/abs/1606.01885
-https://arxiv.org/abs/1411.4038v2
-https://arxiv.org/abs/1703.01513
-https://github.com/titu1994/DenseNet
-http://lear.inrialpes.fr/people/marszalek/data/ig02/
-https://web.stanford.edu/~awni/papers/relu_hybrid_icml2013_final.pdf
-https://web.stanford.edu/~awni/papers/relu_hybrid_icml2013_final.pdf
-
-
 preprint arXiv:1511.06422, Nov. 2015. [Online]. Available: https:
 //arxiv.org/abs/1511.06422
 
@@ -5369,21 +5227,6 @@ weight-sharing,” Neural computation, vol. 4, no. 4, pp. 473–493, 1992.
 
 [NH02] R. T. Ng and J. Han, “CLARANS: A method for clustering objects for spatial
 
-112
-
-https://arxiv.org/abs/1511.06422
-https://arxiv.org/abs/1511.06422
-http://ieeexplore.ieee.org/abstract/document/7301739/
-http://ieeexplore.ieee.org/abstract/document/7301739/
-http://ieeexplore.ieee.org/document/4270110/
-http://ieeexplore.ieee.org/document/4270110/
-https://arxiv.org/abs/1606.02228
-https://arxiv.org/abs/1512.02017
-http://papers.nips.cc/paper/5073-learning-with-noisy-labels.pdf
-http://www1.icsi.berkeley.edu/Speech/faq/nn-train.html
-https://www.cs.toronto.edu/~hinton/absps/sunspots.pdf
-
-
 data mining,” IEEE transactions on knowledge and data engineering, vol. 14,
 no. 5, pp. 1003–1016, 2002.
 
@@ -5429,20 +5272,6 @@ evolutionary computation, no. 12. ACM, 2010, pp. 563–570.
 [RSG16] M. T. Ribeiro, S. Singh, and C. Guestrin, “"why should i trust you?":
 Explaining the predictions of any classifier,” arXiv preprint arXiv:1602.04938,
 Feb. 2016. [Online]. Available: https://arxiv.org/abs/1602.04938
-
-113
-
-http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf
-http://ufldl.stanford.edu/housenumbers/
-https://arxiv.org/abs/1602.03616
-https://arxiv.org/abs/1608.08984
-https://arxiv.org/abs/1511.04508
-http://dx.doi.org/10.1007/3-540-49430-8_3
-http://dx.doi.org/10.1007/3-540-49430-8_3
-https://arxiv.org/abs/1409.0575
-https://arxiv.org/abs/1505.04597
-https://arxiv.org/abs/1602.04938
-
 
 [Rud16] S. Ruder, “An overview of gradient descent optimization algorithms,”
 arXiv preprint arXiv:1609.04747, Sep. 2016. [Online]. Available: https:
@@ -5490,22 +5319,6 @@ on Computer Vision and Pattern Recognition (CVPR). IEEE, Sep. 2015, pp.
 1–9. [Online]. Available: https://arxiv.org/abs/1409.4842
 
 [SM02] K. O. Stanley and R. Miikkulainen, “Evolving neural networks through
-
-114
-
-https://arxiv.org/abs/1609.04747
-https://arxiv.org/abs/1609.04747
-https://arxiv.org/abs/1204.3968
-http://ieeexplore.ieee.org/document/6792316/
-https://arxiv.org/abs/1312.6229v4
-https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
-http://ieeexplore.ieee.org/document/6638963/?arnumber=6638963
-https://arxiv.org/abs/1602.07261
-https://arxiv.org/abs/1503.03832
-http://ieeexplore.ieee.org/document/6033589/
-https://arxiv.org/abs/1409.4842
-
-
 augmenting topologies,” Evolutionary computation, vol. 10, no. 2, pp. 99–127,
 2002. [Online]. Available: http://www.mitpressjournals.org/doi/abs/10.1162/
 106365602320169811
@@ -5550,27 +5363,6 @@ https://arxiv.org/abs/1312.6199v4
 
 [TF-16a] “MNIST for ML beginners,” Dec. 2016. [Online]. Available: https:
 //www.tensorflow.org/tutorials/mnist/beginners/
-
-115
-
-http://www.mitpressjournals.org/doi/abs/10.1162/106365602320169811
-http://www.mitpressjournals.org/doi/abs/10.1162/106365602320169811
-https://arxiv.org/abs/1312.6120
-https://arxiv.org/abs/1312.6120
-https://arxiv.org/abs/1410.1165
-http://benchmark.ini.rub.de/?section=gtsrb&subsection=news
-http://benchmark.ini.rub.de/?section=gtsrb&subsection=news
-http://www.sciencedirect.com/science/article/pii/S0893608012000457
-http://www.sciencedirect.com/science/article/pii/S0893608012000457
-https://arxiv.org/abs/1606.02492
-https://arxiv.org/abs/1512.00567v3
-https://arxiv.org/abs/1312.6034
-https://arxiv.org/abs/1312.6034
-https://arxiv.org/abs/1409.1556
-https://arxiv.org/abs/1312.6199v4
-https://www.tensorflow.org/tutorials/mnist/beginners/
-https://www.tensorflow.org/tutorials/mnist/beginners/
-
 
 [tf-16b] “tf.nn.dropout,” Dec. 2016. [Online]. Available: https://www.tensorflow.org/
 api_docs/python/nn/activation_functions_#dropout
@@ -5617,24 +5409,6 @@ http://ieeexplore.ieee.org/document/21701/
 [Wil92] R. J. Williams, “Simple statistical gradient-following algorithms for connec-
 tionist reinforcement learning,” Machine learning, vol. 8, no. 3-4, pp. 229–256,
 1992.
-
-116
-
-https://www.tensorflow.org/api_docs/python/nn/activation_functions_#dropout
-https://www.tensorflow.org/api_docs/python/nn/activation_functions_#dropout
-http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
-http://martin-thoma.com/write-math
-http://martin-thoma.com/write-math
-https://martin-thoma.com/twiddle/
-https://arxiv.org/abs/1602.06541
-https://arxiv.org/abs/1602.06541
-https://arxiv.org/abs/1701.08380
-https://martin-thoma.com/msthesis
-https://arxiv.org/abs/1312.5355
-http://dx.doi.org/10.1007/978-94-015-7744-1_2
-https://arxiv.org/abs/1702.00071
-http://ieeexplore.ieee.org/document/21701/
-
 
 [WWQ13] X. Wang, L. Wang, and Y. Qiao, A Comparative Study of Encoding, Pooling
 and Normalization Methods for Action Recognition. Berlin, Heidelberg:
@@ -5683,22 +5457,6 @@ M. Sugiyama et al., Eds. Curran Associates, Inc., Oct. 2016, pp. 1082–1090.
 [Online]. Available: http://papers.nips.cc/paper/6340-doubly-convolutional-
 neural-networks.pdf
 
-117
-
-http://dx.doi.org/10.1007/978-3-642-37431-9_44
-https://arxiv.org/abs/1501.02876v4
-http://www.matthewzeiler.com/pubs/icml2013/icml2013.pdf
-http://www.matthewzeiler.com/pubs/icml2013/icml2013.pdf
-https://arxiv.org/abs/1611.05431v1
-https://arxiv.org/abs/1107.2490
-https://arxiv.org/abs/1505.00853
-https://www.sec.in.tum.de/assets/Uploads/ecai2.pdf
-http://yann.lecun.com/exdb/mnist/
-https://arxiv.org/abs/1611.03530
-http://papers.nips.cc/paper/6340-doubly-convolutional-neural-networks.pdf
-http://papers.nips.cc/paper/6340-doubly-convolutional-neural-networks.pdf
-
-
 [ZDGD14] N. Zhang, J. Donahue et al., “Part-based R-CNNs for fine-grained category
 detection,” in European Conference on Computer Vision (ECCV). Springer,
 Jul. 2014, pp. 834–849. [Online]. Available: https://arxiv.org/abs/1407.3867
@@ -5742,24 +5500,6 @@ arXiv preprint arXiv:1506.02351, Jun. 2015. [Online]. Available: https:
 units,” in International Joint Conference on Neural Networks (IJCNN), Jul.
 2015, pp. 1–4.
 
-118
-
-https://arxiv.org/abs/1407.3867
-https://arxiv.org/abs/1212.5701v1
-https://arxiv.org/abs/1212.5701v1
-https://arxiv.org/abs/1301.3557v1
-https://arxiv.org/abs/1311.2901
-http://places2.csail.mit.edu/download.html
-http://places2.csail.mit.edu/download.html
-https://arxiv.org/abs/1605.07146
-https://arxiv.org/abs/1605.07146
-https://arxiv.org/abs/1512.04150
-https://arxiv.org/abs/1610.02055
-https://arxiv.org/abs/1611.01578
-https://arxiv.org/abs/1506.02351v1
-https://arxiv.org/abs/1506.02351v1
-
-
 I. Glossary
 
 ANN artificial neural network. 4
@@ -5801,9 +5541,6 @@ NEAT NeuroEvolution of Augmenting Topologies. 83
 
 OBD Optimal Brain Damage. 29
 
-119
-
-
 
 PCA principal component analysis. 79
 
@@ -5814,5 +5551,3 @@ ReLU rectified linear unit. 5, 13, 60, 61, 63, 64, 72, 77, 78, 84
 SGD stochastic gradient descent. 5, 30, 45, 46, 82
 
 ZCA Zero Components Analysis. 79
-
-120
