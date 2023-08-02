@@ -1,4 +1,4 @@
-1
+
 A Survey of Semantic Segmentation
 Martin Thoma
 info@martin-thoma.de
@@ -93,7 +93,7 @@ work being done on single class affiliation segmentation
 class affiliation segmentation [ LRAL08 ]. Similarly,
 recent publications in pixel-level object segmentation
 used layered models [YHRF12].arXiv:1602.06541v2  [cs.CV]  11 May 2016
-2
+
 C. Input Data
 The available data which can be used for the
 inference of a segmentation varies by application.
@@ -187,7 +187,7 @@ than30%with a priori knowledge only possible.
 For example, a system might learn that a certain
 position of the image is most of the time “sky”
 while another position is most of the time “road”.
-3
+
 P2The manually labeled images could have a more
 coarse labeling. For example, a human classifier
 could have labeled a region as “car” and the
@@ -300,7 +300,7 @@ Once every year from 2005 to 2012 [ EVGW+b].
 1pattern analysis, statistical modelling and comput ational learning,
 an EU network of excellence
 2Visual Object Classes
-4
+
 Beginning with 2007, a segmentation challenge was
 added [EVGW+a].
 The dataset consists of annotated photographs from
@@ -397,7 +397,7 @@ However, there are alternatives. Namely MRFs and
 Conditional Random Fields (CRFs) which take the
 information of the complete image and segment it in
 an holistic approach.
-5
+
 V. T RADITIONAL APPROACHES
 Image segmentation algorithms which use traditional
 approaches, hence don’t apply neural networks and
@@ -501,7 +501,7 @@ image to a low-resolution variant. Another way of
 doing dimensionality reduction is principal component
 analysis (PCA), which is applied by [ COWR11 ]. The
 idea behind PCA is to find a hyperplane on which all
-6
+
 feature vectors can be projected with a minimal loss
 of information. A detailed description of PCA is given
 by [Smi02].
@@ -603,7 +603,7 @@ segment white blood cells. As the authors describe,
 the segmentation by watershed transform has two
 flaws: Over-segmentation due to local minima and thick
 watersheds due to plateaus.
-7
+
 C. Random Decision Forests
 Random Decision Forests were first proposed
 in [Ho95 ]. This type of classifier applies techniques
@@ -710,7 +710,7 @@ s.t.∀m
 i=10≤αi≤C
 s.t.m∑
 i=1αiyi= 0
-8
+
 4)Not every dataset is linearly separable. This problem
  is approached by transforming the feature
 vectors xwith a non-linear mapping Φinto
@@ -804,7 +804,7 @@ cliques of size two x,y= (x1,x2)is [KP06]
 According to [ Mur12 ], the most common way of
 inference over the posterior MRF in computer vision
 problems is Maximum A Posteriori (MAP) estimation.
-9
+
 Detailed introductions to MRFs are given by
 [BKR11 ], [Mur12 ]. MRFs are used by [ ZBS01 ] and
 [MSB12] for image segmentation.
@@ -903,7 +903,7 @@ Since AlexNet was developed, a lot of different
 neural networks have been proposed. One interesting
 example is [ PC13 ], where a recurrent CNN for semantic
 segmentation is presented.
-10
+
 Another notable paper is [ LSD14 ]. The algorithm
 presented there makes use of a classifying network such
 as AlexNet, but applies the complete network as an
@@ -982,7 +982,7 @@ example, an image captioning system which was trained
 on photographs of professional photographers might
 not have photos from the point of view of a child. This
 is visualized in Figure 4(f).
-11
+
 VIII. D ISCUSSION
 Ohta et al. wrote [ OKS78 ] 38 years ago. It is one
 of the first papers mentioning semantic segmentation.
@@ -1074,7 +1074,7 @@ segmentation via adaptive k-mean clustering and
 knowledge-based morphological operations with
 biomedical applications,” Image Processing, IEEE
 Transactions on , vol. 7, no. 12, pp. 1673–1683, Dec.
-12
+
 1998. [Online]. Available: http://ieeexplore .ieee .org/
 xpls/abs_all .jsp?arnumber=730379
 [CM02] D. Comaniciu and P. Meer, “Mean shift: A
@@ -1211,7 +1211,7 @@ sensing , vol. 23, no. 4, pp. 725–749, 2002.
 [HHR01] S. Hu, E. Hoffman, and J. Reinhardt, “Automatic
 lung segmentation for accurate quantitation of
 volumetric x-ray ct images,” Medical Imaging, IEEE
-13
+
 Transactions on , vol. 20, no. 6, pp. 490–498, Jun.
 2001.
 [HJBJ+96] A. Hoover, G. Jean-Baptiste, X. Jiang, P. J.
@@ -1349,7 +1349,7 @@ Learning , vol. 3, no. 4, pp. 319–342, 1989.
 3A1022645801436
 [MSB12] G. Moser, S. B. Serpico, and J. A. Benediktsson,
 “Markov random field models for supervised land
-14
+
 cover classification from very high resolution
 multispectral remote sensing images,” in Advances
 in Radar and Remote Sensing (TyWRRS), 2012
@@ -1487,7 +1487,7 @@ Springer, 2006, pp. 1–15. [Online]. Available: http:
 [TNL14] J. Tighe, M. Niethammer, and S. Lazebnik,
 “Scene parsing with object instances and
 occlusion ordering,” in Computer Vision and
-15
+
 Pattern Recognition (CVPR), 2014 IEEE
 Conference on . IEEE, 2014, pp. 3748–3755.
 [Online]. Available: http://ieeexplore .ieee .org/xpls/
@@ -1564,7 +1564,7 @@ PCA principal component analysis. 5
 RBF radial basis function. 8
 SIFT scale-invariant feature transform. 5
 SVM Support Vector Machine. 4, 6–8
-16
+
 APPENDIX A
 TABLES
 Database Image Resolution (width ×height)Number

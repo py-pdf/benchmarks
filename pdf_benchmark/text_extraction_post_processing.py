@@ -1,11 +1,8 @@
-def postprocess(extracted_texts: list[str]) -> str:
+def postprocess(extracted_texts: list[str], page_labels: list[str]) -> str:
     """Pass a list of all extracted texts from all pages."""
     extracted_texts = [replace_ligatures(t) for t in extracted_texts]
     extracted_texts = [remove_hyphens(t) for t in extracted_texts]
-    # footer_remover = FooterRemover()
-    # footer_remover.fit(extracted_texts)
-    # extracted_texts = [footer_remover.extract(t) for t in extracted_texts]
-
+    extracted_texts = remove_footer(extracted_texts, page_labels)
     return "\n".join(extracted_texts)
 
 
@@ -52,32 +49,20 @@ def dehyphenate(lines: list[str], line_no: int) -> list[str]:
     return lines
 
 
-class FooterRemover:
-    def __init__(self):
-        self.footer = None
+def remove_footer(extracted_texts: list[str], page_labels: list[str]):
+    def remove_page_labels(extracted_texts, page_labels):
+        processed = []
+        for text, label in zip(extracted_texts, page_labels):
+            text_left = text.lstrip()
+            if text_left.startswith(label):
+                text = text_left[len(label) :]
 
-    def fit(self, extracted_texts: list[str]) -> None:
-        """
-        Find the common footer by comparing all extracted texts
-        and finding the common suffix.
-        We assume that the footer appears at the end of each text.
-        """
-        common_suffix = None
-        for text in extracted_texts:
-            if common_suffix is None:
-                common_suffix = text
-            else:
-                i = 1
-                while i <= min(len(common_suffix), len(text)):
-                    if common_suffix[-i:] != text[-i:]:
-                        break
-                    i += 1
-                common_suffix = common_suffix[-(i - 1) :]
+            text_right = text.rstrip()
+            if text_right.endswith(label):
+                text = text_right[: -len(label)]
 
-        self.footer = common_suffix
+            processed.append(text)
+        return processed
 
-    def extract(self, extracted_text: str) -> str:
-        """Remove the detected footer from the extracted text."""
-        if self.footer is not None and extracted_text.endswith(self.footer):
-            return extracted_text[: -len(self.footer)]
-        return extracted_text
+    extracted_texts = remove_page_labels(extracted_texts, page_labels)
+    return extracted_texts

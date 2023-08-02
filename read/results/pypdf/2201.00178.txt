@@ -44,7 +44,7 @@ et al. 2021). Local mode-coupling analysis in the Cartesian approximation, formu
 validated by Hanson et al. (2021) (hereafter H21) by examining the power-spectrum of supergranular waves and
 comparing with previous time-distance studies (Langfellner et al. 2018).
 prasad.subramanian@tifr.res.inarXiv:2201.00178v1  [astro-ph.SR]  1 Jan 2022
-2 Mani et al.
+ Mani et al.
 Normal-mode coupling refers to the concept of expressing solar-oscillation eigenfunctions as a linear weighted combination
  of model-eigenfunctions (e.g., Model S Christensen-Dalsgaard 2021). The model eigenfunctions form a complete
 and orthogonal basis. By design, the model Sun is spherically symmetric, adiabatic, free from rotation, magnetism and
@@ -166,7 +166,7 @@ random process and the wavefields are uncorrelated across wavenumber and frequen
 Every independent realization of a mode can be understood as the output of a damped harmonic oscillator driven by a
 random forcing function (see Duvall & Harvey 1986). Modes are thus generated with random phases and amplitudes
 and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
-4 Mani et al.
+ Mani et al.
 Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p 1(orange) and p 2(green). The shaded
 regions of the same colours indicate 1-linewidth Γ about the mode frequency. The yellow shaded region indicates the range of
 kR⊙andω/2πto which we have restricted ourselves in this analysis. Beyond kR⊙of 2000, it is seen that the theoretical fitting
@@ -251,7 +251,7 @@ Normalizing both sides of eq 10 by the noise covariance Λ(a diagonal matrix wit
 M×M) and pre-multiplying by K⊺,
 (K⊺Λ−1K)U=(K⊺Λ−1)B, (11)
 U=(K⊺Λ−1K)−1K⊺Λ−1B. (12)
-6 Mani et al.
+ Mani et al.
 Figure 2. Left: Averaging kernel for poloidal flow (see section B.2, eq B17, and left panel of Figure 8) for qR⊙= [−112,−45],
 at the depth zo=−0.41 Mm. Right : L-curve for the mode qR⊙= [−112,−45]; the knee ( λ= 2.48) is marked by a blue
 diamond.
@@ -319,7 +319,7 @@ We seek to show comparisons (see Figures 5, 6, and 7) for qR⊙= 100, 150, 200 a
 flows at these length scales, we apply a Gaussian filter (see Figure 4) to flows obtained from eqns 16 and 17. The
 Gaussian is centered at the desired wavenumber with a half-width of 25. We then perform a 2D Fourier transform to
 obtain a real-space steady-flow map.
-8 Mani et al.
+ Mani et al.
 Figure 4. Left: Divergence-flow power spectrum |div|2, from eqn 16, obtained from inversion using all the couplings. The
 power-spectrum is then filtered with a bandpass centered around qR⊙= 150 (middle panel). The resulting spectra is shown in
 the right panel. The units of |div|2are in s−2. For illustration, we show the action of the filter on the power-spectrum |div|2
@@ -382,7 +382,7 @@ Thus, the amplitudes of the mode-coupling flows (and the correlation coefficient
 Here, we report in Table 2 only the maximum correlation found from among the points in the radial grid close
 to the surface (within ±0.5 Mm from z=0). For a desired comparison length scale qR⊙, we first fix the coupling(s)
 and the regularization parameter to be used in the inversion. We then separately compute filtered divergence and
-10 Mani et al.
+ Mani et al.
 (a)qR⊙= 100 ,f-f
  (b)qR⊙= 150 ,p1-p1
 Figure 6. Real-space divergence flows (left column, in units of 10−5s−1) and radial vorticity (right column, in units of 10−6s−1)
@@ -460,7 +460,7 @@ jq−k·(q×ez)fjTσ
 jq+q2fjPσ
 jq∂z}
 . (A3)
-12 Mani et al.
+ Mani et al.
 Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
 ξk≡ξnk(z) =iˆkHnk(z)ez+ ˆzVnk(z), (A4)
 whereHandVare real-valued functions; nandn′are dropped for compactness of notation. Then the coupling of
@@ -605,7 +605,7 @@ where we introduce the averaging kernel for mode qthus
 kαk,zoKk,q(z). (B17)
 As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
 and B14.
-14 Mani et al.
+ Mani et al.
 Figure 8. Left: KernelKk,q(z) (eq B14) shown vs depth zfor the three radial order couplings f-f, p 1-p1, and p 2-p2.qR⊙=
 [−112,−45] and kR⊙= [−853,−157] is chosen for all the radial order couplings for comparison. Right : Averaging kernel
 (eq B17) using SOLA, for qR⊙= [−112,−45] at depth z0=−0.48 Mm, and the corresponding target Gaussian (eq B15).
@@ -703,7 +703,7 @@ Hanson, C. S., Hanasoge, S., & Sreenivasan, K. R. 2021,
 ApJ, 910, 156, doi: 10.3847/1538-4357/abe770
 Hathaway, D. H., Teil, T., Norton, A. A., & Kitiashvili, I.
 2015, ApJ, 811, 105, doi: 10.1088/0004-637X/811/2/105
-16 Mani et al.
+ Mani et al.
 Hathaway, D. H., Upton, L., & Colegrove, O. 2013, Science,
 342, 1217, doi: 10.1126/science.1244682
 Hill, F. 1988, ApJ, 333, 996, doi: 10.1086/166807

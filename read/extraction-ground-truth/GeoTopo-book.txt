@@ -159,8 +159,8 @@ Beobachtungen:
 
 4 1.1. TOPOLOGISCHE RÄUME
 
-5) X := Rn,TZ = {U ⊆ Rn|Es gibt Polynome f1, . . . , fr ∈ R[X1, . . . , Xn] sodass
-Rn \ U = V (f1, . . . , fr)}
+5) X := Rn,TZ = {U ⊆ Rn|Es gibt Polynome f1, ... , fr ∈ R[X1, ... , Xn] sodass
+Rn \ U = V (f1, ... , fr)}
 6) X := { 0, 1 } ,T = { ∅, { 0, 1 } , { 0 } } heißt Sierpińskiraum.
 ∅, { 0, 1 } , { 1 } sind dort alle abgeschlossenen Mengen.
 
@@ -223,7 +223,7 @@ B = {Br(x) | r ∈ Q>0, x ∈ Qn }
 
 ist eine abzählbare Basis von T.
 
-3) Sei (X,T) ein topologischer RaummitX = { 0, 1, 2 } und T = { ∅, { 0 } , { 0, 1 } , { 0, 2 } , X }.
+3) Sei (X,T) ein topologischer RaummitX = { 0, 1, 2 } und T = { ∅, ... , { 0, 1 } , { 0, 2 } , X }.
 Dann ist S = { ∅, { 0, 1 } , { 0, 2 } } eine Subbasis von T, da gilt:
 
 
@@ -256,20 +256,7 @@ i = 1, 2 gibt, sodass U1 × U2 ⊆ U gilt.
 T = { U ⊆ X1 ×X2 | U offen } ist eine Topologie auf X1×X2. Sie heißt Produkttopologie.
 B = { U1 × U2 | Ui offen in Xi, i = 1, 2 } ist eine Basis von T.
 
-U
-
-x
-x2
-
-x1
-
-U2
-
-U1
-
-X1
-
-X2
+[IMAGE]
 
 Abbildung 1.1: Zu x = (x1, x2) gibt es Umgebungen U1, U2 mit U1 × U2 ⊆ U
 
@@ -370,13 +357,7 @@ Beispiel 10
 X = R2 und d ((x1, y1), (x2, y2)) := max(‖x1 − x2‖, ‖y1 − y2‖) ist Metrik.
 Beobachtung: d erzeugt die euklidische Topologie.
 
-Br(0) =
-
-r r
-
-r
-
-r
+[IMAGE]
 
 (a) Br(0) (b) Euklidische Topologie
 
@@ -438,14 +419,7 @@ x 6= y. Da (xn) gegen x und y konvergiert, existiert ein n0 mit xn ∈ Ux ∩ Uy
 
 10 1.3. STETIGKEIT
 
-(x1, y1) (x2, y2)
-
-x1 x2
-U1 ×X2 U2 ×X2
-
-X1
-
-X2
+[IMAGE]
 
 Abbildung 1.4: Wenn X1, X2 hausdorffsch sind, dann auch X1 ×X2
 
@@ -500,12 +474,7 @@ Raum Y und jede Abbildung f .
 
 4) Sei X = [0, 1), Y = S1 = { z ∈ C | ‖z‖ = 1 } und f(t) = e2πit.
 
-R0 1
-0
-
-f
-
-g
+[IMAGE]
 
 Abbildung 1.5: Beispiel einer stetigen Funktion f , deren Umkehrabbildung g nicht stetig ist.
 
@@ -649,19 +618,7 @@ der Teilraumtopologie zusammenhängend ist.
 
 13 1.4. ZUSAMMENHANG
 
-x
-
-y
-
-z
-
-N
-
-P̂
-
-0
-
-P
+[IMAGE]
 
 Abbildung 1.6: Visualisierung der stereographischen Projektion
 
@@ -842,10 +799,10 @@ Dann gibt es n0, sodass gilt: 1/n0 < ε/2 und für unendlich viele3 n ≥ n0 : |
 In ⊆ (x− ε, x+ ε) ⊆ Ui für mindestens ein n ∈ N.4
 
 ⇒ Widerspruch
-Dann überdecke [0, 1] mit endlich vielen Intervallen I1, . . . , Id der Länge δ. Jedes Ij ist in
+Dann überdecke [0, 1] mit endlich vielen Intervallen I1, ... , Id der Länge δ. Jedes Ij ist in
 Uij enthalten.
 
-⇒ Uj1 , . . . , Ujd ist endliche Teilüberdeckung von U . ■
+⇒ Uj1 , ... , Ujd ist endliche Teilüberdeckung von U . ■
 Beispiel 16 (Kompakte Räume)
 
 1) R ist nicht kompakt.
@@ -872,7 +829,7 @@ Ui
 
 ⇒ U = { Ui | i ∈ I } ∪ {X \A } ist offene Überdeckung von X
 X kompakt
-=======⇒ es gibt i1, . . . , in ∈ I, sodass
+=======⇒ es gibt i1, ... , in ∈ I, sodass
 
 n⋃
 j=1
@@ -902,7 +859,7 @@ j=1
 
 = A
 
-⇒ Vi1 , . . . , Vin überdecken A.
+⇒ Vi1 , ... , Vin überdecken A.
 
 ■
 
@@ -920,25 +877,12 @@ offene Teilmengen Ux,y von X und Vx,y von Y sowie ein i ∈ I, sodass Ux,y × Vx
 
 17 1.5. KOMPAKTHEIT
 
-Wi
-
-x
-y
-
-x
-
-Vx,y
-
-Ux,y
-
-Y
-
-X
+[IMAGE]
 
 Abbildung 1.7: Die blaue Umgebung ist Schnitt vieler Umgebungen
 
 Die offenen Mengen Ux0,y × Vx0,y für festes x0 und alle y ∈ Y überdecken { x0 } × y. Da Y
-kompakt ist, ist auch { x0 } × Y kompakt. Also gibt es y1, . . . , ym(x0) mit
+kompakt ist, ist auch { x0 } × Y kompakt. Also gibt es y1, ... , ym(x0) mit
 
 ⋃m(x0)
 i=1 Ux0,yi ×
@@ -947,7 +891,7 @@ Vx0,yi ⊇ { x0 } × Y .
 
 Sei Ux0 :=
 ⋂m(x)
-i=1 Ux0,yi . Da X kompakt ist, gibt es x1, . . . , xn ∈ X mit
+i=1 Ux0,yi . Da X kompakt ist, gibt es x1, ... , xn ∈ X mit
 
 ⋃n
 j=1 Uxj = X
@@ -990,7 +934,7 @@ x
 
 y
 
-Da K kompakt ist, gibt es endlich viele x1, . . . , xn ∈ K, sodass
+Da K kompakt ist, gibt es endlich viele x1, ... , xn ∈ K, sodass
 ⋃m
 i=1 Uxi ⊇ K.
 
@@ -1004,17 +948,7 @@ Vxi
 
 18 1.6. WEGE UND KNOTEN
 
-⇒ V ∩
-(
-
-n⋃
-i=1
-
-Uxi
-
-)
-= ∅
-
+⇒ V ∩(n⋃i=1Uxi)= ∅
 ⇒ V ∩K = ∅
 ⇒ V ist Überdeckung von y, die ganz in X \K enthalten ist.
 ⇒ X \K ist offen
@@ -1029,8 +963,8 @@ Beweis: Sei (Vi)i∈I offene Überdeckung von f(K)
 f stetig
 ====⇒ (f−1(Vi))i∈I ist offene Überdeckung von K
 Kompakt
-=====⇒ es gibt i1, . . . , in, sodass f−1(Vi1), . . . , f−1(Vin) Überdeckung von K ist.
-⇒ f(f−1(Vi1)), . . . , f(f−1(Vin)) überdecken f(K).
+=====⇒ es gibt i1, ... , in, sodass f−1(Vi1), ... , f−1(Vin) Überdeckung von K ist.
+⇒ f(f−1(Vi1)), ... , f(f−1(Vin)) überdecken f(K).
 Es gilt: f(f−1(V )) = V ∩ f(X) ■
 
 Satz 1.1 (Heine-Borel)
@@ -1049,7 +983,7 @@ n mal
 
 mit A ⊆W bzw. „Polyzylinder“
 
-Z = { (z1, . . . , zn) ∈ Cn | zi ≤ N für i = 1, . . . , n }
+Z = { (z1, ... , zn) ∈ Cn | zi ≤ N für i = 1, ... , n }
 
 Nach Bemerkung 20 und Bemerkung 18 ist W kompakt, also ist A nach Bemerkung 19 auch
 kompakt. Genauso ist Z kompakt, weil
@@ -1258,7 +1192,7 @@ Abbildung 1.13: Ein 3-gefärber Kleeblattknoten
 
 Aufgabe 1 (Sierpińskiraum)
 
-Es sei X := { 0, 1 } und TX := { ∅, { 0 } , X }. Dies ist der sogenannte Sierpińskiraum.
+Es sei X := { 0, 1 } und TX := { ∅, ... , X }. Dies ist der sogenannte Sierpińskiraum.
 (a) Beweisen Sie, dass (X,TX) ein topologischer Raum ist.
 
 (b) Ist (X,TX) hausdorffsch?
@@ -1362,7 +1296,7 @@ von der Gebietstreue“ (Brouwer):
 Ist U ⊆ Rn offen und f : U → Rn stetig und injektiv, so ist f(U) offen.
 Ist n < m und Rm homöomorph zu Rn, so wäre
 
-f : Rn → Rm → Rn, (x1, . . . , xn) 7→ (x1, x2, . . . , xn, 0, . . . , 0)
+f : Rn → Rm → Rn, (x1, ... , xn) 7→ (x1, x2, ... , xn, 0, ... , 0)
 
 eine stetige injektive Abbildung. Also müsste f(Rn) offen sein ⇒ Widerspruch
 
@@ -1377,12 +1311,12 @@ Atlas aus einer Karte.
 
 2) Cn ist eine 2n-dimensionale Mannigfaltigkeit mit einem Atlas aus einer Karte:
 
-(z1, . . . , zn) 7→ (<(z1),=(z1), . . . ,<(zn),=(zn))
+(z1, ... , zn) 7→ (<(z1),=(z1), ... ,<(zn),=(zn))
 
 3) Pn(R) = (Rn+1 \ { 0 })/∼ = Sn/∼ und Pn(C) sind Mannigfaltigkeiten der Dimension
 n bzw. 2n, da gilt:
 
-Sei Ui := { (x0 : · · · : xn) ∈ Pn(R) | xi 6= 0 } ∀i ∈ 0, . . . , n. Dann ist Pn(R) =
+Sei Ui := { (x0 : · · · : xn) ∈ Pn(R) | xi 6= 0 } ∀i ∈ 0, ... , n. Dann ist Pn(R) =
 ⋃n
 i=0 Ui
 
@@ -1391,23 +1325,23 @@ und die Abbildung
 Ui → Rn
 
 (x0 : · · · : xn) 7→
-(x0 xi, . . . ,
+(x0 xi, ... ,
 
 �
 ��
 xi
 xi
-, . . . ,
+, ... ,
 
 xn
 xi
 
 )
-(y1 : · · · : yi−1 : 1 : yi : · · · : yn) 7→(y1, . . . , yn)
+(y1 : · · · : yi−1 : 1 : yi : · · · : yn) 7→(y1, ... , yn)
 
 ist bijektiv.
 
-Die Ui mit i = 0, . . . , n bilden einen n-dimensionalen Atlas:
+Die Ui mit i = 0, ... , n bilden einen n-dimensionalen Atlas:
 
 x = (1 : 0 : 0) ∈ U0 → R2 x 7→ (0, 0)
 y = (0 : 1 : 1) ∈ U2 → R2 y 7→ (0, 1)
@@ -1431,18 +1365,18 @@ x ∈ Rn+1
 
 ∣∣ ‖x‖ = 1 } ist n-dimensionale Mannigfaltigkeit.
 Karten:
-Di := {(x1, . . . , xn+1) ∈ Sn|xi > 0} → B1(0, . . . , 0︸ ︷︷ ︸
+Di := {(x1, ... , xn+1) ∈ Sn|xi > 0} → B1(0, ... , 0︸ ︷︷ ︸
 
 ∈Rn
 
 )
 
-Ci := {(x1, . . . , xn+1) ∈ Sn|xi < 0} → B1(0, . . . , 0)
-(x1, . . . , xn+1) 7→ (x1, . . . ,��xi, . . . , xn+1)1
-(x1, . . . , xn) 7→ (x1, . . . , xi−1,
+Ci := {(x1, ... , xn+1) ∈ Sn|xi < 0} → B1(0, ... , 0)
+(x1, ... , xn+1) 7→ (x1, ... ,��xi, ... , xn+1)1
+(x1, ... , xn) 7→ (x1, ... , xi−1,
 
 √
-1−∑nk=1 x2k, xi, . . . , xn), oder −√1−∑nk=1 x2k für Ci
+1−∑nk=1 x2k, xi, ... , xn), oder −√1−∑nk=1 x2k für Ci
 
 Sn =
 ⋃n+1
@@ -1547,8 +1481,8 @@ a) Sei y ∈ Rn \ V (F ). Weil F stetig ist, gibt es δ > 0, sodass F (Bδ(y)) �
 b) Sei x ∈ X mit grad(F )(x) 6= 0, also o. B. d. A. ∂F
 ∂X1
 
-(x) 6= 0, x = (x1, . . . , xn),
-x′ := (x2, . . . , xn) ∈ Rn−1. Der Satz von der impliziten Funktion liefert nun: Es
+(x) 6= 0, x = (x1, ... , xn),
+x′ := (x2, ... , xn) ∈ Rn−1. Der Satz von der impliziten Funktion liefert nun: Es
 gibt Umgebungen U von x′ und differenzierbare Funktionen g : U → R, sodass
 G : U → Rn, u 7→ (g(u), u) eine stetige Abbildung auf eine offene Umgebung V von x
 in X ist.
@@ -1562,66 +1496,11 @@ Sn ist n-dimensionale Mannigfaltigkeit in Rn+1
 
 2) F : R2 → R, (x, y) 7→ y2−x3 Es gilt: grad(F ) = (−3x2, 2y). Also: grad(0, 0) = (0, 0).
 
-−5−4−3−2−1
-0
-
-1
-2
-
-3
-4
-
-5
-
-−4
-
-−2
-
-0
-
-2
-
-4
-
-−100
-
-0
-
-100
-
-x
-
-y
-
-z
-
-−100
-
-0
-
-100
-
-f(x, y)
+[IMAGE]
 
 (a) F (x, y) = y2 − x3
 
-2 4 6 8 10 12
-
-−10
-
-−5
-
-5
-
-10
-
-x
-
-y
-
-a = 13
-a = 1
-a = 2
+[IMAGE]
 
 (b) y2 − ax3 = 0
 
@@ -1639,7 +1518,7 @@ Sei X ein Hausdorffraum mit abzählbarer Basis der Topologie. X heißt n-dimensi
 Mannigfaltigkeit mit Rand, wenn es einen Atlas (Ui, ϕi) gibt, wobei Ui ⊆ Xi offen und
 ϕi ein Homöomorphismus auf eine offene Teilmenge von
 
-Rn+,0 := { (x1, . . . , xn) ∈ Rn | xn ≥ 0 }
+Rn+,0 := { (x1, ... , xn) ∈ Rn | xn ≥ 0 }
 
 ist.
 
@@ -1647,15 +1526,15 @@ Rn+,0 ist ein „Halbraum“.
 
 Hinweis: Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 
-∼=
+[IMAGE]
 
 (a) Halbraum
 
-∼=
+[IMAGE]
 
 (b) Pair of pants
 
-∼=
+[IMAGE]
 
 (c) Sphäre mit einem Loch
 
@@ -1836,58 +1715,17 @@ cos2(v) + sin2(v)
 
 32 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
-N
-
-S
-
-vu
+[IMAGE]
 
 (a) Kugelkoordinaten
 
-−1
-0
-
-1
-2−2 −1
-
-0
-1
-
-2
-
-0.6
-
-0.8
-
-1
+[IMAGE]
 
 (b) Rotationskörper
 
-π
-2
-
-π 3π
-2
-
-2π
-
-−1
-
-−0.5
-
-0.5
-
-1
-
-x
-
-y
-
-sinx
-cosx
+[IMAGE]
 
 (c) Sinus und Kosinus haben keine gemeinsame Nullstelle
-
 
 
 33 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
@@ -1916,15 +1754,7 @@ regulären Flächen folgt direkt, dass Karten (Ui, Fi) und (Uj ⊆ R2, Fj : R2 �
 Ui ∩ Uj 6= ∅ existieren, wobei Fi und Fj nach Definition differenzierbare Abbildungen sind.
 z.Z.: F−1j ◦ Fi ist ein Diffeomorphismus.
 
-Ui Uj
-
-S
-
-s
-
-Fi Fj
-
-F−1j ◦Fi
+[IMAGE]
 
 Abbildung 2.5: Reguläre Fläche S zum Beweis von Bemerkung 31
 
@@ -2070,32 +1900,32 @@ ein Diffeomorphismus.
 2.3 Simplizialkomplex
 
 Definition 34
-Seien v0, . . . , vk ∈ Rn Punkte.
+Seien v0, ... , vk ∈ Rn Punkte.
 
-a) v0, . . . , vk sind in allgemeiner Lage
-⇔ es gibt keinen (k−1)-dimensionalen affinen Untervektorraum, der v0, . . . , vk enthält
-⇔ v1 − v0, . . . , vk − v0 sind linear unabhängig.
+a) v0, ... , vk sind in allgemeiner Lage
+⇔ es gibt keinen (k−1)-dimensionalen affinen Untervektorraum, der v0, ... , vk enthält
+⇔ v1 − v0, ... , vk − v0 sind linear unabhängig.
 
-b) conv(v0, . . . , vk) :=
+b) conv(v0, ... , vk) :=
 {∑k
 
 i=0 λivi
 
 ∣∣∣ λi ≥ 0,∑ki=0 λi = 1 } heißt die konvexe Hülle von
-v0, . . . , vk.
+v0, ... , vk.
 
 Definition 35
-a) Sei ∆n = conv(e0, . . . , en) ⊆ Rn+1 die konvexe Hülle der Standard-Basisvektoren
+a) Sei ∆n = conv(e0, ... , en) ⊆ Rn+1 die konvexe Hülle der Standard-Basisvektoren
 
-e0, . . . , en.
+e0, ... , en.
 
 Dann heißt ∆n Standard-Simplex und n die Dimension des Simplex.
 
-b) Für Punkte v0, . . . , vk im Rn in allgemeiner Lage heißt ∆(v0, . . . , vk) = conv(v0, . . . , vk)
+b) Für Punkte v0, ... , vk im Rn in allgemeiner Lage heißt ∆(v0, ... , vk) = conv(v0, ... , vk)
 ein k-Simplex in Rn.
 
-c) Ist ∆(v0, . . . , vk) ein k-Simplex und I = { i0, . . . , ir } ⊆ { 0, . . . , k }, so ist si0,...,ir :=
-conv(vi0 , . . . , vir) ein r-Simplex und heißt Teilsimplex oder Seite von ∆.
+c) Ist ∆(v0, ... , vk) ein k-Simplex und I = { i0, ... , ir } ⊆ { 0, ... , k }, so ist si0,...,ir :=
+conv(vi0 , ... , vir) ein r-Simplex und heißt Teilsimplex oder Seite von ∆.
 
 (a) 0-Simplex ∆0
 
@@ -2309,8 +2139,8 @@ Bemerkung 33
 
 38 2.3. SIMPLIZIALKOMPLEX
 
-Beweis: ∆n ist die konvexe Hülle von (e0, . . . , en) in Rn+1. Jede (k + 1)-elementige Teilmenge
-von { e0, . . . , en } definiert ein k-Simplex.
+Beweis: ∆n ist die konvexe Hülle von (e0, ... , en) in Rn+1. Jede (k + 1)-elementige Teilmenge
+von { e0, ... , en } definiert ein k-Simplex.
 ⇒ ak(∆n) =
 
 (
@@ -2318,7 +2148,7 @@ n+1
 k+1
 
 )
-, k = 0, . . . , n
+, k = 0, ... , n
 
 ⇒ χ(∆n) = ∑nk=0(−1)k(n+1k+1)
 f(x) = (x+ 1)n+1
@@ -2479,7 +2309,7 @@ Sei K ein endlicher Simplizialkomplex mit Knotenmenge V und < eine Totalordnung 
 
 Sei An die Menge der n-Simplizes in K, d. h.
 
-An(K) := { σ ∈ K | dim(σ) = n } für n = 0, . . . , d = dim(K)
+An(K) := { σ ∈ K | dim(σ) = n } für n = 0, ... , d = dim(K)
 
 und Cn(K) der R-Vektorraum mit Basis An(K), d. h.
 
@@ -2496,8 +2326,8 @@ cσ · σ
 
 
 
-Sei σ = ∆(x0, . . . , xn) ∈ An(K), sodass x0 < x1 < · · · < xn.
-Für i = 0, . . . , n sei ∂iσ := ∆(x0, . . . , x̂i, . . . , xn) die i-te Seite von σ und dσ = dnσ :=∑
+Sei σ = ∆(x0, ... , xn) ∈ An(K), sodass x0 < x1 < · · · < xn.
+Für i = 0, ... , n sei ∂iσ := ∆(x0, ... , x̂i, ... , xn) die i-te Seite von σ und dσ = dnσ :=∑
 
 i=0(−1)i∂iσ ∈ Cn−1(K) und dn : Cn(K) → Cn−1(K) die dadurch definierte lineare
 Abbildung.
@@ -3097,7 +2927,7 @@ U oder ganz in V verlaufen.
 52 3.3. ÜBERLAGERUNGEN
 
 Beweis: Sei γ : I → X ein geschlossener Weg um x. Überdecke I mit endlich vielen offenen
-Intervallen I1, I2, . . . , In, die ganz in γ−1(U) oder ganz in γ−1(V ) liegen.
+Intervallen I1, I2, ... , In, die ganz in γ−1(U) oder ganz in γ−1(V ) liegen.
 
 O. B. d. A. sei γ(I1) ⊆ U, γ(I2) ⊆ V , etc.
 Wähle ti ∈ Ii ∩ Ii+1, also γ(ti) ∈ U ∩ V . Sei σi Weg in U ∩ V von x0 nach γ(ti) ⇒ γ ist
@@ -3500,10 +3330,10 @@ a) Sei γ̃ ein Weg in Y um y0 und p∗([γ̃]) = e, also p ◦ γ̃ ∼ γx0
 Nach Proposition 3.3 ist dann γ̃ homotop zum Lift des konstanten Wegs γx0 mit
 Anfangspunkt y0, also zu γy0 ⇒ [γ̃] = e
 
-b) Sei d = deg p und p−1(x0) = { y0, y1, . . . , yd−1 }. Für einen geschlossenen Weg γ in X
+b) Sei d = deg p und p−1(x0) = { y0, y1, ... , yd−1 }. Für einen geschlossenen Weg γ in X
 um x0 sei γ̃ die Liftung mit γ̃(0) = y0.
 
-γ̃(1) ∈ { y0, . . . , yd−1 } hängt nur von [γ] ∈ π1(X,x0) ab.
+γ̃(1) ∈ { y0, ... , yd−1 } hängt nur von [γ] ∈ π1(X,x0) ab.
 Für geschlossene Wege γ0, γ1 um x gilt:
 
 γ̃0(1) = γ̃1(1)
@@ -3516,9 +3346,9 @@ Für geschlossene Wege γ0, γ1 um x gilt:
 
 58 3.3. ÜBERLAGERUNGEN
 
-Zu i ∈ { 0, . . . , d− 1 } gibt es Weg δi in Y mit δi(0) = y0 und δi(1) = yi
+Zu i ∈ { 0, ... , d− 1 } gibt es Weg δi in Y mit δi(0) = y0 und δi(1) = yi
 ⇒ p ∪ δi ist geschlossener Weg in X um x0.
-⇒ Jedes yi mit i = 0, . . . , d− 1 ist γ̃(1) für ein [γ] ∈ π1(X,x0).
+⇒ Jedes yi mit i = 0, ... , d− 1 ist γ̃(1) für ein [γ] ∈ π1(X,x0).
 
 Bemerkung 56
 Sei p : Y → X Überlagerung und X einfach zusammenhängend.
@@ -3672,9 +3502,9 @@ Für z ∈ W ist f(z) ∈ V und p(f(z)) = p(z). Da p injektiv auf V ist, folgt f
 d. h. Fix(f) 6= ∅.
 Da Y zusammenhängend ist, folgt aus Fix(f̃) 6= ∅ schon Fix(f) = Y , also f = idY .
 
-c) Es sei x0 ∈ X, deg(p) = d und p−1(x0) = { y0, . . . , yd−1 }. Für f ∈ Deck(Y/X) ist
-f(y0) = { y0, . . . , yd−1 }.
-Zu i ∈ { 0, . . . , d− 1 } gibt es höchstens ein f ∈ Deck(Y/X) mit f(y0) = y1, denn ist
+c) Es sei x0 ∈ X, deg(p) = d und p−1(x0) = { y0, ... , yd−1 }. Für f ∈ Deck(Y/X) ist
+f(y0) = { y0, ... , yd−1 }.
+Zu i ∈ { 0, ... , d− 1 } gibt es höchstens ein f ∈ Deck(Y/X) mit f(y0) = y1, denn ist
 f(y0) = g(y0), so ist (g−1 ◦ f)(y0) = y0, also nach Bemerkung 57.c g−1 ◦ f = idY .
 
 d) Wenn jemand den Beweis macht, bitte an info@martin-thoma.de schicken.
@@ -4359,15 +4189,7 @@ d(P, P ′) = d(P,Q) abbildet und die Halbebenen bzgl. f erhält.
 
 73 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
-Q
-
-h
-
-f
-
-g
-
-P
+[IMAGE]
 
 Abbildung 4.8: Situation aus Proposition 4.3
 
@@ -5409,17 +5231,17 @@ z3−z2
 (z1 − z4) · (z3 − z2)
 (z1 − z2) · (z3 − z4)
 
-Doppelverhältnis von z1, . . . , z4.
+Doppelverhältnis von z1, ... , z4.
 
 Bemerkung 70 (Eigenschaften des Doppelverhältnisses)
-a) DV(z1, . . . , z4) ∈ C \ { 0, 1 }
+a) DV(z1, ... , z4) ∈ C \ { 0, 1 }
 b) DV(z1, z4, z3, z2) = 1DV(z1,z2,z3,z4)
 
 c) DV(z3, z2, z1, z4) = 1DV(z1,z2,z3,z4)
 
 d) DV ist auch wohldefiniert, wenn eines der zi =∞ oder wenn zwei der zi gleich sind.
 e) DV(0, 1,∞, z4) = z4 (Der Fall z4 ∈ { 0, 1,∞} ist zugelassen).
-f) Für σ ∈ PSL2(C) und z1, . . . , z4 ∈ C ∪ {∞ } ist
+f) Für σ ∈ PSL2(C) und z1, ... , z4 ∈ C ∪ {∞ } ist
 
 DV(σ(z1), σ(z2), σ(z3), σ(z4)) = DV(z1, z2, z3, z4)
 
@@ -5429,14 +5251,14 @@ gilt
 
 DV(σ(z1), σ(z2), σ(z3), σ(z4)) = DV(z1, z2, z3, z4)
 
-g) DV(z1, z2, z3, z4) ∈ R ∪ {∞ } ⇔ z1, . . . , z4 liegen auf einer hyperbolischen Geraden.
+g) DV(z1, z2, z3, z4) ∈ R ∪ {∞ } ⇔ z1, ... , z4 liegen auf einer hyperbolischen Geraden.
 
 Beweis:
 
-a) DV(z1, . . . , z4) 6= 0, da zi paarweise verschieden
-DV(z1, . . . , z4) 6= 1, da:
+a) DV(z1, ... , z4) 6= 0, da zi paarweise verschieden
+DV(z1, ... , z4) 6= 1, da:
 
-Annahme: DV(z1, . . . , z4) = 1
+Annahme: DV(z1, ... , z4) = 1
 
 ⇔ (z1 − z2)(z3 − z4) = (z1 − z4)(z3 − z2)
 
@@ -5470,13 +5292,13 @@ DV(z1,z2,z3,z4)
 d) Zwei der zi dürfen gleich sein, da:
 
 Fall 1 z1 = z4 oder z3 = z2
-In diesem Fall ist DV(z1, . . . , z4) = 0
+In diesem Fall ist DV(z1, ... , z4) = 0
 
 Fall 2 z1 = z2 oder z3 = z4
-Mit der Regel von L’Hospital folgt, dass in diesem Fall DV(z1, . . . , z4) =∞ gilt.
+Mit der Regel von L’Hospital folgt, dass in diesem Fall DV(z1, ... , z4) =∞ gilt.
 
 Fall 3 z1 = z3 oder z2 = z4
-Durch Einsetzen ergibt sich DV(z1, . . . , z4) = 1.
+Durch Einsetzen ergibt sich DV(z1, ... , z4) = 1.
 
 Im Fall, dass ein zi =∞ ist, ist entweder DV(0, 1,∞, z4) = 0 oder DV(0, 1,∞, z4)±∞
 
@@ -5489,8 +5311,8 @@ f) Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
 g) Sei σ ∈ PSL2(C) mit σ(z1) = 0, σ(z2) = 1, σ(z3) =∞. Ein solches σ existiert, da man
 drei Parameter von σ wählen darf.
 
-Bem. 70.f⇒ DV(z1, . . . , z4) = DV(0, 1,∞, σ(z4))
-⇒ DV(z1, . . . , z4) ∈ R ∪ {∞ }
+Bem. 70.f⇒ DV(z1, ... , z4) = DV(0, 1,∞, σ(z4))
+⇒ DV(z1, ... , z4) ∈ R ∪ {∞ }
 ⇔ σ(z4) ∈ R ∪ {∞ }
 Behauptung folgt, weil σ−1(R ∪∞) ein Kreis oder eine Gerade in C ist.
 
@@ -5648,7 +5470,7 @@ a) Die Kurve γ heißt durch Bogenlänge parametrisiert, wenn gilt:
 
 ‖γ′(t)‖2 = 1 ∀t ∈ I
 
-Dabei ist γ′(t) = (γ′1(t), γ′2(t), . . . , γ′n(t)).
+Dabei ist γ′(t) = (γ′1(t), γ′2(t), ... , γ′n(t)).
 
 b) l(γ) =
 ∫ b
@@ -6865,7 +6687,7 @@ Am = diagn(m,
 1
 
 m
-, . . . , 1)
+, ... , 1)
 
 Dann gilt: detAm = 1, d. h. Am ∈ SLn(R), und Am ist unbeschränkt, da ‖Am‖∞ =
 m −−−−→
@@ -7365,7 +7187,7 @@ R = Q ∪
 
 Reele Zahlen
 R+ Echt positive reele Zahlen
-Rn+,0 := { (x1, . . . , xn) ∈ Rn | xn ≥ 0 } Halbraum
+Rn+,0 := { (x1, ... , xn) ∈ Rn | xn ≥ 0 } Halbraum
 R× = R \ { 0 } Einheitengruppe von R
 C = { a+ ib | a, b ∈ R } Komplexe Zahlen
 P = { 2, 3, 5, 7, . . . } Primzahlen

@@ -28,7 +28,7 @@ def pypdf_get_text(data: bytes) -> str:
     reader = pypdf.PdfReader(BytesIO(data))
     for page in reader.pages:
         texts.append(page.extract_text())
-    text = postprocess(texts)
+    text = postprocess(texts, reader.page_labels)
     return text
 
 
