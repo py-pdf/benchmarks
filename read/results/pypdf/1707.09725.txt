@@ -246,8 +246,7 @@ ix=1−⌈kw
 iy=1−⌈kh
 2⌉d∑
 ic=1I(x+ix,y+iy,ic)·F(ix,iy,ic)
-This procedure is explained by Figure 2.1. It is essentially a discrete convolution.
-I∈R7×7
+This procedure is explained by Figure 2.1. It is essentially a discrete convolution.I∈R7×7
 Filter kernel
 F∈R3×3Result of point-wise
 multiplicationI′∈R7×7
@@ -362,9 +361,7 @@ See Figure 2.2 for a visualization of the application of a convolutional layer.
 3feature maps
 (e.g. RGB)nfeature mapsnfilters of
 sizek×k×3
-widthw
-widthwheighth
-heighthneural
+widthwwidthw heighth heighthneural
 network
 dataapply
 ...
@@ -1333,8 +1330,7 @@ Table 5.1.: Baseline architecture with 3 input channels of size 32×32. All conv
 useSAMEpadding, except for layer 11 which used VALIDpadding in order to decrease
 the feature map size to 1×1. If the input feature map is bigger than 32×32, for
 each power of two there are two Convolution + BN + ELU blocks and one Max pooling
-block added. This is the framed part in the table.
-32×32Input
+block added. This is the framed part in the table.32×32Input
 C32@3×3/1
 BN + ELU
 C32@3×3/1
@@ -1466,7 +1462,7 @@ is reversed. For the baseline model, 21.8 changes in the relative order of accur
 in average for each pair of epochs (i,i+ 1). This means if one knows only the relative order
 of the validation accuracy of two models mandm′in epochi, it is doubtful if one can
 make any statement about the ordering of mandm′in epochi+ 1.
-010 20 30 40 50 60 70 80 90100 110 120 130 1400.20.30.40.50.60.7
+01020304050607080901001101201301400.20.30.40.50.60.7
 epochvalidation accuracy
 maximum validation accuracy
 minimum validation accuracy1.5
@@ -1475,8 +1471,7 @@ minimum validation accuracy1.5
 3
 3.5
 4
-4.5
-loss
+4.5loss
 maximum validation accuracy
 minimum validation accuracy
 mean loss
@@ -2120,8 +2115,7 @@ the feature map size to 1×1. If the input feature map is bigger than 32×32, fo
 power of two there are two Convolution + BN + ELU blocks and one Max pooling
 block added. This is the framed part in the table.
 
-5.15. Optimized Classifier
-32×32Input
+5.15. Optimized Classifier32×32Input
 C69@3×3/1
 BN + ELU
 C69@3×3/1
@@ -2794,8 +2788,7 @@ AtrainedVGG-16DforTensorflowcanbedownloadedat https://github .com/machrisaa/
 tensorflow-vgg . Note that the uncompressed size is at least 138 357 544 floats ·32bit
 float≈
 520 MB. The downloaded Numpy binary file npzneeds 553 MBwithout compression and
-514 MBwith compression.
-224×224Input
+514 MBwith compression.224×224Input
 C64@3×3/1
 C64@3×3/1112×112max pooling 2×2/1
 C128@3×3/1

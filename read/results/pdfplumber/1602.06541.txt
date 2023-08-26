@@ -14,7 +14,7 @@ classified.
 and SVMs are described and pointers to the relevant
 papers are given. Recently published approaches with This survey describes fixed-class (see Section II-A),
 convolutionalneuralnetworksarementionedandtypical single-class affiliation (see Section II-B) algorithms
-6102 problematic situations for segmentation algorithms are whichworkongrayscaleorcoloredsinglepixelimages
+problematic situations for segmentation algorithms are whichworkongrayscaleorcoloredsinglepixelimages 6102
 examined. A taxonomy of segmentation algorithms is
 (see Section II-C) in a completely automated, passive
 given.
@@ -23,7 +23,7 @@ yaM
 I. INTRODUCTION
 Semantic segmentation is the task of clustering A. Allowed classes
 parts of images together which belong to the same
-11 object class. This type of algorithm has several use- Semantic segmentation is a classification task. As
+Semantic segmentation is a classification task. As object class. This type of algorithm has several use- 11
 cases such as detecting road signs [MBLAGJ+07], such, the classes on which the algorithm is trained is a
 central design decision.
 detecting tumors [MBVLG02], detecting medical in-

@@ -477,12 +477,12 @@ servations.
 a
 304
 211
-cescracescracescra
+cescra
 311 b
 118
 276.1
 Loop C2
-25 241.2 Loop C1 Loop B2
+25 241.2 Loop C1 Loop B2 cescra
 Loop B1 Loop A
 206.3
 −68
@@ -496,8 +496,9 @@ a
 −110
 −162
 b
-cescra nonf−LoopB
+nonf−LoopB cescra
 −264 −221
+cescra
 −280
 −418
 −338 nonf−LoopC nonf−LoopA
@@ -509,19 +510,19 @@ viewofthearea,markedbyaboxintheleft,theloopsaredistinguishedinred.
 F−LoopA
 6.8
 6.6
-TgoLTgoLTgoLTgoLTgoL 6.4
+6.4 TgoL
 6.2
 6
 5.8
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
@@ -530,13 +531,13 @@ time
 F−LoopB1
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
@@ -552,7 +553,7 @@ F−loopA
 )mM(htgneL
 6.4
 21
-pooL)mM(htgneL 6.2
+6.2 pooL
 11 6
 5.8
 20
@@ -567,7 +568,7 @@ F−loopB1
 )mM(htgneL
 6.3
 10 6.25
-pooL)mM(htgneL 6.2
+6.2 pooL
 6.15
 5
 6.1
@@ -579,9 +580,10 @@ F−loopB2
 16
 6.8
 12 6.6
+)mM(htgneL
 6.4
 8
-pooL)mM(htgneL 6.2
+6.2 pooL
 4 6
 5.8
 20
@@ -591,6 +593,7 @@ F−loopC1
 22
 6.8
 17 6.6
+)mM(htgneL
 6.4
 11
 6.2
@@ -605,9 +608,10 @@ F−loopC2
 11
 6.8
 8 6.6
+)mM(htgneL
 6.4
 6
-pooL 6.2
+6.2 pooL
 3 6
 5.8
 20
@@ -706,7 +710,7 @@ Int−Fe−LoopA
 )mM(htgneL
 0.12
 22 0.1
-pooLIIIVX 0.08
+0.08 pooL
 0.06
 11
 0.04
@@ -718,11 +722,12 @@ Int−Fe−LoopA
 1
 0.9
 0.8
+IIIVX
 0.7
 eF
-ytisnetnI 0.6
+0.6 ytisnetnI
 0.5
-dezilamroN 0.4
+0.4 dezilamroN
 0.3
 0.2
 0.1
@@ -741,13 +746,13 @@ work.
 NonF−LoopA
 6.8
 6.6
-TgoLTgoLTgoLTgoL 6.4
+6.4 TgoL
 6.2
 6
 5.8
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
@@ -756,13 +761,13 @@ time
 NonF−LoopB
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
 6.8
 6.6
-6.4
+6.4 TgoL
 6.2
 6
 5.8
@@ -777,7 +782,7 @@ NonF−loopA
 )mM(htgneL
 6.4
 10
-pooL)mM(htgneL 6.2
+6.2 pooL
 5 6
 5.8
 0
@@ -787,9 +792,10 @@ NonF−loopB
 18
 6.8
 14 6.6
+)mM(htgneL
 6.4
 9
-pooL)mM(htgneL 6.2
+6.2 pooL
 5 6
 5.8
 0
@@ -799,9 +805,10 @@ NonF−loopC
 10
 6.8
 8 6.6
+)mM(htgneL
 6.4
 5
-pooL 6.2
+6.2 pooL
 3 6
 5.8
 0
@@ -812,10 +819,10 @@ isthedistancealongtheloopinMm,andthehorizontalaxisisthetime. Thecolor-barinthele
 colorsconsideredforthetemperaturerange.
 0.4
 0.35
-sdoireP 0.3
-.pmeT 0.25
-fo 0.2
-egatnecrePrebmuN
+0.3 sdoireP
+0.25 .pmeT
+0.2 fo
+egatnecreP
 0.15
 0.1
 0.05
@@ -827,6 +834,7 @@ flaring(redbars)ARs. Thehorizontalaxisshowsthetemperatureperiodsinminute.
 12
 10
 8
+rebmuN
 6
 4
 2

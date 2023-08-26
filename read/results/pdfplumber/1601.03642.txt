@@ -23,14 +23,14 @@ This paper gives a high level overview of how they are created tionϕisapplied.
 and gives some examples. It is meant to be a summary of the
 current work and give people who are new to machine learning Fig. 1: Neural networks are based on simple units which get
 some starting points. combined to complex networks.
-6102 I. INTRODUCTION This means that machine learning programs adjust internal
+I. INTRODUCTION This means that machine learning programs adjust internal 6102
 parameters to fit the data they are given. Those computer
 According to [Gad06] creativity is “the ability to use your programs are still developed by software developers, but the
 imagination to produce new ideas, make things etc.” and developer writes them in a way which makes it possible to
-naJ imagination is “the ability to form pictures or ideas in your adjust them without having to re-program everything. Machine
+imagination is “the ability to form pictures or ideas in your adjust them without having to re-program everything. Machine naJ
 mind”. learning programs should generally improve when they are fed
 with more data.
-21 Recentadvancesinmachinelearningproduceresultswhichthe
+Recentadvancesinmachinelearningproduceresultswhichthe 21
 author would intuitively call creative. A high-level overview The field of machine learning is related to statistics. Some
 over several of those algorithms are described in the following. algorithms directly try to find models which are based on well-
 ]VC.sc[
@@ -41,7 +41,7 @@ reader on a very simple and superficial level to machine
 learning, Section III gives examples of creativity with images, A common misunderstanding of people who are not related
 Section IV gives examples of machines producing textual in this field is that the developers don’t understand what their
 content, and Section V gives examples of machine learning machine learning program is doing. It is understood very well
-1v24630.1061:viXra and music. A discussion follows in Section VI. in the sense that the developer, given only a pen, lots of paper
+and music. A discussion follows in Section VI. in the sense that the developer, given only a pen, lots of paper 1v24630.1061:viXra
 and a calculator could calculate the same result as the machine
 doeswhenhegetsthesamedata.Andlotsoftime,ofcourse.It
 II. BASICSOFMACHINELEARNING

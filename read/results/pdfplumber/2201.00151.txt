@@ -9,7 +9,7 @@ January4,2022
 2202
 ABSTRACT
 Dwarfspheroidal(dSph)galaxiesarebelievedtobestronglydarkmatterdominatedandthusareconsideredperfectobjectstostudy
-naJ darkmatterdistributionandtesttheoriesof structureformation. Theypossessresolved, multiplestellarpopulations thatoffer new
+darkmatterdistributionandtesttheoriesof structureformation. Theypossessresolved, multiplestellarpopulations thatoffer new naJ
 possibilitiesfor modeling. A promising tool for the dynamical modeling of these objects isthe Schwarzschild orbit superposition
 method.Inthisworkweextendourpreviousimplementationoftheschemetoincludemorethanonepopulationofstarsandamore
 generalformofthemass-to-lightratiofunction.Wetestedtheimprovedapproachonanearlyspherical,gas-freegalaxyformedin
@@ -72,11 +72,11 @@ A&Aproofs:manuscriptno.Populations4
 Table1.PropertiesoftheIllustrisgalaxyusedtocreatemockdata.
 Property Value 16
 SubhaloID 16960
-]ry
+]
 1-
-Numberofstellarparticles(N ⋆) 70446 12
+Numberofstellarparticles(N ⋆) 70446 12 ry
 Numberofdarkmatterparticles(N ) 78448
-DM ⊙]ryG[
+DM ⊙
 Stellarmass(M ⋆) 5.74×1010M⊙ M[
 8
 Darkmattermass(M DM) 4.91×1011M⊙
@@ -104,10 +104,11 @@ the nonsphericityof themodeledobjects.Later,we appliedthe
 8
 methodtomodelthekinematicsoftheFornaxdSphgalaxyesti-
 matingitsmassandanisotropyprofileswithunprecedentedpre- 4
-cision. 6 2]01[
+cision. 6 ]ryG[ 2 ]
+01[
 In this paper we extend our Schwarzschild modeling tech-
 nique to include multiple stellar populations with the aim to 4 N
-constrain the properties of dSph galaxies even more strongly. t 2
+constrain the properties of dSph galaxies even more strongly. 2 t
 We test our approachon a realistic simulated galaxyformedin
 2
 the cosmological context, originating from the Illustris project
@@ -152,21 +153,23 @@ PPPOOOPPPUUULLLAAATTTIIIOOONNN III PPPPPPPPPPPPPPPOOOOOOOOOOOOOOOPPPPPPPPPPPPPPP
 major intermediate minor major intermediate minor
 80 80
 7.7 7.7
-40 7.1 ]2cpk/⊙M[ 40 7.1 ]2cpk/⊙M[
-]cpk[]cpk[]cpk[)r(β)r(β 6.5 ]cpk[]cpk[]cpk[)r(σ)r(σ 6.5
+40 7.1 40 7.1 ]2cpk/⊙M[ ]2cpk/⊙M[
+6.5 6.5 ]cpk[ ]cpk[
 0 0
-5.9 )Σ(gol 5.9 )Σ(gol
+5.9 5.9 )Σ(gol )Σ(gol
 -40 -40
 5.3 5.3
 -80 160 -80 160
 40 80 40 80
 ]s/mk[ ]s/mk[
+]cpk[ ]cpk[
 0 0 0 0
 V V
 -40 -80 -40 -80
 -80 -160 -80 -160
 40 90 40 90
 ]s/mk[ ]s/mk[
+]cpk[ ]cpk[
 0 60 0 60
 σ σ
 -40 30 -40 30
@@ -178,17 +181,18 @@ richpopulationI(left-handsidepanels)andthemetal-poorpopulationII(right-handside)
 forallstars(incolumns,alongthemajor,theintermediate,andtheminoraxis,respectively).
 1 120 120
 0.5 100 100
-)r(σ)r(σ
+)r(β )r(σ )r(σ
 0 80 80
-rr tt
+r t
 -0.5 60 60
 -1 40 40
 1 10 100 1 10 100 1 10 100
 r [kpc] r [kpc] r [kpc]
 1 120 120
 0.5 100 100
+)r(β )r(σ )r(σ
 0 80 80
-all stars
+all stars r t
 pop I
 -0.5 60 60
 pop II
@@ -213,9 +217,9 @@ A&Aproofs:manuscriptno.Populations4
 major intermediate minor
 3
 10
-]cpk[
-2- 1
-10
+]
+1 2-
+10 cpk[
 )R(⋆n
 -1
 10 all stars
@@ -296,41 +300,44 @@ major intermediate minor
 10
 -1
 10
-)R(M]
+)R(M
 -2
 10
 -3
 10
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
 R [kpc] R [kpc] R [kpc]
-12
-2)
-1-s
-9
-mk(
-301[)R(m 6
+12 ]2
+)1-
+9 s
+mk(3
+6
+01[)R(
 3
-24
+2
+m
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
 R [kpc] R [kpc] R [kpc]
-31-4 ])s 10
-5
-mk(01[)R(3
-0
--5
--10
-m]
-0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
-R [kpc] R [kpc] R [kpc]
-4
-4)
-1-s all stars
-3 pop I
+10 31- ]
+)
+5 s
 mk(
+0 4
+01[)R(
+-5
+-10 3m
+0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
+R [kpc] R [kpc] R [kpc]
+4 ]4
+all stars )1-
+3 pop I s
+mk(8
 pop II
-801[)R(m 2
+2
+01[)R(
 1
-0
+4
+0 m
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
 R [kpc] R [kpc] R [kpc]
 Fig.6.ObservablesusedinourSchwarzschildmodelingschemeofthesimulatedgalaxy.Inrows:thefractionofthetotalnumberofstars,2nd,
@@ -364,7 +371,7 @@ ALL POPULATIONS
 3 3
 100
 c 2 c 2
-2χ2χ
+2χ
 1 1
 1 3 1 3
 2 2
@@ -376,6 +383,7 @@ POP I POP II
 3 3
 100
 c 2 c 2
+2χ
 1 1
 1 3 1 3
 2 2
@@ -418,27 +426,31 @@ K.Kowalczyk&E.L.Łokas:MultiplestellarpopulationsinSchwarzschildmodeling
 AAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLLLL PPPPPPPPPPPPOOOOOOOOOOOOPPPPPPPPPPPPUUUUUUUUUUUULLLLLLLLLLLLAAAAAAAAAAAATTTTTTTTTTTTIIIIIIIIIIIIOOOOOOOOOOOONNNNNNNNNNNNSSSSSSSSSSSS
 major intermediate minor major intermediate minor
 1010 1010
-]⊙L/⊙M[ 109 3σ 2 1σ ]⊙L/⊙M[ 109 3σ 2 1σ
+3σ 3σ 109 2 1σ 109 2 1σ ]⊙L/⊙M[ ]⊙L/⊙M[
 σ σ
 108 best model 108 best model
 data data
-)r(Υ]3-cpk 107 )r(Υ]3-cpk 107
+107 107 )r(Υ )r(Υ
 106 106
 10 100 10 100 10 100 10 100 10 100 10 100
 r [kpc] r [kpc] r [kpc] r [kpc] r [kpc] r [kpc]
+]3-cpk ]3-cpk
 108 108
-⊙M[ 106 ⊙M[ 106
-)r(tot )r(tot
+106 106 ⊙M[ ⊙M[
+)r( )r(
 104 104
-ν]⊙M[ 10 100 10 100 10 100 ν]⊙M[ 10 100 10 100 10 100
+totν totν
+10 100 10 100 10 100 10 100 10 100 10 100
 r [kpc] r [kpc] r [kpc] r [kpc] r [kpc] r [kpc]
-1012 1012
-)r(tot 1011 )r(tot 1011
-M)r(β 1010 M)r(β 1010
+1012 1012 ]⊙M[ ]⊙M[
+1011 1011 )r( )r(
+totM totM
+1010 1010
 10 100 10 100 10 100 10 100 10 100 10 100
 r [kpc] r [kpc] r [kpc] r [kpc] r [kpc] r [kpc]
 1 1
 0 0
+)r(β )r(β
 -1 -1
 -2 -2
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50
@@ -493,22 +505,24 @@ sightmeasurements. ingfromthemajortotheminoraxis.
 Articlenumber,page7of12
 A&Aproofs:manuscriptno.Populations4
 major intermediate minor
-II 1
+1 II
 POP
-)r(β)r(β)r(βN 0
+0 )r(β
 +
 I
-POPI
+POP
 -1
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50 60 70 80
 r [kpc] r [kpc] r [kpc]
 1
-POPII 0
+I
+0 POP )r(β
 -1
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50 60 70 80
 r [kpc] r [kpc] r [kpc]
 1
-POP 0
+II
+0 POP )r(β
 -1
 0 10 20 30 40 0 10 20 30 40 0 10 20 30 40 50 60 70 80
 r [kpc] r [kpc] r [kpc]
@@ -532,7 +546,7 @@ galaxy obtained by delPinoetal. (2015) and delPinoetal.
 there. Moreover,we refer the reader to these previouspublica-
 tions for details on the origin of data and our procedures used
 60
-forcleaningthespectroscopicsample.
+forcleaningthespectroscopicsample. N
 Similarly to the approachintroducedin Section 2.2, we di- 40
 videdallavailablestarsintotwoequal-sizepopulationsbasedon
 their metallicity and then cross-correlatedthe sampleswith the 20
@@ -559,7 +573,7 @@ all stars
 0.2
 Property ALL POPI POPII
 pop I
-Numberofstars(N phot) 65797 14882 49205 )R(M] 0.15
+Numberofstars(N phot) 65797 14882 49205 0.15 )R(M
 Numberofstars(N ) 3286 1136 1151 pop II
 spec
 0.1
@@ -572,14 +586,14 @@ Sérsicparameter(m) 0.808 0.807 0.898
 R [kpc]
 5
 10
-200
-2)
-2- ]cpk[ 104 1-s 160
-mk([)R(2 120
-)R(n⋆ 80
+200 ]2
+104 160 2- ] )1-
+cpk[ s
+120 mk([)R(
+80 )R(
 3 all stars
-10 40
-popI m]
+10 40 ⋆ 2m
+popI n
 0
 popII
 0 0.4 0.8 1.2 1.6
@@ -587,36 +601,34 @@ popII
 10 R [kpc]
 0.1 0.2 0.5 1 2
 R [kpc]
-3)
-16
-1-s
-Fig.11.Surfacenumberdensityprofilesofthephotometricdatasam-
-mk( 8
+]3
+16 )1-
+Fig.11.Surfacenumberdensityprofilesofthephotometricdatasam- s
+8 mk(2
 plesfortheFornaxdSph:allavailablestars(inred),themetal-richpop-
 ulationI (inorange), andthemetal-poor population II(inblue). Thin 0
-201[)R(3
-verticallinesindicater (seetext)andtheouterboundaryofthespec-
+verticallinesindicater (seetext)andtheouterboundaryofthespec- 01[)R(
 0
 troscopicdata. -8
 -16
-m]
+3m
 0 0.4 0.8 1.2 1.6
 Sérsicformula(Sérsic1968).Theprofilesofnumberdensityfor
 R [kpc]
 allstarsandbothpopulationstogetherwiththebest-fittingSérsic
 profilesare presentedin Fig.11. The colorsfollow the conven-
-tionintroducedinprevioussections.Thinverticallinesindicate 16
-4)
-the innermost data point for the light profile for all stars and 1-s
-the outerboundaryof the kinematic sample. The former,set at 12
-mk(
+tionintroducedinprevioussections.Thinverticallinesindicate 16 ]4
+the innermost data point for the light profile for all stars and )1-
+the outerboundaryof the kinematic sample. The former,set at 12 s
+mk(4
 logr = −0.16,isalsousedastheminimumofthemass-to-light
-ratio profile (r 0 in Eq.5). The fitted parameters of the profiles, 401[)R(m4 8
+ratio profile (r in Eq.5). The fitted parameters of the profiles, 8
+0 01[)R(
 thatisthenormalizationN ,theSérsicradiusR ,andtheSérsic
 0 S
 parameterm,areincludedinthesecondpartofTable2. 4
-Figure12presentstheprofilesoftheobservablesusedinthe
-0
+Figure12presentstheprofilesoftheobservablesusedinthe 4
+0 m
 Schwarzschildmodeling:thefractionofstarsandthe 2nd,3rd,
 0 0.4 0.8 1.2 1.6
 and4thvelocitymoments(toptobottom)forthethreedatasam-
@@ -717,35 +729,38 @@ ALL POPULATIONS
 105
 II
 3σ
-]⊙L/⊙M[ 2σ POP 0
+2σ 0 ]⊙L/⊙M[ POP
 1σ
-103 )r(β)r(β)r(β
+103 )r(β
 best model +
-K19 I -1
-)r(Υ]3-cpk POPI
+K19 -1 I
+)r(Υ POP
 101
 -2
 0 0.4 0.8 1.2 1.6
 0.1 1 0.1 1
 r [kpc] r [kpc] r [kpc]
 1
+]3-cpk
 108
 0
-⊙M[ POPII
+I
+⊙M[ POP )r(β
 106
 -1
-)r(tot
-ν]⊙M[ 104
+)r(
+totν
+104
 -2
 0.1 1 0.1 1
 r [kpc] r [kpc] 0 0.4 0.8 1.2 1.6
 r [kpc]
 1
 109
-0
-)r(tot 107
-POP
-M)r(β -1
+]⊙M[
+0 II
+107 )r( totM POP )r(β
+-1
 105
 0.1 1 0.1 1
 r [kpc] r [kpc] -2
@@ -753,7 +768,7 @@ r [kpc] r [kpc] -2
 1
 r [kpc]
 0
--1 best model 3σ
+-1 best model 3σ )r(β
 1σ K19
 -2 2σ
 -3
