@@ -11,6 +11,7 @@ import pypdfium2 as pdfium
 from borb.pdf.pdf import PDF
 from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from pdfminer.high_level import extract_pages
+from requests import ReadTimeout
 
 from .text_extraction_post_processing import postprocess
 
@@ -170,7 +171,10 @@ def pdftotext_get_text(data: bytes) -> str:
     new_file, filename = tempfile.mkstemp()
     with open(filename, "wb") as fp:
         fp.write(data)
-    args = ["/usr/bin/pdftotext", "-enc", "UTF-8", filename, "-"]
+    pdf_to_text_path = "/usr/bin/pdftotext"
+    if not os.path.exists(pdf_to_text_path):
+        pdf_to_text_path = 'pdftotext'
+    args = [pdf_to_text_path, "-enc", "UTF-8", filename, "-"]
     res = subprocess.run(args, capture_output=True)
     output = res.stdout.decode("utf-8")
     os.close(new_file)
@@ -191,3 +195,15 @@ def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
 
     out_buffer.seek(0)
     return out_buffer.read()
+
+
+def tika_get_text(data: bytes) -> str:
+    from tika import parser
+
+    try:
+        return parser.from_buffer(BytesIO(data), requestOptions={"timeout": (1, 100)})[
+            "content"
+        ]
+    except ReadTimeout as ex:
+        print("Tika timeout:", ex)
+        return "[[[Tika text extraction failed!]]]"
