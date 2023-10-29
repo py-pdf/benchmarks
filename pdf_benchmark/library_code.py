@@ -13,7 +13,7 @@ from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from pdfminer.high_level import extract_pages
 from requests import ReadTimeout
 
-from .text_extraction_post_processing import postprocess
+from .text_extraction_post_processing import postprocess, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -33,13 +33,23 @@ def pypdf_get_text(data: bytes) -> str:
     return text
 
 
+def pdfium_new_line_after_hyphens(text):
+    return text.replace(PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE + '\n')
+
+
 def pdfium_get_text(data: bytes) -> str:
-    text = ""
+    texts = []
+    page_labels = []
     pdf = pdfium.PdfDocument(data)
+
     for i in range(len(pdf)):
+        if not (label := pdf.get_page_label(i)):
+            label = str(i + 1)
+        page_labels.append(label)
         page = pdf.get_page(i)
         textpage = page.get_textpage()
-        text += textpage.get_text_range() + "\n"
+        texts.append(pdfium_new_line_after_hyphens(textpage.get_text_range()))
+    text = postprocess(texts, page_labels)
     return text
 
 
@@ -88,7 +98,7 @@ def pymupdf_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
                 image_bytes = base_image["image"]
                 image_ext = base_image["ext"]
                 images.append(
-                    (f"image{page_index+1}_{image_index}.{image_ext}", image_bytes)
+                    (f"image{page_index + 1}_{image_index}.{image_ext}", image_bytes)
                 )
     return images
 
