@@ -53,6 +53,24 @@ def pdfium_get_text(data: bytes) -> str:
     return text
 
 
+def pdfium_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
+    images = []
+    try:
+        pdf = pdfium.PdfDocument(data)
+        for i in range(len(pdf)):
+            page = pdf.get_page(i)
+            index = 1
+            for obj in page.get_objects():
+                if isinstance(obj, pdfium.PdfImage):
+                    img = BytesIO()
+                    obj.extract(img)
+                    images.append((f"page-{i+1}-image-{index}.jpg", img.getvalue()))
+                    index += 1
+    except Exception as exc:
+        print(f"pdfium Image extraction failure: {exc}")
+    return images
+
+
 def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     watermark_pdf = pypdf.PdfReader(BytesIO(watermark_data))
     watermark_page = watermark_pdf.pages[0]
