@@ -35,7 +35,7 @@ from pdf_benchmark.library_code import (
     pymupdf_watermarking,
     pypdf_get_text,
     pypdf_image_extraction,
-    pypdf_watermarking, tika_get_text,
+    pypdf_watermarking, tika_get_text, pdfium_image_extraction,
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
@@ -235,6 +235,7 @@ if __name__ == "__main__":
             text_extraction_function=pdfium_get_text,
             version=pypdfium2.V_PYPDFIUM2,
             watermarking_function=None,
+            image_extraction_function=pdfium_image_extraction,
             license="Apache-2.0 or BSD-3-Clause",
             last_release_date="2023-07-04",
             dependencies="PDFium (Foxit/Google)",

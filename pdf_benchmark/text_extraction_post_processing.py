@@ -1,3 +1,5 @@
+PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE = "\ufffe"
+
 def postprocess(extracted_texts: list[str], page_labels: list[str]) -> str:
     """Pass a list of all extracted texts from all pages."""
     extracted_texts = [replace_ligatures(t) for t in extracted_texts]
@@ -30,7 +32,7 @@ def remove_hyphens(text: str) -> str:
     # Find dashes
     line_numbers = []
     for line_no, line in enumerate(lines[:-1]):
-        if line.endswith("-"):
+        if line.endswith("-") or line.endswith(PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE):
             line_numbers.append(line_no)
 
     # Replace
