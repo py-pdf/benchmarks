@@ -7,6 +7,7 @@ import os
 import time
 from io import BytesIO
 from itertools import product
+from json import JSONDecodeError
 from pathlib import Path
 from typing import Literal
 
@@ -34,7 +35,7 @@ from pdf_benchmark.library_code import (
     pymupdf_watermarking,
     pypdf_get_text,
     pypdf_image_extraction,
-    pypdf_watermarking,
+    pypdf_watermarking, tika_get_text, pdfium_image_extraction,
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
@@ -48,8 +49,11 @@ def main(
 ) -> None:
     cache_path = Path("cache.json")
     if cache_path.exists():
-        with open(cache_path) as f:
-            cache = Cache.parse_obj(json.load(f))
+        try:
+            with open(cache_path) as f:
+                cache = Cache.model_validate(json.load(f))
+        except JSONDecodeError:
+            cache = Cache()
     else:
         cache = Cache()
     names = sorted(list(libraries.keys()))
@@ -154,9 +158,7 @@ if __name__ == "__main__":
             "Tika",
             "tika",
             "https://pypi.org/project/tika/",
-            text_extraction_function=lambda n: parser.from_buffer(BytesIO(n))[
-                "content"
-            ],
+            text_extraction_function=tika_get_text,
             version=tika.__version__,
             dependencies="Apache Tika",
             license="Apache v2",
@@ -233,6 +235,7 @@ if __name__ == "__main__":
             text_extraction_function=pdfium_get_text,
             version=pypdfium2.V_PYPDFIUM2,
             watermarking_function=None,
+            image_extraction_function=pdfium_image_extraction,
             license="Apache-2.0 or BSD-3-Clause",
             last_release_date="2023-07-04",
             dependencies="PDFium (Foxit/Google)",

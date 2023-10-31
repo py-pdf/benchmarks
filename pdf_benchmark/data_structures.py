@@ -88,4 +88,4 @@ class Cache(BaseModel):
 
     def write(self, path: Path):
         with open(path, "w") as f:
-            f.write(self.json(indent=4, sort_keys=True))
+            f.write(self.model_dump_json(indent=4))

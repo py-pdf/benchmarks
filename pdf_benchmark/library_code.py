@@ -11,8 +11,9 @@ import pypdfium2 as pdfium
 from borb.pdf.pdf import PDF
 from borb.toolkit.text.simple_text_extraction import SimpleTextExtraction
 from pdfminer.high_level import extract_pages
+from requests import ReadTimeout
 
-from .text_extraction_post_processing import postprocess
+from .text_extraction_post_processing import postprocess, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -32,14 +33,42 @@ def pypdf_get_text(data: bytes) -> str:
     return text
 
 
+def pdfium_new_line_after_hyphens(text):
+    return text.replace(PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE + '\n')
+
+
 def pdfium_get_text(data: bytes) -> str:
-    text = ""
+    texts = []
+    page_labels = []
     pdf = pdfium.PdfDocument(data)
+
     for i in range(len(pdf)):
+        if not (label := pdf.get_page_label(i)):
+            label = str(i + 1)
+        page_labels.append(label)
         page = pdf.get_page(i)
         textpage = page.get_textpage()
-        text += textpage.get_text_range() + "\n"
+        texts.append(pdfium_new_line_after_hyphens(textpage.get_text_range()))
+    text = postprocess(texts, page_labels)
     return text
+
+
+def pdfium_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
+    images = []
+    try:
+        pdf = pdfium.PdfDocument(data)
+        for i in range(len(pdf)):
+            page = pdf.get_page(i)
+            index = 1
+            for obj in page.get_objects():
+                if isinstance(obj, pdfium.PdfImage):
+                    img = BytesIO()
+                    obj.extract(img)
+                    images.append((f"page-{i+1}-image-{index}.jpg", img.getvalue()))
+                    index += 1
+    except Exception as exc:
+        print(f"pdfium Image extraction failure: {exc}")
+    return images
 
 
 def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
@@ -87,7 +116,7 @@ def pymupdf_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
                 image_bytes = base_image["image"]
                 image_ext = base_image["ext"]
                 images.append(
-                    (f"image{page_index+1}_{image_index}.{image_ext}", image_bytes)
+                    (f"image{page_index + 1}_{image_index}.{image_ext}", image_bytes)
                 )
     return images
 
@@ -170,7 +199,10 @@ def pdftotext_get_text(data: bytes) -> str:
     new_file, filename = tempfile.mkstemp()
     with open(filename, "wb") as fp:
         fp.write(data)
-    args = ["/usr/bin/pdftotext", "-enc", "UTF-8", filename, "-"]
+    pdf_to_text_path = "/usr/bin/pdftotext"
+    if not os.path.exists(pdf_to_text_path):
+        pdf_to_text_path = 'pdftotext'
+    args = [pdf_to_text_path, "-enc", "UTF-8", filename, "-"]
     res = subprocess.run(args, capture_output=True)
     output = res.stdout.decode("utf-8")
     os.close(new_file)
@@ -191,3 +223,15 @@ def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
 
     out_buffer.seek(0)
     return out_buffer.read()
+
+
+def tika_get_text(data: bytes) -> str:
+    from tika import parser
+
+    try:
+        return parser.from_buffer(BytesIO(data), requestOptions={"timeout": (1, 100)})[
+            "content"
+        ]
+    except ReadTimeout as ex:
+        print("Tika timeout:", ex)
+        return "[[[Tika text extraction failed!]]]"
