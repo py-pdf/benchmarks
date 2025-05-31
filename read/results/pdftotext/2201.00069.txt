@@ -126,9 +126,8 @@ angular scales of a few arcseconds, but resolved out to scales of
 2021).
 Localisations of four one-off FRBs through imaging of
 
-★
+★ james.chibueze@nwu.ac.za
 
-james.chibueze@nwu.ac.za
 † manisha.caleb@manchester.ac.uk
 1 https://www.wis-tns.org/
 
@@ -349,14 +348,15 @@ CT1-4 telescopes (Ashton et al. 2020) and the large 28 m-diameter
 https://github.com/e-merlin/eMERLIN_CASA_pipeline
 
 1
+√︃
+𝜂𝑐 𝑛
+
 SEFD
 .
-√︃
-𝜂 𝑐 𝑛 × 𝑁 (𝑁 − 1) × Δ𝜈 × 𝑡
-pol
-int
 
 (1)
+
+pol × 𝑁 (𝑁 − 1) × Δ𝜈 × 𝑡 int
 
 The system equivalent flux density (SEFD) of MeerKAT at the
 1.28 GHz is 443 Jy and 𝜂 𝑐 is the correlator efficiency. We used 𝑛pol
@@ -592,6 +592,8 @@ limits while the magenta region indicates the background region used. The green 
 et al. (2019).
 
 Table 1. Details of the FRB fields observed with MeerKAT.
+Field name
+
 Observation date
 
 Synthesized beam
@@ -644,13 +646,8 @@ FRB 20190714A
 54.4 𝜇Jy beam−1
 52.0 𝜇Jy beam−1
 
-Field name
-
 Table 2. Details of the radio continuum source associated with FRB 20190714A.
 Field name
-FRB 20190714A
-FRB 20190714A
-FRB 20190714A
 
 Observation date
 
@@ -667,6 +664,10 @@ Maj. × min. axis
 Pos. angle
 
 Int. flux density
+
+FRB 20190714A
+FRB 20190714A
+FRB 20190714A
 
 28 September 2019
 18 October 2019
@@ -978,9 +979,8 @@ Zhang B., 2018, ApJ, 854, L21
 de Naurois M., Rolland L., 2009, Astroparticle Physics, 32, 231
 
 APPENDIX A: AUTHOR AFFILIATIONS
-1 Centre
+1 Centre for Space Research, North-West University, Potchefstroom
 
-for Space Research, North-West University, Potchefstroom
 2531, South Africa
 2 Department of Physics and Astronomy, Faculty of Physical Sciences, University of Nigeria, Carver Building, 1 University Road,
 Nsukka 410001, Nigeria
@@ -1027,9 +1027,8 @@ Avenue, Braamfontein, Johannesburg, 2050 South Africa
 MNRAS 000, 1–15 (2021)
 
 MeerKAT, e-MERLIN, Swift and H.E.S.S., observations of three localised FRBs
-25 Sorbonne
+25 Sorbonne Université, Université Paris Diderot, Sorbonne Paris
 
-Université, Université Paris Diderot, Sorbonne Paris
 Cité, CNRS/IN2P3, Laboratoire de Physique Nucléaire et de Hautes
 Energies,
 LPNHE, 4 Place Jussieu, F-75252 Paris, France

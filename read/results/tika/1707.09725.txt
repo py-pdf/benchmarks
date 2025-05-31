@@ -101,6 +101,8 @@ l 2
 
 
 
+
+
 Analysis and Optimization of Convolutional Neural
 Network Architectures
 
@@ -131,6 +133,8 @@ Karlsruhe, Martin Thoma
 August 2017
 
 v
+
+
 
 
 
@@ -344,6 +348,8 @@ G List of Figures 101
 H Bibliography 103
 
 I Glossary 119
+
+
 
 
 
@@ -661,6 +667,49 @@ output image, k2 multiplications and k2 additions of the products have to be cal
 
 3
 
+2. Convolutional Neural Networks
+
+ 
+
+In the following, it is assumed that the reader knows what a|multilayer perceptron (MLP)}
+
+ 
+
+is and how they are designed for classification problems, what activation functions are and
+
+how gradient descent works. In case the reader needs a refresher on any of those topics, I
+recommend chapter 4.3 and 4.4 of [Thol4a] as well as [EBH15}.
+
+This chapter introduces linear image filters in then standard layer types of
+
+are explained in The layer block pattern is described in
+transition layers in and nine ways to analyze are described in
+
+2.1. Linear Image Filters
+
+A linear image filter (also called a filter bank or a kernel) is an element F € Rew *knxd,
+where k,, represents the filter’s width, ky, the filter’s height and d the number of input
+channels. The filter F is convolved with the image J € R”*’*¢ to produce a new image I’.
+The output image I’ has only one channel. Each pixel I'(z,y) of the output image gets
+calculated by point-wise multiplication of one filter element with one element of the original
+
+image I:
+
+[Ae | [Pld
+I'(a,y) = S- (a + ix, y + ty, tc) - Flix; iy, ie)
+=1
+
+io=1—[ 99] iy=1— [4
+
+Filter kernel Result of point-wise
+Fe RS multiplication
+
+  
+
+Figure 2.1.: Visualization of the application of a linear k x k x 1 image filter. For each pixel of the
+output image, k? multiplications and k? additions of the products have to be calculated.
+
+
 
 
 2. Convolutional Neural Networks
@@ -864,6 +913,59 @@ Figure 2.2.: Application of a single convolutional layer with n filters of size 
 s = 1 to input data of size width× height with three channels.
 
 6
+
+2. Convolutional Neural Networks
+
+This is easier to see when the filtering operation is denoted formally:
+
+k
+o%(x)=b+S ow x) with ie {1,....w} x {1,...,h} x {1...,d} [2]
+j=l
+
+[SJ [Bld
+ofH)(D) = b+ » » S > Filins ty, te) T(x + ix, y + ty; te) [2.2]
+ig=1—-[ M2] iy=1—p Ab] t=!
+
+with abiasbe R,xe{l,...,.w},ye{l,...,h} andze{l,...,d}
+
+One can see that most weights of the equivalent [MLP] are zero and many weights are
+equivalent. Hence the advantage of compared to is the reduction of parameters.
+The effect of fewer parameters is that less training data is necessary to get suitable
+estimations for those. This means a[MLP] which is able to compute the same functions as a
+[CNN] will likely have worse results on the same dataset, if a architecture is suitable
+for the dataset.
+
+See for a visualization of the application of a convolutional layer.
+
+n filters of
+sizekxkx3
+
+Be
+
+neural
+network
+apply
+
+re re
+
+» a)
+
+data “eb “eb
+
+oO o
+
+a GS
+
+Vo NEGA Sas
+3 feature maps
+
+(e.g. RGB)
+
+n feature maps
+
+Figure 2.2.: Application of a single convolutional layer with n filters of size k x k x 3 with stride
+5 = 1 to input data of size width x height with three channels.
+
 
 
 
@@ -1513,6 +1615,78 @@ typically smaller than 0.1.
 
 17
 
+2.5. Analysis Techniques
+
+ 
+
+plotting the error on the training set as well as the error on a validation set, one can also
+estimate if overfitting might become a problem. See for an example.
+
+ 
+
+ 
+
+ 
+
+ 
+
+   
+
+ 
+
+ 
+
+Error | . --- Training set
+08. . — Validation set
+0.6 +
+0.4 4
+0.2 4 ws 1 overfitting >
+
+' Epochs
+t
+
+ 
+
+10 20 30 40 50 60 70 80 90 100
+
+Figure 2.7.: A typical validation curve: In this case, the hyperparameter is the number of epochs
+and the quality metric is the error (1 — accuracy). The longer the network is trained,
+the better it gets on the training set. At some point the network is fit too well to the
+training data and loses its capability to generalize. At this point the quality curve of
+the training set and the validation set diverge. While the classifier is still improving on
+the training set, it gets worse on the validation and the test set.
+
+When the epoch-loss validation curve has plateaus as in this means the opti-
+mization process did not improve for several epochs. Three possible ways to reduce the
+problem of plateaus are (i) to change weight initialization if the plateau was at the beginning,
+
+(ii) regularizing the model or (iii) changing the optimization algorithm.
+
+Loss functions
+
+The loss function (also called error function or cost function) is a function which assigns a
+real value to a complex event like the predicted class of a feature vector. It is used to define
+the objective function. For classification problems the loss function is typically cross-entropy
+
+with ¢; or @2 regularization, as it was described in [NH92]:
+
+ 
+
+£ £
+K — —
+Eor(W) = — >> Sef log(of) + (1 = #8) loa(t = of +1» S7 Jw) Ar» SO
+cEX k=1 wew wEew
+cross-entropy data loss model complexity loss
+
+where W are the weights, X is the training data set, kK € N>0 is the number of classes and
+;, indicates if the training example z is of class k. of is the output of the classification
+algorithm which depends on the weights. A1, A2 € [0,0o) weights the regularization and is
+
+typically smaller than 0.1.
+
+17
+
+
 
 
 2. Convolutional Neural Networks
@@ -1980,6 +2154,85 @@ wij ∼ N (µij , σ
 ij)
 
 28
+
+3. Topology Learning
+
+ 
+
+4. Correlation Maximization: Train the weights of the candidates by maximizing S,
+
+the correlation between candidates output value V with the networks residual error:
+
+$= 30 |N (W-P) BoB)
+
+o€O |pEeT
+
+where O is the set of output nodes, T is the training set, V, is the candidate neurons
+activation for a training pattern p. E, is the residual output error at node o for
+pattern p. V and E, are averaged values over all elements of T’. This step is finished
+
+when the correlation no longer increases.
+
+5. Candidate selection: Keep the candidate node with the highest correlation, freeze
+
+its incoming weights and add connections to the output nodes.
+6. Continue: If the error is higher than desired, continue with step 2.
+
+One network with three hidden nodes trained by Cascade-Correlation is shown in
+
+O
+©
+©
+O
+©
+
+Figure 3.1.: A Cascade-Correlation network with three input nodes (red) and one bias node (gray)
+to the left, three hidden nodes (green) in the middle and two output nodes in the upper
+right corner. The black squares represent frozen weights which are found by correlation
+maximization whereas the white squares are trainable weights.
+
+ 
+
+Vv
+
+©
+
+ 
+
+Vv
+
+ 
+
+Vv
+
+Vv
+
+ 
+
+Vv
+
+ 
+
+Vv
+
+ 
+
+PH)
+PHI)
+
+»
+>
+
+3.1.2. Meiosis Networks
+
+Meiosis Networks are introduced in [Han89]. In contrast to most and where
+weights are deterministic and fixed at prediction time, each weight w;; in Meiosis networks
+follows a normal distribution:
+
+Wij ~ N (Miz, 074)
+
+28
+
 
 
 
@@ -2943,6 +3196,139 @@ Total 34 25
 Table 5.5.: Differences in spectral clustering and CMO.
 
 52
+
+5. Experimental Evaluation
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Cluster Spectral clustering Errors |CMO Errors
+
+fish aquarium fish, orchid + flatfish 5 aquarium fish, orchid + flatfish 4
++ ray, shark + trout, lion + ray + shark, trout
+
+flowers orchid, aquarium fish + sun- 5 orchid, aquarium fish + sun- 2
+flower + poppy, tulip + rose, flower, poppy, tulip, rose
+train
+
+people baby, boy, man + girl + woman 2 baby, boy, girl, woman, man 0
+
+reptiles crocodile, plain, road, table, 9 crocodile, lizard, lobster, cater- 6
+wardrobe + dinosaur + lizard pillar + dinosaur + snake + tur-
++ snake, worm + turtle tle, crab
+
+trees maple, oak, pine + willow, forest 3 palm, willow, pine, maple, oak 0
++ palm
+
+Total 24 12
+
+ 
+
+Table 5.4.:
+
+Differences in spectral clustering and Classes in a cluster are separated by ,
+whereas clusters are separated by +.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Cluster Spectral clustering Errors |CMO Errors
+A, A, A, A, &, A
+B,B B,B
+C,c, C and @, €, €& andC C,c, C,C and @
+D,D, 9, > D,D,G
+E and €,é€ FE and €, €, €, €
+F and ¥, F Fand ¥, F
+A and #, x and H A andH, #
+K,k K,k
+L,| andl, & L,| andl, &
+
+NK MSs GCGHnDOVOAZZOrO A eRe eva
+
+M and M and IN
+
+N and N, N and NV
+
+O, O, 0, 0, °, O and o
+P,P and p, p and Y and o
+Q, Q, Q, 4, U, 2, €, S, #, 1
+R,R and R, R, & and R
+S,s,S
+
+T, T and 7,7
+
+U, U and u, U, 2
+
+Vi,vu,V
+
+W,w,w
+
+X, x, X, xX, X
+
+Y andy
+
+Z,2,ZandZ,Z
+
+FPrRFooorRrrRFOoOWN wWworRnnroewrnrF & OO
+
+M and p, M and I
+
+N and N, N and N, 8
+O, O, 0, 0, ° and O and o
+PandP, FY, 9 and p, p
+Q and Q, Q
+Rand k, R, R, R
+S,s,S
+
+T, T and 7,7
+
+U, u, U, A and U
+Vi,vu,V
+
+W,w andw
+
+X, x, X, xX, X
+
+Yyy
+
+Z,2,Z, 2,2
+
+GO co OF CO NWMrFR OF FN NHN WWrR DWF FP FOF OD FE
+
+ 
+
+Total
+
+oo
+neg
+
+No
+oO
+
+ 
+
+52
+
+Table 5.5.: Differences in spectral clustering and
+
 
 
 
@@ -4051,6 +4437,9 @@ might be crucial for the models quality.
 
 74
 
+74
+
+
 
 
 A. Figures, Tables and Algorithms
@@ -4622,6 +5011,9 @@ Regularization techniques are:
 
 86
 
+86
+
+
 
 
 C. Calculating Network Characteristics
@@ -5030,6 +5422,9 @@ Table D.4.: Inception-v4 network.
 
 
 96
+
+96
+
 
 
 

@@ -129,7 +129,7 @@ has ten different wavelength channels, three in white light and UV, and the othe
 channels. Between these seven, the 304 ﬁlter, which is mostly sensitive to chromospheric temper-
 atures (in order of T = 104.7K), not the corona, is not taken into account (Aschwanden et al. 2015).
 Therefore, we consider the images of the events in the six wavelengths (94, 131, 171, 193, 211, 335
-). These are covering the coronal temperature range from T ≈ 0.6 to T ≥ 16MK.
+). These are covering the coronal temperature range from T ≈0.6 to T ≥16MK.
 The two below data sets are ﬁnally selected to study thermal variations and coronal loops
 oscillations in ﬂaring or non-ﬂaring active regions. A few distinct loops are visible in the regions.
 Finally, these loops are chosen:
@@ -155,7 +155,7 @@ at (230, 165) arcsec and its width and height are 450
 ′′ × 456
 ′′ /750 × 775 pixels. The ﬂare
 occurring in this active region is an X2.1 class ﬂare located close to the disk center at latitude
-14◦ north and longitude 18◦ west (269.9 arcsec, 129.9 arcsec). This ﬂare initiates at 22:12UT,
+14◦north and longitude 18◦west (269.9 arcsec, 129.9 arcsec). This ﬂare initiates at 22:12UT,
 ends about 22:24UT with the peak at 22:20UT, and associates with a coronal mass ejection
 (CME) which occurs from 2011 September 6, 21:36:05T to 2011 September 7, 02:24:05T, with
 the radial velocity of 469 km/s,angular width of 252 deg, and position angle of 275 deg (for
@@ -207,7 +207,7 @@ in terms of the logarithm of the temperature, which has three free parameters (A
 Boerner, 2011):
 DEMi = dEMi
 dT
-= EMp,i exp (−[log (T) − log (Tp,i)
+= EMp,i exp (−[log (T) −log (Tp,i)
 2σ2
 T,i
 ).
@@ -216,7 +216,7 @@ In which, Tp,i is the DEM peak temperature, EMp,i is the peak EM function, and �
 logarithmic width of the temperature for that strip. To calculate the background-subtracted ﬂuxes
 (for each strip) we use Eq.6 of Aschwanden & Boerner (2011) (in below):
 F0λ =
-� dEM(T)
+Z dEM(T)
 dT
 Rλ(T)dT = ∑
 k

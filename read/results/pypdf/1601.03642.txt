@@ -2,7 +2,7 @@
 Creativity in Machine Learning
 Martin Thoma
 E-Mail: info@martin-thoma.de
-Abstract —Recent machine learning techniques can be modified
+Abstract—Recent machine learning techniques can be modified
 to produce creative results. Those results did not exist before; it
 is not a trivial combination of the data which was fed into the
 machine learning system. The obtained results come in multiple
@@ -42,25 +42,30 @@ a lot of data has become available. The idea of machine learning
 is to make use of this data.
 A formal definition of the field of Machine Learning is given
 by Tom Mitchel [Mit97]:
-A computer program is said to learn from experienceEwith
- respect to some class of tasks Tand
+A computer program is said to learn from experience
+ E with respect to some class of tasks T and
 performance measure P, if its performance at tasks
-inT, as measured by P, improves with experience E.Σϕx0
+in T, as measured by P, improves with experience E.
+Σ ϕ
+x0
 x1
 x2
 x3
-xnw0
+xn
+w0
 w1
 w2
 w3
-wn...
-(a)Example of an artificial neuron unit.
-xiare the input signals and wiare
+wn
+...
+(a) Example of an artificial neuron unit.
+xi are the input signals and wi are
 weights which have to get learned.
 Each input signal gets multiplied
 with its weight, everything gets
-summed up and the activation functionϕis
- applied.(b)A visualization of a simple feedforward
+summed up and the activation function
+ ϕ is applied.
+(b) A visualization of a simple feedforward
  neural network. The 5 input
  nodes are red, the 2 bias nodes
 are gray, the 3 hidden units are
@@ -94,20 +99,21 @@ of time required to understand such a complex system from
 basic building blocks is a time-intensive and difficult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artificial
-neural networks . Those networks are based on mathematical
-functions called artificial neurons which take n∈Nnumbersx1,
- . . . , x n∈Ras input, multiply them with weights
-w1, . . . , w n∈R, add them and apply a so called activation
-function ϕas visualized in Figure 1(a). One example of such
-an activation function is the sigmoid function ϕ(x) =1
-1+e−x.
+neural networks. Those networks are based on mathematical
+functions called artificial neurons which take n ∈N numbers
+ x1, . . . , xn ∈R as input, multiply them with weights
+w1, . . . , wn ∈R, add them and apply a so called activation
+function ϕ as visualized in Figure 1(a). One example of such
+an activation function is the sigmoid function ϕ(x) = 1
+1+e−x .
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
 visualized in Figure 1(b). The interesting question is how
-the parameters wiare learned. This is usually done by an
-optimization technique called gradient descent . The gradient
+the parameters wi are learned. This is usually done by an
+optimization technique called gradient descent. The gradient
 descent algorithm takes a function which has to be derivable,
-starts at any point of the surface of this error function andarXiv:1601.03642v1  [cs.CV]  12 Jan 2016
+starts at any point of the surface of this error function and
+arXiv:1601.03642v1  [cs.CV]  12 Jan 2016
 
 makes a step in the direction which goes downwards. Hence
 it tries to find a minimum of this high-dimensional function.
@@ -118,7 +124,7 @@ III. I MAGE DATA
 Applying a simple neural network on image data directly can
 work, but the number of parameters gets extraordinary large.
 One would take one neuron per pixel and channel. This means
-for500px×500pxRGB images one would get 750,000input
+for 500 px ×500 px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
 the full connection between the input layer and the first
@@ -158,7 +164,7 @@ might be chosen is because neural networks are structured
 in layers. Recent publications tend to have more and more
 layers [HZRS15]. The used jargon is to say they get “deeper”.
 As this technique as published by Google engineers, the
-technique is called Google DeepDream .
+technique is called Google DeepDream.
 Fig. 2: Aurelia aurita
 Fig. 3: DeepDream impression of Aurelia aurita
 It has become famous in the internet [Red]. Usually, the images
@@ -182,14 +188,14 @@ different artists to an arbitrary image of their choice.
 
 (a) Original Image
  (b) Style image
-(c)The artistic style of Van Gogh’s “Starry Night” applied to the photograph
+(c) The artistic style of Van Gogh’s “Starry Night” applied to the photograph
 of a Scottish Highland Cattle.
 Fig. 4: The algorithm takes both, the original image and the
 style image to produce the result.
 This artistic style imitation can be seen itself as creative work.
 An example is given by Figure 4. The code which created this
 example is available under [Joh16].
-Something similar was done by [SPB+14], where the style of
+Something similar was done by [SPB +14], where the style of
 a portrait photograph was transferred to another photograph.
 A demo can be seen on [Shi14].
 C. Drawing Robots
@@ -198,7 +204,7 @@ AIKON (Automatic IKONic drawing) which can automatically
 generated sketches for portraits [TL05]. AIKON takes a digital
 photograph, detects faces on them and sketches them with a
 pen-plotter.
-Tresset and Leymaire use k-means clustering [KMN+02] to
+Tresset and Leymaire use k-means clustering [KMN +02] to
 segment regions of the photograph with similar color which,
 in turn, will get a similar shading.
 Such a drawing robot could apply machine learning techniques
@@ -207,7 +213,8 @@ could apply self-learning techniques to draw results most
 similar to the artists impression of the image. However, the
 system described in [TL05] seems not to be a machine
 learning computer program according to the definition by Tom
-Mitchell [Mit97].IV. T EXT DATA
+Mitchell [Mit97].
+IV. T EXT DATA
 Digital text is the first form of natural communication which
 involved computers. It is used in the form of chats, websites,
 on collaborative projects like Wikipedia, in scientific literature.
@@ -218,7 +225,7 @@ This list could be continued and most of these kinds of texts
 are now available in digital form. This digital form can be
 used to teach machines to generate similar texts.
 The most simple language model which is of use is an n-gram
-model. This model makes use of sequences of the length nto
+model. This model makes use of sequences of the length n to
 model language. It can be used to get the probability of a third
 word, given the previous two words. This way, a complete text
 can be generated word by word. Refinements and extensions
@@ -251,7 +258,7 @@ A. Similar Texts Generation
 Karpathy trained multiple character RNNs on different datasets
 and gave an excellent introduction [Kar15b]. He trained it on
 Paul Graham’s essays, all the works of Shakespeare, the Hutter
-Prize [hut] 100MB dataset of raw Wikipedia articles, the raw
+Prize [hut] 100 MB dataset of raw Wikipedia articles, the raw
 LATEX source file of a book about algebraic stacks and geometry
 and Linux C code.
 With that training data, the models can generate similar texts.
@@ -299,16 +306,17 @@ subtitles of movies as well as the astonishing increase in
 computing power to train RNNs and language models similar
 to the ones described before.
 Interesting results like the following were obtained by [VL15]:
-Human : what is the purpose of life ?
-Machine : to serve the greater good .
-Human : what is the purpose of living ?
-Machine : to live forever .
+Human: what is the purpose of life ?
+Machine: to serve the greater good .
+Human: what is the purpose of living ?
+Machine: to live forever .
 V. A UDIO DATA
 Common machine learning tasks which involve audio data
 are speech recognition, speaker identification, identification of
 songs. This leads to some less-common, but interesting topics:
 The composition of music, the synthesizing of audio as art.
-While the composition might be considered in Section IV,we will now investigate the work which was done in audio
+While the composition might be considered in Section IV,
+we will now investigate the work which was done in audio
 synthesization.
 A. Emily Howell
 David Cope created a project called “Experiments in Musical
@@ -344,12 +352,12 @@ Recurrent neural networks — LSTM networks, to be exact
 (GRU) to build a network which can be trained to generate
 music. Instead of taking notes directly or MIDI files, Nayebi
 and Vitelli took raw audio waveforms as input. Those audio
-waveforms are feature vectors given for time steps 0,1, . . . , t−
-1, t. The network is given those feature vectors X1, . . . , X t
+waveforms are feature vectors given for time steps 0, 1, . . . , t−
+1, t. The network is given those feature vectors X1, . . . , Xt
 and has to predict the following feature vector Xt+1. This
 means it continues the music. As the input is continuous, the
 problem was modeled as a regression task. Discrete Fourier
-Transformation (DFT) was used on chunks of length Nof the
+Transformation (DFT) was used on chunks of length N of the
 music to obtain features in the frequency domain.
 An implementation can be found at [VN15] and a demonstration
 can be found at [Vit15].
@@ -387,10 +395,10 @@ REFERENCES
 [Cop05] ——, Computer models of musical creativity . MIT Press
 Cambridge, 2005.
 [Cop12] ——, “Emily howell fugue,” YouTube, Oct. 2012. [Online].
-Available: https://www.youtube.com/watch?v=jLR- cuCwI
+Available: https://www.youtube.com/watch?v=jLR- c uCwI
 [Cop13] ——, “The well-programmed clavier: Style in computer music
 composition,” XRDS: Crossroads, The ACM Magazine for
-Students , vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available:
+Students, vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2460444
 [Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [Online].
  Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
@@ -410,7 +418,8 @@ arnumber=6795963
 Available: http://prize.hutter1.net/
 [HZRS15] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning
 for image recognition,” arXiv preprint arXiv:1512.03385 , 2015.
-[Online]. Available: http://arxiv.org/abs/1512.03385[Joh15a] D. Johnson, “Biaxial recurrent neural network for music
+[Online]. Available: http://arxiv.org/abs/1512.03385
+[Joh15a] D. Johnson, “Biaxial recurrent neural network for music
 composition,” GitHub, Aug. 2015. [Online]. Available: https:
 //github.com/hexahedria/biaxial-rnn-music-composition
 [Joh15b] ——, “Composing music with recurrent neural
@@ -428,7 +437,7 @@ http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 and A. Wu, “An efficient k-means clustering algorithm: analysis
 and implementation,” Pattern Analysis and Machine Intelligence,
 IEEE Transactions on , vol. 24, no. 7, pp. 881–892, Jul 2002.
-[Mit97] T. M. Mitchell, Machine learning , ser. McGraw Hill series in
+[Mit97] T. M. Mitchell, Machine learning, ser. McGraw Hill series in
 computer science. McGraw-Hill, 1997.
 [MOT15] A. Mordvintsev, C. Olah, and M. Tyka, “Inceptionism: Going
 deeper into neural networks,” googleresearch.blogspot.co.uk,
@@ -448,7 +457,7 @@ com/r/deepdream/
 Hj5lGFzlubU
 [SPB+14] Y . Shih, S. Paris, C. Barnes, W. T. Freeman, and F. Durand,
 “Style transfer for headshot portraits,” ACM Transactions on
-Graphics (TOG) , vol. 33, no. 4, p. 148, 2014. [Online]. Available:
+Graphics (TOG), vol. 33, no. 4, p. 148, 2014. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2601137
 [TL05] P. Tresset and F. F. Leymarie, “Generative portrait sketching,” in
 Proceedings of VSMM , 2005, pp. 739–748.
@@ -468,7 +477,7 @@ Available: https://github.com/MattVitelli/GRUV
 [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
 Judgement to Calculation . W.H.Freeman & Co Ltd, 1976.
 [ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding convolutional
- networks,” in Computer Vision–ECCV 2014 . Springer,
+ networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.
 
 APPENDIX A
@@ -516,15 +525,15 @@ was starting to signing a major tripad of aid exile.]]
 C. Linux Code, 1
 /*
 
-*Increment the size file of the new incorrect UI_FILTER group information
-*of the size generatively.
+* Increment the size file of the new incorrect UI_FILTER group information
+* of the size generatively.
 */
 static int indicate_policy(void)
 {
 int error;
 if (fd == MARN_EPT) {
 /*
-*The kernel blank will coeld it to userspace.
+* The kernel blank will coeld it to userspace.
 */
 if (ss->segment < mem_total)
 unblock_graph_and_set_blocked();
@@ -537,7 +546,7 @@ selector = seg / 16;
 setup_works = true;
 for (i = 0; i < blocks; i++) {
 seq = buf[i++];
-bpf = bd->bd.next + i *search;
+bpf = bd->bd.next + i * search;
 if (fd) {
 current = blocked;
 }
@@ -549,21 +558,21 @@ return segtable;
 }
 D. Linux Code, 2
 /*
-*Copyright (c) 2006-2010, Intel Mobile Communications. All rights reserved.
+* Copyright (c) 2006-2010, Intel Mobile Communications. All rights reserved.
 *
 * This program is free software; you can redistribute it and/or modify it
-*under the terms of the GNU General Public License version 2 as published by
-*the Free Software Foundation.
+* under the terms of the GNU General Public License version 2 as published by
+* the Free Software Foundation.
 *
 * This program is distributed in the hope that it will be useful,
-*but WITHOUT ANY WARRANTY; without even the implied warranty of
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 *
-*GNU General Public License for more details.
+* GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
 * along with this program; if not, write to the Free Software Foundation,
-*Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+* Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
 #include <linux/kexec.h>
 #include <linux/errno.h>

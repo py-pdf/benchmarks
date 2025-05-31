@@ -1013,6 +1013,132 @@ i=1
 
 αiyi = 0
 
+C. Random Decision Forests
+
+Random Decision Forests were first proposed
+in [Ho95]. This type of classifier applies techniques
+called ensemble learning, where multiple classifiers
+are trained and a combination of their hypotheses is
+used. One ensemble learning technique is the random
+subspaces method where each classifier is trained
+on a random subspace of the feature space. Another
+ensemble learning technique is bagging, which is
+training the trees on random subsets of the training set.
+In the case of Random Decision Forests, the classifiers
+are decision trees. A decision tree is a tree where each
+inner node uses one or more features to decide in which
+branch to descend. Each leaf is a class.
+
+One strength of Random Decision Forests compared
+to many other classifiers like[SVMs|and neural networks
+is that the scale of measure of the features (nominal,
+ordinal, interval, ratio) can be arbitrary. Another advan-
+tage of Random Decision Forests compared to
+for example, is the speed of training and classification.
+
+Decision trees were extensively studied in the past
+20 years and a multitude of training algorithms have
+been proposed (e.g. ID3 in [Qui86], C4.5 in [Qui93]).
+Possible training hyperparameters are the measure to
+evaluate the “goodness of split” [Min89], the number of
+decision trees being used, and if the depth of the trees
+is restricted. Typically in the context of classification,
+decision trees are trained by adding new nodes until
+each leaf contains only nodes of a single class or until it
+is not possible to split further. This is called a stopping
+criterion.
+
+There are two typical training modes: Central axis
+projection and perceptron training. In training, for
+each node a hyperplane is searched which is optimal
+according to an error function.
+
+Random Decision Forests with texton features (see
+are applied in [SJCO8] for segmentation.
+In the [MSC] dataset, they report a per-pixel accuracy
+rate of 66.9% for their best system. This system
+requires 415 ms for the segmentation of 320 px x 213 px
+images on a single 2.7GHz core. On the Pascal
+VOC 2007 dataset, they report an average per-pixel
+accuracy for their best segmentation system of 42 %.
+
+An excellent introduction to Random Decision
+Forests for semantic segmentation is given by [SCZ08].
+
+D. SVMs
+
+are well-studied binary classifiers which can
+be described by five central ideas. For those ideas, the
+training data is represented as (x;, y;) where x; is the
+feature vector and y; € { —1,1} the binary label for
+training example i € { 1,...,m }.
+
+1) If data is linearly separable, it can be separated
+by a hyperplane. There is one hyperplane which
+maximizes the distance to the next datapoints
+(support vectors). This hyperplane should be taken:
+
+minimize : || w ||?
+w,b 2
+s.t. Vi yi: ((w,x;) +b) > 1
+sgn applied to this gives the classification
+
+2) Even if the underlying process which generates the
+features for the two classes is linearly separable,
+noise can make the data not separable. The intro-
+duction of slack variables to relax the requirement
+of linear separability solves this problem. The
+trade-off between accepting some errors and a
+more complex model is weighted by a parameter
+C € Rg. The bigger C, the more errors are
+accepted. The new optimization problem is:
+
+1 m
+
+minimize 5llwil? +C- SO&
+i=1
+
+st. Vit iyi: ((w, xi) +6) 2 1- &
+
+Note that 0 < €; < 1 means that the data point
+is within the margin, whereas €; > 1 means it is
+misclassified. An with C > 0 is also called
+a soft-margin
+
+3) The primal problem is to find the normal vector
+w and the bias b. The dual problem is to express
+w as a linear combination of the training data x;:
+
+m
+w= y OGYi Xi
+i=1
+
+where y; € { —1,1} represents the class of the
+training example and a; are Lagrange multipliers.
+The usage of Lagrange multipliers is explained
+with some examples in [[Sm104]. The usage of the
+Lagrange multipliers a; changes the optimization
+problem depend on the a; which are weights for
+the feature vectors. It turns out that most a; will
+be zero. The non-zero weighted vectors are called
+support vectors.
+
+The optimization problem is now, according
+to [Bur98]:
+
+m mom
+
+os 1
+maximize S> ai 3 S> S> Oj YiYy (Xi, Xj)
+
+i=l i=1 j=1
+st. Vi O0< a, <C
+
+m
+S.t. So aii =0
+i=1
+
+
 
 
 8
@@ -1180,6 +1306,134 @@ cliques of size two x,y = (x1, x2) is [KP06]
 According to [Mur12], the most common way of
 inference over the posterior MRF in computer vision
 problems is Maximum A Posteriori (MAP) estimation.
+
+4) Not every dataset is linearly separable. This prob-
+lem is approached by transforming the feature
+vectors x with a non-linear mapping ® into
+a higher dimensional (probably oo-dimensional)
+space. As the feature vectors x are only used
+within scalar product (x;,x;), it is not necessary
+to do the transformation. It is enough to do the
+calculation
+
+K (xi, xj) = (Xi, Xj)
+
+This function K is called a kernel. The idea of
+never explicitly transforming the vectors x; to the
+higher dimensional space is called the kernel trick.
+Common kernels include the polynomial kernel
+
+K p(x, X;) = ((xi, X;) + ry?
+
+of degree p and coefficient r, the Gaussian
+basis function (RBF) kernel
+
+2
+=i => Il
+
+Kauss (Xi; x;) =e 2Qo2
+
+and the sigmoid kernel
+Kanh(Xi, xj) = tanh(y(xi, Xj) ~~ r)
+
+where the parameter y determines how much
+influence single training examples have.
+
+5) The described can only distinguish between
+two classes. Common strategies to expand those
+binary classifiers to multi-class classification is
+the one-vs-all and the one-vs-one strategy. In the
+one-vs-all strategy n classifiers have to be trained
+which can distinguish one of the n classes against
+all other classes. In the one-vs-one strategy “.-
+classifiers are trained; one classifier for each pair
+of classes.
+
+A detailed description of can be found
+in [Bur98].
+are used by [YHRF12] on the 2009 and 2010
+PASCAL segmentation challenge [EVGW* 10]. They
+did not hand their classifier in to the challenge itself,
+but calculated an average rank of 7 among the different
+categories.
+[FGMRT0] also used an [SVM] based method with
+features and achieved the 7 rank in the 2010
+PASCAL segmentation challenge by mean accuracy. It
+needs about 2s on a 2.8 GHz 8-core Intel processor.
+
+ 
+
+E. Markov Random Fields
+
+are undirected probabilistic graphical models
+which are wide-spread model in computer vision. The
+overall idea of is to assign a random variable for
+each feature and a random variable for each pixel which
+
+ 
+
+Figure 3: with 4-neighborhood. Each node 2;
+represents a pixel and each node y; represents
+a label.
+
+gets labeled as shown in For example, a MRF
+
+which is trained on images of the size 224 px x 224 pixel
+and gets the raw RGB values as features has
+
+224 - 224-34 224 - 224 = 200 704
+—S=_—Sr Ss ~~
+
+input output
+
+random variables. Those random variables are condi-
+tionally independent, given their local neighborhood.
+These (in)dependencies can be expressed with a graph.
+
+Let G = (V,€) be the associated undirected graph
+of an and C be the set of all maximal cliques in
+that graph. Nodes represent random variables x, y and
+edges represent conditional dependencies. Just like in
+he 4-neighborhood [SWRCO06] and the 8-neighborhood
+are reasonable choices for constructing the graph.
+
+Typically, random variables y represent the class of a
+single pixel, random variables x represent a pixel values
+and edges represent pixel neighborhood in computer
+vision problems segmentation problems where
+are used. Accordingly, the random variables y live
+on 1,...,nr of classes and the random variables x
+typically live on 0,...,255 or [0, 1].
+
+The probability of x, y can be expressed as
+
+1
+Plx,y) = pe PO)
+
+where Z = Vy © UY) is a normalization term
+called the partition function and E is called the energy
+function. A common choice for the energy function is
+
+E(x,y) =o ve(xy)
+cEC
+where 7 is called a clique potential. One choice for
+
+cliques of size two x, y = (x1, 22) is [KP06]
+
++w
+
+—W
+
+if XY x LQ
+if v1, = 7%
+
+We(21, £2) = wd(ax1, 22) =
+
+According to [Mur12], the most common way of
+inference over the posterior MRF in computer vision
+
+problems is [Maximum A Posteriori (MAP) estimation.
+
 
 
 

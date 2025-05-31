@@ -175,10 +175,10 @@ However, this can only support the explanation of
 particular problems or showcase special situation. For
 meaningful information about the overall accuracy, there
 are a couple of metrics how accuracy can be deﬁned.
-For this section, let k ∈ N be the number of classes,
-nij ∈ N0 with i, j ∈ 1, . . . , k be the number of pixels
+For this section, let k ∈N be the number of classes,
+nij ∈N0 with i, j ∈1, . . . , k be the number of pixels
 which belong to class i and were labeled as class j.
-(nij) is called a confusion matrix. Let ti = �k
+(nij) is called a confusion matrix. Let ti = Pk
 j=1 nij
 be the total number of pixels of class i.
 One way to compare segmentation algorithms is by
@@ -186,9 +186,9 @@ the pixel-wise accuracy of the predicted segmentation
 as done in many publications [SWRC06], [CP08],
 [LSD14]. This is also called per-pixel rate and de-
 ﬁned as
-�k
+Pk
 i=1 nii
-�k
+Pk
 i=1 ti . Taking the pixel-wise classiﬁcation
 accuracy has two major drawbacks:
 P1 Tasks like segmenting images for autonomous cars
@@ -209,29 +209,29 @@ car”
 Three accuracy metrics which do not suffer from
 problem P1 are used in [LSD14]:
 • mean accuracy: 1
-k · �k
+k · Pk
 i=1
 nii
-ti ∈ [0, 1]
+ti ∈[0, 1]
 • mean intersection over union:
 1
-k · �k
+k · Pk
 i=1
 nii
-ti−nii+�k
-j=1 nji ∈ [0, 1]
+ti−nii+Pk
+j=1 nji ∈[0, 1]
 • frequency
 weighted
 intersection
 over
 union:
-(�k
+(Pk
 i=1 ti)
-−1 �k
+−1 Pk
 i=1 ti ·
 nii
-ti−nii+�k
-j=1 nji ∈ [0, 1]
+ti−nii+Pk
+j=1 nji ∈[0, 1]
 Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets
@@ -473,7 +473,7 @@ an image is histogram equalization, which can be
 applied to improve contrast [PAA+87], [RM07].
 2) Histogram of oriented Gradients: Histogram of
 oriented gradients (HOG) features interpret the image
-as a discrete function I : N2 → { 0, . . . , 255 } which
+as a discrete function I : N2 →{ 0, . . . , 255 } which
 maps the position (x, y) to a color. For each pixel, there
 are two gradients: The partial derivative of x and y.
 Now the original image is transformed to two feature
@@ -687,8 +687,8 @@ D. SVMs
 SVMs are well-studied binary classiﬁers which can
 be described by ﬁve central ideas. For those ideas, the
 training data is represented as (xi, yi) where xi is the
-feature vector and yi ∈ { −1, 1 } the binary label for
-training example i ∈ { 1, . . . , m }.
+feature vector and yi ∈{ −1, 1 } the binary label for
+training example i ∈{ 1, . . . , m }.
 1) If data is linearly separable, it can be separated
 by a hyperplane. There is one hyperplane which
 maximizes the distance to the next datapoints
@@ -698,12 +698,12 @@ w,b
 1
 2∥w∥2
 s.t. ∀m
-i=1yi · (⟨w, xi⟩ + b)
-�
-��
-�
+i=1yi · (⟨w, xi⟩+ b)
+|
+{z
+}
 sgn applied to this gives the classiﬁcation
-≥ 1
+≥1
 2) Even if the underlying process which generates the
 features for the two classes is linearly separable,
 noise can make the data not separable. The intro-
@@ -711,7 +711,7 @@ duction of slack variables to relax the requirement
 of linear separability solves this problem. The
 trade-off between accepting some errors and a
 more complex model is weighted by a parameter
-C ∈ R+
+C ∈R+
 0 . The bigger C, the more errors are
 accepted. The new optimization problem is:
 minimize
@@ -719,13 +719,13 @@ w
 1
 2∥w∥2 + C ·
 m
-�
+X
 i=1
 ξi
 s.t. ∀m
-i=1yi · (⟨w, xi⟩ + b) ≥ 1 − ξi
-Note that 0 ≤ ξi ≤ 1 means that the data point
-is within the margin, whereas ξi ≥ 1 means it is
+i=1yi · (⟨w, xi⟩+ b) ≥1 −ξi
+Note that 0 ≤ξi ≤1 means that the data point
+is within the margin, whereas ξi ≥1 means it is
 misclassiﬁed. An SVM with C > 0 is also called
 a soft-margin SVM.
 3) The primal problem is to ﬁnd the normal vector
@@ -733,10 +733,10 @@ w and the bias b. The dual problem is to express
 w as a linear combination of the training data xi:
 w =
 m
-�
+X
 i=1
 αiyixi
-where yi ∈ { −1, 1 } represents the class of the
+where yi ∈{ −1, 1 } represents the class of the
 training example and αi are Lagrange multipliers.
 The usage of Lagrange multipliers is explained
 with some examples in [Smi04]. The usage of the
@@ -750,22 +750,22 @@ to [Bur98]:
 maximize
 αi
 m
-�
+X
 i=1
-αi − 1
+αi −1
 2
 m
-�
+X
 i=1
 m
-�
+X
 j=1
 αiαjyiyj⟨xi, xj⟩
 s.t. ∀m
-i=10 ≤ αi ≤ C
+i=10 ≤αi ≤C
 s.t.
 m
-�
+X
 i=1
 αiyi = 0
 
@@ -783,14 +783,14 @@ This function K is called a kernel. The idea of
 never explicitly transforming the vectors xi to the
 higher dimensional space is called the kernel trick.
 Common kernels include the polynomial kernel
-KP (xi, xj) = (⟨xi, xj⟩ + r)p
+KP (xi, xj) = (⟨xi, xj⟩+ r)p
 of degree p and coefﬁcient r, the Gaussian radial
 basis function (RBF) kernel
 KGauss(xi, xj) = e
 −γ∥xi−xj ∥2
 2σ2
 and the sigmoid kernel
-Ktanh(xi, xj) = tanh(γ⟨xi, xj⟩ − r)
+Ktanh(xi, xj) = tanh(γ⟨xi, xj⟩−r)
 where the parameter γ determines how much
 inﬂuence single training examples have.
 5) The described SVMs can only distinguish between
@@ -862,14 +862,14 @@ gets labeled as shown in Figure 3. For example, a MRF
 which is trained on images of the size 224 px×224 pixel
 and gets the raw RGB values as features has
 224 · 224 · 3
-�
-��
-�
+|
+{z
+}
 input
 + 224 · 224
-�
-��
-�
+|
+{z
+}
 output
 = 200 704
 random variables. Those random variables are condi-
@@ -891,18 +891,18 @@ typically live on 0, . . . , 255 or [0, 1].
 The probability of x, y can be expressed as
 P(x, y) = 1
 Z e−E(x,y)
-where Z = �
+where Z = P
 x,y e−E(x,y) is a normalization term
 called the partition function and E is called the energy
 function. A common choice for the energy function is
 E(x, y) =
-�
+X
 c∈C
 ψc(x, y)
 where ψ is called a clique potential. One choice for
 cliques of size two x, y = (x1, x2) is [KP06]
 ψc(x1, x2) = wδ(x1, x2) =
-�
+(
 +w
 if x1 ̸= x2
 −w
@@ -927,14 +927,14 @@ compared to MRFs is that no distribution assumption
 about x has to be made.
 A CRF has the partition function Z:
 Z(x) =
-�
+X
 y
 P(x, y)
 and joint probability distribution
 P(y|x) =
 1
 Z(x)
-�
+Y
 c∈C
 ψc(yc|x)
 The simplest way to deﬁne the clique potentials ψ is
@@ -981,7 +981,7 @@ function to the weighted sum and gives an output. Those
 neurons can take either a feature vector as input or the
 output of other neurons. In this way, they build up
 feature hierarchies.
-The parameters they learn are the weights w ∈ R.
+The parameters they learn are the weights w ∈R.
 They are learned by gradient descent. To do so, an error
 function — usually cross-entropy or mean squared error
 — is necessary. For the gradient descent algorithm, one
@@ -2274,7 +2274,7 @@ Classes
 Channels
 Data source
 Colon Crypt DB
-(302 px − 1116 px) × (349 px − 875 px)
+(302 px −1116 px) × (349 px −875 px)
 389
 2
 3
@@ -2286,19 +2286,19 @@ DIARETDB1
 3
 [KKV+14]
 KITTI Road
-(1226 px − 1242 px) × (370 px − 376 px)
+(1226 px −1242 px) × (370 px −376 px)
 289
 2
 3
 [FKG13]
 MSRCv1
-(213 px − 320 px) × (213 px − 320 px)
+(213 px −320 px) × (213 px −320 px)
 240
 9
 3
 [MSR]
 MSRCv2
-(213 px − 320 px) × (162 px − 320 px)
+(213 px −320 px) × (162 px −320 px)
 591
 23
 3
@@ -2310,13 +2310,13 @@ Open-CAS Endoscopic Datasets
 3
 [MHMK+14]
 PASCAL VOC 2012
-(142 px − 500 px) × ( 71 px − 500 px)
+(142 px −500 px) × ( 71 px −500 px)
 2913
 20
 3
 [EVGW+12]
 Warwick-QU
-(567 px − 775 px) × (430 px − 522 px)
+(567 px −775 px) × (430 px −522 px)
 165
 5
 3

@@ -167,7 +167,7 @@ panel to a model with luminosity enhanced by a factor of ten.
 The dash-dotted red lines show ∆T/T0 (in %), the relative dif-
 ference between the time and space averages of the temperature,
 T, and the initial temperature, T0. The solid blue lines show the
-time and space averages of the sub-adiabaticity (∇ − ∇ad). The
+time and space averages of the sub-adiabaticity (∇−∇ad). The
 dashed black lines show the initial proﬁle of the sub-adiabaticity,
 (∇−∇ad)init. The convective boundary is indicated by the vertical
 solid line (see details in B21)
@@ -178,7 +178,7 @@ boundary found in the simulations of B21 is illustrated in Fig.
 cial enhancement in the luminosity by a factor of ten because the
 features are intensiﬁed in these ‘boosted’ models (upper panel).
 The ﬁgure shows the local heating in the overshooting layer and
-its impact on the sub-adiabaticity (∇ − ∇ad), with ∇ = d log T
+its impact on the sub-adiabaticity (∇−∇ad), with ∇= d log T
 d log P the
 2
 
@@ -212,10 +212,10 @@ deﬁned by
 A = 1
 Γ1
 d ln P
-d ln r − d ln ρ
+d ln r −d ln ρ
 d ln r ,
 (1)
-with Γ1 = (∂ ln P/∂ ln ρ)ad. Starting from a reference evolu-
+with Γ1 = (∂ln P/∂ln ρ)ad. Starting from a reference evolu-
 tionary model, Buldgen et al. (2020) used an inversion pro-
 cedure to iteratively reconstruct a solar model. Successive in-
 versions of the Ledoux discriminant allowed them to obtain a
@@ -243,22 +243,22 @@ the quantity (ASun - Aref).
 The second concerns the speed of sound. The same positive
 bump at the same location as for the Ledoux discriminant, A, is
 observed for the quantity (c2
-s,Sun − c2
+s,Sun −c2
 s,ref)/c2
 s,ref. The corrections
 applied to A during the reconstruction procedure also reduce the
 discrepancy in the speed of sound in the radiative region.
 The third concerns the entropy. Large discrepancies are ob-
 served in both the radiative region and the convective zone. The
-1 Less sub-adiabatic means that |∇ − ∇ad| decreases compared to the
+1 Less sub-adiabatic means that |∇−∇ad| decreases compared to the
 initial proﬁle.
-entropy discrepancy (S Sun − S ref)/S ref has two positive peaks in
+entropy discrepancy (S Sun −S ref)/S ref has two positive peaks in
 the radiative zone, one just below the overshooting region and a
-larger peak deeper at ∼ 40% of the stellar radius. This discrep-
+larger peak deeper at ∼40% of the stellar radius. This discrep-
 ancy is negative in the convective zone. The corrections applied
 to A help reduce these entropy discrepancies in both regions.
 The fourth concerns the density. The quantity (ρSun −
-ρref)/ρref has a negative peak in the radiative region, at ∼ 35%
+ρref)/ρref has a negative peak in the radiative region, at ∼35%
 of the stellar radius, and is positive in the convective zone.
 Importantly, Buldgen et al. (2020) mention that their recon-
 struction procedure gives similar Ledoux discriminant proﬁles
@@ -305,23 +305,23 @@ ature gradient in the overshooting layer that qualitatively repro-
 duces the behaviour displayed in Fig. 1. We deﬁne an overshoot-
 ing length dov = αovHP,CB, with HP,CB the pressure scale height
 at the convective boundary and αov a free parameter. We also de-
-ﬁne two radial locations, rov = rCB − dov and rmid = rCB − dov/2,
+ﬁne two radial locations, rov = rCB −dov and rmid = rCB −dov/2,
 with rCB the radial location of the convective boundary. The tem-
-perature gradient is modiﬁed as follows. For rmid ≤ r < rCB, we
+perature gradient is modiﬁed as follows. For rmid ≤r < rCB, we
 use
-∇ = g(r)∇ad + (1 − g(r))∇rad,
+∇= g(r)∇ad + (1 −g(r))∇rad,
 (2)
 with
-g(r) = sin{[(r − rmid)/(rCB − rmid)]a × π/2}.
+g(r) = sin{[(r −rmid)/(rCB −rmid)]a × π/2}.
 (3)
 3
 
 Baraﬀe et al.: Local heating due to convective overshooting and the solar modelling problem
-For rov ≤ r < rmid, we use
-∇ = ∇rad − h(r)∇ad,
+For rov ≤r < rmid, we use
+∇= ∇rad −h(r)∇ad,
 (4)
 with
-h(r) = b × sin{[(rmid − r)/(rmid − rov)] × π}.
+h(r) = b × sin{[(rmid −r)/(rmid −rov)] × π}.
 (5)
 Sine functions are used in Eqs. (3) and (5) to reproduce the
 smooth variations in the temperature gradient below the convec-
@@ -337,7 +337,7 @@ results, but we note that the results are insensitive to the value of
 b.
 3.2.1. Thermal equilibrium models
 The details of the procedure for the ﬁrst method are the follow-
-ing. We calculate the evolution of a 1 M⊙ model with an initial
+ing. We calculate the evolution of a 1 M⊙model with an initial
 helium mass fraction of 0.28, metallicity Z = 0.02, and a mix-
 ing length lmix = 1.9HP. We use a reference model that is in
 thermal equilibrium2 and has the luminosity and radius of the

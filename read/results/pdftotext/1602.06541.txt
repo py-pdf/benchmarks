@@ -100,21 +100,16 @@ used layered models [YHRF12].
 C. Input Data
 The available data which can be used for the
 inference of a segmentation varies by application.
-•
-
-•
-
-•
-
 Grayscale vs colored: Grayscale images are
 commonly used in medical imaging such as
 magnetic resonance (MR) imaging or ultrasonography whereas colored photographs are obviously
 widespread.
-Excluding or including depth data: RGB-D,
+• Excluding or including depth data: RGB-D,
 sometimes also called range [HJBJ+ 96] is available in robotics, autonomous cars and recently
 also in consumer electronics such as Microsoft
 Kinect [Zha12].
-Single image vs stereo images vs cosegmentation: Single image segmentation is the
+• Single
+image vs stereo images vs cosegmentation: Single image segmentation is the
 most wide-spread kind of segmentation, but using
 stereo images was already tried in [BVZ01]. It can
 be seen as a more natural way of segmentation as
@@ -130,10 +125,11 @@ after the first can be used as an additional source
 of information to find a meaningful segmentation.
 This idea can be extended to time series such as
 videos.
-2D vs 3D: Segmenting images is a 2D segmentation task where the smallest unit is called a pixel.
+• 2D vs 3D: Segmenting images is a 2D segmentation task where the smallest unit is called a pixel.
 In 3D data, such as volumetric X-ray CT images
 as they were used in [HHR01], the smallest unit
 is called a voxel.
+•
 
 (a) Example Scene
 
@@ -159,7 +155,6 @@ of the obtained segmentations is by showing examples
 such as Figure 1.
 However, this can only support the explanation of
 particular problems or showcase special situation. For
-•
 meaningful information about the overall accuracy, there
 are a couple of metrics how accuracy can be defined.
 For this section, let k ∈ N be the number of classes,
@@ -1851,6 +1846,9 @@ Classes
 5
 
 Channels
+
+Data source
+
 3
 3
 3
@@ -1860,7 +1858,6 @@ Channels
 3
 3
 
-Data source
 [CRSS]
 [KKV+ 14]
 [FKG13]

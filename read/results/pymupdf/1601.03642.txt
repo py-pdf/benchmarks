@@ -100,9 +100,9 @@ basic building blocks is a time-intensive and difﬁcult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artiﬁcial
 neural networks. Those networks are based on mathematical
-functions called artiﬁcial neurons which take n ∈ N num-
-bers x1, . . . , xn ∈ R as input, multiply them with weights
-w1, . . . , wn ∈ R, add them and apply a so called activation
+functions called artiﬁcial neurons which take n ∈N num-
+bers x1, . . . , xn ∈R as input, multiply them with weights
+w1, . . . , wn ∈R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
 an activation function is the sigmoid function ϕ(x) =
 1

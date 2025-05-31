@@ -381,30 +381,26 @@ channels. The filter F is convolved with the image I ∈ Rw×h×d to produce a n
 The output image I 0 has only one channel. Each pixel I 0 (x, y) of the output image gets
 calculated by point-wise multiplication of one filter element with one element of the original
 image I:
-b k2w c
 
 I 0 (x, y) =
 
-ix =1−d k2w
+k
 
-kh
+b k2w c
 
-c
-2
-X
-
-b
+b 2h c
 
 X
-e
+
+X
 
 d
 X
 
 I(x + ix , y + iy , ic ) · F (ix , iy , ic )
 
-k
-iy =1−d 2h e ic =1
+ix =1−d k2w e iy =1−d kh e ic =1
+2
 
 This procedure is explained by Figure 2.1. It is essentially a discrete convolution.
 
@@ -656,7 +652,6 @@ wij · xj
 [2.1]
 
 j=1
-b k2w c
 
 o
 
@@ -664,18 +659,15 @@ o
 
 (I) = b +
 
-b
+k
 
-ix =1−d k2w
+b k2w c
 
-kh
+b 2h c
 
-c
-2
 X
 
 X
-e
 
 d
 X
@@ -684,8 +676,8 @@ Fz (ix , iy , ic ) · I(x + ix , y + iy , ic )
 
 [2.2]
 
-k
-iy =1−d 2h e ic =1
+ix =1−d k2w e iy =1−d kh e ic =1
+2
 
 with a bias b ∈ R, x ∈ { 1, . . . , w } , y ∈ { 1, . . . , h } and z ∈ { 1, . . . , d }
 
@@ -816,14 +808,7 @@ picked with probability pi = P ai aj . This assumes the activations ai are non-n
 aj ∈A
 
 Pooling is applied for three reasons: To get local translational invariance, to get invariance
-against minor local changes and, most important, for data reduction to
-
-1
-th
-s2
-
-of the data by
-
+against minor local changes and, most important, for data reduction to s12 th of the data by
 using strides of s > 1.
 See Figure 2.3 for a visualization of max pooling.
 2
@@ -896,9 +881,7 @@ Figure 2.3.: 2 × 2 max pooling applied to a feature map of size 6 × 4 with str
 Average pooling of p × p areas with stride s can be replaced by a convolutional layer. If
 the input of the pooling layer are d(i−1) feature maps, the convolutional layer has to have
 d(i−1) filters of size p × p and stride s. The ith filter has the values
-
-
-1
+1
 p2
 
 .
@@ -967,11 +950,8 @@ B)i,j := (A)i,j (B)i,j
 
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
 Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout probability than later layers. In order to keep the expected output at the same value, the
-output of a dropout layer is multiplied with
-
 1
-1−p
-
+output of a dropout layer is multiplied with 1−p
 when dropout is enabled [Las17, tf-16b].
 
 At inference time, dropout is disabled.
@@ -1001,27 +981,18 @@ point-wise to
 x(k) − x̄(k)
 x̂(k) = p
 s0 [x(k) ]2 + ε
-with x̄(k) =
-
 1
-m
+with x̄(k) = m
 
 (k)
+(k)
+1 Pm
+(k)
+being the sample mean and s0 [x(k) ]2 = m
 i=1 xi
+i=1 (xi − x̄ ) the
 
 Pm
-
-being the sample mean and s0 [x(k) ]2 =
-
-1
-m
-
-(k)
-i=1 (xi
-
-Pm
-
-− x̄(k) ) the
 
 sample variance where m ∈ N≥1 is the number of training samples per mini-batch, ε > 0
 (k)
@@ -1144,13 +1115,9 @@ aspect to using the group network without an aggregation block.
 Dense blocks are collections of convolutional layers which are introduced in [HLW16]. The
 idea is to connect each convolutional layer directly to subsequent convolutional layers.
 Traditional CNNs with L layers and one input layer have L connections between layers,
-but dense blocks have
-
-L(L+1)
-2
-
+but dense blocks have L(L+1)
 connections between layers. The input feature maps are
-
+2
 concatenated in depth. According to the authors, this prevents features from being relearned and allows much fewer filters per convolutional layer. Where AlexNet and VGG-16
 have several hundred filters per convolutional layer (see Tables D.2 and D.3), the authors
 used only on the order of 12 feature maps per layer.
@@ -1239,25 +1206,25 @@ P PK
 diagonal cii and all wrong classifications are of the diagonal. The sum K
 i=1
 j=1 cij is the
-total number of samples which were evaluated and
-
 P
-cii
-PK
-PK i=1
+
+c
+
 i=1
+
+j=1 cij
+
+ii
+PK
+total number of samples which were evaluated and PK i=1
 
 The sums r(i) =
 
-PK
-
-j=1 cij
-
-j=1 cij
-
 is the accuracy.
 
-of each class i are worth being investigated as they show if the
+PK
+
+j=1 cij of each class i are worth being investigated as they show if the
 
 classes are skewed. If the number of samples of one class dominates the data set, then the
 classifier can get a high accuracy by simply always prediction the most common class. If
@@ -1450,9 +1417,10 @@ One problem of accuracy as a quality criterion are skewed classes. If one class 
 more common than all other classes, then the simplest way to achieve a high score is to
 always classify everything as the most common class.
 In order to fix this problem, one can use the mean accuracy:
+k
+
 mean-accuracy(c) =
 
-k
 1 X cii
 ·
 ∈ [0, 1]
@@ -1646,9 +1614,11 @@ VGG-16 (see Appendix D.3) have many filters which are highly correlated. They fo
 this by comparing the averaged maximum k-translational correlation of the networks with
 Gaussian-distributed initialized filters. The averaged maximum k-translational correlation
 is defined as
-ρ̄k (W) =
 
 N
+
+ρ̄k (W) =
+
 1 X N
 max ρk (Wi , Wj )
 j=1,j6=i
@@ -2132,17 +2102,6 @@ Conv-Block(2) is added at the input. For MNIST, the images are bilinearly upsamp
 15
 16
 
-Input
-Convolution
-BN + ELU
-Convolution
-BN + ELU
-Max pooling
-
-Filters @
-Patch size / stride
-32 @ 3 × 3 × 3
-
 Parameters
 
 FLOPs
@@ -2163,80 +2122,12 @@ Output size
 163 904
 40 960
 
-3 @ 32 ×
-32 @ 32 ×
-32 @ 32 ×
-32 @ 32 ×
-32 @ 32 ×
-32 @ 16 ×
-
-32
-32
-32
-32
-32
-16
-
-9 420 800
-82 048
-18 857 984
-82 048
-20 480
-4 714 496
-20 608
-5 120
-1 048 064
-3 584
-0
-523 776
-3 584
-0
-1024 · k
-k
-7k
-
-64 @ 16 ×
-64 @ 16 ×
-64 @ 16 ×
-64 @ 16 ×
-64 @ 8 ×
-64 @ 8 ×
-64 @ 8 ×
-64 @ 4 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-k @ 1×
-k @ 1×
-k @ 1×
-
-16
-16
-16
-16
-8
-8
-8
-4
-1
-1
-1
-1
-1
-1
-1
-1
-1
-
-/1
-
-32 @ 3 × 3 × 32 / 1
-2×2
-
-/2
+3 @ 32 × 32
+32 @ 32 × 32
+32 @ 32 × 32
+32 @ 32 × 32
+32 @ 32 × 32
+32 @ 16 × 16
 
 Convolution
 64 @ 3 × 3 × 32 / 1
@@ -2280,15 +2171,70 @@ Global avg Pooling
 0
 BN + Softmax
 2k
+
+9 420 800
+82 048
+18 857 984
+82 048
+20 480
+4 714 496
+20 608
+5 120
+1 048 064
+3 584
+0
+523 776
+3 584
+0
+1024 · k
+k
+7k
+
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 8 × 8
+64 @ 8 × 8
+64 @ 8 × 8
+64 @ 4 × 4
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+k @ 1× 1
+k @ 1× 1
+k @ 1× 1
+
 515k
 +892 512
-
-P
 
 1032k
 +55 729 664
 
 103 424+2k
+
+Input
+Convolution
+BN + ELU
+Convolution
+BN + ELU
+Max pooling
+
+Filters @
+Patch size / stride
+32 @ 3 × 3 × 3
+
+/1
+
+32 @ 3 × 3 × 32 / 1
+2×2
+
+/2
+
+P
 
 Table 5.1.: Baseline architecture with 3 input channels of size 32 × 32. All convolutional layers
 use SAME padding, except for layer 11 which used VALID padding in order to decrease
@@ -2303,9 +2249,11 @@ max pooling 2 × 2/2
 16 × 16
 
 max pooling 2 × 2/2
-8×8
 
 max pooling 2 × 2/2
+
+8×8
+
 4×4
 
 C 512@1 × 1/1
@@ -2378,23 +2326,14 @@ Test Set
 94.12 %
 99.02 %
 
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-
-= 3.49
-= 1.10
-= 1.48
-= 0.00
-= 0.42
-= 0.07
-= 0.87
-= 0.07
+σ = 3.49
+σ = 1.10
+σ = 1.48
+σ = 0.00
+σ = 0.42
+σ = 0.07
+σ = 0.87
+σ = 0.07
 
 94.37 %
 85.84 %
@@ -2405,23 +2344,14 @@ Test Set
 75.67 %
 96.28 %
 
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-
-= 3.47
-= 0.87
-= 0.55
-= 0.11
-= 0.10
-= 0.06
-= 0.34
-= 0.10
+σ = 3.47
+σ = 0.87
+σ = 0.55
+σ = 0.11
+σ = 0.10
+σ = 0.06
+σ = 0.34
+σ = 0.10
 
 Ensemble of 10
 Training Set Test Set
@@ -2612,13 +2542,9 @@ training. The image might lead to the wrong conclusion that models which are bet
 the start are also better at the end. In order to check this hypothesis, the relative order of
 validation accuracies for the 10 CIFAR-100 models was examined. If the relative ordering
 stays approximately the same, then it can be considered to run the first few epochs many
-times and only train the best models to the end. For 10 models, there can be
-
-102 −10
 2
 
-= 45
-
+times and only train the best models to the end. For 10 models, there can be 10 2−10 = 45
 pair-wise changes in the ordering at maximum if the relative order of validation accuracies
 is reversed. For the baseline model, 21.8 changes in the relative order of accuracies occurred
 in average for each pair of epochs (i, i + 1). This means if one knows only the relative order
@@ -3196,31 +3122,32 @@ Layer
 Filter count
 Baseline New
 
+Total
+parameters
+
+64
+64
+512
+512
+512
+
+5 978 566
+8 925 622
+5 982 698
+1 731 980
+5 982 092
+
 9
 9
 11
 11
 13
 
-64
-64
-512
-512
-512
-
 638
 974
 3786
 1024
 8704
-
-Total
-parameters
-5 978 566
-8 925 622
-5 982 698
-1 731 980
-5 982 092
 
 Table 5.7.: Models which are identical to the baseline, except that the number of filters of one layer
 was increased.
@@ -3240,6 +3167,9 @@ Model
 Parameters
 
 Single Model
+Mean
+
+std
 
 Training
 
@@ -3249,9 +3179,7 @@ Mean Epochs
 
 Mean Time
 
-Mean
-
-std
+baseline
 
 944 012
 
@@ -3334,8 +3262,6 @@ m13
 147.8
 
 4485 s
-
-baseline
 
 Table 5.8.: Training time in epochs and wall-clock time for the baseline and models m9 , m11 , m13
 as well as their accuracies.
@@ -3518,13 +3444,14 @@ Mean total
 
 Single model
 
+Ensemble
+
 training time
 
 Accuracy
 
 std
 
-Ensemble
 Accuracy
 
 8
@@ -3544,7 +3471,14 @@ s
 
 16
 
-62
+s
+62 epoch
+s
+35 epoch
+s
+25 epoch
+s
+18 epoch
 
 103 – 173
 
@@ -3556,10 +3490,6 @@ s
 
 66.98 %
 
-32
-
-35
-
 119 – 179
 
 5171 s
@@ -3569,10 +3499,6 @@ s
 σ = 0.75
 
 65.89 %
-
-64
-
-25
 
 133 – 195
 
@@ -3584,19 +3510,6 @@ s
 
 64.70 %
 
-128
-
-18
-
-s
-epoch
-s
-epoch
-s
-epoch
-s
-epoch
-
 145 – 239
 
 3126 s
@@ -3606,6 +3519,10 @@ epoch
 σ = 0.73
 
 63.55 %
+
+32
+64
+128
 
 Table 5.9.: Training time per epoch and single model test set accuracy (mean and standard deviation)
 of baseline models trained with different mini-batch sizes m on GTX 970 GPUs on
@@ -3792,6 +3709,8 @@ Yes
 
 Yes
 
+ReLU
+
 Yes1
 
 No
@@ -3829,8 +3748,6 @@ No
 Yes
 
 No
-
-ReLU
 
 Table 5.10.: Properties of activation functions.
 
@@ -4483,19 +4400,12 @@ Output size
 353 418
 40 960
 
-3 @ 32 ×
-69 @ 32 ×
-69 @ 32 ×
-69 @ 32 ×
-69 @ 32 ×
-32 @ 16 ×
-
-32
-32
-32
-32
-32
-16
+3 @ 32 × 32
+69 @ 32 × 32
+69 @ 32 × 32
+69 @ 32 × 32
+69 @ 32 × 32
+32 @ 16 × 16
 
 39 808
 128
@@ -4530,41 +4440,23 @@ Output size
 k
 7k
 
-64 @ 16 ×
-64 @ 16 ×
-64 @ 16 ×
-64 @ 16 ×
-64 @ 8 ×
-64 @ 8 ×
-64 @ 8 ×
-64 @ 4 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-512 @ 1 ×
-k @ 1×
-k @ 1×
-k @ 1×
-
-16
-16
-16
-16
-8
-8
-8
-4
-1
-1
-1
-1
-1
-1
-1
-1
-1
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 16 × 16
+64 @ 8 × 8
+64 @ 8 × 8
+64 @ 8 × 8
+64 @ 4 × 4
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+512 @ 1 × 1
+k @ 1× 1
+k @ 1× 1
+k @ 1× 1
 
 514k
 +947 654
@@ -4572,10 +4464,10 @@ k @ 1×
 520k
 +87 870 996
 
+179 200+2k
+
 36 928
 128
-
-179 200+2k
 
 Table 5.14.: Optimized architecture with 3 input channels of size 32 × 32. All convolutional layers
 use SAME padding, except for layer 11 which used VALID padding in order to decrease
@@ -4663,23 +4555,14 @@ Test Set
 95.43 %
 99.08 %
 
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-
-= 4.70
-= 0.70
-= 2.18
-= 0.00
-= 0.45
-= 0.10
-= 3.57
-= 0.07
+σ = 4.70
+σ = 0.70
+σ = 2.18
+σ = 0.00
+σ = 0.45
+σ = 0.10
+σ = 3.57
+σ = 0.07
 
 90.75 %
 87.92 %
@@ -4690,23 +4573,14 @@ Test Set
 75.09 %
 96.37 %
 
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-σ
-
-= 4.73
-= 0.46
-= 0.73
-= 0.10
-= 0.15
-= 0.13
-= 2.39
-= 0.12
+σ = 4.73
+σ = 0.46
+σ = 0.73
+σ = 0.10
+σ = 0.15
+σ = 0.13
+σ = 2.39
+σ = 0.12
 
 Ensemble of 10
 Training Set Test Set
@@ -4905,6 +4779,8 @@ Dataset
 Early Stopping
 val. acc train loss
 
+Fixed epochs
+
 Asirra
 CIFAR-10
 CIFAR-100
@@ -4918,8 +4794,6 @@ STL-10
 85.92 %
 99.67 %
 78.66 %
-
-Fixed epochs
 
 96.01 %3
 91.75 %
@@ -5137,41 +5011,23 @@ Layer
 99-percentile interval
 filter
 bias
-[-0.50,
-[-0.21,
-[-0.20,
-[-0.15,
-[-0.14,
-[-0.08,
-[-0.08,
-[-0.10,
+[-0.50, 0.48]
+[-0.21, 0.19]
+[-0.20, 0.17]
+[-0.15, 0.14]
+[-0.14, 0.15]
+[-0.08, 0.08]
+[-0.08, 0.08]
+[-0.10, 0.11]
 
-0.48]
-0.19]
-0.17]
-0.14]
-0.15]
-0.08]
-0.08]
-0.11]
-
-[-0.06,
-[-0.07,
-[-0.07,
-[-0.05,
-[-0.04,
-[-0.00,
-[-0.00,
-[-0.01,
-
-0.07]
-0.07]
-0.05]
-0.06]
-0.03]
-0.00]
-0.00]
-0.01]
+[-0.06, 0.07]
+[-0.07, 0.07]
+[-0.07, 0.05]
+[-0.05, 0.06]
+[-0.04, 0.03]
+[-0.00, 0.00]
+[-0.00, 0.00]
+[-0.01, 0.01]
 
 Table A.1.: 99-percentile intervals for filter weights and bias weights by layer of a baseline model
 trained on CIFAR-100.
@@ -5657,8 +5513,6 @@ He
 
 α=0
 
-β=
-
 γ=0
 
 [HZRS15b]
@@ -5666,6 +5520,8 @@ He
 Orthogonal
 
 —
+
+β = n2in
 
 —
 
@@ -5682,9 +5538,6 @@ LSUV
 γ=0
 
 [MM15]
-
-2
-nin
 
 Table B.2.: Weight initialization schemes of the form w ∼ α · U[−1, 1] + β · N (0, 1) + γ.
 nin , nout are the number of units in the previous layer and the next layer. Typically,
@@ -5769,10 +5622,9 @@ t
 
 • Exponential Decay Learning Rate [SHY+ 13]: η(t) = η(0) · 10− k where t ∈ N0 is the
 training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
-until the learning rate is decreased by
-
 1
-10 th.
+th.
+until the learning rate is decreased by 10
 
 • Newbob Scheduling [new00]: Start with Performance Scheduling, then use Exponential
 Decay Scheduling.
@@ -5808,9 +5660,8 @@ CNNs have the following hyperparameters:
 Name
 Sign function†
 Heaviside
-function†
+step function†
 
-step
 Logistic function
 
 Function ϕ(x)
@@ -5854,7 +5705,10 @@ Tanh
 1+e−x
 x
 e −e−x
+= tanh(x)
 ex +e−x
+
+[−1, 1]
 
 ReLU†
 
@@ -5879,31 +5733,27 @@ log(e
 Softplus
 ELU
 
-= tanh(x)
-
 if x > 0
 
 α(ex − 1) if x ≤ 0
+xj
+
+(−∞, +∞)
 
 Softmax‡
 
-o(x)j =
+o(x)j = PKe
 
-xj
-PKe
-k=1
+[0, 1]K
 
 Maxout‡
 
-exk
-
 o(x) = maxx∈x x
 
-[−1, 1]
+(−∞, +∞)
 
-(−∞, +∞)
-[0, 1]K
-(−∞, +∞)
+xk
+k=1 e
 
 sech
  (x)
@@ -5959,18 +5809,17 @@ as it produces a probability distribution. See Figure B.1 for a plot of some of 
 α is a hyperparameter in leaky ReLU, but a learnable parameter in the parametric ReLU function.
 
 2.0
-1
-1+e−x
-
-ϕ1 (x) =
+ϕ1 (x) = 1+e1−x
 ϕ2 (x) = tanh(x)
-ϕ3 (x) = max(0, x)
-ϕ4 (x) = log(ex + 1)
-ϕ5 (x) = max(x, ex − 1)
 
 y
 
 1.5
+
+ϕ3 (x) = max(0, x)
+ϕ4 (x) = log(ex + 1)
+ϕ5 (x) = max(x, ex − 1)
+
 1.0
 0.5
 x
@@ -6055,14 +5904,9 @@ FLOPs. The total number of FLOPs is 2n · (k · w · h) + n · nϕ .
 • As Dropout is only calculated during training, the number of FLOPs was set to 0.
 • The number of FLOPs for max pooling is dominated by the number of positions to
 which the pooling kernel is applied. For a feature map of size w × h a max pooling
-filter with stride s gets applied
-
-w·h
-.
+filter with stride s gets applied w·h
+. The number of FLOPs per application depends
 s2
-
-The number of FLOPs per application depends
-
 on the kernel size. A 2 × 2 kernel is assumed to need 5 FLOPs.
 • The number of FLOPs for Batch Normalization is the same as the number of its
 parameters.
@@ -6153,6 +5997,8 @@ Parameters
 
 FLOPs
 
+Output size
+
 0
 156
 2
@@ -6171,11 +6017,6 @@ FLOPs
 20 580
 1 730
 
-61 710
-
-15 144 446
-
-Output size
 1 @ 32 × 32
 6 @ 28 × 28
 6 @ 14 × 14
@@ -6184,6 +6025,11 @@ Output size
 120
 84
 10
+
+61 710
+
+15 144 446
+
 9118
 
 Table D.1.: LeNet-5 architecture: After layers 1, 3, 5 and 6 the tanh activation function is applied.
@@ -6243,6 +6089,43 @@ Parameters
 FLOPs
 
 Output size
+3 @ 224 × 224
+96 @ 55 × 55
+96 @ 55 × 55
+96 @ 27 × 27
+256 @ 13 × 13
+256 @ 13 × 13
+256 @ 13 × 13
+384 @ 13 × 13
+384 @ 13 × 13
+256 @ 13 × 13
+256 @ 6 × 6
+4096
+4096
+1000
+1 122 568
+
+96 @ 11 × 11 × 3 / 4
+
+34 944
+
+3×3
+/2
+256 @ 5 × 5 × 48 / 1
+
+0
+307 456
+
+3×3
+/2
+384 @ 3 × 3 × 256 / 1
+384 @ 3 × 3 × 192 / 1
+256 @ 3 × 3 × 192 / 1
+3×3
+/2
+4096 neurons
+4096 neurons
+1000 neurons
 
 0
 885 120
@@ -6267,52 +6150,9 @@ Output size
 34 M
 8M
 
-3 @ 224 × 224
-96 @ 55 × 55
-96 @ 55 × 55
-96 @ 27 × 27
-256 @ 13 × 13
-256 @ 13 × 13
-256 @ 13 × 13
-384 @ 13 × 13
-384 @ 13 × 13
-256 @ 13 × 13
-256 @ 6 × 6
-4096
-4096
-1000
-
 60 965 224
 
 3300 M
-
-1 122 568
-
-96 @ 11 × 11 × 3 / 4
-
-34 944
-
-3×3
-/2
-256 @ 5 × 5 × 48 / 1
-
-0
-307 456
-
-3×3
-384 @ 3 × 3 × 256
-384 @ 3 × 3 × 192
-256 @ 3 × 3 × 192
-3×3
-4096 neurons
-4096 neurons
-1000 neurons
-
-/2
-/1
-/1
-/1
-/2
 
 Table D.2.: AlexNet architecture: One special case of AlexNet is grouping of convolutions due to
 computational restrictions at the time of its development. This also reduces the number
@@ -6343,15 +6183,19 @@ Input
 224 × 224
 
 max pooling 2 × 2/1
+
+max pooling 2 × 2/1
+
+max pooling 2 × 2/1
+
+max pooling 2 × 2/1
+
 112 × 112
 
-max pooling 2 × 2/1
 56 × 56
 
-max pooling 2 × 2/1
 28 × 28
 
-max pooling 2 × 2/1
 14 × 14
 
 max pooling 2 × 2/1
@@ -6444,52 +6288,37 @@ FC
 
 Filters @
 Patch size / stride
-64 @ 3 × 3 × 3
-64 @ 3 × 3 × 64
-2×2
-128 @ 3 × 3 × 64
-128 @ 3 × 3 × 128
-2×2
-256 @ 3 × 3 × 128
-256 @ 3 × 3 × 256
-256 @ 3 × 3 × 256
-2×2
-512 @ 3 × 3 × 256
-512 @ 3 × 3 × 512
-512 @ 3 × 3 × 512
-2×2
-512 @ 3 × 3 × 512
-512 @ 3 × 3 × 512
-512 @ 3 × 3 × 512
-2×2
-4096 neurons
-4096 neurons
-1000 neurons
-
-/1
-/1
-/2
-/1
-/1
-/2
-/1
-/1
-/1
-/2
-/1
-/1
-/1
-/2
-/1
-/1
-/1
-/2
 
 Parameters
 
 FLOPs
 
 Output size
+
+64 @ 3 × 3 × 3 / 1
+64 @ 3 × 3 × 64 / 1
+2×2
+/2
+128 @ 3 × 3 × 64 / 1
+128 @ 3 × 3 × 128 / 1
+2×2
+/2
+256 @ 3 × 3 × 128 / 1
+256 @ 3 × 3 × 256 / 1
+256 @ 3 × 3 × 256 / 1
+2×2
+/2
+512 @ 3 × 3 × 256 / 1
+512 @ 3 × 3 × 512 / 1
+512 @ 3 × 3 × 512 / 1
+2×2
+/2
+512 @ 3 × 3 × 512 / 1
+512 @ 3 × 3 × 512 / 1
+512 @ 3 × 3 × 512 / 1
+2×2
+/2
+4096 neurons
 
 1 792
 36 928
@@ -6570,6 +6399,9 @@ Output size
 
 15 245 800
 
+4096 neurons
+1000 neurons
+
 Table D.3.: VGG-16 D architecture: The authors chose to give only layers a number which have
 learnable parameters. All convolutions are zero padded to prevent size changes and
 use ReLU activation functions. The channels mean is subtracted from each pixel as
@@ -6626,9 +6458,6 @@ P
 3×
 
 Type
-
-Parameters
-
 Input
 Stem
 Inception A
@@ -6640,6 +6469,10 @@ Global Average Pooling
 Dropout (p=0.8)
 Softmax
 
+Parameters
+
+Output size
+
 605 728
 317 632
 2 306 112
@@ -6650,36 +6483,15 @@ Softmax
 0
 1 537 000
 
-Output size
-3
-384
-384
-1024
-1024
-1536
-1536
-1536
-1536
-
-@
-@
-@
-@
-@
-@
-@
-@
-@
-
-299 × 299
-35 × 35
-35 × 35
-17 × 17
-17 × 17
-8× 8
-8× 8
-1× 1
-1× 1
+3 @ 299 × 299
+384 @ 35 × 35
+384 @ 35 × 35
+1024 @ 17 × 17
+1024 @ 17 × 17
+1536 @ 8 × 8
+1536 @ 8 × 8
+1536 @ 1 × 1
+1536 @ 1 × 1
 1000
 
 42 679 816
@@ -6849,6 +6661,13 @@ GTSRB
 
 [SSSI, SSSI12]
 
+Asirra3
+
+(4 px − 500 px)
+×(4 px − 500 px)
+480 px × 640 px
+and 640 px × 480 px
+
 25 000
 
 2
@@ -6865,13 +6684,7 @@ GTSRB
 
 [Mar08, MS07]
 
-Asirra3
 Graz-02
-
-(4 px − 500 px)
-×(4 px − 500 px)
-480 px × 640 px
-and 640 px × 480 px
 
 Table E.1.: An overview over publicly available image databases for classification. The number
 of images row gives the sum of the training and the test images. Some datasets, like
@@ -6886,7 +6699,13 @@ Asirra is a CAPTCHA created by Microsoft and was used in the “Cats vs Dogs” 
 
 97
 
-Dataset
+Result
+
+Score
+
+Achieved /
+
+Dataset
 
 Model type / name
 
@@ -6894,34 +6713,25 @@ MNIST
 
 —
 
-HASYv2
-
-TF-CNN
-
-SVHN
-
-DenseNet (k = 24)
-
-CIFAR-10
-
-DenseNet-BC (k = 40)
-
-CIFAR-100
-
-Result
-
-Score
-
-Achieved /
-Claimed by
+0.21 %
 
 error
 
 [WZZ+ 13]
 
+HASYv2
+
+TF-CNN
+
+81.00 %
+
 accuracy
 
 [Tho17a]
+
+SVHN
+
+DenseNet (k = 24)
 
 1.59 %
 
@@ -6929,11 +6739,17 @@ error
 
 [HLW16]
 
+CIFAR-10
+
+DenseNet-BC (k = 40)
+
 3.46 %
 
 error
 
 [HLW16]
+
+CIFAR-100
 
 WRN-28-10
 
@@ -7013,8 +6829,7 @@ accuracy
 
 [BMDP10]
 
-0.21 %
-81.00 %
+Claimed by
 
 Table E.2.: An overview over state of the art results achieved in computer vision datasets.
 
@@ -7537,13 +7352,14 @@ Available: https://arxiv.org/abs/1202.2745v1
 
 D.-A. Clevert, T. Unterthiner, and S. Hochreiter, “Fast and accurate
 deep network learning by exponential linear units (ELUs),”
-preprint arXiv:1511.07289,
+
+arXiv
 
 Nov. 2015. [Online]. Available:
 
-arXiv
 https:
 
+preprint arXiv:1511.07289,
 //arxiv.org/abs/1511.07289
 [CWV+ 14]
 

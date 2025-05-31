@@ -589,6 +589,133 @@ guard in our code which takes the ratio tcoll/∆t and rounds it
 to the nearest integer. We take this integer to be the number of
 collisions and increase the BH mass accordingly.
 
+IMBH ForMATION IN GALACTIC NUCLEI 3
+
+ 
+
+1015 4
+
+1013 4
+
+101! 4
+
+Timescale [yr]
+
+10? 4
+
+107 4
+
+ 
+
+ 
+
+ 
+
+ 
+
+107 10-2 10-1 10°
+Distance from SMBH [pc]
+
+Figure 1. We plot the relevant timescales, including col-
+lision (green), relaxation (gold), and BH-BH GW capture
+(purple), for a single BH in the GN as a function of distance
+from the SMBH. For the collision timescale, we assume the
+BH is on a circular orbit. The timescales depend on the
+density, so we adopt a range of density profiles, bounded by
+a = 1 (dashed curve) to a = 2 (dark, solid curve). The dark
+blue line represents the time for a 10° Mo BH to merge with
+the SMBH through GW emission.
+
+that this timescale equation includes the effects of grav-
+itational focusing, which enhances the cross-section of
+interaction.
+
+Assuming a circular orbit for simplicity, we plot the
+timescale for a BH orbiting in the GN to collide with
+a 1Mo star as a function of distance from the SMBH
+in Figure 1.2 As this timescale depends on the density
+of surrounding stars, we adopt a density profile of the
+form:
+
+p(s) = po (2) - (2)
+
+where r, denotes the distance from the SMBH. We adopt
+a SMBH mass of 4 x 10° Mo such that our fiducial GN
+matches our own galactic center (e.g., Ghez et al. 2005;
+Genzel et al. 2003). In this case, the normalization in
+Eq. (2) is po = 1.35 x 10° Ma /pc? at ro = 0.25 pe (Gen-
+zel et al. 2010). Additionally, in Eq. (2), a gives the
+slope of the power law. We assume that a uniform pop-
+ulation of solar mass stars account for most of the mass
+in the GN, making the stellar number density:
+
+ 
+
+The collision timescale also depends on the velocity dis-
+persion, which we express as:
+
+GM.
+
+re(1+a)’ (4)
+
+o(Te) =
+where a is the slope of the density profile and M, de-
+notes the mass of the SMBH (Alexander 1999; Alexan-
+der & Pfuhl 2014). As mentioned above, Eq. (1) depends
+on the sum of the radii of the colliding objects, r-. We
+take r- = 1 Re because these interactions involve a BH
+and a star, and the former has a much smaller physi-
+cal cross-section. For example, the Schwarzschild radius
+of a 10 Ms BH is only 30 km, or 4.31 x 107° Ro. For
+this reason, direct collisions between compact objects
+are very rare and not included in our model.
+
+We note that direct collisions between BHs, via GW
+emission, were shown to be efficient in nuclear star clus-
+ters without SMBHs (e.g., Portegies Zwart & McMil-
+lan 2000; O’Leary et al. 2006; Rodriguez et al. 2016).
+However, in the GN, star-BH collisions are much more
+frequent than direct BH-BH collisions. As depicted in
+Figure 1, the star-BH collision timescale for a range
+of density profiles is many orders of magnitude shorter
+than the BH-BH GW collision timescale (for the rele-
+vant equations, see O’Leary et al. 2009; Gondan et al.
+2018, for example). Thus, we expect that star-BH col-
+lisions will be the main driver of IMBH growth in the
+GN.
+
+2.3. Statistical Approach to Collisions
+
+We simulate the mass growth of a population of BHs
+with initial conditions detailed in Section 2.1. Over an
+increment At of 10° yr, we calculate the probability of
+a collision occurring, given by At/t.on. This choice of
+At is motivated by our galactic center’s star formation
+timescale (e.g., Lu et al. 2009), allowing for regular re-
+plenishment of the stellar population in the GN. We have
+checked that the results are not sensitive to this choice
+of At, omitted here to avoid clutter. We draw a number
+between 0 and 1 using a random number generator. If
+that number is less than or equal to the probability, we
+increase the BH’s mass by Am, the mass that the BH is
+expected to accrete in a single collision (see Section 2.4
+for details). We recalculate the collision timescale using
+the updated BH mass and repeat this process until the
+time elapsed equals the simulation time of 10 Gyr?.
+
+_ ple)
+n(re) = 5 Mo (3)
+
+2 We note that the eccentricity has a very minor effect on the
+collision timescale (Rose et al. 2020).
+
+3 Closer to the SMBH, At may exceed the collision timescale by
+a factor of a few for steep density profiles. We include a safe-
+guard in our code which takes the ratio tgo/At and rounds it
+to the nearest integer. We take this integer to be the number of
+collisions and increase the BH mass accordingly.
+
+
 
 
 4 Rose et al.
@@ -771,6 +898,142 @@ Eq. 7 does not apply for other values of α. When the
 collision timescale is shorter, corresponding to a larger
 
 index α in the density profile (see Figure 1), the growth
+
+4 ROSE ET AL.
+
+2.4. Mass Growth
+
+When a BH collides with a star, it may accrete ma-
+terial and grow in mass. The details of the accretion
+depend on the relative velocity between the BH and
+star. For simplicity, this calculation assumes that the
+two objects experience a head on collision, with the BH
+passing through the star’s center. We begin by con-
+sidering the escape velocity from the BH at the star’s
+outermost point, its surface, which corresponds to the
+maximum impact parameter 1 Ro. Qualitatively, one
+might expect that the BH could accrete the entire star
+(i.e, Am ~ 1 Mo) if the relative velocity is smaller than
+the escape velocity from the BH at this point. However,
+in the vicinity of the SMBH, the dispersion velocity of
+the stars may be much larger than the escape velocity
+from the BH at the star’s surface. In this case, the BH
+accretes a “tunnel” of material through the star. This
+tunnel has radius equal to the Bondi radius and length
+approximately 1 Ro.
+
+To estimate Am, we begin with the Bondi-Hoyle ac-
+cretion rate, m, given by:
+
+jn = Ember )
+(2 + 02)°?
+where c, is the speed of sound in the star and Pgtar is its
+density (e.g., Bondi 1952; Bondi & Hoyle 1944; Shima
+et al. 1985; Edgar 2004, see latter for a review). We
+approximate the density as 1 Mo/(47R3,/3) and take
+the conservative value of c, = 500 km s~!, which is
+consistent with the sound speed inside a 1 Mo star
+(Christensen-Dalsgaard et al. 1996) and allows us to set
+a lower limit on Am. To find Am, at each collision, we
+have:
+Am = min(m x ty,cross, 1 Mo) , (6)
+
+where ty cross ~ Ro/o is the crossing time of the BH in
+the star. We take the minimum between 7m x ty cross and
+1 Mo because the BH cannot accrete more mass than
+one star at each collision.
+
+Figure 2 juxtaposes the expected growth using Bondi-
+Hoyle-Lyttleton accretion (blue small points) with a
+much simpler model in which the BH accretes the star’s
+entire mass, 1 Mo (red large points). Both examples
+start with identical populations of 10 Mo BHs (grey)
+and simulate growth through collisions using a statisti-
+cal approach. As the BHs grow, the collision timescale,
+which depends on mgy, decreases. Simultaneously,
+Am, which also depends on mgy, increases. The re-
+sult is exponential growth (see discussion and details
+surrounding Eq. (8)). In Figure 2, however, the simula-
+tions assume a = 1 for the stellar density profile, ensur-
+ing the collision timescale is long compared to the sim-
+ulation time, 10 Gyr. Therefore, the BHs grow slowly,
+
+ 
+
+% Initial
+4x10) e AM=1M,
+« Bondi-Hoyle-Lyttleton
+
+ax 101 ¥
+
+"3 at .
+s
+=, Xie. ‘
+uw 2x10 ‘cs *
+m1 "A509,
+=
+10?
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+103 10°? 107? 10°
+
+Distance from SMBH [pc]
+
+Figure 2. We consider an example that highlights the mass
+growth as a function of distance from the SMBH. Grey dots
+represent the initial masses and distances from the SMBH
+of the BHs involved in the simulation. For simplicity, we set
+the inital mass equal to 10 Mo for all of the BHs. Assuming
+the density profile of stars has a = 1, we consider two cases:
+BHs accrete all of the star’s mass during a collision (red) and
+only a portion of the star’s mass is accreted during a collision
+given by Eq. 6 (blue). The latter case results in less growth
+closer to the SMBH where the velocity dispersion becomes
+high. The shaded regions and dashed lines represent the
+analytical predictions detailed in Section 2.4.
+
+and their final masses can be approximated using the
+following equation:
+
+ 
+
+Ménal(tco — Const.) = Minitial + Am - , (7)
+co.
+in which T represents the simulation time and Am and
+teoll remain constant, approximated as their initial val-
+ues.
+
+This equation is plotted in Figure 2 for both cases,
+Am = 1 Mg (red) and Am from Bondi-Hoyle-Lyttleton
+accretion (blue), and the curves coincide with the cor-
+responding simulated results. The shaded regions rep-
+resent one standard deviation from Eq. (7), calculated
+using the square root of the number of collisions, T’/teou.
+As indicated by the results in red, in the absence of
+Bondi-Hoyle-Lyttleton accretion, the BHs closest to the
+SMBH experience the most growth because they have
+shorter collision timescales. However, Bondi-Hoyle-
+Lyttleton accretion becomes important closer to the
+SMBH, where the velocity dispersion is large compared
+with the stars’ escape velocity, and curtails the mass
+growth for BHs in this region. Outside of 107? pc, a BH
+consumes the star’s entire mass: the accretion-limited
+Am governed by Eq. (7) is greater than or equal to the
+star’s mass.
+
+Eq. 7 does not apply for other values of a. When the
+collision timescale is shorter, corresponding to a larger
+index a in the density profile (see Figure 1), the growth
+
 
 
 
@@ -983,6 +1246,125 @@ pected to segregate inwards in the GN (e.g., Shapiro
 & Marchant 1978; Cohn & Kulsrud 1978; Morris 1993;
 
 Miralda-Escudé & Gould 2000; Baumgardt et al. 2004).
+
+IMBH ForMATION IN GALACTIC NUCLEI 5
+
+is very efficient and Am quickly approaches 1 Mg. Con-
+sequently, while we can now assume Am = 1Mo, we
+can no longer assume the collision timescale is constant.
+The final mass grows exponentially as a result. For
+Am = 1Mo, the general solution is reached by solving
+the differential equation dm/dt = 1 Mo/teon(m), which
+gives:
+
+Ménal(Am —+ 1Mo) =—A + (minitial + A) eT (8)
+
+where A = 07 Retar/G and C = 27GnstarRstar/7- As an
+example, we plot this curve in purple for the a = 2 case,
+in Figure 3, which agrees with the simulated masses.
+
+2.5. GW Inspiral
+
+When a BH is close to the SMBH, GW emission can
+circularize and shrink its orbit. We implement the ef-
+fects of GW emission on the BH’s semimajor axis and
+eccentricity following Peters & Mathews (1963a). The
+characteristic timescale to merge a BH with an SMBH
+is given by:
+
+tow ©2.9 x 10!2 yr Me _ BH _ -
+owes* 10° Mo 10° Mg
+
+M, + MBH “I Ge ‘
+* (5 x 108 a) (I ==)
+x f(es)(1— es)? , (9)
+
+where f(e.) is a function of e,. For all values of eé.,
+f (ee) is between 0.979 and 1.81 (Blaes et al. 2002). We
+plot this timescale for a 1 x 10° Mo BH in Figure 1 in
+blue.
+
+In our simulations, we assume a BH has merged with
+the SMBH when the condition tgw < telapsea is met.
+When this condition is satisfied, we terminate mass
+growth through collisions for that BH.*
+
+2.6. IMBH growth
+
+As detailed above, BH-stellar collisions can increase
+the BH masses as a function of time. Here, we examine
+the sensitivity of the BH growth to the density power
+law. From Eq. (1), it is clear that the growth rate de-
+pends on the stellar density profile, governed by the in-
+dex a. We expect that higher values of a, or steeper
+profiles, will result in more efficient mass growth. In
+Figure 1, larger values of a lead to collision timescales
+in the GN’s inner region, inwards of 0.25 pc, that are
+
+4 For comparison, we also incrementally changed the semimajor
+axis and eccentricity from GW emission following the equations
+in Peters & Mathews (1963b). This method leads to a slight
+increase in the final IMBH masses because it accounts for the
+collisions that take place while the orbit is gradually shrinking.
+
+much smaller that the 10 Gyr simulation time. Figure 3
+confirms this expectation. It depicts the mass growth of
+a uniform distribution of BHs with initial conditions de-
+tailed in Section 2.1 for five a values, spanning 1 (green)
+to 2 (purple). The most massive IMBHs form inwards
+of 0.25 pe for the a = 2 case.
+
+2.7. Gravitational Wave Mergers and Intermediate
+and Extreme Mass Ratio Inspiral Candidates
+
+Towards the SMBH, efficient collisions can create BHs
+massive enough to merge with the SMBH through GWs.
+Following the method detailed in Section 2.5, when a
+given BH meets the criterion tgw < telapsea, We mark
+it as merged with the SMBH. We assume that at this
+point the dynamics of the BH will be determined by GW
+emission, shrinking and circularizing the BHs orbit un-
+til it undergoes an extreme or intermediate mass ratio
+inspiral (EMRI and IMRI, respectively). The righthand
+plot in Figure 3 shows the BH masses versus time of
+merger. It is interesting to note that even in the ab-
+sence of relaxation processes, which are often invoked
+to explain the formation of EMRIs, EMRIs and notably
+IMRIs can form in this region.
+
+2.8. Two Body Relaxation Processes
+
+A BH orbiting the SMBH experiences weak gravita-
+tional interactions with other objects in the GN. Over a
+relaxation time, these interactions alter its orbit about
+the SMBH. The two-body relaxation timescale for a
+single-mass system is:
+
+o?
+
+relax — U- 4 — } 1
+trela 0.3 G2p(M,) In Aux ( 0)
+
+where In Ayjx is the Coulomb logarithm and (M,) is the
+average mass of the surrounding objects, here assumed
+to be 1 Mo (Spitzer 1987; Binney & Tremaine 2008,
+Eq. (7.106)). This equation represents the approximate
+timescale for a BH on a semi-circular orbit to change
+its orbital energy and angular momentum by order of
+themselves. The BH experiences diffusion in its angular
+momentum and energy as a function of time (depending
+on the eccentricity of the orbit, this process can be more
+efficient Fragione & Sari 2018; Sari & Fragione 2019). In
+Figure 1, we plot the relaxation timescale in gold for a
+range of a. We note that the Bahcall & Wolf (1976) pro-
+file, a = 7/4, corresponds to zero net flux and therefore
+does not preferentially migrate objects inward.
+Additionally, because they are more massive on
+average than the surrounding objects, BHs are ex-
+pected to segregate inwards in the GN (e.g., Shapiro
+& Marchant 1978; Cohn & Kulsrud 1978; Morris 1993;
+Miralda-Escudé & Gould 2000; Baumgardt et al. 2004).
+
 
 
 

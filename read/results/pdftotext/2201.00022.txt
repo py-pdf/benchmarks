@@ -3,14 +3,11 @@ Typeset using LATEX twocolumn style in AASTeX631
 
 The Formation of Intermediate Mass Black Holes in Galactic Nuclei
 Sanaea C. Rose,1, 2 Smadar Naoz,1, 2 Re’em Sari,3 and Itai Linial3
-1 Department
+1 Department of Physics and Astronomy, University of California, Los Angeles, CA 90095, USA
+2 Mani L. Bhaumik Institute for Theoretical Physics, University of California, Los Angeles, CA 90095, USA
 
 arXiv:2201.00022v1 [astro-ph.GA] 31 Dec 2021
 
-2 Mani
-
-of Physics and Astronomy, University of California, Los Angeles, CA 90095, USA
-L. Bhaumik Institute for Theoretical Physics, University of California, Los Angeles, CA 90095, USA
 3 Racah Institute for Physics, The Hebrew University, Jerusalem 91904, Israel
 
 ABSTRACT
@@ -42,9 +39,8 @@ form second generation BHs and, in some cases, intermediate mass BHs (IMBHs), th
 2021; Arca Sedda et al. 2021). However, IMBHs are
 not limited to these locations and may reside in galacCorresponding author: Sanaea C. Rose
 srose@astro.ucla.edu
-1
+1 Note that the exact lower and upper limits may be sensitive to
 
-Note that the exact lower and upper limits may be sensitive to
 metallicity of the progenitor (e.g., Woosley 2017; Spera & Mapelli
 2017a; Limongi & Chieffi 2018a; Sakstein et al. 2020; Belczynski
 et al. 2020a; Renzo et al. 2020; Vink et al. 2021).
@@ -214,7 +210,7 @@ slope of the power law. We assume that a uniform population of solar mass stars 
 in the GN, making the stellar number density:
 
 n(r• ) =
-2
+2 We
 
 ρ(r• )
 .
@@ -222,7 +218,7 @@ n(r• ) =
 
 (3)
 
-We note that the eccentricity has a very minor effect on the
+note that the eccentricity has a very minor effect on the
 collision timescale (Rose et al. 2020).
 
 where α is the slope of the density profile and M• denotes the mass of the SMBH (Alexander 1999; Alexander & Pfuhl 2014). As mentioned above, Eq. (1) depends
@@ -257,9 +253,8 @@ expected to accrete in a single collision (see Section 2.4
 for details). We recalculate the collision timescale using
 the updated BH mass and repeat this process until the
 time elapsed equals the simulation time of 10 Gyr3 .
-3
+3 Closer to the SMBH, ∆t may exceed the collision timescale by
 
-Closer to the SMBH, ∆t may exceed the collision timescale by
 a factor of a few for steep density profiles. We include a safeguard in our code which takes the ratio tcoll /∆t and rounds it
 to the nearest integer. We take this integer to be the number of
 collisions and increase the BH mass accordingly.
@@ -420,9 +415,8 @@ law. From Eq. (1), it is clear that the growth rate depends on the stellar densi
 profiles, will result in more efficient mass growth. In
 Figure 1, larger values of α lead to collision timescales
 in the GN’s inner region, inwards of 0.25 pc, that are
-4
+4 For comparison, we also incrementally changed the semimajor
 
-For comparison, we also incrementally changed the semimajor
 axis and eccentricity from GW emission following the equations
 in Peters & Mathews (1963b). This method leads to a slight
 increase in the final IMBH masses because it accounts for the
@@ -701,9 +695,9 @@ Arca Sedda, M., Mapelli, M., Benacquista, M., & Spera, M.
 Bahcall, J. N., & Wolf, R. A. 1976, ApJ, 209, 214,
 doi: 10.1086/154711
 
-5
+5 The connection between the observed X-ray sources at the Galac-
 
-The connection between the observed X-ray sources at the Galactic Center and tidal capture has been suggested by Generozov
+tic Center and tidal capture has been suggested by Generozov
 et al. (2018), but see Zhu et al. (2018); Stephan et al. (2019) for
 alternative channels.
 

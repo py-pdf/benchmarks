@@ -300,6 +300,147 @@ sociated Universities, Inc.
 
 Article number, page 2 of 10
 
+A&A proofs: manuscript no. mainArxiv
+
+tions (e.g., Mauersberger et al.|/1987) |1988; Walsh et al.|/2007;
+Henkel et al.|/2013; (Mei et al.|2020). Except for the NH3 (3,3)
+masers proposed to be associated with four supernova remnants
+(McEwen et al.|/2016), almost all the other ammonia masers are
+detected in high-mass star-forming regions (HMSFRs). How-
+ever, while many HMSFRs host water (H2O), hydroxyl (OH),
+or methanol (CH3;OH) masers, ammonia masers are quite rare
+in these sources, and the role that the environment of a young
+high-mass star plays in their excitation remains unclear. There-
+fore, dedicated searches for ammonia masers in HMSFRs are
+indispensable in regard to their overall incidence and associa-
+tion with different environments, which can provide additional
+constraints on the pumping mechanism of ammonia masers.
+
+So far, a total of 32 NH3 inversion transitions (AK = 0
+and AJ = 0) have been identified as masers. Among these, and
+despite arising from energy levels as high as 1090 K above
+the ground state, the NH3 (9,6) maser stands out as being the
+strongest and most variable one in W51-IRS2 (e.g., Henkel et al.
+2013). Maser emission in this line has only been detected in five
+HMSFRs, W51, NGC7538, W49, DR21 (OH) (Madden et al.
+1986), and Sgr B2(N) (Mei et al.|/2020). The NH3 (3,3) masers
+are thought to be collisionally excited (e.g., [Flower et al.||1990;
+Mangum & Wootten} |1994); in contrast, the pumping mecha-
+nism of NH3 (9,6) masers is less well constrained (Madden et al.
+1986). [Brown & Cragg) (1991) have studied ortho-ammonia and
+found that it could possibly pump the (6,3) inversion line, but
+they did not extend their model to the (9,6) transition due to the
+fact that collision rates are only known for inversion levels up to
+J = 6(e.g.,/Danby et al.1988).
+
+NH; (9,6) masers are found to be strongly variable, similar to
+H2O masers (Madden et al. 1986; Pratap et al. 1991; {Henkel et al.
+2013). In W51-IRS2, |Henkel et al.| (2013) found that the (9,6)
+line showed significant variation in line shape within a time in-
+terval of only two days. Mapping of the (9,6) maser toward W51
+with very long baseline interferometry (VLBI) suggests that the
+masers are closer to the H.O masers than to the OH masers or
+to ultracompact (UC) Hum regions (Pratap et al.||1991). While
+Henkel et al.) (2013) and|Godd1 et al.) (2015) showed that the SiO
+and NH3 masers in W51-IRS2 are very close to each other, their
+positions, differing by 0’/065 (~0.015 pc), do not fully coincide.
+
+In this paper we report the discovery of NH3 (9,6) masers
+in two HMSFRs, Cepheus A and G34.26+0.15. This increases
+the number of (9,6) maser detections in our Galaxy from five
+to seven. In Sect. 2] observations with the Effelsberg 100-meter
+telescope and the Karl G. Jansky Very Large Array (JVLA) are
+described. Results are presented in Sect. B| The morphology of
+Cep A and G34.26+0.15 as well as a comparison of the emission
+distributions of different tracers with the NH3 (9,6) masers are
+presented in Sect. | Our main results are summarized in Sect. 5}
+
+2. Observations and data reduction
+2.1. Effelsberg observations and data reduction
+
+The NH3 (9,6) line was observed toward Cep A and
+G34.26+0.15 with the 100-meter Effelsberg telescopd!| in 2020
+January and 2021 February, July, and August. The S14mm dou-
+ble beam secondary focus receiver was employed. The full width
+at half maximum (FWHM) beam size is 49” at 18.5 GHz, the
+frequency of the target line. The observations were performed in
+position switching mode, and the off position was 10’ in azimuth
+
+' Based on observations with the 100-meter telescope of the MPIfR
+(Max-Planck-Institut fiir Radioastronomie) at Effelsberg.
+
+Article number, page 2 of 10
+
+away from the source. For observations made before 2021 Au-
+gust, we used a spectrometer that covered 2 GHz wide backends
+with a channel width of 38.1 kHz, corresponding to ~0.62 km s~!
+at the line’s rest frequency, 18.49939 GHz (Poynter & Kakar
+1975). A high spectral resolution backend with 65536 channels
+and a bandwidth of 300 MHz was employed in 2021 August,
+providing a channel width of 0.07 km s7! at 18.5 GHz. Point-
+ing was checked every 2 hours using 3C 286 or NGC 7027.
+Focus calibrations were done at the beginning of the observa-
+tions and during sunset and sunrise toward the abovementioned
+pointing sources. The system temperatures were 100-130 K on
+a main-beam brightness temperature, T)yp, scale. This flux den-
+sity was calibrated assuming a Typ/S ratio of 1.95 K/Jy, derived
+from continuum cross scans of NGC 7027 (the flux density was
+adopted from |Ott et al.||1994)). Calibration uncertainties are esti-
+mated to be ~ 10%.
+
+We used the GILDAS/CLASS}| package (Pety|/2005) to re-
+duce the spectral line data. A first-order polynomial was sub-
+tracted from each spectrum for baseline removal.
+
+2.2. JVLA observations and data reduction
+
+Observations of the NH3 (9,6) line toward Cep A and
+G34.26+0.15 were obtained on 2021 July 13 with the JVLA
+of the National Radio Astronomy Observatoryp] (NRAO) in the
+C configuration (project ID: 21A-157, PI: Yaoting Yan). We
+employed 27 antennas for the observations. The primary beam
+of the JVLA antennas is 150’ (FWHM) at 18.5 GHz. A mix-
+ture of mixed three-bit and eight-bit samplers were used to per-
+form the observations. For the NH3 (9,6) line observations, we
+used one subband with the eight-bit sampler covering a band-
+width of 16 MHz with full polarization, eight recirculations, and
+four baseline board pairs (BIBPs) to provide a velocity range
+of 260 km s~! with a channel spacing of 0.13 km s~!. Two
+additional subbands of bandwidth 16 MHz were used to cover
+the NH3 (8,5) and (10,7) lines. The three-bit sampler with 32
+subbands, each with a bandwidth of 128 MHz to cover a to-
+tal range of 4 GHz between 20—24 GHz, was used to mea-
+sure the continuum emission. 3C 286 with a flux density of
+2.89 Jy at 18.5 GHz (Perley & Butler) |2013) was used as a
+calibrator for pointing, flux density, bandpass, and polarization.
+J2230+6946 and J1851+0035 served as gain calibrators for Cep
+A and G34.26+0.15, respectively. The on-source times were
+430° and 4’"50° toward Cep A and G34.26+0.15, respectively.
+
+Data from two antennas were lost due to technical is-
+sues. The data from the remaining 25 antennas were reduced
+through the Common Astronomy Software Applications pack-
+age (CASAFt McMullin et al.|2007)). We calibrated the data with
+the JVLA CASA calibration pipeline using CASA 6.1.2. The
+results were obtained after flagging data that contain artifacts.
+We inspected the phase, amplitude, and bandpass variations of
+the calibrated visibility data to search for additional artifacts be-
+fore imaging. Then, the uvcontsub task in CASA was used to
+separate the calibrated visibilities into two parts, one with line-
+only data and the other with the continuum data. The tclean task
+with a cell size of 02 and Briggs weighting with robust=0 was
+used to produce the images of spectral line and continuum emis-
+sion. The synthesized beams for NH3 (9,6) are 1’’47 x 0°99 at
+
+> https://www.iram.fr/IRAMFR/GILDAS/
+
+3 The National Radio Astronomy Observatory is a facility of the Na-
+tional Science Foundation operated under cooperative agreement by As-
+sociated Universities, Inc.
+
+4 https://casa.nrao.edu/
+
+
 
 
 Y. T. Yan (闫耀庭) et al.: Discovery of ammonia (9,6) masers in two high-mass star-forming regions
@@ -394,6 +535,217 @@ tainties, as unresolved.
 
 Article number, page 3 of 10
 
+Y. T. Yan (12) #2 #€) et al.: Discovery of ammonia (9,6) masers in two high-mass star-forming regions
+
+PA. = 58°79 and 17733 x 106 at PA. = 5°36 toward Cep A
+and G34.26+0.15, respectively. For the 1.36cm (20-24 GHz)
+continuum emission, the synthesized beams are 1’’08 x 0/’67 at
+P.A. = 60°64 and 095 x 071 at P.A. = 5°91 toward Cep A and
+G34.26+0.15. The typical absolute astrometric accuracy of the
+JVLA is ~10% of the synthesized beanp} The flux density scale
+calibration accuracy is estimated to be within 15%.
+
+ 
+
+ 
+
+   
+
+       
+    
+   
+ 
+
+ 
+
+  
+
+ 
+
+ 
+
+ 
+
+ 
+
+      
+  
+
+ 
+
+ 
+
+     
+
+  
+
+    
+
+ 
+
+ 
+
+ 
+
+   
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.6 fil a 7 0.3
+F | CepA 04-Jan-2020 J
+0.4 FI 4 O.2 6
+rE | Effelsberg 4 c
+0.2 Fl 4 O.1E
+| q c
+Of 4 OE
+E J o2k
+L J oo4k
+E | of
+E 4 o2F
+~ E J O15=
+> rt 4 E
+2 FE 4 OWE
+> E 7 0.056
+o G | OF
+c E' "| FE
+o E J 026
+x E 4 016
+i E 0
+—0.9 BH 0-1
+Fi fF 0.1E
+0.5 Fi 4 0.05 F Ht)
+E | f  O; rh
+Of c) — Et ty
+7 BRE EEE 0.09 HAH EH
+t | Effelsberg 12-Aug-2021]. E | 12-Aug-2021
+0.5 FI + E Ln) dl 5
+E | {| 0 !
+Ok 1
+—10 0 10 40 50 60 70
+
+Velocity (km/s)
+
+Velocity (km/s)
+
+Fig. 1. Spectra from NH; (9,6) transition lines. Left: Top to bottom:
+Time sequence of NH3 (9,6) profiles observed toward Cep A with the
+Effelsberg 100-meter telescope (after subtracting a first-order polyno-
+mial baseline). A JVLA spectrum is interspersed. The systemic veloc-
+ity from CO and HCO? lines is indicated by a dashed blue line. The
+two dashed red lines at LSR velocities, Visp, of —0.90 km s7! and
+—0.28 km s7! indicate the central velocities of the two major compo-
+nents. Right: NH; (9,6) spectra from G34.26+0.15. The systemic ve-
+locity from C!70 is indicated by a dashed blue line. The three dashed
+red lines at Visp = 54.1 kms7!, 55.8 km s7!, and 62.5 kms“! show the
+central velocities of the main ammonia emission components.
+
+3. Results
+
+The spectra from different epochs are shown in Figs. [I] and 2}
+Toward Cep A, the NH3 (9,6) line profile from the JVLA is ex-
+tracted from an Effelsberg-beam-sized region (FWHM, 49’). In
+the case of G34.26+0.15, the NH3 spectrum is below the noise
+level if a similarly large beam size is used. Therefore, we de-
+rived the JVLA NHs3 (9,6) spectrum from a smaller region, with
+radius 3’’5, that contains all the detected NH3 (9,6) emission. In
+Table [A.1] the observed NH; (9,6) line parameters obtained by
+Gaussian fits are listed. NH3 (8,5) and (10,7) emission is not de-
+tected by our JVLA observations. The 3a upper limits for the
+NH; (8,5) and (10,7) lines toward Cep A are 23.2 mJy beam™!
+
+> https://science.nrao.edu/facilities/vla/docs/manuals/oss/performance-
+/positional-accuracy
+
+       
+  
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.04 F q (0.2 E-634.2640.15 | 13-Jul-2021 4
+0.02 F 401 BN Wid 4
+k i WL A
+Ss ° 4 0 EF ol 5
+LS Ei itt 4 O.1F ! 1
+E lEtfelsberg th—Aug—2021 4 E ertelcber ee
+S in f E
+S oR Po i
+3 O1F | EFfelsber 12-Au tin OTE ane 4
+tL F | 8 | 9 q EF Effelsberg ii 12-Aug~2021 4
+0.05 5 ii! J 0.05 i 3
+i | 4 A ei a
+0 i rl tH 0 i i
+E ll H E roid
+C —0.05 & |
+—10 0 10 45 50 55 60 65
+
+Velocity (km/s) Velocity (km/s)
+
+Fig. 2. NH; (9,6) line profiles emphasizing, in contrast to the spectra
+in Fig. [I] weaker features. Cep A spectra are presented on the left,
+G34.26+0.15 spectra on the right. The two dashed red lines in the left
+panels indicate Vi sp = 1.48 km s7! and 2.89 km s“!. In the right panels,
+the two dashed red lines refer to 54.1 kms"! and 55.8 kms"!.
+
+and 27.2 mJy beam™', respectively. In G34.26+0.15, the corre-
+sponding 3c upper limits for the NH; (8,5) and (10,7) lines are
+22.1 mJy beam™! and 30.4 mJy beam™!. For both sources, sen-
+sitivity levels refer to emission from a single channel of width
+0.13 km s~!. Taking the larger measured line widths of the (9,6)
+maser features (see Table[A.1), these limits could be further low-
+ered by factors of two to four.
+
+3.1. Centimeter-continuum emission
+
+The 1.36cm continuum, derived from our JVLA observations,
+toward Cep A is presented in Fig. 8] Six published compact
+sources, HW2, HW3a, HW3b, HW3c, HW3d, and HW9, are de-
+tected in our observations. Figure 4] shows the 1.36cm contin-
+uum in G34.26+0.15. Three main continuum objects, A, B, and
+C, are detected. By using the imfit task in CASA, we measured
+the continuum flux at 1.36 cm toward individual compact source
+components in Cep A and G34.26+0.15. Details are given in Ta-
+ble
+
+3.2. NH; (9,6) emission in Cep A
+
+In 2020 January, NH3 (9,6) emission with a peak flux density of
+0.67 + 0.07 Jy was first detected with the Effelsberg 100-meter
+telescope in Cep A. Emission with similar strength was also de-
+tected in 2021 February and August with the same telescope.
+Higher velocity resolution data, which were obtained in 2021
+August, again with the Effelsberg 100-meter telescope, show
+that the (9,6) emission contains two main velocity components.
+Overall, the flux densities of the NH3 (9,6) emission line mea-
+sured with the Effelsberg 100-meter telescope are, within the cal-
+ibration uncertainties, unchanged. This is valid for the time inter-
+val between 2020 January and August 2021, when we smoothed
+the obtained spectra to the same velocity resolution. We also
+see another two weaker components. Figure 2] emphasizes these
+weak components with an expanded flux density scale.
+
+Higher angular resolution data from the JVLA pinpoint the
+position of the NH3 (9,6) emission with an offset of (—0/28,
+0’’02) relative to the 1.36cm continuum peak of Cep A HW2
+(Fig. Bh). The deconvolved NH3 (9,6) component size is (0729 +
+0715) x (019 + 014) at PA. = 174°, derived with the imfit task
+in CASA, and can thus be considered, accounting for the uncer-
+tainties, as unresolved.
+
+Article number, page 3 of 10
+
+
 
 
 A&A proofs: manuscript no. mainArxiv
@@ -433,6 +785,126 @@ component sizes are (1′′.42±0′′.43)× (0′′.54±0′′.62) at P.A. 
 (M1), (0′′.42 ± 0′′.27) × (0′′.15 ± 0′′.27) at P.A. = 150◦ (M2), and
 
 Article number, page 4 of 10
+
+A&A proofs: manuscript no. mainArxiv
+
+ke NH3 (9,6) -
+
+  
+ 
+
+Velocity (km s~})
+
+DEC_offset (arcsec)
+DEC_offset (arcsec)
+
+ 
+
+ 
+
+RA _offset (arcsec)
+
+RA_offset (arcsec)
+
+Fig. 3. Cepheus A. White contours mark the 1.36cm JVLA continuum map of Cep A; levels are —5, 5, 10, 20, 30, 40, 50, 70, 90,
+and 110 x 0.125 mJy beam™!. The background image is the Spitzer 4.5m emission, taken from the Galactic Legacy Infrared Mid-Plane
+Survey Extraordinaire (GLIMPSE; [Benjamin et al. |2003} |Churchwell et al.|{2009). The reference position is @y2999 = 22"56"173972, and
+62000 = 62°01'49”587, the peak position of the continuum map, is marked with a black cross. Slightly to the west of the cross is the black
+ellipse denoting the position of the NH; (9,6) emission with a purple star at its center. OH (Bartkiewicz et al.|/2005), HO (Sobolev et al.|/2018),
+and CH;0H masers are presented as diamonds, circles, and squares, respectively. The color bar on the right-hand side indicates
+the LSR velocity range of the maser spots.
+
+1 1. . 1. 1 ’
+Ke NH: (9.6) of | om Nh 8.6)
+3 OH ia 3 OH
+H:0 -2.0 S 62
+44M ct.0H 0H
+
+ 
+
+ 
+
+7 H20
+
+bw)
+2.4 M2
+
+w
+©
+
+w
+8
+Velocity (km s~?)
+
+M3
+
+DEC_offset (arcsec)
+
+DEC_offset (arcsec)
+°
+
+3.0
+
+ 
+
+ 
+
+10
+
+4 2
+
+ 
+
+ 
+
+see
+
+ 
+
+ 
+
+ 
+
+ 
+
+2.4 2.2 2.0 18 16 14 1.2 1.0
+RA_offset (arcsec)
+
+ 
+
+RA_offset (arcsec)
+
+Fig. 4. 1.36cm JVLA continuum map of G34.26+0.15 presented as white contours with levels of —5, 5, 10, 20, 30, 40, 50, 70, 90, 110, 130,
+150, 180, and 200 x 5.0 mJy beam™!. The background image is the Spitzer 4.5 ym emission, taken from GLIMPSE. The reference position is
+@y000 = 18"53™188560, and dy2999 = 01°14’58”201, the peak position, is marked by a black cross. The black ellipses show the positions of NH;
+(9,6) emissions with stars at their center (i.e, M1, M2, and M3). OH (Zheng et al/2000), H.O (Imai et al/2011), and CH;0H
+
+[2016) masers are presented as diamonds, circles, and squares, respectively. The color bar indicates the velocity range (Vis) of maser spots.
+
+velocity resolution data from 2021 August show the NH; (9,6)
+
+In view of the constancy of the flux densities obtained at Ef-
+emission to be composed of two different components. The spec-
+
+felsberg and the similar JVLA flux density, measured in 2021
+
+July, there is no missing interferometric flux density in the JVULA
+data.
+3.3. NH; (9,6) emission in G34.26+0.15
+
+The NH; (9,6) emission was first detected toward G34.26+0.15
+in 2020 January with the Effelsberg 100-meter telescope. Higher
+
+Article number, page 4 of 10
+
+tra of weak components on a smaller flux density scale are pre-
+sented in Fig.
+
+Three different locations showing NH3 (9,6) emission are
+found toward G34.26+0.15 (Fig. A). The deconvolved NH; (9,6)
+component sizes are (1/742 + 0’'43) x (054 + 062) at PA. = 97°
+(M1), (0/742 + 0°'27) x (015 + 0’’27) at P.A. = 150° (M2), and
+
 
 
 
@@ -576,6 +1048,143 @@ of the JVLA measurements on the NH3 (1,1) absorption line
 against continuum source C (∼ 7′′ resolution; Keto et al. 1987)
 
 Article number, page 5 of 10
+
+Y. T. Yan (12) #2 #€) et al.: Discovery of ammonia (9,6) masers in two high-mass star-forming regions
+
+(1717 + 034) x (0/27 + 0/46) at P.A. = 53° (M3) and are thus
+comparable to or smaller than the beam size.
+
+Overall, the NH3 (9,6) line from G34.26+0.15 weakened
+during the time interval from 2020 January to 2021 August by
+about 70%. A comparison between the JVLA spectrum and the
+Effelsberg data, assuming a linear decrease in the integrated in-
+tensity as a function of time between different epochs of the
+100-meter observations, suggests there is no missing flux in the
+JVLA data. This is similar to the situation in Cep A.
+
+4. Discussion
+4.1. Morphology of Cep A and G34.26+0.15
+
+Cep A, at a trigonometric parallax distance of 0.7040.04 kpc
+(Moscadelli et al.|/2009} |Dzib et al.|/2011)), is the second closest
+HMSFR (after Orion) and by far the closest NH3 (9,6) maser
+known. About 16 compact (~1’’) radio sources (e.g., Hughes &
+Wouterloot |1984; |Hughes||1991; |Garay et al.||1996) have been
+identified in Cep A. [Hughes & Wouterloot| (1984) discovered
+these targets at radio wavelengths, which are UC and hypercom-
+pact (HC) Hm regions and/or stellar wind sources, subsequently
+named as HW sources. The HW2 object is one of the best known
+examples of a protostellar jet or disk system driving a powerful
+outflow (e.g.,/Rodriguez et al.|1980;|Giisten et al.|1984; /Torrelles
+et al.|/1986; \Curiel et al.|/2006; \Carrasco-Gonzalez et al.|2021)).
+The observed NH3 (9,6) emission is slightly offset (—0’28, 0702)
+from the center of HW2 (see Fig. B).
+
+G34.26+0.15 is an HMSER located at a distance of 3.3 kpc
+(Kuchar & Bania|1994). It hosts four radio continuum compo-
+nents named A, B, C, and D. Component C is a prototypical
+cometary UC Hr region containing a compact head and a diffuse
+tail that extends from east to west (e.g., [Reid & Ho} 1985} |Garay
+et al.|/19865 |Sewilo et al.|/2004} |Sewito et al.201 1). Components
+A and B are HC Hn regions, located to the east of component
+C. An extended ring-like Hm region, called component D, is lo-
+cated southeast of components A-C. One of the three observed
+NHz (9,6) emission line sources, M1, is close to the head of com-
+ponent C, whereas M2 and M3 originate from another compact
+region in the west of the HC H1 component A (see Fig. 4).
+
+4.2. NH; (9,6) emission possibly caused by maser action
+
+As shown in Fig. [I} the NH3 (9,6) profiles in Cep A and
+G34.26+0.15 are narrow (AVj;2 <2.0 km s7!), much narrower
+than the expected line widths (>4 km s~') of thermal lines ob-
+served at a similar angular resolution (e.g., /Torrelles et al.|/1985)
+1986, |1993)|1999; Henkel et al.|1987; Comito et al.2007; |Mook-
+erjea et al.2007; (Wyrowski et al.|/2012; |Beuther et al.2018). Ve-
+locity shifts with respect to the systemic velocities of the two
+sources are both observed, that is, V ~10 km s~! in Cep A and
+V ~4km s"! in G34.26+0.15 (see details in Sect. 4.3). Further-
+more, time variability is observed in the case of G34.26+0.15,
+which is also a characteristic feature of maser emission.
+Additional evidence of their maser nature is the high bright-
+ness temperatures of the (9,6) emission spots toward Cep A and
+G34.26+0.15. The spectral parameters are listed in Table [A.3}
+Because at least a significant part of the NH3 (9,6) emission
+is not resolved by our JVLA observations, the derived bright-
+ness temperatures are only lower limits. Nevertheless, the lower
+limits on the brightness temperature are >800 K in Cep A (see
+Table [A.3), which is much higher than the expected thermal
+gas temperature of ~250 K (e.g., [Patel et al.| (2005; (Comito
+et al. (2007; |Beuther et al. |2018). This strongly suggests that
+
+the NH3 (9,6) emission in Cep A is due to maser action. Be-
+cause G34.26+0.15 is located at about five times the distance to
+Cep A, beam dilution effects reduce the lower main beam bright-
+ness temperature limit to 400 K in G34.26+0.15 (M2) (see Ta-
+ble[A.3). We also note that the luminosity of the NH3 (9,6) emis-
+sion in G34.26+0.15 is higher than or comparable to that in Cep
+A, depending on the epoch of our observations.
+
+Finally, the non-detections of the (8,5) and (10,7) lines also
+indicate that the (9,6) line is special. This allows us to derive
+lower 3c limits of the (9,6)/(8,5) and (9,6)/(10,7) line intensity
+ratios. The (9,6) line arises from ortho-NH3 (K = 3n), whereas
+the NH3 (8,5) and (10,7) lines are para-NH3 (K # 3n) lines.
+The minimum ortho-to-para ratios are in the range 12-42 and 1|-
+8 toward Cep A and G34.26+0.15, respectively. The statistical
+weights for the ortho states are twice as large as those for the
+para states (e.g.,,; Umemoto et al.}1999;|Goddi et al./201 1; Henkel
+et al.2013). In Cep A, the line intensity ratios are far higher than
+this factor of two. Thus, at least in Cep A the higher main beam
+brightness peak temperature of the (9,6) emission is caused by
+maser action, perhaps involving exponential amplification, and
+the case of G34.26+0.15 is likely similar.
+
+4.3. Comparison of NH; (9,6) masers with previously
+published (quasi-)thermal NH; emission
+
+The metastable (1,1), (2,2), (3,3), and (4,4) ammonia lines
+show thermal emission toward Cep A over a velocity range of
+-13kms"! < Visp < -4kms7! (Brown et al.|/1981; |Giisten
+et al.|/1984} |Torrelles et al.) 1985) |1986) |1993] |1999). An average
+NH; column density of ~5x10!° cm~? was estimated for a region
+of 3” around HW? (Torrelles et al.||1999). This high NH3 abun-
+dance could provide a suitable environment for maser species.
+Large line widths (AV, /2 ~7.0 km s~') with Visp ~ —10 kms“!
+in both (1,1) and (2,2) lines were found toward HW2 (Torrelles
+et al.|1993). The velocity is similar to the cloud’s systemic lo-
+cal standard of rest (LSR) velocity of —11.2 km s7!, which
+is based on CO (Narayanan & Walker |/1996) and HCO* ob-
+servations (Gomez et al.|/1999). Our (9,6) maser is redshifted
+(-0.9 kms"! < Vise <2.9 km s7!) and shares positions with
+the outflowing gas seen in CO and HCO? with similarly red-
+shifted velocities. Therefore, we argue that the (9,6) masers are
+related to outflowing gas.
+In G34.26+0.15, a large NH; column density,
+10!85#02 cm-2, and a kinetic temperature of 225475 K
+were derived by |Henkel et al.| (1987) based on measurements
+of 15 NH3 inversion transitions in the frequency range of
+22.0-26.0 GHz. These did not include the (9,6) transition.
+While these lines were measured with a beam size of about
+40”, a comparison of the peak intensities of the optically thick
+lines with the kinetic temperature reveals the size of the hot,
+ammonia-emitting core to be only ~2.5’’. All those measured
+NH3 lines were quasi-thermal and had LSR velocities of
+~ 58.5 km s~!, close to the systemic velocity of ~ 58.1 km sg!
+obtained from C!’O observations (Wyrowski et al.) |2012).
+Their line widths (AV;;2 >3.6 km s~') are larger than what
+we find (0.35 km s7! < AV\/2 < 0.94 km s!) for each (9,6)
+maser component (see details in Table [A.3). In all, we may
+have observed four different (9,6) velocity features. Three
+are blueshifted at Visp ~ 53.8 km s7!, 55.8 km s7!, and
+56.8 km s~!, and a fourth, tentatively detected, at 62.5 km s7!.
+This tentative redshifted feature was only potentially detected
+with Effelsberg in 2020 January. The velocity is similar to that
+of the JVLA measurements on the NH; (1,1) absorption line
+against continuum source C (~ 7” resolution; |Keto et al.||1987)
+
+Article number, page 5 of 10
+
 
 
 
@@ -946,6 +1555,75 @@ B 18 53 18.649 ± 0.005 +01 15 00.071 ± 0.180 (2.31 ± 0.49) × (0.85 ± 0.21) 
 C 18 53 18.560 ± 0.004 +01 14 58.201 ± 0.112 (2.03 ± 0.30) × (1.34 ± 0.20) 178.0 5070 ± 660
 
 Article number, page 8 of 10
+
+A&A proofs: manuscript no. mainArxiv
+
+Appendix A:
+
+Table A.1. Summary of NH; (9, 6) maser observations.
+
+ 
+
+ 
+
+ 
+
+Source Telescope Beam Epoch Channel Sy rms f S,dv Visr AVi/2
+size spacing
+(kms!) Gy) (mJy) Gy kms“) (km s7!)
+
+Cep A Effelsberg 49” 2020, Jan. 04 0.62 0.67 3.41 1.19+0.02 -1.11+002 1.67+0.04
+Effelsberg 49” 2021, Feb. 11 0.62 0.59 5.97 1.08+0.02 -0.74+0.02 1.70+0.04
+Effelsberg 49” 2021, Feb. 15 0.62 0.65 10.98 1.11+40.03 -0.75+0.02 1.60+0.05
+JVLA‘ 1”47 x 0799 =. 2021, Jul. 13 0.13 1.13 144 0.89+0.09 -0.86+0.03 0.74+0.12
+Effelsberg 49” 2021, Aug. 11 0.07 0.98 13.36 049+0.02 -0.90+0.01 0.47+0.01
+0.35 0.26+0.02 -0.28+0.02 0.69+0.05
+Effelsberg 49” 2021, Aug. 12 0.07 0.98 13.35 0.50+0.01 -0.89+0.07 0.48 + 0.07
+0.35 0.20+0.01 -0.29+0.07 0.54 + 0.07
+0.06 0.07 + 0.01 0.51+0.07 1.09 +0.07
+0.02 0.02 + 0.01 2.15+0.07 0.80+0.07
+0.07 0.06 + 0.01 2.89 +0.07 0.92 + 0.07
+G34.26+0.15 Effelsberg 49” 2020, Jan. 03 0.62 0.30 1.26 0.65+0.03 62.50+0.05 2.05+0.13
+Effelsberg 49” 2021, Feb. 11 0.62 0.24 2.42 0.40+0.02 55.76+0.04 1.60+0.12
+Effelsberg 49” 2021, Feb. 15 0.62 0.20 4.86 0.38+0.02 55.71+0.05 1.80+0.14
+JVLA? 1733 x 1706 2021, Jul. 13 0.13 0.23 37.1 0.09+0.02 54.41+0.03 0.38 + 0.09
+0.22 0.22+0.02 55.82+0.05 0.95+0.12
+0.15 0.06+0.01 57.214+0.04 0.35+0.08
+Effelsberg 49” 2021, Aug. 11 0.07 0.08 13.92 0.06+0.007 54.10+0.05 0.68 +0.12
+0.07 0.02+0.006 54.82+0.03 0.31 40.09
+0.12 0.10+0.006 55.85+0.02 0.75 + 0.06
+Effelsberg 49” 2021, Aug. 12 0.07 0.16 27.40 0.09+0.008 55.83+0.02 0.56 + 0.05
+
+ 
+
+Notes. The spectral parameters are obtained from Gaussian fitting. “ The JVLA spectrum toward Cep A is extracted from the Effelsberg-beam-
+sized region (FWHM 49”). © For G34.26+0.15, the JVLA beam samples the NH3 (9,6) spectrum over a region of radius 35, which contains all
+detected NH; (9,6) emissions.
+
+Table A.2. 1.36 cm JVLA flux densities of individual continuum sources.
+
+ 
+
+ 
+
+ 
+
+Source R.A. Dec. Size PA. Sy
+(h m= s) ce’ ") (arcsec) (deg) (mJy)
+Cep A HW2 = 225617.972 + 0.003 +6201 49.587+0.015 (0.45 + 0.19) x (0.22 + 0.10) 50.0 20.2 + 1.4
+HW3a_ 2256 17.420+0.022 +620144.576+0.076 (2.35+40.45)x(0.55+0.14) 666 4.75 +0.74
+HW3b = 22 56.17.578 + 0.009 +6201 45.041 +0.043 (1.43 +0.24)x(0.45+0.10) 59.9 3.19+0.36
+HW3c 225617.956+0.016 +6201 46.224+0.038 (1.44 +0.37) x (0.36+0.19) 86.0 9.90 + 1.7
+HW3d 225618.195+0.005 +6201 46.325+0.014 (1.26+0.12) x (0.30+0.19) 102.5 13.75 +0.92
+HW9 2256 18.626+0.014 +6201 47.851+0.137 (1.53 +0.51) x (0.29+0.30) 28.0 3.26+0.78
+G34.26+0.15 A 18 53 18.774 +0.005 +01 1456.208+0.125 (0.66 + 0.49) x (0.50 + 0.33) 10.0 94 + 33
+B 18 53 18.649+ 0.005 +01 1500.071+0.180 (2.31 +0.49) x (0.85+0.21) 17.4 597 + 110
+C 18 53 18.560 + 0.004 +01 1458.201+0.112 (2.03 + 0.30) x (1.34+0.20) 178.0 5070 +660
+
+ 
+
+Article number, page 8 of 10
+
 
 
 

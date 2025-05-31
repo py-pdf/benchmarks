@@ -426,7 +426,7 @@ All the relevant properties of the galaxy are given in Table 1,
 including numbers of particles and total masses for both compo-
 nents, and details on the shape of the stellar component: the axis
 ratios minor to major (shortest to longest) c/a, intermediate to
-major b/a, and the triaxiality parameter T = (a2 − b2)/(a2 − c2).
+major b/a, and the triaxiality parameter T = (a2 −b2)/(a2 −c2).
 We distinguish between the half-mass radius provided in the Il-
 lustris database and the half-number radius r1/2, which we use
 for further calculations in this paper. The diﬀerence between the
@@ -496,7 +496,7 @@ persion. Both populations show a weak rotation signal at large
 distances from the center.
 The velocity anisotropy parameter β(r)
 =
-1 − (σ2
+1 −(σ2
 θ +
 σ2
 φ)/(2σ2
@@ -549,10 +549,10 @@ sity proﬁle with the King formula (King 1962)
 I(R) = I0
 
 1
-�
+p
 1 + (R/Rc)2 −
 1
-�
+p
 1 + (Rt/Rc)2
 
 2
@@ -673,11 +673,11 @@ where I0, Rc, and Rt are the model parameters. The proﬁle can
 be analytically deprojected to obtain the 3D density
 ρ(r) = ρ0
 z2
-�1
+"1
 z arccos(z) −
-�
-1 − z2
-�
+p
+1 −z2
+#
 ,
 (2)
 where
@@ -687,7 +687,7 @@ I0
 (3)
 and
 z =
-�
+s
 r2 + R2c
 R2c + R2
 t
@@ -704,10 +704,10 @@ We follow the approach introduced in Kowalczyk et al. (2018),
 namely we model the total mass proﬁle with the mass-to-light
 ratio Υ varying with radius:
 log Υ(r) =
-�
+(
 log(Υ0)
-r ≤ r0
-a(log r − log r0)c + log(Υ0)
+r ≤r0
+a(log r −log r0)c + log(Υ0)
 r > r0
 (5)
 Article number, page 5 of 12
@@ -778,8 +778,8 @@ where r is the distance from the center of the galaxy, r0 is a
 constant, while Υ0, a, and c are the parameters of a model. We
 have assumed log r0 = 0.33 which corresponds to three softening
 scales for stellar particles in the Illustris simulation.
-We probed the parameter a ∈ [0 : 1.3] with a step ∆a = 0.04
-and c ∈ [1.1 : 2.9] with a step ∆c = 0.2, imposing the require-
+We probed the parameter a ∈[0 : 1.3] with a step ∆a = 0.04
+and c ∈[1.1 : 2.9] with a step ∆c = 0.2, imposing the require-
 ment on the total density proﬁle to be monotonically decreasing
 with radius. For each set of parameters and for each line of sight
 we generated 1200 orbits using 100 values of energy (expressed
@@ -795,7 +795,7 @@ of Υ0 were obtained with a simple transformation of velocities
 given by Eq. 12, 13, and 15 in Kowalczyk et al. (2018). In or-
 der to smooth out the numerical artifacts, the three-dimensional
 χ2 spaces were then interpolated with 12-order polynomials
-(∼ a4c4Υ4
+(∼a4c4Υ4
 0) that were further used to determine the global min-
 imums (identiﬁed as the best-ﬁtting models) and 1, 2, 3 σ con-
 ﬁdence levels which for three parameters correspond to ∆χ2 =
@@ -1266,7 +1266,7 @@ and 4th velocity moments (top to bottom) for the three data sam-
 ples: all stars, population I, and population II (in red, orange, and
 blue, respectively). The error bars indicate 1 σ sampling errors.
 The parameter space for Υ(r) has been probed as follows:
-a ∈ [0 : 1.85] with a step ∆a = 0.05 and c ∈ [1.2 : 6] with a
+a ∈[0 : 1.85] with a step ∆a = 0.05 and c ∈[1.2 : 6] with a
 step ∆c = 0.2. We point out that in Kowalczyk et al. (2019) the
 parameter c was ﬁxed at c = 3 and now we ﬁt it as a free pa-
 rameter. As for the mock data in Section 3.2, diﬀerent values of
@@ -1395,9 +1395,9 @@ panel) for the Fornax dSph.
 closed total mass at larger radii. In particular, for the mass en-
 closed within 1.8 kpc we get Mall(< 1.8 kpc) = 3.87+1.48
 −1.56 × 108
-M⊙ from the ﬁt for all stars and Mpops(< 1.8 kpc) = 4.71+0.87
+M⊙from the ﬁt for all stars and Mpops(< 1.8 kpc) = 4.71+0.87
 −1.13 ×
-108 M⊙ from the ﬁt of populations, while previously we had
+108 M⊙from the ﬁt of populations, while previously we had
 Mold(< 1.8 kpc) = 3.7+1.4
 −1.3 × 108 M⊙.
 Interestingly, despite the signiﬁcant shift of the position of

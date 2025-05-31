@@ -127,9 +127,9 @@ with the High Energy Stereoscopic System (H.E.S.S.) in very high energy gamma ra
 searched for signals in the ultraviolet, optical, and X-ray bands. For this FRB, we obtain a UV
 flux upper limit of 1.39×10−16 erg cm−2 s−1Å−1, X-ray limit of ∼ 6.6×10−14 erg cm−2 s−1 and
 a limit on the very-high-energy gamma-ray fluxΦ(𝐸 > 120GeV) < 1.7× 10−12 erg cm−2 s−1.
-We obtain a radio upper limit of∼15`Jy beam−1 for persistent emission at the locations of both
+We obtain a radio upper limit of∼15𝜇Jy beam−1 for persistent emission at the locations of both
 FRBs 20190711A and 20171019A, but detect diffuse radio emission with a peak brightness
-of ∼53`Jy beam−1 associated with FRB 20190714A at 𝑧 = 0.2365. This represents the first
+of ∼53𝜇Jy beam−1 associated with FRB 20190714A at 𝑧 = 0.2365. This represents the first
 detection of the radio continuum emission potentially associated with the host (galaxy) of FRB
 20190714A, and is only the third known FRB to have such an association. Given the possible
 association of a faint persistent source, FRB 20190714A may potentially be a repeating FRB
@@ -196,14 +196,14 @@ ies2, only the sub-arcsecond localisation of the repeating FRB
 20121102A to a host galaxy at a redshift of 𝑧 = 0.19273 ± 0.0008
 (Tendulkar et al. 2017; Bassa et al. 2017) showed that it is physi-
 cally associated with a compact (≤ 0.7 pc), persistent radio source
-of luminosity a𝐿a ∼ 1039 erg s−1 at a few GHz (Marcote et al.
+of luminosity 𝜈𝐿𝜈 ∼ 1039 erg s−1 at a few GHz (Marcote et al.
 2017). This source is detectable from 300MHz – 26GHz (Resmi
 et al. 2020; Chatterjee et al. 2017) and is seen to exhibit ∼ 10% vari-
 ability on day timescales. In contrast, a similar sub-milliarcsecond
 localisation of another repeating FRB20180916B to a nearby mas-
 sive spiral galaxy at 𝑧 = 0.0337 ± 0.0002 (Marcote et al. 2020)
 showed no associated persistent radio emission. This places a strong
-upper limit on the persistent source luminosity of a𝐿a . 7.6×1035
+upper limit on the persistent source luminosity of 𝜈𝐿𝜈 . 7.6×1035
 erg s−1 at 1.6GHz, which is three orders of magnitude lower than
 that of FRB 20121102A. Recently, the CHIME/FRB collaboration
 announced heightened activity in the repeating FRB 20201124A
@@ -450,19 +450,19 @@ The theoretical thermal noise of the MeerKAT can be calculated as
 
 𝑆rms =
 1
-[𝑐
+𝜂𝑐
 
 SEFD√︃
-𝑛pol × 𝑁 (𝑁 − 1) × Δa × 𝑡int
+𝑛pol × 𝑁 (𝑁 − 1) × Δ𝜈 × 𝑡int
 
 . (1)
 
 The system equivalent flux density (SEFD) of MeerKAT at the
-1.28GHz is 443 Jy and [𝑐 is the correlator efficiency. We used 𝑛pol
-= 2 polarisation products (XX and YY), N = 64 telescopes, Δa =
+1.28GHz is 443 Jy and 𝜂𝑐 is the correlator efficiency. We used 𝑛pol
+= 2 polarisation products (XX and YY), N = 64 telescopes, Δ𝜈 =
 856MHz bandwidth and 𝑡int = 21600 sec observing time for one
-epoch. This gives the theoretical rms of∼ 2 `Jy beam−1. The typical
-image rms obtained from our residual images is ∼ 5 `Jy beam−1,
+epoch. This gives the theoretical rms of∼ 2 𝜇Jy beam−1. The typical
+image rms obtained from our residual images is ∼ 5 𝜇Jy beam−1,
 which is 2.5 times the expected theoretical rms. The widebandMFS
 image does not allow primary beam correction procedure as this can
 only be done on the sub-band images with limited rms for detection
@@ -497,6 +497,138 @@ uum sources in the MeerKAT observations with the FRB loca-
 MNRAS 000, 1–15 (2021)
 
 https://github.com/e-merlin/eMERLIN_CASA_pipeline
+4 = Chibueze et al.
+
+2.2 e-MERLIN Observations
+
+To constrain the position of the persistent continuum emission
+associated with FRB 20190714A, we conducted L-band (centre
+frequency of 1.51 GHz) observations of the target with the en-
+hanced Multi-Element Remote-Linked Interferometer Network, e-
+MERLIN array in the United Kingdom (project code: CY 10003)
+on 13 January, 2021 (see Section 3.1.2). Six antennas were used
+including the 75-m Lovell telescope and the target pointing cen-
+tre was R.A. = 12/15'55%.12, Dec. = —13°01/15!’7. 1407+2827
+was used as the bandpass calibrator, 1331+3030 as the flux cal-
+ibrator and 1216-1033 as the phase calibrator. The angular sep-
+aration between the target and the phase calibrator is 2.47°. The
+data reduction was done following standard e-MERLIN calibra-
+tion procedures with additional flagging of bad visibilities fol-
+lowed by imaging. We found two confusing sources in the field,
+at R.A. = 12715'445 669, Dec. = —12°57/59/’56 and R.A. =
+12" 15378 216, Dec. = —13°09/33/'44 at 4.1’ and 9.4’ from the
+pointing centre, respectively. They had apparent flux densities of 4
+and 1.3 mJy without primary beam correction. We used these for
+self-calibration of the field and then subtracted them before final
+imaging. The final image synthesized beam is 0°65 x 0/15, posi-
+tion angle 15° elongated in the Declination direction due to the low
+target elevation from the UK.
+
+2.3 The Swift satellite. UVOT and XRT observations
+
+Neil Gehrels Swift Observatory (Swift) is a multi-wavelength NASA
+space mission operating in soft-X-rays and optical/UV. Here we
+use data from the X-ray Telescope (XRT) (Burrows et al. 2005)
+which operates in the soft X-ray domain of 0.3 — 10 keV as well as
+data taken by the UV/Optical Telescope (UVOT) (Roming et al.
+2005) operating in the UV to optical domain (170 — 600 nm).
+During the FRB 20171019A multi-wavelength (MWL) observing
+campaign, two 2 ks target-of-opportunity (ToO) observations were
+performed with Swift from 2019-09-28 18:37:02 to 2019-09-28
+21:52:54 and 2019-10-18 18:03:00 to 2019-10-18 20:03:00 on the
+FRB 20171019A localisation region. Simultaneously with Swift-
+XRT, five UVOT images were taken with the UVM2 filter (central
+wavelengh = 2246 A) over the 2 epochs with a total exposure of 4 ks.
+The images are aspect-corrected and summed with the uvotimsum
+tool (HEASOFT 6.26). Observations were performed with Swift-
+XRT in the standard Photon Counting observing mode (PC). The
+XRT PC data are processed with xrtpipeline (HEASOFT 6.26).
+A summed image is extracted with xselect.
+
+2.4 Very-high energy gamma-ray observations with H.E.S.S.
+
+Observations of FRB 20171019A were also obtained in the very-
+high energy gamma-ray domain with the H.E.S.S. imaging atmo-
+spheric Cherenkov telescope array, sensitive in the range between a
+few tens of GeVs and 100 TeV. H.E.S.S. is located on the Khomas
+Highland plateau of Namibia (23°16’18’ South, 16°30’00” East),
+at an elevation of ~1800 m above sea level. Observations took place
+contemporaneously to the first epoch of MeerKAT observations of
+FRB 20171019A described above. The data set was obtained with
+the H.E.S.S. phase II array, including the upgraded 12 m-diameter
+CT 1-4 telescopes (Ashton et al. 2020) and the large 28 m-diameter
+
+6 https://github.com/e-merlin/eMERLIN_CASA_pipeline
+
+CT5 telescope (Bolmont et al. 2014). A standard data quality selec-
+tion was applied to the data (Aharonian et al. 2006). The events have
+then been selected and their direction and energy reconstructed us-
+ing a log-likelihood minimization comparing the recorded shower
+images of all triggered telescopes (requiring at least two telescopes
+to see the same gamma-ray event) to a semi-analytical model of air
+showers (de Naurois & Rolland 2009).
+
+We define a circular region-of-interest centered on the position
+of FRB 20171019A with a radius of 0.12°, optimal for a point-like
+source of emission as expected from FRB 20171019A. The back-
+ground level in this ON region was determined using the standard
+“ring background” technique (Berge et al. 2007) based on a radially
+symmetric ring around the source position. This technique allows us
+to derive the background level from the same field of view and as-
+sures that the gamma-ray signal and background are estimated with
+the same acceptance and under the same observation conditions.
+
+3 RESULTS
+3.1 MeerKAT
+
+The theoretical thermal noise of the MeerKAT can be calculated as
+
+1 SEFD
+SS (1)
+
+Stms = :
+Me [ropot x N(N - 1) xX Av X tint
+
+The system equivalent flux density (SEFD) of MeerKAT at the
+1.28 GHz is 443 Jy and 77- is the correlator efficiency. We used nyo}
+= 2 polarisation products (XX and YY), N = 64 telescopes, Av =
+856 MHz bandwidth and fy, = 21600 sec observing time for one
+epoch. This gives the theoretical rms of ~ 2 Jy beam~!. The typical
+image rms obtained from our residual images is ~5 Jy beam@!,
+which is 2.5 times the expected theoretical rms. The wideband MFS
+image does not allow primary beam correction procedure as this can
+only be done on the sub-band images with limited rms for detection
+of the sources. However, our sources are the phase centres of our
+fields and thus unaffected by the effect of the primary beam.
+
+Due to the lack of MeerKAT primary beam correction, we
+did not compare the flux densities of the discrete sources with
+their NRAO (National Radio Astronomy Observatory) VLA (Very
+Large Array) Sky Survey (NVSS) counterparts. However, Chibueze
+et al. (2021, submitted) confirmed that the overall flux densities
+obtained with MeerKAT and NVSS are in good agreement with
+each other within errors of ~ 5%. We compared the astrometry of
+the discrete radio sources obtained with MeerKAT and NVSS in
+Figure 1. The position uncertainty of the MeerKAT ranges from
+0/’2 (close to the centre of the primary beam) to a few arcseconds
+towards the edge of the primary beam. The scatter observed in
+Figure 1 is mostly due to the probability of the centroids of emission
+in the ~45’” NVSS resolution being different from the centroids at
+MeerKAT’s resolution and partly due to higher position uncertainty
+of the fainter sources. Therefore, we conclude that our MeerKAT
+data are well calibrated and the flux density and astrometry are as
+accurate as the errors indicate.
+
+3.1.1 Looking for persistent continuum emission associated with
+the FRB fields
+
+Considering the results of the astrometric comparison with NVSS
+(see Figure 1), we considered potential associations of contin-
+uum sources in the MeerKAT observations with the FRB loca-
+
+MNRAS 000, 1-15 (2021)
+
+
 
 
 MeerKAT, e-MERLIN, Swift and H.E.S.S., observations of three localised FRBs 5
@@ -517,14 +649,14 @@ FRB 20190714
 
 Compact persistent emission was detected in the 1.51GHz e-
 MERLIN image at R.A. = 12ℎ15𝑚55𝑠 .116, Dec. = −13◦01′14.′′48
-at 86 `Jy beam−1 by e-MERLIN. The stochastic position uncer-
+at 86 𝜇Jy beam−1 by e-MERLIN. The stochastic position uncer-
 tainty is (0.04, 0.15) arcsec and the uncertainty (due to the sepa-
 ration between phase-calibrator and target, and antenna position
 uncertainty) is (0.013, 0.056) arcsec, giving a total astrometric
 uncertainty of (0.04, 0.16) arcsec in R.A. and Dec., respectively.
 The offset from the FRB position is negligible in R.A. and 1.2
 arcsec in Dec. The rms in this region (of full primary beam sen-
-sitivity) is 20 `Jy beam−1, making this a 4.3𝜎rms detection. It is
+sitivity) is 20 𝜇Jy beam−1, making this a 4.3𝜎rms detection. It is
 ∼1.5𝜎rms higher than that of the MeerKAT detection. Although the
 e-MERLIN flux scale nominal uncertainty is ∼5%, in these data it
 is possibly higher due to the low declination of the phase-reference
@@ -540,11 +672,11 @@ ground persistent radio source and the host galaxy, following the
 procedure of Eftekhari et al. (2018). Instead of using the FRB lo-
 calisation region, we use the area of the galaxy, which is taken as
 2′′ × 2′′, twice the half light radius from Heintz et al. (2020). Given
-the source has a flux density of ∼ 90`Jy we estimate the chance
+the source has a flux density of ∼ 90𝜇Jy we estimate the chance
 alignment probability of 0.0008, which corresponds to 3.4𝜎. The
 flux density threshold, assuming 3𝜎, for an unresolved radio source
-is ∼ 15 `Jy. If instead we consider the probability of detecting any
-radio source above our flux density threshold of 15`Jy, the probabil-
+is ∼ 15 𝜇Jy. If instead we consider the probability of detecting any
+radio source above our flux density threshold of 15𝜇Jy, the probabil-
 ity of a chance alignment is, therefore, approximately 0.8%, making
 the statistical significance of our detection 2.6𝜎. This represents the
 first detection of radio continuum emission associated with the host
@@ -554,8 +686,8 @@ first detection of radio continuum emission associated with the host
 
 No continuum emission was detected near FRBs 20171019A and
 20190711A. As each of the images of these sources has an rms
-of ∼ 5 `Jy beam−1, the 3𝜎 intensity upper limit of any emission
-associated with FRBs 20171019A and 20190711A will be ∼ 15 `Jy
+of ∼ 5 𝜇Jy beam−1, the 3𝜎 intensity upper limit of any emission
+associated with FRBs 20171019A and 20190711A will be ∼ 15 𝜇Jy
 beam−1 (see Table 1).
 
 Candidate pulses above a signal-to-noise (S/N) of 10 from the
@@ -635,6 +767,140 @@ https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/w3pimms.pl
 https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/w3pimms.pl
 https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3nh/w3nh.pl
 https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3nh/w3nh.pl
+MeerKAT, e-MERLIN, Swift and H.E.S.S., observations of three localised FRBs — 5
+
+tion to sources within 5’’. Using this spatial coincidence criterion,
+we identified a persistent 1283 MHz continuum source near FRB
+20190714A, detected in both the 14 September 2019 and the 28
+September 2019 epoch. The peak of the MeerKAT radio emission
+is offset by ~ 2’’.1 from the peak of the i-band magnitude of the op-
+tical galaxy identified in the Panoramic Survey Telescope and Rapid
+Response System (PanSTARRS, located at Haleakala Observatory)
+image (shown as contours in Figures 2 and 3). The MeerKAT ra-
+dio source is offset by 1/’68 from the localisation region of FRB
+20190714 (cyan circle in Figures 2 and 3).
+
+3.1.2. e-MERLIN detection of compact emission towards
+FRB 20190714
+
+Compact persistent emission was detected in the 1.51 GHz e-
+MERLIN image at R.A. = 12"15’"55.116, Dec. = —13°01/14/’48
+at 86 uJy beam! by e-MERLIN. The stochastic position uncer-
+tainty is (0.04, 0.15) arcsec and the uncertainty (due to the sepa-
+ration between phase-calibrator and target, and antenna position
+uncertainty) is (0.013, 0.056) arcsec, giving a total astrometric
+uncertainty of (0.04, 0.16) arcsec in R.A. and Dec., respectively.
+The offset from the FRB position is negligible in R.A. and 1.2
+arcsec in Dec. The rms in this region (of full primary beam sen-
+sitivity) is 20 wy beam!, making this a 4.30;ms detection. It is
+~1.50;ms higher than that of the MeerKAT detection. Although the
+e-MERLIN fiux scale nominal uncertainty is ~5%, in these data it
+is possibly higher due to the low declination of the phase-reference
+source and to the strong RFI which were removed from the data
+but may have affected the linearity of the receiver response. The
+peak of the e- MERLIN radio emission is offset by ~ 1°’4 from the
+peak of the PanSTARRS i-band emission in Figures 2 and 3. The
+e-MERLIN radio source (shown by the cyan cross in Figures 2 and
+3) is offset by 0’’53 from the localised position of FRB 20190714.
+
+We estimate the probability of a chance alignment of a back-
+ground persistent radio source and the host galaxy, following the
+procedure of Eftekhari et al. (2018). Instead of using the FRB lo-
+calisation region, we use the area of the galaxy, which is taken as
+2” x 2’’, twice the half light radius from Heintz et al. (2020). Given
+the source has a flux density of ~ 90uJy we estimate the chance
+alignment probability of 0.0008, which corresponds to 3.40. The
+flux density threshold, assuming 3c, for an unresolved radio source
+is ~ 15 wJy. If instead we consider the probability of detecting any
+radio source above our flux density threshold of 15 Jy, the probabil-
+ity of a chance alignment is, therefore, approximately 0.8%, making
+the statistical significance of our detection 2.60. This represents the
+first detection of radio continuum emission associated with the host
+(galaxy) of FRB 20190714A (see Figure 2 and 3).
+
+3.1.3. MeerKAT non-detections
+
+No continuum emission was detected near FRBs 20171019A and
+20190711A. As each of the images of these sources has an rms
+of ~5uJy beam™!, the 3 intensity upper limit of any emission
+associated with FRBs 20171019A and 20190711A will be ~ 15 wJy
+beam! (see Table 1).
+
+Candidate pulses above a signal-to-noise (S/N) of 10 from the
+single pulse search with MeerTRAP were visually inspected offline.
+No new FRBs or repeat bursts from the known FRBs were detected
+above a fluence threshold of 0.08 Jy ms assuming a 1 ms duration
+burst.
+
+MNRAS 000, 1-15 (2021)
+
+3.2 Swift
+
+The UVOT summed image is presented in Figure 4. The UVOT
+field of view corresponds roughly to the uncertainty’ of the locali-
+sation region of FRB 20171019A (RA = 7.5’and DEC = 7’). Using
+uvotdetect, we find 30 sources above the 5c level and within the
+FRB 20171019A uncertainty region. Using a 3 arcsec maximum
+separation, which is slightly larger than the UVOT PSF (Breeveld
+et al. 2010), these sources are cross-matched with known catalogue
+sources. We find that out of the 30 sources detected by UVOT, 28
+are spatially coincident with stars catalogued in the SDSS catalogue
+(DR12; Alam et al. 2015), and one source is coincident with a galaxy
+(AGN broadline SDSS ID: 1237652599570890948 at z ~ 0.156).
+This galaxy is also detected by the MeerKAT radio observations. We
+use the NASA/IPAC Extragalactic Database (NED)® to search for
+known galaxies in the FRB 20171019A uncertainty regions. We find
+multiple galaxies with unknown redshifts, therefore we cannot draw
+conclusions on the host galaxy from our observations. Using a 50’”
+circular ON region centred on the position of FRB 20171019A and
+a50” OFF region that does not contain any of the detected sources,
+we run the uvotsource tool with a 5a background threshold and
+obtain a flux upper limit of 1.4 x 10-16 erg cm? s~!A-! without
+applying a Calactic extinction correction.
+
+The XRT summed image is shown in Figure 5. At the edge
+of the field-of-view, we detect a source spatially coincident with
+the Wolf 1561 star. As we consider this source unrelated to the
+FRB, we use the online Swift-XRT data products generator (Evans
+et al. 2007) (Evans et al. 2009) to derive upper limits in the 0.3-
+10 keV range on the count rate of 0.001885 counts.s~!. Using
+WebPIMMS? (v4.11a) and assuming a weighted average Ny = 5.12
+1029 cm-? from the direction of the source estimated from the
+NASA’s HEASARC !° online tools (HI4PI Collaboration et al.
+2016) and a power law model with a photon index = 2, this upper
+limit translates to an energy flux of 6.6 x 10-14 erg em? s~! (8.3 x
+10714 erg cm~ s7! unabsorbed).
+
+3.3. H.E.S.S.
+
+No significant gamma-ray excess above the expected background
+is detected from the direction of FRB 20171019A, with 52 gamma
+candidate events from the source region and 524 background event.
+A second analysis using an independent event calibration and recon-
+struction (Parsons & Hinton 2014) confirms this result. A search for
+variable emission on timescales ranging from milliseconds to sev-
+eral minutes with tools provided in (Brun et al. 2020) does not reveal
+any variability above 2.2 o-. For the total data set of 1.8 h, 95% confi-
+dence level (C. L.) upper limits on the photon flux are derived using
+the method described by Rolke et al. (2005). The energy threshold
+of the data is highly dependent on the zenith angle of the observa-
+tions. For these observations, the zenith angles range from 15 to 25
+deg, which leads to an energy threshold for the stacked data set of
+Ew, = 120 GeV. The upper limit on the Very High Energy (VHE)
+
+7 https://www.wis-tns.org/object/20171019a
+
+8 https://ned.ipac.caltech.edu; NED is funded by the National
+Aeronautics and Space Administration and operated by the California Insti-
+tute of Technology
+
+9 https: //heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/
+w3pimms.pl
+
+10 https: //heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3nh/w3nh.
+pl
+
+
 
 
 6 Chibueze et al.
@@ -654,9 +920,9 @@ the full region accessible within the H.E.S.S. field of view above
 
 Of the targeted FRB fields reported here, only FRB 20190714A
 is observed to be spatially coincident with a persistent radio con-
-tinuum source. We obtain an upper limit of ∼ 15 `Jy beam−1 for
+tinuum source. We obtain an upper limit of ∼ 15 𝜇Jy beam−1 for
 FRBs 20190711A and 20171019A, respectively, and a peak inten-
-sity of ∼ 53 `Jy beam−1 for the emission coincident with FRB
+sity of ∼ 53 𝜇Jy beam−1 for the emission coincident with FRB
 20190714A. This source is detected at both epochs with similar
 intensities within the measured rms of the images (see Tables 1 and
 2 for details). The values in the Table 2 are derived by carrying
@@ -720,26 +986,26 @@ et al. (2019).
 
 Table 1. Details of the FRB fields observed with MeerKAT.
 
-Field name Observation date Synthesized beam rms (`Jy beam−1) Detected?
+Field name Observation date Synthesized beam rms (𝜇Jy beam−1) Detected?
 
 FRB 20171019A 28 September 2019 – No (calibration failure)
-FRB 20171019A 18 October 2019 6.′′8 × 5.′′0 5.2 < 15`Jy beam−1
+FRB 20171019A 18 October 2019 6.′′8 × 5.′′0 5.2 < 15𝜇Jy beam−1
 
-FRB 20190711A 23 August 2019 11.′′7 × 4.′′9 4.9 < 15`Jy beam−1
+FRB 20190711A 23 August 2019 11.′′7 × 4.′′9 4.9 < 15𝜇Jy beam−1
 
-FRB 20190711A 09 September 2019 12.′′5 × 4.′′9 4.6 < 15`Jy beam−1
+FRB 20190711A 09 September 2019 12.′′5 × 4.′′9 4.6 < 15𝜇Jy beam−1
 
-FRB 20190714A 14 September 2019 7.′′1 × 6.′′2 4.2 54.4 `Jy beam−1
+FRB 20190714A 14 September 2019 7.′′1 × 6.′′2 4.2 54.4 𝜇Jy beam−1
 
-FRB 20190714A 28 September 2019 6.′′5 × 5.′′1 5.8 52.0 `Jy beam−1
+FRB 20190714A 28 September 2019 6.′′5 × 5.′′1 5.8 52.0 𝜇Jy beam−1
 
 Table 2. Details of the radio continuum source associated with FRB 20190714A.
 
-Field name Observation date Telescope acentre (GHz) 𝛼J2000 𝛿J2000 Maj. × min. axis Pos. angle Int. flux density
+Field name Observation date Telescope 𝜈centre (GHz) 𝛼J2000 𝛿J2000 Maj. × min. axis Pos. angle Int. flux density
 
-FRB 20190714A 28 September 2019 MeerKAT 1.283 12ℎ15𝑚55𝑠 .154 -13◦01′17.′′30 9.′′6 × 7.′′4 88.7◦ 87.4 `Jy
-FRB 20190714A 18 October 2019 MeerKAT 1.283 12ℎ15𝑚55𝑠 .193 −13◦01′17.′′18 8.′′2 × 6.′′4 12.2◦ 80.7 `Jy
-FRB 20190714A 13 January 2021 e-MERLIN 1.510 12ℎ15𝑚55𝑠 .116 −13◦01′14.′′51 0.′′15 × 0.′′65 17.6◦ 107.5 `Jy
+FRB 20190714A 28 September 2019 MeerKAT 1.283 12ℎ15𝑚55𝑠 .154 -13◦01′17.′′30 9.′′6 × 7.′′4 88.7◦ 87.4 𝜇Jy
+FRB 20190714A 18 October 2019 MeerKAT 1.283 12ℎ15𝑚55𝑠 .193 −13◦01′17.′′18 8.′′2 × 6.′′4 12.2◦ 80.7 𝜇Jy
+FRB 20190714A 13 January 2021 e-MERLIN 1.510 12ℎ15𝑚55𝑠 .116 −13◦01′14.′′51 0.′′15 × 0.′′65 17.6◦ 107.5 𝜇Jy
 
 large offset from the centre of the galaxymakes the persistent source
 unlikely to be an AGN. So far this FRB has not been seen to repeat.
@@ -755,6 +1021,135 @@ with FRB 20121102A. At the angular diameter distance of
 
 MNRAS 000, 1–15 (2021)
 
+MeerKAT, e-MERLIN,
+
+Swift and H.E.S.S., observations of three localised FRBs
+
+9
+
+ 
+
+a
+
+-8°30'
+
+33'}
+
+36'
+
+39'
+
+Declination (J2000)
+
+42'
+
+45'
+
+48'
+
+b
+
+ 
+ 
+
+ 
+
+ 
+
+   
+
+100
+
+10
+
+Counts
+
+ 
+
+ 
+
+po ba
+
+ 
+
+wii |
+'00.0" 21'00
+
+Right Ascension
+
+334°33'00.0" 27
+
+Qo"
+(J2000)
+
+15'00.0"
+
+Figure 4. UVOT summed image of FRB 20171019A region taken during the MWL observation campaign in September-October 2019. The white circles
+indicate sources detected above 50°. The cyan dot denotes the location of FRB 201710194, the circle around it indicates the region used to derive the upper
+limits while the magenta region indicates the background region used. The green box indicates FRB 20171019A 90% localisation region as reported in Kumar
+
+et al. (2019).
+
+Table 1. Details of the FRB fields observed with MeerKAT.
+
+ 
+
+Field name Observation date
+
+Synthesized beam
+
+rms (Jy beam™!) Detected?
+
+ 
+
+FRB 20171019A 28 September 2019
+
+No (calibration failure)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+FRB 20171019A 18 October 2019 678 x 570 5.2 < 15pty beam™!
+
+FRB 20190711A 23 August 2019 11”7 x 4”9 4.9 < 15pJy beam!
+
+FRB 20190711A 09 September 2019 1275 x 49 4.6 < 15pJy beam!
+
+FRB 20190714A — 14 September 2019 TA x 62 4.2 54.4 pJy beam™!
+
+FRB 20190714A = 28 September 2019 675 x 571 5.8 52.0 py beam7!
+
+Table 2. Details of the radio continuum source associated with FRB 20190714A.
+
+Field name Observation date Telescope Veentre (GHz) 32000 032000 Maj. x min. axis Pos. angle __Int. flux density
+FRB 20190714A 28 September 2019 MeerKAT 1.283 12 157755*.154 — -13°0117”30 9”6 x 774 88.7° 87.4 uly
+FRB 20190714A 18 October 2019 MeerKAT 1.283 12 1577558.193  -13°O1/1718 872 x 674 12.2° 80.7 psy
+FRB 20190714A 13 January 2021 e-MERLIN 1.510 127 1577558.116 = —13°01'14”51 0715 x 065 17.6° 107.5 py
+
+ 
+
+large offset from the centre of the galaxy makes the persistent source
+unlikely to be an AGN. So far this FRB has not been seen to repeat.
+Higher resolution imaging will be required to be certain of a direct
+association of the persistent source with the FRB. We did not have
+
+MNRAS 000, 1-15 (2021)
+
+sufficient sensitivity in the sub-band images, thus, we are unable to
+derive the spectral index of the emission of the host galaxy.
+
+Our e-MERLIN observations probe a different spatial
+scale than the size of the persistent radio source associated
+with FRB 20121102A. At the angular diameter distance of
+
+
 
 
 10 Chibueze et al.
@@ -765,11 +1160,11 @@ Wolf 1561 star is shown in cyan and is labelled. The green box indicates FRB2017
 FRB 20190714A (780 Mpc), an unresolved source with an an-
 gular size of 0.′′6 corresponds to a physical extent of .2.3 kpc. The
 uGMRT reported the detection of an unresolved radio emission at
-650MHzwith a flux density of 700±100 `Jy (Wharton et al. 2021),
+650MHzwith a flux density of 700±100 𝜇Jy (Wharton et al. 2021),
 while the JVLA detected persistent emission with a flux density of
-340 ± 30 `Jy at 3GHz (Ricci et al. 2021). Assuming the estimated
+340 ± 30 𝜇Jy at 3GHz (Ricci et al. 2021). Assuming the estimated
 spectral index between these frequencies (∼ −0.5, Ricci et al. 2021),
-the 1.3GHz flux density would be ∼ 500 `Jy (similar to the 3-𝜎
+the 1.3GHz flux density would be ∼ 500 𝜇Jy (similar to the 3-𝜎
 upper limit on observations from 1 − 2GHz; Law et al. 2021). The
 flux density we measured for FRB 20190714A is a factor of ∼10
 lower than FRB20201124A, but FRB 20190714A is also a factor
@@ -857,7 +1252,7 @@ FRB 20190714A (at 𝑧 = 0.2365) using the MeerKAT and e-
 MERLIN radio telescope. This represents the first detection of the
 radio continuum emission associated with the host (galaxy) of FRB
 20190714A and is only the third known FRB to have such an as-
-sociation. We furthermore obtained a radio upper limit of∼ 15`Jy
+sociation. We furthermore obtained a radio upper limit of∼ 15𝜇Jy
 beam−1 for the repeating FRBs 20190711A and 20171019A.
 
 We also performed UV, X-ray and VHE observations with the

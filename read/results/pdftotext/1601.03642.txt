@@ -39,17 +39,14 @@ w3
 
 wn
 
-(a) Example of an artificial neuron unit.(b)
-xi are the input signals and wi are
-weights which have to get learned.
+(a) Example of an artificial neuron unit.(b) A visualization of a simple feedxi are the input signals and wi are
+forward neural network. The 5 inweights which have to get learned. put nodes are red, the 2 bias nodes
 Each input signal gets multiplied
-with its weight, everything gets
-summed up and the activation function ϕ is applied.
-
-A visualization of a simple feedforward neural network. The 5 input nodes are red, the 2 bias nodes
 are gray, the 3 hidden units are
+with its weight, everything gets
 green and the single output node
-is blue.
+summed up and the activation func- is blue.
+tion ϕ is applied.
 
 Fig. 1: Neural networks are based on simple units which get
 combined to complex networks.
@@ -694,35 +691,21 @@ along with this program; if not, write to the Free Software Foundation,
 *
 * Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
-#include
-#include
-#include
-#include
-#include
-
-<linux/kexec.h>
-<linux/errno.h>
-<linux/io.h>
-<linux/platform_device.h>
-<linux/multi.h>
+#include <linux/kexec.h>
+#include <linux/errno.h>
+#include <linux/io.h>
+#include <linux/platform_device.h>
+#include <linux/multi.h>
 
 8
 
 #include <linux/ckevent.h>
-#include
-#include
-#include
-#include
-#include
-#include
-
-<asm/io.h>
-<asm/prom.h>
-<asm/e820.h>
-<asm/system_info.h>
-<asm/setew.h>
-<asm/pgproto.h>
-
+#include <asm/io.h>
+#include <asm/prom.h>
+#include <asm/e820.h>
+#include <asm/system_info.h>
+#include <asm/setew.h>
+#include <asm/pgproto.h>
 #define REG_PG
 vesa_slot_addr_pack
 #define PFM_NOCOMP AFSR(0, load)

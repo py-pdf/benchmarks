@@ -14,8 +14,8 @@ probe steady, near-surface ﬂows in the Sun. Using Doppler cubes obtained from 
 Magnetic Imager onboard the Solar Dynamics Observatory, we perform inversions on mode-coupling
 measurements to show that the resulting divergence and radial vorticity maps at supergranular length
 scales (∼30 Mm) near the surface compare extremely well with those obtained using the Local Corre-
-lation Tracking method. We ﬁnd that the Pearson correlation coeﬃcient is ≥ 0.9 for divergence ﬂows,
-while ≥ 0.8 is obtained for the radial vorticity.
+lation Tracking method. We ﬁnd that the Pearson correlation coeﬃcient is ≥0.9 for divergence ﬂows,
+while ≥0.8 is obtained for the radial vorticity.
 Keywords: Helioseismology (709); Solar physics (1476); Supergranulation (1662)
 1. INTRODUCTION
 Helioseismology is the study of the Sun’s internal structure and its properties, by means of interpreting its eﬀect
@@ -73,8 +73,8 @@ complete derivation of the forward problem. Working in the plane-parallel atmosp
 denote the horizontal unit vectors ex and ey in our local Cartesian domain as pointing towards west and north on the
 solar surface, respectively, and ez points outwards. This approximation is valid when observing patches of the surface
 that are small when compared to the solar radius. When imaging steady, near-surface ﬂows in the neighbourhood
-of the supergranular scale (∼ 30 Mm), we expect the measured spectral cross-correlation signal to peak around the
-horizontal wavenumber qR⊙ ≈ 120 (Rincon & Rieutord 2018), where q = |q| = |(qx, qy)| is the vector horizontal
+of the supergranular scale (∼30 Mm), we expect the measured spectral cross-correlation signal to peak around the
+horizontal wavenumber qR⊙≈120 (Rincon & Rieutord 2018), where q = |q| = |(qx, qy)| is the vector horizontal
 wavenumber of the ﬂow. Accordingly, the goal is to relate measurements (linearly, to facilitate inversion) to the ﬂow
 perturbation described in a horizontal Fourier domain. Supergranular velocities are subsonic (300-400 m/s, see Rincon
 & Rieutord 2018), permitting us to model the ﬂow vector uuu = (ux, uy, uz) in the Cartesian domain like so (Unno et al.
@@ -82,7 +82,7 @@ perturbation described in a horizontal Fourier domain. Supergranular velocities 
 uσ = ∇×[∇×(P ez)] + ∇×(T ez),
 (1)
 where P = P σ(x) and T = T σ(x) are poloidal and toroidal scalar functions, varying with position x and temporal
-frequency σ. ∇ is the 3D gradient operator. While mode-coupling can easily be extended to study time-varying
+frequency σ. ∇is the 3D gradient operator. While mode-coupling can easily be extended to study time-varying
 perturbations (see Woodard 2016; Mani & Hanasoge 2020; Hanasoge et al. 2020; Mandal & Hanasoge 2020, for
 example), here we only consider the frequency bin σ = 0, denoting the temporally averaged ﬂow over the period
 of analysis.
@@ -96,12 +96,12 @@ Fourier domain, and since we wish to image horizontal ﬂows on a small patch of
 function of horizontal wavenumber q and depth zez. Hence the poloidal and toroidal ﬂows are described by Pq(z) and
 Tq(z), respectively. Furthermore, we parametrize the ﬂow along ez using basis functions f(z) (Chebyshev, B-spline,
 etc). This is expressed as
-P ≡ Pq(z) =
-�
+P ≡Pq(z) =
+X
 j
 fj(z) Pqj,
-T ≡ Tq(z) =
-�
+T ≡Tq(z) =
+X
 j
 fj(z) Tqj.
 (3)
@@ -123,9 +123,9 @@ k+q thus
 to the ﬂow coeﬃcients Pqj and Tqj (see eq A7)
 ⟨φω∗
 k φω
-k+q⟩ = Hω
+k+q⟩= Hω
 kk′nn′
-�
+X
 j
 Cqj,kPqj + Dqj,kTqj.
 (4)
@@ -146,13 +146,13 @@ k φω
 k+q (see Woodard 2006, 2014, 2016) results
 in the B-coeﬃcients Bk,q, according to
 Bk,q =
-�
+P
 ω
 Hω∗
 kk′nn′φω∗
 k φω
 k+q
-�
+P
 ω
 |Hω
 kk′nn′|2
@@ -162,21 +162,21 @@ Multiplying eq 4 on both sides by Hω∗
 kk′nn′ and substituting by eq 5 on the left-hand-side results in a concisely deﬁned
 forward problem (compare with eq 4)
 Bk,q =
-�
+X
 j
 Cqj,kPqj + Dqj,kTqj.
 (6)
 In eq 5, Woodard (2007) and H21 thus far only considered positive-frequency components in the summation over ω.
 Here, we sum over both ±ω within a few mode linewidths Γ. Denoting the resonant frequency of a mode using ωnk,
 |ω| ∈
-�
-ωnk − ϵΓnk/2, ωnk + ϵΓnk/2
-�
+
+ωnk −ϵΓnk/2, ωnk + ϵΓnk/2
+
 or
 |ω| ∈
-�
-ωn′k′ − ϵΓn′k′/2, ωn′k′ + ϵΓn′k′/2
-�
+
+ωn′k′ −ϵΓn′k′/2, ωn′k′ + ϵΓn′k′/2
+
 .
 (7)
 Summing over ±ω guarantees that the parity Bk,q = B∗
@@ -186,7 +186,7 @@ Taking the complex conjugate on both sides of eq 6 and considering the negative 
 −k,
 B∗
 −k,−q =
-�
+X
 j
 C−qj,−kP ∗
 −qj + D−qj,−kT ∗
@@ -208,11 +208,11 @@ and with ﬁnite lifetimes. This stochasticity leads to realization noise in rep
 Mani et al.
 Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p1 (orange) and p2 (green). The shaded
 regions of the same colours indicate 1-linewidth Γ about the mode frequency. The yellow shaded region indicates the range of
-kR⊙ and ω/2π to which we have restricted ourselves in this analysis. Beyond kR⊙ of 2000, it is seen that the theoretical ﬁtting
+kR⊙and ω/2π to which we have restricted ourselves in this analysis. Beyond kR⊙of 2000, it is seen that the theoretical ﬁtting
 of mode frequencies start deviating from the observed dispersion relation for the f-mode.
 such as its amplitude, frequency and linewidth, and consequently in Bk,q in our case. We use the same noise model
 as in H21, which was motivated by the above discussion,
-Gk,q ≡ ⟨|Bk,q|2⟩,
+Gk,q ≡⟨|Bk,q|2⟩,
 (9)
 where, unlike H21, we again sum over ±ω. Gk,q is real, with the symmetry relation Gk,q = G−k,−q (see Appendix A
 for explanation).
@@ -234,23 +234,23 @@ Eq 6, while short enough that supergranules do not substantially evolve (lifetim
 from center-to-limb systematics (Zhao et al. 2012; Langfellner et al. 2015).
 Maximum signal can be extracted from the weighted summation of the cross correlations (eq 5) when the spectral
 proﬁles of the two modes [n, k] and [n′, k′] closely align in ω space. This implies that their mode frequencies should be
-suﬃciently close (|ωnk − ωn′k′| ≤ δ, the separation parameter). Since Lorentzians decay rapidly, the summation over
+suﬃciently close (|ωnk −ωn′k′| ≤δ, the separation parameter). Since Lorentzians decay rapidly, the summation over
 ±ω is signiﬁcant only over a few linewidths (ϵ, the summation parameter; see eq 7). We have empirically found and
-tabulated δ in Table 1 for the radial order couplings n-n′ ∈ f-f, p1-p1, and p2-p2 (the signal strength depends only
+tabulated δ in Table 1 for the radial order couplings n-n′ ∈f-f, p1-p1, and p2-p2 (the signal strength depends only
 weakly on ϵ; we set it to 3 line widths).
 Figure 1 shows that for any two adjacent ridges (adjacent n and n′), mode frequencies ωnk and ωn′k become spaced
 farther apart with increasing wavenumber kR⊙. It is also known that mode linewidth Γ grows with radial orders for
 a given kR⊙. Moreover, holding the spatial and temporal sampling rates constant, the spatial size and duration of
-observation set the total number of modes within a range of kR⊙ (and ω/2π) that can be clearly observed, thereby
+observation set the total number of modes within a range of kR⊙(and ω/2π) that can be clearly observed, thereby
 aﬀecting the quality of the seismic measurements. Owing to these factors, to maximize signal-to-noise (by visually
-inspecting the power-spectrum), the parameters describing the extent of coupling over diﬀerent ranges of kR⊙ at ﬁxed
-radial order are diﬀerent. In wavenumber, we restrict our analysis to within 200 ≤ kR⊙ ≤ 2000 and qR⊙ ≤ 300. Our
-frequency range is conﬁned to span the range over which acoustic modes are observed (2 ≤ ω/2π ≤ 5 in mHz).
+inspecting the power-spectrum), the parameters describing the extent of coupling over diﬀerent ranges of kR⊙at ﬁxed
+radial order are diﬀerent. In wavenumber, we restrict our analysis to within 200 ≤kR⊙≤2000 and qR⊙≤300. Our
+frequency range is conﬁned to span the range over which acoustic modes are observed (2 ≤ω/2π ≤5 in mHz).
 
 Imaging near-surface flows using mode-coupling analysis
 5
 Coupling
-kR⊙ range
+kR⊙range
 # of
 δ
 modes
@@ -286,16 +286,16 @@ Bk,q from the linear relation in eq 6. We describe inversion using regularized-l
 leave Subtractive Optimally Localized Averages (SOLA, Pijpers & Thompson 1994) for Appendix B. The methods
 complement each other (see Sekii 1997), where RLS tries to minimize the misﬁt between data and model, whereas
 SOLA gives better localization. For total number of modes M, RLS scales as MxJ where J is the number of basis
-functions fj(z) (J ≪ M; see eq 3 and section 3.1), whereas SOLA scales as M 2 (see Appendix B). For M > 5000,
+functions fj(z) (J ≪M; see eq 3 and section 3.1), whereas SOLA scales as M 2 (see Appendix B). For M > 5000,
 computation starts to quickly become expensive for SOLA.
 Mode eigenfunctions peak near the surface, with higher radial orders possessing smaller peaks in the interior. While
 f-f coupling alone has enough sensitivity to probe perturbations at supergranular scales close to surface, signal is
 present even in p1-p1, and p2-p2 (see Figure 3), and possibly other higher order self- and cross-couplings. Since we are
 interested in only surface ﬂows, we leave higher order coupling to future work.
 It bears mentioning that the slopes of the ridges in the kR⊙-ν spectrum (Figure 1) increase with radial order. This
-limits us to low-to-intermediate kR⊙ (< 1000) for these higher radial orders if we are to remain under the acoustic cut-
-oﬀ frequency of 5.3mHz. It also becomes imperative to use a spatially larger observation patch to gain access to signals
-from low kR⊙ - too large an observation region could possibly render invalid the Cartesian geometry approximation.
+limits us to low-to-intermediate kR⊙(< 1000) for these higher radial orders if we are to remain under the acoustic cut-
+oﬀfrequency of 5.3mHz. It also becomes imperative to use a spatially larger observation patch to gain access to signals
+from low kR⊙- too large an observation region could possibly render invalid the Cartesian geometry approximation.
 Regardless, in addition to performing inversions using all the couplings stacked together, we also demonstrate inversions
 separately for the three couplings (see Table 2) in order to account for the full gamut of mode-coupling as a signal-rich
 helioseismic technique.
@@ -303,9 +303,9 @@ helioseismic technique.
 For given q, the forward problem may be stated as
 KU = B,
 (10)
-with the aim to minimize the misﬁt �
+with the aim to minimize the misﬁt P
 k
-||KU − B||2, with || ||2 denoting the L2 norm. Here, K is the matrix formed
+||KU −B||2, with || ||2 denoting the L2 norm. Here, K is the matrix formed
 by the sensitivity kernels: {Cqj,k, Dqj,k}. U is a vector composed of the ﬂow coeﬃcients: {Pqj, Tqj} and B is a vector
 composed of computed B-coeﬃcients: {Bk,q}. The least-squares problem is solved simultaneously for poloidal and
 toroidal ﬂow. We use B-spline basis functions as our fj(z), comprising 11 knots spaced uniformly in acoustic radius,
@@ -320,28 +320,28 @@ U =(K⊺Λ−1K)−1K⊺Λ−1B.
 
 6
 Mani et al.
-Figure 2. Left: Averaging kernel for poloidal ﬂow (see section B.2, eq B17, and left panel of Figure 8) for qR⊙ = [−112, −45],
-at the depth zo = −0.41 Mm. Right: L-curve for the mode qR⊙ = [−112, −45]; the knee (λ = 2.48) is marked by a blue
+Figure 2. Left: Averaging kernel for poloidal ﬂow (see section B.2, eq B17, and left panel of Figure 8) for qR⊙= [−112, −45],
+at the depth zo = −0.41 Mm. Right: L-curve for the mode qR⊙= [−112, −45]; the knee (λ = 2.48) is marked by a blue
 diamond.
-Since the least-squares problem is typically ill-posed, we restate the minimization as �
+Since the least-squares problem is typically ill-posed, we restate the minimization as P
 k
-||KU − B||2 + λ||U||2 with
-the regularization parameter λ which this results in a trade-oﬀ between misﬁt reduction (ﬁrst term) and solution
+||KU −B||2 + λ||U||2 with
+the regularization parameter λ which this results in a trade-oﬀbetween misﬁt reduction (ﬁrst term) and solution
 norm minimization (second term). Under-regularizing can lead to a solution U that is dominated by errors in the
 data and on the other hand, over-regularizing may smooth or damp the solution more than necessary. Including this
 regularization makes the problem better conditioned and is now deﬁned as
 U = (K⊺Λ−1K + λI)−1K⊺Λ−1B,
 (13)
 where I is the identity matrix for L1 regularization. The knee-point of the L-curve (Hansen 1992), a curve formed
-by plotting ||U||2 vs ||KU − B||2 for diﬀerent values of λ (see right panel of Figure 2), is usually chosen as the
+by plotting ||U||2 vs ||KU −B||2 for diﬀerent values of λ (see right panel of Figure 2), is usually chosen as the
 regularization parameter. After successfully inverting for U, we reconstruct the ﬂow using eq 3. Results for poloidal
 ﬂow Pq are shown in Figure 3.
 4. LCT
 To improve conﬁdence in the imaged near-surface ﬂows through mode-coupling, we compare them with ﬂows obtained
 from Local Correlation Tracking method (LCT; November & Simon 1988).
 LCT provides surface-ﬂow maps by
-examining the advection of convective granules (1.2 Mm, qR⊙ ≈ 3500; Hathaway et al. 2015) by underlying larger-
-scale ﬂow systems. Since granules are used as tracers, which are much smaller in size than supergranules (≈ 35 Mm),
+examining the advection of convective granules (1.2 Mm, qR⊙≈3500; Hathaway et al. 2015) by underlying larger-
+scale ﬂow systems. Since granules are used as tracers, which are much smaller in size than supergranules (≈35 Mm),
 LCT is an eﬀective method (see Rieutord et al. 2001) to produce surface horizontal ﬂow maps of supergranulation.
 Time series of intensity images from HMI, with the same properties of the Dopplercubes described in section 2
 (tracking rate, date, location, size and duration of observed patch, spatial and temporal sampling rate), are ob-
@@ -353,9 +353,9 @@ A Gaussian of width sigma allows to isolate a small region surrounding the grid 
 moved by granules are usually in sub-pixel regime. The convention for the direction of x is the same as described in
 section 1.1. The two patches I1, I2 are then cross correlated for diﬀerent values of position shifts ∆x,
 Cij(∆x, ∆y) =
-�
+Z
 dx I∗
-1(−x)I2(∆x − x).
+1(−x)I2(∆x −x).
 (14)
 The shift ∆x = (∆x, ∆y) that maximizes the cross-correlation Cij is taken to be the proper motion of the granule.
 Provided that the time diﬀerence ∆t, here 45 seconds, between the images is less than the lifetime of granules (< 10
@@ -366,7 +366,7 @@ requires the input sigma, which we set to 4 pix, that captures the extent of loc
 
 Imaging near-surface flows using mode-coupling analysis
 7
-Figure 3. Top: Inverted poloidal ﬂow power-spectrum for the three couplings f-f, p1-p1, and p2-p2 as a function of qxR⊙ and
+Figure 3. Top: Inverted poloidal ﬂow power-spectrum for the three couplings f-f, p1-p1, and p2-p2 as a function of qxR⊙and
 qyR⊙. Bottom: Corresponding power-spectrum averaged over the azimuthal angle. Shaded region shows ±1σ error around the
 mean. Total power appears to increase through the radial orders. Power is in units of m2/s4.
 dominant length scale of the velocity ﬁeld in the images. The Postel-projected intensity images are fed as input to the
@@ -387,15 +387,15 @@ y = q2, div is given by,
 ∇h · uuu(q, z) = q2∂zP,
 (16)
 and curl is given by,
-�
-∇ × uuu(q, z)
-�
+h
+∇× uuu(q, z)
+i
 z = q2T.
 (17)
 We follow similar steps to those taken in Langfellner et al. (2015) for comparison of ﬂow maps with LCT. The
-essential step for comparison at diﬀerent length scales is to bandpass ﬁlter the Fourier-space ﬂow around the qR⊙ of
+essential step for comparison at diﬀerent length scales is to bandpass ﬁlter the Fourier-space ﬂow around the qR⊙of
 interest (see Figure 4), and subsequently convert it to real space.
-We seek to show comparisons (see Figures 5, 6, and 7) for qR⊙ = 100, 150, 200 and 250. To suﬃciently delineate
+We seek to show comparisons (see Figures 5, 6, and 7) for qR⊙= 100, 150, 200 and 250. To suﬃciently delineate
 ﬂows at these length scales, we apply a Gaussian ﬁlter (see Figure 4) to ﬂows obtained from eqns 16 and 17. The
 Gaussian is centered at the desired wavenumber with a half-width of 25. We then perform a 2D Fourier transform to
 obtain a real-space steady-ﬂow map.
@@ -403,16 +403,16 @@ obtain a real-space steady-ﬂow map.
 8
 Mani et al.
 Figure 4. Left: Divergence-ﬂow power spectrum |div|2, from eqn 16, obtained from inversion using all the couplings. The
-power-spectrum is then ﬁltered with a bandpass centered around qR⊙ = 150 (middle panel). The resulting spectra is shown in
+power-spectrum is then ﬁltered with a bandpass centered around qR⊙= 150 (middle panel). The resulting spectra is shown in
 the right panel. The units of |div|2 are in s−2. For illustration, we show the action of the ﬁlter on the power-spectrum |div|2
 since it is a real quantity, but recall that it is the Fourier-space ﬂow div (a complex quantity) on which we apply the ﬁlter.
 For LCT, we ﬁrst apply a Gaussian smoothing to vx and vy to average over small-scale features; the extent of
-smoothing depends on the length scale qR⊙ to be compared with mode-coupling.
+smoothing depends on the length scale qR⊙to be compared with mode-coupling.
 div and curl are then simply
 computed by
 div = ∂xvx + ∂yvy,
 (18)
-curl = ∂xvy − ∂yvx.
+curl = ∂xvy −∂yvx.
 (19)
 We then perform a 2D Fourier transform on eqns 18 and 19, apply the same Gaussian ﬁlters as for mode-coupling,
 and transform back to real space.
@@ -421,10 +421,10 @@ performed for mode-coupling (M-C) and for LCT -
 M-C :
 φ(x, y; t)
 3D FFT
-=====⇒ φω
+=====⇒φω
 k, Bk,q
 inversion
-======⇒ P, T
+======⇒P, T
 ∇h·
 ===⇒
 ∇×
@@ -436,7 +436,7 @@ div, curl
 LCT :
 I1, I2
 FLCT
-====⇒ vx, vy
+====⇒vx, vy
 smooth,
 ======⇒
 ∇h· ∇×
@@ -448,11 +448,11 @@ Filtered,
 Fourier-space
 ﬂows
 2D FFT
-=====⇒ div, curl
+=====⇒div, curl
 6. RESULTS
 Table 2 summarizes the results of the comparison between ﬂows obtained from mode-coupling and LCT. Figure 5,
 where we have used all the couplings to perform inversions, shows a 97% correlation between divergence ﬂows from
-the two methods near supergranular scale (qR⊙ ≈ 100). Near-surface ﬂows are imaged most faithfully when all the
+the two methods near supergranular scale (qR⊙≈100). Near-surface ﬂows are imaged most faithfully when all the
 couplings are used. Since vortical ﬂows are imaged at a region near the equator, it is possible that the source of
 vorticity is something other than Coriolis force. Nevertheless, there is also a very good agreement (87%) between
 the vortical ﬂows as inferred from the two methods, despite being an order of magnitude weaker than the divergence
@@ -460,7 +460,7 @@ the vortical ﬂows as inferred from the two methods, despite being an order of 
 insuﬃcient modes for the p2-p2 case (see Table 1), we are unable to infer vortical ﬂows with conviction other than near
 the supergranular scale, as can be seen from Table 2. Figure 6 also aligns with what we believe can be accomplished
 through mode-coupling helioseismology - using f-f or p1-p1 alone to seismically infer near-surface divergence and vortical
-ﬂows at diﬀerent scales (qR⊙ = 100, 150) can yield extremely good agreement with LCT. As the length scale of the
+ﬂows at diﬀerent scales (qR⊙= 100, 150) can yield extremely good agreement with LCT. As the length scale of the
 inferred ﬂow moves further away from that of supergranules (Figure 7), the demand on signal-to-noise also increases.
 An adequate number of modes (and coupling strength between higher radial-orders) thus becomes a necessity to
 comment substantively on the ﬂows at these scales.
@@ -468,10 +468,10 @@ comment substantively on the ﬂows at these scales.
 
 Imaging near-surface flows using mode-coupling analysis
 9
-(a) qR⊙ = 100, f-f + p1-p1 + p2-p2
+(a) qR⊙= 100, f-f + p1-p1 + p2-p2
 Figure 5. Real-space divergence ﬂows (left column, in units of 10−5s−1) and radial vorticity (right column, in units of 10−6s−1)
 for LCT (top row), and mode-coupling inversions through RLS using all the couplings (middle row), bandpass ﬁltered around
-qR⊙ = 100 (see Figure 4). Corresponding scatter plots and correlation coeﬃcients are shown in the bottom row. We cut edges
+qR⊙= 100 (see Figure 4). Corresponding scatter plots and correlation coeﬃcients are shown in the bottom row. We cut edges
 out from the ﬂow maps and compare a circular region of diameter ≈175 Mm. The slopes of the best-ﬁt line through the scatter
 plots are 0.51 for divergence and 0.01 for vorticity. The vorticity ﬂow maps are saturated to show only 40% of the maximum
 values.
@@ -494,17 +494,17 @@ and the regularization parameter to be used in the inversion. We then separately
 
 10
 Mani et al.
-(a) qR⊙ = 100, f-f
-(b) qR⊙ = 150, p1-p1
+(a) qR⊙= 100, f-f
+(b) qR⊙= 150, p1-p1
 Figure 6. Real-space divergence ﬂows (left column, in units of 10−5s−1) and radial vorticity (right column, in units of 10−6s−1)
 for LCT (top row), and mode-coupling inversion through RLS using (a) f-f coupling (bottom row), bandpass ﬁltered around
-qR⊙ = 100, and using (b) p1-p1 coupling (bottom row), bandpass ﬁltered around qR⊙ = 150. We cut edges out from the ﬂow
+qR⊙= 100, and using (b) p1-p1 coupling (bottom row), bandpass ﬁltered around qR⊙= 150. We cut edges out from the ﬂow
 maps and compare a circular region of diameter ≈175 Mm.
-(a) qR⊙ = 200, f-f + p1-p1 + p2-p2
-(b) qR⊙ = 250, f-f + p1-p1 + p2-p2
+(a) qR⊙= 200, f-f + p1-p1 + p2-p2
+(b) qR⊙= 250, f-f + p1-p1 + p2-p2
 Figure 7. Real-space divergence ﬂows (left column, in units of 10−5s−1) and radial vorticity (right column, in units of 10−6s−1)
 for LCT (top row), and mode-coupling inversion through RLS using all the couplings (bottom row), bandpass ﬁltered around
-(a) qR⊙ = 200, and (b) qR⊙ = 250. We cut edges out from the ﬂow maps and compare a circular region of diameter ≈175 Mm.
+(a) qR⊙= 200, and (b) qR⊙= 250. We cut edges out from the ﬂow maps and compare a circular region of diameter ≈175 Mm.
 vorticity maps for LCT for diﬀerent values of smoothing. These ﬂow maps are then compared with those obtained
 from inversions at all depths in the radial grid that are within 0.5 Mm from the surface. The highest correlation
 (corresponding to the above depths and smoothing) is noted and comparison ﬂow maps are plotted for the desired
@@ -594,40 +594,40 @@ As described in section 1.1, we seek to describe the ﬂow u as a function of q 
 eq 3 into eq 2,
 uσ
 q(z) =
-�
+X
 j
-�
+
 q2 fjez + iq f ′
 j
-�
+	
 P σ
 jq + iq×ez fjT σ
 jq.
 (A1)
-For ﬂows in the anelastic limit (u ≪ speed of sound), we can denote the ﬂow perturbation operator as δLσ =
-−2iωρuσ · ∇ (see Hanasoge et al. 2017). Substituting Eq. A1 into the operator, we get,
+For ﬂows in the anelastic limit (u ≪speed of sound), we can denote the ﬂow perturbation operator as δLσ =
+−2iωρuσ · ∇(see Hanasoge et al. 2017). Substituting Eq. A1 into the operator, we get,
 δLσ
 q =
 −2iω ρ (iuσ
 q · k + uσ
 q · ez∂z),
 (A2)
-= −2iωρ �
+=−2iωρ P
 j
-�
+
 −k · q f ′
 jP σ
-jq − k · (q×ez) fjT σ
+jq −k · (q×ez) fjT σ
 jq + q2 fjP σ
 jq ∂z
-�
+	
 .
 (A3)
 
 12
 Mani et al.
 Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
-ξk ≡ ξnk(z) = iˆkHnk(z)ez + ˆzVnk(z),
+ξk ≡ξnk(z) = iˆkHnk(z)ez + ˆzVnk(z),
 (A4)
 where H and V are real-valued functions; n and n′ are dropped for compactness of notation. Then the coupling of
 two modes ξk and ξk′ (k′ = k + q), by the ﬂow perturbation operator δLσ
@@ -636,17 +636,17 @@ k′(σ), is
 given by
 Λk
 k′(σ) ≡
-�
+Z
 dx (δLσ
 qξk) · ξ∗
 k′ =
-�
+Z
 dx
-�
-− 2iωρ
-�
+"
+−2iωρ
+X
 j
-�
+n
 q2 fjP σ
 jq (ˆk · ˆk
 ′ H′
@@ -655,24 +655,24 @@ k′ + V ′
 kV ∗
 k′)
 −
-�
+
 k · q f ′
 jP σ
 jq + k · (q×ez) fjT σ
 jq
-�
+
 (ˆk · ˆk
 ′ HkH∗
 k′ + VkV ∗
 k′)
-� �
+o #
 (A5)
 We desire to linearly relate the coupling integral in the above equation to the ﬂows P and T, through poloidal and
 toroidal sensitivity kernels, Cqj,k and Dqj,k respectively. Hence, they are given by
 Cqj,k =
-�
+Z
 dz ρ
-�
+h
 q2 fj (ˆk · ˆk
 ′ H′
 kH∗
@@ -684,10 +684,10 @@ j (ˆk · ˆk
 ′ HkH∗
 k′ + VkV ∗
 k′)
-�
+i
 ,
 Dqj,k = k · (q×ez)
-�
+Z
 dz ρ fj (ˆk · ˆk
 ′ HkH∗
 k′ + VkV ∗
@@ -698,7 +698,7 @@ measurement between modes k and k + q From eq 8 of Woodard (2014), we write the 
 waveﬁeld cross-correlation as
 ⟨φω∗
 k φω+σ
-k+q ⟩ = Hω
+k+q ⟩= Hω
 kk′σΛk
 k′(σ),
 (A7)
@@ -718,7 +718,7 @@ Rω
 k =
 1
 ω2
-nk − ω2 − iωγnk/2,
+nk −ω2 −iωγnk/2,
 (A9)
 where ωnk is the resonant frequency of the mode, and γnk is the mode linewidth. Eq A9 can be derived by introducing
 mode damping −iωγρ as an operator in the diﬀerential equation that governs undamped, driven oscillations (see eq
@@ -732,13 +732,13 @@ are established. Mode normalization N is given by
 Nk = 1
 Q
 Q
-�
+X
 k
-�
+P
 ω
 |φω
 k|2
-�
+P
 ω
 Rω
 k
@@ -748,7 +748,7 @@ where the
 1
 Q
 Q
-�
+P
 k
 on the right-hand-side implies average over all [kx, ky] (Q terms in all) such that k = |k| is constant.
 This forces N to be isotropic, i.e., to only depend on k, and not k. The sum over ω is within ﬁve linewidths of ωnk.
@@ -769,16 +769,16 @@ Imaging near-surface flows using mode-coupling analysis
 B. SOLA INVERSIONS
 Subtractive Optimally Localized Averages (SOLA, Pijpers & Thompson 1994) aims to obtain a set of weight factors
 for the mode q and depth zo, which we will call αk,zo. A linear weighted sum of the measurements Bk,q in the fashion
-�
+P
 k
 αk,zoBk,q allows for an average value of the ﬂow Pq(z) to be estimated at the depth zo. To obtain the coeﬃcients
 αk,zo, it is assumed that a set of sensitivity kernels Kk,q(z) for the mode q can be summed up coherently to give an
-’averaging kernel’ that is localized at the depth zo. Conventionally, a Gaussian centered at zo and a width ∆ is chosen
+’averaging kernel’ that is localized at the depth zo. Conventionally, a Gaussian centered at zo and a width ∆is chosen
 which the averaging kernel should resemble after performing inversion.
 B.1. Kernels in the integral form
 Since the kernels in eq A6 are manifest as coeﬃcients on a basis fj(z), we ﬁrst derive kernels that can be expressed
 as a function of depth z (see Figure 8). It is convenient to derive in matrix form. Thus, with the following deﬁnitions:
-P ≡ Pq(z), p ≡ Pqj, F ≡ fj(z), B ≡ Bk,q C ≡ Cqj,k and K ≡ Kk,q(z), we write (assume only poloidal ﬂow for
+P ≡Pq(z), p ≡Pqj, F ≡fj(z), B ≡Bk,q C ≡Cqj,k and K ≡Kk,q(z), we write (assume only poloidal ﬂow for
 simplicity, the same derivations hold true for toroidal ﬂow as well)
 P = Fp
 (B11)
@@ -796,11 +796,11 @@ where
 K = (F T F)−1F T C,
 i.e.,
 Kk,q(z) =
-�
+X
 j,j′
-� �
+h Z
 dz fj(z)fj′(z)
-�−1
+i−1
 fj′(z)Cqj′,k
 (B14)
 B.2. Obtaining the coeﬃcients α
@@ -809,23 +809,23 @@ T (z, zo) =
 1
 √
 2π∆2 exp
-�z − zo
+z −zo
 2∆2
-�
+
 .
 (B15)
 This can be achieved by solving the optimization problem
 minimize X =
-�
+Z
 dz
-�
-T (z, zo) − Θq(z, zo)
-�2
+h
+T (z, zo) −Θq(z, zo)
+i2
 ,
 (B16)
 where we introduce the averaging kernel for mode q thus
 Θq(z, zo) =
-�
+X
 k
 αk,zoKk,q(z).
 (B17)
@@ -834,46 +834,46 @@ and B14.
 
 14
 Mani et al.
-Figure 8. Left: Kernel Kk,q(z) (eq B14) shown vs depth z for the three radial order couplings f-f, p1-p1, and p2-p2. qR⊙ =
-[−112, −45] and kR⊙ = [−853, −157] is chosen for all the radial order couplings for comparison.
+Figure 8. Left: Kernel Kk,q(z) (eq B14) shown vs depth z for the three radial order couplings f-f, p1-p1, and p2-p2. qR⊙=
+[−112, −45] and kR⊙= [−853, −157] is chosen for all the radial order couplings for comparison.
 Right: Averaging kernel
-(eq B17) using SOLA, for qR⊙ = [−112, −45] at depth z0 = −0.48 Mm, and the corresponding target Gaussian (eq B15).
+(eq B17) using SOLA, for qR⊙= [−112, −45] at depth z0 = −0.48 Mm, and the corresponding target Gaussian (eq B15).
 Integral of the averaging kernel over z is 0.89.
 Setting ∂X
-∂α → 0 gives us the matrix problem to be solved
+∂α →0 gives us the matrix problem to be solved
 A{α} = v,
 {α} =
-�
+h
 A + µI
-�−1
+i−1
 v,
 (B18)
 where the square matrix A =
-�
+R
 dz Kk,q(z)Kk′,q(z) and v =
-�
+R
 dz Kk,q(z)T (z, zo). Here, k′ is just a dummy index for
 denoting elements in the matrix A, (k′ ̸= k+q). In the last line of eq B18, we introduce regularization using an Identity
 matrix I, with the regularization parameter µ - purpose being the same as that described in section 3.1. Obtaining
 α thus becomes a highly expensive computationally for very large number of modes (see section 3). Substitute α
-obtained from eq B18 into last line of eq B13, and �
+obtained from eq B18 into last line of eq B13, and P
 k
 on both sides
-�
+X
 k
 αk,zoBσ
 k,q =
-�
+X
 k
 αk,zo
-�
+Z
 dz Kk,q(z)P σ
 q (z),
 =
-�
+Z
 dz Θq(z, zo)P σ
 q (z),
-≈ ⟨P σ
+≈⟨P σ
 q (zo)⟩
 (B19)
 Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Di-
@@ -901,10 +901,10 @@ doi: 10.1007/s41116-020-00028-3
 
 Imaging near-surface flows using mode-coupling analysis
 15
-Figure 9. Left: Poloidal ﬂow power-spectrum for f-f as a function of qxR⊙ and qyR⊙. Right: Corresponding power-spectrum
-averaged over the azimuthal angle. Shaded region shows ±1 − σ error around the mean. Power is in units of m2/s4.
+Figure 9. Left: Poloidal ﬂow power-spectrum for f-f as a function of qxR⊙and qyR⊙. Right: Corresponding power-spectrum
+averaged over the azimuthal angle. Shaded region shows ±1 −σ error around the mean. Power is in units of m2/s4.
 Figure 10. Real-space divergence ﬂows (in units of 10−5s−1) for mode-coupling inversion through SOLA using f-f coupling,
-and LCT, bandpass ﬁltered around qR⊙ = 100. We cut edges out from the ﬂow maps and compare a circular region of diameter
+and LCT, bandpass ﬁltered around qR⊙= 100. We cut edges out from the ﬂow maps and compare a circular region of diameter
 ≈175 Mm. The scatter plot shows the agreement between the maps. The slopes of the best-ﬁt line through the scatter plot is
 1.05. For demonstration, we show inversions only for poloidal ﬂow using SOLA.
 De Rosa, M., Duvall, T. L., J., & Toomre, J. 2000, SoPh,

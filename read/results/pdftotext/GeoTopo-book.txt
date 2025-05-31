@@ -60,205 +60,13 @@ Zahlentheorie“ gehört zu haben.
 
 Inhaltsverzeichnis
 1 Topologische Grundbegriffe
-1.1 Topologische Räume . .
-1.2 Metrische Räume . . . .
-1.3 Stetigkeit . . . . . . . .
-1.4 Zusammenhang . . . . .
-1.5 Kompaktheit . . . . . .
-1.6 Wege und Knoten . . . .
-Übungsaufgaben . . . . . . .
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
+1.1 Topologische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.2 Metrische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.3 Stetigkeit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.4 Zusammenhang . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.5 Kompaktheit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.6 Wege und Knoten . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Übungsaufgaben . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 2
 2
@@ -270,125 +78,10 @@ Zahlentheorie“ gehört zu haben.
 22
 
 2 Mannigfaltigkeiten und Simplizialkomplexe
-2.1 Topologische Mannigfaltigkeiten . . . . .
-2.2 Differenzierbare Mannigfaltigkeiten . . .
-2.3 Simplizialkomplex . . . . . . . . . . . .
-Übungsaufgaben . . . . . . . . . . . . . . . .
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
+2.1 Topologische Mannigfaltigkeiten . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 Differenzierbare Mannigfaltigkeiten . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3 Simplizialkomplex . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Übungsaufgaben . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 24
 24
@@ -396,175 +89,11 @@ Zahlentheorie“ gehört zu haben.
 34
 43
 
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-
 3 Fundamentalgruppe und Überlagerungen
-3.1 Homotopie von Wegen . . . . . . . . .
-3.2 Fundamentalgruppe . . . . . . . . . .
-3.3 Überlagerungen . . . . . . . . . . . . .
-3.4 Gruppenoperationen . . . . . . . . . .
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
+3.1 Homotopie von Wegen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.2 Fundamentalgruppe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.3 Überlagerungen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.4 Gruppenoperationen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 44
 44
@@ -573,125 +102,11 @@ Zahlentheorie“ gehört zu haben.
 61
 
 4 Euklidische und nichteuklidische Geometrie
-4.1 Axiome für die euklidische Ebene . . . . . . . .
-4.2 Weitere Eigenschaften einer euklidischen Ebene
-4.2.1 Flächeninhalt . . . . . . . . . . . . . . .
-4.3 Hyperbolische Geometrie . . . . . . . . . . . . .
-Übungsaufgaben . . . . . . . . . . . . . . . . . . . .
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
+4.1 Axiome für die euklidische Ebene . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 Weitere Eigenschaften einer euklidischen Ebene . . . . . . . . . . . . . . . . . . .
+4.2.1 Flächeninhalt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.3 Hyperbolische Geometrie . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Übungsaufgaben . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 64
 64
@@ -701,105 +116,10 @@ Zahlentheorie“ gehört zu haben.
 86
 
 5 Krümmung
-5.1 Krümmung von Kurven . . . . . .
-5.2 Tangentialebene . . . . . . . . . . .
-5.3 Gauß-Krümmung . . . . . . . . . .
-5.4 Erste und zweite Fundamentalform
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
+5.1 Krümmung von Kurven . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 Tangentialebene . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.3 Gauß-Krümmung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.4 Erste und zweite Fundamentalform . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 87
 87
@@ -808,61 +128,6 @@ Zahlentheorie“ gehört zu haben.
 94
 
 Lösungen der Übungsaufgaben
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
-
-.
-.
-.
-.
 
 99
 
@@ -1712,9 +977,7 @@ V xi
 
 Sm
 
-i=1 Uxi
-
-⊇ K.
+i=1 Uxi ⊇ K.
 
 18
 
@@ -2050,9 +1313,6 @@ n bzw. 2n, da gilt:
 S
 Sei Ui := { (x0 : · · · : xn ) ∈ P n (R) | xi 6= 0 } ∀i ∈ 0, . . . , n. Dann ist P n (R) = ni=0 Ui
 und die Abbildung
-
-(y1 : · · · : yi−1
-
 Ui → Rn
 
 
@@ -2064,15 +1324,14 @@ x0
 xi
 xi
 xi
-: 1 : yi : · · · : yn ) →7 (y1 , . . . , yn )
-
+(y1 : · · · : yi−1 : 1 : yi : · · · : yn ) →7 (y1 , . . . , yn )
 ist bijektiv.
 Die Ui mit i = 0, . . . , n bilden einen n-dimensionalen Atlas:
 x = (1 : 0 : 0) ∈ U0 → R2
 
-x 7→ (0, 0)
-
 y = (0 : 1 : 1) ∈ U2 → R2
+
+x 7→ (0, 0)
 
 y 7→ (0, 1)
 
@@ -2089,26 +1348,22 @@ V1 ∩ V2 = ∅?
 Karten:
 Di := {(x1 , . . . , xn+1 ) ∈ S n |xi > 0} → B1 (0, . . . , 0)
 | {z }
-S n |xi
 
 ∈Rn
-
-Ci := {(x1 , . . . , xn+1 ) ∈
-< 0} → B1 (0, . . . , 0)
-1
+n
+Ci := {(x1 , . . . , xn+1 ) ∈ S |xi < 0} → B1 (0, . . . , 0)
 (x1 , . . . , xn+1 ) 7→ (x1 , . . . , 
 x
-,
-.
-.
-i q. , xn+1 )
+. . . , xn+1 )1
+i , q
 q
-Pn
 P
-(x1 , . . . , xn ) 7→ (x1 , . . . , xi−1 , 1 − k=1 x2k , xi , . . . , xn ), oder − 1 − nk=1 x2k für Ci
+P
+(x1 , . . . , xn ) 7→ (x1 , . . . , xi−1 , 1 − nk=1 x2k , xi , . . . , xn ), oder − 1 − nk=1 x2k für Ci
 S
 S n = n+1
 i=1 (Ci ∪ Di )
+
 Als kompakte Mannigfaltigkeit wird S n auch „geschlossene Mannigfaltigkeit“ genannt.
 5) [0, 1] ist keine Mannigfaltigkeit, denn:
 Es gibt keine Umgebung von 0 in [0, 1], die homöomorph zu einem offenem Intervall
@@ -2558,10 +1813,8 @@ det
 
 ∂x 
 ∂v
-∂y (v0 )
+∂y (v0 ) 6= 0
 ∂v
-
-6= 0
 
 und Fj (u, v) = (x(u, v), y(u, v), z(u, v)).
 fj : Uj × R → R3 durch
@@ -2572,11 +1825,10 @@ fj |U ×{ 0 } = Fj
 Offensichtlich: F
 j
  ∂x
-JFfj =
 
 ∂u
- ∂y
-∂u
+∂y
+JFfj =  ∂u
 ∂z
 ∂u
 
@@ -2632,9 +1884,7 @@ Beispiel 25 (Lie-Gruppen)
 
 Pn
 
-k=1 aik bkj
-
-ist nach allen Variablen differenzierbar
+k=1 aik bkj ist nach allen Variablen differenzierbar
 
 det(Aij )
 det A
@@ -2760,9 +2010,9 @@ c) Ist d = max { k ∈ N0 | K enthält k-Simplex }, so heißt d die Dimension vo
 (a) 1D Simplizialkomplex (b) 2D Simplizialkomplex
 (ohne untere Fläche!)
 
-(d) 1D Simplizialkomplex
-
 (c) 2D Simplizialkomplex
+
+(d) 1D Simplizialkomplex
 
 (e) 2D Simplizialkomplex
 
@@ -4612,13 +3862,9 @@ O. B. d. A. seien ϕ1 (R) und ϕ2 (R) in der selben Halbebene.
 Es gilt: d(P 0 , ϕ1 (R)) = d(ϕ1 (P ), ϕ1 (R))
 = d(P, R)
 = d(ϕ2 (P ), ϕ2 (R))
-und analog
-
 = d(P 0 , ϕ2 (R))
-= d(Q0 , ϕ2 (R))
-
-d(Q0 , ϕ1 (R))
-
+0
+und analog d(Q , ϕ1 (R)) = d(Q0 , ϕ2 (R))
 (Teil ii) Seien P , Q und R Fixpunkte von ϕ, R ∈
 / P Q und A ∈
 / P Q ∪ P R ∪ QR. Sei B ∈
@@ -4955,29 +4201,22 @@ hc
 
 ha
 
-c
-
 LC
 
+c
 A
 
 A
 
 B
 
-(a)
-
-1/2
-
 B
 
-· |AB| · |hc |
+(a) 1/2 · |AB| · |hc |
 
-(b)
+(b) 1/2 · |BC| · |h
 
-1/2
-
-· |BC| · |ha |
+a|
 
 Abbildung 4.15: Flächenberechnung im Dreieck
 Zu zeigen: Unabhängigkeit von der gewählten Grundseite.
@@ -4998,18 +4237,7 @@ B
 Abbildung 4.16: 4ABLa und 4CLC B sind ähnlich, weil IWS = π
 Strahlensatz
 
-=======⇒
-
-a
-hc
-
-=
-
-c
-ha
-
-→ a · ha = c · hc
-
+=======⇒ hac = hca → a · ha = c · hc
 Satz 4.7 (Satz des Pythagoras)
 Im rechtwinkligen Dreieck gilt a2 + b2 = c2 , wobei c die Hypotenuse und a, b die beiden
 Katheten sind.
@@ -5429,13 +4657,7 @@ SL2 (R) ac(x + y ) + adx + bcx + bd
 
 ⇒ σ(z) =
 
-⇒ =(σ(z)) =
-
-y
-(cx+d)2 +(cy)2
-
->0
-
+⇒ =(σ(z)) = (cx+d)y2 +(cy)2 > 0
 Die Abbildung bildet also nach H ab. Außerdem gilt:
 
 
@@ -5468,7 +4690,6 @@ c0 d0
 c d
 c0 z + d0
 =
-=
 
 0
 
@@ -5484,14 +4705,16 @@ a ac0 z+d
 z+b
 c ac0 z+d
 0 + d
-a(a0 z+b0 )+b(c0 z+d0 )
-c0 z+d0
-c(a0 z+b0 )+d(c0 z+d0 )
-c0 z+d0
-0
-a(a z + b0 ) + b(c0 z
 
-+ d0 )
+a(a0 z+b0 )+b(c0 z+d0 )
+0 z+d0
+= c(a0 z+bc0 )+d(c
+0 z+d0 )
+c0 z+d0
+a(a0 z + b0 ) + b(c0 z + d0 )
+
+=
+
 c(a0 z + b0 ) + d(c0 z + d0 )
 (aa0 + bc0 )z + ab0 + bd0
 =
@@ -5511,8 +4734,6 @@ a b
 ◦z
 c d
 c d0
-=
-
 b) Es gilt σ(z) = (−σ)(z) für alle σ ∈ SL2 (R) und z ∈ H.
 
 
@@ -5546,12 +4767,12 @@ A−1
 
 λ
 
-Bt−1
+Bt−1 = B−t
 −1
+3
 C
 
-= B−t
-= C3
+=C
 
 Daher genügt es zu zeigen, dass man mit Aλ , Bt und C alle Matrizen aus SL2 (R)
 erzeugen kann, genügt es also von einer beliebigen Matrix durch Multiplikation mit
@@ -5672,14 +4893,16 @@ m + ir
 
 0
 
-m
 0
 
 1
 
-2
+m
 
 λ2 m
+
+2
+
 3m + 14
 
 (a) Fall 1
@@ -5741,14 +4964,9 @@ y
 −1
 
 1
-z
-
-=
-
 1
-r
-
-· eiϕ
+iϕ
+z = r ·e
 
 0
 
@@ -5762,11 +4980,11 @@ Beweis: Nach Proposition 4.9 (c) gibt es σ mit σ(a1 ) = b1 und σ(a2 ) = b2 . 
 Definition 65
 Seien z1 , z2 , z3 , z4 ∈ C paarweise verschieden.
 Dann heißt
-DV(z1 , z2 , z3 , z4 ) :=
 
 z1 −z4
-z1 −z2
-z3 −z4
+2
+DV(z1 , z2 , z3 , z4 ) := zz13 −z
+−z4
 z3 −z2
 
 =
@@ -5777,28 +4995,14 @@ z3 −z2
 Doppelverhältnis von z1 , . . . , z4 .
 Bemerkung 70 (Eigenschaften des Doppelverhältnisses)
 a) DV(z1 , . . . , z4 ) ∈ C \ { 0, 1 }
-b) DV(z1 , z4 , z3 , z2 ) =
-
-1
-DV(z1 ,z2 ,z3 ,z4 )
-
-c) DV(z3 , z2 , z1 , z4 ) =
-
-1
-DV(z1 ,z2 ,z3 ,z4 )
-
+b) DV(z1 , z4 , z3 , z2 ) = DV(z1 ,z12 ,z3 ,z4 )
+c) DV(z3 , z2 , z1 , z4 ) = DV(z1 ,z12 ,z3 ,z4 )
 d) DV ist auch wohldefiniert, wenn eines der zi = ∞ oder wenn zwei der zi gleich sind.
 e) DV(0, 1, ∞, z4 ) = z4 (Der Fall z4 ∈ { 0, 1, ∞ } ist zugelassen).
 f) Für σ ∈ PSL2 (C) und z1 , . . . , z4 ∈ C ∪ { ∞ } ist
 DV(σ(z1 ), σ(z2 ), σ(z3 ), σ(z4 )) = DV(z1 , z2 , z3 , z4 )
-und für σ(z) =
-
-1
-z
-
-gilt
+und für σ(z) = z1 gilt
 DV(σ(z1 ), σ(z2 ), σ(z3 ), σ(z4 )) = DV(z1 , z2 , z3 , z4 )
-
 g) DV(z1 , z2 , z3 , z4 ) ∈ R ∪ { ∞ } ⇔ z1 , . . . , z4 liegen auf einer hyperbolischen Geraden.
 Beweis:
 a) DV(z1 , . . . , z4 ) 6= 0, da zi paarweise verschieden
@@ -5819,27 +5023,17 @@ Annahme: DV(z1 , . . . , z4 ) = 1
 ⇔ z3 = z1 oder z2 = z4
 
 Alle zi sind paarweise verschieden ⇒ Widerspruch
-b) DV(z1 , z4 , z3 , z2 ) =
-
-(z1 −z2 )·(z3 −z4 )
-(z1 −z4 )·(z3 −z2 )
-
-=
-
-1
-DV(z1 ,z2 ,z3 ,z4 )
-
-c) DV(z3 , z2 , z1 , z4 ) =
-
-(z3 −z4 )·(z1 −z2 )
-(z3 −z2 )·(z1 −z4 )
-
-=
-
-1
-DV(z1 ,z2 ,z3 ,z4 )
 
 
+
+1
+1 −z2 )·(z3 −z4 )
+b) DV(z1 , z4 , z3 , z2 ) = (z
+(z1 −z4 )·(z3 −z2 ) = DV(z1 ,z2 ,z3 ,z4 )
+(z3 −z4 )·(z1 −z2 )
+c) DV(z3 , z2 , z1 , z4 ) = (z
+= DV(z1 ,z12 ,z3 ,z4 )
+3 −z2 )·(z1 −z4 )
 
 d) Zwei der zi dürfen gleich sein, da:
 Fall 1 z1 = z4 oder z3 = z2
@@ -5849,17 +5043,13 @@ Mit der Regel von L’Hospital folgt, dass in diesem Fall DV(z1 , . . . , z4 ) =
 Fall 3 z1 = z3 oder z2 = z4
 Durch Einsetzen ergibt sich DV(z1 , . . . , z4 ) = 1.
 Im Fall, dass ein zi = ∞ ist, ist entweder DV(0, 1, ∞, z4 ) = 0 oder DV(0, 1, ∞, z4 ) ± ∞
-e) DV(0, 1, ∞, z4 ) =
-
+·(∞−1)
 (0−z4 )·(∞−1)
-(0−1)·(∞−z4 )
-
-=
-
-z4 ·(∞−1)
-∞−z4
-
+= z4∞−z
+e) DV(0, 1, ∞, z4 ) = (0−1)·(∞−z
 = z4
+4
+4)
 
 f) Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
 g) Sei σ ∈ PSL2 (C) mit σ(z1 ) = 0, σ(z2 ) = 1, σ(z3 ) = ∞. Ein solches σ existiert, da man
@@ -6002,14 +5192,13 @@ Beweis:
 a) l(γ) =
 
 Rb
-a
 
-kγ 0 (t)kdt =
+0
+a kγ (t)kdt =
 
 Rb
-a
 
-1dt = b − a.
+a 1dt = b − a.
 
 b) Im Folgenden wird die Aussage nur für γ : [a, b] → R2 bewiesen. Allerdings funktioniert
 der Beweis im Rn analog. Es muss nur die Ableitung angepasst werden.
@@ -6157,11 +5346,10 @@ r
 Definition 70
 Sei γ : I → R3 eine durch Bogenlänge parametrisierte Kurve.
 a) Für t ∈ I heißt κ(t) := kγ 00 (t)k die Krümmung von γ in t.
-b) Ist für t ∈ I die Ableitung γ 00 (t) 6= 0, so heißt
+00
 
-γ 00 (t)
-kγ 00 (t)k
-
+(t)
+b) Ist für t ∈ I die Ableitung γ 00 (t) 6= 0, so heißt kγγ 00 (t)k
 Normalenvektor an γ in t.
 
 c) b(t) sei ein Vektor, der γ 0 (t), n(t) zu einer orientierten Orthonormalbasis von R3 ergänzt.
@@ -6190,11 +5378,12 @@ s∈V:
 Für p = F −1 (s) ∈ U sei
 
  ∂x
-JF (p) =
 
 ∂u (p)
- ∂y (p)
-∂u
+∂y
+
+JF (p) = ∂u
+(p)
 ∂z
 ∂u (p)
 
@@ -6402,13 +5591,10 @@ Definition 74
 Sei S ⊆ R3 eine reguläre Fläche, s ∈ S und n ein stetiges Normalenfeld auf S.
 γ : [−ε, ε] → S eine nach Bogenlänge parametrisierte Kurve (ε > 0) mit γ(0) = s und
 γ 00 (0) 6= 0.
-Sei n(0) :=
+00
 
-γ 00 (0)
-kγ 00 (0)k .
-
-Zerlege
-
+Sei n(0) := kγγ 00 (0)
+(0)k . Zerlege
 n(0) = n(0)t + n(0)⊥ mit n(0)t ∈ Ts S und n(0)⊥ ∈ (Ts S)⊥
 Dann ist n(0)⊥ = hn(0), n(s)i · n(s)
 κNor (s, γ) := hγ 00 (0), n(s)i die Normalkrümmung.
@@ -6516,7 +5702,7 @@ b) { Dp F (e1 ), Dp F (e2 ) } ist eine Basis von Ts S.
 c) Bzgl. der Basis { Dp F (e1 ), Dp F (e2 ) } hat das Standardskalarprodukt aus Bemerkung 80.a die Darstellungsmatrix IS .
 d) gi,j (s) ist eine differenzierbare Funktion von s.
 Bemerkung 81
-
+2
 ∂F
 ∂F
 (p) ×
@@ -6549,8 +5735,6 @@ Dann ist ∂u
 ∂u2
 1
 z3
-
-2
 
 det(IS ) =
 
@@ -6658,9 +5842,8 @@ ds n(x) =
 
 d
 n(s„+“tx)
-dt | {z }
+dt | {z } t=0
 
-t=0
 Soll auf Fläche S bleiben
 
 Die Abbildung ds n heißt Weingarten-Abbildung
@@ -6686,13 +5869,10 @@ c) Wegen Proposition 5.1 (a) ist ds n ein Homomorphismus.
 d) Zu zeigen: ∀x, y ∈ Is S : hx, ds n(y)i = hds n(x), yi
 Aufgrund der Bilinearität des Skalarproduktes genügt es diese Eigenschaft für die
 Basisvektoren zu zeigen.
-Sei xi = Dp F (ei ) =
-
 ∂F
-∂ui (p)
-
-i = 1, 2
-
+Sei xi = Dp F (ei ) = ∂u
+(p) i = 1, 2
+i
 2
 
 F
@@ -6943,12 +6123,11 @@ nun für für n ∈ N≥2 , m ∈ N:
 1
 , . . . , 1)
 m
-∈ SLn (R), und Am ist unbeschränkt, da kAm k∞ =
-
-
-Am = diagn (m,
-Dann gilt: det Am = 1, d. h. Am
+Dann gilt: det Am = 1, d. h. Am ∈ SLn (R), und Am ist unbeschränkt, da kAm k∞ =
 m −−−−→ ∞.
+
+Am = diagn (m,
+
 m→∞
 
 (c) Beh.: P(R) ist kompakt.
@@ -7041,8 +6220,8 @@ Vor.: Sei (X, d) eine absolute Ebene, A, B, C ∈ X und 4ABC ein Dreieck.
 
 Lösungen der Übungsaufgaben
 
-∼ AC ⇒ ∠ABC ∼
-(a) Beh.: AB =
+(a) Beh.: AB ∼
+= AC ⇒ ∠ABC ∼
 = ∠ACB
 ∼
 Bew.: Sei AB = AC.
@@ -7230,30 +6409,21 @@ Symmetrische Gruppe
 
 Seien A, B und M Mengen.
 AC
-P(M )
-M
-∂M
-M◦
-A×B
-A⊆B
-A(B
-A\B
-A∪B
-A ∪˙ B
-A∩B
-
 Komplement von A
-Potenzmenge von M
+P(M ) Potenzmenge von M
+M
 Abschluss von M
+∂M
 Rand der Menge M
+M◦
 Inneres der Menge M
-Kreuzprodukt
-Teilmengenbeziehung
-echte Teilmengenbeziehung
-Differenzmenge
-Vereinigung
-Disjunkte Vereinigung
-Schnitt
+A × B Kreuzprodukt
+A ⊆ B Teilmengenbeziehung
+A ( B echte Teilmengenbeziehung
+A \ B Differenzmenge
+A ∪ B Vereinigung
+A ∪˙ B Disjunkte Vereinigung
+A ∩ B Schnitt
 
 Geometrie
 AB
@@ -7286,62 +6456,48 @@ PSLn (K) Projektive lineare Gruppe
 Wege
 Sei γ : I → X ein Weg.
 [γ]
-γ1 ∗ γ2
-γ1 ∼ γ2
-γ(x)
-C
-
 Homotopieklasse von γ
-Zusammenhängen von Wegen
-Homotopie von Wegen
+γ1 ∗ γ2 Zusammenhängen von Wegen
+γ1 ∼ γ2 Homotopie von Wegen
+γ(x)
 Inverser Weg, also γ(x) := γ(1 − x)
 Bild eines Weges γ, also C :=
+C
 γ([0, 1])
 
 Weiteres
 B
-Bδ (x)
+Basis einer Topologie
+Bδ (x) δ-Kugel um x
 S
+Subbasis einer Topologie
 T
+Topologie
 A
+Atlas
 P
-h·, ·i
-X/∼
-[x]∼
-kxk
-|x|
-hai
+Projektiver Raum
+h·, ·i Skalarprodukt
+X/∼ X modulo ∼
+[x]∼ Äquivalenzklassen von x bzgl. ∼
+kxk Norm von x
+|x| Betrag von x
+hai Erzeugnis von a
 Sn
 Tn
 
-Basis einer Topologie
-δ-Kugel um x
-Subbasis einer Topologie
-Topologie
-
-Atlas
-Projektiver Raum
-Skalarprodukt
-X modulo ∼
-Äquivalenzklassen von x bzgl. ∼
-Norm von x
-Betrag von x
-Erzeugnis von a
 Sphäre
 Torus
 
 f ◦g
-πX
-f |U f
-f −1 (M )
-Rg(M )
-χ(K)
-
 Verkettung von f und g
+πX
 Projektion auf X
+f |U f
 eingeschränkt auf U
-Urbild von M
-Rang von M
+f −1 (M ) Urbild von M
+Rg(M ) Rang von M
+χ(K)
 Euler-Charakteristik von K
 
 110
@@ -7381,22 +6537,21 @@ C = { a + ib | a, b ∈ R } Komplexe Zahlen
 P = { 2, 3, 5, 7, . . . } Primzahlen
 H = { z ∈ C | =z > 0 } obere Halbebene
 I = [0, 1] ( R Einheitsintervall
-f : S 1 ,→ R2
-π1 (X, x)
-Fix(f )
-k · k2
-κ
-κNor
-V (f )
 
 Rationale Zahlen
 
-Einbettung der Kreislinie in die Ebene
+f : S 1 ,→ R2 Einbettung der Kreislinie in die Ebene
+π1 (X, x)
 Fundamentalgruppe im topologischen Raum X um x ∈ X
+Fix(f )
 Menge der Fixpunkte der Abbildung f
+k · k2
 2-Norm; Euklidische Norm
+κ
 Krümmung
+κNor
 Normalenkrümmung
+V (f )
 Nullstellenmenge von f 2
 
 Krümmung

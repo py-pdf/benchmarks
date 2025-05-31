@@ -6,6 +6,7 @@ from io import BytesIO
 import fitz as PyMuPDF
 import pdfminer
 import pdfplumber
+import playa
 import pypdf
 import pypdfium2 as pdfium
 from borb.pdf.pdf import PDF
@@ -14,6 +15,19 @@ from pdfminer.high_level import extract_pages
 from requests import ReadTimeout
 
 from .text_extraction_post_processing import postprocess, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE
+
+
+def playa_get_text(data: bytes) -> str:
+    with tempfile.TemporaryDirectory() as tempdir:
+        path = os.path.join(tempdir, "pdf.pdf")
+        with open(path, "wb") as outfh:
+            outfh.write(data)
+        texts = []
+        with playa.open(path, max_workers=2) as pdf:
+            pages = pdf.pages
+            page_labels = [page.label for page in pages]
+            texts = list(pages.map(playa.Page.extract_text))
+        return postprocess(texts, page_labels)
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -190,7 +204,7 @@ def pdfplubmer_get_text(data: bytes) -> str:
     text = ""
     with pdfplumber.open(BytesIO(data)) as pdf:
         for page in pdf.pages:
-            text += page.extract_text()
+            text += page.extract_text(use_text_flow=True)
             text += "\n"
     return text
 

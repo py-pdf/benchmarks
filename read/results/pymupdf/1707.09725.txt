@@ -429,34 +429,34 @@ This chapter introduces linear image ﬁlters in Section 2.1, then standard laye
 CNNs are explained in Section 2.2. The layer block pattern is described in Section 2.3,
 transition layers in Section 2.4 and nine ways to analyze CNNs are described in Section 2.5.
 2.1. Linear Image Filters
-A linear image ﬁlter (also called a ﬁlter bank or a kernel) is an element F ∈ Rkw×kh×d,
+A linear image ﬁlter (also called a ﬁlter bank or a kernel) is an element F ∈Rkw×kh×d,
 where kw represents the ﬁlter’s width, kh the ﬁlter’s height and d the number of input
-channels. The ﬁlter F is convolved with the image I ∈ Rw×h×d to produce a new image I′.
+channels. The ﬁlter F is convolved with the image I ∈Rw×h×d to produce a new image I′.
 The output image I′ has only one channel. Each pixel I′(x, y) of the output image gets
 calculated by point-wise multiplication of one ﬁlter element with one element of the original
 image I:
 I′(x, y) =
-⌊ kw
+⌊kw
 2 ⌋
-�
-ix=1−⌈ kw
+X
+ix=1−⌈kw
 2 ⌉
-⌊ kh
+⌊kh
 2 ⌋
-�
-iy=1−⌈ kh
+X
+iy=1−⌈kh
 2 ⌉
 d
-�
+X
 ic=1
 I(x + ix, y + iy, ic) · F(ix, iy, ic)
 This procedure is explained by Figure 2.1. It is essentially a discrete convolution.
-I ∈ R7×7
+I ∈R7×7
 Filter kernel
-F ∈ R3×3
+F ∈R3×3
 Result of point-wise
 multiplication
-I′ ∈ R7×7
+I′ ∈R7×7
 104
 116
 116
@@ -591,7 +591,7 @@ high-level features which are combinations of the low-level features.
 Also, models should utilize the fact that the pixels of images are ordered. One way to use
 this is by learning image ﬁlters in so called convolutional layers.
 While MLPs vectorize the input, the input of a layer in a CNN are feature maps. A feature
-map is a matrix m ∈ Rw×h, but typically the width equals the height (w = h). For an RGB
+map is a matrix m ∈Rw×h, but typically the width equals the height (w = h). For an RGB
 4
 
 2.2. CNN Layer Types
@@ -609,16 +609,16 @@ the linear convolutions are the parameters which are adapted to the training dat
 number n of ﬁlters as well as the ﬁlter’s size kw × kh are hyperparameters of convolutional
 layers. Sometimes, it is denoted as n@kw × kh. Although the ﬁlter depth is usually omitted
 in the notation, the ﬁlters are of dimension kw × kh × d(i−1), where d(i−1) is the number of
-feature maps of the input layer (i − 1).
-Another hyperparameter of convolution layers is the stride s ∈ N≥1 and the padding.
+feature maps of the input layer (i −1).
+Another hyperparameter of convolution layers is the stride s ∈N≥1 and the padding.
 Padding (usually zero-padding [SCL12, SEZ+13, HZRS15a]) is used to make sure that the
 size of the feature maps doesn’t change.
 The hyperparameters of convolutional layers are
-• the number of ﬁlters n ∈ N≥1,
-• kw, kh ∈ N≥1 of the ﬁlter size kw × kh × d(i−1),
+• the number of ﬁlters n ∈N≥1,
+• kw, kh ∈N≥1 of the ﬁlter size kw × kh × d(i−1),
 • the activation function of the layer (see Table B.3) and
-• the stride s ∈ N≥1
-Typical choices are n ∈ { 32, 64, 128 }, kw = kh = k ∈ { 1, 3, 5, 11 } such as in [KSH12,
+• the stride s ∈N≥1
+Typical choices are n ∈{ 32, 64, 128 }, kw = kh = k ∈{ 1, 3, 5, 11 } such as in [KSH12,
 SZ14, SLJ+15], rectiﬁed linear unit (ReLU) activation and s = 1.
 The concept of weight sharing is crucial for CNNs. This concept was introduced in [WHH+89].
 With weight sharing, the ﬁlters can be learned with stochastic gradient descent (SGD) just
@@ -631,28 +631,28 @@ if only the ﬂattened output is compared.
 This is easier to see when the ﬁltering operation is denoted formally:
 o(i)(x) = b +
 k
-�
+X
 j=1
 wij · xj
-with i ∈ { 1, . . . , w } × { 1, . . . , h } × { 1, . . . , d }
+with i ∈{ 1, . . . , w } × { 1, . . . , h } × { 1, . . . , d }
 [2.1]
 o(x,y,z)(I) = b +
-⌊ kw
+⌊kw
 2 ⌋
-�
-ix=1−⌈ kw
+X
+ix=1−⌈kw
 2 ⌉
-⌊ kh
+⌊kh
 2 ⌋
-�
-iy=1−⌈ kh
+X
+iy=1−⌈kh
 2 ⌉
 d
-�
+X
 ic=1
 Fz(ix, iy, ic) · I(x + ix, y + iy, ic)
 [2.2]
-with a bias b ∈ R, x ∈ { 1, . . . , w } , y ∈ { 1, . . . , h } and z ∈ { 1, . . . , d }
+with a bias b ∈R, x ∈{ 1, . . . , w } , y ∈{ 1, . . . , h } and z ∈{ 1, . . . , d }
 One can see that most weights of the equivalent MLP are zero and many weights are
 equivalent. Hence the advantage of CNNs compared to MLPs is the reduction of parameters.
 The eﬀect of fewer parameters is that less training data is necessary to get suitable
@@ -698,7 +698,7 @@ Another insight recently got important: Every fully connected layer has an equiv
 convolutional layer which has the same weights.2 This way, one can use the complete
 classiﬁcation network as a very complex non-linear image ﬁlter which can be used for
 semantic segmentation.
-A fully connected layer with d ∈ N≥1 inputs and n ∈ N≥1 nodes can be interpreted as a
+A fully connected layer with d ∈N≥1 inputs and n ∈N≥1 nodes can be interpreted as a
 convolutional layer with an input of shape 1 × 1 × d and n ﬁlters of size 1 × 1. This will
 produce an output shape 1 × 1 × n. Every single output is connected to all of the inputs.
 When a convolutional layer is followed by a fully connected layer, it is necessary to vectorize
@@ -708,8 +708,8 @@ omitted if a convolution layer without padding and a ﬁlter size equal to the f
 size is applied. This was used by [LSD15].
 2.2.2. Pooling Layers
 Pooling summarizes a p × p area of the input feature map. Just like convolutional layers,
-pooling can be used with a stride of s ∈ N>1. As s ≥ 2 is the usual choice, pooling layers
-are sometimes also called subsampling layers. Typically, p ∈ { 2, 3, 4, 5 } and s = 2 such as
+pooling can be used with a stride of s ∈N>1. As s ≥2 is the usual choice, pooling layers
+are sometimes also called subsampling layers. Typically, p ∈{ 2, 3, 4, 5 } and s = 2 such as
 for AlexNet [KSH12] and VGG-16 [SZ14].
 The type of summary for the set of activations A varies between the functions listed
 in Table 2.1, spatial pyramid pooling as introduced in [HZRS14] and generalizing pooling
@@ -722,26 +722,26 @@ Name
 Deﬁnition
 Used by
 Max pooling
-max { a ∈ A }
+max { a ∈A }
 [BPL10, KSH12]
 Average / mean pooling
 1
 |A|
-�
+P
 a∈A a
 LeNet-5 [LBBH98] and [KSlB+10]
 ℓ2 pooling
-��
+pP
 a∈A a2
 [Le13]
 Stochastic pooling
 *
 [ZF13]
-Table 2.1.: Pooling types for a set A of activations a ∈ R.
+Table 2.1.: Pooling types for a set A of activations a ∈R.
 (*) For stochastic pooling, each of the p×p activation values ai in the pooling region gets
 picked with probability pi =
 ai
-�
+P
 aj ∈A aj . This assumes the activations ai are non-negative.
 Pooling is applied for three reasons: To get local translational invariance, to get invariance
 against minor local changes and, most important, for data reduction to
@@ -834,13 +834,13 @@ Dropout is a technique used to prevent overﬁtting and co-adaptations of neuron
 the output of any neuron to zero with probability p. It was introduced in [HSK+12] and is
 well-described in [SHK+14].
 A Dropout layer can be implemented as follows: For an input in of any shape s, a tensor of
-the same shape D ∈ { 0, 1 }s is sampled, where each element di is sampled independently
+the same shape D ∈{ 0, 1 }s is sampled, where each element di is sampled independently
 from a Bernoulli distribution. The results are element-wise multiplied to calculate the
 output out of the Dropout layer:
-out = D ⊙ in
-with di ∼ B(1, p)
-where ⊙ is the Hadamard product
-(A ⊙ B)i,j := (A)i,j(B)i,j
+out = D ⊙in
+with di ∼B(1, p)
+where ⊙is the Hadamard product
+(A ⊙B)i,j := (A)i,j(B)i,j
 Hence every value of the input gets set to zero with a dropout probability of p. Typically,
 Dropout is used with p = 0.5. Layers closer to the input usually have a lower dropout prob-
 ability than later layers. In order to keep the expected output at the same value, the
@@ -871,23 +871,23 @@ One way to approach this problem is by normalizing mini-batches as described in 
 Batch Normalization layer with d-dimensional input x = (x(1), . . . , x(d)) is ﬁrst normalized
 point-wise to
 ˆx(k) =
-x(k) − ¯x(k)
-�
+x(k) −¯x(k)
+p
 s′[x(k)]2 + ε
 with ¯x(k) =
 1
 m
-�m
+Pm
 i=1 x(k)
 i
 being the sample mean and s′[x(k)]2 =
 1
 m
-�m
+Pm
 i=1(x(k)
 i
-− ¯x(k)) the
-sample variance where m ∈ N≥1 is the number of training samples per mini-batch, ε > 0
+−¯x(k)) the
+sample variance where m ∈N≥1 is the number of training samples per mini-batch, ε > 0
 being a small constant to prevent division by zero and x(k)
 i
 is the activation of neuron k for
@@ -899,7 +899,7 @@ In the case of fully connected layers, this is applied to the activation, before
 is applied. If it is applied after the activation, it harms the training in early stages. For
 convolution, only one γ and one β is learned per feature map.
 One important special case is γ(k) =
-�
+p
 s′[x(k)]2 + ε and β(k) = ¯x(k), which would make the
 Batch Normalization layer an identity layer.
 During evaluation time,3 the expected value and the variance are calculated once for the
@@ -907,10 +907,10 @@ complete dataset. An unbiased estimate of the empirical variance is used.
 The question where Batch Normalization layers (BN) should be applied and for which
 reasons is still open. For Dropout, it doesn’t matter if it is applied before or after the
 activation function. Considering this, the possible options for the order are:
-1. CONV / FC → BN → activation function → Dropout → . . .
-2. CONV / FC → activation function → BN → Dropout → . . .
-3. CONV / FC → activation function → Dropout → BN → . . .
-4. CONV / FC → Dropout → BN → activation function → . . .
+1. CONV / FC →BN →activation function →Dropout →. . .
+2. CONV / FC →activation function →BN →Dropout →. . .
+3. CONV / FC →activation function →Dropout →BN →. . .
+4. CONV / FC →Dropout →BN →activation function →. . .
 The authors of [IS15] suggest to use Batch Normalization before the activation function
 as in Items 1 and 4. Batch Normalization after the activation lead to better results in
 https://github.com/ducha-aiki/caffenet-benchmark/blob/master/batchnorm.md
@@ -953,7 +953,7 @@ Image source: [HZRS15a]
 Two common ways to add more parameters to neural networks are increasing their depth
 by adding more layers or increasing their width by adding more neurons / ﬁlters. Inception
 blocks [AM15] implicitly started a new idea which was explicitly described in [XGD+16] as
-“ResNeXt block”: Increasing the cardinality C ∈ N≥1. By cardinality, the authors describe
+“ResNeXt block”: Increasing the cardinality C ∈N≥1. By cardinality, the authors describe
 the concept of having C small convolutional networks with the same topology but diﬀerent
 weights. This concept is visualized in Figure 2.5. Please note that Figure 2.5 does not
 combine aggregation blocks with residual blocks as the authors did.
@@ -976,7 +976,7 @@ the same topology, the learned weights are diﬀerent. The outputs of the groups
 concatenated.
 The hyperparameters of an aggregation block are:
 • The topology of the group members.
-• The cardinality C ∈ N≥1. Note that a cardinality of C = 1 is equivalent in every
+• The cardinality C ∈N≥1. Note that a cardinality of C = 1 is equivalent in every
 aspect to using the group network without an aggregation block.
 12
 
@@ -1063,31 +1063,31 @@ are not covered by the training set and thus indicate the need to collect more d
 
 2. Convolutional Neural Networks
 2.5.2. Confusion Matrices
-A confusion matrix is a matrix (c)ij ∈ NK×K
+A confusion matrix is a matrix (c)ij ∈NK×K
 ≥0
-, where K ∈ N≥2 is the number of classes,
+, where K ∈N≥2 is the number of classes,
 which contains all correct and wrong classiﬁcations. The item cij is the number of times
 items of class i were classiﬁed as class j. This means the correct classiﬁcation is on the
-diagonal cii and all wrong classiﬁcations are of the diagonal. The sum �K
+diagonal cii and all wrong classiﬁcations are of the diagonal. The sum PK
 i=1
-�K
+PK
 j=1 cij is the
 total number of samples which were evaluated and
-�
+P
 i=1 cii
-�K
+PK
 i=1
-�K
+PK
 j=1 cij is the accuracy.
-The sums r(i) = �K
+The sums r(i) = PK
 j=1 cij of each class i are worth being investigated as they show if the
 classes are skewed. If the number of samples of one class dominates the data set, then the
 classiﬁer can get a high accuracy by simply always prediction the most common class. If
 the accuracy of the classiﬁer is close to the a priory probability of the most common class,
 techniques to deal with skewed classes might help.
 An automatic criterion to check for this problem is
-accuracy ≤ max({ r(i) | i = 1, . . . , k })
-�k
+accuracy ≤max({ r(i) | i = 1, . . . , k })
+Pk
 i=1 r(i)
 + ε
 where ε is a small value to compensate the fact that some examples might be correct just
@@ -1096,20 +1096,20 @@ Other values which should be checked are the class-wise sensitivities:
 s(k) = # correctly identiﬁed instances of class k
 # instances of class k
 = ckk
-r(k) ∈ [0, 1]
+r(k) ∈[0, 1]
 If s(i) is much lower than s(j), it is an indicator that more or cleaner training data is
 necessary for s(i).
 The class-wise confusion
 fconfusability(k1, k2) =
 ck1k2
-�K
+PK
 j=1 ck1j
 indicates if class k1 gets often classiﬁed as class k2. The highest values here can indicate
 if two classes should be merged or a specialized model for separating those classes could
 improve the overall system.
 2.5.3. Validation Curves: Accuracy, loss and other metrics
 Validation curves display a hyperparameter (e.g., the training epoch) on the horizontal
-axis and a quality metric on the vertical axis. Accuracy, error = (1 − accuracy) or loss are
+axis and a quality metric on the vertical axis. Accuracy, error = (1 −accuracy) or loss are
 typical quality metrics. Other quality metrics can be found in [OHIL16].
 In case that the number of training epochs are used as the examined hyperparameter,
 validation curves give an indicator if training longer improves the model’s performance. By
@@ -1138,7 +1138,7 @@ Error
 Training set
 Validation set
 Figure 2.7.: A typical validation curve: In this case, the hyperparameter is the number of epochs
-and the quality metric is the error (1 − accuracy). The longer the network is trained,
+and the quality metric is the error (1 −accuracy). The longer the network is trained,
 the better it gets on the training set. At some point the network is ﬁt too well to the
 training data and loses its capability to generalize. At this point the quality curve of
 the training set and the validation set diverge. While the classiﬁer is still improving on
@@ -1153,40 +1153,40 @@ real value to a complex event like the predicted class of a feature vector. It i
 the objective function. For classiﬁcation problems the loss function is typically cross-entropy
 with ℓ1 or ℓ2 regularization, as it was described in [NH92]:
 ECE(W) = −
-�
+X
 x∈X
 K
-�
+X
 k=1
 [tx
 k log(ox
-k) + (1 − tx
-k) log(1 − ox
+k) + (1 −tx
+k) log(1 −ox
 k)]
-�
-��
-�
+|
+{z
+}
 cross-entropy data loss
 + λ1 ·
 ℓ1
-� �� �
-�
+z }| {
+X
 w∈W
 |w| +λ2 ·
 ℓ2
-� �� �
-�
+z }| {
+X
 w∈W
 w2
-�
-��
-�
+|
+{z
+}
 model complexity loss
-where W are the weights, X is the training data set, K ∈ N≥0 is the number of classes and
+where W are the weights, X is the training data set, K ∈N≥0 is the number of classes and
 tx
 k indicates if the training example x is of class k. ox
 k is the output of the classiﬁcation
-algorithm which depends on the weights. λ1, λ2 ∈ [0, ∞) weights the regularization and is
+algorithm which depends on the weights. λ1, λ2 ∈[0, ∞) weights the regularization and is
 typically smaller than 0.1.
 17
 
@@ -1218,15 +1218,15 @@ Quality criteria
 There are several quality criteria for classiﬁcation models. Most quality criteria are based
 the confusion matrix c which denotes at cij the number of times the real class was i and j
 was predicted. This means the diagonal contains the number of correct predictions. For
-the following, let ti = �k
+the following, let ti = Pk
 j=1 cij be the number of training samples for class i. The most
 common quality criterion is accuracy:
 accuracy(c) =
-�k
+Pk
 i=1 cii
-�k
+Pk
 i=1 ti
-∈ [0, 1]
+∈[0, 1]
 One problem of accuracy as a quality criterion are skewed classes. If one class is by far
 more common than all other classes, then the simplest way to achieve a high score is to
 always classify everything as the most common class.
@@ -1234,11 +1234,11 @@ In order to ﬁx this problem, one can use the mean accuracy:
 mean-accuracy(c) = 1
 k ·
 k
-�
+X
 i=1
 cii
 ti
-∈ [0, 1]
+∈[0, 1]
 For two-class problems there are many other metrics like precision, recall and Fβ-score.
 Quality criteria for semantic segmentation are explained in [Tho16].
 Besides the quality of the classiﬁcation result, several other quality criteria are important
@@ -1335,7 +1335,7 @@ Gradient-based approaches
 In [SVZ13], a gradient-based approach was used to generate image-speciﬁc class saliency
 maps. The authors describe the problem as a ranking problem, where each pixel of the
 image I0 is assigned a score Sc(I0) for a class c of interest. CNNs are non-linear functions,
-but they can be approximated by the ﬁrst order Taylor expansion Sc(I) ≈ wT I + b where
+but they can be approximated by the ﬁrst order Taylor expansion Sc(I) ≈wT I + b where
 w is the derivative of Sc at I0.
 21
 
@@ -1385,7 +1385,7 @@ max
 (x,y)∈{−k,...,k}2\(0,0)
 ⟨Wi, T(Wj, x, y)⟩f
 ∥Wi∥2 ∥Wj∥2
-∈ [−1, 1],
+∈[−1, 1],
 where T(·, x, y) denotes the translation of the ﬁrst operand by (x, y), with zero padding at
 the borders to keep the shape. ⟨·, ·⟩f denotes the ﬂattened inner product, where the two
 operands are ﬂattened into column vectors before applying the standard inner product. The
@@ -1398,7 +1398,7 @@ is deﬁned as
 ¯ρk(W) = 1
 N
 N
-�
+X
 i=1
 N
 max
@@ -1481,17 +1481,16 @@ connected to the output nodes.
 4. Correlation Maximization: Train the weights of the candidates by maximizing S,
 the correlation between candidates output value V with the networks residual error:
 S =
-�
+X
 o∈O
-������
-�
+
+X
 p∈T
-�
-Vp − ¯V
-�
-(Ep,o − ¯
+ Vp −¯V
+
+(Ep,o −¯
 Eo)
-������
+
 where O is the set of output nodes, T is the training set, Vp is the candidate neurons
 activation for a training pattern p. Ep,o is the residual output error at node o for
 pattern p. ¯V and ¯
@@ -1510,7 +1509,7 @@ maximization whereas the white squares are trainable weights.
 Meiosis Networks are introduced in [Han89]. In contrast to most MLPs and CNNs, where
 weights are deterministic and ﬁxed at prediction time, each weight wij in Meiosis networks
 follows a normal distribution:
-wij ∼ N(µij, σ2
+wij ∼N(µij, σ2
 ij)
 28
 
@@ -1520,12 +1519,14 @@ ij.
 The key idea of Meiosis networks is to allow neurons to perform Meiosis, which is cell
 division. A node j is splitted, when the random part dominates the value of the sampled
 weights:
-�
-�i σij
+P
+i σij
+P
 i µij
 > 1 and
-�
-�k σjk
+P
+k σjk
+P
 k µjk
 > 1
 The mean of the new nodes is sampled around the old mean, half the variance is assigned
@@ -1534,7 +1535,7 @@ Hence Meiosis networks only change the number of neurons per layer. They do not 
 layers or add skip connections.
 3.1.3. Automatic Structure Optimization
 Automatic Structure Optimization (ASO) was introduced in [BM93] for the task of on-
-line handwriting recognition. It makes use of the confusion matrix C = (cij) ∈ Nk×k
+line handwriting recognition. It makes use of the confusion matrix C = (cij) ∈Nk×k
 ≥0
 (see Section 2.5.2) to guide the topology learning. They deﬁne a confusion-symmetry matrix
 S with sij = sji = cij · cji. The maximum of S deﬁnes where the ASO algorithm adds
@@ -1560,7 +1561,7 @@ of parameter k the saliency sk. The parameters with the lowest saliency are dele
 means they are set to 0 and are not updated anymore.
 A follow-up method called Optimal Brain Surgeon [HSW93] claims to choose the weights
 in a much better way. This requires, however, to calculate the inverse Hessian matrix
-H−1 ∈ Rn×n where n ∈ N is typically n > 106.
+H−1 ∈Rn×n where n ∈N is typically n > 106.
 A much simpler and computationally cheaper pruning criterion is the weight magnitude.
 [HPTD15] prunes all weights w which are below a threshold θ:
 w ←
@@ -1568,7 +1569,7 @@ w ←
 
 
 w
-if w ≥ θ
+if w ≥θ
 0
 otherwise
 3.3. Genetic approaches
@@ -1678,7 +1679,7 @@ can be directly with standard clustering algorithms such as k-means, DBSCAN [EKS
 OPTICS [ABKS99], CLARANS [NH02], DIANA [KR09], AHC (see [HPK11]) or spectral
 clustering as in [XZY+14]. Those clusterings, however, are hard to interpret and most of
 them do not allow a human to improve the found clustering manually.
-The confusion matrix (c)ij ∈ Nk×k states how often class i was present and class j was
+The confusion matrix (c)ij ∈Nk×k states how often class i was present and class j was
 34
 
 4.2. Clustering classes
@@ -1698,12 +1699,12 @@ Hence the order of the classes is permutated in such a way that the highest erro
 to the diagonal. One possible objective function to be minimized is
 f(C) =
 n
-�
+X
 i=1
 n
-�
+X
 j=1
-Cij · |i − j|
+Cij · |i −j|
 [4.1]
 which punishes errors linearly with the distance to the diagonal. This method is called CMO
 in the following.
@@ -1736,7 +1737,7 @@ confusions are not made and thus many elements of the confusion matrix are close
 Those will be moved to the corners of the confusion matrix by optimizing Equation (4.1).
 Once a permutation of the classes is found which has a low score Equation (4.1), the clusters
 can either be made by hand by deciding why classes should not be in one clusters. With
-such a permutation, only n − 1 binary decisions have to be made and hence only the list of
+such a permutation, only n −1 binary decisions have to be made and hence only the list of
 classes has to be read. Alternatively, one can calculate the confusions C′
 i,i+1 + C′
 i+1,i for
@@ -1772,7 +1773,7 @@ are grouped to 20 superclasses. It includes animals, people, plants, outdoor sce
 and other items. CIFAR-100 is not a superset of CIFAR-10, as CIFAR-100 does not contain
 the class airplane. The state of the art achieves an accuracy of 82.82 % [HLW16].
 GTSRB (German Traﬃc Sign Recognition Benchmark) is a 43-class dataset of traﬃc signs.
-The 51 839 images are in color and of a minimum size of 25 px× 25 px up to 266 px× 232 px.
+The 51 839 images are in color and of a minimum size of 25 px×25 px up to 266 px×232 px.
 The state of the art achieves 99.46 % accuracy with an ensemble of 25 CNNs [SL11].
 According to [SSSI], human performance is at 98.84 %.
 HASYv2 (Handwritten Symbols version 2) is a 369 class dataset of black-and-white images
@@ -1813,7 +1814,7 @@ Early stopping [Pre98] with the validation accuracy as a stopping criterion and 
 patience of 10 epochs. Kernel weights are initialized according to the uniform initialization
 scheme of He [HZRS15b] (see Appendix B.3).
 The architecture of the baseline model uses a pattern of
-Conv-Block(n) = (Convolution − Batch Normalization − Activation)n − Pooling
+Conv-Block(n) = (Convolution −Batch Normalization −Activation)n −Pooling
 The activation function is the Exponential Linear Unit (ELU) (see Table B.3), except for
 the last layer where softmax is used. Before the last two convolutional layer, a dropout
 layer with dropout probability 0.5 is applied. The architecture is given in detail in Table 5.1.
@@ -1969,7 +1970,7 @@ BN + Softmax
 k
 @ 1 ×
 1
-�
+P
 515k
 +892 512
 1032k
@@ -2008,7 +2009,7 @@ Dropout, p = 0.5
 C k@1 × 1/1
 Global AVG pooling
 BN + Softmax
-Figure 5.1.: Architecture of the baseline model. C 32@3× 3/1 is a convolutional layer with 32 ﬁlters
+Figure 5.1.: Architecture of the baseline model. C 32@3×3/1 is a convolutional layer with 32 ﬁlters
 of kernel size 3 × 3 with stride 1.
 39
 
@@ -2164,7 +2165,7 @@ The distribution of ﬁlter weights by layer is visualized in Figure 5.2 and the
 of bias weights by layer is shown in Figure 5.3. Although both ﬁgures only show the
 distribution for one speciﬁc model trained on CIFAR-100, the following observed patterns
 are consistent for 70 models (7 datasets and 10 models per dataset):
-• The empiric [0.5 − percentile, 99.5 − percentile] interval which contains 99 % of the
+• The empiric [0.5 −percentile, 99.5 −percentile] interval which contains 99 % of the
 ﬁlter weights is almost symmetric around zero. The same is true for the bias weights.
 • The farther a layer is from the input away, the smaller the 99-percentile interval is,
 except for the last layer (see Table A.1).
@@ -2215,7 +2216,7 @@ trained on CIFAR-100.
 5. Experimental Evaluation
 Figure 5.6.: The distribution of the range of values (max - min) of ﬁlters by channel and layer. For
 each ﬁlter, the range of values is recorded by channel. The smaller this range is, the
-less information is lost if a n × n ﬁlter is replaced by a (n − 1) × (n − 1) ﬁlter.
+less information is lost if a n × n ﬁlter is replaced by a (n −1) × (n −1) ﬁlter.
 44
 
 5.1. Baseline Model and Training setup
@@ -2354,7 +2355,7 @@ viewed in electronic form.
 CIFAR-100 has pre-deﬁned coarse classes. Those are used as a ground truth for the clusters
 which are to be found. The number of errors is determined by (i) Join all n clusters which
 contain the classes of the coarse class C to a set M. The error is n. (ii) Within M, ﬁnd the
-set of classes M− which do not belong to C. (iii) The ﬁnal error is n + |M−|. As can be
+set of classes M−which do not belong to C. (iii) The ﬁnal error is n + |M−|. As can be
 seen in Table 5.4, both clustering methods ﬁnd reasonable clusters. CMO, however, has
 only half the error of spectral clustering.
 The results for the HASYv2 dataset are qualitatively similar (see Table 5.5). It should be
@@ -2424,7 +2425,7 @@ B, B
 B, B
 0
 C
-C, c, ⊂ and C , ξ, E and C
+C, c, ⊂and C , ξ, E and C
 4
 C, c, ⊂, C and C
 1
@@ -2454,9 +2455,9 @@ K, κ
 K, κ
 0
 L
-L, ⌊ and L, L
+L, ⌊and L, L
 1
-L, ⌊ and L, L
+L, ⌊and L, L
 1
 M
 M and M and M
@@ -2469,14 +2470,14 @@ N and N, N and N
 N and N, N and N, ℵ
 3
 O
-O, O, 0, ◦, °, � and o
+O, O, 0, ◦, °, # and o
 1
-O, O, 0, ◦, ° and � and o
+O, O, 0, ◦, ° and # and o
 2
 P
 P, P and p, ρ and P and ℘
 3
-P and P, P, ℘ and p, ρ
+P and P, P, ℘and p, ρ
 2
 Q
 Q, Q, Q, ι, ⊔, ≳, ℓ, ℑ, Æ, 1
@@ -2494,12 +2495,12 @@ S, s, S
 S, s, S
 0
 T
-T, ⊤ and T , τ
+T, ⊤and T , τ
 1
-T, ⊤ and T , τ
+T, ⊤and T , τ
 1
 U
-U, ∪ and u, U, A
+U, ∪and u, U, A
 1
 U, u, U, A and ∪
 2
@@ -2783,11 +2784,10 @@ feature maps of layer i where i = 0 is the input layer and all ﬁlters are 3 ×
 a bias, then the number of parameters is
 Parameters =
 k
-�
+X
 i=1
-�
-(ni−1 · 32 + 1) · ni
-�
+ (ni−1 · 32 + 1) · ni
+
 Hence the width of one layer does not only inﬂuence the parameters in this layer, but also
 in the next layer.
 The number of possible subsequent layers of one feature map size is enormous, even if
@@ -2890,7 +2890,7 @@ Batch Normalization.
 
 5.9. Batch size
 5.9. Batch size
-The mini-batch size m ∈ N≥1 inﬂuences
+The mini-batch size m ∈N≥1 inﬂuences
 • Epochs until convergence: The smaller m, the more often the model is updated
 in one epoch. Those updates, however, are based on fewer samples of the dataset.
 Hence the gradients of diﬀerent mini-batches can noticeably diﬀer. In the literature,
@@ -3033,28 +3033,28 @@ As expected, PReLU and ELU performed best. Unexpected was that the logistic func
 tanh and softplus performed worse than the identity and it is unclear why the pure-softmax
 network performed so much better than the logistic function. One hypothesis why the
 logistic function performs so bad is that it cannot produce negative outputs. Hence the
-logistic− function was developed:
+logistic−function was developed:
 logistic−(x) =
 1
-1 + e−x − 0.5
-The logistic− function has the same derivative as the logistic function and hence still suﬀers
-from the vanishing gradient problem. The network with the logistic− function achieves an
+1 + e−x −0.5
+The logistic−function has the same derivative as the logistic function and hence still suﬀers
+from the vanishing gradient problem. The network with the logistic−function achieves an
 accuracy which is 11.30 % better than the network with the logistic function, but is still
 5.54 % worse than the ELU.
 Similarly, ReLU was adjusted to have a negative output:
-ReLU−(x) = max(−1, x) = ReLU(x + 1) − 1
-The results of ReLU− are much worse on the training set, but perform similar on the test
+ReLU−(x) = max(−1, x) = ReLU(x + 1) −1
+The results of ReLU−are much worse on the training set, but perform similar on the test
 61
 
 5. Experimental Evaluation
 set. The result indicates that the possibility of hard zero and thus a sparse representation
 is either not important or similar important as the possibility to produce negative outputs.
 This contradicts [GBB11, SMGS14].
-A key diﬀerence between the logistic− function and ELU is that ELU does neither suﬀers
+A key diﬀerence between the logistic−function and ELU is that ELU does neither suﬀers
 from the vanishing gradient problem nor is its range of values bound. For this reason, the
 S2ReLU activation function, deﬁned as
 S2ReLU(x) = ReLU(x
-2 + 1) − ReLU(−x
+2 + 1) −ReLU(−x
 2 + 1) =
 
 
@@ -3065,11 +3065,11 @@ S2ReLU(x) = ReLU(x
 
 
 
-− x
+−x
 2 + 1
-if x ≤ −2
+if x ≤−2
 x
-if − 2 ≤ x ≤ 2
+if −2 ≤x ≤2
 x
 2 + 1
 if x > −2
@@ -3428,8 +3428,8 @@ why they improve the test accuracy is by reducing the variance.
 The idea of label smoothing is to use the ensemble prediction of the training data as labels
 for another classiﬁer. For every element x of the training set, the one-hot encoded target
 t(x) is smoothed by the ensemble prediction yE(x)
-t′(x) = α · t(x) + (1 − α)yE(x)
-where α ∈ [0, 1] is the smoothing factor.
+t′(x) = α · t(x) + (1 −α)yE(x)
+where α ∈[0, 1] is the smoothing factor.
 There are three reasons why label smoothing could be beneﬁcial:
 • Training speed: The ensemble prediction contains more information about the
 image than binary class decisions. Classiﬁers in computer vision predict how similar
@@ -3616,7 +3616,7 @@ BN + Softmax
 k
 @ 1 ×
 1
-�
+P
 514k
 +947 654
 520k
@@ -4087,35 +4087,35 @@ trained on CIFAR-100.
 Figure A.2.: The distribution of bias weights of a model without batch normalization trained on
 CIFAR-100.
 Algorithm 1 Simulated Annealing for minimizing Equation (4.1).
-Require: C ∈ Nn×n, steps ∈ N, T ∈ R+, c ∈ (0, 1)
+Require: C ∈Nn×n, steps ∈N, T ∈R+, c ∈(0, 1)
 procedure SimulatedAnnealing(C, steps, T, c)
-bestScore ← accuracy(C)
-bestC ← C
-for i = 0; i < steps; i ← i + 1 do
-p ← randomFloat(0, 1)
+bestScore ←accuracy(C)
+bestC ←C
+for i = 0; i < steps; i ←i + 1 do
+p ←randomFloat(0, 1)
 if p < 0.5 then
-▷ Swap rows
-i ← randomInteger(1, . . . , n)
-j ← randomInteger(1, . . . , n) \ { i }
-p ← randomUniform(0, 1)
-C′ ← swap(C, i, j)
-s ← accuracy(C′)
-if p < exp( s−bestScore
+▷Swap rows
+i ←randomInteger(1, . . . , n)
+j ←randomInteger(1, . . . , n) \ { i }
+p ←randomUniform(0, 1)
+C′ ←swap(C, i, j)
+s ←accuracy(C′)
+if p < exp(s−bestScore
 T
 ) then
-C ← C′
+C ←C′
 if s > bestScore then
-bestScore ← s
-bestC ← C
-T ← T · c
+bestScore ←s
+bestC ←C
+T ←T · c
 else
-▷ Move Block
-s ← randomInteger(1, . . . , n)
-▷ Block start
-e ← randomInteger(s, . . . , n)
-▷ Block end
-i ← randomInteger(1, . . . , n − (e − s))
-▷ Block insert position
+▷Move Block
+s ←randomInteger(1, . . . , n)
+▷Block start
+e ←randomInteger(s, . . . , n)
+▷Block end
+i ←randomInteger(1, . . . , n −(e −s))
+▷Block insert position
 Move Block (s, . . . , e) to position i
 return bestM
 76
@@ -4364,10 +4364,10 @@ Vertical ﬂip
 2
 [DWD15]1
 Rotation
-∼ 40 (δ = 20)
+∼40 (δ = 20)
 [DSRB14]
 Scaling
-∼ 14 (δ ∈ [0.7, 1.4])
+∼14 (δ ∈[0.7, 1.4])
 [DSRB14]
 Crops
 322 = 1024
@@ -4377,16 +4377,16 @@ Shearing
 GANs
 [BCW+17]
 Brightness
-∼ 20 (δ ∈ [0.5, 1.5])
+∼20 (δ ∈[0.5, 1.5])
 [How13]
 Hue
 51 (δ = 0.1)
 [MRM15, DSRB14]
 Saturation
-∼ 20 (δ = 0.5)
+∼20 (δ = 0.5)
 [DSRB14]
 Contrast
-∼ 20 (δ ∈ [0.5, 1.5])
+∼20 (δ ∈[0.5, 1.5])
 [How13]
 Channel shift
 [KSH12]
@@ -4402,13 +4402,13 @@ Less common, but also reasonable are:
 • Color casting (used by [WYS+15])
 • Vignetting (used by [WYS+15])
 • Lens distortion (used by [WYS+15])
-1Vertical ﬂipping combined with 180◦ rotation is equivalent to horizontal ﬂipping
+1Vertical ﬂipping combined with 180◦rotation is equivalent to horizontal ﬂipping
 80
 
 B.3. Initialization
 Weight initializations are usually chosen to be small and centered around zero. One way to
 characterize many initialization schemes is by
-w ∼ α · U[−1, 1] + β · N(0, 1) + γ with α, β, γ ≥ 0
+w ∼α · U[−1, 1] + β · N(0, 1) + γ with α, β, γ ≥0
 Table B.2 shows six commonly used weight initialization schemes. Several schemes use the
 same idea, that unit-variance is desired for each layer as the training converges faster [IS15].
 Name
@@ -4419,11 +4419,11 @@ Reference
 Constant
 α = 0
 β = 0
-γ ≥ 0
+γ ≥0
 used by [ZF14]
 Xavier/Glorot uniform
 α =
-�
+q
 6
 nin+nout
 β = 0
@@ -4432,10 +4432,10 @@ nin+nout
 Xavier/Glorot normal
 α = 0
 β =
-�
+
 2
 (nin+nout)
-�2
+2
 γ = 0
 [GB10]
 He
@@ -4455,7 +4455,7 @@ LSUV
 —
 γ = 0
 [MM15]
-Table B.2.: Weight initialization schemes of the form w ∼ α · U[−1, 1] + β · N(0, 1) + γ.
+Table B.2.: Weight initialization schemes of the form w ∼α · U[−1, 1] + β · N(0, 1) + γ.
 nin, nout are the number of units in the previous layer and the next layer. Typically,
 biases are initialized with constant 0 and weights by one of the other schemes to prevent
 unit-coadaptation. However, dropout makes it possible to use constant initialization for
@@ -4464,46 +4464,46 @@ LSUV and Orthogonal initialization cannot be described with this simple pattern.
 B.4. Objective function
 For classiﬁcation tasks, the cross-entropy
 ECE(W) = −
-�
+X
 x∈X
 K
-�
+X
 k=1
 [tx
 k log(ox
-k) + (1 − tx
-k) log(1 − ox
+k) + (1 −tx
+k) log(1 −ox
 k)]
 is by far the most commonly used objective function (e.g., used by [ZF14]). In this equation,
 X is the set of training examples, K is the number of classes, tx
-k ∈ { 0, 1 } indicates if the
+k ∈{ 0, 1 } indicates if the
 training example x is of class k, ox
 k is the output of the classiﬁer for the training example x
 and class k.
-However, regularization terms weighted with a constant λ ∈ (0, +∞) are sometimes added:
+However, regularization terms weighted with a constant λ ∈(0, +∞) are sometimes added:
 • LASSO: ℓ1 (e.g., used in [HPTD15])
 • Weight decay: ℓ2 (e.g., λ = 0.0005 as in [MSM16])
-• Orthogonality regularization (|(W T · W − I)|, see [VTKP17])
+• Orthogonality regularization (|(W T · W −I)|, see [VTKP17])
 81
 
 B.5. Optimization Techniques
 Most relevant optimization techniques for CNNs are based on SGD, which updates the
 weights according to the rule
-wji ← wji + ∆wji with ∆wji = −η ∂Ex
+wji ←wji + ∆wji with ∆wji = −η ∂Ex
 ∂wji
-where η ∈ (0, 1), typically 0.01 (e.g., [MSM16]), is called the learning rate.
+where η ∈(0, 1), typically 0.01 (e.g., [MSM16]), is called the learning rate.
 A slight variation of SGD is mini-batch gradient descent with the mini-batch B (typically
-mini-batch sizes are |B| ∈ { 32, 64, 128, 256, 512 }, e.g. [ZF14]). Larger mini-batch sizes
+mini-batch sizes are |B| ∈{ 32, 64, 128, 256, 512 }, e.g. [ZF14]). Larger mini-batch sizes
 lead to sharp minima and thus poor generalization [KMN+16]. Smaller mini-batch sizes
 lead to longer training times due to computational overhead and to more training steps due
 to gradient noise.
-wji ← wji + ∆wji with ∆wji = −η∂EB
+wji ←wji + ∆wji with ∆wji = −η∂EB
 ∂wji
 Nine variations which adjust the learning rate during training are:
 • Momentum:
 w(t+1)
 ji
-← w(t)
+←w(t)
 ji + ∆w(t+1)
 ji
 with ∆w(t+1)
@@ -4512,17 +4512,17 @@ ji
 ∂wji
 + α∆w(t)
 ji
-with α ∈ [0, 1], typically 0.9 (e.g., [ZF14, MSM16])
+with α ∈[0, 1], typically 0.9 (e.g., [ZF14, MSM16])
 • Adagrad [DHS11]
 • RProp and the mini-batch version RMSProp [TH12]
 • Adadelta [Zei12]
-• Power Scheduling [Xu11]: η(t) = η(0)(1 + a · t)−c, where t ∈ N0 is the training step,
+• Power Scheduling [Xu11]: η(t) = η(0)(1 + a · t)−c, where t ∈N0 is the training step,
 a, c are constants.
 • Performance Scheduling [SHY+13]: Measure the error on the cross validation set and
 decrease the learning rate when the algorithms improvement is below a threshold.
-• Exponential Decay Learning Rate [SHY+13]: η(t) = η(0) · 10− t
-k where t ∈ N0 is the
-training step, η(0) is the initial learning rate, k ∈ N≥1 is the number of training steps
+• Exponential Decay Learning Rate [SHY+13]: η(t) = η(0) · 10−t
+k where t ∈N0 is the
+training step, η(0) is the initial learning rate, k ∈N≥1 is the number of training steps
 until the learning rate is decreased by
 1
 10th.
@@ -4566,7 +4566,7 @@ Sign function†
 
 
 +1
-if x ≥ 0
+if x ≥0
 −1
 if x < 0
 { −1, 1 }
@@ -4632,8 +4632,8 @@ ELU
 
 x
 if x > 0
-α(ex − 1)
-if x ≤ 0
+α(ex −1)
+if x ≤0
 (−∞, +∞)
 
 
@@ -4646,13 +4646,13 @@ otherwise
 Softmax‡
 o(x)j =
 exj
-�K
+PK
 k=1 exk
 [0, 1]K
 o(x)j ·
-�K
+PK
 k=1 exk−exj
-�K
+PK
 k=1 exk
 [KSH12, Tho14a]
 Maxout‡
@@ -4668,7 +4668,7 @@ otherwise
 [GWFM+13]
 Table B.3.: Overview of activation functions. Functions marked with † are not diﬀerentiable at 0
 and functions marked with ‡ operate on all elements of a layer simultaneously. The
-hyperparameters α ∈ (0, 1) of Leaky ReLU and ELU are typically α = 0.01. Other
+hyperparameters α ∈(0, 1) of Leaky ReLU and ELU are typically α = 0.01. Other
 activation function like randomized leaky ReLUs exist [XWCL15], but are far less
 commonly used.
 Some functions are smoothed versions of others, like the logistic function for the
@@ -4700,7 +4700,7 @@ y
 ϕ2(x) = tanh(x)
 ϕ3(x) = max(0, x)
 ϕ4(x) = log(ex + 1)
-ϕ5(x) = max(x, ex − 1)
+ϕ5(x) = max(x, ex −1)
 Figure B.1.: Activation functions plotted in [−2, +2]. tanh and ELU are able to produce negative
 numbers. The image of ELU, ReLU and Softplus is not bound on the positive side,
 whereas tanh and the logistic function are always below 1.
@@ -4729,8 +4729,8 @@ has ki · ki−1(n · m + 1) parameters. The +1 is due to the bias.
 • A fully connected layer with n nodes after k feature maps of size m1 × m2 has
 n · (k · m1 · m2 + 1) parameters.
 • A dense block with a depth of L, a growth rate of n and 3 × 3 ﬁlters has L + n · 32 +
-32 · n2 �L
-i=0(L − i) = L + 9n + 9n2 L2−L
+32 · n2 PL
+i=0(L −i) = L + 9n + 9n2 L2−L
 2
 parameters.
 According to [HPTD15], AlexNet has 60 million parameters which is roughly the number
@@ -4741,13 +4741,13 @@ the following number are only giving rough estimates.
 In the following, nϕ denotes the number of FLOPs to compute the non-linearity ϕ. For
 simplicity, nϕ = 5 was chosen.
 • A fully connected layer with n nodes and k inputs has to calculate ϕ(W · x + b) with
-W ∈ Rn×k, x ∈ Rk×1, b ∈ Rn×1. It hence needs about n · (k + (k − 1) + 1) = 2nk
+W ∈Rn×k, x ∈Rk×1, b ∈Rn×1. It hence needs about n · (k + (k −1) + 1) = 2nk
 additions / multiplications before the non-linearity ϕ is calculated. The total number
 of FLOPs is 2 · n · k + n · nϕ.
 • In the following, biases are ignored. A convolutional layer with ki ﬁlters of size n × m
 being applied to ki−1 ﬁlter maps of size w × h results in ki ﬁlter maps of size w × h if
 padding is applied. For each element of each ﬁlter map, n·m·ki−1 multiplications and
-(n · m · ki−1 − 1) additions have to be made. This results in (2nmki−1 − 1) · (ki · w · h)
+(n · m · ki−1 −1) additions have to be made. This results in (2nmki−1 −1) · (ki · w · h)
 operations. The total number of FLOPs is (2·n·m·ki−1 −1)·(ki ·w ·h)+ki ·w ·h·nϕ.
 This is, of course, a naive way of calculating a convolution. There are other ways of
 calculating convolutions [LG16].
@@ -4864,7 +4864,7 @@ Fully Connected (output)
 850
 1 730
 10
-�
+P
 61 710
 15 144 446
 9118
@@ -4879,7 +4879,7 @@ The ﬁrst CNN which achieved major improvements on the ImageNet dataset was Ale
 Its architecture is shown in Figure D.2 and described in Table D.2. It has about 60·106 param-
 eters. A trained AlexNet can be downloaded at www.cs.toronto.edu/˜guerzhoy/tf_alexnet.
 Note that the uncompressed size is at least 60 965 224 ﬂoats · 32 bit
-ﬂoat ≈ 244 MB.
+ﬂoat ≈244 MB.
 Figure D.2.: Architecture of AlexNet as shown in [KSH12]: Convolutional Layers are followed
 by pooling layers multiple times. At the end, a fully connected network is applied.
 Conceptually, it is identical to the architecture of LeNet-5 (see Figure D.1).
@@ -4976,7 +4976,7 @@ FC
 4 097 000
 8 M
 1000
-�
+P
 60 965 224
 3300 M
 1 122 568
@@ -5193,7 +5193,7 @@ FC
 4 097 000
 8 M
 1000
-�
+P
 138 357 544
 31 000 M
 15 245 800
@@ -5287,7 +5287,7 @@ Dropout (p=0.8)
 Softmax
 1 537 000
 1000
-�
+P
 42 679 816
 Table D.4.: Inception-v4 network.
 95
@@ -5348,43 +5348,43 @@ STL-10
 3
 [CLN11, CLN10]
 Caltech-101
-(80 px − 3481 px)
-×(92 px − 3999 px)
+(80 px −3481 px)
+×(92 px −3999 px)
 9144
 102
 3
 [FFP03, FFFP06]
 Caltech-256
-(75 px − 7913 px)
-×(75 px − 7913 px)
+(75 px −7913 px)
+×(75 px −7913 px)
 30 607
 257
 3
 [Gri06, GG07]
 ILSVRC 20121
-(8 px − 9331 px)
-×(10 px − 6530 px)
+(8 px −9331 px)
+×(10 px −6530 px)
 1.2 · 106
 1000
 3
 [Ima12, RDS+14]
 Places3652
-(290px − 3158px)
-×(225px − 2630px)
+(290px −3158px)
+×(225px −2630px)
 1.8 · 106
 365
 3
 [Zho16, ZKL+16]
 GTSRB
-(25 px − 266 px)
-×(25 px − 232 px)
+(25 px −266 px)
+×(25 px −232 px)
 51 839
 43
 3
 [SSSI, SSSI12]
 Asirra3
-(4 px − 500 px)
-×(4 px − 500 px)
+(4 px −500 px)
+×(4 px −500 px)
 25 000
 2
 3
@@ -5475,15 +5475,15 @@ Table E.2.: An overview over state of the art results achieved in computer visio
 Algorithm 2 Create a classiﬁcation dataset from a semantic segmentation dataset
 Require: Semantic segmentation dataset (DS)
 procedure CreateDataset(Annotated dataset DS)
-DC ← List
-w ← desired image width
-h ← desired image height
+DC ←List
+w ←desired image width
+h ←desired image height
 for Image and associated label (x, y) in DS do
-i ← randint(0, L.width − w)
-j ← randint(0, L.height − h)
-cL ← crop(y, (i, j), (i + w, j + h))
+i ←randint(0, L.width −w)
+j ←randint(0, L.height −h)
+cL ←crop(y, (i, j), (i + w, j + h))
 if at least 50% of s are of one class then
-cI ← crop(x, (i, j), (i + w, j + h))
+cI ←crop(x, (i, j), (i + w, j + h))
 D.append((cI, cL))
 return (DC)
 98
@@ -5666,7 +5666,8 @@ Baseline Weight updates (maximum) . . . . . . . . . . . . . . . . . . . . . .
 55
 5.16 Optimized architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 67
-A.1 Image Filters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A.1 Image Filters
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 75
 A.2 Bias weight distribution without BN . . . . . . . . . . . . . . . . . . . . . .
 76

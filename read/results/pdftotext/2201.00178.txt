@@ -10,11 +10,8 @@ Prasad Mani
 
 1, 2
 
-1 Department
-2 Center
-
-of Astronomy and Astrophysics, Tata Institute of Fundamental Research, Mumbai, India
-for Space Science, NYUAD Institute, New York University Abu Dhabi, Abu Dhabi, UAE
+1 Department of Astronomy and Astrophysics, Tata Institute of Fundamental Research, Mumbai, India
+2 Center for Space Science, NYUAD Institute, New York University Abu Dhabi, Abu Dhabi, UAE
 
 arXiv:2201.00178v1 [astro-ph.SR] 1 Jan 2022
 
@@ -149,14 +146,11 @@ and toroidal flow sensitivity kernels respectively, that allow us to relate the 
 and are derived from the solar model see Appendix A. They possess the symmetry relation: Cqj,k = C−qj,−k and
 Dqj,k = D−qj,−k (see eq A6). The kernels, as flows, are expressed on the basis fj (z).
 1.2. Least-squares of cross-correlation
-φω∗
-k
+ω
+Even though φω∗
+k φk+q isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea-
 
-φω
-k+q
-
-Even though
-isolates the effect of flow perturbations at individual wavenumbers q, a more compact measurement, known in mode-coupling literature as ’B-coefficients’, is much better designed for inversion as it reduces the
+surement, known in mode-coupling literature as ’B-coefficients’, is much better designed for inversion as it reduces the
 ω
 dimension of the problem. A least-squares fit to the cross-correlation φω∗
 k φk+q (see Woodard 2006, 2014, 2016) results
@@ -174,14 +168,10 @@ Bk,q =
 ω
 
 ω∗
-Hkk
-0 nn0
+Multiplying eq 4 on both sides by Hkk
+0 nn0 and substituting by eq 5 on the left-hand-side results in a concisely defined
 
-Multiplying eq 4 on both sides by
 forward problem (compare with eq 4)
-
-and substituting by eq 5 on the left-hand-side results in a concisely defined
-
 Bk,q =
 
 X
@@ -915,10 +905,8 @@ Nk =
 Q
 k
 
-where the
-
 1
-Q
+where the Q
 
 Q
 P
@@ -1050,12 +1038,8 @@ Figure 8. Left: Kernel Kk,q (z) (eq B14) shown vs depth z for the three radial o
 (eq B17) using SOLA, for qR = [−112, −45] at depth z0 = −0.48 Mm, and the corresponding target Gaussian (eq B15).
 Integral of the averaging kernel over z is 0.89.
 
-Setting
-
-∂X
-∂α
-
-→ 0 gives us the matrix problem to be solved
+Setting ∂X
+∂α → 0 gives us the matrix problem to be solved
 A{α} = v,
 h
 i−1

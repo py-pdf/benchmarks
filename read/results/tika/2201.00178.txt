@@ -381,6 +381,74 @@ random forcing function (see Duvall & Harvey 1986). Modes are thus generated wit
 
 and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
 
+IMAGING NEAR-SURFACE FLOWS USING MODE-COUPLING ANALYSIS 3
+
+Pe Petq: Where k is the oscillation mode wavenumber (ka, ky) and w is the temporal frequency. Relate d%* d% +q thus
+
+to the flow coefficients Pj; and Ty; (see eq A7)
+
+(oe k-+q) = Hkkinn! S- Cain Pag + Daj,kTq;: (4)
+j
+
+The weight factor H” (see eq A8) is a function of frequency, capturing information about the extent of coupling between
+the two modes [n, k] and [n’, k’], where n and n’ are the radial orders of the modes, and k = |k| and k’ = |k’| = |k+q].
+The spectral profile of the mode (see eq AQ) is approximated using a Lorentzian (Anderson et al. 1990). The more the
+Lorentzians of the two modes overlap, the stronger the coupling. Finally, the real terms Cg;,, and Dgj,~ are poloidal
+and toroidal flow sensitivity kernels respectively, that allow us to relate the flows in question to the measurements
+and are derived from the solar model see Appendix A. They possess the symmetry relation: Cq;,~% = C—qj,-z and
+Daj,k = D—qj,-k (see eq AG). The kernels, as flows, are expressed on the basis f;(z).
+
+1.2. Least-squares of cross-correlation
+
+Even though $;* dg 44 isolates the effect of flow perturbations at individual wavenumbers qg, a more compact mea-
+surement, known in mode-coupling literature as ’B-coefficients’, is much better designed for inversion as it reduces the
+dimension of the problem. A least-squares fit to the cross-correlation ¢* of. q (see Woodard 2006, 2014, 2016) results
+in the B-coefficients By,q, according to
+
+»— Heenan! PR k-+q
+
+w
+» He krnan |? ,
+w
+
+Multiplying eq 4 on both sides by H¥¥,,,,,, and substituting by eq 5 on the left-hand-side results in a concisely defined
+forward problem (compare with eq 4)
+
+Brig = (5)
+
+Brg = S> Cqj,kPaj + Daj,eTaj- (6)
+J
+
+In eq 5, Woodard (2007) and H21 thus far only considered positive-frequency components in the summation over w.
+Here, we sum over both +w within a few mode linewidths I’. Denoting the resonant frequency of a mode using wy,
+
+\w| € (wn _ Eng /2,Wnk + Dnx/2) or
+lw] € (snr = LD yp /2, Wn Ky + Dyrnr/2), (7)
+
+Summing over tw guarantees that the parity Brg = Bq (see Appendix A for derivation) is obeyed, thereby
+ensuring that the flow field on the right-hand-side of eq 6 is a real physical quantity in the spatio-temporal domain.
+Taking the complex conjugate on both sides of eq 6 and considering the negative wavenumber components —q and
+—k,
+
+Br yg =) C-aj bP gj + Doi KT" gy: (8)
+
+j
+
+Substituting parity and symmetry relations for all terms in the above results in eq 6. As Bx gq is constructed by a
+least-squares fitting, it is noteworthy that summing over —w will also lead to improvement in its signal-to-noise as a
+by-product.
+
+1.3. Noise model
+
+In the addition to the sensitivity kernels, a systematic background noise model is required to infer the flows from
+the observed B-coefficients. For estimating the contribution from realization noise to the measurements, we make the
+following assumptions (Gizon & Birch 2004): that the excitation of the wavefield is modelled as a multivariate Gaussian
+random process and the wavefields are uncorrelated across wavenumber and frequency in the absence of perturbations.
+Every independent realization of a mode can be understood as the output of a damped harmonic oscillator driven by a
+random forcing function (see Duvall & Harvey 1986). Modes are thus generated with random phases and amplitudes
+and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
+
+
 
 
 4 Mani et al.
@@ -453,6 +521,79 @@ inspecting the power-spectrum), the parameters describing the extent of coupling
 radial order are different. In wavenumber, we restrict our analysis to within 200 ≤ kR� ≤ 2000 and qR� ≤ 300. Our
 
 frequency range is confined to span the range over which acoustic modes are observed (2 ≤ ω/2π ≤ 5 in mHz).
+
+4 MANI ET AL.
+
+ 
+
+ 
+
+ 
+
+ 
+
+5 4 a :
+P2y Pr ee
+44 7 a
+NM 7 a
+E 7 a
+23 A ae
+E 7 a
+Q 7
+324 a
+“
+14
+so Theoretical
+—-— Observed
+0 T T T T
+0 500 1000 1500 2000 2500
+kRo
+
+Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p1 (orange) and pz (green). The shaded
+regions of the same colours indicate 1-linewidth [ about the mode frequency. The yellow shaded region indicates the range of
+kRo and w/27 to which we have restricted ourselves in this analysis. Beyond kRo of 2000, it is seen that the theoretical fitting
+of mode frequencies start deviating from the observed dispersion relation for the f-mode.
+
+such as its amplitude, frequency and linewidth, and consequently in Bz,q in our case. We use the same noise model
+as in H21, which was motivated by the above discussion,
+
+Gq = (|Bral”): (9)
+
+where, unlike H21, we again sum over tw. Gp,q is real, with the symmetry relation Gxq = G_kr,—q (see Appendix A
+for explanation).
+
+2. DATA ANALYSIS
+
+In order to examine near surface flows we build a time-series cube of Doppler images that are obtained from the
+Helioseismic Magnetic Imager aboard the Solar Dynamics Observatory (HMI/SDO, Scherrer et al. 2012). Each image
+is Postel projected, with a spatial resolution of approximately 0.48Mm, sperated in time by 45 seconds, and is tracked
+at the (Snodgrass 1984) rotation rate. Here, we select a patch that is 194.4 x 194.4 Mm? in size, tracked for 24 hours
+and crosses the disk-center in the middle of observation time on the 14 Novemeber 2017 (Carrington rotation number
+2197, Carrington longitude 90°). This Dopplercube is considered as the physical wavefield ¢(z, y;t). The Fourier-space
+wavefield ¢g (and subsequently, the cross-correlation ¢%* ¢¢ @ is obtained by computing the 3D spatial and temporal
+Fourier transform of the Dopplercube.
+
+The duration of the observed region is long enough to provide sufficient frequency bins with which to sum over in
+Eq 6, while short enough that supergranules do not substantially evolve (lifetime is purported to be 1.6 days; Rincon
+& Rieutord 2018) over this period. Our observation region is close to the disk center to also avoid any contamination
+from center-to-limb systematics (Zhao et al. 2012; Langfellner et al. 2015).
+
+Maximum signal can be extracted from the weighted summation of the cross correlations (eq 5) when the spectral
+profiles of the two modes [n, k] and [n’, k’] closely align in w space. This implies that their mode frequencies should be
+sufficiently close (|wnx — Wnn’| < 6, the separation parameter). Since Lorentzians decay rapidly, the summation over
++w is significant only over a few linewidths (e, the summation parameter; see eq 7). We have empirically found and
+tabulated 6 in Table 1 for the radial order couplings n-n’ € f-f, pi-pi, and p2-p2 (the signal strength depends only
+weakly on €; we set it to 3 line widths).
+
+Figure 1 shows that for any two adjacent ridges (adjacent n and n’), mode frequencies wnz, and wy, become spaced
+farther apart with increasing wavenumber /Ro. It is also known that mode linewidth [ grows with radial orders for
+a given kRo. Moreover, holding the spatial and temporal sampling rates constant, the spatial size and duration of
+observation set the total number of modes within a range of kRe (and w/27) that can be clearly observed, thereby
+affecting the quality of the seismic measurements. Owing to these factors, to maximize signal-to-noise (by visually
+inspecting the power-spectrum), the parameters describing the extent of coupling over different ranges of kRo at fixed
+radial order are different. In wavenumber, we restrict our analysis to within 200 < kKRe < 2000 and qRo < 300. Our
+frequency range is confined to span the range over which acoustic modes are observed (2 < w/2a <5 in mHz).
+
 
 
 
@@ -546,6 +687,83 @@ M ×M) and pre-multiplying by Kᵀ,
 (KᵀΛ−1K)U =(KᵀΛ−1)B, (11)
 
 U =(KᵀΛ−1K)−1KᵀΛ−1B. (12)
+
+IMAGING NEAR-SURFACE FLOWS USING MODE-COUPLING ANALYSIS 5
+
+ 
+
+ 
+
+Coupling kRo range # of 6
+
+modes
+
+f-f [400,1000] 5240 4
+
+[1000,1500] 7784 1.1
+[1500,2000] 10940 0.4
+
+ 
+
+ 
+
+ 
+
+P1-P1 (400, 1000] 5240 4.5
+[1000,1750] 12852 2
+P2-Pp2 [200,1000] 5886 3
+
+ 
+
+[1000,1300] 4280 3
+
+ 
+
+Table 1. Total number of modes, and separation parameter (in number of linewidths) for different couplings, for different
+ranges of kRo.
+
+3. INVERSION
+
+The final step to producing near-surface flow maps in Cartesian mode-coupling is to invert the measurements
+Bx,q from the linear relation in eq 6. We describe inversion using regularized-least-squares (RLS) method here and
+leave Subtractive Optimally Localized Averages (SOLA, Pijpers & Thompson 1994) for Appendix B. The methods
+complement each other (see Sckii 1997), where RLS tries to minimize the misfit between data and model, whereas
+SOLA gives better localization. For total number of modes M, RLS scales as MxJ where J is the number of basis
+functions f;(z) (J < M; see eq 3 and section 3.1), whereas SOLA scales as M? (see Appendix B). For M > 5000,
+computation starts to quickly become expensive for SOLA.
+
+Mode eigenfunctions peak near the surface, with higher radial orders possessing smaller peaks in the interior. While
+f-f coupling alone has enough sensitivity to probe perturbations at supergranular scales close to surface, signal is
+present even in pj-p1, and p9-p2 (see Figure 3), and possibly other higher order self- and cross-couplings. Since we are
+interested in only surface flows, we leave higher order coupling to future work.
+
+It bears mentioning that the slopes of the ridges in the kRo-v spectrum (Figure 1) increase with radial order. This
+limits us to low-to-intermediate kRe (< 1000) for these higher radial orders if we are to remain under the acoustic cut-
+off frequency of 5.3mHz. It also becomes imperative to use a spatially larger observation patch to gain access to signals
+from low kRe - too large an observation region could possibly render invalid the Cartesian geometry approximation.
+Regardless, in addition to performing inversions using all the couplings stacked together, we also demonstrate inversions
+separately for the three couplings (see Table 2) in order to account for the full gamut of mode-coupling as a signal-rich
+helioseismic technique.
+
+3.1. RLS
+
+For given q, the forward problem may be stated as
+KU =B, (10)
+
+with the aim to minimize the misfit }* ||KU — B||2, with |] ||) denoting the Lz norm. Here, K is the matrix formed
+k
+
+by the sensitivity kernels: {Cqj,n,Pqj,n}. U is a vector composed of the flow coefficients: {P;,Tq;} and B is a vector
+composed of computed B-coefficients: {B,,q}. The least-squares problem is solved simultaneously for poloidal and
+toroidal flow. We use B-spline basis functions as our f;(z), comprising 11 knots spaced uniformly in acoustic radius,
+for both poloidal and toroidal coefficients. Hence, for M modes (total number of k& for a given q is M) and 11 basis
+functions for each poloidal and toroidal, the dimensions of K, U and B are thus M x 22, 22x 1, and M x 1 respectively.
+Normalizing both sides of eq 10 by the noise covariance A (a diagonal matrix with the entries Gz,_; see eq 9; dimension
+M x M) and pre-multiplying by KT,
+
+(KTA~'K)U =(KTA“!)B, (11)
+U =(KTA7!K)~'KTA“!B. (12)
+
 
 
 
@@ -1138,6 +1356,73 @@ the real domain. Setting σ = 0 gives us the linear, invertible equation eq 6. S
 
 the noise model obtained in H21 and summing over ±ω establishes the symmetry Gσk,q = G−σ−k,−q.
 
+12 MANI ET AL.
+Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
+Ex = En (2) = ikHyx(2)ez + 2Vnx(2), (A4)
+
+where H and V are real-valued functions; n and n’ are dropped for compactness of notation. Then the coupling of
+two modes €, and €,, (k’ = k + q), by the flow perturbation operator 6£%, denoted by coupling integral AR,(c), is
+given by
+
+a al
+AR (co) = [x (LG &x) «ke = [x - 2iwp >~ {@ fj Poy (kok Hy Ag + Vi Vp)
+J
+
+a al
+— [kg fP%y +h: (axez) fiT%] (bk Hy His + Veve)} (A5)
+
+ 
+
+We desire to linearly relate the coupling integral in the above equation to the flows P and T, through poloidal and
+toroidal sensitivity kernels, Cg;,~ and Dgj,~ respectively. Hence, they are given by
+
+Caik = / dzp l@ fi (kk HLS +ViVe)
+
+—k-q fi (le- ke’ Hy Hy, + VaVi)|
+
+Daj.w =k (qxez) [eon (kk Hy His + VeVi). (A6)
+Note the symmetry Cqj,4 = C_—qj,-k and Dgj,x = D—qj,-k- This coupling integral contributes to the cross-spectral
+
+measurement between modes k and k + q From eq 8 of Woodard (2014), we write the first-order effect of flow on
+wavefield cross-correlation as
+
+(O8* Opig) = AiwoAe (2), (A7)
+where the function H is given by
+fog = —2iw( NelREI? REM? + Ne |GET? RE) (A8)
+
+We absorb the factor —2iw into the definition of H. Substitute eq A6 in right-hand-side of eq A7 to obtain eq 4.
+The mode spectral profile R is a Lorentzian, given by
+
+1
+
+_ twnk /2 , (A9)
+
+a =
+k w?, — Ww
+where wpx is the resonant frequency of the mode, and 7ynzx is the mode linewidth. Eq AY can be derived by introducing
+mode damping —iwyp as an operator in the differential equation that governs undamped, driven oscillations (see eq
+5 of Hanasoge et al. 2017), and then deriving the effects of first-order perturbations to the wavefield cross-correlation.
+
+Also, the parity H%,, = Hy, and RZ = R,** are established. Mode normalization N is given by
+
+1 & & lee?
+N, = — eo A10
+k QX Re (A10)
+
+Ww
+
+Q
+where the o >> on the right-hand-side implies average over all [k,z,k,] (Q terms in all) such that k = |k| is constant.
+
+This forces N to be isotropic, i.e., to only depend on k, and not k. The sum over w is within five linewidths of wy x.
+Note that Eq. A8 through A10 are modified from H21 to ensure parity and that flow maps are real.
+
+The three equations A8 through A10, along with the symmetry relation for kernels, and summation over +w, serve
+to establish the parity Bg = Bry ¢ This allows for obtaining Py = Pry, and subsequently, purely real flow in
+the real domain. Setting o = 0 gives us the linear, invertible equation eq 6. Substituting eqns A8 through A10 into
+the noise model obtained in H21 and summing over tw establishes the symmetry GZ 4 = Gh ¢
+
+
 
 
 Imaging near-surface flows using mode-coupling analysis 13
@@ -1238,6 +1523,65 @@ k
 As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
 
 and B14.
+
+IMAGING NEAR-SURFACE FLOWS USING MODE-COUPLING ANALYSIS 13
+
+B. SOLA INVERSIONS
+
+Subtractive Optimally Localized Averages (SOLA, Pijpers & Thompson 1994) aims to obtain a set of weight factors
+for the mode q and depth z,, which we will call az,z.. A linear weighted sum of the measurements Bx,q in the fashion
+>) ak,z0Br,q allows for an average value of the flow P,(z) to be estimated at the depth z,. To obtain the coefficients
+k
+
+Qk,zo, it is assumed that a set of sensitivity kernels Ky,,q(z) for the mode q can be summed up coherently to give an
+’averaging kernel’ that is localized at the depth z,. Conventionally, a Gaussian centered at z, and a width A is chosen
+which the averaging kernel should resemble after performing inversion.
+
+B.1. Kernels in the integral form
+
+Since the kernels in eq A6 are manifest as coefficients on a basis f;(z), we first derive kernels that can be expressed
+as a function of depth z (see Figure 8). It is convenient to derive in matrix form. Thus, with the following definitions:
+P = Py(z), p = Pay, F = f(z), B = Beg C = Cajx and K = Kx q(z), we write (assume only poloidal flow for
+simplicity, the same derivations hold true for toroidal flow as well)
+
+P=Fp (B11)
+
+The size of P is thus the same as the length of the radial grid z.
+Now, pre-multiply by F7 and integrate over z on both sides (drop the integral notation for compactness),
+
+F’P=(F'F)p
+p=(F'F)'F'P (B12)
+Now, substituting eq B12 into the forward problem eq 6,
+B=Cp
+=(F'F)'F'CP
+=KP (B13)
+where
+K =(F'F)"'F'C,
+-1
+ie, Keg(2)=>.| / dz fi(2)Fir(2)|  Sir(2)Casre (B14)
+
+i5'
+
+B.2. Obtaining the coefficients a
+
+Now, demand that the averaging kernel should resemble a unimodulus target Gaussian centered at z,
+
+ 
+
+ 
+
+1 Z— Zo
+T (2,20) = Tani exp( A? ). (B15)
+This can be achieved by solving the optimization problem
+2
+minimize ¥ = je [7 (2,20) = Oq(2,0)| ; (B16)
+where we introduce the averaging kernel for mode q thus
+Oq(z, 20) = > On,2oKR,g(2): (B17)
+k
+
+As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
+and B14.
+
 
 
 
@@ -1357,6 +1701,100 @@ http://doi.org/10.1051/0004-6361/201937331
 http://doi.org/10.1086/324323
 http://doi.org/10.1103/RevModPhys.74.1073
 http://doi.org/10.1007/s41116-020-00028-3
+14 MANI ET AL.
+
+x10-1 x10-’
+
+6.0 4 — Avg. kernel
+sees Target
+
+ 
+
+ 
+
+ 
+    
+
+qk. =[-112, -45]
+o =[-853,-157]
+
+      
+
+457 z= —-0.48 Mm
+
+—— oe
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+yO hh 3
+Z N 3.07
+- o
+1.5 4
+0.0 fasmererrritivrstsereree?
+—4 —2 0 —5 -4 3 2 -1 0
+2, Mm z, Mm
+
+Figure 8. Left: Kernel Kx,q(z) (eq B14) shown vs depth z for the three radial order couplings ff, pi-p1, and p2-p2e. qRo =
+[—112, —45] and kRo = [-—853,—157] is chosen for all the radial order couplings for comparison. Right: Averaging kernel
+(eq B17) using SOLA, for qRo = [—112, —45] at depth zo = —0.48 Mm, and the corresponding target Gaussian (eq B15).
+Integral of the averaging kernel over z is 0.89.
+
+Setting ox — 0 gives us the matrix problem to be solved
+A{a} =v,
+-1
+{a} = |4 + y| v, (B18)
+
+where the square matrix A = [dz Keq(z) Kp g(z) and vu = [ dz Ke.q(z)T(z, 20). Here, k’ is just a dummy index for
+denoting elements in the matrix A, (k’ 4 k+q). In the last line of eq B18, we introduce regularization using an Identity
+matrix I, with the regularization parameter jz - purpose being the same as that described in section 3.1. Obtaining
+a thus becomes a highly expensive computationally for very large number of modes (see section 3). Substitute a
+
+obtained from eq B18 into last line of eq B13, and S> on both sides
+k
+
+So on,2. Bq = So oR,2. ju Kxq(2) PG (2);
+k k
+= f a2 0q(2.20)P§(2).
+~ (Pq (Zo) (B19)
+
+Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Di-
+vergence flow can then be obtained from eq 16. Results are shown in Figures 9 and 10.
+
+REFERENCES
+Anderson, E. R., Duvall, Thomas L., J., & Jefferies, S. M. Boning, V. G. A., Birch, A. C., Gizon, L., Duvall, T. L., &
+1990, ApJ, 364, 699, doi: 10.1086/169452 Schou, J. 2020, A&A, 635, A181,
+Bahcall, J. N., & Pinsonneault, M. H. 1992, Reviews of doi: 10.1051/0004-6361/201937331
+
+Modern Physics, 64, 885,
+doi: 10.1103/RevModPhys.64.885
+
+doi: 10.1086 /324323
+Birch, A. C., Schunker, H., Braun, D. C., et al. 2016, hei . '
+Science Advances, 2, €1600557, Christensen-Dalsgaard, J. 2002, Reviews of Modern
+
+doi: 10.1126/sciadv.1600557 Physics, 74, 1073, doi: 10.1103/RevModPhys.74.1073
+
+Braun, D. C., & Lindsey, C. 2001, ApJL, 560, L189,
+
+Birch, A. C., Schunker, H., Braun, D. C., & Gizon, L. 2019, —. 2021, Living Reviews in Solar Physics, 18, 2,
+A&A, 628, A37, doi: 10.1051/0004-6361/201935591 doi: 10.1007/s41116-020-00028-3
+
+
 
 
 Imaging near-surface flows using mode-coupling analysis 15

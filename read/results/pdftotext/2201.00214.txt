@@ -175,9 +175,7 @@ to each point of the loop’s direction. Then by using these data, we straighten
 considered box with the thickness of 15 to 40 pixels (macro-pixels, depending on the available
 empty area around each loop and the distance to the neighbor loop). The area around the
 loop is needed for calculations of background subtraction. The selected loop segment is cut in
-1 Based
-
-on data on these WebSites: https://solarflare.njit.edu/webapp.html, and https://www.swpc.noaa.gov/
+1 Based on data on these WebSites: https://solarflare.njit.edu/webapp.html, and https://www.swpc.noaa.gov/
 
 all wavelengths and at the same considered box from the images set. These loop images are
 necessary entrances for our thermal analysis process. Then the loop is divided into different
