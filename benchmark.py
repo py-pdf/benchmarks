@@ -36,6 +36,7 @@ from pdf_benchmark.library_code import (
     pypdf_get_text,
     pypdf_image_extraction,
     pypdf_watermarking, tika_get_text, pdfium_image_extraction,
+    textract_get_text,
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
@@ -217,6 +218,15 @@ if __name__ == "__main__":
             dependencies="build-essential libpoppler-cpp-dev pkg-config python3-dev",
             last_release_date="-",
             license="GPL",
+        ),
+        "textract": Library(
+            "textract",
+            "textract",
+            "https://pypi.org/project/textract/",
+            text_extraction_function=textract_get_text,
+            version="2.0.0",
+            license="MIT",
+            last_release_date="2026-04-27",
         ),
         # "borb": Library(
         #     "Borb",
