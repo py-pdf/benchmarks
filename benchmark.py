@@ -36,6 +36,7 @@ from pdf_benchmark.library_code import (
     pypdf_get_text,
     pypdf_image_extraction,
     pypdf_watermarking, tika_get_text, pdfium_image_extraction,
+    unpdf_markdown_get_text,
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
@@ -217,6 +218,15 @@ if __name__ == "__main__":
             dependencies="build-essential libpoppler-cpp-dev pkg-config python3-dev",
             last_release_date="-",
             license="GPL",
+        ),
+        "unpdf_markdown": Library(
+            "unpdf-markdown",
+            "unpdf_markdown",
+            "https://pypi.org/project/unpdf-markdown/",
+            text_extraction_function=unpdf_markdown_get_text,
+            version="0.6.4",
+            license="MIT",
+            last_release_date="2026-05-20",
         ),
         # "borb": Library(
         #     "Borb",

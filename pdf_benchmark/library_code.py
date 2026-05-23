@@ -225,6 +225,23 @@ def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     return out_buffer.read()
 
 
+def unpdf_markdown_get_text(data: bytes) -> str:
+    import unpdf
+    new_file, filename = tempfile.mkstemp(suffix=".pdf")
+    try:
+        with open(filename, "wb") as fp:
+            fp.write(data)
+        try:
+            text = unpdf.to_text(filename)
+        except RuntimeError as exc:
+            print(f"unpdf text extraction failed: {exc}")
+            text = ""
+    finally:
+        os.close(new_file)
+        os.remove(filename)
+    return text
+
+
 def tika_get_text(data: bytes) -> str:
     from tika import parser
 
