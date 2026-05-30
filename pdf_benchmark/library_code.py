@@ -225,6 +225,41 @@ def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     return out_buffer.read()
 
 
+def pdf_oxide_get_text(data: bytes) -> str:
+    import pdf_oxide
+    new_file, filename = tempfile.mkstemp(suffix=".pdf")
+    try:
+        with open(filename, "wb") as fp:
+            fp.write(data)
+        doc = pdf_oxide.PdfDocument(filename)
+        text = ""
+        for i in range(doc.page_count):
+            text += doc.extract_text(i) + "\n"
+    finally:
+        os.close(new_file)
+        os.remove(filename)
+    return text
+
+
+def pdf_oxide_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
+    import pdf_oxide
+    images = []
+    new_file, filename = tempfile.mkstemp(suffix=".pdf")
+    try:
+        with open(filename, "wb") as fp:
+            fp.write(data)
+        doc = pdf_oxide.PdfDocument(filename)
+        for i in range(doc.page_count):
+            for img_index, img in enumerate(doc.extract_images(i), start=1):
+                images.append((f"page-{i+1}-image-{img_index}.{img.format}", img.data))
+    except Exception as exc:
+        print(f"pdf_oxide Image extraction failure: {exc}")
+    finally:
+        os.close(new_file)
+        os.remove(filename)
+    return images
+
+
 def tika_get_text(data: bytes) -> str:
     from tika import parser
 

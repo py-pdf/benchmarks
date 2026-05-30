@@ -25,6 +25,8 @@ from tika import parser
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.library_code import (
     borb_get_text,
+    pdf_oxide_get_text,
+    pdf_oxide_image_extraction,
     pdfium_get_text,
     pdfminer_image_extraction,
     pdfplubmer_get_text,
@@ -228,6 +230,17 @@ if __name__ == "__main__":
         #     license="AGPL/Commercial",
         #     last_release_date="2023-06-23",
         # ),
+        "pdf_oxide": Library(
+            "pdf_oxide",
+            "pdf_oxide",
+            "https://pypi.org/project/pdf-oxide/",
+            text_extraction_function=pdf_oxide_get_text,
+            version="0.3.57",
+            image_extraction_function=pdf_oxide_image_extraction,
+            license="MIT OR Apache-2.0",
+            last_release_date="2026-05-30",
+            dependencies="Rust core via PyO3",
+        ),
         "pdfium": Library(
             "pypdfium2",
             "pdfium",
