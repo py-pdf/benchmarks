@@ -2,6 +2,7 @@ import os
 import platform
 import re
 import subprocess
+from pathlib import Path
 
 
 def get_processor_name() -> str:
@@ -10,12 +11,14 @@ def get_processor_name() -> str:
         return platform.processor()
     elif platform.system() == "Darwin":
         os.environ["PATH"] = os.environ["PATH"] + os.pathsep + "/usr/sbin"
-        command = "sysctl -n machdep.cpu.brand_string"
-        return subprocess.check_output(command, shell=True).strip().decode("utf-8")
+        return (
+            subprocess.check_output(["sysctl", "-n", "machdep.cpu.brand_string"])
+            .strip()
+            .decode("utf-8")
+        )
     elif platform.system() == "Linux":
-        command = "cat /proc/cpuinfo"
-        all_info = subprocess.check_output(command, shell=True).decode().strip()
+        all_info = Path("/proc/cpuinfo").read_text()
         for line in all_info.split("\n"):
             if "model name" in line:
-                return re.sub(".*model name.*:", "", line, 1)
+                return re.sub(".*model name.*:", "", line, count=1)
     return ""

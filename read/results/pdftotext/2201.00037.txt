@@ -2,28 +2,19 @@ Confidential manuscript submitted to JGR-Planets
 
 The influence of a fluid core and a solid inner core on the
 Cassini sate of Mercury
-Mathieu Dumberry
+Mathieu Dumberry 1
 
 arXiv:2201.00037v1 [astro-ph.EP] 31 Dec 2021
 
-1 Department
-
-1
-
-of Physics, University of Alberta, Edmonton, Alberta, Canada.
+1 Department of Physics, University of Alberta, Edmonton, Alberta, Canada.
 
 Key Points:
-•
-
-•
-
-•
-
 The Cassini state obliquity of Mercury’s mantle spin axis deviates from that of a rigid
 planet by no more than 0.01 arcmin.
-For a core magnetic field above 0.3 mT, electromagnetic coupling locks the fluid and solid
+• For a core magnetic field above 0.3 mT, electromagnetic coupling locks the fluid and solid
 cores into a common precession motion.
-The larger the inner core is, the more the obliquity of the polar moment of inertia approaches that expected for a rigid planet.
+• The larger the inner core is, the more the obliquity of the polar moment of inertia approaches that expected for a rigid planet.
+•
 
 Corresponding author: Mathieu Dumberry, dumberry@ualberta.ca
 
@@ -281,7 +272,6 @@ Stark et al. [2015b]
 Baland et al. [2017]
 
 Table 1.
-3
 
 Baland et al. [2017]
 Baland et al. [2017]
@@ -294,15 +284,12 @@ Perry et al. [2015]
 
 Reference parameters for Mercury. The mass M is computed from GM = 22031.8636 × 109
 
-2
-
-m /s taken from Genova et al. [2019]. The mean density is calculated from
-
-4π
-ρ̄R3
+ρ̄R3 = M . The numerical
+m /s taken from Genova et al. [2019]. The mean density is calculated from 4π
+3
 3
 
-= M . The numerical
+2
 
 values of r and ξr are calculated from r = (ā − c)/R and ξr = (a − b)/R, where ā = 12 (a + b) and where
 a = 2440.53 km, b = 2439.28 km and c = 2438.26 km are the semimajor, intermediate and semiminor
@@ -350,16 +337,16 @@ ef =
 Cf − Āf
 Āf
 
-B−A
-Ā
-
-γs =
-
 es =
 
 Cs − Ās
 ,
 Ās
+
+B−A
+Ā
+
+γs =
 
 B s − As
 .
@@ -626,7 +613,8 @@ Ā
 Ā
 Ā
 iΩo Ā
-ω m̃ + (1 + ω + ef ) m̃f − ωα1 es
+
+(12a)
 
 
 1 
@@ -635,6 +623,10 @@ ñs = 2
 − Γ̃cmb − Γ̃icb ,
 Āf
 iΩo Āf
+
+(12b)
+
+ω m̃ + (1 + ω + ef ) m̃f − ωα1 es
 
 (ω − α3 es )m̃ + α1 es m̃f + (1 + ω) m̃s + (1 + ω − α2 ) es ñs =
 
@@ -646,10 +638,6 @@ iΩ2o Ās
 
 
 Γ̃ssun + Γ̃icb ,
-
-(12a)
-
-(12b)
 
 (12c)
 
@@ -732,18 +720,14 @@ and where G210 and G201 are functions of the orbital eccentricity ec ,
 (1 − e2c )3/2
 7
 123 3 489 5
-= ec −
+G201 = ec −
 e +
 e .
 2
 16 c 128 c
-
 G210 =
 
 (16a)
-
-G201
-
 (16b)
 
 The gravitational torque by the Sun acting on the inner core alone, Γ̃ssun , is
@@ -755,13 +739,11 @@ The gravitational torque by the Sun acting on the inner core alone, Γ̃ssun , i
 CMB and on the inner core at the ICB, respectively. These torques can be parameterized in
 terms of dimensionless complex coupling constants Kicb and Kcmb and the differential angular velocities at each boundary [e.g Buffett, 1992; Buffett et al., 2002],
 Γ̃icb = iΩ2o Ās Kicb (m̃f − m̃s ) ,
-Γ̃cmb =
-
-iΩ2o Āf Kcmb
-
-m̃f .
 
 (18a)
+
+Γ̃cmb = iΩ2o Āf Kcmb m̃f .
+
 (18b)
 
 Specific expressions for Kicb and Kcmb are delayed to sections 4 and 5 when we consider the
@@ -827,20 +809,21 @@ M = ω − α3 es
 Ā
 
 (1 + ω) Āf
-1 + ω + ef + Kcmb +
-α1 es − Kicb
-0
-0
-
 Ās
 Kicb
-Āf
+1 + ω + ef + Kcmb + Ā
+f
 
 (1 + ω) ĀĀs
 Ās
 − Ā
 Kicb
 f
+
+α1 es − Kicb
+0
+0
+
 1 + ω + Kicb
 1
 0
@@ -1301,16 +1284,13 @@ are given by
 
 
 
-ωf cn
-ωf icn
-
 
 
 Ā
 e f φm
 e f + φm + Ω o
 ,
-≈ −Ωo
+ωf cn ≈ −Ωo
 (ef + φm )
 Ām + Ās
 
@@ -1318,7 +1298,7 @@ Ām + Ās
 
 Ā + Ās
 es α1 − es α3 αg − α3 φs .
-≈ Ωo
+ωf icn ≈ Ωo
 Ā − Ās
 
 (38a)
@@ -1586,6 +1566,8 @@ been derived [e.g. Stewartson and Roberts, 1963; Busse, 1968; Rochester , 1976] 
 these solutions here. The parametrization of the viscous coupling constants Kcmb and Kicb based
 on them are given in Mathews and Guo [2005],
 
+πρf rf4
+
 r
 
 
@@ -1597,15 +1579,12 @@ Āf
 4r
 πρf rs
 ν 
-=
+Kicb =
 0.195 − 1.976i ,
 2Ωo
 Ās
 
 Kcmb =
-Kicb
-
-πρf rf4
 
 (44a)
 (44b)

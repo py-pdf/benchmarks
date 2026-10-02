@@ -3,29 +3,27 @@ Compare text extraction performance of different PDF parsers.
 """
 
 import json
-import os
 import time
+from importlib.metadata import version as pkg_version
 from io import BytesIO
 from itertools import product
 from json import JSONDecodeError
 from pathlib import Path
 from typing import Literal
 
-import fitz as PyMuPDF
 import pdfminer
 import pdfplumber
 import pdfrw
+import pymupdf as PyMuPDF
 import pypdf
-import pypdfium2
 import tika
 from pdfminer.high_level import extract_text as pdfminder_extract_text
 from rich.progress import track
-from tika import parser
 
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.library_code import (
-    borb_get_text,
     pdfium_get_text,
+    pdfium_image_extraction,
     pdfminer_image_extraction,
     pdfplubmer_get_text,
     pdfrw_watermarking,
@@ -35,7 +33,8 @@ from pdf_benchmark.library_code import (
     pymupdf_watermarking,
     pypdf_get_text,
     pypdf_image_extraction,
-    pypdf_watermarking, tika_get_text, pdfium_image_extraction,
+    pypdf_watermarking,
+    tika_get_text,
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
@@ -56,13 +55,10 @@ def main(
             cache = Cache()
     else:
         cache = Cache()
-    names = sorted(list(libraries.keys()))
+    names = sorted(libraries.keys())
 
-    watermark_file = os.path.join(
-        os.path.dirname(__file__), "watermark", "pdfs", "python-quote.pdf"
-    )
-    with open(watermark_file, "rb") as f:
-        watermark_data = f.read()
+    watermark_file = Path(__file__).parent / "watermark" / "pdfs" / "python-quote.pdf"
+    watermark_data = watermark_file.read_bytes()
 
     # Run the benchmarks
     for doc, name in track(list(product(docs, names))):
@@ -99,6 +95,12 @@ def main(
             )
             cache.benchmark_times[lib.pathname][doc.name]["image_extraction"] = t1 - t0
         cache.write(cache_path)
+
+    libraries = {
+        name: lib._replace(last_release_date=cache.resolve_release_date(lib))
+        for name, lib in libraries.items()
+    }
+    cache.write(cache_path)
     write_benchmark_report(
         names,
         libraries,
@@ -114,19 +116,16 @@ def write_single_result(
     data: str | bytes | list[tuple[str, bytes]],
     extension: Literal["txt", "pdf", "image-list"],
 ) -> None:
-    folder = f"{benchmark}/results/{pdf_library_name}"
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+    folder = Path(benchmark) / "results" / pdf_library_name
+    folder.mkdir(parents=True, exist_ok=True)
     if isinstance(data, list):
-        folder = f"{folder}/{pdf_file_name}"
-        if not os.path.exists(folder):
-            os.makedirs(folder)
+        folder = folder / pdf_file_name
+        folder.mkdir(parents=True, exist_ok=True)
         for image_name, image_data in data:
-            with open(f"{folder}/{image_name}", "wb") as fp:
-                fp.write(image_data)
+            (folder / image_name).write_bytes(image_data)
     else:
         mode = "wb" if extension == "pdf" or isinstance(data, bytes) else "w"
-        with open(f"{folder}/{pdf_file_name}.{extension}", mode) as f:
+        with open(folder / f"{pdf_file_name}.{extension}", mode) as f:
             try:
                 f.write(data)
             except Exception as exc:
@@ -162,7 +161,8 @@ if __name__ == "__main__":
             version=tika.__version__,
             dependencies="Apache Tika",
             license="Apache v2",
-            last_release_date="2025-03-26",
+            last_release_date="2026-08-01",
+            pypi_name="tika",
         ),
         "pypdf": Library(
             "pypdf",
@@ -174,6 +174,7 @@ if __name__ == "__main__":
             license="BSD 3-Clause",
             last_release_date="2025-06-29",
             image_extraction_function=pypdf_image_extraction,
+            pypi_name="pypdf",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -184,6 +185,7 @@ if __name__ == "__main__":
             license="MIT/X",
             last_release_date="2025-05-06",
             image_extraction_function=pdfminer_image_extraction,
+            pypi_name="pdfminer.six",
         ),
         "pdfplumber": Library(
             "pdfplumber",
@@ -194,6 +196,7 @@ if __name__ == "__main__":
             license="MIT",
             last_release_date="2025-06-12",
             dependencies="pdfminer.six",
+            pypi_name="pdfplumber",
         ),
         "pymupdf": Library(
             "PyMuPDF",
@@ -206,6 +209,7 @@ if __name__ == "__main__":
             dependencies="MuPDF",
             license="GNU AFFERO GPL 3.0 / Commerical",
             last_release_date="2025-06-12",
+            pypi_name="pymupdf",
         ),
         "pdftotext": Library(
             "pdftotext",
@@ -218,27 +222,18 @@ if __name__ == "__main__":
             last_release_date="-",
             license="GPL",
         ),
-        # "borb": Library(
-        #     "Borb",
-        #     "borb",
-        #     "https://pypi.org/project/borb/",
-        #     text_extraction_function=borb_get_text,
-        #     version="2.1.16",
-        #     watermarking_function=None,
-        #     license="AGPL/Commercial",
-        #     last_release_date="2023-06-23",
-        # ),
         "pdfium": Library(
             "pypdfium2",
             "pdfium",
             "https://pypi.org/project/pypdfium2/",
             text_extraction_function=pdfium_get_text,
-            version=pypdfium2.V_PYPDFIUM2,
+            version=pkg_version("pypdfium2"),
             watermarking_function=None,
             image_extraction_function=pdfium_image_extraction,
             license="Apache-2.0 or BSD-3-Clause",
             last_release_date="2024-12-19",
             dependencies="PDFium (Foxit/Google)",
+            pypi_name="pypdfium2",
         ),
         "pdfrw": Library(
             "pdfrw",
@@ -250,6 +245,7 @@ if __name__ == "__main__":
             license="MIT",
             last_release_date="2017-09-18",
             dependencies="",
+            pypi_name="pdfrw",
         ),
     }
     main(docs, libraries)

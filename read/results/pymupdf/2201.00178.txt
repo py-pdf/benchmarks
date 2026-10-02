@@ -853,7 +853,7 @@ R
 dz Kk,q(z)Kk′,q(z) and v =
 R
 dz Kk,q(z)T (z, zo). Here, k′ is just a dummy index for
-denoting elements in the matrix A, (k′ ̸= k+q). In the last line of eq B18, we introduce regularization using an Identity
+denoting elements in the matrix A, (k′̸ = k+q). In the last line of eq B18, we introduce regularization using an Identity
 matrix I, with the regularization parameter µ - purpose being the same as that described in section 3.1. Obtaining
 α thus becomes a highly expensive computationally for very large number of modes (see section 3). Substitute α
 obtained from eq B18 into last line of eq B13, and P

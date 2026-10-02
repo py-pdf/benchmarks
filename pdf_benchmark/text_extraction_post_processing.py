@@ -1,5 +1,6 @@
 PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE = "\ufffe"
 
+
 def postprocess(extracted_texts: list[str], page_labels: list[str]) -> str:
     """Pass a list of all extracted texts from all pages."""
     extracted_texts = [replace_ligatures(t) for t in extracted_texts]
@@ -54,7 +55,7 @@ def dehyphenate(lines: list[str], line_no: int) -> list[str]:
 def remove_footer(extracted_texts: list[str], page_labels: list[str]):
     def remove_page_labels(extracted_texts, page_labels):
         processed = []
-        for text, label in zip(extracted_texts, page_labels):
+        for text, label in zip(extracted_texts, page_labels, strict=True):
             text_left = text.lstrip()
             if text_left.startswith(label):
                 text = text_left[len(label) :]

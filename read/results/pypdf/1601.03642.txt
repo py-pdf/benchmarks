@@ -44,8 +44,8 @@ A formal definition of the field of Machine Learning is given
 by Tom Mitchel [Mit97]:
 A computer program is said to learn from experience
  E with respect to some class of tasks T and
-performance measure P, if its performance at tasks
-in T, as measured by P, improves with experience E.
+performance measure P , if its performance at tasks
+in T , as measured by P , improves with experience E.
 Σ ϕ
 x0
 x1
@@ -100,9 +100,9 @@ basic building blocks is a time-intensive and difficult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artificial
 neural networks. Those networks are based on mathematical
-functions called artificial neurons which take n ∈N numbers
- x1, . . . , xn ∈R as input, multiply them with weights
-w1, . . . , wn ∈R, add them and apply a so called activation
+functions called artificial neurons which take n∈ N numbers
+ x1, . . . , xn ∈ R as input, multiply them with weights
+w1, . . . , wn∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
 an activation function is the sigmoid function ϕ(x) = 1
 1+e−x .
@@ -124,7 +124,7 @@ III. I MAGE DATA
 Applying a simple neural network on image data directly can
 work, but the number of parameters gets extraordinary large.
 One would take one neuron per pixel and channel. This means
-for 500 px ×500 px RGB images one would get 750,000 input
+for 500 px× 500 px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
 the full connection between the input layer and the first

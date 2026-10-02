@@ -272,6 +272,10 @@ intermediate
 
 80
 
+log(Σ) [M⊙/kpc2]
+
+major
+
 6.5
 
 0
@@ -280,7 +284,6 @@ intermediate
 -40
 
 5.3
-160
 
 40
 
@@ -298,23 +301,13 @@ intermediate
 
 0
 
-V [km/s]
+-40
 
 -80
 
-[kpc]
-
-160
-
-V [km/s]
+-40
 
 -80
-
-[kpc]
-
-log(Σ) [M⊙/kpc2]
-
-major
 
 -80
 
@@ -353,7 +346,6 @@ major
 -80
 
 -80
--80
 
 -40
 
@@ -387,19 +379,29 @@ major
 
 σ [km/s]
 
--80
-
 [kpc]
-
--40
 
 σ [km/s]
 
+[kpc]
+
 -80
+
+V [km/s]
+
+160
 
 [kpc]
 
--40
+-80
+
+V [km/s]
+
+160
+
+[kpc]
+
+-80
 
 -40
 
@@ -890,25 +892,24 @@ aim was to recover the profiles of the total mass and the velocity
 anisotropy.
 
 where
-ρ0 =
+3.1. Overview of the method
 
 I0
 πRc [1 + (Rt /Rc )2 ]3/2
 
-3.1. Overview of the method
-
 (3)
 
+s
+
+(4)
+
+ρ0 =
 and
 z=
-
-s
 
 r2 + R2c
 .
 R2c + R2t
-
-(4)
 
 We follow the approach introduced in Kowalczyk et al. (2018),
 namely we model the total mass profile with the mass-to-light
