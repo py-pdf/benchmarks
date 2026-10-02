@@ -168,11 +168,11 @@ However, this can only support the explanation of
 particular problems or showcase special situation. For
 meaningful information about the overall accuracy, there
 are a couple of metrics how accuracy can be defined.
-For this section, let k∈N be the number of classes,
-nij ∈N0 with i,j ∈1,...,k be the number of pixels
+For this section, let k∈ N be the number of classes,
+nij∈ N0 with i,j ∈ 1,...,k be the number of pixels
 which belong to class i and were labeled as class j.
 (nij) is called a confusion matrix. Let ti = ∑k
-j=1 nij
+j=1nij
 be the total number of pixels of class i.
 One way to compare segmentation algorithms is by
 the pixel-wise accuracy of the predicted segmentation
@@ -180,8 +180,8 @@ as done in many publications [ SWRC06], [ CP08],
 [LSD14]. This is also called per-pixel rate and defined
  as
 ∑k
-i=1 nii∑k
-i=1 ti
+i=1nii∑k
+i=1ti
 . Taking the pixel-wise classification
 accuracy has two major drawbacks:
 P1 Tasks like segmenting images for autonomous cars
@@ -201,27 +201,27 @@ car”
 Three accuracy metrics which do not suffer from
 problem P1 are used in [LSD14]:
 • mean accuracy: 1
-k ·∑k
+k· ∑k
 i=1
 nii
 ti
-∈[0,1]
+∈ [0, 1]
 • mean intersection over union :
 1
-k ·∑k
+k· ∑k
 i=1
 nii
 ti−nii+∑k
-j=1 nji
-∈[0,1]
+j=1nji
+∈ [0, 1]
 • frequency weighted intersection over union :
 (∑k
-i=1 ti)
+i=1ti)
 −1 ∑k
-i=1 ti · nii
+i=1ti· nii
 ti−nii+∑k
-j=1 nji
-∈[0,1]
+j=1nji
+∈ [0, 1]
 Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets
@@ -232,13 +232,13 @@ One way to deal with problem P1 and problem P2
 is giving the confusion matrix as done in [ SWRC06].
 However, this approach is not feasible if many classes
 are given.
-The F-measure is useful for binary classification
+The F -measure is useful for binary classification
  task such as the KITTI road segmentation
 benchmark [ FKG13] or crypt segmentation as done
 by [CRSS14]. It is calculated as “the harmonic mean
 of the precision and recall” [PH05]:
-Fβ = (1 + β)2 tp
-(1 + β2) ·tp + β2 ·fn + fp
+Fβ = (1 +β)2 tp
+(1 +β2)· tp +β2· fn + fp
 where β = 1 is chosen in most cases and tp means
 true positive, fn means false negative and fp means
 false positive.
@@ -313,7 +313,7 @@ an EU network of excellence
 2Visual Object Classes
 
 Beginning with 2007, a segmentation challenge was
-added [EVGW+a].
+added [EVGW +a].
 The dataset consists of annotated photographs from
 www.flicker.com, a photo sharing website. There are
 multiple challenges for PASCAL VOC. The 2012
@@ -396,12 +396,12 @@ and a sliding-window approach [ DT05], [ YBCK10],
 of a fixed size. The trained classifier is then fed with
 rectangular regions of the image which are called windows.
  Although the classifier gets an image patch of e.g.
-51 px ×51 px of the environment, it might only classify
+51 px×51 px of the environment, it might only classify
 the center pixel or a subset of the complete window.
 This segmentation pipeline is visualized in Figure 2.
 This approach was taken by [ BKTT15] and a majority
  of the VOC2007 participants [ EVGW+a]. As this
-approach has to apply the patch classifier 512 ·512 =
+approach has to apply the patch classifier 512· 512 =
 262 144 times for images of size 512 px×512 px, there
 are techniques for speeding it up such as applying a
 stride and interpolating the results.
@@ -459,8 +459,8 @@ an image is histogram equalization, which can be
 applied to improve contrast [PAA +87], [RM07].
 2) Histogram of oriented Gradients: Histogram of
 oriented gradients (HOG) features interpret the image
-as a discrete function I : N2 →{ 0,..., 255 }which
-maps the position (x,y) to a color. For each pixel, there
+as a discrete function I : N2→{ 0,..., 255} which
+maps the position (x,y ) to a color. For each pixel, there
 are two gradients: The partial derivative of x and y.
 Now the original image is transformed to two feature
 maps of equal size which represents the gradient. These
@@ -470,9 +470,9 @@ were proposed in [ DT05] and are used in [ BMBM10],
 [FGMR10] for segmentation tasks.
 3) SIFT: Scale-invariant feature transform (SIFT)
 feature descriptors describe keypoints in an image. The
-image patch of the size 16 ×16 around the keypoint
+image patch of the size 16× 16 around the keypoint
 is taken. This patch is divided in 16 distinct parts of
-the size 4 ×4. For each of those parts a histogram of
+the size 4× 4. For each of those parts a histogram of
 8 orientations is calculated similar as for HOG features.
 This results in a 128-dimensional feature vector for
 each keypoint.
@@ -671,8 +671,8 @@ D. SVMs
 SVMs are well-studied binary classifiers which can
 be described by five central ideas. For those ideas, the
 training data is represented as (xi,yi) where xi is the
-feature vector and yi ∈{− 1,1 }the binary label for
-training example i∈{1,...,m }.
+feature vector and yi∈{− 1, 1} the binary label for
+training example i∈{ 1,...,m }.
 1) If data is linearly separable, it can be separated
 by a hyperplane. There is one hyperplane which
 maximizes the distance to the next datapoints
@@ -680,11 +680,11 @@ maximizes the distance to the next datapoints
 minimize
 w,b
 1
-2∥w∥2
-s.t. ∀m
-i=1yi ·(⟨w,xi⟩+ b)  
+2‖w‖2
+s.t.∀m
+i=1yi· (⟨w, xi⟩ +b)| {z }
 sgn applied to this gives the classification
-≥1
+≥ 1
 2) Even if the underlying process which generates the
 features for the two classes is linearly separable,
 noise can make the data not separable. The introduction
@@ -698,14 +698,14 @@ accepted. The new optimization problem is:
 minimize
 w
 1
-2∥w∥2 + C·
+2‖w‖2 +C·
 m∑
 i=1
 ξi
-s.t. ∀m
-i=1yi ·(⟨w,xi⟩+ b) ≥1 −ξi
-Note that 0 ≤ξi ≤1 means that the data point
-is within the margin, whereas ξi ≥1 means it is
+s.t.∀m
+i=1yi· (⟨w, xi⟩ +b)≥ 1−ξi
+Note that 0≤ ξi≤ 1 means that the data point
+is within the margin, whereas ξi≥ 1 means it is
 misclassified. An SVM with C >0 is also called
 a soft-margin SVM.
 3) The primal problem is to find the normal vector
@@ -715,7 +715,7 @@ w =
 m∑
 i=1
 αiyixi
-where yi ∈{− 1,1 }represents the class of the
+where yi∈{− 1, 1} represents the class of the
 training example and αi are Lagrange multipliers.
 The usage of Lagrange multipliers is explained
 with some examples in [ Smi04]. The usage of the
@@ -730,15 +730,15 @@ maximize
 αi
 m∑
 i=1
-αi −1
+αi− 1
 2
 m∑
 i=1
 m∑
 j=1
-αiαjyiyj⟨xi,xj⟩
-s.t. ∀m
-i=10 ≤αi ≤C
+αiαjyiyj⟨xi, xj⟩
+s.t.∀m
+i=10≤αi≤C
 s.t.
 m∑
 i=1
@@ -749,22 +749,22 @@ i=1
 vectors x with a non-linear mapping Φ into
 a higher dimensional (probably ∞-dimensional)
 space. As the feature vectors x are only used
-within scalar product ⟨xi,xj⟩, it is not necessary
+within scalar product ⟨xi, xj⟩, it is not necessary
 to do the transformation. It is enough to do the
 calculation
-K(xi,xj) = ⟨xi,xj⟩
+K(xi, xj) =⟨xi, xj⟩
 This function K is called a kernel. The idea of
 never explicitly transforming the vectors xi to the
 higher dimensional space is called the kernel trick.
 Common kernels include the polynomial kernel
-KP(xi,xj) = (⟨xi,xj⟩+ r)p
+KP (xi, xj) = (⟨xi, xj⟩ +r)p
 of degree p and coefficient r, the Gaussian radial
 basis function (RBF) kernel
-KGauss(xi,xj) = e
-−γ∥xi−xj∥2
+KGauss(xi, xj) =e
+−γ‖xi−xj‖2
 2σ2
 and the sigmoid kernel
-Ktanh(xi,xj) = tanh(γ⟨xi,xj⟩−r)
+Ktanh(xi, xj) = tanh(γ⟨xi, xj⟩− r)
 where the parameter γ determines how much
 influence single training examples have.
 5) The described SVMs can only distinguish between
@@ -806,22 +806,22 @@ y1 y2 y3
 y4 y5 y6
 y7 y8 y9
 Figure 3: CRF with 4-neighborhood. Each node xi
-represents a pixel and each node yi represents
+represents a pixel and each nodeyi represents
 a label.
 gets labeled as shown in Figure 3. For example, a MRF
 which is trained on images of the size 224 px×224 pixel
 and gets the raw RGB values as features has
-224 ·224 ·3  
+224· 224· 3| {z }
 input
-+ 224·224  
++ 224· 224| {z }
 output
 = 200 704
 random variables. Those random variables are conditionally
  independent, given their local neighborhood.
 These (in)dependencies can be expressed with a graph.
-Let G= (V,E) be the associated undirected graph
-of an MRF and Cbe the set of all maximal cliques in
-that graph. Nodes represent random variables x,y and
+Let G = (V,E) be the associated undirected graph
+of an MRF and C be the set of all maximal cliques in
+that graph. Nodes represent random variables x, y and
 edges represent conditional dependencies. Just like in
 he 4-neighborhood [ SWRC06] and the 8-neighborhood
 are reasonable choices for constructing the graph.
@@ -831,24 +831,24 @@ and edges represent pixel neighborhood in computer
 vision problems segmentation problems where MRFs
 are used. Accordingly, the random variables y live
 on 1,..., nr of classes and the random variables x
-typically live on 0,..., 255 or [0,1].
-The probability of x,y can be expressed as
-P(x,y) = 1
+typically live on 0,..., 255 or [0, 1].
+The probability of x, y can be expressed as
+P (x, y) = 1
 Ze−E(x,y)
 where Z = ∑
-x,y e−E(x,y) is a normalization term
+x,ye−E(x,y) is a normalization term
 called the partition function and E is called the energy
 function. A common choice for the energy function is
-E(x,y) =
+E(x, y) =
 ∑
 c∈C
-ψc(x,y)
+ψc(x, y)
 where ψ is called a clique potential . One choice for
-cliques of size two x,y = (x1,x2) is [KP06]
-ψc(x1,x2) = wδ(x1,x2) =
+cliques of size two x, y = (x1,x 2) is [KP06]
+ψc(x1,x 2) =wδ(x1,x 2) =
 {
-+w if x1 ̸= x2
-−w if x1 = x2
++w if x1⁄=x2
+−w if x1 =x2
 According to [ Mur12], the most common way of
 inference over the posterior MRF in computer vision
 problems is Maximum A Posteriori (MAP) estimation.
@@ -859,8 +859,8 @@ Detailed introductions to MRFs are given by
 F . Conditional Random Fields
 CRFs are MRFs where all clique potentials are
 conditioned on input features [ Mur12]. This means,
-instead of learning the distribution P(y,x), the task
-is reformulated to learn the distribution P(y|x). One
+instead of learning the distribution P (y, x), the task
+is reformulated to learn the distribution P (y|x). One
 consequence of this reformulation is that CRFs need
 much less parameters as the distribution of x does
 not have to be estimated. Another advantage of CRFs
@@ -870,9 +870,9 @@ A CRF has the partition function Z:
 Z(x) =
 ∑
 y
-P(x,y)
+P (x, y)
 and joint probability distribution
-P(y|x) = 1
+P (y|x) = 1
 Z(x)
 ∏
 c∈C
@@ -887,7 +887,7 @@ are also used in [ HZCP04], [ SWRC06] for semantic
 segmentation.
 A method similar to CRFs was proposed
 in [ GBVdW+10]. The system of Gonfaus et.al.
-ranked 1st by mean accuracy in the segmentation task
+ranked 1 st by mean accuracy in the segmentation task
 of the PASCAL VOC 2010 challenge [EVGW +10].
 An introduction to CRFs is given by [SM11].
 G. Post-processing methods
@@ -915,7 +915,7 @@ function to the weighted sum and gives an output. Those
 neurons can take either a feature vector as input or the
 output of other neurons. In this way, they build up
 feature hierarchies.
-The parameters they learn are the weights w ∈R.
+The parameters they learn are the weights w∈ R.
 They are learned by gradient descent. To do so, an error
 function — usually cross-entropy or mean squared error
 — is necessary. For the gradient descent algorithm, one
@@ -937,7 +937,7 @@ clever regularization called dropout training, which set
 the output of neurons while training randomly to zero.
 Another contribution was the usage of an activation
 function called rectified linear unit :
-ϕReLU(x) = max(0,x)
+ϕReLU(x) = max(0,x )
 Those are much faster to train than the commonly used
 sigmoid activation functions
 ϕSigmoid(x) = 1
@@ -1261,7 +1261,7 @@ pp. 130–143, 2013.
 & Sons, Inc., 1975.
 [HDT02] C. Huang, L. Davis, and J. Townshend, “An
 assessment of support vector machines for land
-cover classification,”International Journal of remote
+cover classification,” International Journal of remote
 sensing, vol. 23, no. 4, pp. 725–749, 2002.
 [HHR01] S. Hu, E. Hoffman, and J. Reinhardt, “Automatic
 lung segmentation for accurate quantitation of
@@ -1417,7 +1417,7 @@ xpl/login.jsp?tp=&arnumber=6381135
 vision/cambridge/recognition/
 [MSR] “Image understanding - research data,”
 Microsoft Research. [Online]. Available:
- http://research.microsoft.com/en-us/projects/
+ http://research .microsoft.com/en-us/projects/
 objectclassrecognition/
 [Mur12] K. P. Murphy, Machine learning: a probabilistic
 perspective. MIT press, 2012.

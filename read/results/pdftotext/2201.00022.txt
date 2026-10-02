@@ -3,14 +3,11 @@ Typeset using LATEX twocolumn style in AASTeX631
 
 The Formation of Intermediate Mass Black Holes in Galactic Nuclei
 Sanaea C. Rose,1, 2 Smadar Naoz,1, 2 Re’em Sari,3 and Itai Linial3
-1 Department
+1 Department of Physics and Astronomy, University of California, Los Angeles, CA 90095, USA
+2 Mani L. Bhaumik Institute for Theoretical Physics, University of California, Los Angeles, CA 90095, USA
 
 arXiv:2201.00022v2 [astro-ph.GA] 6 Jul 2022
 
-2 Mani
-
-of Physics and Astronomy, University of California, Los Angeles, CA 90095, USA
-L. Bhaumik Institute for Theoretical Physics, University of California, Los Angeles, CA 90095, USA
 3 Racah Institute for Physics, The Hebrew University, Jerusalem 91904, Israel
 
 ABSTRACT
@@ -47,9 +44,8 @@ GW170104, and GW170814 fall within the mass gap
 form second generation BHs and, in some cases, intermediate mass BHs (IMBHs), these gravitational wave
 (GW) events can occur in globular clusters, young stelCorresponding author: Sanaea C. Rose
 srose@astro.ucla.edu
-1
+1 Note that the exact lower and upper limits may be sensitive to
 
-Note that the exact lower and upper limits may be sensitive to
 metallicity of the progenitor (e.g., Woosley 2017; Spera & Mapelli
 2017a; Limongi & Chieffi 2018a; Sakstein et al. 2020; Belczynski
 et al. 2020a; Renzo et al. 2020; Vink et al. 2021).
@@ -256,9 +252,9 @@ of density profiles is many orders of magnitude shorter
 than the BH-BH GW collision timescale (for the relevant equations, see O’Leary et al. 2009; Gondán et al.
 2018, for example). Thus, we expect that star-BH collisions will be the main driver of IMBH growth in the
 GN.
-2
+2 We
 
-We note that the eccentricity has a very minor effect on the
+note that the eccentricity has a very minor effect on the
 collision timescale (Rose et al. 2020).
 
 4
@@ -303,7 +299,6 @@ it captures. The details of the accretion are uncertain,
 however, and it may be much less efficient than our results imply. We discuss accretion in Section 2.5.
 To estimate ∆m, we begin with the Bondi-Hoyle accretion rate, ṁ, given by:
 ṁ =
-3
 
 4πG2 m2BH ρstar
 3/2
@@ -314,7 +309,8 @@ ṁ =
 
 (5)
 
-Closer to the SMBH, ∆t may exceed the collision timescale by
+3 Closer to the SMBH, ∆t may exceed the collision timescale by
+
 a factor of a few for steep density profiles. We include a safeguard in our code which takes the ratio tcoll /∆t and rounds it
 to the nearest integer. We take this integer to be the number of
 collisions and increase the BH mass accordingly.
@@ -455,17 +451,13 @@ yr
 M• + mBH
 2 × 106 M
 
-× f (e• )(1 −
-
-e2• )7/2
+× f (e• )(1 − e2• )7/2 ,
 
 −1 
 
 a•
 −2
-10
-
-,
+10 pc
 
 mBH
 106 M
@@ -473,7 +465,6 @@ mBH
 
 −1
 
-pc
 (9)
 
 where f (e• ) is a function of e• . For all values of e• ,
@@ -513,9 +504,8 @@ Towards the SMBH, efficient collisions can create BHs
 massive enough to merge with the SMBH through GWs.
 Following the method detailed in Section 2.6, when a
 given BH meets the criterion tGW < telapsed , we mark
-4
+4 For comparison, we also incrementally changed the semimajor
 
-For comparison, we also incrementally changed the semimajor
 axis and eccentricity from GW emission following the equations
 in Peters & Mathews (1963b). This method leads to a slight
 increase in the final IMBH masses because it accounts for the
@@ -537,10 +527,9 @@ single-mass system is:
 trelax = 0.34
 
 σ3
-,
-∗ i ln Λrlx
+G2 ρhM∗ i ln Λrlx
 
-G2 ρhM
+,
 
 (10)
 
@@ -757,9 +746,8 @@ subsequent BH growth may occur in bursts, coinciding
 with replenishment of the stars.
 While there are many competing dynamical processes
 that shape the stellar density profile, we stress that α
-5
+5 In fact, the star-star collision timescale is greater than 10 Myr
 
-In fact, the star-star collision timescale is greater than 10 Myr
 for the entire parameter space, save at 0.001 pc for larger values
 of α; the BH-star collision timescale plotted in Fig. 1 is the same
 order of magnitude as the star-star collision timescale.
@@ -867,9 +855,9 @@ doi: 10.1111/j.1365-2966.2006.10885.x
 Baumgardt, H., Makino, J., & Ebisuzaki, T. 2004, ApJ,
 613, 1143, doi: 10.1086/423299
 
-6
+6 The connection between the observed X-ray sources at the Galac-
 
-The connection between the observed X-ray sources at the Galactic Center and tidal capture has been suggested by Generozov
+tic Center and tidal capture has been suggested by Generozov
 et al. (2018), but see Zhu et al. (2018); Stephan et al. (2019) for
 alternative channels.
 

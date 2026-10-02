@@ -6,7 +6,8 @@ Bloomsburg, PA 17815
 
 Abstract
 As is common with the collection of astronomical data, signals are frequently dominated
-by noise. However, when performing FTs of light curves, re-binning data can improve the signalto-noise ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope,
+by noise. However, when performing FTs of light curves, re-binning data can improve the signalto-noise
+ ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope,
 we sequentially re-binned data three times to investigate the SNR improvement of lower frequency
 (< 17 µHz) variability in white dwarf KIC 8626021. We found that the SNR at approximately 5.8
 µHz greatly improved through this process, and we postulate that this frequency is linked to the
@@ -39,7 +40,8 @@ NASA developed the K2 mission, a way to prolong Kepler’s assistance to astrono
 astrophysics.
 Utilizing Kepler’s ability to maintain three-dimensional control, NASA proceeded to use
 the telescope to collect photometry data of certain sections of our galaxy, although the number of
-targets was significantly reduced. In addition, the K2 mission was designed to be communityoriented, with the scientific community having an influence on the fields observed and serving as
+targets was significantly reduced. In addition, the K2 mission was designed to be communityoriented,
+ with the scientific community having an influence on the fields observed and serving as
 the analysts of the vast amounts of data being received (Howell et al., 2014). Although Kepler was
 deactivated in 2018, the data used in this paper came from observations during 2010 and 2012 of
 white dwarf KIC 8626021 and was obtained from the Kepler Asteroseismic Science Operations
@@ -64,8 +66,8 @@ analyzed. All computations were made in Wolfram Mathematica and Microsoft Excel,
 were performed in Mathematica. The re-binning process consisted of summing adjacent light
 curve data points in each quarter, therefore doubling the sampling interval from 0.5 hour to one
 hour, and then repeating this process on the data sample for a total of three times. In addition, a
-significant detection was defined as being 3 above the mean of the relative flux, and 0 on the
-graphs below represents this 3 cutoff. (Koch, D. G., 2010), (Wolfram Research, Inc., 2021). To
+significant detection was defined as being 3𝝈 above the mean of the relative flux, and 0 on the
+graphs below represents this 3𝝈 cutoff. (Koch, D. G., 2010), (Wolfram Research, Inc., 2021). To
 find the SNR, we converted to decibels. Using these SNRs, we were able to easily identify
 improvement in signal strength.
 Results
@@ -87,11 +89,12 @@ between points. Q7 had forty-three interpolated points, and Q13 had sixty-six.
 FIG. 2: The graphs show the initial FTs of Q7, and then the FTs of the three successive re-bins of
 the light curve data. The significant frequencies of 5.886 µHz and 5.889 µHz are circled. The
 disappearance of the frequency in the last FT is most likely a byproduct of the method, and the
-spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the rebinning process.
+spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the rebinning
+ process.
 
 FIG. 3: The graphs show the initial FT of Q13, and then the FTs of the three successive re-bins
 of the light curve data. The significant frequencies of 5.784 µHz and 5.787 µHz are circled. In
-addition, in the third re-bin, the frequencies 11.641 µHz and 16.823 µHz rise above 3 and are
+addition, in the third re-bin, the frequencies 11.641 µHz and 16.823 µHz rise above 3𝝈 and are
 nearly perfect integer multiples of 5.787 µHz. These harmonics are potentially indications of a
 starspot (Santos et al., 2017).
 
@@ -114,7 +117,7 @@ Q7 Re-bin 2 5.889 0.597 1.965 19.2
 TABLE I: The table displays the various frequencies collected from Q7 and the information
 found through calculations to find period and SNR. The frequency of 5.464 µHz is not included,
 and therefore was not used in any calculations determining the average period of rotation. The
-values under corrected flux magnitude are relative to our significant frequency cutoff of 3, thus
+values under corrected flux magnitude are relative to our significant frequency cutoff of 3𝝈, thus
 negative numbers are under the cutoff.
 Q13 Significant
 Data Points
@@ -139,7 +142,7 @@ TABLE II: The table displays the various frequencies collected from Q13 and the 
 found through calculations to find period and SNR. The last two significant frequencies (11.641
 µHz and 16.823 µHz) for Q13 Re-bin 3 represent potential harmonics, which are discussed in
 further detail in the Conclusions section of this paper. The values under corrected flux magnitude
-are relative to our significant frequency cutoff of 3, thus negative numbers are under the cutoff.
+are relative to our significant frequency cutoff of 3𝝈, thus negative numbers are under the cutoff.
 
 First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
 0.933 0.933 0.215 0.216
@@ -170,7 +173,8 @@ First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µ
 16.463
 16.894
 TABLE III: The table displays all frequencies of Q7 that had a corrected flux magnitude (ppm)
-above the cutoff of 3. The minor shifting of significant frequencies between re-bins is a byproduct of the method, and we calculated for such errors when finding our average.
+above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a byproduct
+ of the method, and we calculated for such errors when finding our average.
 
 First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
 3.094 2.018 2.019 1.951
@@ -193,13 +197,14 @@ First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µ
 15.881
 16.823
 TABLE IV: The table displays all frequencies of Q13 that had a corrected flux magnitude (ppm)
-above the cutoff of 3. The minor shifting of significant frequencies between re-bins is a byproduct of the method, and we calculated for such errors when finding our average.
+above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a byproduct
+ of the method, and we calculated for such errors when finding our average.
 Conclusions
 As our research used the long-cadence data from Kepler, much of the high-frequency
 variability due to gravitational wave pulsations is lost. However, this presents an opportunity to
 verify our results with the work of research groups that analyzed short-cadence data.With the
 data analyzed, the lower frequencies between 5-6 µHz emerged. After finding the average of the
-periods and accounting for a 1 margin of error, our research hypothesizes that the rotation
+periods and accounting for a 1𝝈 margin of error, our research hypothesizes that the rotation
 period of KIC 8626021 is 1.99 ± 0.02 days. Other short-cadence research has found the rotation
 period to be 1.8 ± 0.4 days, by analyzing the structures of independent modes (Bischoff-Kim et
 al., 2015). Other calculated periods of rotation have been ≈ 1.7 days (Østensen et al., 2011), and
@@ -213,7 +218,7 @@ processes. The frequency 5.464 µHz rises as another significant frequency; howe
 that this new frequency is simply an artifact of the re-binning process. In Q13, we saw SNR
 improvement ranging from 1.1 dB to 1.3 dB.
 Through the re-binning process, more lines, or significant frequencies, appeared above
-the 3 cutoff, particularly at lower frequencies. These findings suggest that as an alternative to
+the 3𝝈 cutoff, particularly at lower frequencies. These findings suggest that as an alternative to
 short-cadence analysis, the re-binning process of long-cadence data can be used to identify
 significant lower frequencies in white dwarfs. The methods we used are also simple and
 replicable, which allows even those with less experience to quickly analyze the large amounts of
@@ -255,7 +260,8 @@ Characterization and early results. Publications of the Astronomical Society of 
 Johnson, M. (Ed.). (2018, October 30). Mission overview. National Aeronautics and Space
 Administration. Retrieved September 2, 2021, from
 https://www.nasa.gov/mission_pages/kepler/overview/index.html
-Koch, D. G., Borucki, W. J., Basri, G., Batalha, N. M., Brown, T. M., Caldwell, D., Christensendalsgaard, J., Cochran, W. D., Devore, E., Dunham, E. W., Gautier, T. N., Geary, J. C.,
+Koch, D. G., Borucki, W. J., Basri, G., Batalha, N. M., Brown, T. M., Caldwell, D., Christensendalsgaard,
+ J., Cochran, W. D., Devore, E., Dunham, E. W., Gautier, T. N., Geary, J. C.,
 Gilliland, R. L., Gould, A., Jenkins, J., Kondo, Y., Latham, D. W., Lissauer, J. J., Marcy,
 G., . . . Morrison, D. (2010). KEPLER MISSION design, REALIZED PHOTOMETRIC
 performance, AND EARLY SCIENCE. The Astrophysical Journal, 713(2), L79-L86.

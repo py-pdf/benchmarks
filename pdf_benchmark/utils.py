@@ -68,25 +68,33 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
     elif len(extended_align) < num_columns:
         extended_align += [("^", "<") for i in range(num_columns - len(extended_align))]
 
-    heading_align, cell_align = (x for x in zip(*extended_align))
+    heading_align, cell_align = (x for x in zip(*extended_align, strict=True))
 
     field_widths = [
         len(max(column, key=len)) if len(column) > 0 else 0 for column in columns
     ]
     heading_widths = [max(len(head), 2) for head in headings]
-    column_widths = [max(x) for x in zip(field_widths, heading_widths)]
+    column_widths = [max(x) for x in zip(field_widths, heading_widths, strict=True)]
 
     _ = " | ".join(
-        ["{:" + a + str(w) + "}" for a, w in zip(heading_align, column_widths)]
+        [
+            "{:" + a + str(w) + "}"
+            for a, w in zip(heading_align, column_widths, strict=True)
+        ]
     )
     heading_template = "| " + _ + " |"
-    _ = " | ".join(["{:" + a + str(w) + "}" for a, w in zip(cell_align, column_widths)])
+    _ = " | ".join(
+        [
+            "{:" + a + str(w) + "}"
+            for a, w in zip(cell_align, column_widths, strict=True)
+        ]
+    )
     row_template = "| " + _ + " |"
 
     _ = " | ".join(
         [
             left_rule[a] + "-" * (w - 2) + right_rule[a]
-            for a, w in zip(cell_align, column_widths)
+            for a, w in zip(cell_align, column_widths, strict=True)
         ]
     )
     ruling = "| " + _ + " |"
@@ -95,7 +103,7 @@ def table_to_markdown(records, headings=None, fields=None, alignment=None) -> st
 
     ret_val += heading_template.format(*headings).rstrip() + "\n"
     ret_val += ruling.rstrip() + "\n"
-    for row in zip(*columns):
+    for row in zip(*columns, strict=True):
         ret_val += row_template.format(*row).rstrip() + "\n"
     return ret_val
 

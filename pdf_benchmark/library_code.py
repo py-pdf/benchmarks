@@ -3,17 +3,18 @@ import subprocess
 import tempfile
 from io import BytesIO
 
-import fitz as PyMuPDF
 import pdfminer
 import pdfplumber
+import pymupdf as PyMuPDF
 import pypdf
 import pypdfium2 as pdfium
-# from borb.pdf import PDF
-# from borb.toolkit import SimpleTextExtraction
 from pdfminer.high_level import extract_pages
 from requests import ReadTimeout
 
-from .text_extraction_post_processing import postprocess, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE
+from .text_extraction_post_processing import (
+    PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE,
+    postprocess,
+)
 
 
 def pymupdf_get_text(data: bytes) -> str:
@@ -34,7 +35,9 @@ def pypdf_get_text(data: bytes) -> str:
 
 
 def pdfium_new_line_after_hyphens(text):
-    return text.replace(PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE + '\n')
+    return text.replace(
+        PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE, PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE + "\n"
+    )
 
 
 def pdfium_get_text(data: bytes) -> str:
@@ -64,7 +67,7 @@ def pdfium_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
                 if isinstance(obj, pdfium.PdfImage):
                     img = BytesIO()
                     obj.extract(img)
-                    images.append((f"page-{i+1}-image-{index}.jpg", img.getvalue()))
+                    images.append((f"page-{i + 1}-image-{index}.jpg", img.getvalue()))
                     index += 1
     except Exception as exc:
         print(f"pdfium Image extraction failure: {exc}")
@@ -173,19 +176,6 @@ def pdfminer_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
     return images
 
 
-def borb_get_text(data: bytes) -> str:
-    text = ""
-    try:
-        ste = SimpleTextExtraction()
-        PDF.loads(BytesIO(data), [ste])
-        obj = ste.get_text()
-        for page_index in range(len(obj)):
-            text += obj[page_index]
-    except Exception as exc:
-        print(exc)
-    return text
-
-
 def pdfplubmer_get_text(data: bytes) -> str:
     text = ""
     with pdfplumber.open(BytesIO(data)) as pdf:
@@ -201,7 +191,7 @@ def pdftotext_get_text(data: bytes) -> str:
         fp.write(data)
     pdf_to_text_path = "/usr/bin/pdftotext"
     if not os.path.exists(pdf_to_text_path):
-        pdf_to_text_path = 'pdftotext'
+        pdf_to_text_path = "pdftotext"
     args = [pdf_to_text_path, "-enc", "UTF-8", filename, "-"]
     res = subprocess.run(args, capture_output=True)
     output = res.stdout.decode("utf-8")

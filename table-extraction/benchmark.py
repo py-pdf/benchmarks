@@ -86,9 +86,10 @@ def get_pdf_from_url(url: str, name: str) -> bytes:
     cache_path = os.path.join(cache_dir, name)
     if not os.path.exists(cache_path):
         ssl._create_default_https_context = ssl._create_unverified_context
-        with urllib.request.urlopen(url) as response, open(
-            cache_path, "wb"
-        ) as out_file:
+        with (
+            urllib.request.urlopen(url) as response,
+            open(cache_path, "wb") as out_file,
+        ):
             out_file.write(response.read())
     with open(cache_path, "rb") as fp:
         data = fp.read()
@@ -202,8 +203,10 @@ def main():
             nb_alg = sum(len(page_tables) for _, page_tables in tables.items())
             print(f"{alg_name} found : {nb_alg}")
             print(f"Actual tables: {nb_total_tables}")
-            for page_index in truth.keys():
-                for actual, found in zip(truth[page_index], tables[int(page_index)]):
+            for page_index in truth:
+                for actual, found in zip(
+                    truth[page_index], tables[int(page_index)], strict=False
+                ):
                     print(f"Score: {structural_similarity(actual, found)}")
 
 

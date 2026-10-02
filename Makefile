@@ -1,6 +1,6 @@
 maint:
-	pip-compile requirements/main.in
-	pip-compile requirements/dev.in
+	uv lock --upgrade
+	uv run pre-commit autoupdate
 
 run:
-	python benchmark.py
+	uv run python benchmark.py

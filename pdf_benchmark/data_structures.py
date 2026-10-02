@@ -1,12 +1,13 @@
-import os
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import NamedTuple
 
-import fitz as PyMuPDF
+import pymupdf as PyMuPDF
 import requests
 from pydantic import BaseModel, Field
+
+from .pypi import get_release_date
 
 
 @dataclass(frozen=True)
@@ -16,26 +17,24 @@ class Document:
     layout: str = ""
 
     def __post_init__(self):
-        if not os.path.exists(self.path):
+        if not self.path.exists():
             self.download()
 
     def download(self):
         response = requests.get(self.url)
-        with open(self.path, "wb") as f:
-            f.write(response.content)
+        self.path.write_bytes(response.content)
 
     @property
-    def data(self):
-        with open(self.path, "rb") as f:
-            return f.read()
+    def data(self) -> bytes:
+        return self.path.read_bytes()
 
     @property
-    def path(self):
-        return os.path.join(os.path.dirname(__file__), "../pdfs", f"{self.name}.pdf")
+    def path(self) -> Path:
+        return Path(__file__).parent / "../pdfs" / f"{self.name}.pdf"
 
     @property
-    def filesize(self):
-        return os.path.getsize(self.path)
+    def filesize(self) -> int:
+        return self.path.stat().st_size
 
     @property
     def nb_pages(self):
@@ -53,9 +52,8 @@ class Library(NamedTuple):
     dependencies: str = ""
     license: str = ""
     last_release_date: str = ""
-    image_extraction_function: None | (
-        Callable[[bytes], list[tuple[str, bytes]]]
-    ) = None
+    image_extraction_function: Callable[[bytes], list[tuple[str, bytes]]] | None = None
+    pypi_name: str | None = None
 
 
 class Cache(BaseModel):
@@ -68,6 +66,8 @@ class Cache(BaseModel):
     watermarking_result_file_size: dict[str, dict[str, float]] = Field(
         default_factory=dict
     )
+    # Keyed by "{pypi_name}=={version}".
+    pypi_release_dates: dict[str, str] = Field(default_factory=dict)
 
     def has_doc(self, library: Library, document: Document) -> bool:
         lib = library.pathname
@@ -85,6 +85,18 @@ class Cache(BaseModel):
             self.watermarking_result_file_size[lib] = {}
 
         return doc in self.benchmark_times[lib] and doc in self.read_quality[lib]
+
+    def resolve_release_date(self, library: Library) -> str:
+        """Return `library`'s last PyPI release date, fetching and caching it
+        if it isn't already known."""
+        if not library.pypi_name:
+            return library.last_release_date
+        key = f"{library.pypi_name}=={library.version}"
+        if not self.pypi_release_dates.get(key):
+            self.pypi_release_dates[key] = get_release_date(
+                library.pypi_name, library.version
+            )
+        return self.pypi_release_dates[key] or library.last_release_date
 
     def write(self, path: Path):
         with open(path, "w") as f:

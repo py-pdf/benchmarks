@@ -23,7 +23,7 @@ def speed_section(
     text_extraction_times = get_times(cache, docs, benchmark_type)
     names = [
         name
-        for name in text_extraction_times.keys()
+        for name in text_extraction_times
         if len([el for el in text_extraction_times[name] if el is not None]) > 0
     ]
     averages = [np.mean(text_extraction_times[name]) for name in names]
@@ -172,8 +172,8 @@ def write_benchmark_report(
             library_name = names[index]
             lib = libname2details[library_name]
             avg = averages[index]
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg/10**6:1.1f}MB"]
-            row += [f"{score/10**6:1.1f}MB" for score in all_scores[library_name]]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg / 10**6:1.1f}MB"]
+            row += [f"{score / 10**6:1.1f}MB" for score in all_scores[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
@@ -204,7 +204,7 @@ def write_benchmark_report(
             avg = averages[index]
             if avg == 0:
                 continue
-            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg*100:3.0f}%"]
-            row += [f"{score*100:3.0f}%" for score in all_scores[library_name]]
+            row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg * 100:3.0f}%"]
+            row += [f"{score * 100:3.0f}%" for score in all_scores[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))

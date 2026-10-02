@@ -1,2 +1,48 @@
-[tool.isort]
-profile = "black"
+[project]
+name = "pdf-benchmarks"
+version = "0.1.0"
+description = "Benchmarks comparing text extraction, watermarking, and image extraction across PDF libraries."
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+dependencies = [
+    "lxml",
+    "numpy",
+    "pdfminer.six",
+    "pdfplumber",
+    "pdfrw",
+    "pdftotext",
+    "pydantic",
+    "pymupdf",
+    "pypdf",
+    "pypdfium2",
+    "python-levenshtein",
+    "requests",
+    "rich",
+    "tika",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pdf_benchmark"]
