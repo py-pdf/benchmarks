@@ -53,23 +53,23 @@ A formal definition of the field of Machine Learning is given
 by Tom Mitchel [Mit97]:
 
 A computer program is said to learn from experience
- E with respect to some class of tasks T and
+E with respect to some class of tasks T and
 performance measure P, if its performance at tasks
 in T, as measured by P, improves with experience E.
 
 [IMAGE]
 
 (a) Example of an artificial neuron unit.
-xi are the input signals and wi are
+x_i are the input signals and w_i are
 weights which have to get learned.
 Each input signal gets multiplied
 with its weight, everything gets
 summed up and the activation function
- ϕ is applied.
+ϕ is applied.
 
 (b) A visualization of a simple feedforward
- neural network. The 5 input
- nodes are red, the 2 bias nodes
+neural network. The 5 input
+nodes are red, the 2 bias nodes
 are gray, the 3 hidden units are
 green and the single output node
 is blue.
@@ -87,7 +87,7 @@ with more data.
 
 The field of machine learning is related to statistics. Some
 algorithms directly try to find models which are based on well-known
- distribution assumptions of the developer, others are
+distribution assumptions of the developer, others are
 more general.
 
 A common misunderstanding of people who are not related
@@ -107,18 +107,15 @@ basic building blocks is a time-intensive and difficult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artificial
 neural networks. Those networks are based on mathematical
-functions called artificial neurons which take n ∈ N numbers
- x1, . . . , xn ∈ R as input, multiply them with weights
-w1, . . . , wn ∈ R, add them and apply a so called activation
+functions called artificial neurons which take n ∈ ℕ numbers
+x_1, . . . , x_n ∈ ℝ as input, multiply them with weights
+w_1, . . . , w_n ∈ ℝ, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
-an activation function is the sigmoid function ϕ(x) = 1
-
-1+e−x.
-
+an activation function is the sigmoid function ϕ(x) = 1/(1 + e^{−x}).
 Those functions act as building blocks for more complex
 systems as they can be chained and grouped in layers as
 visualized in Figure 1(b). The interesting question is how
-the parameters wi are learned. This is usually done by an
+the parameters w_i are learned. This is usually done by an
 optimization technique called gradient descent. The gradient
 descent algorithm takes a function which has to be derivable,
 starts at any point of the surface of this error function and
@@ -137,7 +134,7 @@ III. IMAGE DATA
 Applying a simple neural network on image data directly can
 work, but the number of parameters gets extraordinary large.
 One would take one neuron per pixel and channel. This means
-for 500 px×500 px RGB images one would get 750,000 input
+for 500 px × 500 px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
 the full connection between the input layer and the first
@@ -411,9 +408,8 @@ Recurrent neural networks — LSTM networks, to be exact
 (GRU) to build a network which can be trained to generate
 music. Instead of taking notes directly or MIDI files, Nayebi
 and Vitelli took raw audio waveforms as input. Those audio
-waveforms are feature vectors given for time steps 0, 1, . . . , t−
-1, t. The network is given those feature vectors X1, . . . , Xt
-and has to predict the following feature vector Xt+1. This
+waveforms are feature vectors given for time steps 0, 1, . . . , t − 1, t. The network is given those feature vectors X_1, . . . , X_t
+and has to predict the following feature vector X_{t+1}. This
 means it continues the music. As the input is continuous, the
 problem was modeled as a regression task. Discrete Fourier
 Transformation (DFT) was used on chunks of length N of the
@@ -463,13 +459,13 @@ REFERENCES
 [Cop05] ——, Computer models of musical creativity. MIT Press
 Cambridge, 2005.
 [Cop12] ——, “Emily howell fugue,” YouTube, Oct. 2012. [Online].
-Available: https://www.youtube.com/watch?v=jLR- c uCwI
+Available: https://www.youtube.com/watch?v=jLR-_c_uCwI
 [Cop13] ——, “The well-programmed clavier: Style in computer music
 composition,” XRDS: Crossroads, The ACM Magazine for
 Students, vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2460444
 [Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [Online].
- Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
+Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
 78691781-c9b7-30a0-9a0a-3ff76e8bfe58
 [Gad06] A. Gadsby, Ed., Dictionary of Contemporary English. Pearson
 Education Limited, 2006.
@@ -480,7 +476,7 @@ Available: http://arxiv.org/abs/1508.06576
 Photos, Jun. 2015. [Online]. Available: https://goo.gl/Bydofw
 [HS97] S. Hochreiter and J. Schmidhuber, “Long short-term memory,”
 Neural computation, vol. 9, no. 8, pp. 1735–1780, 1997.
-[Online]. Available: http://ieeexplore.ieee.org/xpl/freeabs all.jsp?
+[Online]. Available: http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?
 arnumber=6795963
 [hut] “50’000 euro prize for compressing human knowledge.” [Online].
 Available: http://prize.hutter1.net/
@@ -491,8 +487,8 @@ for image recognition,” arXiv preprint arXiv:1512.03385, 2015.
 composition,” GitHub, Aug. 2015. [Online]. Available: https:
 //github.com/hexahedria/biaxial-rnn-music-composition
 [Joh15b] ——, “Composing music with recurrent neural
- networks,” Personal Blog, Aug. 2015. [Online].
- Available: http://www.hexahedria.com/2015/08/03/
+networks,” Personal Blog, Aug. 2015. [Online].
+Available: http://www.hexahedria.com/2015/08/03/
 composing-music-with-recurrent-neural-networks/
 [Joh16] J. Johnson, “neural-style,” GitHub, Jan. 2016. [Online]. Available:
 https://github.com/jcjohnson/neural-style
@@ -512,9 +508,9 @@ deeper into neural networks,” googleresearch.blogspot.co.uk,
 Jun. 2015. [Online]. Available: http://googleresearch.blogspot.de/
 2015/06/inceptionism-going-deeper-into-neural.html
 [Nie15] M. A. Nielsen, Neural Networks and Deep Learning.
- Determination Press, 2015. [Online]. Available:
- http://neuralnetworksanddeeplearning.com/chap6.html#
-introducing convolutional networks
+Determination Press, 2015. [Online]. Available:
+http://neuralnetworksanddeeplearning.com/chap6.html#
+introducing_convolutional_networks
 [NV15] A. Nayebi and M. Vitelli, “GRUV: Algorithmic music generation
 using recurrent neural networks,” 2015. [Online]. Available:
 http://cs224d.stanford.edu/reports/NayebiAran.pdf
@@ -536,7 +532,7 @@ https://youtu.be/0VTI1BBLydE
 “Hoggles: Visualizing object detection features,” in Computer
 Vision (ICCV), 2013 IEEE International Conference on. IEEE,
 2013, pp. 1–8. [Online]. Available: http://ieeexplore.ieee.org/
-xpls/abs all.jsp?arnumber=6751109
+xpls/abs_all.jsp?arnumber=6751109
 [VL15] O. Vinyals and Q. Le, “A neural conversational model,”
 arXiv preprint arXiv:1506.05869, Jul. 2015. [Online]. Available:
 http://arxiv.org/abs/1506.05869v2
@@ -545,9 +541,8 @@ Available: https://github.com/MattVitelli/GRUV
 [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
 Judgement to Calculation. W.H.Freeman & Co Ltd, 1976.
 [ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding convolutional
- networks,” in Computer Vision–ECCV 2014. Springer,
+networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.
-
 
 APPENDIX A
 AUTOMATICALLY GENERATED TEXTS
@@ -640,22 +635,22 @@ static int indicate_policy(void)
 D. Linux Code, 2
 
 /*
-* Copyright (c) 2006-2010, Intel Mobile Communications. All rights reserved.
-*
-* This program is free software; you can redistribute it and/or modify it
-* under the terms of the GNU General Public License version 2 as published by
-* the Free Software Foundation.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-*
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program; if not, write to the Free Software Foundation,
-* Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-*/
+ *  Copyright (c) 2006-2010, Intel Mobile Communications.  All rights reserved.
+ *
+ *   This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 as published by
+ * the Free Software Foundation.
+ *
+ *        This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *
+ *  GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *    along with this program; if not, write to the Free Software Foundation,
+ *  Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
 
 #include <linux/kexec.h>
 #include <linux/errno.h>
@@ -682,7 +677,7 @@ D. Linux Code, 2
 if (__type & DO_READ)
 
 static void stat_PC_SEC __read_mostly offsetof(struct seq_argsqueue, \
-pC>[1]);
+          pC>[1]);
 
 static void
 os_prefix(unsigned long sys)

@@ -51,10 +51,10 @@ in „Analysis I“ vermittelt.
 ), Mengenschreibweisen (
 
 ,
-∩
+∪
 
 ,
-∪
+∩
 
 P
 
@@ -273,9 +273,9 @@ sind als Komplement oﬀener Mengen abgeschlossen.
 
 X =
 
-\
-
 ∅
+
+\
 
 T und
 (cid:4)
@@ -1385,9 +1385,9 @@ x = y
 
 Ux
 
-∩
-
 ∈
+
+∩
 
 Uy =
 ∅
@@ -2125,9 +2125,9 @@ R>0
 
 \ {
 
-}
-
 0
+
+}
 
 ist nicht zusammenhängend, denn R
 
@@ -2183,9 +2183,9 @@ R
 ∩
 X, wobei X ein topologischer Raum ist.
 
-∪
-
 ∩
+
+∪
 
 6) R mit Zariski-Topologie ist zusammenhängend.
 
@@ -7535,9 +7535,9 @@ R)
 ×
 (x, y, t)
 
-→
-
 (cid:55)→
+
+→
 
 →
 
@@ -8099,9 +8099,9 @@ e
 
 →
 
-(cid:55)→
-
 →
+
+(cid:55)→
 
 ist nicht injektiv.
 π1(S1, 1) ∼=
@@ -9079,9 +9079,9 @@ yi
 
 ∩
 
-}
-
 {
+
+}
 
 .
 ∅
@@ -10234,9 +10234,9 @@ f (y0) = g(y0), so ist (g−1
 
 −
 
-}
-
 1
+
+}
 
 schon Fix(f ) = Y , also f = idY .
 
@@ -10797,9 +10797,9 @@ b) Ist X ein topologischer Raum, so entsprechen dabei die Gruppenoperationen dur
 
 →
 
-{
-
 }
+
+{
 
 |
 
@@ -11440,6 +11440,8 @@ Diese Teilmengen Hi heißen Halbebenen bzgl. g.
 
 für alle A
 
+gilt: AB
+
 Hi, B
 
 ∈ {
@@ -11452,8 +11454,6 @@ Hi, B
 
 H2 in zwei nichtleere Teilmengen H1, H2, sodass
 =
-
-gilt: AB
 
 = j.
 
@@ -13660,17 +13660,17 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 1
 −
 
-0
-
-3
-
-2
-
 1
+
+4
 
 5
 
-4
+3
+
+0
+
+2
 
 x
 
@@ -17594,9 +17594,9 @@ zi
 
 }
 
-}
-
 {
+
+}
 
 ⊆ {
 ∈
@@ -17773,9 +17773,9 @@ phismus.
 
 H, x
 
-(cid:55)→
-
 →
+
+(cid:55)→
 
 3) Sei X ein topologischer Raum. Dann ist idX ein Homöomorphismus. Da keine
 Verknüpfung auf X deﬁniert wurde, ist X keine Gruppe und daher auch kein Grup-
@@ -18038,9 +18038,9 @@ R
 
 \ {
 
-}
-
 0
+
+}
 
 0
 

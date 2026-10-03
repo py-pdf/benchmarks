@@ -3,12 +3,9 @@ Exploring new techniques for analyzing variability in white dwarf KIC 8626021
 Thomas Huckans, Peter Stine
 
 Department of Physics and Engineering, Bloomsburg University of Pennsylvania, 400 E 2nd St.,
-
 Bloomsburg, PA 17815
 
-
 Abstract
-
 
 As is common with the collection of astronomical data, signals are frequently dominated
 by noise. However, when performing FTs of light curves, re-binning data can improve the signal-to-noise
@@ -21,7 +18,6 @@ rotation of KIC 8626021.
 Introduction
 
 First detected in 1862, white dwarfs long posed a mystery for early observers. When the
-
 companion to Sirius was detected, apparent contradictions concerning the mass, luminosities, and
 densities baffled astronomers. Lacking full understanding of atomic structures and the energy
 states of electrons, these early researchers believed white dwarfs too dense to exist. However, new
@@ -44,7 +40,7 @@ was initially developed with the intention of surveying our region of the Milky 
 order to find potentially habitable planets. The purpose of the mission was to identify key traits for
 such planets by determining the number of planets in habitable zones, the sizes and shapes of orbits,
 and the characteristics of the stars being orbited. Over the lifespan of its first mission, Kepler
-observed approximately 1.5 x 105 stars (Johnson, 2018), affording scientists excellent
+observed approximately 1.5 x 10^5 stars (Johnson, 2018), affording scientists excellent
 opportunities to research stellar variability. Due to the loss of a second reaction wheel in 2013,
 NASA developed the K2 mission, a way to prolong Kepler’s assistance to astronomy and
 astrophysics.
@@ -62,7 +58,7 @@ The DBV white dwarf KIC 8626021 has an atmosphere rich in helium. Building upon
 previous studies, this research investigated novel techniques of analyzing variability in white
 dwarfs. The dwarf KIC 8626021 was chosen due to the large amount of preexisting research on
 the star, allowing for the validation of results using our methods. KIC 8626021 has an effective
-temperature of 29,700 K, log g = 7.890, and mass of 0.56 M☉ (Córsico, 2020). Other research
+temperature of 29,700 K, log g = 7.890, and mass of 0.56 M_☉ (Córsico, 2020). Other research
 has found that this white dwarf is the DBV with the highest known temperature, and its helium
 layer is the thinnest (Bischoff-Kim et al., 2015). Despite the long-cadence light curve being too
 noisy to draw many conclusions, other FTs of short-cadence data have been performed to find
@@ -71,14 +67,9 @@ frequencies of 4309.89 µHz, 5073.26 µHz, 3681.87 µHz, 3294.22 µHz and 2658.8
 (Østensen et al., 2011). These findings confirm the classification of the white dwarf as a V777
 Herculis, although our research focuses on low frequencies using long-cadence data.
 
-
-
-
-
 Methods
 
 All data were downloaded from the KASOC database, and the long-cadence (data
-
 sampled approximately every thirty minutes) measurements of Corrected Flux (ppm) were
 analyzed. All computations were made in Wolfram Mathematica and Microsoft Excel, and FTs
 were performed in Mathematica. The re-binning process consisted of summing adjacent light
@@ -89,20 +80,17 @@ graphs below represents this 3𝝈 cutoff. (Koch, D. G., 2010), (Wolfram Researc
 find the SNR, we converted to decibels. Using these SNRs, we were able to easily identify
 improvement in signal strength.
 
-
-
 Results
-
 
 Figure 1 presents the lightcurves constructed for quarters seven (Q7) and thirteen (Q13),
 with corrected flux magnitude (ppm) plotted versus time (Julian days). Figure 2 presents the FTs
 of the first iteration and three successive re-bins for Q7, while Figure 3 presents the FTs of the
 same for Q13.
- Tables 1 and 2 both show the hypothesized frequency corresponding to the rotation of
+
+Tables 1 and 2 both show the hypothesized frequency corresponding to the rotation of
 KIC 8626021 that is found in the FTs of the first iteration and subsequent re-bins for Q7 and
 Q13. Tables 3 and 4 show all data values < 17 µHz found in the first iterations and re-bins of Q7
 and Q13.
-
 
 FIG. 1: Pictured top is the light curve constructed for Q7, below is the light curve for Q13. Q7
 lasted from September 24 – December 13, 2010, and Q13 was from March 29 – June 23, 2012.
@@ -110,24 +98,11 @@ Both graphs were constructed by plotting corrected flux magnitude (flux correcte
 instrumental artifacts) versus time in Excel, and gaps in the data were filled in by interpolating
 between points. Q7 had forty-three interpolated points, and Q13 had sixty-six.
 
-
-
-
-
 FIG. 2: The graphs show the initial FTs of Q7, and then the FTs of the three successive re-bins of
 the light curve data. The significant frequencies of 5.886 µHz and 5.889 µHz are circled. The
 disappearance of the frequency in the last FT is most likely a byproduct of the method, and the
 spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the re-binning
 process.
-
-
-
-
-
-
-
-
-
 
 FIG. 3: The graphs show the initial FT of Q13, and then the FTs of the three successive re-bins
 of the light curve data. The significant frequencies of 5.784 µHz and 5.787 µHz are circled. In
@@ -135,30 +110,10 @@ addition, in the third re-bin, the frequencies 11.641 µHz and 16.823 µHz rise 
 nearly perfect integer multiples of 5.787 µHz. These harmonics are potentially indications of a
 starspot (Santos et al., 2017).
 
-
-Q7 Significant
-Data Points
-
-Light
-Variability
-Frequency
-(µHz)
-
-Corrected Flux
-Magnitude
-(ppm)
-
-Period (days) Signal-to-Noise
-(dB)
-
-Q7 First
-Iteration
-
-5.886 -1.198 1.966  9.9
-
-Q7 Re-bin 1 5.886  -1.477 1.966  12.8
-
-Q7 Re-bin 2 5.889 0.597 1.965  19.2
+Q7 Significant Data Points | Light Variability Frequency (µHz) | Corrected Flux Magnitude (ppm) | Period (days) | Signal-to-Noise (dB)
+Q7 First Iteration         | 5.886                             | -1.198                         | 1.966         | 9.9
+Q7 Re-bin 1                | 5.886                             | -1.477                         | 1.966         | 12.8
+Q7 Re-bin 2                | 5.889                             | 0.597                          | 1.965         | 19.2
 
 TABLE I: The table displays the various frequencies collected from Q7 and the information
 found through calculations to find period and SNR. The frequency of 5.464 µHz is not included,
@@ -166,35 +121,13 @@ and therefore was not used in any calculations determining the average period of
 values under corrected flux magnitude are relative to our significant frequency cutoff of 3𝝈, thus
 negative numbers are under the cutoff.
 
-
-
-Q13 Significant
-Data Points
-
-Light
-Variability
-Frequency
-(µHz)
-
-Corrected Flux
-Magnitude
-(ppm)
-
-Period (days) Signal-to-Noise
-(dB)
-
-Q13 First
-Iteration
-
-5.784 1.555 2.001 15.6
-
-Q13 Re-bin 1 5.784 2.873 2.001 17.7
-
-Q13 Re-bin 2 5.787 4.938 2.000 22.6
-
-Q13 Re-bin 3 5.787 6.909 2.000 26.3
-Q13 Re-bin 3 11.641 7.073 0.994 26.4
-Q13 Re-bin 3 16.823 2.299 0.688 24.1
+Q13 Significant Data Points | Light Variability Frequency (µHz) | Corrected Flux Magnitude (ppm) | Period (days) | Signal-to-Noise (dB)
+Q13 First Iteration         | 5.784                             | 1.555                          | 2.001         | 15.6
+Q13 Re-bin 1                | 5.784                             | 2.873                          | 2.001         | 17.7
+Q13 Re-bin 2                | 5.787                             | 4.938                          | 2.000         | 22.6
+Q13 Re-bin 3                | 5.787                             | 6.909                          | 2.000         | 26.3
+Q13 Re-bin 3                | 11.641                            | 7.073                          | 0.994         | 26.4
+Q13 Re-bin 3                | 16.823                            | 2.299                          | 0.688         | 24.1
 
 TABLE II: The table displays the various frequencies collected from Q13 and the information
 found through calculations to find period and SNR. The last two significant frequencies (11.641
@@ -202,75 +135,65 @@ found through calculations to find period and SNR. The last two significant freq
 further detail in the Conclusions section of this paper. The values under corrected flux magnitude
 are relative to our significant frequency cutoff of 3𝝈, thus negative numbers are under the cutoff.
 
-
-
-
-First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
-
-0.933 0.933 0.215 0.216
-1.148 1.148 0.575 0.575
-1.364 1.364 0.934 0.935
-1.507 1.507 1.005 1.006
-12.561 12.561 1.149 1.150
-16.581 16.581 1.221 1.222
-  1.364 1.366
-  1.508 1.509
-  1.580 1.582
-  1.724 1.725
-  1.795 1.797
-  5.889 2.085
-  6.822 5.392
-  9.192 5.464
-  9.479 7.476
-  11.203 9.489
-  12.568 11.215
-  14.291 12.581
-  16.230 13.084
-  16.589 13.443
-   13.659
-   14.018
-   14.809
-   15.097
-   16.031
-   16.463
-   16.894
+First Iteration (µHz) | First Re-bin (µHz) | Second Re-bin (µHz) | Third Re-bin (µHz)
+0.933                 | 0.933              | 0.215               | 0.216
+1.148                 | 1.148              | 0.575               | 0.575
+1.364                 | 1.364              | 0.934               | 0.935
+1.507                 | 1.507              | 1.005               | 1.006
+12.561                | 12.561             | 1.149               | 1.150
+16.581                | 16.581             | 1.221               | 1.222
+                      |                    | 1.364               | 1.366
+                      |                    | 1.508               | 1.509
+                      |                    | 1.580               | 1.582
+                      |                    | 1.724               | 1.725
+                      |                    | 1.795               | 1.797
+                      |                    | 5.889               | 2.085
+                      |                    | 6.822               | 5.392
+                      |                    | 9.192               | 5.464
+                      |                    | 9.479               | 7.476
+                      |                    | 11.203              | 9.489
+                      |                    | 12.568              | 11.215
+                      |                    | 14.291              | 12.581
+                      |                    | 16.230              | 13.084
+                      |                    | 16.589              | 13.443
+                      |                    |                     | 13.659
+                      |                    |                     | 14.018
+                      |                    |                     | 14.809
+                      |                    |                     | 15.097
+                      |                    |                     | 16.031
+                      |                    |                     | 16.463
+                      |                    |                     | 16.894
 
 TABLE III: The table displays all frequencies of Q7 that had a corrected flux magnitude (ppm)
 above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-product
 of the method, and we calculated for such errors when finding our average.
 
-
-
-First Iteration (µHz) First Re-bin (µHz) Second Re-bin (µHz) Third Re-bin (µHz)
-
-3.094 2.018 2.019 1.951
-5.784 3.094 3.095 2.019
-9.080 5.784 5.787 2.442
-13.519 7.667 7.671 2.759
-15.671 9.080 9.084 3.095
-16.209 11.165 11.641 3.634
-16.411 13.519 13.526 4.374
- 15.469 15.477 4.778
- 15.671 15.679 4.912
- 16.209 15.881 5.047
- 16.411 16.419 5.787
-   8.479
-   9.084
-   10.565
-   11.641
-   13.526
-   15.544
-   15.881
-   16.823
+First Iteration (µHz) | First Re-bin (µHz) | Second Re-bin (µHz) | Third Re-bin (µHz)
+3.094                 | 2.018              | 2.019               | 1.951
+5.784                 | 3.094              | 3.095               | 2.019
+9.080                 | 5.784              | 5.787               | 2.442
+13.519                | 7.667              | 7.671               | 2.759
+15.671                | 9.080              | 9.084               | 3.095
+16.209                | 11.165             | 11.641              | 3.634
+16.411                | 13.519             | 13.526              | 4.374
+                      | 15.469             | 15.477              | 4.778
+                      | 15.671             | 15.679              | 4.912
+                      | 16.209             | 15.881              | 5.047
+                      | 16.411             | 16.419              | 5.787
+                      |                    |                     | 8.479
+                      |                    |                     | 9.084
+                      |                    |                     | 10.565
+                      |                    |                     | 11.641
+                      |                    |                     | 13.526
+                      |                    |                     | 15.544
+                      |                    |                     | 15.881
+                      |                    |                     | 16.823
 
 TABLE IV: The table displays all frequencies of Q13 that had a corrected flux magnitude (ppm)
 above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a by-product
 of the method, and we calculated for such errors when finding our average.
 
-
-
 Conclusions
-
 
 As our research used the long-cadence data from Kepler, much of the high-frequency
 variability due to gravitational wave pulsations is lost. However, this presents an opportunity to
@@ -305,23 +228,17 @@ the harmonic frequencies can be used to calculate the spot’s rotation rate, si
 contrast (Santos et al., 2017). Using the process of re-binning, a starspot signal, previously
 dominated by noise, may have been discovered.
 
-
 Acknowledgments
 
 We wish to thank Bloomsburg University of Pennsylvania for its continued support of our
-
 research.
-This paper includes data collected by the Kepler mission and obtained from the MAST
 
+This paper includes data collected by the Kepler mission and obtained from the MAST
 data archive at the Space Telescope Science Institute (STScI). Funding for the Kepler mission is
 provided by the NASA Science Mission Directorate. STScI is operated by the Association of
 Universities for Research in Astronomy, Inc., under NASA contract NAS 5–26555.
 
-
-
-
 References
-
 
 Basri, G., Walkowicz, L. M., Batalha, N., Gilliland, R. L., Jenkins, J., Borucki, W. J., Koch, D.,
 Caldwell, D., Dupree, A. K., Latham, D. W., Meibom, S., Howell, S., & Brown, T. (2010).

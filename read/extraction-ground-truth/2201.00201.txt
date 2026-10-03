@@ -4,7 +4,7 @@ January 19, 2022
 Letter to the Editor
 
 The period-age relation of long-period variables
-M. Trabucchi1,?, N. Mowlavi1
+M. Trabucchi1,⋆, N. Mowlavi1
 
 Department of Astronomy, University of Geneva, Ch. Pegasi 51, 1290 Versoix, Switzerland
 
@@ -87,7 +87,7 @@ Whitelock et al. 2009; Menzies et al. 2010, 2011; Sakamoto et al.
 Menzies et al. 2015).
 
 The Hipparcos mission provided the means to refine the results
- on the period-kinematics connection. This was done by
+on the period-kinematics connection. This was done by
 Feast & Whitelock (2000b), who found evidence supporting the
 existence of a bar-like structure in the Bulge from the orbits of
 local LPVs. A similar study dedicated to C-rich LPVs was performed
@@ -102,7 +102,7 @@ the Gaia mission (Grady et al. 2019, 2020).
 It seems relevant that just a few years after the study of Feast
 (1963), Kippenhahn & Smith (1969) predicted the PA relation
 of classical Cepheids from stellar evolution and pulsation models.
-The theoretical modeling of Cepheids and of their periodluminosity
+The theoretical modeling of Cepheids and of their period-luminosity
 (PL) and PA relations is now an active field of research
 (e.g., Bono et al. 2005; Anderson et al. 2016; De Somma
 et al. 2020). In contrast, when it comes to theoretical assessments
@@ -136,10 +136,10 @@ We employed PARSEC-COLIBRI isochrones (Marigo et al.
 (TP-AGB) phase, and from PARSEC (Bressan et al. 2012, version
 1.2S) for the preceding evolution. The adopted set of
 isochrones covers the range 0.001 to 0.016 in initial metallicity
-(Zi), with a 0.001 step, while it spans the age interval
+(Z_i), with a 0.001 step, while it spans the age interval
 8.00 ≤ log(τ/yr) ≤ 10.45 with a step of 0.05. Since the AGB
 phase is short-lived, it only spans a small range of initial masses
-for each given isochrone, of order of 10−2 M⊙ at most.
+for each given isochrone, of order of 10^{−2} M_⊙ at most.
 
 The adopted isochrones include linear pulsation periods from
 Trabucchi et al. (2019) for overtone modes and nonlinear periods
@@ -147,16 +147,16 @@ computed with the period-mass-radius relation from Trabucchi
 et al. (2021b) for the FM1. Pulsation properties were computed
 along both the early-AGB and the TP-AGB. We did not extend
 our analysis to red supergiant stars as the pulsation prescription
-we employed are strictly valid only below 7 M⊙.
+we employed are strictly valid only below 7 M_⊙.
 
 We recall that, with the adopted nonlinear relation, the period
 increases with radius (R) as a broken power law, whose exponent
-decreases as soon as the “bending radius” Rb is exceeded, it and
-becomes zero when the “saturation radius” Rs > Rb is reached
+decreases as soon as the “bending radius” R_b is exceeded, it and
+becomes zero when the “saturation radius” R_s > R_b is reached
 (i.e., the period becomes independent of radius). The exact values
-of Rb and Rs, as well as of the exponents, depend on the
+of R_b and R_s, as well as of the exponents, depend on the
 current mass (M). We assume that the FM is dominant if the
-stellar radius is larger than the critical value Rdom,0, which we
+stellar radius is larger than the critical value R_{dom,0}, which we
 computed from the current stellar mass using Eq. 4 of Trabucchi
 et al. (2021b).
 
@@ -173,7 +173,7 @@ a potential LPV member.
 
 We expanded this list with data for LPVs in a few populous
 clusters, namely the Galactic clusters NGC 362, NGC 2808, 47
-Tuc (NGC 104), andω Cen (NGC 5139); the LMC clusters NGC
+Tuc (NGC 104), and ω Cen (NGC 5139); the LMC clusters NGC
 1978 and NGC 1846; and the cluster NGC 419 in the Small Magellanic
 Cloud (SMC). The source lists were taken from Lebzelter
 & Wood (2005, 2007, 2011, 2016) and Kamath et al. (2010),
@@ -185,10 +185,10 @@ which are unlikely cluster members (cf. Lebzelter & Wood 2007,
 The aforementioned studies also provide a lot of information,
 possibly including JHK photometry, one or more periods,
 and a spectral type. In order to expand on the available data,
-we crossmatched the selected sample with the Two Micron AllSky
+we crossmatched the selected sample with the Two Micron All-Sky
 Survey (2MASS, Skrutskie et al. 2006), the all-sky data
 release of the Wide-field Infrared Survey Explorer (AllWISE,
-Cutri et al. 2013), the catalog of variable stars from the AllSky
+Cutri et al. 2013), the catalog of variable stars from the All-Sky
 Automated Survey for SuperNovae (ASAS-SN Jayasinghe
 et al. 2020), the catalogs of LPVs in the Magellanic Clouds from
 the third phase of the Optical Gravitational Lensing Experiment
@@ -202,16 +202,16 @@ Kharchenko et al. (2016) and Baumgardt et al. (2013) for clusters
 in the Galaxy and LMC, respectively, thereby ensuring that ages
 would be homogeneously derived for clusters in both galaxies.
 Age uncertainties from Baumgardt et al. (2013), provided for
-each cluster, are generally around σlog(τ) ' 0.05. Kharchenko
+each cluster, are generally around σ_{log(τ)} ≃ 0.05. Kharchenko
 et al. (2016) do not provide age uncertainties, but a reasonable
-upper limit for their method should be σlog(τ) = 0.2 based on
+upper limit for their method should be σ_{log(τ)} = 0.2 based on
 the analysis of Kharchenko et al. (2005) (the same value was
 adopted by Grady et al. 2019, in their Fig. 7).
 
 As discussed by Kamath et al. (2010), the age of the SMC
 cluster NGC 419 is believed to be around 1.4-1.6 Gyr. This is
 consistent with the value τ = 1.45 ± 0.05 Gyr from Goudfrooij
-et al. (2014), while it is as young as τ ' 0.89 ± 0.015 Gyr according
+et al. (2014), while it is as young as τ ≃ 0.89 ± 0.015 Gyr according
 to Perren et al. (2017). Since an accurate estimate is not
 necessary for our exploratory analysis, we took a rough average
 and assumed log(τ/yr) = 9.1 ± 0.1. NGC 419 and NGC 1846
@@ -223,12 +223,12 @@ with the age uncertainties we adopted.
 
 Distances of Galactic clusters were also taken from
 Kharchenko et al. (2016), while for the Magellanic Clouds and
-their clusters we adopted the distance moduli µLMC = 18.49 ±
-0.09 mag and µSMC = 18.96 ± 0.02 mag from de Grijs et al.
+their clusters we adopted the distance moduli µ_{LMC} = 18.49 ±
+0.09 mag and µ_{SMC} = 18.96 ± 0.02 mag from de Grijs et al.
 (2017). We searched for data on interstellar extinction from several
 literature works (e.g., Nayak et al. 2016; Kharchenko et al.
 2016; Perren et al. 2017), all of which suggest that extinction
-in the Ks filter is smaller than ∼ 0.1 mag for most of the clusters
+in the K_s filter is smaller than ∼ 0.1 mag for most of the clusters
 we considered, and at most as large as ∼ 0.3 mag, which is
 negligible for our purposes.
 
@@ -237,7 +237,7 @@ this work, and we relied on the checks performed by authors
 whose source lists we adopted. It should be kept in mind that
 some sources may not be real cluster members.
 
-For sources without a spectral type, we used the Gaia2MASS
+For sources without a spectral type, we used the Gaia-2MASS
 diagram (Lebzelter et al. 2018, 2019) to determine
 whether they are O- or C-rich. We used the near-infrared period-luminosity
 diagram to identify the most likely pulsation mode
@@ -259,9 +259,9 @@ likely negligible compared with those associated with age.
 3. Results
 
 Panel (a) of Fig. 1 shows a comparison between model predictions
-and observations in the PFM–log(τ/yr) plane. The former
+and observations in the P_{FM}–log(τ/yr) plane. The former
 are displayed by a density map showing the expected number
-NFM of LPVs pulsating in the FM in each period-age bin, normalized
+N_{FM} of LPVs pulsating in the FM in each period-age bin, normalized
 to maximum. Model predictions are in good agreement
 with data derived from observations (i.e., individual LPVs in
 clusters, represented by symbols), and they show that the period
@@ -269,10 +269,10 @@ of LPVs pulsating in the FM decreases with increasing age.
 Crosses mark the average properties of the three groups of C-rich
 LPVs from Feast et al. (2006, their table 4), which fit the
 general pattern with the exception of their group 3, estimated to
-be older than what our models predict at P ' 650.
+be older than what our models predict at P ≃ 650.
 
 We also show a linear best-fit to the models distribution
-(weighted by NFM), which shows a fairly good agreement with
+(weighted by N_{FM}), which shows a fairly good agreement with
 the best-fit to observations by Grady et al. (2019, also shown).
 However, the best-fit line does not fully capture the properties
 of the predictions, nor of the observed trend. Indeed, models are
@@ -288,7 +288,7 @@ Nonetheless, it is relevant that some clusters host multiple
 LPVs, which are thus almost coeval, and they do span a wide
 period range. Some of these clusters host multiple stellar populations
 that are believed to have formed over a time comparable
-with the age uncertainties we adopted. This means that longerperiod
+with the age uncertainties we adopted. This means that longer-period
 (more massive) LPVs in these clusters probably lean toward
 the lower age limit assumed for their host cluster, and the
 opposite is true at shorter periods. This tends to strengthen the
@@ -310,7 +310,7 @@ predictions and observations. We note that in both cases, the distribution
 is skewed toward short periods, which seems to be true
 at all ages for O-rich stars. This can be seen in panel (a) of Fig. 2,
 which is a version of the PA plane limited to an O-rich composition2.
-Indeed, although at τ . 5 Gyr the observed sample is
+Indeed, although at τ ≲ 5 Gyr the observed sample is
 very scarce, it appears to be consistent with models predicting a
 more densely populated region in the shorter-period half of the
 PA distribution.
@@ -328,7 +328,7 @@ higher masses, so that younger C-rich models are more concentrated
 at longer periods, leading to a steeper PA relation compared
 with the O-rich case. These predictions agree with observations
 on the old side of the period distribution, while the
-scarcity of C stars at τ ' 0.6 Gyr prevents us from performing a
+scarcity of C stars at τ ≃ 0.6 Gyr prevents us from performing a
 comparison at younger ages.
 
 In appendix B, we provide analytic PA relations by fitting the
@@ -353,7 +353,7 @@ both patterns emerging because of the prominent role of mass in
 shaping stellar structure and evolution. Indeed, stellar mass determines
 the lifetimes of the main evolutionary stages, and thus
 the age of stars in the AGB phase. Pulsation models (Trabucchi
-et al. 2021b) show that the radius Rdom,0 (and corresponding
+et al. 2021b) show that the radius R_{dom,0} (and corresponding
 luminosity) at the onset of dominant FM pulsation (DFMP)
 increases with mass, so that the most massive FM-dominated
 LPVs are brighter. They also have longer periods, as this increases
@@ -385,30 +385,30 @@ can have at a given age. Yet, the DFMP part of the AGB is long
 enough for significant variations in radius to occur, which result
 in the dispersion of the PA relation seen in Fig. 1.
 
-At a given initial metallicity Zi, the shape of the period distribution
-primarily results from the fact that, throughout the TPAGB
+At a given initial metallicity Z_i, the shape of the period distribution
+primarily results from the fact that, throughout the TP-AGB
 (the stage during which the FM is normally excited), the
 envelope expansion accelerates, while the period becomes progressively
 less sensitive to changes in radius (see Appendix C).
 In particular, the slope of the period-radius relation decreases
-sharply at Pb = P(Rb). The FM period distribution is roughly
+sharply at P_b = P(R_b). The FM period distribution is roughly
 symmetric around that value, but at its short-period side, the FM
 is not dominant. Therefore, when only FM-dominated LPVs are
 considered, as is done here, the observed period distribution appears
 skewed toward short periods.
 
 This feature is strengthened when a set of isochrones is considered
- which spans a range of initial metallicities because the
+which spans a range of initial metallicities because the
 adopted criterion for the onset of DFMP does not depend on
 metallicity, but the FM period does as metal-poor LPVs are
 warmer and have smaller radii compared with metal-rich ones.
-As a consequence, the bulk of the period distribution of metalpoor
-LPVs is at periods shorter than Pb, so they only contribute
-to the global distribution (i.e., at all Zi at a given age) over a
-small period range at P & Pb. In contrast, metal-rich LPVs have
-periods well beyond Pb, so they contribute both at that value and
+As a consequence, the bulk of the period distribution of metal-poor
+LPVs is at periods shorter than P_b, so they only contribute
+to the global distribution (i.e., at all Z_i at a given age) over a
+small period range at P ≳ P_b. In contrast, metal-rich LPVs have
+periods well beyond P_b, so they contribute both at that value and
 at longer periods. The result is an excess of FM-dominated LPVs
-near Pb, that is to say on the short side of the overall period distribution.
+near P_b, that is to say on the short side of the overall period distribution.
 
 We note that, in contrast with the prescription we adopted,
 the onset of DFMP in reality is probably sensitive to metallicity.
@@ -480,7 +480,6 @@ detect than SRVs, and their light curves are easier to process
 as they tend to be more regular. Moreover, Miras represent the
 end-point of AGB evolution, so in principle they correspond to a
 smaller range of stellar parameters compared to the full extent of
-
 the DFMP regime, and they display a smaller range of periods
 at a given age (cf. Feast & Whitelock 2000b). In other words,
 they should exhibit a relatively narrow PA relation (even though,
@@ -552,6 +551,7 @@ this possibility. A study of the impact of metallicity on nonlinear
 pulsation is highly desirable to pursue this line of investigation,
 as would be a theoretical investigation of the dependence of photometric
 amplitudes upon global stellar parameters.
+
 Acknowledgements. M.T. and N.M. acknowledge the support provided by the
 Swiss National Science Foundation through grant Nr. 188697. We are grateful
 to the anonymous referee for the constructive comments that helped improving
@@ -581,49 +581,37 @@ Pineau et al. 2020).
 
 References
 Anderson, R. I., Saio, H., Ekström, S., Georgy, C., & Meynet, G. 2016, A&A,
-
 591, A8
 Astropy Collaboration, Price-Whelan, A. M., Sipőcz, B. M., et al. 2018, AJ, 156,
-
 123
 Battinelli, P. & Demers, S. 2012, A&A, 544, A10
 Battinelli, P. & Demers, S. 2013, A&A, 553, A93
 Baumgardt, H., Parmentier, G., Anders, P., & Grebel, E. K. 2013, MNRAS, 430,
-
 676
 Boch, T., Pineau, F., & Derriere, S. 2012, in Astronomical Society of the Pacific
 Conference Series, Vol. 461, Astronomical Data Analysis Software and
 Systems XXI, ed. P. Ballester, D. Egret, & N. P. F. Lorente, 291
-
 Bonnarel, F., Fernique, P., Bienaymé, O., et al. 2000, A&AS, 143, 33
 Bono, G., Marconi, M., Cassisi, S., et al. 2005, ApJ, 621, 966
 Bressan, A., Marigo, P., Girardi, L., et al. 2012, MNRAS, 427, 127
 Catchpole, R. M., Whitelock, P. A., Feast, M. W., et al. 2016, MNRAS, 455,
-
 2216
 Cutri, R. M., Wright, E. L., Conrow, T., et al. 2013, Explanatory Supplement
-
 to the AllWISE Data Release Products, Explanatory Supplement to the All-WISE
 Data Release Products
-
 de Grijs, R., Courbin, F., Martínez-Vázquez, C. E., et al. 2017, Space Sci. Rev.,
 212, 1743
-
 De Somma, G., Marconi, M., Cassisi, S., et al. 2020, MNRAS, 496, 5039
 Eggen, O. J. 1998, AJ, 115, 2435
 Feast, M. 2007, in Astronomical Society of the Pacific Conference Series, Vol.
-
 378, Why Galaxies Care About AGB Stars: Their Importance as Actors and
 Probes, ed. F. Kerschbaum, C. Charbonnel, & R. F. Wing, 479
-
 Feast, M. & Whitelock, P. 2000a, in Astrophysics and Space Science Library,
 Vol. 255, Astrophysics and Space Science Library, ed. F. Matteucci & F. Giovannelli,
 229
-
 Feast, M. W. 1963, MNRAS, 125, 367
 Feast, M. W. 1966, The Observatory, 86, 120
 Feast, M. W. 1981, in Astrophysics and Space Science Library, Vol. 88, Physical
-
 Processes in Red Giants, ed. J. Iben, I. & A. Renzini, 193–204
 Feast, M. W., Robertson, B. S. C., & Black, C. 1980, MNRAS, 190, 227
 Feast, M. W. & Whitelock, P. A. 2000b, MNRAS, 317, 460
@@ -637,22 +625,17 @@ Harris, C. R., Millman, K. J., van der Walt, S. J., et al. 2020, Nature, 585, 35
 Hunter, J. D. 2007, Computing in Science & Engineering, 9, 90
 Ivezić, Ž., Kahn, S. M., Tyson, J. A., et al. 2019, ApJ, 873, 111
 Jayasinghe, T., Stanek, K. Z., Kochanek, C. S., et al. 2020, MNRAS, 491, 13
-
 Joo, S.-J. & Lee, Y.-W. 2013, ApJ, 762, 36
 Jura, M. & Kleinmann, S. G. 1992, ApJS, 79, 105
 Kamath, D., Wood, P. R., Soszyński, I., & Lebzelter, T. 2010, MNRAS, 408, 522
 Kharchenko, N. V., Piskunov, A. E., Röser, S., Schilbach, E., & Scholz, R. D.
-
 2005, A&A, 438, 1163
 Kharchenko, N. V., Piskunov, A. E., Schilbach, E., Röser, S., & Scholz, R. D.
-
 2016, A&A, 585, A101
 Kippenhahn, R. & Smith, L. 1969, A&A, 1, 142
 Kluyver, T., Ragan-Kelley, B., Pérez, F., et al. 2016, in Positioning and Power
-
 in Academic Publishing: Players, Agents and Agendas, ed. F. Loizides &
 B. Scmidt (Netherlands: IOS Press), 87–90
-
 Lebzelter, T., Mowlavi, N., Marigo, P., et al. 2018, A&A, 616, L13
 Lebzelter, T., Trabucchi, M., Mowlavi, N., et al. 2019, A&A, 631, A24
 Lebzelter, T. & Wood, P. R. 2005, A&A, 441, 1117
@@ -665,24 +648,19 @@ Lloyd Evans, T. 1983b, MNRAS, 204, 961
 Lloyd Evans, T. & Menzies, J. W. 1973, in Astrophysics and Space Science Library,
 Vol. 36, IAU Colloq. 21: Variable Stars in Globular Clusters and in
 Related Systems, ed. J. D. Fernie, 151
-
 Mackey, A. D. & Broby Nielsen, P. 2007, MNRAS, 379, 151
 Marigo, P., Girardi, L., Bressan, A., et al. 2017, ApJ, 835, 77
 Menzies, J., Feast, M., Tanabé, T., Whitelock, P., & Nakada, Y. 2002, MNRAS,
-
 335, 923
 Menzies, J., Feast, M., Whitelock, P., et al. 2008, MNRAS, 385, 1045
 Menzies, J. W., Feast, M. W., Whitelock, P. A., & Matsunaga, N. 2011, MNRAS,
-
 414, 3492
 Menzies, J. W., Whitelock, P. A., & Feast, M. W. 2015, MNRAS, 452, 910
 Menzies, J. W., Whitelock, P. A., Feast, M. W., & Matsunaga, N. 2010, MNRAS,
-
 406, 86
 Merrill, P. W. 1923, ApJ, 58, 215
 Mowlavi, N., Lecoeur-Taïbi, I., Lebzelter, T., et al. 2018, A&A, 618, A58
 Nayak, P. K., Subramaniam, A., Choudhury, S., Indu, G., & Sagar, R. 2016,
-
 MNRAS, 463, 1446
 Ochsenbein, F., Bauer, P., & Marcout, J. 2000, A&AS, 143, 23
 Pastorelli, G., Marigo, P., Girardi, L., et al. 2020, MNRAS, 498, 3283
@@ -693,7 +671,6 @@ Pineau, F.-X., Boch, T., Derrière, S., & Schaaff, A. 2020, in Astronomical Soci
 of the Pacific Conference Series, Vol. 522, Astronomical Data Analysis
 Software and Systems XXVII, ed. P. Ballester, J. Ibsen, M. Solar, & K. Shortridge,
 125
-
 Sakamoto, T., Matsunaga, N., Hasegawa, T., & Nakada, Y. 2012, ApJ, 761, L10
 Skrutskie, M. F., Cutri, R. M., Stiening, R., et al. 2006, AJ, 131, 1163
 Soszyński, I., Olechowska, A., Ratajczak, M., et al. 2021, ApJ, 911, L22
@@ -702,7 +679,6 @@ Soszyński, I., Udalski, A., Szymański, M. K., et al. 2011, Acta Astron., 61,
 Taylor, M. B. 2006, in Astronomical Society of the Pacific Conference Series,
 Vol. 351, Astronomical Data Analysis Software and Systems XV, ed.
 C. Gabriel, C. Arviset, D. Ponz, & S. Enrique, 666
-
 Trabucchi, M., Mowlavi, N., & Lebzelter, T. 2021a, A&A, 656, A66
 Trabucchi, M., Wood, P. R., Montalbán, J., et al. 2017, ApJ, 847, 139
 Trabucchi, M., Wood, P. R., Montalbán, J., et al. 2019, MNRAS, 482, 929
@@ -716,21 +692,20 @@ Whitelock, P., Menzies, J., Feast, M., et al. 1994, MNRAS, 267, 711
 Whitelock, P. A. 1986, MNRAS, 219, 525
 Whitelock, P. A., Menzies, J. W., Feast, M. W., et al. 2009, MNRAS, 394, 795
 Whitelock, P. A., Menzies, J. W., Feast, M. W., Nsengiyumva, F., & Matsunaga,
-
 N. 2013, MNRAS, 428, 2216
 Wilson, R. E. & Merrill, P. W. 1942, ApJ, 95, 248
 Wyatt, S. P. & Cahn, J. H. 1983, ApJ, 275, 225
 Ya’Ari, A. & Tuchman, Y. 1996, ApJ, 456, 350
 
-Fig. A.1. Absolute-Ks Gaia-2MASS diagram for the stars with or without
+Fig. A.1. Absolute-K_s Gaia-2MASS diagram for the stars with or without
 a spectral type (left and right panels, respectively) in the selected
 sample. Symbol colors and shapes indicate the spectral type and host
 cluster described in the legend, respectively, which also reports the number
 of sources displayed (i.e., having both optical and NIR photometry).
 The dashed line marks the separation between O- and C-rich sources
 according to Lebzelter et al. (2018). An arrow marks the source MSX
-LMC 124 in NGC 1830 that, having WBP,RP−WJ,Ks = 9.73 mag, lies outside
-the plot area. Background dots are LPVs in the LMC from OGLEIII
+LMC 124 in NGC 1830 that, having W_{BP,RP} − W_{J,Ks} = 9.73 mag, lies outside
+the plot area. Background dots are LPVs in the LMC from OGLE-III
 (light gray) and Mowlavi et al. (2018) (darker gray).
 
 Appendix A: Classification of observed LPVs
@@ -755,7 +730,7 @@ Three of the sources without a spectral type lack Gaia photometry,
 so they cannot be classified with the Gaia-2MASS. Two
 of them (LW5 and LW22 in 47 Tuc) have no match in Gaia
 EDR3, but they have NIR data and are probably O-rich based on
-their position in the J − Ks versus Ks color-magnitude diagram.
+their position in the J − K_s versus K_s color-magnitude diagram.
 The third source is one of the two stars in NGC 1903 from the
 list of Grady et al. (2019), which we identified with the 2MASS
 source J05171633-6920298. It is likely C-rich according to the
@@ -765,7 +740,6 @@ Finally, the sources V138 in ω Cen, LW15 in NGC 2808,
 and LW4 in NGC 362 lack NIR data. They cannot be placed in
 the NIR PL diagram, upon which we relied to assign pulsation
 modes to periods, so we excluded them from the sample. The
-
 distribution of O- and C-rich sources in the period-age diagram
 is shown in Fig. A.2.
 
@@ -803,7 +777,7 @@ in a few cases were they significantly different, but this did not
 alter our conclusions.
 
 When available, the variability type was taken from OGLE-III
- or ASAS-SN. We note that we are only interested in whether
+or ASAS-SN. We note that we are only interested in whether
 a star is classified as a Mira or semi-regular variable. In many
 cases, this type is not given or the star is simply considered, for
 instance, as an LPV or AGB in SIMBAD, in which case we considered
@@ -819,10 +793,10 @@ distribution. To describe the boundaries of the PA relation, we
 adopted, at each age, the values of the period at which the distribution
 equals 25% of its maximum. We selected this arbitrary
 value upon visual inspection of the PA plane. We modeled the
-central trend of the PA relation, as well as its short- and longperiod
+central trend of the PA relation, as well as its short- and long-period
 edges, with linear or quadratic functions in the form
 
-log(τ/yr) = a0 + a1 (P/P̃) + a2 (P/P̃)2 , (B.1)
+log(τ/yr) = a_0 + a_1 (P/P̃) + a_2 (P/P̃)^2, (B.1)
 
 (where P̃ = 350 days) and employed a Lenvenberg-Marquardt
 nonlinear regression algorithm3 to derive the best-fit coefficients,
@@ -840,19 +814,13 @@ Fig. A.2. Similar to Fig. 1, except each source is color-coded according to whet
 Table B.1. Best-fit coefficients for the PA relation and its boundaries in
 the form given in Eq. B.1.
 
-Sp. type relation a0 a1 a2
-
-O-rich
-center 10.78 -2.660 0.5953
-
-lower edge 10.46 -2.818 0.6578
-upper edge 10.54 -0.8187 -0.2335
-
-C-rich
-center 9.755 -0.7532
-
-lower edge 9.982 -1.698
-upper edge 8.498 -1.827 -0.9959
+Sp. type | relation   | a_0   | a_1     | a_2
+O-rich   | center     | 10.78 | -2.660  | 0.5953
+         | lower edge | 10.46 | -2.818  | 0.6578
+         | upper edge | 10.54 | -0.8187 | -0.2335
+C-rich   | center     | 9.755 | -0.7532 |
+         | lower edge | 9.982 | -1.698  |
+         | upper edge | 8.498 | -1.827  | -0.9959
 
 8.6 ≤ log(τ/yr) ≤ 9.3 and 140 < P/days < 620 in the C-rich
 case.
@@ -862,7 +830,7 @@ PA relation can be translated into a period-initial mass relation,
 which we derived using the same approach described above, and
 assuming the form
 
-log(Mi/M⊙) = b0 + b1 (P/P̃) + b2 (P/P̃)2 . (B.2)
+log(M_i/M_⊙) = b_0 + b_1 (P/P̃) + b_2 (P/P̃)^2. (B.2)
 
 The resulting best-fit lines are displayed in Fig. B.1, and the coefficients
 are given in Table B.2.
@@ -875,27 +843,21 @@ namely the star-formation history and age-metallicity relation.
 Appendix C: The shape of the period distribution
 
 As an example case, we consider an isochrone of age log(τ/yr) =
-8.3 and initial metallicity Zi = 0.006. Stars on the TP-AGB have
-initial masses Mi ' 3.85 M⊙ over a small range of ∼ 10−3 M⊙.
+8.3 and initial metallicity Z_i = 0.006. Stars on the TP-AGB have
+initial masses M_i ≃ 3.85 M_⊙ over a small range of ∼ 10^{−3} M_⊙.
 The relation between period and initial mass is displayed in
 panel (a) of Fig. C.1, where isochrone portions undergoing
 
 Table B.2. Best-fit coefficients for the period-initial mass relation and
 its boundaries in the form given in Eq. B.2.
 
-Sp. type relation b0 b1 b2
-
-O-rich
-center -0.2790 0.8958 -0.1828
-
-lower edge -0.1772 0.9975 -0.2203
-upper edge -0.1740 0.2783 0.8247
-
-C-rich
-center -0.0304 0.2885
-
-lower edge -0.0131 0.5752
-upper edge -0.2245 -0.2720 0.2343
+Sp. type | relation   | b_0     | b_1     | b_2
+O-rich   | center     | -0.2790 | 0.8958  | -0.1828
+         | lower edge | -0.1772 | 0.9975  | -0.2203
+         | upper edge | -0.1740 | 0.2783  | 0.8247
+C-rich   | center     | -0.0304 | 0.2885  |
+         | lower edge | -0.0131 | 0.5752  |
+         | upper edge | -0.2245 | -0.2720 | 0.2343
 
 DFMP are indicated by solid lines. Panel (b) shows the period
 distributions for a few different cases.
@@ -905,9 +867,9 @@ pulses and consider only the quiescent evolution (green lines in
 Fig. C.1). The smallest initial mass corresponds to a star that just
 entered the TP-AGB, when the FM has a period of ∼ 240 days
 but is not dominant. It only becomes dominant above a threshold
-radius Rdom,0, that is for periods longer than a (mass-dependent)
-critical period Pdom,0 (the solid gray line in Fig. C.1). The least
-evolved (quiescent) model with dominant FM has PFM ' 360
+radius R_{dom,0}, that is for periods longer than a (mass-dependent)
+critical period P_{dom,0} (the solid gray line in Fig. C.1). The least
+evolved (quiescent) model with dominant FM has P_{FM} ≃ 360
 days (green circle and horizontal line), corresponding to a sharp
 cut in the period distribution shown in panel (b) of Fig. C.1.
 
@@ -917,19 +879,19 @@ a higher initial mass are more evolved, hence they have a larger
 radius and a longer period. The rate at which a period increases
 with radius is not fixed, but rather decreases with evolution. According
 to the prescription of Trabucchi et al. (2021b), a period
-grows with radius as a broken power-law with exponent α ' 1.8
-if R < Rb, and with α ' 1.25 at larger radii.
+grows with radius as a broken power-law with exponent α ≃ 1.8
+if R < R_b, and with α ≃ 1.25 at larger radii.
 
 This is equivalent to saying that the period grows more
-slowly after it exceeds a critical value Pb = P(Rb), marked by
+slowly after it exceeds a critical value P_b = P(R_b), marked by
 the gray dotted line in Fig. C.1. The isochrone reaches it at
 
-Fig. B.1. Similar to Fig. 2, but showing initial mass Mi in place of age. The best-fit lines to the most populated band and edges of the theoretical
-PFM – Mi relation are shown.
+Fig. B.1. Similar to Fig. 2, but showing initial mass M_i in place of age. The best-fit lines to the most populated band and edges of the theoretical
+P_{FM} – M_i relation are shown.
 
 Fig. C.1. Period distribution at fixed age and metallicity. Panel (a) shows
 period as a function of initial mass (current mass on the top axis) on the
-TP-AGB for a ∼ 200 Myr old isochrone with Zi = 0.006. Red lines
+TP-AGB for a ∼ 200 Myr old isochrone with Z_i = 0.006. Red lines
 show full thermal pulses, while blue lines ignore luminosity spikes and
 green lines show only the quiescent evolution. The same color code
 is used for the period distributions (normalized to their maximum) on
@@ -941,7 +903,7 @@ dominant (solid line), less sensitive to radius (dotted line, which occurs
 at the vertical line for this specific isochrone), and independent of radius
 (dashed line).
 
-Mi ' 3.8524 M⊙ (vertical gray line), when PFM ' 420 days. In
+M_i ≃ 3.8524 M_⊙ (vertical gray line), when P_{FM} ≃ 420 days. In
 models with a smaller initial mass, the period is still increasing
 at a relatively large rate as the envelope expands, while in more
 massive models the period has already become less sensitive to
@@ -956,7 +918,7 @@ If the luminosity dips following thermal pulses are taken
 into account (blue lines), the corresponding envelope contraction
 causes the period to decrease, and the cut at ∼ 360 days
 becomes less sharp. Because of mass loss, the threshold period
-Pdom,0 is lowered, so that the shortest period associated with
+P_{dom,0} is lowered, so that the shortest period associated with
 DFMP does not correspond to the least evolved model (green
 circle), but rather to the luminosity dip of a thermal pulse (blue
 circle).
