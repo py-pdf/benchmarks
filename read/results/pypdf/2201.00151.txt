@@ -19,7 +19,7 @@ confidence regions on the recovered density and velocity ani sotropy profiles. W
 with stars similarly divided into two populations. In compa rison with our earlier work, we find the anisotropy parameter to be slightly
 increasing, rather than decreasing, with radius and more st rongly constrained. We are also able to infer anisotropy for each stellar
 population separately and find them to be significantly di fferent.
-Key words. galaxies: kinematics and dynamics – galaxies: structure – g alaxies: fundamental parameters – galaxies: dwarf – galaxi es:
+Key words. galaxies: kinematics and dynamics – galaxies: structure – galaxies: fundamental parameters – galaxies: dwarf – galaxies:
 star clusters: individual: Fornax
 1. Introduction
 Dwarf spheroidal (dSph) galaxies of the Local Group (Mateo
@@ -322,7 +322,7 @@ pop II
  100
  120
  1  10  100
-σ r(r)
+σr(r)
 r [kpc]
  40
  60
@@ -330,7 +330,7 @@ r [kpc]
  100
  120
  0  10  20  30  40  50
-σ r(r)
+σr(r)
 r [kpc]
  40
  60
@@ -338,7 +338,7 @@ r [kpc]
  100
  120
  1  10  100
-σ t(r)
+σt(r)
 r [kpc]
  40
  60
@@ -346,7 +346,7 @@ r [kpc]
  100
  120
  0  10  20  30  40  50
-σ t(r)
+σt(r)
 r [kpc]
 Fig. 4. Profiles of the velocity anisotropy parameter, radial veloc ity dispersion, and tangential velocity dispersion (in con secutive columns) calculated
  from all stars (in red), including only population I (i n orange), and only population II (in blue). The upper row sho ws the profiles using the
@@ -421,19 +421,14 @@ r1/2 and therefore is the same in both panels. The two populations
 being more concentrated but having lower central velocity d ispersion.
  Both populations show a weak rotation signal at lar ge
 distances from the center.
-The velocity anisotropy parameter β(r) = 1 − (σ2
-θ +
-σ2
-φ)/(2σ2
-r ), where σi are velocity dispersions in spherical coordinates
+The velocity anisotropy parameter β(r) = 1 − (σ2θ +
+σ2φ)/(2σ2r ), where σi are velocity dispersions in spherical coordinates
  (Binney & Tremaine 2008), describes the orbital struc ture
 of galaxies. It is one of the most important dynamical proper ties
 of bound systems which cannot be inferred directly from observations
  and has to be recovered by dynamical modeling. Th e
 profiles of the anisotropy parameter β as well as the radial σr
-and tangential σt = [(σ2
-θ + σ2
-φ)/2]1/2 velocity dispersions for our
+and tangential σt = [(σ2θ + σ2φ)/2]1/2 velocity dispersions for our
 simulated galaxy are presented in the consecutive columns o f
 Fig. 4. Throughout the paper we use red, orange, and blue colo rs
 to indicate values calculated or recovered for all stars, po pulation
@@ -472,14 +467,7 @@ does not provide a good approximation of the data for the simu lated
  galaxy considered here. We therefore fit the projected density
  profile with the King formula (King 1962)
 I(R) = I0
-
-1√
-1 + (R/Rc)2
-− 1√
-1 + (Rt/Rc)2
-
-2
-, (1)
+ 1√1 + (R/Rc)2 − 1√1 + (Rt/Rc)2 2 , (1)
 Article number, page 4 of 12
 K. Kowalczyk & E. L. Łokas: Multiple stellar populations in S chwarzschild modeling
 10-3
@@ -549,15 +537,12 @@ z arccos(z) −
 ]
 , (2)
 where
-ρ0 = I0
-πRc[1 + (Rt/Rc)2]3/2 (3)
+ρ0 = I0πRc[1 + (Rt/Rc)2]3/2 (3)
 and
 z =
 √
 r2 + R2c
-R2c + R2
-t
-. (4)
+R2c + R2t . (4)
 3. Schwarzschild modeling
 In this section we briefly present our modeling method and its
 application to the data sets derived for all stars and the two populations
@@ -567,12 +552,11 @@ anisotropy.
 3.1. Overview of the method
 We follow the approach introduced in Kowalczyk et al. (2018) ,
 namely we model the total mass profile with the mass-to-light
-ratio Υvarying with radius:
+ratio Υ varying with radius:
 log Υ(r) =
 {
 log(Υ0) r ≤ r0
-a(log r − log r0)c + log(Υ0) r > r0
-(5)
+a(log r − log r0)c + log(Υ0) r > r0 (5)
 Article number, page 5 of 12
 A&A proofs: manuscript no. Populations4
  1
@@ -585,8 +569,7 @@ A&A proofs: manuscript no. Populations4
  2
  3
 ALL
-Υ0
-a
+Υ0a
 c
  1
  2
@@ -598,8 +581,7 @@ c
  2
  3
 POPULATIONS
-Υ0
-a
+Υ0a
 c
  10
  100
@@ -614,8 +596,7 @@ c
  2
  3
 POP I
-Υ0
-a
+Υ0a
 c
  1
  2
@@ -627,8 +608,7 @@ c
  2
  3
 POP II
-Υ0
-a
+Υ0a
 c
  10
  100
@@ -657,9 +637,7 @@ of Υ0 were obtained with a simple transformation of velocities
 given by Eq. 12, 13, and 15 in Kowalczyk et al. (2018). In order
  to smooth out the numerical artifacts, the three-dimens ional
 χ2 spaces were then interpolated with 12-order polynomials
-(∼ a4c4Υ4
-0) that were further used to determine the global minimums
- (identified as the best-fitting models) and 1, 2, 3 σ confidence
+(∼ a4c4Υ40) that were further used to determine the global min-imums (identified as the best-fitting models) and 1, 2, 3 σ confidence
  levels which for three parameters correspond to ∆χ2 =
 3.53, 8.02, 14.2 (Press et al. 1992).
 3.2. Application to mock data
@@ -829,7 +807,7 @@ drop at 100 kpc is the numerical artifact occurring at the ver y
 outskirts of the galaxy.
 Whereas in the right-hand side panels of Fig. 8 the resulting
 anisotropy is obtained from the fit of all stars and uses only t he
-location of global minimum and confidence levels from two pop ulations
+location of global minimum and confidence levels from two populations
  (as in the top right panel of Fig. 7), in Fig. 9 we pres ent
 another method of calculating the anisotropy. In the second and
 third row we show the derived profiles for population I and II
@@ -854,7 +832,7 @@ The global minimums of the χ2 distributions for both approaches,
  that is modeling one and two populations, which we
 identify as the best-fitting models, closely coincide showi ng that
 there is no internal bias in the improved method. However, si gnificant
- di fferences can be observed when comparing the confidence
+ differences can be observed when comparing the confidence
  levels, mainly at 1 and 3 σ. Namely, we find that using
 two populations, the constraints we obtain on the density an d
 anisotropy profile are much stronger.
@@ -991,7 +969,7 @@ Fig. 11. Surface number density profiles of the photometric data samples
 vertical lines indicate r0 (see text) and the outer boundary of the spectroscopic
  data.
 Sérsic formula (Sérsic 1968). The profiles of number density for
-all stars and both populations together with the best-fittin g Sérsic
+all stars and both populations together with the best-fitting Sérsic
 profiles are presented in Fig. 11. The colors follow the conve ntion
  introduced in previous sections. Thin vertical lines i ndicate
 the innermost data point for the light profile for all stars an d
@@ -1062,10 +1040,10 @@ modeling scheme. In rows: the fraction of the total number of stars, the
 2nd, 3rd, and 4th velocity moment. In red we present the values obtained
 for all stars whereas in orange and blue those for population s I and II,
 respectively.
-the confidence levels on Υfrom the fit of two populations. Green
+the confidence levels on Υ from the fit of two populations. Green
 lines indicate the values for the best-fitting models wherea s the
 colored areas of decreasing intensity show the 1, 2, and 3 σ confidence
- regions. Additionally, with black dashed lines we in clude
+ regions. Additionally, with black dashed lines we include
 the results from Kowalczyk et al. (2019) for comparison.
 As a result of freeing the steepness of the mass-to-light
 ratio profile (parameter c) with respect to the previous study
@@ -1110,23 +1088,17 @@ c
  6
  9
  12
-χ2-χ2
-min
+χ2-χ2min
 Fig. 13. V alues ofχ2 relative to the fitted minimum within the range of 3 σ confidence level for all stars (left panel) and for the popula tions (right
 panel) for the Fornax dSph.
 (Kowalczyk et al. 2019), we obtained higher estimates of the enclosed
  total mass at larger radii. In particular, for the mas s enclosed
- within 1.8 kpc we get Mall(< 1.8 kpc) = 3.87+1.48
-−1.56 × 108
-M⊙ from the fit for all stars and Mpops(< 1.8 kpc) = 4.71+0.87
-−1.13 ×
+ within 1.8 kpc we get Mall(< 1.8 kpc) = 3.87+1.48−1.56 × 108
+M⊙ from the fit for all stars and Mpops(< 1.8 kpc) = 4.71+0.87−1.13 ×
 108 M⊙ from the fit of populations, while previously we had
-Mold(< 1.8 kpc) = 3.7+1.4
-−1.3 × 108 M⊙.
+Mold(< 1.8 kpc) = 3.7+1.4−1.3 × 108 M⊙.
 Interestingly, despite the significant shift of the positio n of
-χ2
-min (to c = 4.2 for all stars and 3.6 for populations), the obtained
- profile of the anisotropy parameter remains decreasi ng or
+χ2min (to c = 4.2 for all stars and 3.6 for populations), the ob-tained profile of the anisotropy parameter remains decreasi ng or
 flat for all stars but changes to increasing from 0 to 0.5 for th e
 populations. Nevertheless, even in the latter case the prev ious
 result agrees with the new finding within 1 σ.
@@ -1240,7 +1212,7 @@ In rows: derived mass-to-light ratio, total density, total mass, an d
 anisotropy parameter. In columns: results for all stars and the populations,
  respectively. Green lines indicate the values for the best-fit models
 whereas the colored areas of decreasing intensity show the 1 , 2, and 3 σ
-confidence regions. The best-fitting values obtained by Kowa lczyk et al.
+confidence regions. The best-fitting values obtained by Kowalczyk et al.
 (2019) are shown with black dashed lines.
 that made it a good test bed for modeling techniques applicable
  to dSph galaxies. We applied our approach to all data and
@@ -1310,7 +1282,7 @@ mass-to-light ratio varying with radius as a power-law in the loglog
 of the mass-to-light ratio profile (previously fixed at the va lue of
 3) and allowed for di fferent stellar density profiles (previously
 only Sérsic, now also King). These changes are of course coupled
- since different density profiles require di fferent exponents to
+ since different density profiles require different exponents to
 reproduce the same mass profile. It is visible also in our resu lts
 since the King profile applied in the simulated galaxy gave us
 values of c lower than 3. Nevertheless, we decided to use di fferent
@@ -1337,7 +1309,7 @@ Fornax. In this case we find the anisotropy to be slightly incr easing
 confidence regions for this parameter, as well as for the density,
  are much narrower. We were thus able to obtain tighter constraints
  on the properties of Fornax, which means that the im proved
- method is successful. For the first time, we were also a ble
+ method is successful. For the first time, we were also able
 to deduce the velocity anisotropy profiles for each of the pop ulations
  separately. We found that the more concentrated, metal-rich
 population I has a decreasing anisotropy profile while the mo re

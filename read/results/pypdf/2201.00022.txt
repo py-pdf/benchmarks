@@ -185,19 +185,14 @@ but reserve a more detailed examination of the distribution’s
 2.2. Direct Collisions
 BHs in the GN can undergo direct collisions with other
 objects. The timescale for this process, tcoll, can be estimated
- using a simple rate calculation: t−1
-coll = nσA,
+ using a simple rate calculation: t−1coll = nσA,
 where n is the number density of objects, σ is the velocity
  dispersion, and A is the cross-section. We use the
 collision timescale from Rose et al. (2020):
-t−1
-coll =πn(a•)σ(a•)
+t−1coll =πn(a•)σ(a•)
 ×
 (
-f1(e•)r2
-c +f2(e•)rc
-2G(mBH +m⋆)
-σ(a•)2
+f1(e•)r2c +f2(e•)rc 2G(mBH +m⋆)σ(a•)2
 )
 . (1)
 where G is the gravitational constant and rc is the sum
@@ -230,9 +225,7 @@ Eq. (2) is ρ0 = 1.35× 106M⊙/pc3 atr0 = 0.25 pc (Genzel
 slope of the power law. We assume that a uniform population
  of solar mass stars account for most of the mass
 in the GN, making the stellar number density:
-n(r•) = ρ(r•)
-1M⊙
-. (3)
+n(r•) = ρ(r•)1M⊙ . (3)
 The collision timescale also depends on the velocity dispersion,
  which we express as:
 σ(r•) =
@@ -307,8 +300,7 @@ however, and it may be much less efficient than our results
  imply. We discuss accretion in Section 2.5.
 To estimate ∆m, we begin with the Bondi-Hoyle accretion
  rate, ˙m, given by:
-˙m = 4πG2m2
-BHρstar
+˙m = 4πG2m2BHρstar
 (c2s +σ2)3/2 , (5)
 3 Closer to the SMBH, ∆ t may exceed the collision timescale by
 a factor of a few for steep density profiles. We include a safeguard
@@ -330,8 +322,7 @@ analytical predictions detailed in Section 2.4.
 wherecs is the speed of sound in the star and ρstar is its
 density (e.g., Bondi 1952; Bondi & Hoyle 1944; Shima
 et al. 1985; Edgar 2004, see latter for a review). We
-approximate the density as 1 M⊙/(4πR3
-⊙/3) and take
+approximate the density as 1 M⊙/(4πR3⊙/3) and take
 the conservative value of cs = 500 km s−1, which is
 consistent with the sound speed inside a 1 M⊙ star
 (Christensen-Dalsgaard et al. 1996) and allows us to set
@@ -359,9 +350,7 @@ IMBH Formation in Galactic Nuclei 5
 ulation time, 10 Gyr. Therefore, the BHs grow slowly,
 and their final masses can be approximated using the
 following equation:
-mfinal(tcoll→ const.) =minitial + ∆m T
-tcoll
-, (7)
+mfinal(tcoll→ const.) =minitial + ∆m Ttcoll , (7)
 in which T represents the simulation time and ∆m and
 tcoll remain constant, approximated as their initial values.
 
@@ -458,8 +447,7 @@ tGW≈ 2.9× 1012 yr
 )−1( a•
 10−2 pc
 )4
-×f(e•)(1−e2
-•)7/2 , (9)
+×f(e•)(1−e2•)7/2 , (9)
 where f(e•) is a function of e•. For all values of e•,
 f(e•) is between 0.979 and 1.81 (Blaes et al. 2002). We
 plot this timescale for a 1 × 105M⊙ BH in Figure 1 in
@@ -516,9 +504,7 @@ A BH orbiting the SMBH experiences weak gravitational
 relaxation time, these interactions alter its orbit about
 the SMBH. The two-body relaxation timescale for a
 single-mass system is:
-trelax = 0.34 σ3
-G2ρ⟨M∗⟩ ln Λrlx
-, (10)
+trelax = 0.34 σ3G2ρ⟨M∗⟩ ln Λrlx, (10)
 where ln Λrlx is the Coulomb logarithm and⟨M∗⟩ is the
 average mass of the surrounding objects, here assumed
 to be 1 M⊙ (Spitzer 1987; Binney & Tremaine 2008,

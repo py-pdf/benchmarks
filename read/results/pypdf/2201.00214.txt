@@ -198,28 +198,21 @@ the background from observed data is fitting a single-Gaussi an cospatial functi
 function on the flux profile. The DEM for each strip is consider ed to be single-Gaussian DEM
 in terms of the logarithm of the temperature, which has three free parameters ( Aschwanden &
 Boerner, 2011):
-DEM i = dEM i
-dT = EM p,i exp (− [log (T) − log (Tp,i)
-2σ 2
-T,i
-). (1)
-In which, Tp,i is the DEM peak temperature, EM p,i is the peak EM function, and σ T,i is the
+DEM i = dEM idT = EM p,i exp (− [log (T) − log (Tp,i)2σ2T,i ). (1)
+In which, Tp,i is the DEM peak temperature, EM p,i is the peak EM function, and σT,i is the
 logarithmic width of the temperature for that strip. T o calc ulate the background-subtracted fluxes
 (for each strip) we use Eq.6 of Aschwanden & Boerner (2011) (in below):
 F0λ =
 ∫ dEM (T)
-dT Rλ (T)dT = ∑
-k
-EM (Tk)Rλ (Tk). (2)
-Here, Rλ (T) is the instrumental temperature response function of each w avelength filter λ , which
+dT Rλ(T)dT = ∑k EM (Tk)Rλ(Tk). (2)
+Here, Rλ(T) is the instrumental temperature response function of each w avelength filter λ, which
 is obtained by the code aia_get_response .pro in the SSW package. As time has passed, the AIA
 response functions calibration has partly changed. Here, w e use the updated calibration of the
 temperature response functions, for each of the AIA tempera ture filters, according to the CHIANTI
  V ersion 2019 code available in the Solar SoftW are (SSW). After forward-fitting the Gaussian
 DEM to the background-subtracted observed fluxes in multipl e wavelengths, the three-fitting parameters,
- temperature width ( σ T,i), peak of temperature ( Tp,i), and peak emission measure ( EM p,i)
-are found by minimizing χ 2
-i .
+ temperature width ( σT,i), peak of temperature ( Tp,i), and peak emission measure ( EM p,i)
+are found by minimizing χ2i .
 Our data sample is uneven because of omitting some damaged im ages in between. Therefore
  to analyze the temperature oscillations, we use the Lom b-Scargle method. This method is
 developed to use the technique periodogram, in the case wher e the observation times are unevenly
@@ -429,7 +422,7 @@ ones, are very scarce. W e observed that the periods of the flar ing loops have 
 than those of the non-flaring ones. Based on our confined obser vations, the non-flaring loops’
 periods are longer and their temperatures’ values are total ly lower. So our research showed that
 thermal structures of the flaring loops differ from the non-fl aring ones in the ways described
-above. As temperature maps show , the temperature fluctuatio ns are increasing at the flaring time
+above. As temperature maps show , the temperature fluctuations are increasing at the flaring time
 and around 20 min. after, in the flaring loops. This happens wi th some oscillations in strips’
 temperature. Conversely , it seems that different strips of the non-flaring loops have relatively
 more similar temperature fluctuations. The temperatures ar e either higher in average in the flaring
