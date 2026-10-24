@@ -1,0 +1,1261 @@
+{
+  "compressors": {
+    "ghostscript": {
+      "version": "10.02.1"
+    },
+    "pikepdf": {
+      "version": "10.17.0"
+    },
+    "pymupdf": {
+      "version": "1.28.2"
+    },
+    "pypdf": {
+      "version": "6.21.2"
+    },
+    "pypdf-all": {
+      "version": "6.21.2"
+    },
+    "pypdf-dedupe": {
+      "version": "6.21.2"
+    },
+    "pypdf-streams": {
+      "version": "6.21.2"
+    }
+  },
+  "documents": {
+    "1707.09725": {
+      "pages": 134,
+      "producer": "pdfTeX",
+      "sha256": "15d73fe4d8abe5122d547118bdb0accb930737a7c656c9228ad4bee5a5753532",
+      "size": 7314963,
+      "url": "https://arxiv.org/pdf/1707.09725.pdf",
+      "uses_object_streams": true
+    },
+    "2021_book_security": {
+      "pages": 268,
+      "producer": "Adobe PDF Library 15",
+      "sha256": "29a83d67bdddf5fb6ac16d072f2ec151a87ed7c5e0aed8e67f9515428e368e45",
+      "size": 3886260,
+      "url": "https://github.com/user-attachments/files/15605648/2021_book_security.pdf",
+      "uses_object_streams": false
+    },
+    "2201.00069": {
+      "pages": 15,
+      "producer": "pdfTeX (image-heavy)",
+      "sha256": "51ff3326533a385e57506bbcb142cda45e2cdcfa170f77c9c6f512c9e1dddbf3",
+      "size": 15409926,
+      "url": "https://arxiv.org/pdf/2201.00069.pdf",
+      "uses_object_streams": true
+    },
+    "2201.00214": {
+      "pages": 22,
+      "producer": "pdfTeX",
+      "sha256": "9ea7ed2fd1e4eb364ee96c089a61c71f29613c3768cdb7c41daf7314ab62ae91",
+      "size": 2498460,
+      "url": "https://arxiv.org/pdf/2201.00214.pdf",
+      "uses_object_streams": false
+    },
+    "Ballinasloe_WS": {
+      "pages": 35,
+      "producer": "Adobe Acrobat Pro DC",
+      "sha256": "6f3cc502e413e5f0319ddebfe9e0ac6591b84b893cf12d65ae7603f10adc5e7b",
+      "size": 11691217,
+      "url": "https://github.com/py-pdf/pypdf/files/10983477/Ballinasloe_WS.pdf",
+      "uses_object_streams": true
+    },
+    "FTX-claim": {
+      "pages": 10,
+      "producer": "iTextSharp 5.5",
+      "sha256": "b1a1e3b693efa47faea737bb5b70bb3cd7429cecef2bb6afcb24bd7ff4542907",
+      "size": 5037227,
+      "url": "https://github.com/py-pdf/pypdf/files/13127197/FTX.Claim.SC30.01072023101624File595287144.pdf",
+      "uses_object_streams": false
+    },
+    "GeoTopo-book": {
+      "pages": 117,
+      "producer": "pdfTeX",
+      "sha256": "a0b9242aef9b5a2c4850160cc9aaf64f5c7b8be705d6872ae28aebf5ab512540",
+      "size": 5321132,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/009-pdflatex-geotopo/GeoTopo.pdf",
+      "uses_object_streams": true
+    },
+    "PDF32000_2008": {
+      "pages": 756,
+      "producer": "Acrobat Distiller 8.1 (tagged, encrypted)",
+      "sha256": "9de0ca9e8570d6209e8bd48a355be8eb6ec376acfc3fc3ae97cd8730351417ff",
+      "size": 22491828,
+      "url": "https://github.com/py-pdf/pypdf/files/11714214/PDF32000_2008.pdf",
+      "uses_object_streams": false
+    },
+    "USC-EMBA": {
+      "pages": 225,
+      "producer": "PDFium",
+      "sha256": "8680205a769c47e6617b8c29c6db70521c92f92aac87c98b3c09361a6dcb57e0",
+      "size": 16149305,
+      "url": "https://github.com/py-pdf/pypdf/files/11578953/USC.EMBA.-.Pre-Season.and.Theme.I.pdf",
+      "uses_object_streams": false
+    },
+    "WBT-whitepaper": {
+      "pages": 39,
+      "producer": "iLovePDF",
+      "sha256": "a296ad22b963fbfaf16afdd941acd2754617c389cfa88837ddcd17ccebe74437",
+      "size": 10138733,
+      "url": "https://github.com/py-pdf/pypdf/files/12543290/whitepaper.WBT.token.blockchain.whitepaper.pdf",
+      "uses_object_streams": true
+    },
+    "cmyk-image": {
+      "pages": 1,
+      "producer": "unknown (CMYK image)",
+      "sha256": "5a5f76a951e403a5b357992789afc5164fd6c2914583741de7a1dd08ec029ab2",
+      "size": 443953,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/023-cmyk-image/cmyk-image.pdf",
+      "uses_object_streams": false
+    },
+    "crystallography": {
+      "pages": 154,
+      "producer": "OpenOffice.org 2.3",
+      "sha256": "1b8d88974226840ecc9580f32dcbe07bc1c25f510dc5aeb1b0f89b7418f562d1",
+      "size": 9560086,
+      "url": "https://github.com/py-pdf/pypdf/files/8884470/fdocuments.in_sweet-fundamentals-of-crystallography.pdf",
+      "uses_object_streams": false
+    },
+    "google-doc": {
+      "pages": 1,
+      "producer": "Google Docs (Skia)",
+      "sha256": "69f6b7f493b1bc55d518942976cbeadc4ec0a36f6d8a6dc24feffc516d35b2c9",
+      "size": 80100,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/011-google-doc-document/google-doc-document.pdf",
+      "uses_object_streams": false
+    },
+    "imagemagick-images": {
+      "pages": 6,
+      "producer": "ImageMagick",
+      "sha256": "0f2076573bfed1107300a2383b88bbbbc2b85a57f06b3ff478a0faa7ded57b4e",
+      "size": 16012,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/007-imagemagick-images/imagemagick-images.pdf",
+      "uses_object_streams": false
+    },
+    "irbookonlinereading": {
+      "pages": 581,
+      "producer": "dvips + Ghostscript 8.51",
+      "sha256": "ab67ad67d89309a3d03de219173cfdea471e856a5083c83e49b11be8c01581ea",
+      "size": 6903344,
+      "url": "https://github.com/py-pdf/pypdf/files/15234776/irbookonlinereading.pdf",
+      "uses_object_streams": false
+    },
+    "libreoffice-writer": {
+      "pages": 1,
+      "producer": "LibreOffice",
+      "sha256": "fc67ce4f76ffb44e818ebe4f673dbeb6002ad93a59f3856ff14fb1d3625f10a5",
+      "size": 12609,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/002-trivial-libre-office-writer/002-trivial-libre-office-writer.pdf",
+      "uses_object_streams": false
+    },
+    "pdfkit": {
+      "pages": 1,
+      "producer": "pdfkit (JavaScript)",
+      "sha256": "8820ba44cd62264fd561e921aacc214cee7ba76723f525d591cdb2104a87f0dd",
+      "size": 14404,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/022-pdfkit/pdfkit.pdf",
+      "uses_object_streams": false
+    },
+    "reportlab-overlay": {
+      "pages": 1,
+      "producer": "ReportLab",
+      "sha256": "fdbdd49a118053577240850826a7eff6ac4ce7288527bf4c483714f0113860ed",
+      "size": 13790,
+      "url": "https://github.com/py-pdf/sample-files/raw/main/013-reportlab-overlay/reportlab-overlay.pdf",
+      "uses_object_streams": false
+    },
+    "tika-972174": {
+      "pages": 163,
+      "producer": "Acrobat Distiller 8.0",
+      "sha256": "41e1db3c67c24a9f24d1d5509d3b81b75ef77684b427037cad1bc790e414b7ba",
+      "size": 3905060,
+      "url": "https://github.com/user-attachments/files/18381744/tika-972174.pdf",
+      "uses_object_streams": true
+    }
+  },
+  "environment": {
+    "cpu_count": 8,
+    "date": "2026-10-24",
+    "processor": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+    "python": "3.13.3",
+    "system": "Linux 6.8.0-147-generic"
+  },
+  "format": 1,
+  "runs": {
+    "ghostscript": {
+      "1707.09725": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.98136862499814,
+        "size": 3417849,
+        "text_ok": false,
+        "wall_seconds": 2.98136862499814
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.665799827002047,
+        "size": 3724192,
+        "text_ok": true,
+        "wall_seconds": 2.665799827002047
+      },
+      "2201.00069": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.6077664849944995,
+        "size": 2640082,
+        "text_ok": false,
+        "wall_seconds": 1.6077664849944995
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.926920035002695,
+        "size": 2481592,
+        "text_ok": true,
+        "wall_seconds": 2.926920035002695
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.5616644239999005,
+        "size": 11558869,
+        "text_ok": false,
+        "wall_seconds": 1.5616644239999005
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.33783751799637685,
+        "size": 3822257,
+        "text_ok": true,
+        "wall_seconds": 0.33783751799637685
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.5813901820001774,
+        "size": 2085225,
+        "text_ok": false,
+        "wall_seconds": 2.5813901820001774
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 7.325057323003421,
+        "size": 9404154,
+        "text_ok": false,
+        "wall_seconds": 7.325057323003421
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 7.041630492996774,
+        "size": 9767598,
+        "text_ok": false,
+        "wall_seconds": 7.041630492996774
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 5.099912907004182,
+        "size": 9937783,
+        "text_ok": false,
+        "wall_seconds": 5.099912907004182
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.05899951000174042,
+        "size": 2168,
+        "text_ok": true,
+        "wall_seconds": 0.05899951000174042
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.8351080540014664,
+        "size": 8902950,
+        "text_ok": true,
+        "wall_seconds": 1.8351080540014664
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08994803799578222,
+        "size": 64259,
+        "text_ok": false,
+        "wall_seconds": 0.08994803799578222
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.1449589819967514,
+        "size": 12144,
+        "text_ok": true,
+        "wall_seconds": 0.1449589819967514
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 6.354105537000578,
+        "size": 4773293,
+        "text_ok": false,
+        "wall_seconds": 6.354105537000578
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.06798499800061109,
+        "size": 14089,
+        "text_ok": true,
+        "wall_seconds": 0.06798499800061109
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.06964546499511926,
+        "size": 6857,
+        "text_ok": true,
+        "wall_seconds": 0.06964546499511926
+      },
+      "reportlab-overlay": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07251700799679384,
+        "size": 8029,
+        "text_ok": true,
+        "wall_seconds": 0.07251700799679384
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.428660926001612,
+        "size": 3194207,
+        "text_ok": false,
+        "wall_seconds": 2.428660926001612
+      }
+    },
+    "pikepdf": {
+      "1707.09725": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.7949771370040253,
+        "size": 8438863,
+        "text_ok": true,
+        "wall_seconds": 1.9242829450013232
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.42918546099826926,
+        "size": 3079317,
+        "text_ok": true,
+        "wall_seconds": 0.5616200509975897
+      },
+      "2201.00069": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.7688004649971845,
+        "size": 15706366,
+        "text_ok": true,
+        "wall_seconds": 2.8958931979941553
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.7633949560040492,
+        "size": 2442178,
+        "text_ok": true,
+        "wall_seconds": 0.8927771259986912
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.17584081200038781,
+        "size": 11530150,
+        "text_ok": true,
+        "wall_seconds": 0.3038229850062635
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.2888897619995987,
+        "size": 4956654,
+        "text_ok": true,
+        "wall_seconds": 0.4158747769979527
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.8065892390004592,
+        "size": 5377490,
+        "text_ok": true,
+        "wall_seconds": 0.939816673999303
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 241090560,
+        "pages_ok": true,
+        "seconds": 2.0776896989991656,
+        "size": 7760747,
+        "text_ok": true,
+        "wall_seconds": 2.340462348998699
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.920610200999363,
+        "size": 15224063,
+        "text_ok": true,
+        "wall_seconds": 3.105749348993413
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.095911240998248,
+        "size": 10111904,
+        "text_ok": true,
+        "wall_seconds": 2.2289368269994156
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09428155900241109,
+        "size": 444059,
+        "text_ok": true,
+        "wall_seconds": 0.2311815380016924
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.5859838890028186,
+        "size": 9511211,
+        "text_ok": true,
+        "wall_seconds": 0.7509293449984398
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.04536937800003216,
+        "size": 74198,
+        "text_ok": true,
+        "wall_seconds": 0.17848117899848148
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.037387520002084784,
+        "size": 9220,
+        "text_ok": true,
+        "wall_seconds": 0.16464523299509892
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.2513109960054862,
+        "size": 5021691,
+        "text_ok": true,
+        "wall_seconds": 1.440762143000029
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.04242646700004116,
+        "size": 12050,
+        "text_ok": true,
+        "wall_seconds": 0.18927574199915398
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.03871807899849955,
+        "size": 12714,
+        "text_ok": true,
+        "wall_seconds": 0.17054309700324666
+      },
+      "reportlab-overlay": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.043585403996985406,
+        "size": 12657,
+        "text_ok": true,
+        "wall_seconds": 0.17634975699911593
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.3710887439956423,
+        "size": 3356364,
+        "text_ok": true,
+        "wall_seconds": 0.5157033290015534
+      }
+    },
+    "pymupdf": {
+      "1707.09725": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.43594694000057643,
+        "size": 6845070,
+        "text_ok": true,
+        "wall_seconds": 0.6057767849997617
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.4257768469979055,
+        "size": 3090890,
+        "text_ok": true,
+        "wall_seconds": 1.5819938009954058
+      },
+      "2201.00069": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.18314613700204063,
+        "size": 15276735,
+        "text_ok": true,
+        "wall_seconds": 0.3682716699986486
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.13494171400088817,
+        "size": 2441543,
+        "text_ok": true,
+        "wall_seconds": 0.3168427470009192
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.065985898996587,
+        "size": 11646636,
+        "text_ok": true,
+        "wall_seconds": 1.2202223219937878
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.10022272700007306,
+        "size": 5035758,
+        "text_ok": true,
+        "wall_seconds": 0.25623826200171607
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.980260227996041,
+        "size": 5286517,
+        "text_ok": true,
+        "wall_seconds": 2.147612205997575
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 836.0604481200062,
+        "size": 8374834,
+        "text_ok": true,
+        "wall_seconds": 836.2355981330038
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.41463017299975036,
+        "size": 13396053,
+        "text_ok": true,
+        "wall_seconds": 0.5673139530044864
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.29754684300132794,
+        "size": 10093849,
+        "text_ok": true,
+        "wall_seconds": 0.4544921639972017
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09119178899709368,
+        "size": 444080,
+        "text_ok": true,
+        "wall_seconds": 0.24775208500068402
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.12932053699478274,
+        "size": 9499772,
+        "text_ok": true,
+        "wall_seconds": 0.2812797509977827
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09251041799871018,
+        "size": 73974,
+        "text_ok": true,
+        "wall_seconds": 0.25036382699909154
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09142325699940557,
+        "size": 6812,
+        "text_ok": true,
+        "wall_seconds": 0.24396772700129077
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 12.410700129999896,
+        "size": 5110108,
+        "text_ok": true,
+        "wall_seconds": 12.562662215001183
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.0879346709989477,
+        "size": 12089,
+        "text_ok": true,
+        "wall_seconds": 0.23559547300101258
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09396090300288051,
+        "size": 12780,
+        "text_ok": true,
+        "wall_seconds": 0.25180773500323994
+      },
+      "reportlab-overlay": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08988498200051254,
+        "size": 12741,
+        "text_ok": true,
+        "wall_seconds": 0.24087495300045703
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 10.499473351999768,
+        "size": 3340423,
+        "text_ok": true,
+        "wall_seconds": 10.655182280999725
+      }
+    },
+    "pypdf": {
+      "1707.09725": {
+        "max_rss_bytes": 180633600,
+        "pages_ok": true,
+        "seconds": 0.6692640719993506,
+        "size": 7244075,
+        "text_ok": true,
+        "wall_seconds": 0.845105700998829
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181026816,
+        "pages_ok": true,
+        "seconds": 1.4833037550015433,
+        "size": 3991754,
+        "text_ok": true,
+        "wall_seconds": 1.7093246599979466
+      },
+      "2201.00069": {
+        "max_rss_bytes": 180633600,
+        "pages_ok": true,
+        "seconds": 0.26843425699917134,
+        "size": 15392034,
+        "text_ok": true,
+        "wall_seconds": 0.4111298540010466
+      },
+      "2201.00214": {
+        "max_rss_bytes": 178573312,
+        "pages_ok": true,
+        "seconds": 0.5472476579998329,
+        "size": 2503734,
+        "text_ok": true,
+        "wall_seconds": 0.7140354869989096
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181026816,
+        "pages_ok": true,
+        "seconds": 0.7219375709973974,
+        "size": 12136837,
+        "text_ok": true,
+        "wall_seconds": 0.9112554599996656
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.0903825040004449,
+        "size": 5037715,
+        "text_ok": true,
+        "wall_seconds": 0.22060235899698455
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 180633600,
+        "pages_ok": true,
+        "seconds": 0.8227343960024882,
+        "size": 5728017,
+        "text_ok": true,
+        "wall_seconds": 1.0071049320031307
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 669454336,
+        "pages_ok": true,
+        "seconds": 61.5145377230001,
+        "size": 23520400,
+        "text_ok": true,
+        "wall_seconds": 62.925949429001776
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 181026816,
+        "pages_ok": true,
+        "seconds": 0.9025131449998298,
+        "size": 16202818,
+        "text_ok": true,
+        "wall_seconds": 1.0902250850012933
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.42619071700028144,
+        "size": 10303515,
+        "text_ok": true,
+        "wall_seconds": 0.5780580940008804
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07788773400170612,
+        "size": 444058,
+        "text_ok": true,
+        "wall_seconds": 0.20776585999919917
+      },
+      "crystallography": {
+        "max_rss_bytes": 181026816,
+        "pages_ok": true,
+        "seconds": 0.20204252300027292,
+        "size": 9550024,
+        "text_ok": true,
+        "wall_seconds": 0.3459031200000027
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08937594500093837,
+        "size": 80299,
+        "text_ok": true,
+        "wall_seconds": 0.2212751830011257
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08426554600009695,
+        "size": 14053,
+        "text_ok": true,
+        "wall_seconds": 0.21529243100303574
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 181026816,
+        "pages_ok": true,
+        "seconds": 2.7986474150020513,
+        "size": 7030821,
+        "text_ok": true,
+        "wall_seconds": 3.129411814999912
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.075399681001727,
+        "size": 12565,
+        "text_ok": true,
+        "wall_seconds": 0.20621484999719542
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07652232799955527,
+        "size": 14375,
+        "text_ok": true,
+        "wall_seconds": 0.20561808700222173
+      },
+      "reportlab-overlay": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07628312299857498,
+        "size": 13874,
+        "text_ok": true,
+        "wall_seconds": 0.20777935500154854
+      },
+      "tika-972174": {
+        "max_rss_bytes": 180764672,
+        "pages_ok": true,
+        "seconds": 3.252138151001418,
+        "size": 5716277,
+        "text_ok": true,
+        "wall_seconds": 3.6323118729997077
+      }
+    },
+    "pypdf-all": {
+      "1707.09725": {
+        "max_rss_bytes": 250437632,
+        "pages_ok": true,
+        "seconds": 8.40572762699594,
+        "size": 7239615,
+        "text_ok": true,
+        "wall_seconds": 8.593167548002384
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.9142891350056743,
+        "size": 3925388,
+        "text_ok": true,
+        "wall_seconds": 2.1414073089981684
+      },
+      "2201.00069": {
+        "max_rss_bytes": 253931520,
+        "pages_ok": true,
+        "seconds": 0.9228689430019585,
+        "size": 15387658,
+        "text_ok": true,
+        "wall_seconds": 1.0726995160002843
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.401919869997073,
+        "size": 2495124,
+        "text_ok": true,
+        "wall_seconds": 1.5421961620013462
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.8121620699967025,
+        "size": 12048187,
+        "text_ok": true,
+        "wall_seconds": 0.9848023839949747
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.17198914699838497,
+        "size": 5037555,
+        "text_ok": true,
+        "wall_seconds": 0.3059961370017845
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.344639818998985,
+        "size": 5720011,
+        "text_ok": true,
+        "wall_seconds": 1.5324940850041457
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 715722752,
+        "pages_ok": true,
+        "seconds": 65.13459133499418,
+        "size": 21579830,
+        "text_ok": true,
+        "wall_seconds": 66.63815225200233
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 319029248,
+        "pages_ok": true,
+        "seconds": 1.9691201169989654,
+        "size": 13839333,
+        "text_ok": true,
+        "wall_seconds": 2.176647337000759
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 3.6639864160024445,
+        "size": 10227789,
+        "text_ok": true,
+        "wall_seconds": 3.8255603880024864
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08753150400298182,
+        "size": 444085,
+        "text_ok": true,
+        "wall_seconds": 0.22357070299767656
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.40832256299472647,
+        "size": 9540433,
+        "text_ok": true,
+        "wall_seconds": 0.5497878759997548
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.10468765400582924,
+        "size": 80140,
+        "text_ok": true,
+        "wall_seconds": 0.23968225499993423
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.0916248329958762,
+        "size": 9751,
+        "text_ok": true,
+        "wall_seconds": 0.22570992699911585
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 210829312,
+        "pages_ok": true,
+        "seconds": 10.891828423998959,
+        "size": 6974002,
+        "text_ok": true,
+        "wall_seconds": 11.234048883001378
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07815409699833253,
+        "size": 12563,
+        "text_ok": true,
+        "wall_seconds": 0.20989233200089075
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08048589199461276,
+        "size": 14375,
+        "text_ok": true,
+        "wall_seconds": 0.21136799700616393
+      },
+      "reportlab-overlay": {
+        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 139880192673168) not found!",
+        "max_rss_bytes": 181157888,
+        "wall_seconds": 0.2133250390033936
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.9102625379964593,
+        "size": 4842715,
+        "text_ok": true,
+        "wall_seconds": 3.231136635004077
+      }
+    },
+    "pypdf-dedupe": {
+      "1707.09725": {
+        "max_rss_bytes": 250068992,
+        "pages_ok": true,
+        "seconds": 8.195179779999307,
+        "size": 7239715,
+        "text_ok": true,
+        "wall_seconds": 8.385932212000625
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.5555608060021768,
+        "size": 3931827,
+        "text_ok": true,
+        "wall_seconds": 1.7734182770000189
+      },
+      "2201.00069": {
+        "max_rss_bytes": 253833216,
+        "pages_ok": true,
+        "seconds": 0.9343876870043459,
+        "size": 15387746,
+        "text_ok": true,
+        "wall_seconds": 1.085113540997554
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.27033840699732536,
+        "size": 2502200,
+        "text_ok": true,
+        "wall_seconds": 0.4157890069982386
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.7065479269949719,
+        "size": 12091462,
+        "text_ok": true,
+        "wall_seconds": 0.875201520997507
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.16607619700516807,
+        "size": 5037715,
+        "text_ok": true,
+        "wall_seconds": 0.2975908860025811
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.1338350730002276,
+        "size": 5720011,
+        "text_ok": true,
+        "wall_seconds": 1.3247031620048801
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 712392704,
+        "pages_ok": true,
+        "seconds": 61.88915467100014,
+        "size": 21712316,
+        "text_ok": true,
+        "wall_seconds": 63.39627677899989
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 318349312,
+        "pages_ok": true,
+        "seconds": 1.7427580520015908,
+        "size": 13888518,
+        "text_ok": true,
+        "wall_seconds": 1.9454249409973272
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.6435487530034152,
+        "size": 10290646,
+        "text_ok": true,
+        "wall_seconds": 0.795912767003756
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08634492400597082,
+        "size": 444058,
+        "text_ok": true,
+        "wall_seconds": 0.2191354929964291
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.2919400390019291,
+        "size": 9540495,
+        "text_ok": true,
+        "wall_seconds": 0.42878210499475244
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09568836900143651,
+        "size": 80225,
+        "text_ok": true,
+        "wall_seconds": 0.2287020650037448
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08785076699859928,
+        "size": 9632,
+        "text_ok": true,
+        "wall_seconds": 0.2178943960025208
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 207011840,
+        "pages_ok": true,
+        "seconds": 9.476067335002881,
+        "size": 6996963,
+        "text_ok": true,
+        "wall_seconds": 9.812195466998674
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07651795899437275,
+        "size": 12565,
+        "text_ok": true,
+        "wall_seconds": 0.20575931000348646
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08196170999872265,
+        "size": 14375,
+        "text_ok": true,
+        "wall_seconds": 0.21800450400041882
+      },
+      "reportlab-overlay": {
+        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 137934123795856) not found!",
+        "max_rss_bytes": 181157888,
+        "wall_seconds": 0.2616729649962508
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.6881760059986846,
+        "size": 4867266,
+        "text_ok": true,
+        "wall_seconds": 3.0029059939988656
+      }
+    },
+    "pypdf-streams": {
+      "1707.09725": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.7763817769991874,
+        "size": 7244019,
+        "text_ok": true,
+        "wall_seconds": 0.9527859249974426
+      },
+      "2021_book_security": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.6692069609998725,
+        "size": 3985483,
+        "text_ok": true,
+        "wall_seconds": 1.8827467020018958
+      },
+      "2201.00069": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.3155808720002824,
+        "size": 15391988,
+        "text_ok": true,
+        "wall_seconds": 0.4862814640000579
+      },
+      "2201.00214": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.3075278469987097,
+        "size": 2496658,
+        "text_ok": true,
+        "wall_seconds": 1.4432112499998766
+      },
+      "Ballinasloe_WS": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.6871786679985235,
+        "size": 12093898,
+        "text_ok": true,
+        "wall_seconds": 0.854304996002611
+      },
+      "FTX-claim": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09124247799991281,
+        "size": 5037615,
+        "text_ok": true,
+        "wall_seconds": 0.2217762069994933
+      },
+      "GeoTopo-book": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.07153458600078,
+        "size": 5728017,
+        "text_ok": true,
+        "wall_seconds": 1.257241735002026
+      },
+      "PDF32000_2008": {
+        "max_rss_bytes": 671899648,
+        "pages_ok": true,
+        "seconds": 62.590716900998814,
+        "size": 23387914,
+        "text_ok": true,
+        "wall_seconds": 64.07155860900093
+      },
+      "USC-EMBA": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 1.0471410729987838,
+        "size": 16152073,
+        "text_ok": true,
+        "wall_seconds": 1.2354889989983349
+      },
+      "WBT-whitepaper": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 3.5079322019992105,
+        "size": 10240658,
+        "text_ok": true,
+        "wall_seconds": 3.6612770760002604
+      },
+      "cmyk-image": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08119145299860975,
+        "size": 444085,
+        "text_ok": true,
+        "wall_seconds": 0.2130046649981523
+      },
+      "crystallography": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.2934804019969306,
+        "size": 9549970,
+        "text_ok": true,
+        "wall_seconds": 0.42864765299964347
+      },
+      "google-doc": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.09091860500120674,
+        "size": 80214,
+        "text_ok": true,
+        "wall_seconds": 0.21999276699716575
+      },
+      "imagemagick-images": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.08556404800037853,
+        "size": 14172,
+        "text_ok": true,
+        "wall_seconds": 0.2172981500007154
+      },
+      "irbookonlinereading": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 3.6703723469981924,
+        "size": 7007860,
+        "text_ok": true,
+        "wall_seconds": 3.997074001999863
+      },
+      "libreoffice-writer": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07528320199708105,
+        "size": 12563,
+        "text_ok": true,
+        "wall_seconds": 0.20560377099900506
+      },
+      "pdfkit": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.07956616499723168,
+        "size": 14375,
+        "text_ok": true,
+        "wall_seconds": 0.2108912789990427
+      },
+      "reportlab-overlay": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 0.0757079530012561,
+        "size": 13802,
+        "text_ok": true,
+        "wall_seconds": 0.20639787300024182
+      },
+      "tika-972174": {
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 2.905791703000432,
+        "size": 5692254,
+        "text_ok": true,
+        "wall_seconds": 3.214669328997843
+      }
+    }
+  }
+}
