@@ -177,1081 +177,1084 @@
     }
   },
   "environment": {
-    "cpu_count": 16,
+    "cpu_count": 8,
     "date": "2026-10-24",
-    "processor": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-    "python": "3.15.0",
-    "system": "Linux 7.0.0-38-generic"
+    "processor": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+    "python": "3.13.3",
+    "system": "Linux 6.8.0-147-generic"
   },
   "format": 1,
   "runs": {
     "ghostscript": {
       "1707.09725": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.3097935400001006,
+        "seconds": 2.98136862499814,
         "size": 3417849,
         "text_ok": false,
-        "wall_seconds": 2.3097935400001006
+        "wall_seconds": 2.98136862499814
       },
       "2021_book_security": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.2989043619891163,
+        "seconds": 2.665799827002047,
         "size": 3724192,
         "text_ok": true,
-        "wall_seconds": 2.2989043619891163
+        "wall_seconds": 2.665799827002047
       },
       "2201.00069": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.2122736820019782,
+        "seconds": 1.6077664849944995,
         "size": 2640082,
         "text_ok": false,
-        "wall_seconds": 1.2122736820019782
+        "wall_seconds": 1.6077664849944995
       },
       "2201.00214": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.4923411549971206,
+        "seconds": 2.926920035002695,
         "size": 2481592,
         "text_ok": true,
-        "wall_seconds": 2.4923411549971206
+        "wall_seconds": 2.926920035002695
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.2338143800006947,
+        "seconds": 1.5616644239999005,
         "size": 11558869,
         "text_ok": false,
-        "wall_seconds": 1.2338143800006947
+        "wall_seconds": 1.5616644239999005
       },
       "FTX-claim": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.27693956599978264,
+        "seconds": 0.33783751799637685,
         "size": 3822257,
         "text_ok": true,
-        "wall_seconds": 0.27693956599978264
+        "wall_seconds": 0.33783751799637685
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.9643600760027766,
+        "seconds": 2.5813901820001774,
         "size": 2085225,
         "text_ok": false,
-        "wall_seconds": 1.9643600760027766
+        "wall_seconds": 2.5813901820001774
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 5.859877309005242,
-        "size": 9404141,
+        "seconds": 7.325057323003421,
+        "size": 9404154,
         "text_ok": false,
-        "wall_seconds": 5.859877309005242
+        "wall_seconds": 7.325057323003421
       },
       "USC-EMBA": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 5.677266655999119,
-        "size": 9767586,
+        "seconds": 7.041630492996774,
+        "size": 9767598,
         "text_ok": false,
-        "wall_seconds": 5.677266655999119
+        "wall_seconds": 7.041630492996774
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 4.058850672998233,
+        "seconds": 5.099912907004182,
         "size": 9937783,
         "text_ok": false,
-        "wall_seconds": 4.058850672998233
+        "wall_seconds": 5.099912907004182
       },
       "cmyk-image": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06205409701215103,
+        "seconds": 0.05899951000174042,
         "size": 2168,
         "text_ok": true,
-        "wall_seconds": 0.06205409701215103
+        "wall_seconds": 0.05899951000174042
       },
       "crystallography": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.5351972640055465,
+        "seconds": 1.8351080540014664,
         "size": 8902950,
         "text_ok": true,
-        "wall_seconds": 1.5351972640055465
+        "wall_seconds": 1.8351080540014664
       },
       "google-doc": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.08429852899280377,
+        "seconds": 0.08994803799578222,
         "size": 64259,
         "text_ok": false,
-        "wall_seconds": 0.08429852899280377
+        "wall_seconds": 0.08994803799578222
       },
       "imagemagick-images": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.11745810799766332,
+        "seconds": 0.1449589819967514,
         "size": 12144,
         "text_ok": true,
-        "wall_seconds": 0.11745810799766332
+        "wall_seconds": 0.1449589819967514
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 4.972125143991434,
+        "seconds": 6.354105537000578,
         "size": 4773293,
         "text_ok": false,
-        "wall_seconds": 4.972125143991434
+        "wall_seconds": 6.354105537000578
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06668927399732638,
+        "seconds": 0.06798499800061109,
         "size": 14089,
         "text_ok": true,
-        "wall_seconds": 0.06668927399732638
+        "wall_seconds": 0.06798499800061109
       },
       "pdfkit": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.0571535819908604,
+        "seconds": 0.06964546499511926,
         "size": 6857,
         "text_ok": true,
-        "wall_seconds": 0.0571535819908604
+        "wall_seconds": 0.06964546499511926
       },
       "reportlab-overlay": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06884486800117884,
+        "seconds": 0.07251700799679384,
         "size": 8029,
         "text_ok": true,
-        "wall_seconds": 0.06884486800117884
+        "wall_seconds": 0.07251700799679384
       },
       "tika-972174": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.789874392998172,
+        "seconds": 2.428660926001612,
         "size": 3194207,
         "text_ok": false,
-        "wall_seconds": 1.789874392998172
+        "wall_seconds": 2.428660926001612
       }
     },
     "pikepdf": {
       "1707.09725": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.4537266019906383,
+        "seconds": 1.7949771370040253,
         "size": 8438863,
         "text_ok": true,
-        "wall_seconds": 1.5837112809967948
+        "wall_seconds": 1.9242829450013232
       },
       "2021_book_security": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.35098879400175065,
+        "seconds": 0.42918546099826926,
         "size": 3079317,
         "text_ok": true,
-        "wall_seconds": 0.4774940310016973
+        "wall_seconds": 0.5616200509975897
       },
       "2201.00069": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.139616414991906,
+        "seconds": 2.7688004649971845,
         "size": 15706366,
         "text_ok": true,
-        "wall_seconds": 2.2687904000049457
+        "wall_seconds": 2.8958931979941553
       },
       "2201.00214": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.53512583799602,
+        "seconds": 0.7633949560040492,
         "size": 2442178,
         "text_ok": true,
-        "wall_seconds": 0.6638140400027623
+        "wall_seconds": 0.8927771259986912
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 162222080,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.1571102099987911,
+        "seconds": 0.17584081200038781,
         "size": 11530150,
         "text_ok": true,
-        "wall_seconds": 0.2940128600021126
+        "wall_seconds": 0.3038229850062635
       },
       "FTX-claim": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.2305485429969849,
+        "seconds": 0.2888897619995987,
         "size": 4956654,
         "text_ok": true,
-        "wall_seconds": 0.3466557360079605
+        "wall_seconds": 0.4158747769979527
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 154488832,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.6892946169973584,
+        "seconds": 0.8065892390004592,
         "size": 5377490,
         "text_ok": true,
-        "wall_seconds": 0.8226745419960935
+        "wall_seconds": 0.939816673999303
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 246304768,
+        "max_rss_bytes": 241090560,
         "pages_ok": true,
-        "seconds": 1.7120169440022437,
+        "seconds": 2.0776896989991656,
         "size": 7760747,
         "text_ok": true,
-        "wall_seconds": 1.9796135859942297
+        "wall_seconds": 2.340462348998699
       },
       "USC-EMBA": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.0525095509947278,
+        "seconds": 2.920610200999363,
         "size": 15224063,
         "text_ok": true,
-        "wall_seconds": 2.186715569012449
+        "wall_seconds": 3.105749348993413
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.7464048239926342,
+        "seconds": 2.095911240998248,
         "size": 10111904,
         "text_ok": true,
-        "wall_seconds": 1.8705739269935293
+        "wall_seconds": 2.2289368269994156
       },
       "cmyk-image": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07992178499989677,
+        "seconds": 0.09428155900241109,
         "size": 444059,
         "text_ok": true,
-        "wall_seconds": 0.20658695200108923
+        "wall_seconds": 0.2311815380016924
       },
       "crystallography": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.37489574200299103,
+        "seconds": 0.5859838890028186,
         "size": 9511211,
         "text_ok": true,
-        "wall_seconds": 0.5057282560010208
+        "wall_seconds": 0.7509293449984398
       },
       "google-doc": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.04793256800621748,
+        "seconds": 0.04536937800003216,
         "size": 74198,
         "text_ok": true,
-        "wall_seconds": 0.17562506800459232
+        "wall_seconds": 0.17848117899848148
       },
       "imagemagick-images": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.04291660600574687,
+        "seconds": 0.037387520002084784,
         "size": 9220,
         "text_ok": true,
-        "wall_seconds": 0.1615187510033138
+        "wall_seconds": 0.16464523299509892
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.9939136520115426,
+        "seconds": 1.2513109960054862,
         "size": 5021691,
         "text_ok": true,
-        "wall_seconds": 1.1219375240034424
+        "wall_seconds": 1.440762143000029
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.042496264999499545,
+        "seconds": 0.04242646700004116,
         "size": 12050,
         "text_ok": true,
-        "wall_seconds": 0.16550383499998134
+        "wall_seconds": 0.18927574199915398
       },
       "pdfkit": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.04351961000065785,
+        "seconds": 0.03871807899849955,
         "size": 12714,
         "text_ok": true,
-        "wall_seconds": 0.17071967299852986
+        "wall_seconds": 0.17054309700324666
       },
       "reportlab-overlay": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.04281006500241347,
+        "seconds": 0.043585403996985406,
         "size": 12657,
         "text_ok": true,
-        "wall_seconds": 0.1733757980109658
+        "wall_seconds": 0.17634975699911593
       },
       "tika-972174": {
-        "max_rss_bytes": 162222080,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.34110777199384756,
+        "seconds": 0.3710887439956423,
         "size": 3356364,
         "text_ok": true,
-        "wall_seconds": 0.4808261069993023
+        "wall_seconds": 0.5157033290015534
       }
     },
     "pymupdf": {
       "1707.09725": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.29316519500571303,
+        "seconds": 0.43594694000057643,
         "size": 6845070,
         "text_ok": true,
-        "wall_seconds": 0.44832547899568453
+        "wall_seconds": 0.6057767849997617
       },
       "2021_book_security": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.14878712099744,
+        "seconds": 1.4257768469979055,
         "size": 3090890,
         "text_ok": true,
-        "wall_seconds": 1.3067968099931022
+        "wall_seconds": 1.5819938009954058
       },
       "2201.00069": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.1310670249949908,
+        "seconds": 0.18314613700204063,
         "size": 15276735,
         "text_ok": true,
-        "wall_seconds": 0.28607458200713154
+        "wall_seconds": 0.3682716699986486
       },
       "2201.00214": {
-        "max_rss_bytes": 164188160,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.10781310500169639,
+        "seconds": 0.13494171400088817,
         "size": 2441543,
         "text_ok": true,
-        "wall_seconds": 0.2625419269897975
+        "wall_seconds": 0.3168427470009192
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.9191789650067221,
+        "seconds": 1.065985898996587,
         "size": 11646636,
         "text_ok": true,
-        "wall_seconds": 1.0720196829934139
+        "wall_seconds": 1.2202223219937878
       },
       "FTX-claim": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.10141064999334048,
+        "seconds": 0.10022272700007306,
         "size": 5035758,
         "text_ok": true,
-        "wall_seconds": 0.2566456310014473
+        "wall_seconds": 0.25623826200171607
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.1594014369911747,
+        "seconds": 1.980260227996041,
         "size": 5286517,
         "text_ok": true,
-        "wall_seconds": 1.314364170000772
+        "wall_seconds": 2.147612205997575
       },
       "PDF32000_2008": {
-        "error": "timeout after 900 s",
-        "max_rss_bytes": 167464960,
-        "wall_seconds": 900.0128560220037
+        "max_rss_bytes": 181157888,
+        "pages_ok": true,
+        "seconds": 836.0604481200062,
+        "size": 8374834,
+        "text_ok": true,
+        "wall_seconds": 836.2355981330038
       },
       "USC-EMBA": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.3616109470021911,
+        "seconds": 0.41463017299975036,
         "size": 13396053,
         "text_ok": true,
-        "wall_seconds": 0.5185724839975592
+        "wall_seconds": 0.5673139530044864
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.20900119200814515,
+        "seconds": 0.29754684300132794,
         "size": 10093849,
         "text_ok": true,
-        "wall_seconds": 0.3627961059974041
+        "wall_seconds": 0.4544921639972017
       },
       "cmyk-image": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09488025000609923,
+        "seconds": 0.09119178899709368,
         "size": 444080,
         "text_ok": true,
-        "wall_seconds": 0.24441492000187282
+        "wall_seconds": 0.24775208500068402
       },
       "crystallography": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.11975984800665174,
+        "seconds": 0.12932053699478274,
         "size": 9499772,
         "text_ok": true,
-        "wall_seconds": 0.2684425059997011
+        "wall_seconds": 0.2812797509977827
       },
       "google-doc": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09574345299915876,
+        "seconds": 0.09251041799871018,
         "size": 73974,
         "text_ok": true,
-        "wall_seconds": 0.24020629600272514
+        "wall_seconds": 0.25036382699909154
       },
       "imagemagick-images": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09588405799877364,
+        "seconds": 0.09142325699940557,
         "size": 6812,
         "text_ok": true,
-        "wall_seconds": 0.24955510700237937
+        "wall_seconds": 0.24396772700129077
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 12.89326231899031,
+        "seconds": 12.410700129999896,
         "size": 5110108,
         "text_ok": true,
-        "wall_seconds": 13.042135907002375
+        "wall_seconds": 12.562662215001183
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09438632101227995,
+        "seconds": 0.0879346709989477,
         "size": 12089,
         "text_ok": true,
-        "wall_seconds": 0.24819614199805073
+        "wall_seconds": 0.23559547300101258
       },
       "pdfkit": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09772412800521124,
+        "seconds": 0.09396090300288051,
         "size": 12780,
         "text_ok": true,
-        "wall_seconds": 0.2517686390056042
+        "wall_seconds": 0.25180773500323994
       },
       "reportlab-overlay": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09678408999752719,
+        "seconds": 0.08988498200051254,
         "size": 12741,
         "text_ok": true,
-        "wall_seconds": 0.2502405760023976
+        "wall_seconds": 0.24087495300045703
       },
       "tika-972174": {
-        "max_rss_bytes": 167464960,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 9.278915578994201,
+        "seconds": 10.499473351999768,
         "size": 3340423,
         "text_ok": true,
-        "wall_seconds": 9.42384451799444
+        "wall_seconds": 10.655182280999725
       }
     },
     "pypdf": {
       "1707.09725": {
-        "max_rss_bytes": 123146240,
+        "max_rss_bytes": 180633600,
         "pages_ok": true,
-        "seconds": 0.6356761999923037,
+        "seconds": 0.6692640719993506,
         "size": 7244075,
         "text_ok": true,
-        "wall_seconds": 0.8196102119982243
+        "wall_seconds": 0.845105700998829
       },
       "2021_book_security": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181026816,
         "pages_ok": true,
-        "seconds": 1.31341716600582,
+        "seconds": 1.4833037550015433,
         "size": 3991754,
         "text_ok": true,
-        "wall_seconds": 1.5589102400117554
+        "wall_seconds": 1.7093246599979466
       },
       "2201.00069": {
-        "max_rss_bytes": 123146240,
+        "max_rss_bytes": 180633600,
         "pages_ok": true,
-        "seconds": 0.24864969900227152,
+        "seconds": 0.26843425699917134,
         "size": 15392034,
         "text_ok": true,
-        "wall_seconds": 0.39854854899749625
+        "wall_seconds": 0.4111298540010466
       },
       "2201.00214": {
-        "max_rss_bytes": 123146240,
+        "max_rss_bytes": 178573312,
         "pages_ok": true,
-        "seconds": 0.15322276100050658,
+        "seconds": 0.5472476579998329,
         "size": 2503734,
         "text_ok": true,
-        "wall_seconds": 0.2921665600006236
+        "wall_seconds": 0.7140354869989096
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 140070912,
+        "max_rss_bytes": 181026816,
         "pages_ok": true,
-        "seconds": 0.593147683001007,
+        "seconds": 0.7219375709973974,
         "size": 12136837,
         "text_ok": true,
-        "wall_seconds": 0.7699086079956032
+        "wall_seconds": 0.9112554599996656
       },
       "FTX-claim": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07924880599603057,
+        "seconds": 0.0903825040004449,
         "size": 5037715,
         "text_ok": true,
-        "wall_seconds": 0.2163939849997405
+        "wall_seconds": 0.22060235899698455
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 124014592,
+        "max_rss_bytes": 180633600,
         "pages_ok": true,
-        "seconds": 0.8020446910086321,
+        "seconds": 0.8227343960024882,
         "size": 5728017,
         "text_ok": true,
-        "wall_seconds": 1.006576927000424
+        "wall_seconds": 1.0071049320031307
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 600707072,
+        "max_rss_bytes": 669454336,
         "pages_ok": true,
-        "seconds": 46.67914445299539,
+        "seconds": 61.5145377230001,
         "size": 23520400,
         "text_ok": true,
-        "wall_seconds": 48.33307327100192
+        "wall_seconds": 62.925949429001776
       },
       "USC-EMBA": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181026816,
         "pages_ok": true,
-        "seconds": 0.8846849830006249,
+        "seconds": 0.9025131449998298,
         "size": 16202818,
         "text_ok": true,
-        "wall_seconds": 1.0865201400010847
+        "wall_seconds": 1.0902250850012933
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.4184733319998486,
+        "seconds": 0.42619071700028144,
         "size": 10303515,
         "text_ok": true,
-        "wall_seconds": 0.5850780589971691
+        "wall_seconds": 0.5780580940008804
       },
       "cmyk-image": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06994472999940626,
+        "seconds": 0.07788773400170612,
         "size": 444058,
         "text_ok": true,
-        "wall_seconds": 0.20146434000344016
+        "wall_seconds": 0.20776585999919917
       },
       "crystallography": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181026816,
         "pages_ok": true,
-        "seconds": 0.1907793669961393,
+        "seconds": 0.20204252300027292,
         "size": 9550024,
         "text_ok": true,
-        "wall_seconds": 0.3335025760025019
+        "wall_seconds": 0.3459031200000027
       },
       "google-doc": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.0826049870083807,
+        "seconds": 0.08937594500093837,
         "size": 80299,
         "text_ok": true,
-        "wall_seconds": 0.20498905799468048
+        "wall_seconds": 0.2212751830011257
       },
       "imagemagick-images": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07345017099578399,
+        "seconds": 0.08426554600009695,
         "size": 14053,
         "text_ok": true,
-        "wall_seconds": 0.20530009300273377
+        "wall_seconds": 0.21529243100303574
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181026816,
         "pages_ok": true,
-        "seconds": 2.81743016600376,
+        "seconds": 2.7986474150020513,
         "size": 7030821,
         "text_ok": true,
-        "wall_seconds": 3.220477498995024
+        "wall_seconds": 3.129411814999912
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06781635699735489,
+        "seconds": 0.075399681001727,
         "size": 12565,
         "text_ok": true,
-        "wall_seconds": 0.2179237709933659
+        "wall_seconds": 0.20621484999719542
       },
       "pdfkit": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.06852926799911074,
+        "seconds": 0.07652232799955527,
         "size": 14375,
         "text_ok": true,
-        "wall_seconds": 0.19993515500391368
+        "wall_seconds": 0.20561808700222173
       },
       "reportlab-overlay": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.0675627010059543,
+        "seconds": 0.07628312299857498,
         "size": 13874,
         "text_ok": true,
-        "wall_seconds": 0.20006973799900152
+        "wall_seconds": 0.20777935500154854
       },
       "tika-972174": {
-        "max_rss_bytes": 139546624,
+        "max_rss_bytes": 180764672,
         "pages_ok": true,
-        "seconds": 2.764305570992292,
+        "seconds": 3.252138151001418,
         "size": 5716277,
         "text_ok": true,
-        "wall_seconds": 3.1216562730114674
+        "wall_seconds": 3.6323118729997077
       }
     },
     "pypdf-all": {
       "1707.09725": {
-        "max_rss_bytes": 245911552,
+        "max_rss_bytes": 250437632,
         "pages_ok": true,
-        "seconds": 7.6885413710115245,
+        "seconds": 8.40572762699594,
         "size": 7239615,
         "text_ok": true,
-        "wall_seconds": 7.915373071999056
+        "wall_seconds": 8.593167548002384
       },
       "2021_book_security": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.7051827670075,
+        "seconds": 1.9142891350056743,
         "size": 3925388,
         "text_ok": true,
-        "wall_seconds": 1.9596374450047733
+        "wall_seconds": 2.1414073089981684
       },
       "2201.00069": {
-        "max_rss_bytes": 237150208,
+        "max_rss_bytes": 253931520,
         "pages_ok": true,
-        "seconds": 0.7813451729889493,
+        "seconds": 0.9228689430019585,
         "size": 15387658,
         "text_ok": true,
-        "wall_seconds": 0.9532064810045995
+        "wall_seconds": 1.0726995160002843
       },
       "2201.00214": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.2285834310023347,
+        "seconds": 1.401919869997073,
         "size": 2495124,
         "text_ok": true,
-        "wall_seconds": 1.3787655310006812
+        "wall_seconds": 1.5421961620013462
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.7405734149942873,
+        "seconds": 0.8121620699967025,
         "size": 12048187,
         "text_ok": true,
-        "wall_seconds": 0.9370758430013666
+        "wall_seconds": 0.9848023839949747
       },
       "FTX-claim": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.14406958600739017,
+        "seconds": 0.17198914699838497,
         "size": 5037555,
         "text_ok": true,
-        "wall_seconds": 0.28226060900487937
+        "wall_seconds": 0.3059961370017845
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.2758637240040116,
+        "seconds": 1.344639818998985,
         "size": 5720011,
         "text_ok": true,
-        "wall_seconds": 1.498595815995941
+        "wall_seconds": 1.5324940850041457
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 662319104,
+        "max_rss_bytes": 715722752,
         "pages_ok": true,
-        "seconds": 52.46474620900699,
+        "seconds": 65.13459133499418,
         "size": 21579830,
         "text_ok": true,
-        "wall_seconds": 54.69416660400748
+        "wall_seconds": 66.63815225200233
       },
       "USC-EMBA": {
-        "max_rss_bytes": 320749568,
+        "max_rss_bytes": 319029248,
         "pages_ok": true,
-        "seconds": 1.718251533995499,
+        "seconds": 1.9691201169989654,
         "size": 13839333,
         "text_ok": true,
-        "wall_seconds": 1.957817973991041
+        "wall_seconds": 2.176647337000759
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 3.0887905999989016,
+        "seconds": 3.6639864160024445,
         "size": 10227789,
         "text_ok": true,
-        "wall_seconds": 3.265238944994053
+        "wall_seconds": 3.8255603880024864
       },
       "cmyk-image": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07683276600437239,
+        "seconds": 0.08753150400298182,
         "size": 444085,
         "text_ok": true,
-        "wall_seconds": 0.21107291799853556
+        "wall_seconds": 0.22357070299767656
       },
       "crystallography": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.3455568380013574,
+        "seconds": 0.40832256299472647,
         "size": 9540433,
         "text_ok": true,
-        "wall_seconds": 0.493476693998673
+        "wall_seconds": 0.5497878759997548
       },
       "google-doc": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.0890812290017493,
+        "seconds": 0.10468765400582924,
         "size": 80140,
         "text_ok": true,
-        "wall_seconds": 0.22435023699654266
+        "wall_seconds": 0.23968225499993423
       },
       "imagemagick-images": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07820524700218812,
+        "seconds": 0.0916248329958762,
         "size": 9751,
         "text_ok": true,
-        "wall_seconds": 0.21487081999657676
+        "wall_seconds": 0.22570992699911585
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 221777920,
+        "max_rss_bytes": 210829312,
         "pages_ok": true,
-        "seconds": 9.48618030801299,
+        "seconds": 10.891828423998959,
         "size": 6974002,
         "text_ok": true,
-        "wall_seconds": 9.908850270003313
+        "wall_seconds": 11.234048883001378
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.0708100110059604,
+        "seconds": 0.07815409699833253,
         "size": 12563,
         "text_ok": true,
-        "wall_seconds": 0.20527076699363533
+        "wall_seconds": 0.20989233200089075
       },
       "pdfkit": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07268634899810422,
+        "seconds": 0.08048589199461276,
         "size": 14375,
         "text_ok": true,
-        "wall_seconds": 0.1974743850005325
+        "wall_seconds": 0.21136799700616393
       },
       "reportlab-overlay": {
-        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 128230370324368) not found!",
-        "max_rss_bytes": 154357760,
-        "wall_seconds": 0.23787334701046348
+        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 139880192673168) not found!",
+        "max_rss_bytes": 181157888,
+        "wall_seconds": 0.2133250390033936
       },
       "tika-972174": {
-        "max_rss_bytes": 154357760,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.8123381580080604,
+        "seconds": 2.9102625379964593,
         "size": 4842715,
         "text_ok": true,
-        "wall_seconds": 3.169590398989385
+        "wall_seconds": 3.231136635004077
       }
     },
     "pypdf-dedupe": {
       "1707.09725": {
-        "max_rss_bytes": 244768768,
+        "max_rss_bytes": 250068992,
         "pages_ok": true,
-        "seconds": 8.255048254999565,
+        "seconds": 8.195179779999307,
         "size": 7239715,
         "text_ok": true,
-        "wall_seconds": 8.706136025997694
+        "wall_seconds": 8.385932212000625
       },
       "2021_book_security": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 4.013495840001269,
+        "seconds": 1.5555608060021768,
         "size": 3931827,
         "text_ok": true,
-        "wall_seconds": 4.508098396996502
+        "wall_seconds": 1.7734182770000189
       },
       "2201.00069": {
-        "max_rss_bytes": 236904448,
+        "max_rss_bytes": 253833216,
         "pages_ok": true,
-        "seconds": 1.0935845479980344,
+        "seconds": 0.9343876870043459,
         "size": 15387746,
         "text_ok": true,
-        "wall_seconds": 1.3506814790016506
+        "wall_seconds": 1.085113540997554
       },
       "2201.00214": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.38861227499728557,
+        "seconds": 0.27033840699732536,
         "size": 2502200,
         "text_ok": true,
-        "wall_seconds": 0.6394602450018283
+        "wall_seconds": 0.4157890069982386
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.800047431999701,
+        "seconds": 0.7065479269949719,
         "size": 12091462,
         "text_ok": true,
-        "wall_seconds": 2.1955314340011682
+        "wall_seconds": 0.875201520997507
       },
       "FTX-claim": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.157989372004522,
+        "seconds": 0.16607619700516807,
         "size": 5037715,
         "text_ok": true,
-        "wall_seconds": 0.30852871300885454
+        "wall_seconds": 0.2975908860025811
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.4102651869907277,
+        "seconds": 1.1338350730002276,
         "size": 5720011,
         "text_ok": true,
-        "wall_seconds": 1.6744082479999634
+        "wall_seconds": 1.3247031620048801
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 647655424,
+        "max_rss_bytes": 712392704,
         "pages_ok": true,
-        "seconds": 61.319438571998035,
+        "seconds": 61.88915467100014,
         "size": 21712316,
         "text_ok": true,
-        "wall_seconds": 64.86769935200573
+        "wall_seconds": 63.39627677899989
       },
       "USC-EMBA": {
-        "max_rss_bytes": 317390848,
+        "max_rss_bytes": 318349312,
         "pages_ok": true,
-        "seconds": 3.120927245996427,
+        "seconds": 1.7427580520015908,
         "size": 13888518,
         "text_ok": true,
-        "wall_seconds": 3.542385833992739
+        "wall_seconds": 1.9454249409973272
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.6807331689924467,
+        "seconds": 0.6435487530034152,
         "size": 10290646,
         "text_ok": true,
-        "wall_seconds": 0.851871767998091
+        "wall_seconds": 0.795912767003756
       },
       "cmyk-image": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.08360308699775487,
+        "seconds": 0.08634492400597082,
         "size": 444058,
         "text_ok": true,
-        "wall_seconds": 0.22722258500289172
+        "wall_seconds": 0.2191354929964291
       },
       "crystallography": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.44336381199536845,
+        "seconds": 0.2919400390019291,
         "size": 9540495,
         "text_ok": true,
-        "wall_seconds": 0.6882054599991534
+        "wall_seconds": 0.42878210499475244
       },
       "google-doc": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.09267181999166496,
+        "seconds": 0.09568836900143651,
         "size": 80225,
         "text_ok": true,
-        "wall_seconds": 0.2404551799991168
+        "wall_seconds": 0.2287020650037448
       },
       "imagemagick-images": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.08303743299620692,
+        "seconds": 0.08785076699859928,
         "size": 9632,
         "text_ok": true,
-        "wall_seconds": 0.2287200509890681
+        "wall_seconds": 0.2178943960025208
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 209313792,
+        "max_rss_bytes": 207011840,
         "pages_ok": true,
-        "seconds": 12.54721314800554,
+        "seconds": 9.476067335002881,
         "size": 6996963,
         "text_ok": true,
-        "wall_seconds": 13.059428025997477
+        "wall_seconds": 9.812195466998674
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.08167880799737759,
+        "seconds": 0.07651795899437275,
         "size": 12565,
         "text_ok": true,
-        "wall_seconds": 0.23442500999954063
+        "wall_seconds": 0.20575931000348646
       },
       "pdfkit": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.07983814700855874,
+        "seconds": 0.08196170999872265,
         "size": 14375,
         "text_ok": true,
-        "wall_seconds": 0.2218750500032911
+        "wall_seconds": 0.21800450400041882
       },
       "reportlab-overlay": {
-        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 130040471039888) not found!",
-        "max_rss_bytes": 151867392,
-        "wall_seconds": 0.24925222199817654
+        "error": "pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 137934123795856) not found!",
+        "max_rss_bytes": 181157888,
+        "wall_seconds": 0.2616729649962508
       },
       "tika-972174": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 6.24947180399613,
+        "seconds": 2.6881760059986846,
         "size": 4867266,
         "text_ok": true,
-        "wall_seconds": 6.898060713006998
+        "wall_seconds": 3.0029059939988656
       }
     },
     "pypdf-streams": {
       "1707.09725": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.6799258190003457,
+        "seconds": 0.7763817769991874,
         "size": 7244019,
         "text_ok": true,
-        "wall_seconds": 0.8734429449978052
+        "wall_seconds": 0.9527859249974426
       },
       "2021_book_security": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 2.4242416889901506,
+        "seconds": 1.6692069609998725,
         "size": 3985483,
         "text_ok": true,
-        "wall_seconds": 2.7310198129998753
+        "wall_seconds": 1.8827467020018958
       },
       "2201.00069": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.25712831600685604,
+        "seconds": 0.3155808720002824,
         "size": 15391988,
         "text_ok": true,
-        "wall_seconds": 0.40542021600413136
+        "wall_seconds": 0.4862814640000579
       },
       "2201.00214": {
-        "max_rss_bytes": 142954496,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.0144043910113396,
+        "seconds": 1.3075278469987097,
         "size": 2496658,
         "text_ok": true,
-        "wall_seconds": 1.142572938988451
+        "wall_seconds": 1.4432112499998766
       },
       "Ballinasloe_WS": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.817319291003514,
+        "seconds": 0.6871786679985235,
         "size": 12093898,
         "text_ok": true,
-        "wall_seconds": 2.2250946720014326
+        "wall_seconds": 0.854304996002611
       },
       "FTX-claim": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.08409189399390016,
+        "seconds": 0.09124247799991281,
         "size": 5037615,
         "text_ok": true,
-        "wall_seconds": 0.23146185399673413
+        "wall_seconds": 0.2217762069994933
       },
       "GeoTopo-book": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.980704980000155,
+        "seconds": 1.07153458600078,
         "size": 5728017,
         "text_ok": true,
-        "wall_seconds": 1.1741750369983492
+        "wall_seconds": 1.257241735002026
       },
       "PDF32000_2008": {
-        "max_rss_bytes": 614371328,
+        "max_rss_bytes": 671899648,
         "pages_ok": true,
-        "seconds": 56.16976570899715,
+        "seconds": 62.590716900998814,
         "size": 23387914,
         "text_ok": true,
-        "wall_seconds": 58.40653453698906
+        "wall_seconds": 64.07155860900093
       },
       "USC-EMBA": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 1.4911299660016084,
+        "seconds": 1.0471410729987838,
         "size": 16152073,
         "text_ok": true,
-        "wall_seconds": 1.8117476359911961
+        "wall_seconds": 1.2354889989983349
       },
       "WBT-whitepaper": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 4.330394562988658,
+        "seconds": 3.5079322019992105,
         "size": 10240658,
         "text_ok": true,
-        "wall_seconds": 4.526833826996153
+        "wall_seconds": 3.6612770760002604
       },
       "cmyk-image": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.1310603089950746,
+        "seconds": 0.08119145299860975,
         "size": 444085,
         "text_ok": true,
-        "wall_seconds": 0.3782439279893879
+        "wall_seconds": 0.2130046649981523
       },
       "crystallography": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.34043516700330656,
+        "seconds": 0.2934804019969306,
         "size": 9549970,
         "text_ok": true,
-        "wall_seconds": 0.5162555770075414
+        "wall_seconds": 0.42864765299964347
       },
       "google-doc": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.1769331920077093,
+        "seconds": 0.09091860500120674,
         "size": 80214,
         "text_ok": true,
-        "wall_seconds": 0.4302801510057179
+        "wall_seconds": 0.21999276699716575
       },
       "imagemagick-images": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.13379620399791747,
+        "seconds": 0.08556404800037853,
         "size": 14172,
         "text_ok": true,
-        "wall_seconds": 0.35476752000977285
+        "wall_seconds": 0.2172981500007154
       },
       "irbookonlinereading": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 4.145358437002869,
+        "seconds": 3.6703723469981924,
         "size": 7007860,
         "text_ok": true,
-        "wall_seconds": 5.011926917999517
+        "wall_seconds": 3.997074001999863
       },
       "libreoffice-writer": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.14666189800482243,
+        "seconds": 0.07528320199708105,
         "size": 12563,
         "text_ok": true,
-        "wall_seconds": 0.3855643129936652
+        "wall_seconds": 0.20560377099900506
       },
       "pdfkit": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.10409224599425215,
+        "seconds": 0.07956616499723168,
         "size": 14375,
         "text_ok": true,
-        "wall_seconds": 0.3227113589964574
+        "wall_seconds": 0.2108912789990427
       },
       "reportlab-overlay": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 0.12215545299113728,
+        "seconds": 0.0757079530012561,
         "size": 13802,
         "text_ok": true,
-        "wall_seconds": 0.3594157110055676
+        "wall_seconds": 0.20639787300024182
       },
       "tika-972174": {
-        "max_rss_bytes": 151867392,
+        "max_rss_bytes": 181157888,
         "pages_ok": true,
-        "seconds": 7.4526130620070035,
+        "seconds": 2.905791703000432,
         "size": 5692254,
         "text_ok": true,
-        "wall_seconds": 8.174668354011374
+        "wall_seconds": 3.214669328997843
       }
     }
   }

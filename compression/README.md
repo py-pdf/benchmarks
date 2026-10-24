@@ -21,8 +21,8 @@ verified by SHA-256; outputs are written to `compression/output/`.
 ## Environment
 
 * Date: 2026-10-24
-* Processor: AMD Ryzen 7 PRO 4750U with Radeon Graphics (16 cores)
-* System: Linux 7.0.0-38-generic, Python 3.15.0
+* Processor: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz (8 cores)
+* System: Linux 6.8.0-147-generic, Python 3.13.3
 
 ## Compressors
 
@@ -44,13 +44,13 @@ differs from the input are counted with the input size.
 
 | Compressor    |     Total | Total vs. input |  Median | Smallest |    Time | Problems |
 | :------------ | --------: | --------------: | ------: | -------: | ------: | -------: |
-| pypdf         | 119.1 MiB |         103.3 % | 100.2 % |        0 |  58.0 s |        0 |
-| pypdf-streams | 118.8 MiB |         103.1 % | 100.0 % |        0 |  82.0 s |        0 |
-| pypdf-dedupe  | 114.2 MiB |          99.1 % | 100.0 % |        0 | 101.9 s |        1 |
-| pypdf-all     | 113.9 MiB |          98.8 % | 100.0 % |        0 |  83.9 s |        1 |
-| pikepdf       |  98.3 MiB |          85.3 % |  95.6 % |        5 |  13.1 s |        0 |
-| pymupdf       | 108.8 MiB |          94.4 % |  95.9 % |        9 |  27.3 s |        1 |
-| ghostscript   | 112.9 MiB |          97.9 % | 100.0 % |        5 |  36.1 s |       10 |
+| pypdf         | 119.1 MiB |         103.3 % | 100.2 % |        0 |  74.2 s |        0 |
+| pypdf-streams | 118.8 MiB |         103.1 % | 100.0 % |        0 |  80.4 s |        0 |
+| pypdf-dedupe  | 114.2 MiB |          99.1 % | 100.0 % |        0 |  90.1 s |        1 |
+| pypdf-all     | 113.9 MiB |          98.8 % | 100.0 % |        0 | 100.4 s |        1 |
+| pikepdf       |  98.3 MiB |          85.3 % |  95.6 % |        5 |  16.6 s |        0 |
+| pymupdf       |  95.4 MiB |          82.7 % |  93.6 % |        9 | 865.7 s |        0 |
+| ghostscript   | 112.9 MiB |          97.9 % | 100.0 % |        5 |  45.3 s |       10 |
 
 ## Documents
 
@@ -84,7 +84,7 @@ differs from the input are counted with the input size.
 | 1707.09725          |  99.0 % |        99.0 % |       99.0 % |    99.0 % | 115.4 % |  93.6 % | text differs |
 | 2201.00069          |  99.9 % |        99.9 % |       99.9 % |    99.9 % | 101.9 % |  99.1 % | text differs |
 | GeoTopo-book        | 107.6 % |       107.6 % |      107.5 % |   107.5 % | 101.1 % |  99.3 % | text differs |
-| PDF32000_2008       | 104.6 % |       104.0 % |       96.5 % |    95.9 % |  34.5 % |   error | text differs |
+| PDF32000_2008       | 104.6 % |       104.0 % |       96.5 % |    95.9 % |  34.5 % |  37.2 % | text differs |
 | tika-972174         | 146.4 % |       145.8 % |      124.6 % |   124.0 % |  85.9 % |  85.5 % | text differs |
 | Ballinasloe_WS      | 103.8 % |       103.4 % |      103.4 % |   103.1 % |  98.6 % |  99.6 % | text differs |
 | 2021_book_security  | 102.7 % |       102.6 % |      101.2 % |   101.0 % |  79.2 % |  79.5 % |       95.8 % |
@@ -102,60 +102,59 @@ differs from the input are counted with the input size.
 
 ## Time
 
-| Document            |   pypdf | pypdf-streams | pypdf-dedupe | pypdf-all | pikepdf | pymupdf |  ghostscript |
-| :------------------ | ------: | ------------: | -----------: | --------: | ------: | ------: | -----------: |
-| 2201.00214          |  0.15 s |        1.01 s |       0.39 s |    1.23 s |  0.54 s |  0.11 s |       2.49 s |
-| 1707.09725          |  0.64 s |        0.68 s |       8.26 s |    7.69 s |  1.45 s |  0.29 s | text differs |
-| 2201.00069          |  0.25 s |        0.26 s |       1.09 s |    0.78 s |  2.14 s |  0.13 s | text differs |
-| GeoTopo-book        |  0.80 s |        0.98 s |       1.41 s |    1.28 s |  0.69 s |  1.16 s | text differs |
-| PDF32000_2008       | 46.68 s |       56.17 s |      61.32 s |   52.46 s |  1.71 s |   error | text differs |
-| tika-972174         |  2.76 s |        7.45 s |       6.25 s |    2.81 s |  0.34 s |  9.28 s | text differs |
-| Ballinasloe_WS      |  0.59 s |        1.82 s |       1.80 s |    0.74 s |  0.16 s |  0.92 s | text differs |
-| 2021_book_security  |  1.31 s |        2.42 s |       4.01 s |    1.71 s |  0.35 s |  1.15 s |       2.30 s |
-| USC-EMBA            |  0.88 s |        1.49 s |       3.12 s |    1.72 s |  2.05 s |  0.36 s | text differs |
-| crystallography     |  0.19 s |        0.34 s |       0.44 s |    0.35 s |  0.37 s |  0.12 s |       1.54 s |
-| irbookonlinereading |  2.82 s |        4.15 s |      12.55 s |    9.49 s |  0.99 s | 12.89 s | text differs |
-| FTX-claim           |  0.08 s |        0.08 s |       0.16 s |    0.14 s |  0.23 s |  0.10 s |       0.28 s |
-| WBT-whitepaper      |  0.42 s |        4.33 s |       0.68 s |    3.09 s |  1.75 s |  0.21 s | text differs |
-| libreoffice-writer  |  0.07 s |        0.15 s |       0.08 s |    0.07 s |  0.04 s |  0.09 s |       0.07 s |
-| google-doc          |  0.08 s |        0.18 s |       0.09 s |    0.09 s |  0.05 s |  0.10 s | text differs |
-| reportlab-overlay   |  0.07 s |        0.12 s |        error |     error |  0.04 s |  0.10 s |       0.07 s |
-| pdfkit              |  0.07 s |        0.10 s |       0.08 s |    0.07 s |  0.04 s |  0.10 s |       0.06 s |
-| imagemagick-images  |  0.07 s |        0.13 s |       0.08 s |    0.08 s |  0.04 s |  0.10 s |       0.12 s |
-| cmyk-image          |  0.07 s |        0.13 s |       0.08 s |    0.08 s |  0.08 s |  0.09 s |       0.06 s |
+| Document            |   pypdf | pypdf-streams | pypdf-dedupe | pypdf-all | pikepdf |  pymupdf |  ghostscript |
+| :------------------ | ------: | ------------: | -----------: | --------: | ------: | -------: | -----------: |
+| 2201.00214          |  0.55 s |        1.31 s |       0.27 s |    1.40 s |  0.76 s |   0.13 s |       2.93 s |
+| 1707.09725          |  0.67 s |        0.78 s |       8.20 s |    8.41 s |  1.79 s |   0.44 s | text differs |
+| 2201.00069          |  0.27 s |        0.32 s |       0.93 s |    0.92 s |  2.77 s |   0.18 s | text differs |
+| GeoTopo-book        |  0.82 s |        1.07 s |       1.13 s |    1.34 s |  0.81 s |   1.98 s | text differs |
+| PDF32000_2008       | 61.51 s |       62.59 s |      61.89 s |   65.13 s |  2.08 s | 836.06 s | text differs |
+| tika-972174         |  3.25 s |        2.91 s |       2.69 s |    2.91 s |  0.37 s |  10.50 s | text differs |
+| Ballinasloe_WS      |  0.72 s |        0.69 s |       0.71 s |    0.81 s |  0.18 s |   1.07 s | text differs |
+| 2021_book_security  |  1.48 s |        1.67 s |       1.56 s |    1.91 s |  0.43 s |   1.43 s |       2.67 s |
+| USC-EMBA            |  0.90 s |        1.05 s |       1.74 s |    1.97 s |  2.92 s |   0.41 s | text differs |
+| crystallography     |  0.20 s |        0.29 s |       0.29 s |    0.41 s |  0.59 s |   0.13 s |       1.84 s |
+| irbookonlinereading |  2.80 s |        3.67 s |       9.48 s |   10.89 s |  1.25 s |  12.41 s | text differs |
+| FTX-claim           |  0.09 s |        0.09 s |       0.17 s |    0.17 s |  0.29 s |   0.10 s |       0.34 s |
+| WBT-whitepaper      |  0.43 s |        3.51 s |       0.64 s |    3.66 s |  2.10 s |   0.30 s | text differs |
+| libreoffice-writer  |  0.08 s |        0.08 s |       0.08 s |    0.08 s |  0.04 s |   0.09 s |       0.07 s |
+| google-doc          |  0.09 s |        0.09 s |       0.10 s |    0.10 s |  0.05 s |   0.09 s | text differs |
+| reportlab-overlay   |  0.08 s |        0.08 s |        error |     error |  0.04 s |   0.09 s |       0.07 s |
+| pdfkit              |  0.08 s |        0.08 s |       0.08 s |    0.08 s |  0.04 s |   0.09 s |       0.07 s |
+| imagemagick-images  |  0.08 s |        0.09 s |       0.09 s |    0.09 s |  0.04 s |   0.09 s |       0.14 s |
+| cmyk-image          |  0.08 s |        0.08 s |       0.09 s |    0.09 s |  0.09 s |   0.09 s |       0.06 s |
 
 ## Peak memory (whole process)
 
 | Document            |     pypdf | pypdf-streams | pypdf-dedupe | pypdf-all |   pikepdf |   pymupdf |  ghostscript |
 | :------------------ | --------: | ------------: | -----------: | --------: | --------: | --------: | -----------: |
-| 2201.00214          | 117.4 MiB |     136.3 MiB |    144.8 MiB | 144.8 MiB | 147.2 MiB | 156.6 MiB |    159.7 MiB |
-| 1707.09725          | 117.4 MiB |     136.3 MiB |    233.4 MiB | 234.5 MiB | 147.2 MiB | 156.6 MiB | text differs |
-| 2201.00069          | 117.4 MiB |     136.3 MiB |    225.9 MiB | 226.2 MiB | 147.2 MiB | 156.6 MiB | text differs |
-| GeoTopo-book        | 118.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 147.3 MiB | 159.7 MiB | text differs |
-| PDF32000_2008       | 572.9 MiB |     585.9 MiB |    617.7 MiB | 631.6 MiB | 234.9 MiB |     error | text differs |
-| tika-972174         | 133.1 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 154.7 MiB | 159.7 MiB | text differs |
-| Ballinasloe_WS      | 133.6 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 154.7 MiB | 159.7 MiB | text differs |
-| 2021_book_security  | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| USC-EMBA            | 136.3 MiB |     144.8 MiB |    302.7 MiB | 305.9 MiB | 156.6 MiB | 159.7 MiB | text differs |
-| crystallography     | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| irbookonlinereading | 136.3 MiB |     144.8 MiB |    199.6 MiB | 211.5 MiB | 156.6 MiB | 159.7 MiB | text differs |
-| FTX-claim           | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| WBT-whitepaper      | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB | text differs |
-| libreoffice-writer  | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| google-doc          | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB | text differs |
-| reportlab-overlay   | 136.3 MiB |     144.8 MiB |        error |     error | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| pdfkit              | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| imagemagick-images  | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
-| cmyk-image          | 136.3 MiB |     144.8 MiB |    144.8 MiB | 147.2 MiB | 156.6 MiB | 159.7 MiB |    159.7 MiB |
+| 2201.00214          | 170.3 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| 1707.09725          | 172.3 MiB |     172.8 MiB |    238.5 MiB | 238.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| 2201.00069          | 172.3 MiB |     172.8 MiB |    242.1 MiB | 242.2 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| GeoTopo-book        | 172.3 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| PDF32000_2008       | 638.4 MiB |     640.8 MiB |    679.4 MiB | 682.6 MiB | 229.9 MiB | 172.8 MiB | text differs |
+| tika-972174         | 172.4 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| Ballinasloe_WS      | 172.6 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| 2021_book_security  | 172.6 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| USC-EMBA            | 172.6 MiB |     172.8 MiB |    303.6 MiB | 304.2 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| crystallography     | 172.6 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| irbookonlinereading | 172.6 MiB |     172.8 MiB |    197.4 MiB | 201.1 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| FTX-claim           | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| WBT-whitepaper      | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| libreoffice-writer  | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| google-doc          | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB | text differs |
+| reportlab-overlay   | 172.8 MiB |     172.8 MiB |        error |     error | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| pdfkit              | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| imagemagick-images  | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
+| cmyk-image          | 172.8 MiB |     172.8 MiB |    172.8 MiB | 172.8 MiB | 172.8 MiB | 172.8 MiB |    172.8 MiB |
 
 ## Problems
 
 Ghostscript re-renders the document, so changed text extraction is
 expected for it; for the lossless compressors it indicates a bug.
 
-* pypdf-dedupe / reportlab-overlay: pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 130040471039888) not found!
-* pypdf-all / reportlab-overlay: pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 128230370324368) not found!
-* pymupdf / PDF32000_2008: timeout after 900 s
+* pypdf-dedupe / reportlab-overlay: pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 137934123795856) not found!
+* pypdf-all / reportlab-overlay: pypdf.errors.PdfReadError: Object IndirectObject(12, 0, 139880192673168) not found!
 * ghostscript / 1707.09725: text differs
 * ghostscript / 2201.00069: text differs
 * ghostscript / GeoTopo-book: text differs
