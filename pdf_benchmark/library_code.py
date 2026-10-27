@@ -225,3 +225,9 @@ def tika_get_text(data: bytes) -> str:
     except ReadTimeout as ex:
         print("Tika timeout:", ex)
         return "[[[Tika text extraction failed!]]]"
+
+
+def rasgapdf_get_text(data: bytes) -> str:
+    import rasgapdf
+
+    return rasgapdf.extract_text(data)

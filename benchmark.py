@@ -34,6 +34,7 @@ from pdf_benchmark.library_code import (
     pypdf_get_text,
     pypdf_image_extraction,
     pypdf_watermarking,
+    rasgapdf_get_text,
     tika_get_text,
 )
 from pdf_benchmark.output import write_benchmark_report
@@ -258,6 +259,18 @@ if __name__ == "__main__":
             last_release_date="2017-09-18",
             dependencies="",
             pypi_name="pdfrw",
+        ),
+        "rasgapdf": Library(
+            "RasgaPDF",
+            "rasgapdf",
+            "https://pypi.org/project/rasgapdf/",
+            text_extraction_function=rasgapdf_get_text,
+            version=pkg_version("rasgapdf"),
+            watermarking_function=None,
+            dependencies="Rust Core (MuPDF)",
+            license="AGPL-3.0-or-later",
+            last_release_date="2026-10-27",
+            pypi_name="rasgapdf",
         ),
     }
     main(docs, libraries)
