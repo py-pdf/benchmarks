@@ -39,7 +39,17 @@ from pdf_benchmark.library_code import (
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
 
-tika.initVM()
+
+def warm_up_tika(data: bytes) -> None:
+    """
+    Start the Tika server and let the JVM warm up before timing anything.
+
+    tika-python starts the Java server lazily on the first request and keeps
+    it running after this process exits. Without this, the first run of the
+    benchmark would include server startup and JIT warm-up in Tika's timings.
+    """
+    print("Warming up Tika server...")
+    tika_get_text(data)
 
 
 def main(
@@ -56,6 +66,8 @@ def main(
     else:
         cache = Cache()
     names = sorted(libraries.keys())
+    if "tika" in names and docs:
+        warm_up_tika(docs[0].data)
 
     watermark_file = Path(__file__).parent / "watermark" / "pdfs" / "python-quote.pdf"
     watermark_data = watermark_file.read_bytes()
