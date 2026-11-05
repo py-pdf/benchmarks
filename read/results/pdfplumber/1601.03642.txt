@@ -1,4 +1,4 @@
-1
+
 Creativity in Machine Learning w
 x 0
 0
@@ -13,9 +13,9 @@ E-Mail: info@martin-thoma.de x 3
 . . wn
 x
 n
-Abstract—Recent machine learning techniques can be modified (a) Exampleofanartificialneuronunit.(b) Avisualizationofasimplefeed-
-to produce creative results. Those results did not exist before; it xiaretheinputsignalsandwiare forwardneuralnetwork.The5in-
-is not a trivial combination of the data which was fed into the weightswhichhavetogetlearned. putnodesarered,the2biasnodes
+Abstract—Recent machine learning techniques can be modified (a) Exampleofanartificialneuronunit.(b) Avisualizationofasimplefeedto
+ produce creative results. Those results did not exist before; it xiaretheinputsignalsandwiare forwardneuralnetwork.The5inis
+ not a trivial combination of the data which was fed into the weightswhichhavetogetlearned. putnodesarered,the2biasnodes
 machine learning system. The obtained results come in multiple Each input signal gets multiplied are gray, the 3 hidden units are
 forms: As images, as text and as audio. with its weight, everything gets greenandthesingleoutputnode
 summedupandtheactivationfunc- isblue.
@@ -32,8 +32,8 @@ mind”. learning programs should generally improve when they are fed
 with more data.
 Recentadvancesinmachinelearningproduceresultswhichthe
 author would intuitively call creative. A high-level overview The field of machine learning is related to statistics. Some
-over several of those algorithms are described in the following. algorithms directly try to find models which are based on well-
-known distribution assumptions of the developer, others are
+over several of those algorithms are described in the following. algorithms directly try to find models which are based on wellknown
+ distribution assumptions of the developer, others are
 This paper is structured as follows: Section II introduces the
 more general.
 reader on a very simple and superficial level to machine
@@ -60,8 +60,8 @@ taskslikeobjectrecognitionthisapproachisnotfeasible.There
 are way to many different objects, different lighting situations, An important group of machine learning algorithms was
 variations in rotation and the arrangement of a scene for a inspired by biological neurons and are thus called artificial
 human to think of all of them and model them. But with the neural networks. Those networks are based on mathematical
-internet, cheap computers, cameras, crowd-sourcing platforms functions called artificial neurons which take n ∈ N num-
-like Wikipedia and lots of Websites, services like Amazon bers x ,...,x ∈ R as input, multiply them with weights
+internet, cheap computers, cameras, crowd-sourcing platforms functions called artificial neurons which take n ∈ N numlike
+ Wikipedia and lots of Websites, services like Amazon bers x ,...,x ∈ R as input, multiply them with weights
 1 n
 Mechanical Turk and several other changes in the past decades w ,...,w ∈ R, add them and apply a so called activation
 1 n
@@ -83,7 +83,7 @@ naJ
 21
 ]VC.sc[
 1v24630.1061:viXra
-2
+
 makes a step in the direction which goes downwards. Hence
 it tries to find a minimum of this high-dimensional function.
 There is, of course, a lot more to say about machine learning.
@@ -138,7 +138,7 @@ in layers. Recent publications tend to have more and more choice of features it 
 layers [HZRS15]. The used jargon is to say they get “deeper”. an image in terms of local image appearance from the content
 As this technique as published by Google engineers, the of an image. They support their claim by applying the style of
 technique is called Google DeepDream. different artists to an arbitrary image of their choice.
-3
+
 IV. TEXTDATA
 Digital text is the first form of natural communication which
 involved computers. It is used in the form of chats, websites,
@@ -167,8 +167,8 @@ ofaScottishHighlandCattle. character by character. If the model is good, the tex
 the correct punctuation. This would not be possible with a
 Fig. 4: The algorithm takes both, the original image and the word predictor.
 style image to produce the result.
-Character predictors can be implemented with RNNs. In con-
-trast to standard feed-forward neural networks like multilayer
+Character predictors can be implemented with RNNs. In contrast
+ to standard feed-forward neural networks like multilayer
 This artistic style imitation can be seen itself as creative work. Perceptrons (MLPs) which was shown in Figure 1(b), those
 An example is given by Figure 4. The code which created this networksaretrainedtotaketheiroutputatsomepointaswellas
 example is available under [Joh16]. the normal input. This means they can keep some information
@@ -202,7 +202,7 @@ similar to the artists impression of the image. However, the With that training 
 system described in [TL05] seems not to be a machine New works which look like Shakespeare plays, new Wikipedia
 learning computer program according to the definition by Tom articles, new Linux code and new papers about algebraic
 Mitchell [Mit97]. geometry can thus automatically be generated. At a first
-4
+
 glance, they do look authentic. The syntax was mostly used we will now investigate the work which was done in audio
 correctly, the formatting looks as expected, the sentences are synthesization.
 grammaticallycorrect.However,whenonelooksatthebroader
@@ -232,8 +232,8 @@ Thereadermightwanttolistento[Cop12]togetanimpression
 of the beauty of the created music.
 Chatbots are computer programs which participate in chat
 rooms as autonomous agents. This means they have similar According to Cope, an essential part of music is “a set of
-permissions and possibilities as usual human users have, but instructions for creating different, but highly related self-
-users can trigger a set of commands to make the bot give them replications”. Emmy was programmed to find this set of
+permissions and possibilities as usual human users have, but instructions for creating different, but highly related selfusers
+ can trigger a set of commands to make the bot give them replications”. Emmy was programmed to find this set of
 valuable information or features. instructions. It tries to find the “signature” of a composer,
 which Cope describes as “contiguous patterns that recur in two
 A special category of chatbots are such bots which actively
@@ -243,8 +243,8 @@ One of the earliest programs in this category is ELIZA, a bot The new feature of
 created by Joseph Weizenbaum in the 1960s [Wei76]. This Emily Howell does not necessarily remain in a single, already
 program had a set of patterns implemented to which it would known style.
 reply in a seemingly smart way in a psychologists fashion.
-Emily Howell makes use of association network. Cope empha-
-This means quite often the program would simply repeat the
+Emily Howell makes use of association network. Cope emphaThis
+ means quite often the program would simply repeat the
 sizes that this is not a form of a neural network. However, it
 last sentence and add something meaningless like “How do
 is not clear from [Cop13] how exactly an association network
@@ -287,14 +287,14 @@ are speech recognition, speaker identification, identification of C. Audio Synth
 songs. This leads to some less-common, but interesting topics:
 The composition of music, the synthesizing of audio as art. Audio synthesization is generating new audio files. This can
 While the composition might be considered in Section IV, eitherbemusicorspeech.Withthetechniquesdescribedbefore,
-5
+
 neural networks can be trained to generate music note by note. [Joh15a] D. Johnson, “Biaxial recurrent neural network for music
 However, it is desirable to allow multiple notes being played composition,” GitHub, Aug. 2015. [Online]. Available: https:
 //github.com/hexahedria/biaxial-rnn-music-composition
 at the same time.
-[Joh15b] ——, “Composing music with recurrent neu-
-ThisideaandsomeotherswereappliedbyDanielJohnson.He ral networks,” Personal Blog, Aug. 2015. [On-
-wrote a very good introduction into neural networks for music line]. Available: http://www.hexahedria.com/2015/08/03/
+[Joh15b] ——, “Composing music with recurrent neuThisideaandsomeotherswereappliedbyDanielJohnson.He
+ ral networks,” Personal Blog, Aug. 2015. [Onwrote
+ a very good introduction into neural networks for music line]. Available: http://www.hexahedria.com/2015/08/03/
 composing-music-with-recurrent-neural-networks/
 composition which explains those ideas [Joh15b]. Example
 compositionsareavailablethere,too.Healsomadethecodefor [Joh16] J.Johnson,“neural-style,”GitHub,Jan.2016.[Online].Available:
@@ -317,9 +317,9 @@ problems after Deep Blue won against the reigning world [MOT15] A. Mordvintsev, 
 chess champion Garry Kasparov in 1997. deeper into neural networks,” googleresearch.blogspot.co.uk,
 Jun.2015.[Online].Available:http://googleresearch.blogspot.de/
 However,bynowitisobviousthatmachinelearningalgorithms 2015/06/inceptionism-going-deeper-into-neural.html
-cannot compete with human artists. Today’s state of the art [Nie15] M. A. Nielsen, Neural Networks and Deep Learn-
-algorithms which are purely based on machine learning don’t ing. Determination Press, 2015. [Online]. Avail-
-able: http://neuralnetworksanddeeplearning.com/chap6.html#
+cannot compete with human artists. Today’s state of the art [Nie15] M. A. Nielsen, Neural Networks and Deep Learnalgorithms
+ which are purely based on machine learning don’t ing. Determination Press, 2015. [Online]. Available:
+ http://neuralnetworksanddeeplearning.com/chap6.html#
 follow a central theme. They lack the ability to plan. Although
 introducing convolutional networks
 clever algorithms were implemented for composing music, it
@@ -343,8 +343,8 @@ composition,” XRDS: Crossroads, The ACM Magazine for
 Students, vol. 19, no. 4, pp. 16–20, 2013. [Online]. Available: [Vit15] M. Vitelli, “Algorithmic music generation with recurrent
 http://dl.acm.org/citation.cfm?id=2460444 neural networks,” YouTube, Jun. 2015. [Online]. Available:
 https://youtu.be/0VTI1BBLydE
-[Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [On-
-line].Available:http://www.bbc.co.uk/blogs/adamcurtis/entries/ [VKMT13] C. Vondrick, A. Khosla, T. Malisiewicz, and A. Torralba,
+[Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [Online].Available:http://www.bbc.co.uk/blogs/adamcurtis/entries/
+ [VKMT13] C. Vondrick, A. Khosla, T. Malisiewicz, and A. Torralba,
 78691781-c9b7-30a0-9a0a-3ff76e8bfe58 “Hoggles: Visualizing object detection features,” in Computer
 Vision(ICCV),2013IEEEInternationalConferenceon. IEEE,
 [Gad06] A.Gadsby,Ed.,DictionaryofContemporaryEnglish. Pearson 2013, pp. 1–8. [Online]. Available: http://ieeexplore.ieee.org/
@@ -357,14 +357,14 @@ Photos,Jun.2015.[Online].Available:https://goo.gl/Bydofw Available:https://githu
 [HS97] S.HochreiterandJ.Schmidhuber,“Longshort-termmemory,” [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
 Neural computation, vol. 9, no. 8, pp. 1735–1780, 1997. JudgementtoCalculation. W.H.Freeman&CoLtd,1976.
 [Online].Available:http://ieeexplore.ieee.org/xpl/freeabs all.jsp?
-arnumber=6795963 [ZF14] M.D.ZeilerandR.Fergus,“Visualizingandunderstandingcon-
-volutionalnetworks,”inComputerVision–ECCV2014. Springer,
+arnumber=6795963 [ZF14] M.D.ZeilerandR.Fergus,“Visualizingandunderstandingconvolutionalnetworks,”inComputerVision–ECCV2014.
+ Springer,
 [hut] “50’000europrizeforcompressinghumanknowledge.”[Online]. 2014,pp.818–833.
 Available:http://prize.hutter1.net/
 [HZRS15] K.He,X.Zhang,S.Ren,andJ.Sun,“Deepresiduallearning
 forimagerecognition,”arXivpreprintarXiv:1512.03385,2015.
-[Online].Available:http://arxiv.org/abs/1512.03385
-6
+[Online].Available:http://arxiv.org/abs/1512.0338
+
 APPENDIXA
 AUTOMATICALLYGENERATEDTEXTS
 The following texts were generated by [Kar15a] and published by Karpathy on [Kar15b]. This is meant to be a copy for
@@ -409,7 +409,7 @@ was swear to advance to the resources for those Socialism’s rule,
 was starting to signing a major tripad of aid exile.]]
 C. Linux Code, 1
 /*
-7
+
 * Increment the size file of the new incorrect UI_FILTER group information
 * of the size generatively.
 */
@@ -464,7 +464,7 @@ D. Linux Code, 2
 #include <linux/io.h>
 #include <linux/platform_device.h>
 #include <linux/multi.h>
-8
+
 #include <linux/ckevent.h>
 #include <asm/io.h>
 #include <asm/prom.h>

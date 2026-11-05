@@ -5,7 +5,8 @@ Geometrie und Topologie
 
 Martin Thoma
 
-Vorwort
+
+Vorwort
 Dieses Skript wurde im Wintersemester 2013/2014 von Martin Thoma geschrieben. Es beinhaltet
 die Mitschriften aus der Vorlesung von Prof. Dr. Herrlich sowie die Mitschriften einiger Übungen
 und Tutorien.
@@ -37,7 +38,8 @@ Außerdem wird vorausgesetzt, dass (affine) Vektorräume, Faktorräume, lineare 
 der Spektralsatz und der projektive Raum P(R) aus „Lineare Algebra I“ bekannt sind. In „Lineare
 Algebra II“ wird der Begriff der Orthonormalbasis eingeführt.
 
-iii
+
+
 
 (a) S 2
 
@@ -58,7 +60,8 @@ Abbildung 0.1: Beispiele für verschiedene Formen
 Obwohl es nicht vorausgesetzt wird, könnte es von Vorteil sein „Einführung in die Algebra und
 Zahlentheorie“ gehört zu haben.
 
-Inhaltsverzeichnis
+
+Inhaltsverzeichnis
 1 Topologische Grundbegriffe
 1.1 Topologische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 1.2 Metrische Räume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -147,7 +150,8 @@ Symbolverzeichnis
 
 108
 
-2
+
+
 
 Stichwortverzeichnis
 
@@ -155,7 +159,8 @@ Inhaltsverzeichnis
 
 111
 
-1 Topologische Grundbegriffe
+
+1 Topologische Grundbegriffe
 1.1 Topologische Räume
 Definition 1
 Ein topologischer Raum ist ein Paar (X, T) bestehend aus einer Menge X und T ⊆ P(X)
@@ -193,7 +198,8 @@ Beobachtungen:
 • U ∈ TZ ⇔ ∃f ∈ R[X], sodass R \ U = V (f ) = { x ∈ R | f (x) = 0 }
 • Es gibt keine disjunkten offenen Mengen in TZ .
 
-4
+
+
 
 1.1. TOPOLOGISCHE RÄUME
 
@@ -245,7 +251,8 @@ ist eine abzählbare Basis von T.
 3) Sei (X, T) ein topologischer Raum mit X = { 0, 1, 2 } und T = { ∅, { 0 } , { 0, 1 } , { 0, 2 } , X }.
 Dann ist S = { ∅, { 0, 1 } , { 0, 2 } } eine Subbasis von T, da gilt:
 
-5
+
+
 
 1.1. TOPOLOGISCHE RÄUME
 
@@ -286,7 +293,8 @@ R2 überein.
 2) X1 = X2 = R mit Zariski-Topologie. T Produkttopologie auf R2 : U1 × U2
 (Siehe Abbildung 1.2)
 
-6
+
+
 
 1.1. TOPOLOGISCHE RÄUME
 
@@ -339,7 +347,8 @@ Ursprungsgerade
 
 X = P n (R)
 
-7
+
+
 
 1.2. METRISCHE RÄUME
 
@@ -399,7 +408,8 @@ d(x, y) =
 1 falls x 6= y
 die diskrete Metrik. Die Metrik d induziert die diskrete Topologie.
 
-8
+
+
 
 1.2. METRISCHE RÄUME
 
@@ -422,7 +432,8 @@ r
 
 Abbildung 1.3: Veranschaulichungen zur Metrik d aus Beispiel 10
 
-9
+
+
 
 1.2. METRISCHE RÄUME
 
@@ -474,7 +485,8 @@ x 6= y. Da (xn ) gegen x und y konvergiert, existiert ein n0 mit xn ∈ Ux ∩ U
 
 Diese Metrik wird auch „französische Eisenbahnmetrik“ genannt.
 
-10
+
+
 
 1.3. STETIGKEIT
 
@@ -529,7 +541,8 @@ Beispiel 13 (Stetige Abbildungen und Homöomorphismen)
 
 Es wird die Äquivalenz von Stetigkeit im Sinne der Analysis und Topologie auf metrischen Räumen gezeigt.
 
-11
+
+
 
 1.3. STETIGKEIT
 
@@ -590,7 +603,8 @@ Sei X ein topologischer Raum, ∼ eine Äquivalenzrelation auf X, X = X/∼ der 
 versehen mit der Quotiententopologie, π : X → X, x 7→ [x]∼ .
 Dann ist π stetig.
 
-12
+
+
 
 1.4. ZUSAMMENHANG
 
@@ -667,7 +681,8 @@ U1 , U2 von X gibt mit U1 ∩ U2 = ∅ und U1 ∪ U2 = X.
 b) Eine Teilmenge Y ⊆ X heißt zusammenhängend, wenn Y als topologischer Raum mit
 der Teilraumtopologie zusammenhängend ist.
 
-13
+
+
 
 1.4. ZUSAMMENHANG
 
@@ -707,7 +722,8 @@ Umgebung von z liegt ein Punkt von U1 ⇒ Widerspruch zu U2 offen.
 Bemerkung 14
 Sei X ein topologischer Raum und A ⊆ X zusammenhängend. Dann ist auch A zusammenhängend.
 
-14
+
+
 
 1.4. ZUSAMMENHANG
 
@@ -779,7 +795,8 @@ b) Z(x) ist abgeschlossen.
 c) X ist disjunkte Vereinigung von Zusammenhangskomponenten.
 Beweis:
 
-15
+
+
 
 1.5. KOMPAKTHEIT
 
@@ -838,7 +855,8 @@ Beweis: Sei (Ui )i∈J eine offene Überdeckung von I.
 Es genügt zu zeigen, dass es ein δ > 0 gibt, sodass jedes Teilintervall der Länge δ von I in
 einem der Ui enthalten ist. Wenn es ein solches δ gibt, kann man I in endlich viele Intervalle
 
-16
+
+
 
 1.5. KOMPAKTHEIT
 
@@ -918,7 +936,8 @@ offene Teilmengen Ux,y von X und Vx,y von Y sowie ein i ∈ I, sodass Ux,y × Vx
 Dies gilt nicht für alle n ≥ n0 , da ein Häufungspunkt nur eine konvergente Teilfolge impliziert.
 Sogar für unendlich viele.
 
-17
+
+
 
 1.5. KOMPAKTHEIT
 
@@ -979,7 +998,8 @@ Sm
 
 i=1 Uxi ⊇ K.
 
-18
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1049,7 +1069,8 @@ Sei X ein topologischer Raum.
 (x, y) ∈ R2 k(x, y)k ≤ 1
 
 
-19
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1100,7 +1121,8 @@ Definition 19
 Sei X ein topologischer Raum. Eine Jordankurve in X ist ein Homöomorphismus γ :
 [0, 1] → C ⊆ X bzw. γ : S 1 → C ⊆ X, wobei C := Bild γ.
 
-20
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1154,7 +1176,8 @@ Eine Einführung“ von R. Stöcker und H. Zieschang auf S. 301f (ISBN 978-35191
 nachgelesen werden.
 Idee: Ersetze Weg C durch Polygonzug.
 
-21
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1192,7 +1215,8 @@ Satz 1.3 (Satz von Reidemeister)
 Zwei endliche Knotendiagramme gehören genau dann zu äquivalenten Knoten, wenn sie
 durch endlich viele „Reidemeister-Züge“ ineinander überführt werden können.
 
-22
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1215,7 +1239,8 @@ Abbildung 1.13: Ein 3-gefärber Kleeblattknoten
 
 Siehe „Knot Theory and Its Applications“ von Kunio Murasugi. ISBN 978-0817638177.
 
-23
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1256,7 +1281,8 @@ begründen Sie warum.
 1) Ein Homomorphismus, der zugleich ein Homöomorphismus ist,
 2) ein Homomorphismus, der kein Homöomorphismus ist,
 
-24
+
+
 
 1.6. WEGE UND KNOTEN
 
@@ -1265,7 +1291,8 @@ begründen Sie warum.
 Aufgabe 6 (Begriffe)
 Definieren Sie die Begriffe „Isomorphismus“, „Isotopie“ und „Isometrie“.
 
-2 Mannigfaltigkeiten und
+
+2 Mannigfaltigkeiten und
 Simplizialkomplexe
 2.1 Topologische Mannigfaltigkeiten
 Definition 24
@@ -1299,7 +1326,8 @@ Ist n < m und Rm homöomorph zu Rn , so wäre
 f : Rn → Rm → Rn , (x1 , . . . , xn ) 7→ (x1 , x2 , . . . , xn , 0, . . . , 0)
 eine stetige injektive Abbildung. Also müsste f (Rn ) offen sein ⇒ Widerspruch
 
-26
+
+
 
 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 
@@ -1372,7 +1400,8 @@ ist.
 
 xi wird rausgenommen
 
-27
+
+
 
 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 
@@ -1429,7 +1458,8 @@ Sei n ∈ N, F : Rn → R stetig differenzierbar und X = V (F ) := { x ∈ Rn | 
 „vanishing set“.
 Dann gilt:
 
-28
+
+
 
 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 
@@ -1538,7 +1568,8 @@ Abbildung 2.2: Rechts ist die Neilsche Parabel für verschiedene Parameter a.
 Daher ist Bemerkung 27.b nicht anwendbar, aber V (F ) ist trotzdem eine 1-dimensionale
 topologische Mannigfaltigkeit.
 
-29
+
+
 
 2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 
@@ -1588,7 +1619,8 @@ i
 ϕi (Ui ∩ Uj ) → ϕj (Ui ∩ Uj )
 Kartenwechsel oder Übergangsfunktion.
 
-30
+
+
 
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
@@ -1638,7 +1670,8 @@ c) f heißt Diffeomorphismus, wenn f differenzierbar von Klasse C ∞ ist und es
 differenzierbare Abbildung g : Y → X von Klasse C ∞ gibt mit g ◦ f = idX und
 f ◦ g = idY .
 
-31
+
+
 
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
@@ -1702,7 +1735,8 @@ R2 cos2 (v) cos2 (u) + R2 cos2 (v) sin2 (u) + R2 sin2 (v)
 =R2 cos2 (v) + sin2 (v)
 =R2
 
-32
+
+
 
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
@@ -1762,7 +1796,8 @@ cos x
 
 2
 
-33
+
+
 
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
@@ -1851,7 +1886,8 @@ fj auf W eine
 −1
 differenzierbar Inverse Fj hat.
 
-34
+
+
 
 2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 
@@ -1917,7 +1953,8 @@ h 7→ g · h
 
 ein Diffeomorphismus.
 
-35
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2003,7 +2040,8 @@ S
 b) |K| := ∆∈K ∆ (mit Teilraumtopologie) heißt geometrische Realisierung von K.
 c) Ist d = max { k ∈ N0 | K enthält k-Simplex }, so heißt d die Dimension von K.
 
-36
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2035,7 +2073,8 @@ Beispiel 26 (Simpliziale Abbildungen)
 1) ϕ(e1 ) := b1 , ϕ(e2 ) := b2
 ϕ ist eine eindeutig bestimmte lineare Abbildung
 
-37
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2170,7 +2209,8 @@ Beispiel 27
 Bemerkung 33
 χ(∆n ) = 1 für jedes n ∈ N0
 
-38
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2227,7 +2267,8 @@ a) Siehe „Algorithmus von Kruskal“.
 
 T wird „Spannbaum“ genannt.
 
-39
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2295,7 +2336,8 @@ Beweis:
 2) O. B. d. A. sei 0 ∈ P und P ⊆ B1 (0). Projeziere ∂P von 0 aus auf ∂B1 (0) = S 2 .
 Erhalte Triangulierung von S 2 .
 
-40
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2311,7 +2353,8 @@ Abbildung 2.11: Fehlerhafte Triangulierungen
 
 Abbildung 2.12: Triangulierungen des Torus
 
-41
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2364,7 +2407,8 @@ d2 σ = e1 − e2 + e3
 
 d1 (e1 − e2 + e3 ) = (c − b) − (c − a) + (b − a)
 
-42
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2459,7 +2503,8 @@ Es gilt nicht ak = bk ∀k ∈ N0 .
 
 k=0
 
-43
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2532,7 +2577,8 @@ X
 
 =bd
 
-44
+
+
 
 2.3. SIMPLIZIALKOMPLEX
 
@@ -2542,7 +2588,8 @@ Aufgabe 7 (Zusammenhang)
 (b) Betrachten Sie nun wie in Beispiel 20.8 den Raum X := (R\{ 0 })∪{ 01 , 02 } versehen
 mit der dort definierten Topologie. Ist X wegzusammenhängend?
 
-3 Fundamentalgruppe und Überlagerungen
+
+3 Fundamentalgruppe und Überlagerungen
 3.1 Homotopie von Wegen
 γ1
 a
@@ -2589,7 +2636,8 @@ Durch Homotopie wird eine Äquivalenzrelation auf der Menge aller Wege in X von 
 definiert.
 Beweis:
 
-46
+
+
 
 3.1. HOMOTOPIE VON WEGEN
 
@@ -2627,7 +2675,8 @@ H(t, 1) = γ(ϕ(t)),
 H(0, s) = γ(0) und H(1, s) =
 
 
-47
+
+
 
 3.1. HOMOTOPIE VON WEGEN
 
@@ -2705,7 +2754,8 @@ Sei X ein topologischer Raum, a, b, c ∈ X, γ1 , γ10 Wege von a nach b und γ
 nach c.
 Sind γ1 ∼ γ10 und γ2 ∼ γ20 , so ist γ1 ∗ γ2 ∼ γ10 ∗ γ20 .
 
-48
+
+
 
 3.2. FUNDAMENTALGRUPPE
 
@@ -2759,7 +2809,8 @@ Definition 45
 Sei X ein topologischer Raum und x ∈ X. Sei außerdem
 π1 (X, x) := { [γ] | γ ist Weg in X mit γ(0) = γ(1) = x }
 
-49
+
+
 
 3.2. FUNDAMENTALGRUPPE
 
@@ -2804,7 +2855,8 @@ Dann ist die Abbildung
 α : π1 (X, a) → π1 (X, b) [γ] 7→ [δ ∗ γ ∗ δ]
 ein Gruppenisomorphismus.
 
-50
+
+
 
 3.2. FUNDAMENTALGRUPPE
 
@@ -2850,7 +2902,8 @@ Beispiel 33
 =
 Z ist nicht surjektiv.
 
-51
+
+
 
 3.2. FUNDAMENTALGRUPPE
 
@@ -2892,7 +2945,8 @@ Sei X ein topologischer Raum, U, V ⊆ X offen mit U ∪ V = X und U ∩ V wegzu
 Dann wird π1 (X, x) für x ∈ U ∩ V erzeugt von geschlossenen Wegen um x, die ganz in
 U oder ganz in V verlaufen.
 
-52
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -2945,7 +2999,8 @@ p|Vj : Vj → U ein Homöomorphismus ist.
 |I| heißt Grad der Überlagerung p und man schreibt:
 deg p := |I|
 
-53
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3071,7 +3126,8 @@ D. h. es existiert ein y ∈ Vj , so dass p|Vj (y) = x. Da x ∈ X beliebig war 
 existiert, mit p(y) = x, ist p surjektiv.
 
 
-54
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3121,7 +3177,8 @@ Beweis:
 a) Seien y1 , y2 ∈ Y .
 1. Fall: p(y1 ) = p(y2 ) = x.
 
-55
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3172,7 +3229,8 @@ Sei Z zusammenhängend und f0 , f1 : Z → Y Liftungen von f .
 Beweis: Sei T = { z ∈ Z | f0 (z) = f1 (z) }.
 Z. z.: T ist offen und Z \ T ist auch offen.
 
-56
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3222,7 +3280,8 @@ Bemerkung 55
 Wege in X lassen sich zu Wegen in Y liften.
 Zu jedem y ∈ p−1 (γ(0)) gibt es genau einen Lift von γ.
 
-57
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3267,7 +3326,8 @@ Für geschlossene Wege γ0 , γ1 um x gilt:
 
 ⇔[γ0 ] und [γ1 ]liegen in der selben Nebenklasse bzgl. p∗ (π1 (Y, y0 ))
 
-58
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3314,7 +3374,8 @@ Sei Z := p−1 (U ). Für u ∈ Z sei δ ein Weg in Z von z nach u.
 ⇒ Z ⊆ p−1
 ⇒ p̃ ist stetig
 
-59
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3358,7 +3419,8 @@ Annahme: [γ̃] 6= e
 Mit Bemerkung 55.a folgt dann: [γ] 6= e.
 Dann ist der Lift von γ nach x̃ mit Anfangspunkt x˜0 ein Weg von x˜0 nach (x0 , [γ]). Widerspruch.
 
-60
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3408,7 +3470,8 @@ Beispiel 39 (Decktransformationen)
 3) p : S n → P n (R) : Deck(S n /P n (R)) = { x 7→ ±x } ∼
 = Z/2Z
 
-61
+
+
 
 3.3. ÜBERLAGERUNGEN
 
@@ -3455,7 +3518,8 @@ Nach Satz 3.8 also π1 (S 1 ) ∼
 = Deck(R/S 1 ) ∼
 =Z
 
-62
+
+
 
 3.4. GRUPPENOPERATIONEN
 
@@ -3509,7 +3573,8 @@ Def. 55.a
 Beispiel 42
 In Beispiel 41.1 operiert Z durch Homöomorphismen.
 
-63
+
+
 
 3.4. GRUPPENOPERATIONEN
 
@@ -3566,7 +3631,8 @@ n
 o
 = f : X̃ → X̃ Homöomorphismus p ◦ f = p
 
-64
+
+
 
 3.4. GRUPPENOPERATIONEN
 
@@ -3575,7 +3641,8 @@ Sei X := S 2 ⊆ R3 und τ die Drehung um die z-Achse um 180◦ .
 g = hτ i = { id, τ } operiert auf S 2 durch Homöomorphismen.
 Frage: Was ist S 2 /G? Ist S 2 /G eine Mannigfaltigkeit?
 
-4 Euklidische und nichteuklidische
+
+4 Euklidische und nichteuklidische
 Geometrie
 Definition 57
 Das Tripel (X, d, G) heißt genau dann eine Geometrie, wenn (X, d) ein metrischer Raum
@@ -3610,7 +3677,8 @@ Definition 58
 Eine euklidische Ebene ist eine Geometrie (X, d, G), die Axiome §1 - §5 erfüllt:
 §1) Inzidenzaxiome:
 
-66
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3665,7 +3733,8 @@ b) „⊇“ ist offensichtlich
 d(P, R) = d(P, Q) + d(Q, R) oder
 d(P, Q) = d(P, R) + d(R, Q)
 
-67
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3717,7 +3786,8 @@ Sei C der Schnittpunkt. Dann gilt:
 
 Die „Verschiebung“ von P 0 Q0 nach P Q und die Isometrie, die zusätzlich an der Gerade durch P und Q spiegelt.
 
-68
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3769,7 +3839,8 @@ Vor.
 
 (i) d(A, C) + d(C, Q) = d(A, Q) = d(B, Q) < d(B, C) + d(C, Q) ⇒ d(A, C) < d(B, C)
 
-69
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3841,7 +3912,8 @@ Proposition 4.2
 In einer Geometrie, die §1 - §3 erfüllt, gibt es zu P, P 0 , Q, Q0 mit d(P, Q) = d(P 0 , Q0 )
 höchstens zwei Isometrien mit ϕ(P ) = P 0 und ϕ(Q) = Q0
 
-70
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3895,7 +3967,8 @@ Dreiecke, für die gilt:
 (ii) ∠CAB ∼
 = ∠C 0 A0 B 0
 
-71
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -3952,7 +4025,8 @@ d(M, A).
 
 Für dieses Skript gilt: ∠R1 P R2 = ∠R2 P R1 . Also sind insbesondere alle Winkel ≤ 180◦ .
 
-72
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -4008,7 +4082,8 @@ Parallele h ∈ G mit P ∈ h und g ∩ h = ∅.
 Beweis: Seien P, Q ∈ f ∈ G und ϕ die Isometrie, die Q auf P und P auf P 0 ∈ f mit
 d(P, P 0 ) = d(P, Q) abbildet und die Halbebenen bzgl. f erhält.
 
-73
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -4043,7 +4118,8 @@ Proposition 4.5
 In einer Geometrie mit den Axiomen §1 - §4 ist in jedem Dreieck die Summe der
 Innenwinkel ≤ π.
 
-74
+
+
 
 4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
 
@@ -4115,7 +4191,8 @@ Beweis: Sei g eine Parallele von AB durch C.
 
 • Es gilt α00 = α0 wegen Aufgabe 8.
 
-75
+
+
 
 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
 
@@ -4181,7 +4258,8 @@ Definition 62
 „Simplizialkomplexe“ in euklidischer Ebene (X, d) heißen flächengleich, wenn sie sich in
 kongruente Dreiecke zerlegen lassen.
 
-76
+
+
 
 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
 
@@ -4244,7 +4322,8 @@ Katheten sind.
 
 Beweis: (a + b) · (a + b) = a2 + 2ab + b2 = c2 + 4 · ( 12 · a · b)
 
-77
+
+
 
 4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
 
@@ -4313,7 +4392,8 @@ Im Folgenden werden zwei Aussagen gezeigt:
 Da jede Isometrie injektiv ist, folgt aus (i) und (ii), dass h bijektiv ist.
 Nun zu den Beweisen der Teilaussagen:
 
-78
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4388,7 +4468,8 @@ H := { z ∈ C | =(z) > 0 } =
 
 (x, y) ∈ R2 y > 0
 
-79
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4483,7 +4564,8 @@ Abbildung 4.20: Zwei Punkte liegen in der hyperbolischen Geometrie immer auf gen
 Geraden
 b) Sei g ∈ G1 ∪˙ G2 eine hyperbolische Gerade.
 
-80
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4563,7 +4645,8 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 
 6 x
 
-81
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4668,7 +4751,8 @@ x + iy
 0 1
 1
 
-82
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4807,7 +4891,8 @@ d
 c d
 −a −b
 
-83
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -4949,7 +5034,8 @@ Zu hyperbolischen Geraden g1 , g2 gibt es σ ∈ PSL2 (R) mit σ(g1 ) = g2 .
 
 x
 
-84
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -5010,7 +5096,8 @@ DV(z1 , . . . , z4 ) 6= 1, da:
 Annahme: DV(z1 , . . . , z4 ) = 1
 ⇔ (z1 − z2 )(z3 − z4 ) = (z1 − z4 )(z3 − z2 )
 
-85
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -5088,7 +5175,8 @@ DV(a2 , z1 , a1 , z2 )
 = ln x−1 = (−1) · ln x = − ln x
 x
 
-86
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -5136,7 +5224,8 @@ Die hyperbolische Ebene H mit der hyperbolischen Metrik d und den hyperbolischen
 Geraden bildet eine „nichteuklidische Geometrie“, d. h. die Axiome §1 - §4 sind erfüllt,
 aber Axiom §5 ist verletzt.
 
-87
+
+
 
 4.3. HYPERBOLISCHE GEOMETRIE
 
@@ -5171,7 +5260,8 @@ Zeigen Sie: f k g ∧ g k h ⇒ f k h
 Aufgabe 11
 Beweise den Kongruenzsatz SSS.
 
-5 Krümmung
+
+5 Krümmung
 Definition 67
 Sei f : [a, b] → Rn eine eine Funktion aus C ∞ . Dann heißt f Kurve.
 
@@ -5217,7 +5307,8 @@ Sei γ : I → R2 eine durch Bogenlänge parametrisierte Kurve.
 a) Für t ∈ I sei n(t) Normalenvektor an γ in t wenn gilt:
 hn(t), γ 0 (t)i = 0, kn(t)k = 1 und det((γ 0 (t), n(t))) = +1
 
-89
+
+
 
 5.1. KRÜMMUNG VON KURVEN
 
@@ -5269,7 +5360,7 @@ r
 da gilt:
 
  
-
+
 − cos rt
 − sin rt
 hn(t), γ (t)i =
@@ -5339,7 +5430,8 @@ r
 ⇒ κ(t) =
 r
 
-90
+
+
 
 5.2. TANGENTIALEBENE
 
@@ -5403,7 +5495,8 @@ a) Ts S ist 2-dimensionaler Untervektorraum von R3 .
 b) Ts S = hũ, ṽi, wobei ũ, ṽ die Spaltenvektoren der Jacobi-Matrix JF (p) sind.
 c) Ts S hängt nicht von der gewählten Parametrisierung ab.
 
-91
+
+
 
 5.2. TANGENTIALEBENE
 
@@ -5455,7 +5548,8 @@ Beispiel 46 (Normalenfelder)
 Auch n2 = −idS 2 ist ein stetiges Normalenfeld.
 2) S = Möbiusband (vgl. Abbildung 5.1) ist nicht orientierbar. Es existiert ein Normalenfeld, aber kein stetiges Normalenfeld.
 
-92
+
+
 
 5.3. GAUSS-KRÜMMUNG
 
@@ -5490,7 +5584,8 @@ x2 = (0, 0, 1), E2 = R · e1 + R · e3 (x, z-Ebene)
 
 Siehe z. B. https://github.com/MartinThoma/LaTeX-examples/tree/master/documents/Analysis%20II
 
-93
+
+
 
 5.3. GAUSS-KRÜMMUNG
 
@@ -5616,7 +5711,8 @@ eine glatte Funktion und Bild κnNor (s) ist ein abgeschlossenes Intervall.
 Definition 75
 Sei S eine reguläre Fläche und n = n(s) ein Normalenvektor an S in s.
 
-94
+
+
 
 5.3. GAUSS-KRÜMMUNG
 
@@ -5663,7 +5759,8 @@ Sei S eine reguläre Fläche, s ∈ S ein Punkt.
 
 s1
 
-95
+
+
 
 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 
@@ -5751,7 +5848,8 @@ z3 = x 1 y2 − x 2 y1
 ∂u1
 ∂u2
 
-96
+
+
 
 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 2
@@ -5779,7 +5877,7 @@ metrisierung F .
 
 p
 
-det(I)du1 du2 heißt Flächenelement von S bzgl. der Para-
+det(I)du1 du2 heißt Flächenelement von S bzgl. der Para
 
 b) Für eine Funktion f : V → R heißt
 Z
@@ -5848,7 +5946,8 @@ Soll auf Fläche S bleiben
 
 Die Abbildung ds n heißt Weingarten-Abbildung
 
-97
+
+
 
 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 
@@ -5858,7 +5957,8 @@ d) ds n ist selbstadjungiert bzgl. des Skalarproduktes IS .
 
 Hinweis: Die Weingarten-Abbildung wird auch Formoperator genannt.
 
-98
+
+
 
 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 
@@ -5941,8 +6041,8 @@ Die Ableitung nach t ergibt
 d
 (hn(γ(t)), γ 0 (t))
 dt
-
-
+
+
 d
 0
 =
@@ -5953,7 +6053,8 @@ t=0
 
 0=
 
-99
+
+
 
 5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
 
@@ -5997,7 +6098,8 @@ Dabei ist χ(S) die Euler-Charakteristik von S.
 Beweis: Der Beweis wird hier nicht geführt. Er kann in „Elementare Differentialgeometrie“ von
 Christian Bär (2. Auflage), ISBN 978-3-11-022458-0, ab Seite 281 nachgelesen werden.
 
-Lösungen der Übungsaufgaben
+
+Lösungen der Übungsaufgaben
 Lösung zu Aufgabe 1
 Teilaufgabe a) Es gilt:
 (i) ∅, X ∈ TX .
@@ -6034,7 +6136,8 @@ nicht offen.
 Teilaufgabe c)
 Beh.: Es gibt unendlich viele Primzahlen.
 
-101
+
+
 
 Lösungen der Übungsaufgaben
 
@@ -6112,7 +6215,8 @@ Bew.: Für SL1 (R) gilt: SL1 (R) = A ∈ R1×1 det A = 1 = 1 ∼
 = { 1 }. ⇒ SL1 (R)
 ist kompakt.
 
-102
+
+
 
 Lösungen der Übungsaufgaben
 2
@@ -6163,7 +6267,8 @@ Seien (G, ∗) und (H, ◦) Gruppen und ϕ : G → H eine Abbildung.
 Eine Isotopie ist also für Knoten definiert, Isometrien machen nur in metrischen Räumen
 Sinn und ein Isomorphismus benötigt eine Gruppenstruktur.
 
-103
+
+
 
 Lösungen der Übungsaufgaben
 
@@ -6216,7 +6321,8 @@ Weg γ2 von a nach 02 . Damit existiert ein (nicht einfacher) Weg γ von 01 nach
 Lösung zu Aufgabe 9
 Vor.: Sei (X, d) eine absolute Ebene, A, B, C ∈ X und 4ABC ein Dreieck.
 
-104
+
+
 
 Lösungen der Übungsaufgaben
 
@@ -6275,7 +6381,8 @@ f ∦ h ⇒ f ∩ h 6= ∅, sei also x ∈ f ∩ h. Mit Axiom §5 folgt: Es gibt
 zu g durch x, da x ∈
 / g. Diese ist f , da x ∈ f und f k g. Da aber x ∈ h, kann h nicht
 
-105
+
+
 
 Lösungen der Übungsaufgaben
 
@@ -6299,7 +6406,8 @@ Es gilt also ϕ(4A0 B 0 C 0 ) = 4ABC.
 
 
 
-Bildquellen
+
+Bildquellen
 Alle Bilder, die hier nicht aufgeführt sind, wurden von Martin Thoma erstellt.
 Teilweise wurden die im folgenden aufgelisteten Bilder noch leicht modifiziert.
 Abb. 0.1a S 2 : Tom Bombadil, tex.stackexchange.com/a/42865
@@ -6325,7 +6433,8 @@ commons.wikimedia.org/wiki/File:Spherical_triangle_3d_opti.png
 Abb. 5.1 Möbiusband: Jake, tex.stackexchange.com/a/118573/5645
 Abb. 5.3 Krümmung des Torus: Charles Staats, tex.stackexchange.com/a/149991/5645
 
-Abkürzungsverzeichnis
+
+Abkürzungsverzeichnis
 Beh. Behauptung
 Bew. Beweis
 bzgl. bezüglich
@@ -6345,7 +6454,8 @@ z. B. zum Beispiel
 zhgd. zusammenhängend
 z. z. zu zeigen
 
-Ergänzende Definitionen und Sätze
+
+Ergänzende Definitionen und Sätze
 Da dieses Skript in die Geometrie und Topologie einführen soll, sollten soweit wie möglich alle
 benötigten Begriffe definiert und erklärt werden. Die folgenden Begriffe wurden zwar verwendet,
 aber nicht erklärt, da sie Bestandteil der Vorlesungen „Analysis I und II“ sowie „Lineare Algebra
@@ -6398,7 +6508,8 @@ a3
 a3
 a1 b2 − a2 b1
 
-Symbolverzeichnis
+
+Symbolverzeichnis
 Mengenoperationen
 
 Perm(X)
@@ -6500,7 +6611,8 @@ Rg(M ) Rang von M
 χ(K)
 Euler-Charakteristik von K
 
-110
+
+
 
 ∆k
 X#Y
@@ -6517,7 +6629,8 @@ Lineare Abbildung aus Bemerkung 37
 A ist isometrisch zu B
 Abbildung zwischen Fundamentalgruppen (vgl. Seite 49)
 
-111
+
+
 
 Symbolverzeichnis
 
@@ -6565,7 +6678,8 @@ Weingarten-Abbildung
 
 von Vanishing Set
 
-Stichwortverzeichnis
+
+Stichwortverzeichnis
 Abbildung
 affine, 107
 differenzierbare, 29
@@ -6650,7 +6764,8 @@ Halbraum, 28
 Hauptkrümmung, 92
 Hilbert-Kurve, 19, 19
 
-113
+
+
 
 Homöomorphismengruppe, 10
 Homöomorphismus, 9
@@ -6748,7 +6863,8 @@ kompakter, 14
 metrischer, 6
 projektiver, 5, 22, 25, 52
 
-114
+
+
 
 topologischer, 2
 zusammenhängender, 11
@@ -6815,4 +6931,3 @@ Zusammenhang, 11–14
 Zusammenhangskomponente, 13
 Zwischenwertsatz, 107
 
-

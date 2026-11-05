@@ -95,7 +95,8 @@ class affiliation segmentation [LRAL08]. Similarly,
 recent publications in pixel-level object segmentation
 used layered models [YHRF12].
 
-2
+
+
 
 C. Input Data
 The available data which can be used for the
@@ -197,7 +198,8 @@ position of the image is most of the time “sky”
 while another position is most of the time “road”.
 interactive mode.
 
-3
+
+
 
 P2 The manually labeled images could have a more
 coarse labeling. For example, a human classifier
@@ -298,7 +300,8 @@ case of autonomous cars an algorithm which classifies an EU network of excellenc
 2 Visual Object Classes
 pixel as street or no-street and thus makes a semantic
 
-4
+
+
 
 Training
 Beginning with 2007, a segmentation challenge was
@@ -318,7 +321,7 @@ Window
 PostWindow-wise
 bird, boat, bottle, bus, car, cat, chair, cow, dining table,
 extraction
-Classiﬁcation processing
+Classification processing
 dog, horse, motorbike, person, potted plant, sheep, sofa,
 train, tv/monitor.
 Figure 2: A typical segmentation pipeline gets raw
@@ -390,7 +393,8 @@ a majority vote on a pixel basis of 10 segmentations information of the complete
 given by 10 different KWs.
 an holistic approach.
 
-5
+
+
 
 V. T RADITIONAL A PPROACHES
 the directions is calculated for each patch. HOG features
@@ -487,7 +491,8 @@ Now the original image is transformed to two feature doing dimensionality reduct
 maps of equal size which represents the gradient. These analysis (PCA), which is applied by [COWR11]. The
 feature maps are splitted into patches and a histogram of idea behind PCA is to find a hyperplane on which all
 
-6
+
+
 
 feature vectors can be projected with a minimal loss
 of information. A detailed description of PCA is given
@@ -586,7 +591,8 @@ the segmentation by watershed transform has two
 flaws: Over-segmentation due to local minima and thick
 watersheds due to plateaus.
 
-7
+
+
 
 C. Random Decision Forests
 Random Decision Forests were first proposed
@@ -727,7 +733,8 @@ m
 αi αj yi yj hxi , xj i
 2 i=1 j=1
 
-8
+
+
 
 4) Not every dataset is linearly separable. This problem is approached by transforming the feature
 vectors x with a non-linear mapping Φ into
@@ -845,7 +852,8 @@ According to [Mur12], the most common way of
 overall idea of MRFs is to assign a random variable for inference over the posterior MRF in computer vision
 each feature and a random variable for each pixel which problems is Maximum A Posteriori (MAP) estimation.
 
-9
+
+
 
 Detailed introductions to MRFs are given by
 [BKR11], [Mur12]. MRFs are used by [ZBS01] and
@@ -942,7 +950,8 @@ Active contour models are another example of a example is [PC13], where a recurr
 post-processing method [KWT88].
 segmentation is presented.
 
-10
+
+
 
 Another notable paper is [LSD14]. The algorithm
 presented there makes use of a classifying network such
@@ -1035,7 +1044,8 @@ on photographs of professional photographers might
 not have photos from the point of view of a child. This
 is visualized in Figure 4(f).
 
-11
+
+
 
 R EFERENCES
 
@@ -1157,7 +1167,8 @@ knowledge-based morphological operations with
 biomedical applications,” Image Processing, IEEE
 Transactions on, vol. 7, no. 12, pp. 1673–1683, Dec.
 
-12
+
+
 
 [CM02]
 
@@ -1321,7 +1332,8 @@ S. Hu, E. Hoffman, and J. Reinhardt, “Automatic
 lung segmentation for accurate quantitation of
 volumetric x-ray ct images,” Medical Imaging, IEEE
 
-13
+
+
 
 [HJBJ+ 96]
 
@@ -1417,7 +1429,7 @@ F.-F. Li, A. Karpathy, and J. Johnson,
 “CS231n: Convolutional neural networks for
 visual recognition,” 2015. [Online]. Available:
 http://cs231n.stanford.edu/
-D. Lowe, “Distinctive image features from scale-
+D. Lowe, “Distinctive image features from scale
 
 invariant keypoints,” International Journal of
 Computer Vision, vol. 60, no. 2, pp. 91–110, 2004.
@@ -1500,7 +1512,8 @@ Learning, vol. 3, no. 4, pp. 319–342, 1989.
 G. Moser, S. B. Serpico, and J. A. Benediktsson,
 “Markov random field models for supervised land
 
-14
+
+
 
 [MSC]
 
@@ -1604,7 +1617,7 @@ graph cuts,” ACM Transactions on Graphics
 Available: http://delivery.acm.org/10.1145/1020000/
 1015720/p309-rother.pdf
 J. B. Roerdink and A. Meijster, “The watershed
-transform: Definitions, algorithms and paralleliza-
+transform: Definitions, algorithms and paralleliza
 
 [RM07]
 
@@ -1698,7 +1711,8 @@ J. Tighe, M. Niethammer, and S. Lazebnik,
 “Scene parsing with object instances and
 occlusion ordering,” in Computer Vision and
 
-15
+
+
 
 [UPH05]
 
@@ -1795,7 +1809,8 @@ RBF radial basis function. 8
 SIFT scale-invariant feature transform. 5
 SVM Support Vector Machine. 4, 6–8
 
-16
+
+
 
 A PPENDIX A
 TABLES
@@ -1869,4 +1884,3 @@ Data source
 
 Table I: An overview over publicly available image databases with a semantic segmentation ground trouth.
 
-

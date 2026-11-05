@@ -65,3 +65,54 @@ Each run gets a dated section. Each library that changed gets a subsection:
   and affiliation markers, bullet points, `#include <...>` lines and
   table-of-contents entries were split into separate blocks. Side-by-side
   subfigure captions are now interleaved line by line.
+
+## 2026-11-06
+
+The first run since the benchmark itself changed: every library's text is
+post-processed in the same way, a library is measured again when its version
+or one of its optional dependencies changes, and the documents are pinned to
+fixed versions and checked by SHA-256 (they did not change). pdftotext is now
+listed with its Poppler version (24.02.0) instead of 0.86.1.
+
+- Speed: every time is now the shortest of three runs, calibrated to the
+  reference machine (see "Benchmarking machine" in the README), with Python
+  pinned to 3.14. The pure-Python libraries became about 40% faster without a
+  change of their code, e.g. pdfminer.six 5.6s -> 3.3s and pdfplumber
+  8.9s -> 5.6s for text extraction: their raw times dropped by about 30%
+  (shortest of three runs, and possibly another Python; the last run did not
+  record its version), and the calibration takes off another 15%, as the
+  machine was busy during the run (the calibration took 137ms on average
+  instead of 115ms). The averages of the other libraries changed by at most
+  0.2s, mostly from the calibration.
+- Text extraction quality: before, only the text of pypdf and pypdfium2 was
+  post-processed (ligatures, hyphenation, page labels). PyMuPDF
+  94.2% -> 94.9%, Tika 93.1% -> 93.7%, pdfminer.six 87.9% -> 88.6%. Tika's
+  text no longer includes the outline, as it is now taken per page from its
+  XHTML output.
+
+### pypdf
+- Version: 6.21.3 -> 7.0.0, now as pypdf[full] (fontTools, brotli,
+  arabic-reshaper and python-bidi were missing)
+- Speed: text extraction 3.3s -> 1.8s, image extraction 4.2s -> 2.7s,
+  watermarking 0.4s -> 0.3s; mostly due to the measurement, see above
+- Text extraction quality: no change (94.9%)
+- Notes: subscripts and superscripts in formulas are now separated by a
+  space ("∑ki=1" -> "∑k i=1", "1Z(x)" -> "1 Z(x)"), which lowers the score of
+  six documents by up to 0.1 points. The warnings that fontTools is needed to
+  read CFF fonts are gone. The watermarked files differ by up to 22KB.
+
+### pdfminer.six
+- Version: 20260107 (no change), now as pdfminer.six[image]
+- Speed: text extraction 5.6s -> 3.3s, image extraction 7.5s -> 4.3s; due to
+  the measurement, see above
+- Text extraction quality: 87.9% -> 88.6%, due to the post-processing
+
+### PyMuPDF
+- Version: 2.0 -> 2.1
+- Speed: no change
+- Text extraction quality: 94.2% -> 94.9%, due to the post-processing
+
+### pypdfium2
+- Version: 5.14.0 -> 5.15.0
+- Speed: no change; image extraction 1.1s -> 0.9s from the calibration
+- Text extraction quality: no change; the extracted text is the same

@@ -1,4 +1,6 @@
 import hashlib
+import importlib.metadata
+import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -74,6 +76,39 @@ class Library(NamedTuple):
     last_release_date: str = ""
     image_extraction_function: Callable[[bytes], list[tuple[str, bytes]]] | None = None
     pypi_name: str | None = None
+    # The extra of the PyPI package that installs all optional dependencies
+    extra: str = ""
+
+    @property
+    def optional_dependencies(self) -> list[tuple[str, str]]:
+        """Return the name and version of every package of the extra.
+
+        Raises an error if one is not installed, so that the library never runs
+        without its optional dependencies.
+        """
+        if not self.extra:
+            return []
+        assert self.pypi_name, "An extra needs the name of the package"
+        marker = re.compile(rf"""extra\s*==\s*['"]{re.escape(self.extra)}['"]""")
+        dependencies = []
+        for requirement in importlib.metadata.requires(self.pypi_name) or []:
+            if marker.search(requirement):
+                name = re.match(r"[A-Za-z0-9_.-]+", requirement).group(0)
+                try:
+                    dependencies.append((name, importlib.metadata.version(name)))
+                except importlib.metadata.PackageNotFoundError as exc:
+                    raise RuntimeError(
+                        f"{name} of {self.pypi_name}[{self.extra}] is not installed"
+                    ) from exc
+        return sorted(dependencies, key=lambda item: item[0].lower())
+
+    @property
+    def cache_version(self) -> str:
+        """The version of the library and of its optional dependencies."""
+        return " ".join(
+            [self.version]
+            + [f"{name}=={version}" for name, version in self.optional_dependencies]
+        )
 
     @property
     def benchmarks(self) -> list[str]:
@@ -92,13 +127,17 @@ class Cache(BaseModel):
     benchmark_times: dict[str, dict[str, dict[str, float]]] = Field(
         default_factory=dict
     )
+    # The time of the calibration workload, measured right before the
+    # benchmarks of the library and the document, see calibration.py
+    calibration_seconds: dict[str, dict[str, float]] = Field(default_factory=dict)
     read_quality: dict[str, dict[str, float]] = Field(default_factory=dict)
     watermarking_result_file_size: dict[str, dict[str, float]] = Field(
         default_factory=dict
     )
     # Keyed by "{pypi_name}=={version}".
     pypi_release_dates: dict[str, str] = Field(default_factory=dict)
-    # The library version the results were measured with.
+    # The version of the library and of its optional dependencies the results
+    # were measured with
     library_versions: dict[str, str] = Field(default_factory=dict)
 
     def prepare_results(self, library: Library) -> None:
@@ -108,17 +147,21 @@ class Cache(BaseModel):
         that they are measured again.
         """
         lib = library.pathname
-        if self.library_versions.get(lib) != library.version:
+        if self.library_versions.get(lib) != library.cache_version:
             self.benchmark_times.pop(lib, None)
+            self.calibration_seconds.pop(lib, None)
             self.read_quality.pop(lib, None)
             self.watermarking_result_file_size.pop(lib, None)
-            self.library_versions[lib] = library.version
+            self.library_versions[lib] = library.cache_version
         self.benchmark_times.setdefault(lib, {})
+        self.calibration_seconds.setdefault(lib, {})
         self.read_quality.setdefault(lib, {})
         self.watermarking_result_file_size.setdefault(lib, {})
 
     def has_doc(self, library: Library, document: Document) -> bool:
         """Return whether all benchmarks of `library` ran for `document`."""
+        if document.name not in self.calibration_seconds[library.pathname]:
+            return False
         times = self.benchmark_times[library.pathname].get(document.name, {})
         return all(benchmark in times for benchmark in library.benchmarks)
 
