@@ -109,7 +109,7 @@ def write_benchmark_report(
     with open("README.md", "w") as f:
         f.write("# PDF Library Benchmarks\n")
 
-        f.write("This benchmark is about reading pure PDF files - not")
+        f.write("This benchmark is about reading pure PDF files - not ")
         f.write("scanned documents and not documents that applied OCR.\n\n")
 
         f.write("## Benchmarking machine\n")
