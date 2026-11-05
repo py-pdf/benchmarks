@@ -76,25 +76,25 @@ class Document:
 ARXIV = "https://arxiv.org/pdf"
 PYPDF_FILES = "https://github.com/py-pdf/pypdf/files"
 ATTACHMENTS = "https://github.com/user-attachments/files"
-SAMPLE_FILES = "https://github.com/py-pdf/sample-files/raw/main"
+SAMPLE_FILES = "https://github.com/py-pdf/sample-files/raw/80d67b91f3e28909756ca7807bbe8f43b599d12f"
 
 DOCUMENTS = [
     # pdfTeX, as in the main benchmark: already compressed, uses object streams.
     Document(
         "2201.00214",
-        f"{ARXIV}/2201.00214.pdf",
+        f"{ARXIV}/2201.00214v1",
         "9ea7ed2fd1e4eb364ee96c089a61c71f29613c3768cdb7c41daf7314ab62ae91",
         "pdfTeX",
     ),
     Document(
         "1707.09725",
-        f"{ARXIV}/1707.09725.pdf",
+        f"{ARXIV}/1707.09725v1",
         "15d73fe4d8abe5122d547118bdb0accb930737a7c656c9228ad4bee5a5753532",
         "pdfTeX",
     ),
     Document(
         "2201.00069",
-        f"{ARXIV}/2201.00069.pdf",
+        f"{ARXIV}/2201.00069v1",
         "51ff3326533a385e57506bbcb142cda45e2cdcfa170f77c9c6f512c9e1dddbf3",
         "pdfTeX (image-heavy)",
     ),
