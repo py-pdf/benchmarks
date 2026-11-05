@@ -1,3 +1,4 @@
+import hashlib
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -13,15 +14,28 @@ from .pypi import get_release_date
 @dataclass(frozen=True)
 class Document:
     name: str
+    # A URL that always gives the same file, e.g. an arXiv URL with version
     url: str
+    # The SHA-256 of the file the ground truth was made for
+    sha256: str
     layout: str = ""
 
     def __post_init__(self):
         if not self.path.exists():
             self.download()
+        sha256 = hashlib.sha256(self.data).hexdigest()
+        if sha256 != self.sha256:
+            raise ValueError(
+                f"{self.path} has the SHA-256 {sha256} instead of {self.sha256}."
+                " Its results would not be comparable with earlier runs, and"
+                " the ground truth may not fit it."
+            )
 
     def download(self):
-        response = requests.get(self.url)
+        response = requests.get(
+            self.url, headers={"User-Agent": "py-pdf-benchmarks"}, timeout=120
+        )
+        response.raise_for_status()
         self.path.write_bytes(response.content)
 
     @property
