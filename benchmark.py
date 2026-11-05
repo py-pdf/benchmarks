@@ -3,6 +3,8 @@ Compare text extraction performance of different PDF parsers.
 """
 
 import json
+import re
+import subprocess
 import time
 from importlib.metadata import version as pkg_version
 from itertools import product
@@ -66,6 +68,8 @@ def main(
     else:
         cache = Cache()
     names = sorted(libraries.keys())
+    for lib in libraries.values():
+        cache.prepare_results(lib)
     if "tika" in names and docs:
         warm_up_tika(docs[0].data)
 
@@ -79,6 +83,7 @@ def main(
         if cache.has_doc(lib, doc):
             print(f"Skip {doc.name} for {lib.name}")
             continue
+        cache.benchmark_times[lib.pathname][doc.name] = {}
         if lib.text_extraction_function:
             print(f"{name} now parses {doc.name}...")
             t0 = time.time()
@@ -120,6 +125,13 @@ def main(
         docs,
         cache,
     )
+
+
+def get_pdftotext_version() -> str:
+    """Return the Poppler version of the pdftotext command."""
+    output = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True)
+    match = re.search(r"version (\S+)", output.stderr)
+    return match.group(1) if match else ""
 
 
 def postprocess_pages(pages: list[str], doc: Document, library_name: str) -> str:
@@ -241,9 +253,9 @@ if __name__ == "__main__":
             "pdftotext",
             "https://poppler.freedesktop.org/",
             text_extraction_function=pdftotext_get_text,
-            version="0.86.1",
+            version=get_pdftotext_version(),
             watermarking_function=None,
-            dependencies="build-essential libpoppler-cpp-dev pkg-config python3-dev",
+            dependencies="Poppler (poppler-utils)",
             last_release_date="-",
             license="GPL",
         ),
