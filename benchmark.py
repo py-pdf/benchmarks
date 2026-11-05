@@ -40,7 +40,10 @@ from pdf_benchmark.library_code import (
     tika_get_text,
 )
 from pdf_benchmark.output import write_benchmark_report
-from pdf_benchmark.score import get_text_extraction_score
+from pdf_benchmark.score import (
+    count_pages_without_watermark,
+    get_text_extraction_score,
+)
 from pdf_benchmark.text_extraction_post_processing import postprocess
 
 # Every measurement is repeated, and the shortest time is reported: the
@@ -125,6 +128,9 @@ def main(
             cache.benchmark_times[lib.pathname][doc.name]["watermark"] = seconds
             cache.watermarking_result_file_size[lib.pathname][doc.name] = len(
                 watermarked
+            )
+            cache.pages_without_watermark[lib.pathname][doc.name] = (
+                count_pages_without_watermark(watermark_data, data, watermarked)
             )
         if lib.image_extraction_function:
             extracted_images, seconds = measure(lib.image_extraction_function, data)

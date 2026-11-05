@@ -125,13 +125,10 @@ def pymupdf_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
 def pymupdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     pdf_file = PyMuPDF.open(stream=data, filetype="pdf")
     overlay = PyMuPDF.open(stream=watermark_data, filetype="pdf")
-    for i in range(pdf_file.page_count):
-        page = pdf_file.load_page(i)
-        page_front = PyMuPDF.open()
-        page_front.insert_pdf(overlay, from_page=i, to_page=i)
+    for page in pdf_file:
         page.show_pdf_page(
             page.rect,
-            page_front,
+            overlay,
             pno=0,
             keep_proportion=True,
             overlay=True,

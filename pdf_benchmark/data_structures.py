@@ -97,6 +97,7 @@ class Cache(BaseModel):
         default_factory=dict
     )
     image_counts: dict[str, dict[str, int]] = Field(default_factory=dict)
+    pages_without_watermark: dict[str, dict[str, int]] = Field(default_factory=dict)
     # Keyed by "{pypi_name}=={version}".
     pypi_release_dates: dict[str, str] = Field(default_factory=dict)
     # The library version the results were measured with.
@@ -114,11 +115,13 @@ class Cache(BaseModel):
             self.read_quality.pop(lib, None)
             self.watermarking_result_file_size.pop(lib, None)
             self.image_counts.pop(lib, None)
+            self.pages_without_watermark.pop(lib, None)
             self.library_versions[lib] = library.version
         self.benchmark_times.setdefault(lib, {})
         self.read_quality.setdefault(lib, {})
         self.watermarking_result_file_size.setdefault(lib, {})
         self.image_counts.setdefault(lib, {})
+        self.pages_without_watermark.setdefault(lib, {})
 
     def has_doc(self, library: Library, document: Document) -> bool:
         """Return whether all benchmarks of `library` ran for `document`."""

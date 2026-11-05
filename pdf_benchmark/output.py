@@ -70,6 +70,21 @@ def image_count_section(
     )
 
 
+def mark_missing_watermark(cache: Cache, library_name: str, doc: Document) -> str:
+    """Return a mark if pages of the watermarked document lack the watermark."""
+    missing = cache.pages_without_watermark[library_name].get(doc.name)
+    return " ✗" if missing else ""
+
+
+def write_missing_watermark_note(f, cache: Cache, names: list[str]) -> None:
+    """Explain the mark of mark_missing_watermark(), if a result has it."""
+    if any(any(cache.pages_without_watermark[name].values()) for name in names):
+        f.write(
+            "✗: the watermark text is missing on pages of the document, or pages"
+            " are missing.\n\n"
+        )
+
+
 def get_times(
     cache: Cache, docs: list[Document], benchmark_type: str
 ) -> dict[str, list[float | None]]:
@@ -179,10 +194,14 @@ def write_benchmark_report(
             lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg:6.1f}s"]
-            row += [f"{t:0.1f}s" for t in watermarking_times[library_name]]
+            row += [
+                f"{t:0.1f}s" + mark_missing_watermark(cache, library_name, doc)
+                for t, doc in zip(watermarking_times[library_name], docs, strict=True)
+            ]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
+        write_missing_watermark_note(f, cache, names)
 
         # ---------------------------------------------------------------------
         f.write("\n")
@@ -205,10 +224,15 @@ def write_benchmark_report(
             lib = libname2details[library_name]
             avg = averages[index]
             row = [place, f"[{lib.name:<15}]({lib.url})", f"{avg / 10**6:1.1f}MB"]
-            row += [f"{score / 10**6:1.1f}MB" for score in all_scores[library_name]]
+            row += [
+                f"{score / 10**6:1.1f}MB"
+                + mark_missing_watermark(cache, library_name, doc)
+                for score, doc in zip(all_scores[library_name], docs, strict=True)
+            ]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
         f.write("\n")
+        write_missing_watermark_note(f, cache, names)
 
         # ---------------------------------------------------------------------
         names = list(text_extraction_times.keys())
