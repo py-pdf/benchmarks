@@ -41,13 +41,19 @@ class Document:
         doc = PyMuPDF.open(self.path)
         return doc.page_count
 
+    @property
+    def page_labels(self) -> list[str]:
+        """The label of every page, or its number if it has none."""
+        with PyMuPDF.open(self.path) as doc:
+            return [page.get_label() or str(page.number + 1) for page in doc]
+
 
 class Library(NamedTuple):
     name: str
     pathname: str
     url: str
     version: str
-    text_extraction_function: Callable[[bytes], str] | None = None
+    text_extraction_function: Callable[[bytes], list[str]] | None = None
     watermarking_function: Callable[[bytes, bytes], bytes] | None = None
     dependencies: str = ""
     license: str = ""
