@@ -2,8 +2,8 @@ import os
 import subprocess
 import tempfile
 from io import BytesIO
+from pathlib import Path
 
-import pdfminer
 import pdfplumber
 import pymupdf as PyMuPDF
 import pypdf
@@ -143,34 +143,30 @@ def pymupdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
 
 
 def pdfminer_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
-    from PIL import Image
+    from pdfminer.image import ImageWriter
+    from pdfminer.layout import LTContainer, LTImage
 
-    def get_image(layout_object):
-        if isinstance(layout_object, pdfminer.layout.LTImage):
-            return layout_object
-        if isinstance(layout_object, pdfminer.layout.LTContainer):
-            for child in layout_object:
-                return get_image(child)
-        else:
-            return None
+    def iter_images(item):
+        if isinstance(item, LTImage):
+            yield item
+        elif isinstance(item, LTContainer):
+            for child in item:
+                yield from iter_images(child)
 
     images = []
-    try:
-        pages = list(extract_pages(BytesIO(data)))
-        for page in pages:
-            ex_images = list(filter(bool, map(get_image, page)))
-            for image in ex_images:
-                image_pil = Image.frombytes(
-                    "1", image.srcsize, image.stream.get_data(), "raw"
-                )
-
-                img_byte_arr = BytesIO()
-                image_pil.save(img_byte_arr, format="PNG")
-                img_byte_arr = img_byte_arr.getvalue()
-
-                images.append((f"{image.name}.png", img_byte_arr))
-    except Exception as exc:
-        print(f"pdfminer Image extraction failure: {exc}")
+    # ImageWriter decodes the images like the other libraries, but can only
+    # write them to files.
+    with tempfile.TemporaryDirectory() as directory:
+        writer = ImageWriter(directory)
+        for page_number, page in enumerate(extract_pages(BytesIO(data)), start=1):
+            for image in iter_images(page):
+                try:
+                    name = writer.export_image(image)
+                except Exception as exc:
+                    print(f"pdfminer Image extraction failure: {exc}")
+                    continue
+                image_data = (Path(directory) / name).read_bytes()
+                images.append((f"page-{page_number}-{name}", image_data))
     return images
 
 

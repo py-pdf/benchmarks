@@ -41,6 +41,35 @@ def speed_section(
     return text_extraction_times
 
 
+def image_count_section(
+    f,
+    doc_headers,
+    cache: Cache,
+    docs: list[Document],
+    libname2details,
+    image_extraction_times: dict[str, list[float | None]],
+) -> None:
+    """Write how many images every library extracted, next to its speed."""
+    f.write("Number of extracted images:\n\n")
+    table = []
+    for name, times in image_extraction_times.items():
+        if all(t is None for t in times):
+            continue
+        lib = libname2details[name]
+        counts = [cache.image_counts[name].get(doc.name) for doc in docs]
+        total = sum(count or 0 for count in counts)
+        row = [f"[{lib.name:<15}]({lib.url})", total]
+        row += ["-" if count is None else count for count in counts]
+        table.append(row)
+    f.write(table_to_markdown(table, headings=["Library", "Total"] + doc_headers))
+    f.write("\n")
+    f.write(
+        "pypdf and PyMuPDF extract every image of a page once, pdfminer.six and"
+        " pypdfium2 every time it is drawn. PyMuPDF does not extract inline"
+        " images, and pypdfium2 fails on some of them.\n\n"
+    )
+
+
 def get_times(
     cache: Cache, docs: list[Document], benchmark_type: str
 ) -> dict[str, list[float | None]]:
@@ -116,7 +145,7 @@ def write_benchmark_report(
             docs,
             libname2details,
         )
-        speed_section(
+        image_extraction_times = speed_section(
             "Image Extraction Speed",
             "image_extraction",
             f,
@@ -124,6 +153,9 @@ def write_benchmark_report(
             cache,
             docs,
             libname2details,
+        )
+        image_count_section(
+            f, doc_headers, cache, docs, libname2details, image_extraction_times
         )
 
         f.write("## Watermarking Speed\n\n")
