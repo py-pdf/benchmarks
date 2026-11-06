@@ -61,6 +61,16 @@ class Library(NamedTuple):
     image_extraction_function: Callable[[bytes], list[tuple[str, bytes]]] | None = None
     pypi_name: str | None = None
 
+    @property
+    def benchmarks(self) -> list[str]:
+        """The benchmarks the library takes part in, named as in the cache."""
+        functions = {
+            "read": self.text_extraction_function,
+            "watermark": self.watermarking_function,
+            "image_extraction": self.image_extraction_function,
+        }
+        return [name for name, function in functions.items() if function]
+
 
 class Cache(BaseModel):
     # First str: lib
@@ -74,23 +84,29 @@ class Cache(BaseModel):
     )
     # Keyed by "{pypi_name}=={version}".
     pypi_release_dates: dict[str, str] = Field(default_factory=dict)
+    # The library version the results were measured with.
+    library_versions: dict[str, str] = Field(default_factory=dict)
+
+    def prepare_results(self, library: Library) -> None:
+        """Make room for the results of `library`.
+
+        Results measured with another version of the library are dropped, so
+        that they are measured again.
+        """
+        lib = library.pathname
+        if self.library_versions.get(lib) != library.version:
+            self.benchmark_times.pop(lib, None)
+            self.read_quality.pop(lib, None)
+            self.watermarking_result_file_size.pop(lib, None)
+            self.library_versions[lib] = library.version
+        self.benchmark_times.setdefault(lib, {})
+        self.read_quality.setdefault(lib, {})
+        self.watermarking_result_file_size.setdefault(lib, {})
 
     def has_doc(self, library: Library, document: Document) -> bool:
-        lib = library.pathname
-        doc = document.name
-
-        if lib not in self.benchmark_times:
-            self.benchmark_times[lib] = {}
-        if doc not in self.benchmark_times[lib]:
-            self.benchmark_times[lib][doc] = {}
-
-        if lib not in self.read_quality:
-            self.read_quality[lib] = {}
-
-        if lib not in self.watermarking_result_file_size:
-            self.watermarking_result_file_size[lib] = {}
-
-        return doc in self.benchmark_times[lib] and doc in self.read_quality[lib]
+        """Return whether all benchmarks of `library` ran for `document`."""
+        times = self.benchmark_times[library.pathname].get(document.name, {})
+        return all(benchmark in times for benchmark in library.benchmarks)
 
     def resolve_release_date(self, library: Library) -> str:
         """Return `library`'s last PyPI release date, fetching and caching it
