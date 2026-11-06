@@ -1,4 +1,5 @@
 import platform
+from dataclasses import dataclass, field
 from typing import Literal
 
 import numpy as np
@@ -7,6 +8,12 @@ from rich.progress import track
 from pdf_benchmark.calibration import REFERENCE_MACHINE, to_reference_seconds
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.environment_info import get_processor_name
+from pdf_benchmark.features import (
+    IMAGE_FEATURES,
+    TEXT_FEATURES,
+    ImageFeature,
+    TextFeature,
+)
 from pdf_benchmark.utils import sizeof_fmt, table_to_markdown
 
 
@@ -111,11 +118,54 @@ def get_times(
     return times
 
 
+@dataclass
+class FeatureResults:
+    """The mark and the details of every feature, per library."""
+
+    text: dict[str, dict[str, tuple[str, str]]] = field(default_factory=dict)
+    images: dict[str, dict[str, tuple[str, str]]] = field(default_factory=dict)
+
+
+def feature_section(
+    f,
+    features: list[TextFeature] | list[ImageFeature],
+    results: dict[str, dict[str, tuple[str, str]]],
+    libname2details: dict[str, Library],
+    legend: str,
+) -> None:
+    """Write a matrix of the features and the libraries, and what went wrong."""
+    names = list(results)
+    headings = ["Feature"] + [libname2details[name].name for name in names]
+    table = [
+        [feature.name] + [results[name][feature.name][0] for name in names]
+        for feature in features
+    ]
+    alignment = [("^", "<")] + [("^", "^")] * len(names)
+    f.write(table_to_markdown(table, headings=headings, alignment=alignment))
+    f.write(f"\n{legend}\n\n")
+    f.write("<details>\n<summary>The features, and what went wrong</summary>\n\n")
+    for feature in features:
+        f.write(f"* **{feature.name}**: {feature.description}")
+        if isinstance(feature, TextFeature):
+            expected = feature.expected.replace("\n", " / ")
+            f.write(f" Expected: `{expected}`.")
+        problems = [
+            f"{libname2details[name].name}: `{results[name][feature.name][1]}`"
+            for name in names
+            if results[name][feature.name][1]
+        ]
+        if problems:
+            f.write("\n  " + "; ".join(problems).replace("\n", " "))
+        f.write("\n")
+    f.write("\n</details>\n\n")
+
+
 def write_benchmark_report(
     names: list[str],
     libname2details: dict[str, Library],
     docs: list[Document],
     cache: Cache,
+    features: FeatureResults,
 ) -> None:
     """Create a benchmark report from all timing results."""
     # avg_times = {name: np.mean(times_all[name]) for name in names}
@@ -209,6 +259,20 @@ def write_benchmark_report(
         image_count_section(
             f, doc_headers, cache, docs, libname2details, image_extraction_times
         )
+        f.write("## Image Extraction Features\n\n")
+        f.write(
+            "Which kinds of images the libraries extract, each tested with a"
+            " small PDF.\n\n"
+        )
+        feature_section(
+            f,
+            IMAGE_FEATURES,
+            features.images,
+            libname2details,
+            "✓: the image is extracted. ◐: an image is extracted, but it is"
+            " not the picture or cannot be opened. ✗: no image. ⚠: an error."
+            " For *Drawn twice*, the number of extracted images.",
+        )
 
         f.write("## Watermarking Speed\n\n")
         table = []
@@ -301,3 +365,17 @@ def write_benchmark_report(
             row += [f"{score * 100:3.0f}%" for score in all_scores[library_name]]
             table.append(row)
         f.write(table_to_markdown(table, headings=headings))
+        f.write("\n## Text Extraction Features\n\n")
+        f.write(
+            "Which properties of a PDF the libraries handle, each tested with a"
+            " small PDF. They explain some differences of the text extraction"
+            " quality.\n\n"
+        )
+        feature_section(
+            f,
+            TEXT_FEATURES,
+            features.text,
+            libname2details,
+            "✓: the expected text, ignoring whitespace except where the feature is"
+            " about it. ✗: another text. ⚠: an error.",
+        )
