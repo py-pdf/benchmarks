@@ -52,10 +52,10 @@ in „Analysis I“ vermittelt.
 ), Mengenschreibweisen (
 
 ,
-∩
+∪
 
 ,
-∪
+∩
 
 P
 
@@ -453,9 +453,9 @@ sind dort alle abgeschlossenen Mengen.
 
 {
 
-}
-
 {
+
+}
 
 ,
 
@@ -654,9 +654,9 @@ und T =
 
 0, 1, 2
 
-}
-
 {
+
+}
 
 0
 
@@ -1396,9 +1396,9 @@ x = y
 
 Ux
 
-∈
-
 ∩
+
+∈
 
 Uy =
 ∅
@@ -2140,9 +2140,9 @@ R>0
 
 \ {
 
-0
-
 }
+
+0
 
 ist nicht zusammenhängend, denn R
 
@@ -2198,9 +2198,9 @@ R
 ∩
 X, wobei X ein topologischer Raum ist.
 
-∪
-
 ∩
+
+∪
 
 6) R mit Zariski-Topologie ist zusammenhängend.
 
@@ -4273,9 +4273,9 @@ Umgebung: B1(0, 1)
 (cid:12)
 (cid:12) w2 + z2 < 1 (cid:9) = V2
 
-(cid:107)
-
 }
+
+(cid:107)
 
 ?
 
@@ -7587,9 +7587,9 @@ R)
 
 →
 
-→
-
 (cid:55)→
+
+→
 
 ×
 
@@ -8149,11 +8149,11 @@ e
 
 →
 
+→
+
+→
+
 (cid:55)→
-
-→
-
-→
 
 ist nicht injektiv.
 π1(S1, 1) ∼=
@@ -9091,9 +9091,9 @@ Vi
 
 Vj =
 
-∃
-
 ∀
+
+∃
 
 ∈
 
@@ -10862,9 +10862,9 @@ b) Ist X ein topologischer Raum, so entsprechen dabei die Gruppenoperationen dur
 
 →
 
-}
-
 {
+
+}
 
 |
 
@@ -11509,6 +11509,8 @@ Diese Teilmengen Hi heißen Halbebenen bzgl. g.
 
 für alle A
 
+gilt: AB
+
 Hi, B
 
 ∈ {
@@ -11521,8 +11523,6 @@ Hi, B
 
 H2 in zwei nichtleere Teilmengen H1, H2, sodass
 =
-
-gilt: AB
 
 = j.
 
@@ -13742,17 +13742,17 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
 1
 −
 
+0
+
 1
 
 2
 
 3
 
-0
+4
 
 5
-
-4
 
 x
 
@@ -16801,9 +16801,9 @@ y3
 
 (cid:43)
 
-
-
 
+
+
 
 
 
@@ -17697,9 +17697,9 @@ zi
 
 }
 
-{
-
 }
+
+{
 
 ⊆ {
 ∈
@@ -17877,9 +17877,9 @@ Gruppenhomomorphismus. Jedoch ist ϕ2 nicht injektiv, also sicher kein Homöomor
 
 H, x
 
-(cid:55)→
-
 →
+
+(cid:55)→
 
 3) Sei X ein topologischer Raum. Dann ist idX ein Homöomorphismus. Da keine
 Verknüpfung auf X definiert wurde, ist X keine Gruppe und daher auch kein Gruppenhomomorphismus.
@@ -18143,9 +18143,9 @@ R
 
 \ {
 
-0
-
 }
+
+0
 
 0
 

@@ -88,3 +88,25 @@ now listed with its Poppler version (24.02.0) instead of 0.86.1.
   lack the watermark text on a page; none does.
 - Documents: the URLs point to fixed versions (arXiv version, sample-files
   commit), and the files are checked by SHA-256. The files did not change.
+
+## 2026-11-06, optional dependencies
+
+pypdf now runs with all its optional dependencies (pypdf[full]: fontTools,
+brotli, arabic-reshaper and python-bidi were missing) and pdfminer.six with
+pdfminer.six[image]; both were measured again.
+
+### pypdf
+- Version: 6.21.3 (no change)
+- Speed: no change
+- Text extraction quality: no change
+- Notes: with fontTools, the warnings that it is needed to read CFF fonts are
+  gone; the extracted text of the 14 documents is the same.
+
+### pdfminer.six
+- Version: 20260107 (no change)
+- Speed: no change
+- Text extraction quality: no change
+- Notes: Pillow was installed before as well. The text of two documents
+  differs in whitespace only.
+
+The report now has feature matrices for image and text extraction.
