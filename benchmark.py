@@ -41,6 +41,9 @@ from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
 from pdf_benchmark.text_extraction_post_processing import postprocess
 
+# Pinned to a commit, so that the files cannot change with the main branch
+SAMPLE_FILES = "https://github.com/py-pdf/sample-files/raw/80d67b91f3e28909756ca7807bbe8f43b599d12f"
+
 
 def warm_up_tika(data: bytes) -> None:
     """
@@ -171,23 +174,76 @@ def write_single_result(
 
 if __name__ == "__main__":
     docs = [
-        Document(name="2201.00214", url="https://arxiv.org/pdf/2201.00214.pdf"),
+        Document(
+            name="2201.00214",
+            url="https://arxiv.org/pdf/2201.00214v1",
+            sha256="9ea7ed2fd1e4eb364ee96c089a61c71f29613c3768cdb7c41daf7314ab62ae91",
+        ),
         Document(
             name="GeoTopo-book",
-            url="https://github.com/py-pdf/sample-files/raw/main/009-pdflatex-geotopo/GeoTopo.pdf",
+            url=f"{SAMPLE_FILES}/009-pdflatex-geotopo/GeoTopo.pdf",
+            sha256="a0b9242aef9b5a2c4850160cc9aaf64f5c7b8be705d6872ae28aebf5ab512540",
         ),
-        Document(name="2201.00151", url="https://arxiv.org/pdf/2201.00151.pdf"),
-        Document(name="1707.09725", url="https://arxiv.org/pdf/1707.09725.pdf"),
-        Document(name="2201.00021", url="https://arxiv.org/pdf/2201.00021.pdf"),
-        Document(name="2201.00037", url="https://arxiv.org/pdf/2201.00037.pdf"),
-        Document(name="2201.00069", url="https://arxiv.org/pdf/2201.00069.pdf"),
-        Document(name="2201.00178", url="https://arxiv.org/pdf/2201.00178.pdf"),
-        Document(name="2201.00201", url="https://arxiv.org/pdf/2201.00201.pdf"),
-        Document(name="1602.06541", url="https://arxiv.org/pdf/1602.06541.pdf"),
-        Document(name="2201.00200", url="https://arxiv.org/pdf/2201.00200.pdf"),
-        Document(name="2201.00022", url="https://arxiv.org/pdf/2201.00022.pdf"),
-        Document(name="2201.00029", url="https://arxiv.org/pdf/2201.00029.pdf"),
-        Document(name="1601.03642", url="https://arxiv.org/pdf/1601.03642.pdf"),
+        Document(
+            name="2201.00151",
+            url="https://arxiv.org/pdf/2201.00151v1",
+            sha256="886051363eeb8c219bff72cf46437b2f5787bbe7f22ecbce058515549e15aed9",
+        ),
+        Document(
+            name="1707.09725",
+            url="https://arxiv.org/pdf/1707.09725v1",
+            sha256="15d73fe4d8abe5122d547118bdb0accb930737a7c656c9228ad4bee5a5753532",
+        ),
+        Document(
+            name="2201.00021",
+            url="https://arxiv.org/pdf/2201.00021v3",
+            sha256="984ace89eb23ff4cb9cd6705a191a3eeea267a6ef42d05c782a10ca97d0f579a",
+        ),
+        Document(
+            name="2201.00037",
+            url="https://arxiv.org/pdf/2201.00037v1",
+            sha256="a1a62e45b4e3f3c89e2a0336de29631afa7e9e712d3a268f14f3ad5e35284a20",
+        ),
+        Document(
+            name="2201.00069",
+            url="https://arxiv.org/pdf/2201.00069v1",
+            sha256="51ff3326533a385e57506bbcb142cda45e2cdcfa170f77c9c6f512c9e1dddbf3",
+        ),
+        Document(
+            name="2201.00178",
+            url="https://arxiv.org/pdf/2201.00178v1",
+            sha256="f30563de6c6973cfc6aa4670113d52855aadba7ddb006011a9978ca791f411f0",
+        ),
+        Document(
+            name="2201.00201",
+            url="https://arxiv.org/pdf/2201.00201v2",
+            sha256="095227891d4fcb6190f74a133c4895af73d2cedcf3676c8292fdf5915e46ed47",
+        ),
+        Document(
+            name="1602.06541",
+            url="https://arxiv.org/pdf/1602.06541v2",
+            sha256="8618a96fc965a31e843e6b96709e68bcbe2a825f32dc6b2ca67a4e60d38614c3",
+        ),
+        Document(
+            name="2201.00200",
+            url="https://arxiv.org/pdf/2201.00200v1",
+            sha256="edce7ae9870ad1608384ae40f86691566b8ce0013685496e3e4d1fda992dcac8",
+        ),
+        Document(
+            name="2201.00022",
+            url="https://arxiv.org/pdf/2201.00022v2",
+            sha256="c64924d5856c83bbd712aeec09cb7bbe6e4e71ef484eb6f8013aceccec015fa2",
+        ),
+        Document(
+            name="2201.00029",
+            url="https://arxiv.org/pdf/2201.00029v1",
+            sha256="ce6b2e656e9981ee0f4497f6638407370e603d0f7395c65e4431d3b7ddfca024",
+        ),
+        Document(
+            name="1601.03642",
+            url="https://arxiv.org/pdf/1601.03642v1",
+            sha256="c18ea7dc2e8d075f22ca0030e83000adc05cd4f75218c1d774564aa91b5edd94",
+        ),
     ]
     libraries = {
         "tika": Library(
