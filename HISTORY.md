@@ -153,3 +153,9 @@ library changed its version.
   copied the watermark into a new document for every page. The watermarked
   files became 3.7MB -> 3.5MB on average (52.3MB -> 48.3MB for the 14
   documents), the same size as those of pypdf and pdfrw.
+
+## 2026-11-06, feature matrices
+
+The report now has feature matrices for image and text extraction: what
+each library extracts from small PDFs with one feature each. No library was
+measured again, and no other result changed.
