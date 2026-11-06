@@ -132,15 +132,26 @@ def write_benchmark_report(
 
         f.write("## Libraries\n")
         table = []
-        header = ["Name", "Last PyPI Release", "License", "Version", "Dependencies"]
+        header = [
+            "Name",
+            "Last PyPI Release",
+            "License",
+            "Version",
+            "Dependencies",
+            "Optional dependencies",
+        ]
         for name in names:
             lib = libname2details[name]
+            optional = ", ".join(
+                f"{package} {version}" for package, version in lib.optional_dependencies
+            )
             row = [
                 lib.name,
                 lib.last_release_date,
                 lib.license,
                 lib.version,
                 lib.dependencies,
+                f"[{lib.extra}]: {optional}" if lib.extra else "",
             ]
             table.append(row)
 

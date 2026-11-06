@@ -292,6 +292,7 @@ if __name__ == "__main__":
             last_release_date="2025-06-29",
             image_extraction_function=pypdf_image_extraction,
             pypi_name="pypdf",
+            extra="full",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -303,6 +304,7 @@ if __name__ == "__main__":
             last_release_date="2025-05-06",
             image_extraction_function=pdfminer_image_extraction,
             pypi_name="pdfminer.six",
+            extra="image",
         ),
         "pdfplumber": Library(
             "pdfplumber",
