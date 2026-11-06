@@ -1,39 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Draft version January 4, 2022
 Typeset using LATEX default style in AASTeX631
 
@@ -46,7 +11,7 @@ Prasad Mani ,1 Chris S. Hanson ,2 and Shravan Hanasoge 1, 2
 
 ABSTRACT
 
-The technique of normal-mode coupling is a powerful tool with which to seismically image non-
+The technique of normal-mode coupling is a powerful tool with which to seismically image non
 
 axisymmetric phenomena in the Sun. Here we apply mode coupling in the Cartesian approximation to
 
@@ -56,7 +21,7 @@ Magnetic Imager onboard the Solar Dynamics Observatory, we perform inversions on
 
 measurements to show that the resulting divergence and radial vorticity maps at supergranular length
 
-scales (∼30 Mm) near the surface compare extremely well with those obtained using the Local Corre-
+scales (∼30 Mm) near the surface compare extremely well with those obtained using the Local Corre
 
 lation Tracking method. We find that the Pearson correlation coefficient is ≥ 0.9 for divergence flows,
 
@@ -131,19 +96,19 @@ iv
 17
 
 8v
-1 
+1
 
  [
 as
 
 tr
-o-
+o
 
 ph
 .S
 
 R
-] 
+]
 
  1
  J
@@ -159,10 +124,9 @@ http://orcid.org/0000-0003-2536-9421
 http://orcid.org/0000-0003-2896-1471
 mailto: prasad.subramanian@tifr.res.in
 
+ Mani et al.
 
-2 Mani et al.
-
-Normal-mode coupling refers to the concept of expressing solar-oscillation eigenfunctions as a linear weighted combi-
+Normal-mode coupling refers to the concept of expressing solar-oscillation eigenfunctions as a linear weighted combi
 
 nation of model-eigenfunctions (e.g., Model S Christensen-Dalsgaard 2021). The model eigenfunctions form a complete
 
@@ -258,7 +222,7 @@ The flow coefficients Pqj and Tqj , represented by the discrete indices q and j,
 
 where the flow for each wavenumber q can be inverted for independently; parallelization in computation can thus be
 
-exploited to expedite inversions. Note that Pqj = P ∗−qj and Tqj = T ∗−qj for the flow field to be real in the spatio-
+exploited to expedite inversions. Note that Pqj = P ∗−qj and Tqj = T ∗−qj for the flow field to be real in the spatio
 
 temporal domain.
 
@@ -294,7 +258,7 @@ Dqj,k = D−qj,−k (see eq A6). The kernels, as flows, are expressed on the bas
 
 1.2. Least-squares of cross-correlation
 
-Even though φω∗k φωk+q isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea-
+Even though φω∗k φωk+q isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea
 
 surement, known in mode-coupling literature as ’B-coefficients’, is much better designed for inversion as it reduces the
 
@@ -382,8 +346,7 @@ random forcing function (see Duvall & Harvey 1986). Modes are thus generated wit
 and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
 
 
-
-4 Mani et al.
+ Mani et al.
 
 Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p1 (orange) and p2 (green). The shaded
 regions of the same colours indicate 1-linewidth Γ about the mode frequency. The yellow shaded region indicates the range of
@@ -505,7 +468,7 @@ interested in only surface flows, we leave higher order coupling to future work.
 
 It bears mentioning that the slopes of the ridges in the kR�-ν spectrum (Figure 1) increase with radial order. This
 
-limits us to low-to-intermediate kR� (< 1000) for these higher radial orders if we are to remain under the acoustic cut-
+limits us to low-to-intermediate kR� (< 1000) for these higher radial orders if we are to remain under the acoustic cut
 
 off frequency of 5.3mHz. It also becomes imperative to use a spatially larger observation patch to gain access to signals
 
@@ -548,8 +511,7 @@ M ×M) and pre-multiplying by Kᵀ,
 U =(KᵀΛ−1K)−1KᵀΛ−1B. (12)
 
 
-
-6 Mani et al.
+ Mani et al.
 
 Figure 2. Left : Averaging kernel for poloidal flow (see section B.2, eq B17, and left panel of Figure 8) for qR� = [−112,−45],
 at the depth zo = −0.41 Mm. Right : L-curve for the mode qR� = [−112,−45]; the knee (λ = 2.48) is marked by a blue
@@ -585,7 +547,7 @@ To improve confidence in the imaged near-surface flows through mode-coupling, we
 
 from Local Correlation Tracking method (LCT; November & Simon 1988). LCT provides surface-flow maps by
 
-examining the advection of convective granules (1.2 Mm, qR� ≈ 3500; Hathaway et al. 2015) by underlying larger-
+examining the advection of convective granules (1.2 Mm, qR� ≈ 3500; Hathaway et al. 2015) by underlying larger
 
 scale flow systems. Since granules are used as tracers, which are much smaller in size than supergranules (≈ 35 Mm),
 
@@ -593,7 +555,7 @@ LCT is an effective method (see Rieutord et al. 2001) to produce surface horizon
 
 Time series of intensity images from HMI, with the same properties of the Dopplercubes described in section 2
 
-(tracking rate, date, location, size and duration of observed patch, spatial and temporal sampling rate), are ob-
+(tracking rate, date, location, size and duration of observed patch, spatial and temporal sampling rate), are ob
 
 tained and Postel projected. The horizontal flows are deduced by tracking the proper motions of granules between
 
@@ -643,7 +605,7 @@ FLCT code. vx and vy are then computed for consecutive pairs of images and are a
 
 For mode-coupling, horizontal divergence (hereafter div) and radial vorticity (hereafter curl) are computed by
 
-substituting P and T from eq 3 into eq 2 as below -
+substituting P and T from eq 3 into eq 2 as below 
 
 uuu(q, z) = −∇2Pez +∇(∂zP ) +∇hT×ez,
 = −(0, 0, ∂2xP + ∂2yP + ∂2zP ) + (∂x∂zP, ∂y∂zP, ∂
@@ -678,8 +640,7 @@ Gaussian is centered at the desired wavenumber with a half-width of 25. We then 
 obtain a real-space steady-flow map.
 
 
-
-8 Mani et al.
+ Mani et al.
 
 Figure 4. Left: Divergence-flow power spectrum |div|2, from eqn 16, obtained from inversion using all the couplings. The
 power-spectrum is then filtered with a bandpass centered around qR� = 150 (middle panel). The resulting spectra is shown in
@@ -702,7 +663,7 @@ and transform back to real space.
 
 Condensing all of the above, the following sequence of operations to compare flows at desired length scales are
 
-performed for mode-coupling (M-C) and for LCT -
+performed for mode-coupling (M-C) and for LCT 
 
 M-C : φ(x, y; t)
 3D FFT
@@ -821,8 +782,7 @@ to the surface (within ±0.5 Mm from z=0). For a desired comparison length scale
 and the regularization parameter to be used in the inversion. We then separately compute filtered divergence and
 
 
-
-10 Mani et al.
+ Mani et al.
 
 (a) qR� = 100, f-f (b) qR� = 150, p1-p1
 
@@ -956,8 +916,7 @@ jq ∂z
 . (A3)
 
 
-
-12 Mani et al.
+ Mani et al.
 
 Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
 
@@ -1240,8 +1199,7 @@ As an aside, we note that averaging kernels can similarly be constructed for RLS
 and B14.
 
 
-
-14 Mani et al.
+ Mani et al.
 
 Figure 8. Left : Kernel Kk,q(z) (eq B14) shown vs depth z for the three radial order couplings f-f, p1-p1, and p2-p2. qR� =
 [−112,−45] and kR� = [−853,−157] is chosen for all the radial order couplings for comparison. Right : Averaging kernel
@@ -1305,7 +1263,7 @@ q (z),
 
 ≈ 〈Pσq (zo)〉 (B19)
 
-Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Di-
+Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Di
 
 vergence flow can then be obtained from eq 16. Results are shown in Figures 9 and 10.
 
@@ -1467,8 +1425,7 @@ http://doi.org/10.1051/0004-6361/202039108
 http://doi.org/10.3847/1538-4357/abe770
 http://doi.org/10.1088/0004-637X/811/2/105
 
-
-16 Mani et al.
+ Mani et al.
 
 Hathaway, D. H., Upton, L., & Colegrove, O. 2013, Science,
 
@@ -1650,24 +1607,3 @@ http://doi.org/10.1086/521391
 http://doi.org/10.1093/mnras/stw1223
 http://doi.org/10.1086/512009
 http://doi.org/10.1088/2041-8205/749/1/L5
-
-	1 Introduction
-	1.1 Forward problem
-	1.2 Least-squares of cross-correlation
-	1.3 Noise model
-
-	2 Data Analysis
-	3 Inversion
-	3.1 RLS
-
-	4 LCT
-	5 Maps of horizontal divergence and radial vorticity
-	6 Results
-	6.1 Amplitudes of mode-coupling flows
-
-	A Derivation of the Forward Model
-	B SOLA inversions
-	B.1 Kernels in the integral form
-	B.2 Obtaining the coefficients 
-
-

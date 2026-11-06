@@ -5,13 +5,13 @@ Prasad Mani ,1 Chris S. Hanson ,2 and Shravan Hanasoge 1,2
 1Department of Astronomy and Astrophysics, Tata Institute of Fundamental Research, Mumbai, India
 2Center for Space Science, NYUAD Institute, New York University Abu Dhabi, Abu Dhabi, UAE
 ABSTRACT
-The technique of normal-mode coupling is a powerful tool with which to seismically image non-
-axisymmetricphenomenaintheSun. HereweapplymodecouplingintheCartesianapproximationto
+The technique of normal-mode coupling is a powerful tool with which to seismically image nonaxisymmetricphenomenaintheSun.
+ HereweapplymodecouplingintheCartesianapproximationto
 probe steady, near-surface flows in the Sun. Using Doppler cubes obtained from the Helioseismic and
 Magnetic Imager onboard the Solar Dynamics Observatory, we perform inversions on mode-coupling
 measurements to show that the resulting divergence and radial vorticity maps at supergranular length
-scales (∼30 Mm) near the surface compare extremely well with those obtained using the Local Corre-
-lation Tracking method. We find that the Pearson correlation coefficient is ≥ 0.9 for divergence flows,
+scales (∼30 Mm) near the surface compare extremely well with those obtained using the Local Correlation
+ Tracking method. We find that the Pearson correlation coefficient is ≥ 0.9 for divergence flows,
 while ≥ 0.8 is obtained for the radial vorticity.
 Keywords: Helioseismology (709); Solar physics (1476); Supergranulation (1662)
 1. INTRODUCTION
@@ -46,9 +46,9 @@ naJ
 1
 ]RS.hp-ortsa[
 1v87100.1022:viXra
-2 Mani et al.
-Normal-modecouplingreferstotheconceptofexpressingsolar-oscillationeigenfunctionsasalinearweightedcombi-
-nationofmodel-eigenfunctions(e.g.,ModelSChristensen-Dalsgaard2021). Themodeleigenfunctionsformacomplete
+ Mani et al.
+Normal-modecouplingreferstotheconceptofexpressingsolar-oscillationeigenfunctionsasalinearweightedcombinationofmodel-eigenfunctions(e.g.,ModelSChristensen-Dalsgaard2021).
+ Themodeleigenfunctionsformacomplete
 andorthogonalbasis. Bydesign,themodelSunissphericallysymmetric,adiabatic,freefromrotation,magnetismand
 flows. Inthisstate,theoscillationsareconsideredtobeuncoupled. Theweightsneededtoexpressthesolar-oscillation
 eigenfunctions would then encode all the perturbations that are absent in the model. The forward problem then
@@ -105,8 +105,8 @@ j j
 The flow coefficients P and T , represented by the discrete indices q and j, become ideal candidates for inversions,
 qj qj
 where the flow for each wavenumber q can be inverted for independently; parallelization in computation can thus be
-exploited to expedite inversions. Note that P = P∗ and T = T∗ for the flow field to be real in the spatio-
-qj −qj qj −qj
+exploited to expedite inversions. Note that P = P∗ and T = T∗ for the flow field to be real in the spatioqj
+ −qj qj −qj
 temporal domain.
 To infer flows from wavefields φ scattered by a perturbation of length scale q, cross-correlate them in the manner
 Imaging near-surface flows using mode-coupling analysis 3
@@ -129,8 +129,8 @@ qj,k −qj,−k
 D =D (see eq A6). The kernels, as flows, are expressed on the basis f (z).
 qj,k −qj,−k j
 1.2. Least-squares of cross-correlation
-Even though φω∗φω isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea-
-k k+q
+Even though φω∗φω isolates the effect of flow perturbations at individual wavenumbers q, a more compact meak
+ k+q
 surement, knowninmode-couplingliteratureas’B-coefficients’, ismuchbetterdesignedforinversionasitreducesthe
 dimensionoftheproblem. Aleast-squaresfittothecross-correlationφω∗φω (seeWoodard2006,2014,2016)results
 k k+q
@@ -179,7 +179,7 @@ randomprocessandthewavefieldsareuncorrelatedacrosswavenumberandfrequencyintheabs
 Everyindependentrealizationofamodecanbeunderstoodastheoutputofadampedharmonicoscillatordrivenbya
 random forcing function (see Duvall & Harvey 1986). Modes are thus generated with random phases and amplitudes
 and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
-4 Mani et al.
+ Mani et al.
 Figure 1. Dispersion relation for the radial orders used in this analysis; f (blue), p (orange) and p (green). The shaded
 1 2
 regions of the same colours indicate 1-linewidth Γ about the mode frequency. The yellow shaded region indicates the range of
@@ -263,8 +263,8 @@ presenteveninp -p , andp -p (seeFigure3), andpossiblyotherhigherorderself-andcro
 interested in only surface flows, we leave higher order coupling to future work.
 It bears mentioning that the slopes of the ridges in the kR -ν spectrum (Figure 1) increase with radial order. This
 (cid:12)
-limitsustolow-to-intermediatekR (<1000)forthesehigherradialordersifwearetoremainundertheacousticcut-
-(cid:12)
+limitsustolow-to-intermediatekR (<1000)forthesehigherradialordersifwearetoremainundertheacousticcut(cid:12)
+
 offfrequencyof5.3mHz. Italsobecomesimperativetouseaspatiallylargerobservationpatchtogainaccesstosignals
 from low kR - too large an observation region could possibly render invalid the Cartesian geometry approximation.
 (cid:12)
@@ -291,7 +291,7 @@ k,q
 M ×M) and pre-multiplying by K(cid:124),
 (K (cid:124) Λ−1K)U=(K (cid:124) Λ−1)B, (11)
 U=(K (cid:124) Λ−1K)−1K (cid:124) Λ−1B. (12)
-6 Mani et al.
+ Mani et al.
 Figure 2. Left: Averagingkernelforpoloidalflow(seesectionB.2,eqB17,andleftpanelofFigure8)forqR =[−112,−45],
 (cid:12)
 at the depth z = −0.41 Mm. Right: L-curve for the mode qR = [−112,−45]; the knee (λ = 2.48) is marked by a blue
@@ -316,13 +316,13 @@ q
 4. LCT
 Toimproveconfidenceintheimagednear-surfaceflowsthroughmode-coupling,wecomparethemwithflowsobtained
 from Local Correlation Tracking method (LCT; November & Simon 1988). LCT provides surface-flow maps by
-examining the advection of convective granules (1.2 Mm, qR ≈ 3500; Hathaway et al. 2015) by underlying larger-
-(cid:12)
+examining the advection of convective granules (1.2 Mm, qR ≈ 3500; Hathaway et al. 2015) by underlying larger(cid:12)
+
 scale flow systems. Since granules are used as tracers, which are much smaller in size than supergranules (≈35 Mm),
 LCT is an effective method (see Rieutord et al. 2001) to produce surface horizontal flow maps of supergranulation.
 Time series of intensity images from HMI, with the same properties of the Dopplercubes described in section 2
-(tracking rate, date, location, size and duration of observed patch, spatial and temporal sampling rate), are ob-
-tained and Postel projected. The horizontal flows are deduced by tracking the proper motions of granules between
+(tracking rate, date, location, size and duration of observed patch, spatial and temporal sampling rate), are obtained
+ and Postel projected. The horizontal flows are deduced by tracking the proper motions of granules between
 consecutive intensity images, which we denote as I ,I . The LCT method selects a patch in two images each
 1 2
 (I
@@ -368,8 +368,8 @@ FLCT code. v and v are then computed for consecutive pairs of images and are ave
 x y
 5. MAPS OF HORIZONTAL DIVERGENCE AND RADIAL VORTICITY
 For mode-coupling, horizontal divergence (hereafter div) and radial vorticity (hereafter curl) are computed by
-substituting P and T from eq 3 into eq 2 as below -
-uuu(q,z)=−∇2Pe +∇(∂ P)+∇ T×e ,
+substituting P and T from eq 3 into eq 2 as below uuu(q,z)=−∇2Pe
+ +∇(∂ P)+∇ T×e ,
 z z h z
 =−(0, 0, ∂2P +∂2P +∂2P)+(∂ ∂ P, ∂ ∂ P, ∂2P)+(∂ T, −∂ T, 0). (15)
 x y z x z y z z y x
@@ -390,7 +390,7 @@ We seek to show comparisons (see Figures 5, 6, and 7) for qR = 100, 150, 200 and
 flows at these length scales, we apply a Gaussian filter (see Figure 4) to flows obtained from eqns 16 and 17. The
 Gaussian is centered at the desired wavenumber with a half-width of 25. We then perform a 2D Fourier transform to
 obtain a real-space steady-flow map.
-8 Mani et al.
+ Mani et al.
 Figure 4. Left: Divergence-flow power spectrum |div|2, from eqn 16, obtained from inversion using all the couplings. The
 power-spectrum is then filtered with a bandpass centered around qR =150 (middle panel). The resulting spectra is shown in
 (cid:12)
@@ -408,8 +408,8 @@ x y y x
 We then perform a 2D Fourier transform on eqns 18 and 19, apply the same Gaussian filters as for mode-coupling,
 and transform back to real space.
 Condensing all of the above, the following sequence of operations to compare flows at desired length scales are
-performed for mode-coupling (M-C) and for LCT -
-M-C: φ(x,y;t)= 3 = D = F = F = T ⇒φω,B = i = nv = e = rs = io = n ⇒P,T = ∇ ==h⇒ · eqns 16, 17== F = ilt = e = r, ⇒div,curl
+performed for mode-coupling (M-C) and for LCT M-C:
+ φ(x,y;t)= 3 = D = F = F = T ⇒φω,B = i = nv = e = rs = io = n ⇒P,T = ∇ ==h⇒ · eqns 16, 17== F = ilt = e = r, ⇒div,curl
 k k,q
 ∇× 2DFFT
 Filtered,
@@ -472,7 +472,7 @@ Here, we report in Table 2 only the maximum correlation found from among the poi
 to the surface (within ±0.5 Mm from z=0). For a desired comparison length scale qR , we first fix the coupling(s)
 (cid:12)
 and the regularization parameter to be used in the inversion. We then separately compute filtered divergence and
-10 Mani et al.
+ Mani et al.
 (a)qR(cid:12)=100,f-f (b)qR(cid:12)=150,p1-p1
 Figure6. Real-spacedivergenceflows(leftcolumn,inunitsof10−5s−1)andradialvorticity(rightcolumn,inunitsof10−6s−1)
 for LCT (top row), and mode-coupling inversion through RLS using (a) f-f coupling (bottom row), bandpass filtered around
@@ -545,7 +545,7 @@ q q q z z
 =−2iωρ (cid:80)(cid:8) −k·qf(cid:48)Pσ −k·(q×e )f Tσ +q2f Pσ ∂ (cid:9) . (A3)
 j jq z j jq j jq z
 j
-12 Mani et al.
+ Mani et al.
 Express the mode eigenfunction describing oscillations in the Cartesian domain by (see Woodard 2006)
 ξ ≡ξ (z)=ikˆH (z)e +zˆV (z), (A4)
 k nk nk z nk
@@ -667,7 +667,7 @@ q o k,zo k,q
 k
 As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
 and B14.
-14 Mani et al.
+ Mani et al.
 Figure 8. Left: Kernel K (z) (eq B14) shown vs depth z for the three radial order couplings f-f, p -p , and p -p . qR =
 k,q 1 1 2 2 (cid:12)
 [−112,−45] and kR = [−853,−157] is chosen for all the radial order couplings for comparison. Right: Averaging kernel
@@ -698,8 +698,8 @@ k k
 q o q
 ≈(cid:104)Pσ(z )(cid:105) (B19)
 q o
-Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Di-
-vergence flow can then be obtained from eq 16. Results are shown in Figures 9 and 10.
+Inversions can similarly be performed for multiple depths by choosing suitable widths for the target Gaussians. Divergence
+ flow can then be obtained from eq 16. Results are shown in Figures 9 and 10.
 REFERENCES
 Anderson, E. R., Duvall, Thomas L., J., & Jefferies, S. M. Bo¨ning, V. G. A., Birch, A. C., Gizon, L., Duvall, T. L., &
 1990, ApJ, 364, 699, doi: 10.1086/169452 Schou, J. 2020, A&A, 635, A181,
@@ -756,7 +756,7 @@ Gizon, L., & Birch, A. C. 2004, ApJ, 614, 472, Hanson, C. S., Hanasoge, S., & Sr
 doi: 10.1086/423367 ApJ, 910, 156, doi: 10.3847/1538-4357/abe770
 Gizon, L., Cameron, R. H., Pourabdian, M., et al. 2020, Hathaway, D. H., Teil, T., Norton, A. A., & Kitiashvili, I.
 Science, 368, 1469, doi: 10.1126/science.aaz7119 2015, ApJ, 811, 105, doi: 10.1088/0004-637X/811/2/105
-16 Mani et al.
+ Mani et al.
 Hathaway,D.H.,Upton,L.,&Colegrove,O.2013,Science, Rincon, F., & Rieutord, M. 2018, Living Reviews in Solar
 342, 1217, doi: 10.1126/science.1244682 Physics, 15, 6, doi: 10.1007/s41116-018-0013-5
 Hill, F. 1988, ApJ, 333, 996, doi: 10.1086/166807 Rincon, F., Roudier, T., Schekochihin, A. A., & Rieutord,

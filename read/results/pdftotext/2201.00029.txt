@@ -1,11 +1,12 @@
-1
+
 
 Exploring new techniques for analyzing variability in white dwarf KIC 8626021
 Thomas Huckans, Peter Stine
 Department of Physics and Engineering, Bloomsburg University of Pennsylvania, 400 E 2nd St.,
 Bloomsburg, PA 17815
 
-2
+
+
 Abstract
 As is common with the collection of astronomical data, signals are frequently dominated
 by noise. However, when performing FTs of light curves, re-binning data can improve the signalto-noise ratio (SNR) at lower frequencies. Using data collected from the Kepler space telescope,
@@ -47,7 +48,8 @@ deactivated in 2018, the data used in this paper came from observations during 2
 white dwarf KIC 8626021 and was obtained from the Kepler Asteroseismic Science Operations
 Center (KASOC).
 
-3
+
+
 The DBV white dwarf KIC 8626021 has an atmosphere rich in helium. Building upon
 previous studies, this research investigated novel techniques of analyzing variability in white
 dwarfs. The dwarf KIC 8626021 was chosen due to the large amount of preexisting research on
@@ -82,7 +84,8 @@ KIC 8626021 that is found in the FTs of the first iteration and subsequent re-bi
 Q13. Tables 3 and 4 show all data values < 17 µHz found in the first iterations and re-bins of Q7
 and Q13.
 
-4
+
+
 
 FIG. 1: Pictured top is the light curve constructed for Q7, below is the light curve for Q13. Q7
 lasted from September 24 – December 13, 2010, and Q13 was from March 29 – June 23, 2012.
@@ -90,14 +93,16 @@ Both graphs were constructed by plotting corrected flux magnitude (flux correcte
 instrumental artifacts) versus time in Excel, and gaps in the data were filled in by interpolating
 between points. Q7 had forty-three interpolated points, and Q13 had sixty-six.
 
-5
+
+
 
 FIG. 2: The graphs show the initial FTs of Q7, and then the FTs of the three successive re-bins of
 the light curve data. The significant frequencies of 5.886 µHz and 5.889 µHz are circled. The
 disappearance of the frequency in the last FT is most likely a byproduct of the method, and the
 spurious frequency of 5.464 µHz in the last FT most probably represents an artifact of the rebinning process.
 
-6
+
+
 
 FIG. 3: The graphs show the initial FT of Q13, and then the FTs of the three successive re-bins
 of the light curve data. The significant frequencies of 5.784 µHz and 5.787 µHz are circled. In
@@ -105,7 +110,8 @@ addition, in the third re-bin, the frequencies 11.641 µHz and 16.823 µHz rise 
 nearly perfect integer multiples of 5.787 µHz. These harmonics are potentially indications of a
 starspot (Santos et al., 2017).
 
-7
+
+
 Q7 Significant
 Data Points
 Q7 First
@@ -226,7 +232,8 @@ found through calculations to find period and SNR. The last two significant freq
 further detail in the Conclusions section of this paper. The values under corrected flux magnitude
 are relative to our significant frequency cutoff of 3𝝈, thus negative numbers are under the cutoff.
 
-8
+
+
 First Iteration (µHz)
 
 First Re-bin (µHz)
@@ -305,7 +312,8 @@ Third Re-bin (µHz)
 TABLE III: The table displays all frequencies of Q7 that had a corrected flux magnitude (ppm)
 above the cutoff of 3𝝈. The minor shifting of significant frequencies between re-bins is a byproduct of the method, and we calculated for such errors when finding our average.
 
-9
+
+
 First Iteration (µHz)
 
 First Re-bin (µHz)
@@ -382,7 +390,8 @@ relates to the rotation of the white dwarf.
 Through the re-binning process, the SNR clearly improves for both quarters, and for Q7 it
 improves by approximately 1.3 dB, except for the last data re-bin. In the last re-bin, the previous
 
-10
+
+
 significant frequency disappears, which becomes increasingly likely after successive re-binning
 processes. The frequency 5.464 µHz rises as another significant frequency; however, we believe
 that this new frequency is simply an artifact of the re-binning process. In Q13, we saw SNR
@@ -401,7 +410,8 @@ the harmonic frequencies can be used to calculate the spot’s rotation rate, si
 contrast (Santos et al., 2017). Using the process of re-binning, a starspot signal, previously
 dominated by noise, may have been discovered.
 
-11
+
+
 Acknowledgments
 We wish to thank Bloomsburg University of Pennsylvania for its continued support of our
 research.
@@ -461,7 +471,8 @@ Astrophysics, 599,
 A1.
 https://doi.org/10.1051/0004-6361/201629923
 
-12
+
+
 Winget, D.e., & Kepler, S.o. (2008). Pulsating white dwarf stars and precision asteroseismology.
 Annual
 Review
@@ -474,4 +485,3 @@ Astrophyics,
 https://doi.org/10.1146/annurev.astro.46.060407.145250
 Wolfram Research, Inc., Mathematica, Version 12.3.1, Champaign, IL (2021).
 
-

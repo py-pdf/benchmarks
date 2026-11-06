@@ -65,3 +65,26 @@ Each run gets a dated section. Each library that changed gets a subsection:
   and affiliation markers, bullet points, `#include <...>` lines and
   table-of-contents entries were split into separate blocks. Side-by-side
   subfigure captions are now interleaved line by line.
+
+## 2026-11-06
+
+No library changed its version; the benchmark itself changed. pdftotext is
+now listed with its Poppler version (24.02.0) instead of 0.86.1.
+
+- Text extraction quality: every library's text is post-processed in the
+  same way (ligatures, hyphenation, page labels); before, only the text of
+  pypdf and pypdfium2 was. Their scores did not change; PyMuPDF 94% -> 95%,
+  Tika 93% -> 94%, pdfminer.six 88% -> 89%. Tika's text no longer includes
+  the outline, as it is now taken per page from its XHTML output.
+- Speed: every time is the shortest of three runs instead of a single run,
+  so most averages became 5-15% shorter, without a change of the libraries.
+- Image extraction: pdfminer.six now decodes the images (before, every image
+  was read as a 1-bit image) and finds the images of all containers; it is
+  faster than before (7.5s -> 6.6s on average) although it extracts more
+  images. The report shows how many images each library extracted.
+- Watermarking: PyMuPDF shows the watermark page directly instead of
+  copying it into a new document for every page, so the watermark is shared:
+  0.2s -> 0.1s and 3.7MB -> 3.5MB on average. The report marks outputs that
+  lack the watermark text on a page; none does.
+- Documents: the URLs point to fixed versions (arXiv version, sample-files
+  commit), and the files are checked by SHA-256. The files did not change.

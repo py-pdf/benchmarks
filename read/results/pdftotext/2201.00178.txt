@@ -53,7 +53,8 @@ validated by Hanson et al. (2021) (hereafter H21) by examining the power-spectru
 comparing with previous time-distance studies (Langfellner et al. 2018).
 prasad.subramanian@tifr.res.in
 
-2
+
+
 
 Mani et al.
 
@@ -120,7 +121,8 @@ and Tqj = T−qj
 for the flow field to be real in the spatiotemporal domain.
 To infer flows from wavefields φ scattered by a perturbation of length scale q, cross-correlate them in the manner
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 
 3
 
@@ -148,7 +150,7 @@ Dqj,k = D−qj,−k (see eq A6). The kernels, as flows, are expressed on the bas
 1.2. Least-squares of cross-correlation
 ω
 Even though φω∗
-k φk+q isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea-
+k φk+q isolates the effect of flow perturbations at individual wavenumbers q, a more compact mea
 
 surement, known in mode-coupling literature as ’B-coefficients’, is much better designed for inversion as it reduces the
 ω
@@ -221,7 +223,8 @@ Every independent realization of a mode can be understood as the output of a dam
 random forcing function (see Duvall & Harvey 1986). Modes are thus generated with random phases and amplitudes
 and with finite lifetimes. This stochasticity leads to realization noise in repeated measurements of mode parameters
 
-4
+
+
 
 Mani et al.
 
@@ -269,7 +272,8 @@ inspecting the power-spectrum), the parameters describing the extent of coupling
 radial order are different. In wavenumber, we restrict our analysis to within 200 ≤ kR ≤ 2000 and qR ≤ 300. Our
 frequency range is confined to span the range over which acoustic modes are observed (2 ≤ ω/2π ≤ 5 in mHz).
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 Coupling
 
 kR
@@ -394,7 +398,8 @@ B.
 
 (12)
 
-6
+
+
 
 Mani et al.
 
@@ -449,7 +454,8 @@ images I1 , I2 and for each consecutive pair of images in the cube.
 In practice, we use the Fourier LCT algorithm (FLCT, Fisher & Welsch 2008) for computing vx and vy . FLCT
 requires the input sigma, which we set to 4 pix, that captures the extent of localization desired, and depends on the
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 
 7
 
@@ -489,7 +495,8 @@ flows at these length scales, we apply a Gaussian filter (see Figure 4) to flows
 Gaussian is centered at the desired wavenumber with a half-width of 25. We then perform a 2D Fourier transform to
 obtain a real-space steady-flow map.
 
-8
+
+
 
 Mani et al.
 
@@ -565,7 +572,8 @@ An adequate number of modes (and coupling strength between higher radial-orders)
 comment substantively on the flows at these scales.
 6.1. Amplitudes of mode-coupling flows
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 
 (a) qR
 
@@ -597,7 +605,8 @@ Here, we report in Table 2 only the maximum correlation found from among the poi
 to the surface (within ±0.5 Mm from z=0). For a desired comparison length scale qR , we first fix the coupling(s)
 and the regularization parameter to be used in the inversion. We then separately compute filtered divergence and
 
-10
+
+
 
 Mani et al.
 
@@ -636,7 +645,8 @@ for divergence flows owing to the multi-step process involved in obtaining them.
 (see, e.g., De Rosa et al. 2000; Sekii et al. 2007; Zhao et al. 2007; Langfellner et al. 2018; Böning et al. 2020; Korda
 & Švanda 2021) of using travel-time difference as only a proxy for horizontal divergence. However, Langfellner et al.
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 Coupling
 
 qR
@@ -804,7 +814,8 @@ j
 (A2)
 (A3)
 
-12
+
+
 
 Mani et al.
 
@@ -942,7 +953,8 @@ the real domain. Setting σ = 0 gives us the linear, invertible equation eq 6. S
 the noise model obtained in H21 and summing over ±ω establishes the symmetry Gσk,q = G−σ
 −k,−q .
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 
 13
 
@@ -1029,7 +1041,8 @@ k
 As an aside, we note that averaging kernels can similarly be constructed for RLS (see section 3.1) using eqns 13
 and B14.
 
-14
+
+
 
 Mani et al.
 
@@ -1106,7 +1119,8 @@ Physics, 74, 1073, doi: 10.1103/RevModPhys.74.1073
 —. 2021, Living Reviews in Solar Physics, 18, 2,
 doi: 10.1007/s41116-020-00028-3
 
-Imaging near-surface flows using mode-coupling analysis
+
+Imaging near-surface flows using mode-coupling analysis
 
 15
 
@@ -1171,7 +1185,8 @@ Hathaway, D. H., Teil, T., Norton, A. A., & Kitiashvili, I.
 ApJ, 910, 156, doi: 10.3847/1538-4357/abe770
 2015, ApJ, 811, 105, doi: 10.1088/0004-637X/811/2/105
 
-16
+
+
 
 Mani et al.
 
@@ -1250,4 +1265,3 @@ Zhao, J., Nagashima, K., Bogart, R. S., Kosovichev, A. G.,
 & Duvall, T. L., J. 2012, ApJL, 749, L5,
 doi: 10.1088/2041-8205/749/1/L5
 
-
