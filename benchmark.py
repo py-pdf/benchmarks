@@ -23,6 +23,12 @@ import tika
 from rich.progress import track
 
 from pdf_benchmark.data_structures import Cache, Document, Library
+from pdf_benchmark.features import (
+    IMAGE_FEATURES,
+    TEXT_FEATURES,
+    run_image_feature,
+    run_text_feature,
+)
 from pdf_benchmark.library_code import (
     pdfium_get_text,
     pdfium_image_extraction,
@@ -39,7 +45,7 @@ from pdf_benchmark.library_code import (
     pypdf_watermarking,
     tika_get_text,
 )
-from pdf_benchmark.output import write_benchmark_report
+from pdf_benchmark.output import FeatureResults, write_benchmark_report
 from pdf_benchmark.score import (
     count_pages_without_watermark,
     get_text_extraction_score,
@@ -151,7 +157,25 @@ def main(
         libraries,
         docs,
         cache,
+        check_features(libraries),
     )
+
+
+def check_features(libraries: dict[str, Library]) -> FeatureResults:
+    """Extract the text and the images of every feature PDF with every library."""
+    results = FeatureResults()
+    for name, lib in sorted(libraries.items()):
+        if lib.text_extraction_function:
+            results.text[name] = {
+                feature.name: run_text_feature(feature, lib.text_extraction_function)
+                for feature in TEXT_FEATURES
+            }
+        if lib.image_extraction_function:
+            results.images[name] = {
+                feature.name: run_image_feature(feature, lib.image_extraction_function)
+                for feature in IMAGE_FEATURES
+            }
+    return results
 
 
 def get_pdftotext_version() -> str:
