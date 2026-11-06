@@ -171,7 +171,7 @@ are a couple of metrics how accuracy can be defined.
 For this section, let k∈ N be the number of classes,
 nij∈ N0 with i,j ∈ 1,...,k be the number of pixels
 which belong to class i and were labeled as class j.
-(nij) is called a confusion matrix. Let ti = ∑kj=1nij
+(nij) is called a confusion matrix. Let ti = ∑k j=1nij
 be the total number of pixels of class i.
 One way to compare segmentation algorithms is by
 the pixel-wise accuracy of the predicted segmentation
@@ -199,12 +199,12 @@ general “car” and the more specific “wheel of a
 car”
 Three accuracy metrics which do not suffer from
 problem P1 are used in [LSD14]:
-• mean accuracy: 1k· ∑ki=1 niiti ∈ [0, 1]
+• mean accuracy: 1 k· ∑k i=1 nii ti ∈ [0, 1]
 • mean intersection over union :
 1
-k· ∑ki=1 niiti−nii+∑kj=1nji∈ [0, 1]
+k· ∑k i=1 nii ti−nii+∑k j=1nji ∈ [0, 1]
 • frequency weighted intersection over union :
-(∑ki=1ti)−1 ∑ki=1ti· niiti−nii+∑kj=1nji∈ [0, 1]
+(∑k i=1ti) −1 ∑k i=1ti· nii ti−nii+∑k j=1nji ∈ [0, 1]
 Another problem might be pixels which cannot be
 assigned to one of the known classes. For this reason,
 [SWRC06] makes use of a void class. This class gets
@@ -220,7 +220,7 @@ The F -measure is useful for binary classification
 benchmark [ FKG13] or crypt segmentation as done
 by [CRSS14]. It is calculated as “the harmonic mean
 of the precision and recall” [PH05]:
-Fβ = (1 +β)2 tp(1 +β2)· tp +β2· fn + fp
+Fβ = (1 +β)2 tp (1 +β2)· tp +β2· fn + fp
 where β = 1 is chosen in most cases and tp means
 true positive, fn means false negative and fp means
 false positive.
@@ -663,7 +663,7 @@ minimize
 w,b
 1
 2‖w‖2
-s.t.∀mi=1yi· (⟨w, xi⟩ +b)| {z }
+s.t.∀m i=1yi· (⟨w, xi⟩ +b)| {z }
 sgn applied to this gives the classification
 ≥ 1
 2) Even if the underlying process which generates the
@@ -673,7 +673,7 @@ noise can make the data not separable. The introduction
 of linear separability solves this problem. The
 trade-off between accepting some errors and a
 more complex model is weighted by a parameter
-C ∈ R+0 . The bigger C, the more errors are
+C ∈ R+ 0 . The bigger C, the more errors are
 accepted. The new optimization problem is:
 minimize
 w
@@ -682,7 +682,7 @@ w
 m∑
 i=1
 ξi
-s.t.∀mi=1yi· (⟨w, xi⟩ +b)≥ 1−ξi
+s.t.∀m i=1yi· (⟨w, xi⟩ +b)≥ 1−ξi
 Note that 0≤ ξi≤ 1 means that the data point
 is within the margin, whereas ξi≥ 1 means it is
 misclassified. An SVM with C >0 is also called
@@ -709,13 +709,13 @@ maximize
 αi
 m∑
 i=1
-αi− 12
+αi− 1 2
 m∑
 i=1
 m∑
 j=1
 αiαjyiyj⟨xi, xj⟩
-s.t.∀mi=10≤αi≤C
+s.t.∀m i=10≤αi≤C
 s.t.
 m∑
 i=1
@@ -750,7 +750,7 @@ binary classifiers to multi-class classification is
 the one-vs-all and the one-vs-one strategy. In the
 one-vs-all strategy n classifiers have to be trained
 which can distinguish one of the n classes against
-all other classes. In the one-vs-one strategy n2−n2
+all other classes. In the one-vs-one strategy n2−n 2
 classifiers are trained; one classifier for each pair
 of classes.
 A detailed description of SVMs can be found
@@ -809,8 +809,8 @@ are used. Accordingly, the random variables y live
 on 1,..., nr of classes and the random variables x
 typically live on 0,..., 255 or [0, 1].
 The probability of x, y can be expressed as
-P (x, y) = 1Ze−E(x,y)
-where Z = ∑x,ye−E(x,y) is a normalization term
+P (x, y) = 1 Ze−E(x,y)
+where Z = ∑ x,ye−E(x,y) is a normalization term
 called the partition function and E is called the energy
 function. A common choice for the energy function is
 E(x, y) =
@@ -846,7 +846,7 @@ Z(x) =
 y
 P (x, y)
 and joint probability distribution
-P (y|x) = 1Z(x) ∏c∈Cψc(yc|x)
+P (y|x) = 1 Z(x) ∏ c∈C ψc(yc|x)
 The simplest way to define the clique potentials ψ is
 the count of the class yc given x added with a positive
 smoothing constant to prevent the complete term from
@@ -910,7 +910,7 @@ function called rectified linear unit :
 ϕReLU(x) = max(0,x )
 Those are much faster to train than the commonly used
 sigmoid activation functions
-ϕSigmoid(x) = 1e−x + 1
+ϕSigmoid(x) = 1 e−x + 1
 Krizhevsky et al. implemented those ideas and participated
  in the ImageNet Large-Scale Visual Recognition
 Challenge (ILSVRC). The best other system, which

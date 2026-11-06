@@ -1,4 +1,4 @@
-1
+
 
 Creativity in Machine Learning
 Martin Thoma
@@ -107,7 +107,8 @@ descent algorithm takes a function which has to be derivable,
 in T , as measured by P , improves with experience E.
 starts at any point of the surface of this error function and
 
-2
+
+
 
 makes a step in the direction which goes downwards. Hence
 it tries to find a minimum of this high-dimensional function.
@@ -185,7 +186,8 @@ an image in terms of local image appearance from the content
 of an image. They support their claim by applying the style of
 different artists to an arbitrary image of their choice.
 
-3
+
+
 
 IV. T EXT DATA
 Digital text is the first form of natural communication which
@@ -274,7 +276,8 @@ New works which look like Shakespeare plays, new Wikipedia
 articles, new Linux code and new papers about algebraic
 geometry can thus automatically be generated. At a first
 
-4
+
+
 
 glance, they do look authentic. The syntax was mostly used
 correctly, the formatting looks as expected, the sentences are
@@ -366,7 +369,8 @@ songs. This leads to some less-common, but interesting topics:
 The composition of music, the synthesizing of audio as art. Audio synthesization is generating new audio files. This can
 While the composition might be considered in Section IV, either be music or speech. With the techniques described before,
 
-5
+
+
 
 neural networks can be trained to generate music note by note.
 However, it is desirable to allow multiple notes being played
@@ -573,9 +577,8 @@ Available: http://prize.hutter1.net/
 
 K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning
 for image recognition,” arXiv preprint arXiv:1512.03385, 2015.
-[Online]. Available: http://arxiv.org/abs/1512.03385
+[Online]. Available: http://arxiv.org/abs/1512.0338
 
-6
 
 A PPENDIX A
 AUTOMATICALLY GENERATED T EXTS
@@ -625,7 +628,8 @@ was starting to signing a major tripad of aid exile.]]
 C. Linux Code, 1
 /*
 
-7
+
+
 
 * Increment the size file of the new incorrect UI_FILTER group information
 * of the size generatively.
@@ -697,7 +701,8 @@ along with this program; if not, write to the Free Software Foundation,
 #include <linux/platform_device.h>
 #include <linux/multi.h>
 
-8
+
+
 
 #include <linux/ckevent.h>
 #include <asm/io.h>
@@ -729,4 +734,3 @@ set_pid_sum((unsigned long)state, current_state_str(),
 
 \
 
-

@@ -3,9 +3,11 @@ Compare text extraction performance of different PDF parsers.
 """
 
 import json
+import math
 import re
 import subprocess
 import time
+from collections.abc import Callable
 from importlib.metadata import version as pkg_version
 from itertools import product
 from json import JSONDecodeError
@@ -20,6 +22,7 @@ import pypdf
 import tika
 from rich.progress import track
 
+from pdf_benchmark.calibration import calibration_workload
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.library_code import (
     pdfium_get_text,
@@ -41,8 +44,27 @@ from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
 from pdf_benchmark.text_extraction_post_processing import postprocess
 
+# Every measurement is repeated, and the shortest time is reported: the
+# slower runs only add the noise of other processes.
+REPETITIONS = 3
+
 # Pinned to a commit, so that the files cannot change with the main branch
 SAMPLE_FILES = "https://github.com/py-pdf/sample-files/raw/80d67b91f3e28909756ca7807bbe8f43b599d12f"
+
+
+def measure[T](function: Callable[..., T], *args: bytes) -> tuple[T, float]:
+    """
+    Return the result of the function and the shortest time of REPETITIONS runs.
+
+    This is the time on the wall clock, as pdftotext and Tika work in another
+    process.
+    """
+    best = math.inf
+    for _ in range(REPETITIONS):
+        t0 = time.perf_counter()
+        result = function(*args)
+        best = min(best, time.perf_counter() - t0)
+    return result, best
 
 
 def warm_up_tika(data: bytes) -> None:
@@ -87,34 +109,33 @@ def main(
             print(f"Skip {doc.name} for {lib.name}")
             continue
         cache.benchmark_times[lib.pathname][doc.name] = {}
+        _, cache.calibration_seconds[lib.pathname][doc.name] = measure(
+            calibration_workload
+        )
         if lib.text_extraction_function:
             print(f"{name} now parses {doc.name}...")
-            t0 = time.time()
-            pages = lib.text_extraction_function(data)
-            t1 = time.time()
+            pages, seconds = measure(lib.text_extraction_function, data)
             text = postprocess_pages(pages, doc, name)
             write_single_result("read", name, doc.name, text, "txt")
-            cache.benchmark_times[lib.pathname][doc.name]["read"] = t1 - t0
+            cache.benchmark_times[lib.pathname][doc.name]["read"] = seconds
             cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
                 doc, lib.pathname
             )
         if lib.watermarking_function:
-            t0 = time.time()
-            watermarked = lib.watermarking_function(watermark_data, data)
-            t1 = time.time()
+            watermarked, seconds = measure(
+                lib.watermarking_function, watermark_data, data
+            )
             write_single_result("watermark", name, doc.name, watermarked, "pdf")
-            cache.benchmark_times[lib.pathname][doc.name]["watermark"] = t1 - t0
+            cache.benchmark_times[lib.pathname][doc.name]["watermark"] = seconds
             cache.watermarking_result_file_size[lib.pathname][doc.name] = len(
                 watermarked
             )
         if lib.image_extraction_function:
-            t0 = time.time()
-            extracted_images = lib.image_extraction_function(data)
-            t1 = time.time()
+            extracted_images, seconds = measure(lib.image_extraction_function, data)
             write_single_result(
                 "image_extraction", name, doc.name, extracted_images, "image-list"
             )
-            cache.benchmark_times[lib.pathname][doc.name]["image_extraction"] = t1 - t0
+            cache.benchmark_times[lib.pathname][doc.name]["image_extraction"] = seconds
         cache.write(cache_path)
 
     libraries = {
@@ -268,6 +289,7 @@ if __name__ == "__main__":
             last_release_date="2025-06-29",
             image_extraction_function=pypdf_image_extraction,
             pypi_name="pypdf",
+            extra="full",
         ),
         "pdfminer": Library(
             "pdfminer.six",
@@ -279,6 +301,7 @@ if __name__ == "__main__":
             last_release_date="2025-05-06",
             image_extraction_function=pdfminer_image_extraction,
             pypi_name="pdfminer.six",
+            extra="image",
         ),
         "pdfplumber": Library(
             "pdfplumber",

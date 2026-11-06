@@ -1,8 +1,10 @@
+import platform
 from typing import Literal
 
 import numpy as np
 from rich.progress import track
 
+from pdf_benchmark.calibration import REFERENCE_MACHINE, to_reference_seconds
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.environment_info import get_processor_name
 from pdf_benchmark.utils import sizeof_fmt, table_to_markdown
@@ -44,12 +46,23 @@ def speed_section(
 def get_times(
     cache: Cache, docs: list[Document], benchmark_type: str
 ) -> dict[str, list[float | None]]:
-    """Create a dict pointing library names to the list of execution times."""
+    """
+    Create a dict pointing library names to the list of execution times.
+
+    The times are the seconds on the reference machine, see calibration.py.
+    """
     times = {}  # library : [doc1, doc2, ...]
     for lib_name in cache.benchmark_times:
-        times[lib_name] = []
         tmp = cache.benchmark_times[lib_name]  # doc:
-        doc2read_time = {doc: tmp[doc].get(benchmark_type) for doc in tmp}
+        calibration = cache.calibration_seconds[lib_name]
+        doc2read_time = {
+            doc: (
+                None
+                if tmp[doc].get(benchmark_type) is None
+                else to_reference_seconds(tmp[doc][benchmark_type], calibration[doc])
+            )
+            for doc in tmp
+        }
         times[lib_name] = [doc2read_time[doc.name] for doc in docs]
     return times
 
@@ -65,11 +78,24 @@ def write_benchmark_report(
     with open("README.md", "w") as f:
         f.write("# PDF Library Benchmarks\n")
 
-        f.write("This benchmark is about reading pure PDF files - not")
+        f.write("This benchmark is about reading pure PDF files - not ")
         f.write("scanned documents and not documents that applied OCR.\n\n")
 
         f.write("## Benchmarking machine\n")
-        f.write(f"{get_processor_name()}\n\n")
+        f.write(
+            f"{get_processor_name().strip()},"
+            f" {platform.python_implementation()} {platform.python_version()}\n\n"
+        )
+        f.write(
+            "Every time is the shortest of three runs. To make the times less"
+            " dependent on the machine, each one is divided by the time of a"
+            " fixed pure-Python workload measured right before it, and"
+            " multiplied by the time of that workload on the reference machine"
+            f" ({REFERENCE_MACHINE}). The times are the seconds the reference"
+            " machine would need. This works best for the pure-Python"
+            " libraries (pypdf, pdfminer.six, pdfplumber), and roughly for the"
+            " others.\n\n"
+        )
 
         f.write("## Input Documents\n")
         table = []
@@ -88,15 +114,26 @@ def write_benchmark_report(
 
         f.write("## Libraries\n")
         table = []
-        header = ["Name", "Last PyPI Release", "License", "Version", "Dependencies"]
+        header = [
+            "Name",
+            "Last PyPI Release",
+            "License",
+            "Version",
+            "Dependencies",
+            "Optional dependencies",
+        ]
         for name in names:
             lib = libname2details[name]
+            optional = ", ".join(
+                f"{package} {version}" for package, version in lib.optional_dependencies
+            )
             row = [
                 lib.name,
                 lib.last_release_date,
                 lib.license,
                 lib.version,
                 lib.dependencies,
+                f"[{lib.extra}]: {optional}" if lib.extra else "",
             ]
             table.append(row)
 

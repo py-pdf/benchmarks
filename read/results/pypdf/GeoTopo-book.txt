@@ -198,7 +198,7 @@ der Äquivalenzklassen,π :X→X, x ↦→ [x]∼.
 TX :=
 {
 U⊆X
-⏐⏐π−1(U)∈ TX}
+⏐⏐π−1(U)∈ TX }
 (X, TX) heißt Quotiententopologie.
 Beispiel 5
 X = R,a∼b :⇔a−b∈ Z
@@ -224,7 +224,7 @@ Also fürn = 1:
 4
 1.2 Metrische Räume
 Definition 8
-Sei X eine Menge. Eine Abbildungd :X×X→ R+0 heißt Metrik, wenn gilt:
+Sei X eine Menge. Eine Abbildungd :X×X→ R+ 0 heißt Metrik, wenn gilt:
 (i) Definitheit: d(x,y ) = 0⇔x =y ∀x,y∈X
 (ii) Symmetrie: d(x,y ) =d(y,x ) ∀x,y∈X
 (iii) Dreiecksungleichung: d(x,z )≤d(x,y ) +d(y,z ) ∀x,y,z ∈X
@@ -359,7 +359,7 @@ Seien X,Y topologische Räume.πX :X×Y →X und πY :X×Y →Y die Projektionen
 πX : (x,y )↦→x und πY : (x,y )↦→y
 Wird X×Y mit der Produkttopologie versehen, so sindπX und πY stetig.
 Beweis: Sei U⊆X offen
-⇒π−1X (U) =U×Y ist offen inX×Y. ■
+⇒π−1 X (U) =U×Y ist offen inX×Y. ■
 Bemerkung 12
 SeiX ein topologischer Raum,∼ eine Äquivalenzrelation aufX,X =X/∼ der Bahnenraum
 versehen mit der Quotiententopologie,π :X→X, x↦→ [x]∼.
@@ -369,11 +369,11 @@ Beweis: Nach Definition istU⊆X offen⇔π−1(U)⊆X offen. ■
 Beobachtung: Die Quotiententopologie ist die feinste Topologie, sodassπ stetig wird.
 Beispiel 14 (Stereographische Projektion)
 Rn und Sn\{ N} sind homöomorph für beliebigesN∈Sn. Es gilt:
-Sn ={x∈ Rn+1⏐⏐‖x‖ = 1}
+Sn = { x∈ Rn+1⏐⏐‖x‖ = 1 }
 =
 {
 x∈ Rn+1
-⏐⏐⏐⏐⏐ n+1∑i=1x2i = 1}
+⏐⏐⏐⏐⏐ n+1∑ i=1 x2 i = 1 }
 O. B. d. A. seiN =
 
 
@@ -400,7 +400,7 @@ x1
 xn+1
 
 ∈ Rn+1
-⏐⏐⏐⏐⏐⏐⏐xn+1 = 0 und LP die Gerade in Rn+1 durch N
+⏐⏐⏐⏐⏐⏐⏐ xn+1 = 0    und LP die Gerade in Rn+1 durch N
 und P ist.
 Sei P =
 
@@ -440,7 +440,7 @@ Dann gibt es z ∈ [x,y ] mit z ∈ ∂(U1∩ [x,y ]), aber z /∈ U1 ⇒ z ∈ 
 Umgebung vonz liegt ein Punkt vonU1⇒ Widerspruch zuU2 offen.
 2) R\{ 0} ist nicht zusammenhängend, dennR\{ 0} = R<0∪ R>0
 3) R2\{ 0} ist zusammenhängend.
-4) Q ⊊ R ist nicht zusammenhängend, da(Q∩ R<√2)∪ (Q∩ R>√2) = Q
+4) Q ⊊ R ist nicht zusammenhängend, da(Q∩ R< √ 2)∪ (Q∩ R> √ 2) = Q
 5) {x} ist zusammenhängend für jedesx∈X, wobeiX ein topologischer Raum ist.
 6) R mit Zariski-Topologie ist zusammenhängend.
 Bemerkung 14
@@ -548,7 +548,7 @@ Uij enthalten.
 Beispiel 16 (Kompakte Räume)
 1) R ist nicht kompakt.
 2) (0, 1) ist nicht kompakt.
-Un = (1/n, 1− 1/n)⇒⋃n∈NUn = (0, 1)
+Un = (1/n, 1− 1/n)⇒⋃ n∈NUn = (0, 1)
 3) R mit der Zariski-Topologie ist kompakt und jede Teilmenge vonR ist es auch.
 Bemerkung 19
 Sei X kompakter Raum,A⊆X abgeschlossen. Dann istA kompakt.
@@ -599,13 +599,13 @@ Y
 X
 Abbildung 1.7: Die blaue Umgebung ist Schnitt vieler Umgebungen
 Die offenen MengenUx0,y×Vx0,y für festesx0 und alley∈Y überdecken{x0}× y. DaY
-kompakt ist, ist auch{x0}× Y kompakt. Also gibt esy1,...,y m(x0) mit⋃m(x0)i=1 Ux0,yi×
+kompakt ist, ist auch{x0}× Y kompakt. Also gibt esy1,...,y m(x0) mit⋃m(x0) i=1 Ux0,yi×
 Vx0,yi⊇{ x0}× Y.
-Sei Ux0 :=⋂m(x)i=1 Ux0,yi. DaX kompakt ist, gibt esx1,...,x n∈X mit⋃nj=1Uxj =X
-⇒⋃kj=1⋃m(xj)i=1 (Uxj,yi×Vxj,yi)| {z }
+Sei Ux0 :=⋂m(x) i=1 Ux0,yi. DaX kompakt ist, gibt esx1,...,x n∈X mit⋃n j=1Uxj =X
+⇒⋃k j=1 ⋃m(xj) i=1 ( Uxj,yi×Vxj,yi ) | {z }
 Ein grün-oranges Kästchen
 ⊇X×Y
-⇒⋃j⋃iWi(xj,yi) =X×Y ■
+⇒⋃ j ⋃ iWi(xj,yi) =X×Y ■
 Bemerkung 21
 Sei X ein Hausdorffraum undK⊆X kompakt. Dann istK abgeschlossen.
 Beweis: z. Z.:Komplement ist offen
@@ -615,7 +615,7 @@ Xi
 K
 x
 y
-Da K kompakt ist, gibt es endlich vielex1,...,x n∈K, sodass⋃mi=1Uxi⊇K.
+Da K kompakt ist, gibt es endlich vielex1,...,x n∈K, sodass⋃m i=1Uxi⊇K.
 Sei V :=
 n⋂
 i=1
@@ -657,7 +657,7 @@ Nach Bemerkung 20 und Bemerkung 18 istW kompakt, also istA nach Bemerkung 19 auc
 kompakt. Genauso istZ kompakt, weil
 {z∈ C‖z|≤ 1}
 homöomorph zu {
-(x,y )∈ R2⏐⏐‖(x,y )‖≤ 1}
+(x,y )∈ R2⏐⏐‖(x,y )‖≤ 1 }
 ist. ■
 1.6 Wege und Knoten
 Definition 17
@@ -690,7 +690,7 @@ ist Zerlegung in nichtleere, disjunkte, abgeschlossene Teilmengen⇒ Widerspruch
 b) Sei X =
 {
 (x,y )∈ R2
-⏐⏐⏐x2 +y2 = 1∨y = 1 + 2·e− 110x}.
+⏐⏐⏐x2 +y2 = 1∨y = 1 + 2·e− 1 10x } .
 Abbildung 1.8a veranschaulicht diesen Raum.
 Sei U1∪U2 =X,U 1⁄=U2 =∅,Ui offen. X =C∪S. Dann istC⊆U1 oder C⊆U2,
 weilC und S zusammenhängend sind.
@@ -712,7 +712,7 @@ Sei X ein topologischer Raum. EineJordankurve in X ist ein Homöomorphismusγ :
 1
 X
 Y
-{(x, sin( 1x))∈X×Y}
+{(x, sin( 1 x))∈X×Y}
 (−1, 1)⊆Y
 (b) Sinus
 Abbildung 1.8:Beispiele für Räume, die zusammenhängend, aber nicht wegzusammenhängend
@@ -753,7 +753,7 @@ ein Knoten. Die AbbildungH heißt Isotopie zwischenγ1 und γ2.
 Definition 22
 Sei γ : [0, 1]→ R3 ein Knoten,E eine Ebene undπ : R3→E eine Projektion aufE.
 π heißt Knotendiagramm vonγ, wenn gilt:
-⏐⏐π−1(x)⏐⏐≤ 2 ∀x∈π(γ)
+⏐⏐π−1(x) ⏐⏐≤ 2 ∀x∈π(γ)
 Ist (π|γ([0,1]))−1(x) ={y1,y 2}, soliegt y1 über y2, wenn gilt:
 ∃λ> 1 : (y1−x) =λ(y2−x)
 Satz 1.3 (Satz von Reidemeister)
@@ -786,7 +786,7 @@ Zeigen Sie:
 (b) {− 1, 1} ist nicht offen.
 (c) Es gibt unendlich viele Primzahlen.
 Aufgabe 3 (Cantorsches Diskontinuum)
-Für jedesi∈ N sei Pi :={ 0, 1} mit der diskreten Topologie. Weiter SeiP :=∏i∈NPi.
+Für jedesi∈ N sei Pi :={ 0, 1} mit der diskreten Topologie. Weiter SeiP :=∏ i∈NPi.
 (a) Wie sehen die offenen Mengen vonP aus?
 (b) Was können Sie über den Zusammenhang vonP sagen?
 Aufgabe 4 (Kompaktheit)
@@ -811,7 +811,7 @@ Sei (X, T) ein topologischer Raum undn∈ N.
 a) Eine n-dimensionale Karte auf X ist ein Paar(U,ϕ ), wobeiU∈ T und ϕ :U→V
 Homöomorphismus vonU auf eine offene TeilmengeV ⊆ Rn.
 b) Ein n-dimensionaler AtlasA auf X ist eine Familie(Ui,ϕi)i∈I von Karten aufX,
-sodass⋃i∈IUi =X.
+sodass⋃ i∈IUi =X.
 c) X heißt (topologische)n-dimensionale Mannigfaltigkeit, wennX hausdorffsch ist,
 eine abzählbare Basis der Topologie hat und einenn-dimensionalen Atlas besitzt.
 Anschaulich ist also einn-dimensionale Mannigfaltigkeit lokal demRn ähnlich.
@@ -841,7 +841,7 @@ Atlas aus einer Karte.
 (z1,...,z n)↦→ (ℜ(z1),ℑ(z1),..., ℜ(zn),ℑ(zn))
 3) Pn(R) = (Rn+1\{ 0})/∼ =Sn/∼ undPn(C) sind Mannigfaltigkeiten der Dimension
 n bzw. 2n, da gilt:
-Sei Ui :={ (x0 :··· :xn)∈P n(R)|xi⁄= 0}∀ i∈ 0,...,n . Dann istPn(R) =⋃ni=0Ui
+Sei Ui :={ (x0 :··· :xn)∈P n(R)|xi⁄= 0}∀ i∈ 0,...,n . Dann istPn(R) =⋃n i=0Ui
 und die Abbildung
 Ui→ Rn
 (x0 :··· :xn)↦→
@@ -863,13 +863,13 @@ Umgebung: B1(0, 1)→{ (1 :u :v)|‖ (u,v )‖< 1} =V1
 Umgebung: B1(0, 1)→
 {
 (w :z : 1)
-⏐⏐w2 +z2< 1} =V2
+⏐⏐w2 +z2< 1 } =V2
 V1∩V2 =∅?
 (a :b :c)∈V1∩V2
-⇒a⁄= 0 und (ba)2 + (ca)2< 1⇒ ca < 1
-⇒c⁄= 0 und (ac )2 + (bc)2< 1⇒ ac < 1
+⇒a⁄= 0 und (b a)2 + (c a)2< 1⇒ c a < 1
+⇒c⁄= 0 und (a c )2 + (b c)2< 1⇒ a c < 1
 ⇒ Widerspruch
-4) Sn ={x∈ Rn+1⏐⏐‖x‖ = 1} ist n-dimensionale Mannigfaltigkeit.
+4) Sn = { x∈ Rn+1⏐⏐‖x‖ = 1 } ist n-dimensionale Mannigfaltigkeit.
 Karten:
 Di :={(x1,...,x n+1)∈Sn|xi> 0}→ B1(0,..., 0| {z }
 ∈Rn
@@ -878,8 +878,8 @@ Ci :={(x1,...,x n+1)∈Sn|xi< 0}→ B1(0,..., 0)
 (x1,...,x n+1)↦→ (x1,..., xi,...,x n+1)1
 (x1,...,x n)↦→ (x1,...,x i−1,
 √
-1−∑nk=1x2k,xi,...,x n), oder−√1−∑nk=1x2k für Ci
-Sn =⋃n+1i=1 (Ci∪Di)
+1−∑n k=1x2 k,xi,...,x n), oder− √ 1−∑n k=1x2 k für Ci
+Sn =⋃n+1 i=1 (Ci∪Di)
 Als kompakte Mannigfaltigkeit wirdSn auch „geschlossene Mannigfaltigkeit“ genannt.
 5) [0, 1] ist keine Mannigfaltigkeit, denn:
 Es gibt keine Umgebung von0 in [0, 1], die homöomorph zu einem offenem Intervall
@@ -888,7 +888,7 @@ ist.
  2.1. TOPOLOGISCHE MANNIGFALTIGKEITEN
 6) V1 =
 {
-(x,y )∈ R2⏐⏐x·y = 0} ist keine Mannigfaltigkeit.
+(x,y )∈ R2⏐⏐x·y = 0 } ist keine Mannigfaltigkeit.
 Das Problem ist (0, 0). Wenn man diesen Punkt entfernt, zerfällt der Raum in 4
 Zusammenhangskomponenten. Jeder Rn zerfällt jedoch in höchstens zwei Zusammenhangskomponenten,
  wenn man einen Punkt entfernt.
@@ -935,8 +935,8 @@ a) X ist abgeschlossen inRn
 b) Ist grad(F )(X)⁄= 0 ∀x∈X, so istX eine Mannigfaltigkeit der Dimensionn− 1.
 Beweis:
 a) Sei y∈ Rn\V (F ). WeilF stetig ist, gibt esδ >0, sodassF (Bδ(y))⊆ Bε(F (y)) mit
-ε = 12‖F (y)‖. FolgtBδ(y)∩V (F ) =∅⇒ Rn\V (F ) ist offen.
-b) Sei x ∈ X mit grad(F )(x) ⁄= 0, also o. B. d. A. ∂F∂X1 (x) ⁄= 0, x = (x1,...,x n),
+ε = 1 2‖F (y)‖. FolgtBδ(y)∩V (F ) =∅⇒ Rn\V (F ) ist offen.
+b) Sei x ∈ X mit grad(F )(x) ⁄= 0, also o. B. d. A. ∂F ∂X1 (x) ⁄= 0, x = (x1,...,x n),
 x′ := (x2,...,x n)∈ Rn−1. Der Satz von der impliziten Funktion liefert nun: Es
 gibt Umgebungen U von x′ und differenzierbare Funktioneng : U → R, sodass
 G :U→ Rn, u↦→ (g(u),u ) eine stetige Abbildung auf eine offene UmgebungV vonx
@@ -970,7 +970,7 @@ f(x,y )
 10
 x
 y
-a = 13
+a = 1 3
 a = 1
 a = 2
 (b) y2−ax3 = 0
@@ -982,9 +982,9 @@ Definition 26
 Sei X ein Hausdorffraum mit abzählbarer Basis der Topologie.X heißt n-dimensionale
 Mannigfaltigkeit mit Rand, wenn es einen Atlas(Ui,ϕi) gibt, wobeiUi⊆Xi offen und
 ϕi ein Homöomorphismus auf eine offene Teilmenge von
-Rn+,0 :={ (x1,...,x n)∈ Rn|xn≥ 0}
+Rn +,0 :={ (x1,...,x n)∈ Rn|xn≥ 0}
 ist.
-Rn+,0 ist ein „Halbraum“.
+Rn +,0 ist ein „Halbraum“.
 Hinweis: Mannigfaltigkeiten mit Rand sind keine Mannigfaltigkeiten.
 ∼=
 (a) Halbraum
@@ -1004,7 +1004,7 @@ Rand vonX.
 Definition 28
 Sei X eine n-dimensionale Mannigfaltigkeit mit Atlas(Ui,ϕi)i∈I
 Für i,j ∈I mit Ui∩Uj⁄=∅ heißt
-ϕij :=ϕj◦ϕ−1i
+ϕij :=ϕj◦ϕ−1 i
 ϕi(Ui∩Uj)→ϕj(Ui∩Uj)
 Kartenwechseloder Übergangsfunktion.
  2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
@@ -1025,7 +1025,7 @@ Differenzierbare Mannigfaltigkeiten der KlasseC∞ werden auch glatt genannt.
 Definition 30
 Sei X eine differenzierbare Mannigfaltigkeit der KlasseCk (k ∈ N∪{∞} ) mit Atlas
 A = (Ui,ϕi)i∈I.
-a) Eine Karte (U,ϕ ) auf X heißt verträglich mitA, wenn alle Kartenwechselϕ◦ϕ−1i
+a) Eine Karte (U,ϕ ) auf X heißt verträglich mitA, wenn alle Kartenwechselϕ◦ϕ−1 i
 und ϕi◦ϕ−1 (i∈I mit Ui∩U⁄=∅) differenzierbar von KlasseCk sind.
 b) Die Menge aller mitA verträglichen Karten aufX bildet einen maximalen Atlas der
 Klasse Ck. Er heißtCk-Struktur auf X.
@@ -1065,9 +1065,9 @@ JF (u,v ) =
 
 
 ∂x
-∂u (p) ∂x∂v (p)∂y
-∂u (p) ∂y∂v (p)∂z
-∂u (p) ∂z∂v (p)
+∂u (p) ∂x ∂v (p) ∂y
+∂u (p) ∂y ∂v (p) ∂z
+∂u (p) ∂z ∂v (p)
 
 
 Beispiel 24
@@ -1084,11 +1084,11 @@ r(v) cosu r ′(v) sinu
 hat Rang 2 für alle(u,v )∈ R2.
 2) Kugelkoordinaten: F : R2→ R3,
 (u,v )↦→ (R cosv cosu,R cosv sinu,R sinv)
-Es gilt:F (u,v )∈S2R, denn
+Es gilt:F (u,v )∈S2 R, denn
 R2 cos2(v) cos2(u) +R2 cos2(v) sin2(u) +R2 sin2(v)
 =R2(cos2(v) cos2(u) + cos2(v) sin2(u) + sin2(v))
-=R2(cos2(v)(cos2(u) + sin2(u)) + sin2(v))
-=R2(cos2(v) + sin2(v))
+=R2( cos2(v)(cos2(u) + sin2(u)) + sin2(v) )
+=R2( cos2(v) + sin2(v) )
 =R2
  2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 N
@@ -1133,14 +1133,14 @@ Beweis:
 S⊆ R3 ist als reguläre Fläche eine 2-dimensionale Mannigfaltigkeit. Aus der Definition von
 regulären Flächen folgt direkt, dass Karten(Ui,Fi) und (Uj⊆ R2,Fj : R2→ R3) vonS mit
 Ui∩Uj⁄=∅ existieren, wobeiFi und Fj nach Definition differenzierbare Abbildungen sind.
-z.Z.: F−1j ◦Fi ist ein Diffeomorphismus.
+z.Z.: F−1 j ◦Fi ist ein Diffeomorphismus.
 Ui Uj
 S
 s
 Fi Fj
-F−1j ◦Fi
+F−1 j ◦Fi
 Abbildung 2.5: Reguläre FlächeS zum Beweis von Bemerkung 31
-Idee: Finde differenzierbare Funktion~F−1j in UmgebungW vons, sodass~F−1j |S∩W =F−1j .
+Idee: Finde differenzierbare Funktion~F−1 j in UmgebungW vons, sodass~F−1 j |S∩W =F−1 j .
 Ausführung: Sei u0∈Ui, v0∈Uj mit Fi(u0) =s =Fj(v0).
 Da Rg(JFj(v0)) = 2 ist, ist o. B. d. A.
 det
@@ -1163,22 +1163,22 @@ J~Fj =
 ∂x
 ∂u
 ∂x
-∂v 0∂y
+∂v 0 ∂y
 ∂u
 ∂y
-∂v 0∂z
+∂v 0 ∂z
 ∂u
 ∂z
 ∂v 1
 
-⇒ detJ~Fj(v0, 0)⁄= 0
+⇒ detJ~Fj (v0, 0)⁄= 0
 Analysis II
 = = = = = =⇒ Es gibt UmgebungenW vonFj von~Fj(v0, 0) =Fj(v0) =s, sodass~Fj auf W eine
-differenzierbar InverseF−1j hat.
+differenzierbar InverseF−1 j hat.
  2.2. DIFFERENZIERBARE MANNIGFALTIGKEITEN
 Weiter gilt:
-~Fj−1|W∩S =F−1j |W∩S
-⇒F−1j ◦Fi|F−1i (W∩S) =F−1j ◦Fi|F−1i (W∩S)
+~Fj −1 |W∩S =F−1 j |W∩S
+⇒F−1 j ◦Fi|F−1 i (W∩S) =F−1 j ◦Fi|F−1 i (W∩S)
 ist differenzierbar.
 Definition 33
 Sei G eine Mannigfaltigkeit und(G,◦) eine Gruppe.
@@ -1193,8 +1193,8 @@ Beispiel 25 (Lie-Gruppen)
 2) GLn(R)
 3) (R×,·)
 4) (R>0,·)
-5) (Rn, +), dennA·B(i,j ) =∑nk=1aikbkj ist nach allen Variablen differenzierbar
-(A−1)(i,j ) = det(Aij)detA
+5) (Rn, +), dennA·B(i,j ) =∑n k=1aikbkj ist nach allen Variablen differenzierbar
+(A−1)(i,j ) = det(Aij) detA
 Aij =
 
 
@@ -1223,7 +1223,7 @@ a) v0,...,v k sind in allgemeiner Lage
 b) conv(v0,...,v k) :=
 {∑k
 i=0λivi
-⏐⏐⏐λi≥ 0,∑ki=0λi = 1} heißt diekonvexe Hüllevon
+⏐⏐⏐λi≥ 0,∑k i=0λi = 1 } heißt diekonvexe Hüllevon
 v0,...,v k.
 Definition 35
 a) Sei ∆n = conv(e0,...,e n)⊆ Rn+1 die konvexe Hülle der Standard-Basisvektoren
@@ -1259,7 +1259,7 @@ a) Eine endliche MengeK von Simplizes imRn heißt (endlicher)Simplizialkomplex,
 wenn gilt:
 (i) Für ∆∈K und S⊆ ∆ Teilsimplex istS∈K.
 (ii) Für ∆1, ∆2∈K ist ∆1∩ ∆2 leer oder ein Teilsimplex von∆1 und von ∆2.
-b) |K| :=⋃∆∈K ∆ (mit Teilraumtopologie) heißtgeometrische RealisierungvonK.
+b) |K| :=⋃ ∆∈K ∆ (mit Teilraumtopologie) heißtgeometrische RealisierungvonK.
 c) Ist d = max{k∈ N0|K enthältk-Simplex}, so heißtd die Dimension vonK.
  2.3. SIMPLIZIALKOMPLEX
 (a) 1D Simplizialkomplex(b) 2D Simplizialkomplex
@@ -1350,13 +1350,13 @@ Bemerkung 33
  2.3. SIMPLIZIALKOMPLEX
 Beweis: ∆n ist die konvexe Hülle von(e0,...,e n) in Rn+1. Jede (k + 1)-elementige Teilmenge
 von{e0,...,e n} definiert eink-Simplex.
-⇒ak(∆n) =(n+1k+1), k = 0,...,n
-⇒χ(∆n) =∑nk=0(−1)k(n+1k+1)
+⇒ak(∆n) = (n+1 k+1 ) , k = 0,...,n
+⇒χ(∆n) =∑n k=0(−1)k(n+1 k+1 )
 f(x) = (x + 1)n+1
 Binomischer
 Lehrsatz
-= ∑n+1k=0(n+1k )xk
-⇒ 0 =∑n+1k=0(n+1k )(−1)k =χ(∆n)− 1
+= ∑n+1 k=0 (n+1 k ) xk
+⇒ 0 =∑n+1 k=0 (n+1 k ) (−1)k =χ(∆n)− 1
 ⇒χ(∆n) = 1 ■
 Definition 39
 a) Ein 1D-Simplizialkomplex heißtGraph.
@@ -1451,7 +1451,7 @@ Cn(K) =
 ∑
 σ∈An(K)
 cσ·σ
-⏐⏐⏐⏐⏐⏐cσ∈ R
+⏐⏐⏐⏐⏐⏐ cσ∈ R   
 Sei σ = ∆(x0,...,x n)∈An(K), sodassx0<x 1<··· <x n.
 Für i = 0,...,n sei ∂iσ := ∆(x0,..., ˆxi,...,x n) die i-te Seite vonσ und dσ = dnσ :=∑
 i=0(−1)i∂iσ ∈ Cn−1(K) und dn : Cn(K)→ Cn−1(K) die dadurch definierte lineare
@@ -1495,7 +1495,7 @@ j=0
 =
 ∑
 0≤i≤j≤n−1
-(−1)i+j∂j(∂i(σ)) +∑
+(−1)i+j∂j(∂i(σ)) + ∑
 0≤j<i≤n
 (−1)i+j∂i−1(∂jσ)
 = 0
@@ -1606,8 +1606,8 @@ Beweis:
 • transitiv: SeienH′ bzw. H′′ Homotopien vonγ1 nachγ2 bzw. vonγ2 nachγ3.
 Dann seiH(t,s ) :=
 {
-H′(t, 2s) falls 0≤s≤ 12
-H′′(t, 2s− 1) falls 12≤s≤ 1
+H′(t, 2s) falls 0≤s≤ 1 2
+H′′(t, 2s− 1) falls 1 2≤s≤ 1
 ⇒ H ist stetig und Homotopie vonγ1 nachγ3.
 ■
 Beispiel 30
@@ -1637,8 +1637,8 @@ Definition 43
 Seien γ1,γ 2 Wege inX mit γ1(1) =γ2(0). Dann ist
 γ(t) =
 {
-γ1(2t) falls 0≤t< 12
-γ2(2t− 1) falls 12≤t≤ 1
+γ1(2t) falls 0≤t< 1 2
+γ2(2t− 1) falls 1 2≤t≤ 1
 ein Weg inX. Er heißtzusammengesetzter Wegund man schreibtγ =γ1∗γ2.
 Bemerkung 43
 Das Zusammensetzen von Wegen ist nur bis auf Homotopie assoziativ, d. h.:
@@ -1659,29 +1659,29 @@ Verwende dazu
 
 
 1
-2t falls 0≤t< 12
-t− 14 falls 12≤t< 34
-2t− 1 falls 34≤t≤ 1
+2t falls 0≤t< 1 2
+t− 1 4 falls 1 2≤t< 3 4
+2t− 1 falls 3 4≤t≤ 1
 Bemerkung 44
-Sei X ein topologischer Raum,a,b,c ∈X, γ1,γ′1 Wege vona nachb und γ2,γ′2 Wege vonb
+Sei X ein topologischer Raum,a,b,c ∈X, γ1,γ′ 1 Wege vona nachb und γ2,γ′ 2 Wege vonb
 nachc.
-Sind γ1∼γ′1 und γ2∼γ′2, so istγ1∗γ2∼γ′1∗γ′2.
+Sind γ1∼γ′ 1 und γ2∼γ′ 2, so istγ1∗γ2∼γ′ 1∗γ′ 2.
  3.2. FUNDAMENTALGRUPPE
-γ1γ′1
+γ1γ′ 1
 a
 b
 c
-γ′2
+γ′ 2
 γ2
 Abbildung 3.5: Situation aus Bemerkung 44
 .
-Beweis: Sei Hi eine Homotopie zwischenγi und γ′i, i = 1, 2.
+Beweis: Sei Hi eine Homotopie zwischenγi und γ′ i, i = 1, 2.
 Dann ist
 H(t,s ) :=
 {
-H1(2t,s ) falls 0≤t≤ 12 ∀s∈I
-H2(2t− 1,s ) falls 12≤t≤ 1
-eine Homotopie zwischenγ1∗γ2 und γ′1∗γ′2.
+H1(2t,s ) falls 0≤t≤ 1 2 ∀s∈I
+H2(2t− 1,s ) falls 1 2≤t≤ 1
+eine Homotopie zwischenγ1∗γ2 und γ′ 1∗γ′ 2.
 Eine spezielle Homotopieäquivalenz sind sog. Deformationsretraktionen:
 Definition 44
 Sei X ein topologischer Raum,A⊆X, r :X→A eine stetige Abbildung undι = (idX)|A.
@@ -1714,8 +1714,8 @@ b) Assoziativität folgt aus Bemerkung 43
 c) Neutrales Elemente = [γ0],γ 0(t) =x ∀t∈I. e∗ [γ] = [γ] = [γ]∗e, daγ0∗γ∼γ
 d) Inverses Element [γ]−1 = [γ] = [γ(1−t)], dennγ∗γ∼γ0∼γ∗γ
 Beispiel 32
-1) S1 ={z∈ C||z| = 1} ={ (cosϕ, sinϕ)∈ R2⏐⏐ 0≤ϕ≤ 2π}
-π1(S1, 1) = { [γk]⏐⏐k∈ Z}∼= Z. Dabei istγ(t) = e2πit = cos(2πt) +i sin(2πt) und
+1) S1 ={z∈ C||z| = 1} = { (cosϕ, sinϕ)∈ R2⏐⏐ 0≤ϕ≤ 2π }
+π1(S1, 1) = { [γk] ⏐⏐k∈ Z }∼= Z. Dabei istγ(t) = e2πit = cos(2πt) +i sin(2πt) und
 γk :=γ∗···∗ γ| {z }
 k mal
 [γk]↦→k ist ein Isomorphismus.
@@ -1950,7 +1950,7 @@ Dann seienU1 und U2 disjunkte Umgebungen vonp(y1) und p(y2).
 b) Sei x∈X beliebig, aber fest.
 Zu zeigen:∀yi∈p−1(x) :∃Vi∈ TY mit yi∈Vi, sodass gilt:i⁄=j⇒Vi∩Vj =∅.
 Die Vi existieren wegen der Definition einer Überlagerung:p heißt Überlagerung
-:⇔∀x∈X∃U =U(x)∈ TX :p−1(U) = ˙⋃Vi∈TY Vi und p|Vi ist Homöomorphismus.
+:⇔∀x∈X∃U =U(x)∈ TX :p−1(U) = ˙⋃ Vi∈TY Vi und p|Vi ist Homöomorphismus.
 ⇒ (p|Vi)−1(x) ={yi}
 ⇒ Alle yi liegen diskret inY, da Häufungspunkte unendlich viele Elemente in jeder
 Umgebung benötigen. ■
@@ -1991,7 +1991,7 @@ Abbildung 3.13:Beim Liften eines Weges bleiben geschlossene Wege im allgemeinen 
 Seiz∈T,x =f(z),U Umgebung vonx wie in Definition 48,V die Komponente vonp−1(U),
 die y :=f0(z) =f1(z) enthält.
 Sei q :U→V die Umkehrabbildung zup|V.
-Sei W :=f−1(U)∩f−10 (V )∩f−11 (V ). W ist offene Umgebung inZ vonz.
+Sei W :=f−1(U)∩f−1 0 (V )∩f−1 1 (V ). W ist offene Umgebung inZ vonz.
 Behauptung: W⊆T
 Denn fürw∈W istq(f(w)) =q((p◦f0))(w) = ((q◦p)◦f0)(w) =f0(w) =q(f(w)) =f1(w)
 ⇒T ist offen.
@@ -2036,7 +2036,7 @@ um x0 sei ˜γ die Liftung mit˜γ(0) =y0.
 Für geschlossene Wegeγ0,γ 1 um x gilt:
 ˜γ0(1) = ˜γ1(1)
 ⇔[ ˜γ0∗ ˜γ1−1]∈π1(Y,y 0)
-⇔[γ0∗γ−11 ]∈p∗(π1(Y,y 0))
+⇔[γ0∗γ−1 1 ]∈p∗(π1(Y,y 0))
 ⇔[γ0] und [γ1]liegen in der selben Nebenklasse bzgl.p∗(π1(Y,y 0))
  3.3. ÜBERLAGERUNGEN
 Zu i∈{ 0,...,d − 1} gibt es Wegδi in Y mit δi(0) =y0 und δi(1) =yi
@@ -2194,9 +2194,9 @@ Beispiel 41
 1) G = (Z, +),X = R,n◦x =x +n
 2) G operiert aufX =G durchg◦h :=g·h
 3) G operiert aufX =G durchg◦h :=g·h·g−1, denn
-i) 1G◦h = 1G·h· 1−1G =h
+i) 1G◦h = 1G·h· 1−1 G =h
 ii) (g1·g2)◦h = (g1·g2)·h· (g·g2)−1
-=g1· (g2·h·g−12 )·g−11
+=g1· (g2·h·g−1 2 )·g−1 1
 =g1◦ (g2◦h)
 Definition 56
 Sei G eine Gruppe,X ein topologischer Raum und◦ :G×X→X eine Gruppenoperation.
@@ -2260,7 +2260,7 @@ aus Beispiel 43 einen Gruppenhomomorphismusϱ :π1(X,x 0)→ Homöo(X). Nach Sat
 =
 {
 f : ˜X→ ˜X Homöomorphismus
-⏐⏐⏐p◦f =p}
+⏐⏐⏐p◦f =p }
  3.4. GRUPPENOPERATIONEN
 Beispiel 44
 Sei X :=S2⊆ R3 und τ die Drehung um diez-Achse um180◦.
@@ -2452,7 +2452,7 @@ Beweis: Seien ϕ1,ϕ 2,ϕ 3 Isometrien mitϕi(P ) =P′, ϕi(Q) =Q′ mit i = 1,
 Der Beweis von Proposition 4.2 erfolgt über zwei Teilaussagen:
 (Teil i)∃R∈X\PQ mit ϕ1(R) =ϕ2(R).
 (Teil ii) Hatϕ 3 Fixpunkte, die nicht kollinear sind, so istϕ = idX.
-Aus (Teil i) und (Teil ii) folgt, dassϕ−12 ◦ϕ1 = idX, alsoϕ2 =ϕ1, daP,Q und R in diesem
+Aus (Teil i) und (Teil ii) folgt, dassϕ−1 2 ◦ϕ1 = idX, alsoϕ2 =ϕ1, daP,Q und R in diesem
 Fall Fixpunkte sind.
 Nun zu den Beweisen der Teilaussagen:
 (Teil i) Sei R∈X\PQ. Von den drei Punktenϕ1(R),ϕ 2(R),ϕ 3(R) liegen zwei in der selben
@@ -2483,8 +2483,8 @@ Dann ist∆ABC kongruent zu∆A′B′C′ .
 Beweis: Sei ϕ die Isometrie mitϕ(A′) = A, ϕ(A′C′+) = AC+ und ϕ(A′B′+) = AB+. Diese
 Isometrie existiert wegen Punkt §4.
 ⇒C∈ϕ(A′C′+) und B∈ϕ(A′B′+).
-d(A′,C′) =d(ϕ(A′),ϕ (C′)) =d(A,ϕ (C′)) 3(i)= =⇒ϕ(C′) =C
-d(A′,B′) =d(ϕ(A′),ϕ (B′)) =d(A,ϕ (B′)) 3(i)= =⇒ϕ(B′) =B
+d(A′,C′) =d(ϕ(A′),ϕ (C′)) =d(A,ϕ (C′)) 3(i) = =⇒ϕ(C′) =C
+d(A′,B′) =d(ϕ(A′),ϕ (B′)) =d(A,ϕ (B′)) 3(i) = =⇒ϕ(B′) =B
 Also gilt insbesondereϕ(∆A′B′C′) =∆ABC. ■
 Bemerkung 65 (WSW-Kongruenzsatz)
 Sei (X,d,G ) eine Geometrie, die §1 - §4 erfüllt. Seien außerdem∆ABC und∆A′B′C′
@@ -2505,8 +2505,8 @@ a) Ein Winkel ist ein PunktP∈X zusammen mit 2 Halbgeraden mit AnfangspunktP.
 Man schreibt:∠R1PR 2 bzw.∠R2PR 12
 b) Zwei Winkel sindgleich, wenn es eine Isometrie gibt, die den einen Winkel auf den
 anderen abbildet.
-c) ∠R′1P′R′2 heißt kleiner als∠R1PR 2, wenn es eine Isometrieϕ gibt, mitϕ(P′) =P,
-ϕ(P′R′+1 ) =PR +1 und ϕ(R′2) liegt in der gleichen Halbebene bzgl.PR 1 wieR2 und in
+c) ∠R′ 1P′R′ 2 heißt kleiner als∠R1PR 2, wenn es eine Isometrieϕ gibt, mitϕ(P′) =P,
+ϕ(P′R′+ 1 ) =PR + 1 und ϕ(R′ 2) liegt in der gleichen Halbebene bzgl.PR 1 wieR2 und in
 der gleichen Halbebene bzgl.PR 2 wie R1
 d) Im Dreieck∆PQR gibt esInnenwinkel und Außenwinkel.
 Bemerkung 66
@@ -2516,10 +2516,10 @@ Sei M der Mittelpunkt der StreckeQR und P′∈PQ +\PQ. SeiA∈MP− mit d(P,M )
 d(M,A ).
 2Für dieses Skript gilt:∠R1PR 2 =∠R2PR 1. Also sind insbesondere alle Winkel≤ 180◦.
  4.1. AXIOME FÜR DIE EUKLIDISCHE EBENE
-P R′1 R1
-R′2
+P R′ 1 R1
+R′ 2
 R2
-(a)∠R′1P′R′2 ist kleiner als∠R1PR 2,
+(a)∠R′ 1P′R′ 2 ist kleiner als∠R1PR 2,
 vgl. Definition 61.c
 P
 Q R
@@ -2590,8 +2590,8 @@ C A′
 (b) Situation aus Proposition 4.5
 Abbildung 4.10: Situation aus Proposition 4.5
 Sei α ein Innenwinkel von∆.
-Beh.: Es gibt ein Dreieck∆′ mit IWS(∆′) = IWS(∆) und einem Innenwinkelα′≤ α2.
-Dann gibt es für jedesn ein∆n mit IWS(∆n) = IWS(∆) und Innenwinkelα′≤ α2n. Fürα
+Beh.: Es gibt ein Dreieck∆′ mit IWS(∆′) = IWS(∆) und einem Innenwinkelα′≤ α 2.
+Dann gibt es für jedesn ein∆n mit IWS(∆n) = IWS(∆) und Innenwinkelα′≤ α 2n. Für α
 2n <ε ist dann die Summe der beiden Innenwinkel um∆n größer alsπ⇒ Widerspruch
 zu Folgerung 4.4.
 Beweis: Es seienA,B,C ∈X und∆ das Dreieck mit den EckpunktenA,B,C und α sei
@@ -2601,7 +2601,7 @@ Sei weiterA′∈MA− mit d(A′,M ) =d(A,M ).
 Die Situation ist in Abbildung 4.10b skizziert.
 ⇒∆ (MA′C) und∆(MAB ) sind kongruent.⇒∠ABM =∠A′CM und∠MA′C =
 ∠MAB.⇒α+β +γ = IWS(∆ABC) = IWS(∆AA′C) undα1 +α2 =α, also o. B. d. A.
-α1≤ α2
+α1≤ α 2
 Bemerkung 67
 In einer euklidischen Ebene ist in jedem Dreieck die Innenwinkelsumme gleichπ.
 α′
@@ -2680,11 +2680,11 @@ C
 LA
 LC
 Abbildung 4.16:∆ABLa und∆CLCB sind ähnlich, weilIWS =π
-Strahlensatz= = = = = = =⇒ ahc = cha→a·ha =c·hc
+Strahlensatz= = = = = = =⇒ a hc = c ha→a·ha =c·hc
 Satz 4.7 (Satz des Pythagoras)
 Im rechtwinkligen Dreieck gilta2 +b2 =c2, wobeic die Hypotenuse unda,b die beiden
 Katheten sind.
-Beweis: (a +b)· (a +b) =a2 + 2ab +b2 =c2 + 4· ( 12·a·b)
+Beweis: (a +b)· (a +b) =a2 + 2ab +b2 =c2 + 4· ( 1 2·a·b)
  4.2. WEITERE EIGENSCHAFTEN EINER EUKLIDISCHEN EBENE
 c
 b a
@@ -2756,14 +2756,14 @@ R
 X
 Abbildung 4.19: Beweis zu Satz 4.8
 (ii) Zu Zeigen:d(P,Q ) =d(h(P ),h (Q))
-d(P,Q )2 Pythagoras= d(P,R )2 +d(R,Q )2 = (yQ−yP )2 + (xQ−xP )2.
+d(P,Q )2 Pythagoras = d(P,R )2 +d(R,Q )2 = (yQ−yP )2 + (xQ−xP )2.
 h(Q) = (xQ,yQ)
 4.3 Hyperbolische Geometrie
 Definition 63
 Sei
 H :={z∈ C|ℑ (z)> 0} =
 {
-(x,y )∈ R2⏐⏐y >0}
+(x,y )∈ R2⏐⏐y >0 }
  4.3. HYPERBOLISCHE GEOMETRIE
 die obere Halbebene bzw. Poincaré-Halbebene undG =G1∪G2 mit
 G1 ={g1⊆ H|∃m∈ R,r∈ R>0 :g1 ={z∈ H :|z−m| =r}}
@@ -2855,7 +2855,7 @@ Abbildung 4.21: Hyperbolische Geraden erfüllen §5 nicht.
  4.3. HYPERBOLISCHE GEOMETRIE
 Definition 64
 Es seiena,b,c,d ∈ R mit ad−bc⁄= 0 und σ : C→ C eine Abbildung definiert durch
-σ(z) := az +bcz +d
+σ(z) := az +b cz +d
 σ heißt Möbiustransformation.
 Proposition 4.9
 a) Die Gruppe SL2(R) operiert auf H durch die Möbiustransformation
@@ -2863,7 +2863,7 @@ a) Die Gruppe SL2(R) operiert auf H durch die Möbiustransformation
 (a b
 c d
 )
-◦z := az +bcz +d
+◦z := az +b cz +d
 b) Die Gruppe PSL2(R) = SL2(R)/(±I) operiert durchσ auf H.
 c) PSL2(R) operiert auf R∪{∞} . Diese Gruppenoperation ist 3-fach transitiv, d. h.
 zu x0 <x 1 <x∞∈ R gibt es genau einσ∈ PSL2(R) mit σ(x0) = 0, σ(x1) = 1,
@@ -2895,17 +2895,17 @@ a) Sei z =x +iy∈ H, d. h.y >0 und σ =
 c d
 )
 ∈ SL2(R)
-⇒σ(z) = a(x +iy) +bc(x +iy) +d
-= (ax +b) +iay(cx +d) +icy· (cx +d)−icy(cx +d)−icy
-= (ax +b)(cx +d) +aycy(cx +d)2 + (cy)2 +iay(cx +d)− (ax +b)cy(cx +d)2 + (cy)2
-= axcx +axd +bcx +bd +aycy(cx +d)2 + (cy)2 +i (ad−bc)y(cx +d)2 + (cy)2
-SL2(R)= ac(x2 +y2) +adx +bcx +bd(cx +d)2 + (cy)2 +i y(cx +d)2 + (cy)2
-⇒ℑ (σ(z)) = y(cx+d)2+(cy)2 > 0
+⇒σ(z) = a(x +iy) +b c(x +iy) +d
+= (ax +b) +iay (cx +d) +icy· (cx +d)−icy (cx +d)−icy
+= (ax +b)(cx +d) +aycy (cx +d)2 + (cy)2 +iay(cx +d)− (ax +b)cy (cx +d)2 + (cy)2
+= axcx +axd +bcx +bd +aycy (cx +d)2 + (cy)2 +i (ad−bc)y (cx +d)2 + (cy)2
+SL2(R) = ac(x2 +y2) +adx +bcx +bd (cx +d)2 + (cy)2 +i y (cx +d)2 + (cy)2
+⇒ℑ (σ(z)) = y (cx+d)2+(cy)2 > 0
 Die Abbildung bildet also nachH ab. Außerdem gilt:
 (1 0
 0 1
 )
-◦z = x +iy1 =x +iy =z
+◦z = x +iy 1 =x +iy =z
  4.3. HYPERBOLISCHE GEOMETRIE
 und
 (a b
@@ -2924,14 +2924,14 @@ c d
 ◦ a′z +b′
 c′z +d′
 =
-aa′z+b′c′z+d′ +b
-ca′z+b′c′z+d′ +d
+aa′z+b′ c′z+d′ +b
+ca′z+b′ c′z+d′ +d
 =
 a(a′z+b′)+b(c′z+d′)
 c′z+d′
 c(a′z+b′)+d(c′z+d′)
 c′z+d′
-= a(a′z +b′) +b(c′z +d′)c(a′z +b′) +d(c′z +d′)
+= a(a′z +b′) +b(c′z +d′) c(a′z +b′) +d(c′z +d′)
 = (aa′ +bc′)z +ab′ +bd′
 (ca′ +db′)z +cb′ +dd′
 =
@@ -2953,15 +2953,15 @@ c) Ansatz: σ =
 (a b
 c d
 )
-σ(x0) = ax0+bcx0+d != 0⇒ax0 +b = 0⇒b =−ax0
+σ(x0) = ax0+b cx0+d != 0⇒ax0 +b = 0⇒b =−ax0
 σ(x∞) =∞⇒ cx∞ +d = 0⇒d =−cx∞
 σ(x1) = 1⇒ax1 +b =cx1 +d
-a(x1−x0) =c(x1−x∞)⇒c =a x1−x0x1−x∞
-⇒−a2·x∞ x1−x0x1−x∞ +a2x0 x1−x0x1−x∞ = 1
-⇒a2 x1−x0x0−x∞ (x0−x∞) = 1⇒a2 = x1−x∞(x1−x∞)(x1−x0)
+a(x1−x0) =c(x1−x∞)⇒c =a x1−x0 x1−x∞
+⇒−a2·x∞ x1−x0 x1−x∞ +a2x0 x1−x0 x1−x∞ = 1
+⇒a2 x1−x0 x0−x∞ (x0−x∞) = 1⇒a2 = x1−x∞ (x1−x∞)(x1−x0)
 d) Es gilt:
-A−1λ =A 1λ
-B−1t =B−t
+A−1 λ =A 1 λ
+B−1 t =B−t
 C−1 =C3
 Daher genügt es zu zeigen, dass man mitAλ, Bt und C alle Matrizen aus SL2(R)
 erzeugen kann, genügt es also von einer beliebigen Matrix durch Multiplikation mit
@@ -3071,7 +3071,7 @@ Abbildung 4.22: Beweis von Proposition 4.9 (e) für eine Diagonalmatrix
 ( 0 1
 −1 0
 )
-, alsoσ(z) =− 1z
+, alsoσ(z) =− 1 z
 Bemerkung 69
 Zu hyperbolischen Geradeng1,g 2 gibt esσ∈ PSL2(R) mit σ(g1) =g2.
  4.3. HYPERBOLISCHE GEOMETRIE
@@ -3083,7 +3083,7 @@ y
 1
 z =r·eiϕ
 1
-z = 1r·eiϕ
+z = 1 r·eiϕ
 Abbildung 4.23: Inversion am Kreis
 Beweis: Nach Proposition 4.9 (c) gibt esσ mit σ(a1) = b1 und σ(a2) = b2. Dann existiert
 σ(g1) :=g2 wegen dem Inzidenzaxiom §1 und ist eindeutig bestimmt.
@@ -3095,17 +3095,17 @@ z1−z4
 z1−z2
 z3−z4
 z3−z2
-= (z1−z4)· (z3−z2)(z1−z2)· (z3−z4)
+= (z1−z4)· (z3−z2) (z1−z2)· (z3−z4)
 Doppelverhältnis vonz1,...,z 4.
 Bemerkung 70 (Eigenschaften des Doppelverhältnisses)
 a) DV(z1,...,z 4)∈ C\{ 0, 1}
-b) DV(z1,z 4,z 3,z 2) = 1DV(z1,z2,z3,z4)
-c) DV(z3,z 2,z 1,z 4) = 1DV(z1,z2,z3,z4)
+b) DV(z1,z 4,z 3,z 2) = 1 DV(z1,z2,z3,z4)
+c) DV(z3,z 2,z 1,z 4) = 1 DV(z1,z2,z3,z4)
 d) DV ist auch wohldefiniert, wenn eines derzi =∞ oder wenn zwei derzi gleich sind.
 e) DV(0, 1,∞,z 4) =z4 (Der Fallz4∈{ 0, 1,∞} ist zugelassen).
 f) Für σ∈ PSL2(C) und z1,...,z 4∈ C∪{∞} ist
 DV(σ(z1),σ (z2),σ (z3),σ (z4)) = DV(z1,z 2,z 3,z 4)
-und fürσ(z) = 1z gilt
+und fürσ(z) = 1 z gilt
 DV(σ(z1),σ (z2),σ (z3),σ (z4)) = DV(z1,z 2,z 3,z 4)
 g) DV(z1,z 2,z 3,z 4)∈ R∪{∞}⇔ z1,...,z 4 liegen auf einer hyperbolischen Geraden.
 Beweis:
@@ -3120,8 +3120,8 @@ Annahme: DV(z1,...,z 4) = 1
 ⇔z3(z2−z4) =z1(z2−z4)
 ⇔z3 =z1 oder z2 =z4
 Alle zi sind paarweise verschieden⇒ Widerspruch ■
-b) DV(z1,z 4,z 3,z 2) = (z1−z2)·(z3−z4)(z1−z4)·(z3−z2) = 1DV(z1,z2,z3,z4)
-c) DV(z3,z 2,z 1,z 4) = (z3−z4)·(z1−z2)(z3−z2)·(z1−z4) = 1DV(z1,z2,z3,z4)
+b) DV(z1,z 4,z 3,z 2) = (z1−z2)·(z3−z4) (z1−z4)·(z3−z2) = 1 DV(z1,z2,z3,z4)
+c) DV(z3,z 2,z 1,z 4) = (z3−z4)·(z1−z2) (z3−z2)·(z1−z4) = 1 DV(z1,z2,z3,z4)
 d) Zwei derzi dürfen gleich sein, da:
 Fall 1z1 =z4 oder z3 =z2
 In diesem Fall istDV(z1,...,z 4) = 0
@@ -3130,7 +3130,7 @@ Mit der Regel von L’Hospital folgt, dass in diesem FallDV(z1,...,z 4) =∞ gil
 Fall 3z1 =z3 oder z2 =z4
 Durch Einsetzen ergibt sichDV(z1,...,z 4) = 1.
 Im Fall, dass einzi =∞ ist, ist entwederDV(0, 1,∞,z 4) = 0 oder DV(0, 1,∞,z 4)±∞
-e) DV(0, 1,∞,z 4) = (0−z4)·(∞−1)(0−1)·(∞−z4) = z4·(∞−1)∞−z4 =z4
+e) DV(0, 1,∞,z 4) = (0−z4)·(∞−1) (0−1)·(∞−z4) = z4·(∞−1) ∞−z4 =z4
 f) Wenn jemand diesen Beweis führt, bitte an info@martin-thoma.de schicken.
 g) Seiσ∈ PSL2(C) mitσ(z1) = 0,σ(z2) = 1,σ(z3) =∞. Ein solchesσ existiert, da man
 drei Parameter vonσ wählen darf.
@@ -3141,20 +3141,20 @@ Behauptung folgt, weilσ−1(R∪∞ ) ein Kreis oder eine Gerade inC ist.
 Definition 66
 Für z1,z 2∈ H sei gz1,z2 die eindeutige hyperbolische Gerade durchz1 und z2 und a1,a 2 die
 „Schnittpunkte“ vongz1,z2 mit R∪{∞} .
-Dann seidH(z1,z 2) := 12| ln DV(a1,z 1,a 2,z 2)| und heißehyperbolische Metrik.
+Dann seidH(z1,z 2) := 1 2| ln DV(a1,z 1,a 2,z 2)| und heißehyperbolische Metrik.
 Beh.: Für z1,z 2∈ H sei gz1,z2 die eindeutige hyperbolische Gerade durchz1 und z2 und a1,a 2
 die „Schnittpunkte“ vongz1,z2 mit R∪{∞} .
 Dann gilt:
 1
-2| ln DV(a1,z 1,a 2,z 2)| = 12| ln DV(a2,z 1,a 1,z 2)|
+2| ln DV(a1,z 1,a 2,z 2)| = 1 2| ln DV(a2,z 1,a 1,z 2)|
 Beweis: Wegen Bemerkung 70.c gilt:
-DV(a1,z 1,a 2,z 2) = 1DV(a2,z 1,a 1,z 2)
+DV(a1,z 1,a 2,z 2) = 1 DV(a2,z 1,a 1,z 2)
 Außerdem gilt:
-ln 1x = lnx−1 = (−1)· lnx =− lnx
+ln 1 x = lnx−1 = (−1)· lnx =− lnx
  4.3. HYPERBOLISCHE GEOMETRIE
 Da der ln im Betrag steht, folgt direkt:
 1
-2| ln DV(a1,z 1,a 2,z 2)| = 12| ln DV(a2,z 1,a 1,z 2)|
+2| ln DV(a1,z 1,a 2,z 2)| = 1 2| ln DV(a2,z 1,a 1,z 2)|
 Es ist also egal in welcher Reihenfolge die „Schnittpunkte“ mit derx-Achse im Doppelverhältnis
  genutzt werden. ■
 Beh.: Die hyperbolische Metrik ist eine Metrik aufH.
@@ -3163,8 +3163,8 @@ d(z1,z 2) :=d(σ(z1),σ (z2)) mit σ(a1) = 0, σ(a2) =∞
 d. h.σ(gz1,z2) =iR (imaginäre Achse).
 also gilt o. B. d. A.z1 =ia und z2 =ib mit a,b∈ R und a<b .
 2d(ia,ib ) =| ln DV(0,ia,∞,ib )|
-=| ln (0−ib)(∞− ia)(0−ia)(∞− ib)|
-=| ln ba|
+=| ln (0−ib)(∞− ia) (0−ia)(∞− ib)|
+=| ln b a|
 = lnb− lna
 Also: d(z1,z 2)≥ 0, d(z1,z 2) = 0⇔z1 =z2
 2d(z2,z 1) =| ln DV(a2,z 2,a 1,z 1)|
@@ -3213,7 +3213,7 @@ Definition 68
 Sei γ :I = [a,b ]→ Rn eine Kurve.
 a) Die Kurveγ heißt durch Bogenlänge parametrisiert, wenn gilt:
 ‖γ′(t)‖2 = 1 ∀t∈I
-Dabei istγ′(t) = (γ′1(t),γ′2(t),...,γ ′n(t)).
+Dabei istγ′(t) = (γ′ 1(t),γ′ 2(t),...,γ ′ n(t)).
 b) l(γ) =
 ∫b
 a‖γ′(t)‖dt heißt Länge vonγ.
@@ -3224,13 +3224,13 @@ b) Ist γ durch Bogenlänge parametrisiert, so istγ′(t) orthogonal zuγ′′
 Beweis:
 a) l(γ) =
 ∫b
-a‖γ′(t)‖dt =∫ba 1dt =b−a.
+a‖γ′(t)‖dt = ∫b a 1dt =b−a.
 b) Im Folgenden wird die Aussage nur fürγ : [a,b ]→ R2 bewiesen. Allerdings funktioniert
 der Beweis imRn analog. Es muss nur die Ableitung angepasst werden.
 1 =‖γ′(t)‖ =‖γ′(t)‖2 =⟨γ′(t),γ′(t)⟩
-⇒ 0 = ddt⟨γ′(t),γ′(t)⟩
-= ddt(γ′1(t)γ′1(t) +γ′2(t)γ′2(t))
-= 2· (γ′′1(t)·γ′1(t) +γ′′2(t)·γ′2(t))
+⇒ 0 = d dt⟨γ′(t),γ′(t)⟩
+= d dt(γ′ 1(t)γ′ 1(t) +γ′ 2(t)γ′ 2(t))
+= 2· (γ′′ 1(t)·γ′ 1(t) +γ′′ 2(t)·γ′ 2(t))
 = 2·⟨γ′′(t),γ′(t)⟩
 Definition 69
 Sei γ :I→ R2 eine durch Bogenlänge parametrisierte Kurve.
@@ -3245,54 +3245,54 @@ Beispiel 45
 Gegeben sei ein Kreis mit Radiusr, d. h. mit Umfang2πr. Es gilt:
 γ(t) =
 (
-r· cos tr,r· sin tr) für t∈ [0, 2πr]
+r· cos t r,r· sin t r ) für t∈ [0, 2πr]
 ist parametrisiert durch Bogenlänge, da gilt:
 γ′(t) =
 (
-(r· 1r )(− sin tr),r 1r cos tr)
+(r· 1 r )(− sin t r),r 1 r cos t r )
 =
 (
-− sin tr, cos tr)
+− sin t r, cos t r )
 Der Normalenvektor vonγ in t ist
 n(t) =
 (
-− cos tr,− sin tr)
+− cos t r,− sin t r )
 da gilt:
 ⟨n(t),γ′(t)⟩ =
-⟨(− cos tr
-− sin tr
+⟨(− cos t r
+− sin t r
 )
 ,
-(− sin tr
-cos tr
+(− sin t r
+cos t r
 )⟩
-= (− cos tr)· (− sin tr) + (− sin tr)· (cos tr)
+= (− cos t r)· (− sin t r) + (− sin t r)· (cos t r)
 = 0
 ‖n(t)‖ =
-‖‖‖‖(− cos tr,− sin tr)‖‖‖‖
-= (− cos tr)2 + (− sin tr)2
+‖‖‖‖(− cos t r,− sin t r) ‖‖‖‖
+= (− cos t r)2 + (− sin t r)2
 = 1
-det(γ′1(t),n (t)) =
-‖‖‖‖(− sin tr − cos trcos tr − sin tr)‖‖‖‖
-= (− sin tr)2− (− cos tr)· cos tr
+det(γ′ 1(t),n (t)) =
+‖‖‖‖ (− sin t r − cos t r cos t r − sin t r )‖‖‖‖
+= (− sin t r)2− (− cos t r)· cos t r
 = 1
-Die Krümmung ist für jedest konstant 1r, da gilt:
+Die Krümmung ist für jedest konstant 1 r, da gilt:
 γ′′(t) =
 (
-−1r cos tr,−1r sin tr)
-= 1r·(− cos tr,− sin tr)
-⇒κ(t) = 1r
+−1 r cos t r,−1 r sin t r )
+= 1 r· ( − cos t r,− sin t r )
+⇒κ(t) = 1 r
  5.2. TANGENTIALEBENE
 Definition 70
 Sei γ :I→ R3 eine durch Bogenlänge parametrisierte Kurve.
 a) Für t∈I heißt κ(t) :=‖γ′′(t)‖ die Krümmung vonγ in t.
-b) Ist fürt∈I die Ableitungγ′′(t)⁄= 0, so heißt γ′′(t)‖γ′′(t)‖ Normalenvektor an γ in t.
+b) Ist fürt∈I die Ableitungγ′′(t)⁄= 0, so heißt γ′′(t) ‖γ′′(t)‖ Normalenvektor an γ in t.
 c) b(t) sei ein Vektor, derγ′(t),n (t) zu einer orientierten Orthonormalbasis vonR3 ergänzt.
 Also gilt:
 det(γ′(t),n (t),b (t)) = 1
 b(t) heißt Binormalenvektor, die Orthonormalbasis
 {
-γ′(t),n (t),b (t)}
+γ′(t),n (t),b (t) }
 heißt begleitendes Dreibein.
 Bemerkung 72 (Eigenschaften von Kurven II)
 Sei γ :I→ R3 durch Bogenlänge parametrisierte Kurve.
@@ -3303,7 +3303,7 @@ Erinnerung Sie sich an Definition 32 „reguläre Fläche“.
 Äquivalent dazu ist:S ist lokal von der Form
 V (f) =
 {
-x∈ R3⏐⏐f(x) = 0}
+x∈ R3⏐⏐f(x) = 0 }
 für eineC∞-Funktionf : R3→ R.
 Definition 71
 Sei S⊆ R3 eine reguläre Fläche,s∈S, F :U→V∩S eine lokale Parametrisierung um
@@ -3314,9 +3314,9 @@ JF (p) =
 
 
 ∂x
-∂u (p) ∂x∂v (p)∂y
-∂u (p) ∂y∂v (p)∂z
-∂u (p) ∂z∂v (p)
+∂u (p) ∂x ∂v (p) ∂y
+∂u (p) ∂y ∂v (p) ∂z
+∂u (p) ∂z ∂v (p)
 
 
 und DpF : R2→ R3 die durchJF (p) definierte lineare Abbildung.
@@ -3358,7 +3358,7 @@ s∈Vi∩Vj∩S gilt:
 det(Ds
 Vi→Vj
 z }| {
-Fj◦F−1i| {z }
+Fj◦F−1 i| {z }
 ∈R3×3
 )> 0
 Beweis: Wird hier nicht geführt.
@@ -3388,7 +3388,7 @@ Beispiel 47 (Gauß-Krümmung)
 s = (0, 0, 1), x = (1, 0, 0)
 ⇒E = R·x + R·n(s) (x,z-Ebene)
 C =E∩S ist Kreislinie
-κNor(s,x ) = 1r = 1
+κNor(s,x ) = 1 r = 1
 2) S =V (X2 +Z2− 1)⊆ R3 ist ein Zylinder (siehe Abbildung 5.2a).s = (1, 0, 0)
 x1 = (0, 1, 0)⇒E1 = R·e1 + R·e2 (x,y-Ebene)
 S∩E1 =V (X2 +Y 2− 1)∩E, Kreislinie inE
@@ -3398,14 +3398,14 @@ x2 = (0, 0, 1),E 2 = R·e1 + R·e3 (x,z-Ebene)
  5.3. GAUSS-KRÜMMUNG
 V∩E2∩S =
 {
-(1, 0,z )∈ R3⏐⏐z∈ R} ist eine Gerade
+(1, 0,z )∈ R3⏐⏐z∈ R } ist eine Gerade
 ⇒κNor(s,x 2) = 0
 3) S =V (X2−Y 2−Z), s = (0, 0, 0) (Hyperbolisches Paraboloid, siehe Abbildung 5.2b)
 x1 = (1, 0, 0), n(s) = (0, 0, 1)
 x2 = (0, 1, 0)
 κNor(s,x 1) = 2
 κNor(s,x 2) =−2
-−1.5 −1 −0.5 0 0.5 1 1.5−1
+−1.5 −1 −0.5 0 0.5 1 1.5 −1
 0
 1
 0
@@ -3418,7 +3418,7 @@ x
 y
 z
 (a) S =V (X 2 +Z 2− 1)
-−2 −1.5 −1 −0.5 0 0.5 1 1.5 2−2−1
+−2 −1.5 −1 −0.5 0 0.5 1 1.5 2 −2 −1
 0
 1
 2
@@ -3440,7 +3440,7 @@ Definition 74
 Sei S⊆ R3 eine reguläre Fläche,s∈S und n ein stetiges Normalenfeld aufS.
 γ : [−ε,ε ]→ S eine nach Bogenlänge parametrisierte Kurve (ε > 0) mitγ(0) = s und
 γ′′(0)⁄= 0.
-Sei n(0) := γ′′(0)‖γ′′(0)‖. Zerlege
+Sei n(0) := γ′′(0) ‖γ′′(0)‖. Zerlege
 n(0) =n(0)t +n(0)⊥ mit n(0)t∈TsS und n(0)⊥∈ (TsS)⊥
 Dann istn(0)⊥ =⟨n(0),n (s)⟩· n(s)
 κNor(s,γ ) :=⟨γ′′(0),n (s)⟩ die Normalkrümmung.
@@ -3450,20 +3450,20 @@ Beweis: γ′′(0) =γ′′(0), daγ′(0) =−γ′(0).
 Es gilt:κNor(s,γ ) hängt nur von|γ′(0)| ab und ist gleichκNor(s,γ′(0)).
 Bemerkung 77
 Sei S eine reguläre Fläche undn =n(s) ein Normalenvektor anS in s.
-Sei T 1sS ={x∈TsS|‖x‖ = 1}∼=S1. Dann ist
-κnNor(s) :T 1sS→ R, x ↦→κNor(s,x )
-eine glatte Funktion undBildκnNor(s) ist ein abgeschlossenes Intervall.
+Sei T 1 sS ={x∈TsS|‖x‖ = 1}∼=S1. Dann ist
+κn Nor(s) :T 1 sS→ R, x ↦→κNor(s,x )
+eine glatte Funktion undBildκn Nor(s) ist ein abgeschlossenes Intervall.
 Definition 75
 Sei S eine reguläre Fläche undn =n(s) ein Normalenvektor anS in s.
  5.3. GAUSS-KRÜMMUNG
-a) κn1(s) : = min{κnNor(s,x )⏐⏐x∈T 1sS} und
-κn2(s) : = max{κnNor(s,x )⏐⏐x∈T 1sS} heißen Hauptkrümmungen vonS ins.
-b) K(s) :=κn1(s)·κn2(s) heißt Gauß-Krümmung vonS in s.
+a) κn 1(s) : = min { κn Nor(s,x ) ⏐⏐x∈T 1 sS } und
+κn 2(s) : = max { κn Nor(s,x ) ⏐⏐x∈T 1 sS } heißen Hauptkrümmungen vonS ins.
+b) K(s) :=κn 1(s)·κn 2(s) heißt Gauß-Krümmung vonS in s.
 Bemerkung 78
 Ersetzt mann durch−n, so gilt:
-κ−nNor(s,x ) =−κnNor(x)∀x∈T 1sS
-⇒κ−n1 (s) =−κn2(s)
-κ−n2 (s) =−κn1(s)
+κ−n Nor(s,x ) =−κn Nor(x)∀x∈T 1 sS
+⇒κ−n 1 (s) =−κn 2(s)
+κ−n 2 (s) =−κn 1(s)
 und K−n(s) =Kn(s) =:K(s)
 Beispiel 48
 1) S =S2. Dann istκ1(s) =κ2(s) =±1∀s∈S2
@@ -3496,7 +3496,7 @@ g1,2(s) g2,2(s)
 F (s) G(s)
 )
 mit gi,j =gs(DpF (ei),DpF (ej))
-=⟨∂F∂ui (p), ∂F∂uj (p)⟩ i,j ∈{ 1, 2}
+=⟨∂F ∂ui (p), ∂F ∂uj (p)⟩ i,j ∈{ 1, 2}
 Die MatrixIS heißt erste FundamentalformvonS bzgl. der ParametrisierungF.
 Bemerkung 80
 a) Die Einschränkung des Standardskalarproduktes desR3 auf TsS machtTsS zu einem
@@ -3507,15 +3507,15 @@ c) Bzgl. der Basis{DpF (e1),DpF (e2)} hat das Standardskalarprodukt aus Bemerkun
 d) gi,j(s) ist eine differenzierbare Funktion vons.
 Bemerkung 81
 det(IS) =
-‖‖‖‖∂F∂u1 (p)× ∂F∂u2 (p)‖‖‖‖2
-Beweis: Sei ∂F∂u1 (p) =
+‖‖‖‖ ∂F ∂u1 (p)× ∂F ∂u2 (p) ‖‖‖‖ 2
+Beweis: Sei ∂F ∂u1 (p) =
 
 
 x1
 x2
 x3
 
-, ∂F∂u2 (p) =
+, ∂F ∂u2 (p) =
 
 
 y1
@@ -3523,7 +3523,7 @@ y2
 y3
 
 
-Dann ist ∂F∂u1 (p)× ∂F∂u2 (p) =
+Dann ist ∂F ∂u1 (p)× ∂F ∂u2 (p) =
 
 
 z1
@@ -3534,9 +3534,9 @@ z3
 z1 =x2y3−x3y2
 z2 =x3y1−x1y3
 z3 =x1y2−x2y1
-⇒‖ ∂F∂u1 (p)× ∂F∂u2 (p)‖ =z21 +z22 +z23
+⇒‖ ∂F ∂u1 (p)× ∂F ∂u2 (p)‖ =z2 1 +z2 2 +z2 3
  5.4. ERSTE UND ZWEITE FUNDAMENTALFORM
-det(IS) =g1,1g2,2−g21,2
+det(IS) =g1,1g2,2−g2 1,2
 =
 ⟨
 
@@ -3583,7 +3583,7 @@ y3
 
 
 ⟩2
-= (x21 +x22 +x23)(y21 +y22 +y23)− (x1y1 +x2y2 +x3y3)2
+= (x2 1 +x2 2 +x2 3)(y2 1 +y2 2 +y2 3)− (x1y1 +x2y2 +x3y3)2
 Definition 77
 a) Das DifferentialdA =
 √
@@ -3638,7 +3638,7 @@ Proposition 5.1
 Sei S⊆ R3 eine reguläre, orientierbare Fläche mit glatten Normalenfeldn : S→ S2.
 Dann gilt:
 a) n induziert für jedess∈S eine lineare Abbildungdsn :TsS→Tn(s)S2 durch
-dsn(x) = ddtn(s„+“tx| {z }
+dsn(x) = d dtn(s„+“tx| {z }
 Soll auf FlächeS bleiben
 )
 ⏐⏐⏐
@@ -3657,12 +3657,12 @@ c) Wegen Proposition 5.1 (a) istdsn ein Homomorphismus.
 d) Zu zeigen:∀x,y∈IsS :⟨x,dsn(y)⟩ =⟨dsn(x),y⟩
 Aufgrund der Bilinearität des Skalarproduktes genügt es diese Eigenschaft für die
 Basisvektoren zu zeigen.
-Sei xi =DpF (ei) = ∂F∂ui (p) i = 1, 2
-Beh.:⟨xi,dsn(xj)⟩ =⟨ ∂2F∂ui∂uj (p),dsn(xi)⟩
-⇒⟨ ∂2F∂ui∂uj (p),dsn(xi)⟩ =⟨xj,dsn(xi)⟩
-Bew.: 0 = ⟨∂F∂u (p +tej),n (p +tej)⟩
-⇒ 0 = ddt(⟨∂F∂u (p +tej),n (p +tej)⟩)⏐⏐⏐t=0
-=⟨ ddt∂F∂ui (p +tej)| {z }
+Sei xi =DpF (ei) = ∂F ∂ui (p) i = 1, 2
+Beh.:⟨xi,dsn(xj)⟩ =⟨ ∂2F ∂ui∂uj (p),dsn(xi)⟩
+⇒⟨ ∂2F ∂ui∂uj (p),dsn(xi)⟩ =⟨xj,dsn(xi)⟩
+Bew.: 0 = ⟨∂F ∂u (p +tej),n (p +tej)⟩
+⇒ 0 = d dt ( ⟨∂F ∂u (p +tej),n (p +tej)⟩ )⏐⏐⏐ t=0
+=⟨ d dt ∂F ∂ui (p +tej) | {z }
 ∂2F
 ∂uj∂ui (p)
 ⏐⏐⏐
@@ -3676,14 +3676,14 @@ Die durch−dsn definierte symmetrische Bilinearform aufTsS heißt zweite Fundam
 Man schreibt:IIs(x,y ) =⟨−dsn(x),y⟩ =Is(−dsn(x),y )
 Bemerkung 83
 Bezüglich der Basis{x1,x 2} vonTsS hat IIs die Darstellungsmatrix
-(h(s)i,j )i,j=1,2 mit hi,j(s) =⟨ ∂2F∂ui∂uj (p),n (s)⟩
+(h(s) i,j )i,j=1,2 mit hi,j(s) =⟨ ∂2F ∂ui∂uj (p),n (s)⟩
 Proposition 5.2
 Sei γ : [−ε,ε ]→S eine nach Bogenlänge parametrisierte Kurve mitγ(0) =s. Dann gilt:
 κNor(s,γ ) =IIs(γ′(0),γ′(0))
 Beweis: Nach Definition 74 istκNor(s,γ ) =⟨γ′′(0),n (s)⟩. Nach Voraussetzung gilt
 n(γ(t))⊥γ′(t)⇔⟨γ′′(0),n (s)⟩ = 0
 Die Ableitung nacht ergibt
-0 = ddt(⟨n(γ(t)),γ′(t))
+0 = d dt(⟨n(γ(t)),γ′(t))
 =
 ⟨ d
 dtn(γ(t))
@@ -3715,11 +3715,11 @@ Prop. 5.2
 = = = = =⇒λ1 = min
 {
 κNor(s,x )
-⏐⏐x∈T 1sS}
+⏐⏐x∈T 1 sS }
 λ2 = max
 {
 κNor(s,x )
-⏐⏐x∈T 1sS}
+⏐⏐x∈T 1 sS }
 Satz 5.5 (Satz von Gauß-Bonnet)
 Sei S⊆ R3 eine kompakte orientierbare reguläre Fläche. Dann gilt:
 ∫
@@ -3735,7 +3735,7 @@ Teilaufgabe a)Es gilt:
 (ii) TX ist offensichtlich unter Durchschnitten abgeschlossen, d. h. es gilt für alleU1,U 2∈
 TX :U1∩U2∈ TX.
 (iii) Auch unter beliebigen Vereinigungen istTX abgeschlossen, d. h. es gilt für eine
-beliebige IndexmengeI und alleUi∈ TX für allei∈I :⋃i∈IUi∈ TX
+beliebige IndexmengeI und alleUi∈ TX für allei∈I :⋃ i∈IUi∈ TX
 Also ist (X, TX) ein topologischer Raum.
 Teilaufgabe b)Wähle x = 1,y = 0. Dann giltx⁄=y und die einzige Umgebung vonx
 ist X. Day = 0∈X können alsox und y nicht durch offene Mengen getrennt werden.
@@ -3753,7 +3753,7 @@ Teilaufgabe b)
 Beh.:{− 1, 1} ist nicht offen
 Bew.: durch Widerspruch
 Annahme:{− 1, 1} ist offen.
-Dann gibt esT⊆ B, sodass⋃M∈TM ={− 1, 1}. Aber alleU∈ B haben unendlich viele
+Dann gibt esT⊆ B, sodass⋃ M∈TM ={− 1, 1}. Aber alleU∈ B haben unendlich viele
 Elemente. Auch endlich viele Schnitte von Elementen inB haben unendlich viele Elemente
 ⇒ keine endliche nicht-leere Menge kann in dieser Topologie offen sein⇒{− 1, 1} ist
 nicht offen. ■
@@ -3806,13 +3806,13 @@ nicht kompakt. 22⇒ GLn(R) ist nicht kompakt. ■
 (b) Beh.: SL1(R) ist nicht kompakt, fürn> 1 ist SLn(R) kompakt.
 Bew.: Für SL1(R) gilt: SL1(R) =
 {
-A∈ R1×1⏐⏐ detA = 1} =(1)∼={ 1}. 22⇒ SL1(R)
+A∈ R1×1⏐⏐ detA = 1 } = ( 1 )∼={ 1}. 22⇒ SL1(R)
 ist kompakt.
  Lösungen der Übungsaufgaben
 SLn(R)⊆ GLn(R) lässt sich mit einer Teilmenge desRn2 identifizieren. Nach Satz 1.1
 sind diese genau dann kompakt, wenn sie beschränkt und abgeschlossen sind. Definiere
 nun für fürn∈ N≥2,m∈ N:
-Am = diagn(m, 1m,..., 1)
+Am = diagn(m, 1 m,..., 1)
 Dann gilt: detAm = 1, d. h.Am∈ SLn(R), undAm ist unbeschränkt, da‖Am‖∞ =
 m−−−−→
 m→∞
@@ -3867,12 +3867,12 @@ Dann wäre aber
 γ : [0, 1]→M,
 γ(x) =
 {
-γ1(2x) falls 0≤x≤ 12
-γ2(2x− 1) falls 12 <x ≤ 1
+γ1(2x) falls 0≤x≤ 1 2
+γ2(2x− 1) falls 1 2 <x ≤ 1
 ein stetiger Weg von˜z nachx⇒ Widerspruch.
 DaM zusammenhängend ist undM = Z|{z}
 offen
-∪ ZC|{z}
+∪ ZC |{z}
 offen
 , sowieZ⁄=∅ folgtZC =∅.
 Also istM =Z wegzusammenhängend. ■
@@ -4123,13 +4123,13 @@ N ={ 1, 2, 3,... } Natürliche Zahlen
 Z = N∪{ 0,−1,−2,... } Ganze Zahlen
 Q = Z∪
 { 1
-2, 13, 23} ={ zn mit z∈ Z und n∈ Z\{ 0}} Rationale Zahlen
+2, 1 3, 2 3 } = { z n mit z∈ Z und n∈ Z\{ 0} } Rationale Zahlen
 R = Q∪
 {√
 2,−
-3√3,... } Reele Zahlen
+3√ 3,... } Reele Zahlen
 R+ Echt positive reele Zahlen
-Rn+,0 :={ (x1,...,x n)∈ Rn|xn≥ 0} Halbraum
+Rn +,0 :={ (x1,...,x n)∈ Rn|xn≥ 0} Halbraum
 R× = R\{ 0} Einheitengruppe von R
 C ={a +ib|a,b∈ R} Komplexe Zahlen
 P ={ 2, 3, 5, 7,... } Primzahlen

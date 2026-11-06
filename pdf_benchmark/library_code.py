@@ -80,8 +80,7 @@ def pypdf_watermarking(watermark_data: bytes, data: bytes) -> bytes:
 
     # Add the watermarks
     for page in reader.pages:
-        page.merge_page(watermark_page)
-        writer.add_page(page)
+        writer.add_page(page).merge_page(watermark_page)
 
     # Compress the data
     for page in writer.pages:
