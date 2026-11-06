@@ -135,3 +135,21 @@ its version, and only pdfminer.six's results changed.
   extraction of a document (1601.03642: 0 -> 5 images, 2201.00029: 0 -> 10,
   1602.06541: 1 -> 8). It now extracts 187 images in total, pypdf 184,
   pypdfium2 135 and PyMuPDF 108.
+
+## 2026-11-06, watermark check
+
+The watermarked documents are now checked: the report marks results with
+pages that lack the watermark text, or with missing pages. The outputs of
+all three libraries have the watermark on every page. As the cache had no
+results of the check, pdfrw, PyMuPDF and pypdf were measured again. No
+library changed its version.
+
+### PyMuPDF
+- Version: 2.1 (no change)
+- Speed: watermarking 0.14s -> 0.10s on average
+- Text extraction quality: no change
+- Notes: the watermarking function now shows the page of the watermark
+  document on every page, so all pages share the watermark. Before, it
+  copied the watermark into a new document for every page. The watermarked
+  files became 3.7MB -> 3.5MB on average (52.3MB -> 48.3MB for the 14
+  documents), the same size as those of pypdf and pdfrw.
