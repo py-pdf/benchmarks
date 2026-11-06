@@ -116,3 +116,22 @@ listed with its Poppler version (24.02.0) instead of 0.86.1.
 - Version: 5.14.0 -> 5.15.0
 - Speed: no change; image extraction 1.1s -> 0.9s from the calibration
 - Text extraction quality: no change; the extracted text is the same
+
+## 2026-11-06, image counts
+
+pdfminer.six's image extraction is fixed, and the report now shows how many
+images each library extracted. As the cache had no image counts, pypdf,
+pdfminer.six, PyMuPDF and pypdfium2 were measured again. No library changed
+its version, and only pdfminer.six's results changed.
+
+### pdfminer.six
+- Version: 20260107 (no change)
+- Speed: image extraction 4.3s -> 4.5s. Its text extraction, which did not
+  change, went from 3.3s to 3.5s in the same run, so the difference is
+  within the noise of the measurement.
+- Text extraction quality: no change
+- Notes: the images are now decoded by pdfminer.six's ImageWriter. Before,
+  every image was read as a 1-bit image, and the first failure ended the
+  extraction of a document (1601.03642: 0 -> 5 images, 2201.00029: 0 -> 10,
+  1602.06541: 1 -> 8). It now extracts 187 images in total, pypdf 184,
+  pypdfium2 135 and PyMuPDF 108.

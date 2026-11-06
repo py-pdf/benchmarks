@@ -136,6 +136,7 @@ def main(
                 "image_extraction", name, doc.name, extracted_images, "image-list"
             )
             cache.benchmark_times[lib.pathname][doc.name]["image_extraction"] = seconds
+            cache.image_counts[lib.pathname][doc.name] = len(extracted_images)
         cache.write(cache_path)
 
     libraries = {
