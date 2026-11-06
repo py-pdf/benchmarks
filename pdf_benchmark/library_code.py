@@ -8,30 +8,32 @@ import pdfplumber
 import pymupdf as PyMuPDF
 import pypdf
 import pypdfium2 as pdfium
-from pdfminer.high_level import extract_pages
+from lxml import etree
+from pdfminer.high_level import extract_pages, extract_text
 from requests import ReadTimeout
 
-from .text_extraction_post_processing import (
-    PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE,
-    postprocess,
-)
+from .text_extraction_post_processing import PDFIUM_ZERO_WIDTH_NO_BREAK_SPACE
+
+# The text extraction functions return the text of every page. The benchmark
+# post-processes the pages of all libraries in the same way.
 
 
-def pymupdf_get_text(data: bytes) -> str:
+def split_pages(text: str) -> list[str]:
+    """Split a text in which every page ends with a form feed into pages."""
+    pages = text.split("\f")
+    if pages[-1] == "":
+        pages.pop()
+    return pages
+
+
+def pymupdf_get_text(data: bytes) -> list[str]:
     with PyMuPDF.open(stream=data, filetype="pdf") as doc:
-        text = ""
-        for page in doc:
-            text += page.get_text() + "\n"
-    return text
+        return [page.get_text() for page in doc]
 
 
-def pypdf_get_text(data: bytes) -> str:
-    texts = []
+def pypdf_get_text(data: bytes) -> list[str]:
     reader = pypdf.PdfReader(BytesIO(data))
-    for page in reader.pages:
-        texts.append(page.extract_text())
-    text = postprocess(texts, reader.page_labels)
-    return text
+    return [page.extract_text() for page in reader.pages]
 
 
 def pdfium_new_line_after_hyphens(text):
@@ -40,20 +42,16 @@ def pdfium_new_line_after_hyphens(text):
     )
 
 
-def pdfium_get_text(data: bytes) -> str:
-    texts = []
-    page_labels = []
+def pdfium_get_text(data: bytes) -> list[str]:
     pdf = pdfium.PdfDocument(data)
+    return [
+        pdfium_new_line_after_hyphens(pdf.get_page(i).get_textpage().get_text_range())
+        for i in range(len(pdf))
+    ]
 
-    for i in range(len(pdf)):
-        if not (label := pdf.get_page_label(i)):
-            label = str(i + 1)
-        page_labels.append(label)
-        page = pdf.get_page(i)
-        textpage = page.get_textpage()
-        texts.append(pdfium_new_line_after_hyphens(textpage.get_text_range()))
-    text = postprocess(texts, page_labels)
-    return text
+
+def pdfminer_get_text(data: bytes) -> list[str]:
+    return split_pages(extract_text(BytesIO(data)))
 
 
 def pdfium_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
@@ -176,16 +174,12 @@ def pdfminer_image_extraction(data: bytes) -> list[tuple[str, bytes]]:
     return images
 
 
-def pdfplubmer_get_text(data: bytes) -> str:
-    text = ""
+def pdfplubmer_get_text(data: bytes) -> list[str]:
     with pdfplumber.open(BytesIO(data)) as pdf:
-        for page in pdf.pages:
-            text += page.extract_text()
-            text += "\n"
-    return text
+        return [page.extract_text() for page in pdf.pages]
 
 
-def pdftotext_get_text(data: bytes) -> str:
+def pdftotext_get_text(data: bytes) -> list[str]:
     new_file, filename = tempfile.mkstemp()
     with open(filename, "wb") as fp:
         fp.write(data)
@@ -197,7 +191,7 @@ def pdftotext_get_text(data: bytes) -> str:
     output = res.stdout.decode("utf-8")
     os.close(new_file)
     os.remove(filename)
-    return output
+    return split_pages(output)
 
 
 def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
@@ -215,13 +209,20 @@ def pdfrw_watermarking(watermark_data: bytes, data: bytes) -> bytes:
     return out_buffer.read()
 
 
-def tika_get_text(data: bytes) -> str:
+def tika_get_text(data: bytes) -> list[str]:
     from tika import parser
 
     try:
-        return parser.from_buffer(BytesIO(data), requestOptions={"timeout": (1, 100)})[
-            "content"
-        ]
+        xhtml = parser.from_buffer(
+            BytesIO(data), xmlContent=True, requestOptions={"timeout": (1, 100)}
+        )["content"]
     except ReadTimeout as ex:
         print("Tika timeout:", ex)
-        return "[[[Tika text extraction failed!]]]"
+        return ["[[[Tika text extraction failed!]]]"]
+    # The plain text output of Tika does not separate the pages; the XHTML
+    # output has a <div class="page"> per page, followed by the outline.
+    tree = etree.fromstring(xhtml.strip().encode())
+    return [
+        "".join(div.itertext())
+        for div in tree.iterfind(".//{http://www.w3.org/1999/xhtml}div[@class='page']")
+    ]

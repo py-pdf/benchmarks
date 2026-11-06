@@ -5,7 +5,6 @@ Compare text extraction performance of different PDF parsers.
 import json
 import time
 from importlib.metadata import version as pkg_version
-from io import BytesIO
 from itertools import product
 from json import JSONDecodeError
 from pathlib import Path
@@ -17,13 +16,13 @@ import pdfrw
 import pymupdf as PyMuPDF
 import pypdf
 import tika
-from pdfminer.high_level import extract_text as pdfminder_extract_text
 from rich.progress import track
 
 from pdf_benchmark.data_structures import Cache, Document, Library
 from pdf_benchmark.library_code import (
     pdfium_get_text,
     pdfium_image_extraction,
+    pdfminer_get_text,
     pdfminer_image_extraction,
     pdfplubmer_get_text,
     pdfrw_watermarking,
@@ -38,6 +37,7 @@ from pdf_benchmark.library_code import (
 )
 from pdf_benchmark.output import write_benchmark_report
 from pdf_benchmark.score import get_text_extraction_score
+from pdf_benchmark.text_extraction_post_processing import postprocess
 
 
 def warm_up_tika(data: bytes) -> None:
@@ -82,8 +82,9 @@ def main(
         if lib.text_extraction_function:
             print(f"{name} now parses {doc.name}...")
             t0 = time.time()
-            text = lib.text_extraction_function(data)
+            pages = lib.text_extraction_function(data)
             t1 = time.time()
+            text = postprocess_pages(pages, doc, name)
             write_single_result("read", name, doc.name, text, "txt")
             cache.benchmark_times[lib.pathname][doc.name]["read"] = t1 - t0
             cache.read_quality[lib.pathname][doc.name] = get_text_extraction_score(
@@ -119,6 +120,18 @@ def main(
         docs,
         cache,
     )
+
+
+def postprocess_pages(pages: list[str], doc: Document, library_name: str) -> str:
+    """Post-process the pages of every library in the same way, see postprocess()."""
+    page_labels = doc.page_labels
+    if len(pages) != len(page_labels):
+        print(
+            f"{library_name} returned {len(pages)} pages for {doc.name},"
+            f" which has {len(page_labels)}"
+        )
+        return "\n".join(pages)
+    return postprocess(pages, page_labels)
 
 
 def write_single_result(
@@ -192,7 +205,7 @@ if __name__ == "__main__":
             "pdfminer.six",
             "pdfminer",
             "https://pypi.org/project/pdfminer.six/",
-            text_extraction_function=lambda n: pdfminder_extract_text(BytesIO(n)),
+            text_extraction_function=pdfminer_get_text,
             version=pdfminer.__version__,
             license="MIT/X",
             last_release_date="2025-05-06",
@@ -214,7 +227,7 @@ if __name__ == "__main__":
             "PyMuPDF",
             "pymupdf",
             "https://pypi.org/project/PyMuPDF/",
-            text_extraction_function=lambda n: pymupdf_get_text(n),
+            text_extraction_function=pymupdf_get_text,
             version=PyMuPDF.version[0],
             watermarking_function=pymupdf_watermarking,
             image_extraction_function=pymupdf_image_extraction,
