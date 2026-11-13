@@ -11,7 +11,7 @@ This paper gives a high level overview of how they are created
 and gives some examples. It is meant to be a summary of the
 current work and give people who are new to machine learning
 some starting points.
-I. I NTRODUCTION
+I. INTRODUCTION
 According to [Gad06] creativity is “the ability to use your
 imagination to produce new ideas, make things etc.” and
 imagination is “the ability to form pictures or ideas in your
@@ -25,7 +25,7 @@ learning, Section III gives examples of creativity with images,
 Section IV gives examples of machines producing textual
 content, and Section V gives examples of machine learning
 and music. A discussion follows in Section VI.
-II. B ASICS OF MACHINE LEARNING
+II. BASICS OF MACHINE LEARNING
 The traditional approach of solving problems with software
 is to program machines to do so. The task is divided in as
 simple sub-tasks as possible, the subtasks are analyzed and the
@@ -100,9 +100,9 @@ basic building blocks is a time-intensive and difficult task.
 An important group of machine learning algorithms was
 inspired by biological neurons and are thus called artificial
 neural networks. Those networks are based on mathematical
-functions called artificial neurons which take n∈ N numbers
+functions called artificial neurons which take n ∈ N numbers
  x1, . . . , xn ∈ R as input, multiply them with weights
-w1, . . . , wn∈ R, add them and apply a so called activation
+w1, . . . , wn ∈ R, add them and apply a so called activation
 function ϕ as visualized in Figure 1(a). One example of such
 an activation function is the sigmoid function ϕ(x) = 1 1+e−x .
 Those functions act as building blocks for more complex
@@ -119,11 +119,11 @@ it tries to find a minimum of this high-dimensional function.
 There is, of course, a lot more to say about machine learning.
 The interested reader might want to read the introduction given
 by Mitchell [Mit97].
-III. I MAGE DATA
+III. IMAGE DATA
 Applying a simple neural network on image data directly can
 work, but the number of parameters gets extraordinary large.
 One would take one neuron per pixel and channel. This means
-for 500 px× 500 px RGB images one would get 750,000 input
+for 500 px × 500 px RGB images one would get 750,000 input
 signals. To approach this problem, so called Convolutional
 Neural Networks (CNNs) were introduced. Instead of learning
 the full connection between the input layer and the first
@@ -194,7 +194,7 @@ style image to produce the result.
 This artistic style imitation can be seen itself as creative work.
 An example is given by Figure 4. The code which created this
 example is available under [Joh16].
-Something similar was done by [SPB +14], where the style of
+Something similar was done by [SPB+14], where the style of
 a portrait photograph was transferred to another photograph.
 A demo can be seen on [Shi14].
 C. Drawing Robots
@@ -203,7 +203,7 @@ AIKON (Automatic IKONic drawing) which can automatically
 generated sketches for portraits [TL05]. AIKON takes a digital
 photograph, detects faces on them and sketches them with a
 pen-plotter.
-Tresset and Leymaire use k-means clustering [KMN +02] to
+Tresset and Leymaire use k-means clustering [KMN+02] to
 segment regions of the photograph with similar color which,
 in turn, will get a similar shading.
 Such a drawing robot could apply machine learning techniques
@@ -213,7 +213,7 @@ similar to the artists impression of the image. However, the
 system described in [TL05] seems not to be a machine
 learning computer program according to the definition by Tom
 Mitchell [Mit97].
-IV. T EXT DATA
+IV. TEXT DATA
 Digital text is the first form of natural communication which
 involved computers. It is used in the form of chats, websites,
 on collaborative projects like Wikipedia, in scientific literature.
@@ -309,7 +309,7 @@ Human: what is the purpose of life ?
 Machine: to serve the greater good .
 Human: what is the purpose of living ?
 Machine: to live forever .
-V. A UDIO DATA
+V. AUDIO DATA
 Common machine learning tasks which involve audio data
 are speech recognition, speaker identification, identification of
 songs. This leads to some less-common, but interesting topics:
@@ -351,7 +351,7 @@ Recurrent neural networks — LSTM networks, to be exact
 (GRU) to build a network which can be trained to generate
 music. Instead of taking notes directly or MIDI files, Nayebi
 and Vitelli took raw audio waveforms as input. Those audio
-waveforms are feature vectors given for time steps 0, 1, . . . , t−
+waveforms are feature vectors given for time steps 0, 1, . . . , t −
 1, t. The network is given those feature vectors X1, . . . , Xt
 and has to predict the following feature vector Xt+1. This
 means it continues the music. As the input is continuous, the
@@ -372,7 +372,7 @@ wrote a very good introduction into neural networks for music
 composition which explains those ideas [Joh15b]. Example
 compositions are available there, too. He also made the code for
 his Biaxial Recurrent Neural Network available under [Joh15a].
-VI. D ISCUSSION
+VI. DISCUSSION
 What does these examples mean for our understanding of
 creativity? Does it influence how much we value art? Could
 we define art and creativity better after having those and similar
@@ -391,7 +391,7 @@ REFERENCES
 [Cop87] D. Cope, “Experiments in music intelligence (emi),” 1987.
 [Online]. Available: http://hdl.handle.net/2027/spo.bbp2372.1987.
 025
-[Cop05] ——, Computer models of musical creativity . MIT Press
+[Cop05] ——, Computer models of musical creativity. MIT Press
 Cambridge, 2005.
 [Cop12] ——, “Emily howell fugue,” YouTube, Oct. 2012. [Online].
 Available: https://www.youtube.com/watch?v=jLR- c uCwI
@@ -402,21 +402,21 @@ http://dl.acm.org/citation.cfm?id=2460444
 [Cur14] A. Curtis, “Now then,” BBC, Jul. 2014. [Online].
  Available: http://www.bbc.co.uk/blogs/adamcurtis/entries/
 78691781-c9b7-30a0-9a0a-3ff76e8bfe58
-[Gad06] A. Gadsby, Ed., Dictionary of Contemporary English . Pearson
+[Gad06] A. Gadsby, Ed., Dictionary of Contemporary English. Pearson
 Education Limited, 2006.
 [GEB15] L. A. Gatys, A. S. Ecker, and M. Bethge, “A neural algorithm of
-artistic style,” arXiv preprint arXiv:1508.06576 , 2015. [Online].
+artistic style,” arXiv preprint arXiv:1508.06576, 2015. [Online].
 Available: http://arxiv.org/abs/1508.06576
 [goo15] “Inceptionism: Going deeper into neural networks,” Google
 Photos, Jun. 2015. [Online]. Available: https://goo.gl/Bydofw
 [HS97] S. Hochreiter and J. Schmidhuber, “Long short-term memory,”
-Neural computation , vol. 9, no. 8, pp. 1735–1780, 1997.
+Neural computation, vol. 9, no. 8, pp. 1735–1780, 1997.
 [Online]. Available: http://ieeexplore.ieee.org/xpl/freeabs all.jsp?
 arnumber=6795963
 [hut] “50’000 euro prize for compressing human knowledge.” [Online].
 Available: http://prize.hutter1.net/
 [HZRS15] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning
-for image recognition,” arXiv preprint arXiv:1512.03385 , 2015.
+for image recognition,” arXiv preprint arXiv:1512.03385, 2015.
 [Online]. Available: http://arxiv.org/abs/1512.03385
 [Joh15a] D. Johnson, “Biaxial recurrent neural network for music
 composition,” GitHub, Aug. 2015. [Online]. Available: https:
@@ -435,7 +435,7 @@ http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 [KMN+02] T. Kanungo, D. Mount, N. Netanyahu, C. Piatko, R. Silverman,
 and A. Wu, “An efficient k-means clustering algorithm: analysis
 and implementation,” Pattern Analysis and Machine Intelligence,
-IEEE Transactions on , vol. 24, no. 7, pp. 881–892, Jul 2002.
+IEEE Transactions on, vol. 24, no. 7, pp. 881–892, Jul 2002.
 [Mit97] T. M. Mitchell, Machine learning, ser. McGraw Hill series in
 computer science. McGraw-Hill, 1997.
 [MOT15] A. Mordvintsev, C. Olah, and M. Tyka, “Inceptionism: Going
@@ -451,30 +451,30 @@ using recurrent neural networks,” 2015. [Online]. Available:
 http://cs224d.stanford.edu/reports/NayebiAran.pdf
 [Red] “Deepdream,” Reddit. [Online]. Available: https://www.reddit.
 com/r/deepdream/
-[Shi14] Y . Shih, “Style transfer for headshot portraits,” YouTube, Jun.
+[Shi14] Y. Shih, “Style transfer for headshot portraits,” YouTube, Jun.
 2014. [Online]. Available: https://www.youtube.com/watch?v=
 Hj5lGFzlubU
-[SPB+14] Y . Shih, S. Paris, C. Barnes, W. T. Freeman, and F. Durand,
+[SPB+14] Y. Shih, S. Paris, C. Barnes, W. T. Freeman, and F. Durand,
 “Style transfer for headshot portraits,” ACM Transactions on
 Graphics (TOG), vol. 33, no. 4, p. 148, 2014. [Online]. Available:
 http://dl.acm.org/citation.cfm?id=2601137
 [TL05] P. Tresset and F. F. Leymarie, “Generative portrait sketching,” in
-Proceedings of VSMM , 2005, pp. 739–748.
+Proceedings of VSMM, 2005, pp. 739–748.
 [Vit15] M. Vitelli, “Algorithmic music generation with recurrent
 neural networks,” YouTube, Jun. 2015. [Online]. Available:
 https://youtu.be/0VTI1BBLydE
-[VKMT13] C. V ondrick, A. Khosla, T. Malisiewicz, and A. Torralba,
+[VKMT13] C. Vondrick, A. Khosla, T. Malisiewicz, and A. Torralba,
 “Hoggles: Visualizing object detection features,” in Computer
-Vision (ICCV), 2013 IEEE International Conference on . IEEE,
+Vision (ICCV), 2013 IEEE International Conference on. IEEE,
 2013, pp. 1–8. [Online]. Available: http://ieeexplore.ieee.org/
 xpls/abs all.jsp?arnumber=6751109
 [VL15] O. Vinyals and Q. Le, “A neural conversational model,”
-arXiv preprint arXiv:1506.05869 , Jul. 2015. [Online]. Available:
+arXiv preprint arXiv:1506.05869, Jul. 2015. [Online]. Available:
 http://arxiv.org/abs/1506.05869v2
 [VN15] M. Vitelli and A. Nayebi, “GRUV,” Aug. 2015. [Online].
 Available: https://github.com/MattVitelli/GRUV
 [Wei76] J. Weizenbaum, Computer Power and Human Reason: From
-Judgement to Calculation . W.H.Freeman & Co Ltd, 1976.
+Judgement to Calculation. W.H.Freeman & Co Ltd, 1976.
 [ZF14] M. D. Zeiler and R. Fergus, “Visualizing and understanding convolutional
  networks,” in Computer Vision–ECCV 2014. Springer,
 2014, pp. 818–833.

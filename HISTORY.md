@@ -159,3 +159,40 @@ library changed its version.
 The report now has feature matrices for image and text extraction: what
 each library extracts from small PDFs with one feature each. No library was
 measured again, and no other result changed.
+
+## 2026-11-13
+
+pypdf, pypdfium2 and Tika were measured again after a version change, and
+the ground truth of 2201.00022 was replaced: it was the text of arXiv v1,
+but the benchmark pins v2 (the abstract, the section numbers and the
+references differ). Every library scored 58%-78% on that document, as
+the text of v2 was compared with the text of v1; now 88%-99%, except
+pdfplumber (58%, unchanged). The text of the libraries that did not change
+is identical to the last run, so their average quality only rose through
+the new ground truth: PyMuPDF 94.9% -> 96.4%, pdftotext 90.2% -> 91.6%,
+pdfminer.six 88.6% -> 89.7%, pdfplumber 74.0% -> 74.0%. The libraries rank
+the same way, except that pypdf and PyMuPDF swap places.
+
+### pypdf
+- Version: 7.0.0 -> 7.1.0
+- Speed: text extraction 1.8s -> 1.7s, image extraction and watermarking
+  no change; within the noise of the measurement
+- Text extraction quality: 94.9% -> 96.6%; 94.9% -> 95.2% (+0.3 points)
+  without the new ground truth of 2201.00022
+- Notes: GeoTopo-book 94.6% -> 96.3% and 2201.00214 93.9% -> 94.4%. Spaces
+  around symbols are right again in headings and formulas: "I NTRODUCTION"
+  -> "INTRODUCTION", "n∈ N" -> "n ∈ N", "[SPB +14]" -> "[SPB+14]", and the
+  space before a comma after an italic word is gone ("Computer models of
+  musical creativity ." -> "creativity."). Words that were split by a
+  stray space ("Astr ophysical", "KI C") are joined.
+
+### pypdfium2
+- Version: 5.15.0 -> 5.15.2
+- Speed: no change
+- Text extraction quality: 95.2% -> 96.7%, only due to the new ground truth
+
+### Tika
+- Version: 3.3.2 -> 3.4.0
+- Speed: text extraction 0.24s -> 0.20s on average (uncalibrated); the
+  report shows 0.2s in both runs
+- Text extraction quality: 93.7% -> 95.1%, only due to the new ground truth
