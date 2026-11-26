@@ -196,3 +196,40 @@ the same way, except that pypdf and PyMuPDF swap places.
 - Speed: text extraction 0.24s -> 0.20s on average (uncalibrated); the
   report shows 0.2s in both runs
 - Text extraction quality: 93.7% -> 95.1%, only due to the new ground truth
+
+## 2026-11-26
+
+pypdf, PyMuPDF and pdfplumber were measured again after a version change,
+still on CPython 3.14.10. Python 3.15 is not possible yet: PyMuPDF depends on
+onnxruntime, which has no wheels for it. The ground truth of 2201.00022 now
+ends with a newline, which changes the score of the three re-measured
+libraries on it by less than 0.001 points.
+
+### pypdf
+- Version: 7.1.1 -> 7.2.0; fonttools 4.68.0 -> 4.69.1
+- Speed: text extraction 1.8s -> 1.7s, image extraction 2.8s -> 2.6s,
+  watermarking 0.27s -> 0.25s on average. The machine was busier than in the
+  last run (the calibration took 133ms instead of 111ms), so the raw times
+  went up and only the calibrated ones went down; this is within the noise
+  of the measurement.
+- Text extraction quality: 96.6% -> 96.7%
+- Notes: only the text of 2201.00069 changed (96.7% -> 97.2%). The symbols of
+  its math font are now extracted: "∼", "−", "×", "±", "≤", "≲", "†", "◦" and
+  "′′" were missing or wrong before ("139  10 16" -> "1𝑌39 × 10−16"). The comma
+  and the decimal point of that font are now extracted as "𝑊" and "𝑌" instead
+  of being dropped ("1,2" -> "1𝑊2", "0.2365" -> "0𝑌2365"), and "<" and ">"
+  become "𝑚" and "𝑜".
+
+### PyMuPDF
+- Version: 2.1 -> 2.2
+- Speed: text extraction no change (0.10s), watermarking 0.10s -> 0.12s,
+  image extraction 0.47s -> 0.51s on average; the raw times rose by about as
+  much
+- Text extraction quality: no change; the extracted text is the same
+- Notes: the image counts and the watermark check did not change.
+
+### pdfplumber
+- Version: 0.11.10 -> 0.11.11
+- Speed: text extraction 5.6s -> 4.8s (raw 6.4s -> 5.9s at the same
+  calibration time)
+- Text extraction quality: no change; the extracted text is the same
